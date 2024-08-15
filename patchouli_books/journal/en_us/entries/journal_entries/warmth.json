@@ -1,0 +1,18 @@
+{
+  "name": "Warmth",
+  "icon": "kubejs:wheat",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 16,
+  "advancement": "im:chapter_5_1/root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "TODO: fixI've decided to fight my urges for technological growth and instead forge a new path, one that returns to a more sustainable lifestyle. Instead of large industrial plants, pumping smokestacks full of carbon dioxide into the atmosphere, I will direct my attention to solving the world's food crisis. While we can survive without electricity, Everyone needs food, and this way I wont continue polluting."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "I feel a warmth in my chest as I make the decision to avoid another climate disaster. This way may be simpler but I'm sure that I will get used to this, and the world will thank me."
+    }
+  ]
+}

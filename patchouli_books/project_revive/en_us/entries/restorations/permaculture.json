@@ -1,0 +1,11 @@
+{
+  "name": "Permaculture",
+  "icon": "rankine:compost",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Create a permaculture waste management system"
+    }
+  ]
+}

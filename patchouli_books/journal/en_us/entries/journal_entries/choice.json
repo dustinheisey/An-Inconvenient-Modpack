@@ -1,0 +1,22 @@
+{
+  "name": "Choice",
+  "icon": "create:chromatic_compound",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 15,
+  "advancement": "im:chapter_4/choice",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I have to make a choice, one that seemed so simple at first but has quickly become complicated. I have multiple conflicting ideas about what I should do.$(br2)On the one hand, maybe these warnings spoke of a different time, of a society that didn't know what was at stake. Maybe we couldn't imagine the cataclysms that stole everything from us were even "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "possible. Maybe I put my workers through hell so that I could realize a vision I had for a better world, and maybe I just didn't figure out how to create it in time. Maybe this time could be different.$(br2)On the other hand, I don't remember having a desire to help the world, only to enrich myself. This chaos occurred over many many years, and maybe we purposefully ignored the warnings, thinking that our children would have to deal with it instead of us, or that"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "even if we brought climate chaos on ourselves, we, members of the powerful few, would be alright. $(br2)The warnings have been startling, but the possibilities have been so alluring to me. I know what I need to do, but I feel such a strong urge to push on."
+    }
+  ]
+}

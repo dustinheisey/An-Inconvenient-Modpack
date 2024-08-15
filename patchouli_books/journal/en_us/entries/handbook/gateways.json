@@ -1,0 +1,13 @@
+{
+  "name": "Gateways",
+  "icon": "gateways:gate_pearl{gateway:'gateways:small_everbright_gateway'}",
+  "category": "patchouli:handbook",
+  "secret": true,
+  "advancement": "im:gateways/everbright",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I can use my growing occult knowledge to open a portal from other dimensions back home in the Overworld using things I can collect from slain mobs there. This portal will summon many waves of enemies that, if killed in time will drop many resources from that dimension. After completing the final wave a larger portal can be summoned and some life from that dimension will start living in the Overworld."
+    }
+  ]
+}

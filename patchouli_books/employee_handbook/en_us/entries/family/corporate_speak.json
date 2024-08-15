@@ -1,0 +1,35 @@
+{
+  "name": "Decoding Corporate Speak",
+  "icon": "twilightforest:charm_of_life_1",
+  "category": "patchouli:family",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Welcome, Employee #253, to Decoding Corporate Speak, your indispensable guide to navigating the fascinating labyrinth of corporate jargon. Here, we peel back the layers of complexity to reveal the true meaning behind the buzzwords that populate our corporate ecosystem, here at Company Incorporated. It's not just about understanding; it's about mastering the art of speaking in circles while "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "sounding impressively knowledgeable. $(br2)- \"Synergy\": Often tossed around in meetings like a hot potato. What it really means is getting everyone to agree on a decision that no one believes in but somehow makes everyone feel involved. $(br2)- \"Thinking Outside the Box\": A phrase used to encourage creative thinking, usually uttered by someone very much inside the box, snug and comfortable, hoping you'll find "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "a way out so they don't have to. $(br2)- \"Leverage\": It means to use something else to maximum advantage, but more often than not, it's just a fancy way of saying \"use\". Why say \"use\" when you can sound more sophisticated and say \"leverage\"? $(br2)- \"Bandwidth\": How much extra work you can handle without openly weeping at your desk. If someone asks about your bandwidth, they're really"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "asking how late you can stay without starting a revolution. $(br2)- \"Deep Dive\": This involves an intense, often unnecessarily long, exploration of a topic. Usually results in more questions than answers and a desperate need for oxygen. $(br2)- \"Circle Back\": The corporate equivalent of saying \"Let's not decide anything now, or ever.\" It's a magical loop of non-commitment. To circle back is to hope the issue resolves itself by the time you"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "reluctantly revisit it. $(br2)- \"Touch Base\": This simply means to check in for no other reason than to remind someone of your existence. $(br2)- \"Push the Envelope\": This is about going beyond limits, but within such safe boundaries that the envelope might as well be a steel box. $(br2)- \"Take it Offline\": A polite way of saying, \"Let's talk about this when fewer people can witness our confusion and"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "despair\". $(br2)- \"Paradigm Shift\": This is supposed to signify a fundamental change in approach or underlying assumptions. More often, it's just a way to make minor policy adjustments sound revolutionary. $(br2)Armed with this guide, you're now ready to decode and deploy corporate speak with the best of them. Remember, in the corporate world, it's not just what you say but how ambiguously you say it that"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "counts. Go forth and communicate with confidence, Employee #253!"
+    }
+  ]
+}

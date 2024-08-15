@@ -1,0 +1,32 @@
+
+[general]
+	disable_mod = false
+	auto_start = false
+	space_modules = false
+	shadow_text = true
+	animations = true
+	animationSpeed = 1.0
+	fontScale = 1.0
+	background_color = 1867534416
+	hide_debug_crosshair = false
+	hide_sidebar = true
+	hide_bossbar = true
+	always_show_profiler = false
+	always_show_tps = false
+
+[[modules_left]]
+	name = "empty"
+	empty_lines = 1
+	enabled = true
+
+	[modules_left.lines]
+		nothing = true
+
+[[modules_right]]
+	name = "empty"
+	empty_lines = 1
+	enabled = true
+
+	[modules_right.lines]
+		nothing = true
+

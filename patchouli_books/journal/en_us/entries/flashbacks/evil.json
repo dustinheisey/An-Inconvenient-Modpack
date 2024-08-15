@@ -1,0 +1,34 @@
+{
+  "name": "Industry",
+  "icon": "endrem:evil_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 5,
+  "secret": true,
+  "advancement": "im:chapter_3/eye_evil",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "My company has recently completed the construction of a large industrial plant that produces plastic from underground oil. It has been operating smoothly for a few months. Although I do not understand the processing methods, the public perceives me as a genius. I have decided to schedule a tour of the facility to see if I can offer any suggestions to the experts who run it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "As I travel to the industrial plant, I notice a long pipe that starts at the oil extraction site and ends at the oil refinery. When I arrive, the lead plant operator greets me and gives me a tour of the plant, explaining how everything works.$(br2)The operator explains that the crude oil is pumped through a furnace and heated until it vaporizes, filling a large distillation chamber. The vapor then condenses into different fluids in different chambers,"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "which splits the crude oil into lighter components called fractions.$(br2)One of the fractions, naphtha, is used in the production of plastic. The naphtha is piped into a refinery unit, where it is heated to an extreme temperature and converted into cracked naphtha. The cracked naphtha is then further distilled into ethylene. The ethylene is piped into a reaction chamber where a catalyst is added and the mixture is converted into"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "molten plastic.$(br2)The molten plastic is cast into sheets, which are packaged and sent to other factories where they can be melted and cast into different shapes. This is the plastic that my company uses to package all of its products.$(br2)Although I only understood about one sentence of the description of the plant's functions, I maintained my confidence and air of superiority. I told the plant"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "operator that the production efficiency that they reported last quarter was a little lower than expected and that they should find a way to increase it. The plant operator thanked me for the feedback and assured me that the efficiency would improve.$(br2)I could tell that the plant operator was uncomfortable, but I didn't care. All of my workers must show respect for their CEO and make me feel more intelligent and superior to them. My company, like all"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "others, is not a democracy, and my word is law."
+    }
+  ]
+}

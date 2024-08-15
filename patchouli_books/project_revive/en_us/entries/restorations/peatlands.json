@@ -1,0 +1,11 @@
+{
+  "name": "Peatlands",
+  "icon": "farmersdelight:organic_compost",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Restore peatlands in the taiga"
+    }
+  ]
+}

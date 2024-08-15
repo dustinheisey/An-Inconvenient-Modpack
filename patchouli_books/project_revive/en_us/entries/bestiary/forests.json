@@ -1,0 +1,61 @@
+{
+  "name": "Forest Fauna",
+  "icon": "minecraft:oak_sapling",
+  "category": "patchouli:bestiary",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": ""
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:canary",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "crittersandcompanions:ferret",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:robin",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:cardinal",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:bluejay",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:deer",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:bear",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:snail",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:caterpillar",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:butterfly",
+      "scale": 0.75
+    }
+  ]
+}

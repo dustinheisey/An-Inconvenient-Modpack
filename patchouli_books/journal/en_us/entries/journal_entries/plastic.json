@@ -1,0 +1,18 @@
+{
+  "name": "Plastic",
+  "icon": "pneumaticcraft:plastic",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 21,
+  "advancement": "im:chapter_5_2/plastic",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I have rediscovered the chemical engineering required to produce plastic. This miracle material can be used in so many places and to package anything. I can see entire economies developing based off of this, products being manufactured in places that are rich with resources and low in costs, and shipped across the world where they can be sold for a higher price."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "These ideas swirling around in my mind all require plastic to become ubiquitous in daily life. I understand now where all of those plastic bags came from when I awoke many years ago in this damaged world. A thousand years ago we transformed the world into a garbage dump, and through the mass production of this precious material, I fear I will do the same."
+    }
+  ]
+}

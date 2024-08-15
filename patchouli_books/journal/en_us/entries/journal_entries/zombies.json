@@ -1,0 +1,18 @@
+{
+  "name": "Undead",
+  "icon": "minecraft:rotten_flesh",
+  "category": "patchouli:entries",
+  "sortnum": 1,
+  "secret": true,
+  "advancement": "im:chapter_1/zombies",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I covered a lot of ground in the search for food, and found nothing. Interestingly, the entire time I was searching, I still didn't see a single animal. That eerie quiet followed me everywhere I went. I got back to the bunker, empty handed, before nightfall, and my hunger was ravenous. Night fell and I heard noises near the vault entrance. I walked upstairs and was shocked and horrified by what"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "I saw. The quiet had been replaced with the deafening grunts of the undead. I managed to survive until morning, and the dead burned in the sunlight. I expect there are more zombies and that they will be back tonight. I'm going to need to be more prepared with protection from their attacks and ways to fight them more effectively."
+    }
+  ]
+}

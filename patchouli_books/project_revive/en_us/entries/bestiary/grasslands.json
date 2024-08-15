@@ -1,0 +1,36 @@
+{
+  "name": "Grasslands Fauna",
+  "icon": "minecraft:tall_grass",
+  "category": "patchouli:bestiary",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": ""
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cnb:little_grebe",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:rattlesnake",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:boar",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "totemic:buffalo",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:cow",
+      "scale": 0.75
+    }
+  ]
+}

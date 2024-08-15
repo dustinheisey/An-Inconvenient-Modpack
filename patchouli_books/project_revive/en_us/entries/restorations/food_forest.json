@@ -1,0 +1,11 @@
+{
+  "name": "Food Forest",
+  "icon": "minecraft:jungle_sapling",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Create a multistory food forest ecosystem in a jungle"
+    }
+  ]
+}

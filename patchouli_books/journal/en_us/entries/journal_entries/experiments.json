@@ -1,0 +1,22 @@
+{
+  "name": "Experiments",
+  "icon": "naturesaura:eye",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 8,
+  "advancement": "im:chapter_3/root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I have created an instrument that enables me to detect the energy around me. I was correct this energy was real, and it needs a name, so I will call it aura. This aura is very powerful, it seems that it directly corresponds with the amount of life in an area, and the level of this energy changes with time.$(br2)I have begun to perform some experiments to determine what "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "activities affect the level of aura in the atmosphere to try to determine why some areas have so little and what could have happened. The first thing I notice is that by using certain instruments and machines, the level of aura drains in the surrounding area. I have not devised a method for restoring that aura yet, however it seems to come back very slowly on its own. Maybe the lack of life I found when I awoke was due to an overuse of these machines? I doubt that it could be this"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "simple, so I must explore further."
+    }
+  ]
+}

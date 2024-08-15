@@ -1,0 +1,11 @@
+node_modules
+kubejs/exported
+kubejs/probe
+.vscode
+
+mods
+usernamecache.json
+template
+patchouli_data.json
+kubejs/assets/kubejs/lang/schema.json
+kubejs/assets/ponderjs_generated/lang/en_us.json

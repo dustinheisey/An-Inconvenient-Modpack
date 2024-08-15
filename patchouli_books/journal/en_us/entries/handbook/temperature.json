@@ -1,0 +1,33 @@
+{
+  "name": "Extreme Temperatures",
+  "icon": "cold_sweat:filled_waterskin",
+  "category": "patchouli:handbook",
+  "advancement": "im:chapter_1/first_night",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I am affected by the outside temperature which is different depending on the biome and dimension I am in. It raises or lowers my body temperature until reaching a dangerous level at which I start to die."
+    },
+    {
+      "type": "patchouli:text",
+      "advancement": "im:chapter_1/waterskin",
+      "text": "I can raise and lower my body temperature by drinking chilled or heated waterskins. This does not stop the outside from affecting my body temperature."
+    },
+    {
+      "type": "patchouli:text",
+      "advancement": "im:chapter_1/hearth",
+      "text": "I can protect myself further by stabilizing the external temperature. I can do this by positioning and fueling a hearth in my base, or placing multiple, one every 30 or so blocks, to cover a larger area."
+    },
+    {
+      "type": "patchouli:text",
+      "advancement": "im:chapter_2/sewing_table",
+      "text": "I can use a sewing table to insulate my armor, protecting my from extreme temperatures when I leave my base."
+    },
+    {
+      "type": "patchouli:text",
+      "advancement": "im:chapter_4/soulspring_lamp",
+      "text": "I can use a soulspring lamp to cool down a small area around me while in the nether, protecting me from the deadly heat. The lamp is fueled by warped or crimson stems."
+    }
+  ]
+}

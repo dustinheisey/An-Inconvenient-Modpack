@@ -1,0 +1,22 @@
+{
+  "name": "Potential",
+  "icon": "pneumaticcraft:oil_bucket",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 14,
+  "advancement": "im:chapter_4/potential",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "When I arrive in this new place, blueleaf, untouched by executives like myself for more than a thousand years, I see literal oceans of oil, a stable, calm temperature, and hundreds of locals waiting to become my customers. $(br2)The potential calls to me, it claws at my heart. I know that a thousand years ago this lead to literal hell in many areas of the world, but what if I "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "could utilize this oil in a way that polluted less? Think of what I could do with all of this rich resource. I could power the world for thousands of years. Think of how essential providing this service to a humanity that has just opened its eyes after such a long slumber truly is. Think of the profits I can make from being the first to accomplish such task, and think of what good I could do for the world with all of those profits."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "This choice has become quite unclear to me now, even though days previously I had so much conviction towards the opposite path."
+    }
+  ]
+}

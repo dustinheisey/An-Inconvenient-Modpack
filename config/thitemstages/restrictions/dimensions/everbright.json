@@ -1,0 +1,6 @@
+{
+  "Restriction Data": {
+    "stage": "dimension_everbright",
+    "dimensionList": ["blue_skies:everbright"]
+  }
+}

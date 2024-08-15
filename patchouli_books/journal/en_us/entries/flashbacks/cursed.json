@@ -1,0 +1,30 @@
+{
+  "name": "The Slaughterhouse",
+  "icon": "endrem:cursed_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 9,
+  "secret": true,
+  "advancement": "im:chapter_5_1/eye_cursed",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I just finished giving a speech about the opening of a new pasture I commissioned for my pigs, carefully crafted to mimic the native environment wild pigs are used to. My company is offering a new service where visitors are able to view the living conditions of the pigs, as there have been growing concerns among the public after many leaked videos were shown of pigs in cramped, "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "dirty cages, barely able to turn around. $(br2)After the press release is finished I travel to the animal processing facility that handles these pigs, along with our other animals, to audit the efficiency of the meat production.$(br2)I see the pigs exiting trucks and filing into a single line. I see one get locked into a chamber where toxic gas is filled, causing them to thrash around, gasping for air, until "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "eventually the gas suffocates them. Their corpse is thrown on a conveyor belt, along with other pigs, and a worker slits each of their throats, the blood covering all of the equipment and the workers. In this room I also see baby male chicks being dropped into a grinder. These males can't lay eggs and don't grow large enough for meat production, so they are financially worthless to me.$(br2)I move into the next room where the animals are skinned"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "and gutted, many with large tumors or pus filled lesions. This is completely legal, and I can advertise this as safe and healthy to eat, so I do. $(br2)The meat is then stripped off the corpses and ground in large grinders, pressed, packaged, and loaded onto a truck. Once the truck is filled with all of the product, it is sent to grocery stores across the world.$(br2)This speed would have been acceptable in the past, but I"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "need to keep up with the rising demand, so I put in my notes that the slaughterhouse workers need to speed production further. I wonder if there are any more corners they can cut. Its easier to do this when I think of these animals as objects. I also note that they need to keep tighter security to prevent further leaks. I can't have the public seeing this, as it will ruin the new ethical reputation my company needs in order to keep growing my profits."
+    }
+  ]
+}

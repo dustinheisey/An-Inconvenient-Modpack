@@ -1,0 +1,41 @@
+{
+  "name": "Colds Fauna",
+  "icon": "minecraft:snowball",
+  "category": "patchouli:bestiary",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": ""
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:llama",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cnb:yeti",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:goat",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:sheep",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:polar_bear",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "crittersandcompanions:red_panda",
+      "scale": 0.75
+    }
+  ]
+}

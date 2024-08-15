@@ -1,0 +1,31 @@
+{
+  "name": "Mandatory Fun",
+  "icon": "twilightforest:charm_of_life_1",
+  "category": "patchouli:family",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Welcome, Employee #253, to the enchanting world of Mandatory Fun, the cornerstone of our corporate culture where enthusiasm meets obligation in a dazzling display of forced camaraderie. Here, we peel back the curtain on the magic of mandatory office events, where we come together not just as colleagues, but as a compulsory family united in our pursuit of artificially boosted morale. "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "1. The Annual Retreat: Embark on a journey of self-discovery, team-building, and subtle corporate indoctrination in a remote location. Activities include trust falls with people you wouldn't trust with your coffee order, and workshops on corporate values that you'll need a compass to navigate. Remember, participation isn't just encouraged; it's recorded and remembered. $(br2)2. The Office Holiday Party: A festive celebration where the line between professional and"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "personal blur amidst a sea of awkward interactions and carefully choreographed enthusiasm. Don your festive sweater, practice your most genuine fake laugh, and prepare to bond over appetizers that symbolize our shared commitment to fiscal restraint and gluten-free options. $(br2)3. The Quarterly Team Lunch: Relish the opportunity to discuss anything but work, as long as it's within the approved topics of"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "conversation. Here, you'll master the art of eating while nodding in agreement with the company's latest pivot, all the while calculating the minutes until you can return to the sanctuary of your desk. $(br2)4. The Wellness Workshop: Dive deep into corporate wellness initiatives that highlight the importance of health, as long as it doesn't interfere with work hours. From yoga sessions that double as flexibility training for reaching corporate goals to"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "meditation minutes for contemplating company loyalty, your well-being is our priority, right after profitability. $(br2)5. The Innovation Incubator: A thrilling brainstorming session disguised as fun, where you're encouraged to think outside the box, but only within the confines of the company's strategic objectives. It's a chance to showcase your creativity, as long as it aligns with the corporate agenda."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Remember, dear team member, Mandatory Fun isn't just about forcing a smile and feigning enjoyment; it's about building a robust corporate culture on the foundation of obligatory participation. So, let us embrace these moments with open arms (and a slight sense of resignation), for together, we are more than just a team – we're a team that knows how to have fun, whether we like it or not."
+    }
+  ]
+}

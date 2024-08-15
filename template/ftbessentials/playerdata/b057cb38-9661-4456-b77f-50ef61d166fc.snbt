@@ -1,0 +1,14 @@
+{
+	muted: false
+	fly: false
+	god: false
+	nick: ""
+	name: "dh253"
+	last_seen: { dim: "minecraft:overworld", x: 9651, y: 56, z: 4876, time: 1707777564129L, xRot: 15.450001f, yRot: -179.54443f }
+	recording: 0
+	teleport_history: [
+		{ dim: "minecraft:overworld", x: -581, y: 76, z: -137, time: 1707773922766L, xRot: -22.049986f, yRot: 78.74996f }
+		{ dim: "minecraft:overworld", x: -139, y: 163, z: -629, time: 1707774130026L, xRot: 52.950047f, yRot: 13.049966f }
+	]
+	homes: { }
+}

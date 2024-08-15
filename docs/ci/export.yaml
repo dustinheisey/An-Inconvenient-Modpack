@@ -1,0 +1,13 @@
+export:
+  [
+    'config',
+    'defaultconfigs',
+    'template',
+    'patchouli_books',
+    'kubejs',
+    'mods',
+    'shaderpacks',
+    'resourcepacks',
+    'xaeroworldmap.txt',
+    'xaerominimap.txt',
+  ]

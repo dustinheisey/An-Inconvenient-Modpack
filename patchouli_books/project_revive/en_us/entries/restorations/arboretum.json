@@ -1,0 +1,11 @@
+{
+  "name": "Arboretum",
+  "icon": "immersiveengineering:insulating_glass",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Build an arboretum in the tundra"
+    }
+  ]
+}

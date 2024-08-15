@@ -1,0 +1,1 @@
+give @s paraglider:spirit_orb

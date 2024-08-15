@@ -1,0 +1,11 @@
+{
+  "name": "Bee Sanctuary",
+  "icon": "minecraft:beehive",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Create a bee sanctuary"
+    }
+  ]
+}

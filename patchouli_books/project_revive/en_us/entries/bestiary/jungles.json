@@ -1,0 +1,26 @@
+{
+  "name": "Jungles Fauna",
+  "icon": "minecraft:vine",
+  "category": "patchouli:bestiary",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": ""
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:coral_snake",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:clouded_leopard_ym",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "crittersandcompanions:leaf_insect",
+      "scale": 0.75
+    }
+  ]
+}

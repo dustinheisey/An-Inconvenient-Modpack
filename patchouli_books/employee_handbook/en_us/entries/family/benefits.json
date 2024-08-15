@@ -1,0 +1,31 @@
+{
+  "name": "Benefits",
+  "icon": "twilightforest:charm_of_life_1",
+  "category": "patchouli:family",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Welcome, Employee #253, to this deep dive into the generous benefits package offered by Company Incorporated. Here, we unwrap the generous offerings that elevate our corporation above the rest, each benefit meticulously crafted to ensure you feel valued, engaged, and perpetually tethered to your desk with a smile. $(br2)Unlimited Coffee Supply: Revel in the boundless ocean of "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "coffee, a testament to our commitment to your alertness and productivity. It's not just coffee; it's liquid motivation, generously provided to help you transcend the ordinary limits of human endurance. $(br2)Open-Concept Workspaces: Embrace the freedom of our open-concept offices, where walls don't just come down physically but metaphorically, fostering an environment of relentless collaboration. Here, privacy is a relic, and synergy is the air we breathe."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Mandatory Wellness Programs: Participate in our wellness initiatives, carefully designed to remind you of the importance of health – primarily as it pertains to reducing sick days. From yoga sessions that double as team meetings to meditation breaks scheduled at the convenience of project deadlines, your well-being is our priority, right after productivity. $(br2)Flexibility: Bask in the glow of flexible work hours, a dazzling mirage that promises work-life "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "balance but delivers a 24/7 connectivity expectation. Flexibility means being just a Slack message away from your next assignment, anytime, anywhere. $(br2)Professional Development Workshops: Grow with us through workshops that promise to develop your skills, as long as those skills directly enhance your output, efficiency, and ability to absorb additional responsibilities without additional compensation."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Virtual Happy Hours: Cheers to virtual connectivity, where camaraderie is cultivated through screens. It's an opportunity to unwind, as long as you maintain the decorum and enthusiasm expected of an employee fully committed to the corporate cause. $(br2)Eco-Friendly Initiatives: Join our journey towards sustainability, symbolized by the recycling bins beneath desks that bear witness to our paperless aspirations. It's our way of showing we care about"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "the planet, as much as it aligns with our public image strategy. $(br2)Welcome to the pantheon of Benefits, where each offering is less about the perk itself and more about the perception it creates. Here, we don't just work for benefits; we benefit from the work, finding joy in the small concessions made in the name of corporate loyalty and perpetual productivity."
+    }
+  ]
+}

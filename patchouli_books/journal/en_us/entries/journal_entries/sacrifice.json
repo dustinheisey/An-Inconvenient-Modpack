@@ -1,0 +1,18 @@
+{
+  "name": "Sacrifice",
+  "icon": "bloodmagic:daggerofsacrifice",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 10,
+  "advancement": "im:chapter_3/sacrifice",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "After adventuring in Everdawn I found a way to sacrifice other creatures and use their blood for my experiments. I also discovered that I can extract much more blood from other animals than I can from myself. $(br2)I attempted to sacrifice a zombie, and this produced no blood whatsoever. I guess they have been wandering for a while and all of it drained "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "from them a while ago. I also noticed that some animals give much more blood than others, and would be wise to experiment with the best species for sacrifice.$(br2)I am going to need a lot of this soon, I should start a farm."
+    }
+  ]
+}

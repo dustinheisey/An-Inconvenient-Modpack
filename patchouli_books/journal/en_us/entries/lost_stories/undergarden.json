@@ -1,0 +1,22 @@
+{
+  "name": "A Virus",
+  "icon": "undergarden:catalyst",
+  "category": "patchouli:lost_stories",
+  "sortnum": 1,
+  "secret": true,
+  "advancement": "im:chapter_3/undergarden_lost_story",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "It all began with melting snowcaps. An ancient virus that had been frozen deep in the ice was released and, after traveling from species to species, eventually made its way to the first human.$(br2)For a while, it was contained, but the number of cases quickly exploded. Symptoms of the infection included full-body necrosis and rabies-like confusion and agitation."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "There was no cure, and it progressed by taking over the host's mind, leaving them in the state of an animated corpse.$(br2)The government and its scientists tried to contain the spread of the virus, but the distrustful public refused to follow their guidelines.$(br2)A large area had to be quarantined and was later abandoned. Within the quarantine, the virus spread until it infected everyone."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "After being forgotten by the rest of society, the undead wander around, confused and violent, while nature takes back this small part of the world, finally able to heal."
+    }
+  ]
+}

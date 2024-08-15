@@ -1,0 +1,11 @@
+{
+  "name": "Bird Sanctuary",
+  "icon": "hexerei:seed_mixture",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Create a bird sanctuary"
+    }
+  ]
+}

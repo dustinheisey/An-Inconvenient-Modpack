@@ -1,0 +1,68 @@
+{
+  "name": "inconvenient-modpack",
+  "version": "0.5.3",
+  "scripts": {
+    "commit": "cz",
+    "format": "npx prettier --write .",
+    "preview": "standard-version --dry-run",
+    "preview:patch": "standard-version --dry-run",
+    "release": "standard-version",
+    "release:patch": "standard-version -- --release-as patch",
+    "release:minor": "standard-version -- --release-as minor",
+    "release:major": "standard-version -- --release-as major"
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "avoid"
+  },
+  "devDependencies": {
+    "prettier": "^3.2.5",
+    "standard-version": "^9.5.0",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "standard-version": {
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes"
+      },
+      {
+        "type": "chore",
+        "section": "Chores"
+      },
+      {
+        "type": "docs",
+        "section": "Docs"
+      },
+      {
+        "type": "style",
+        "section": "Style"
+      },
+      {
+        "type": "refactor",
+        "section": "Refactors"
+      },
+      {
+        "type": "perf",
+        "section": "Performance"
+      },
+      {
+        "type": "test",
+        "section": "Testing"
+      }
+    ],
+    "commitUrlFormat": "",
+    "compareUrlFormat": ""
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

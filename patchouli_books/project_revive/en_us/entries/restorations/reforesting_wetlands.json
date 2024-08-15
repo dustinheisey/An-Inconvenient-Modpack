@@ -1,0 +1,11 @@
+{
+  "name": "Reforesting the Wetlands",
+  "icon": "twilightforest:mangrove_sapling",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "plant 1000 mangrove trees"
+    }
+  ]
+}

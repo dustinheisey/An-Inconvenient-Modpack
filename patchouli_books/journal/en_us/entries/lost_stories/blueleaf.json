@@ -1,0 +1,26 @@
+{
+  "name": "Welcome To Blueleaf",
+  "icon": "hem:blueleaf_grass_shorter",
+  "category": "patchouli:lost_stories",
+  "sortnum": 6,
+  "secret": true,
+  "advancement": "im:chapter_5_2/blueleaf_lost_story",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Welcome to Blueleaf, a land filled with untapped beauty and a wealth of natural resources. Explore our oceans filled with energy-rich oil waiting to be extracted. Pump as much as you can and continue to do so, as it will never run out and is necessary for building the future.$(br2)Visit our mines where workers tirelessly extract precious rose marble, not found"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "anywhere else, for you to use in your technology. If you come across any work rebellions, ignore them as they should be easy to quell and it is more important to keep producing your products to sell upgraded models to customers.$(br2)Explore our authentic campsites where merchants have been trading for centuries and make them your customers. If some of them don't want to trade, that's alright as ending them will"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "make room for new customers.$(br2)Discover fields of wheat tended by families of farmers and use your greater intellect and ambition to transform their restorative agriculture into large-scale industrial farming. You can even use the extra wheat to start a cow farm.$(br2)Help the citizens of Blueleaf modernize their ancient windmills, even if they do not want your help. Be sure to charge them for your services when you are finished."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Establish your company here and you will be sure to profit immensely."
+    }
+  ]
+}

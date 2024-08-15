@@ -1,0 +1,11 @@
+{
+  "name": "Wind Power",
+  "icon": "mekanismgenerators:wind_generator",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Setup a wind power installation in the mountains"
+    }
+  ]
+}

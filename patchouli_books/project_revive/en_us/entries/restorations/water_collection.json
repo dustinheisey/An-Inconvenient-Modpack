@@ -1,0 +1,11 @@
+{
+  "name": "Sustainable Water Collection",
+  "icon": "minecraft:water_bucket",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Create a rainwater harvesting system"
+    }
+  ]
+}

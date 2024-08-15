@@ -1,0 +1,7 @@
+{
+  "name": "My Promotions",
+  "description": "",
+  "icon": "kubejs:copper_coin",
+  "sortnum": 2,
+  "secret": true
+}

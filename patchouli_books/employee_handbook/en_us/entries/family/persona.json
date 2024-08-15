@@ -1,0 +1,23 @@
+{
+  "name": "Your Corporate Persona",
+  "icon": "twilightforest:charm_of_life_1",
+  "category": "patchouli:family",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Welcome, valued team member! Are you ready to embark on the most exhilarating journey of personal transformation? Yes? Fantastic! Here begins your adventure in \"Cultivating Your Corporate Persona\", a crucial step in aligning your inner self with the vibrant tapestry of the corporate family here at Company Incorporated. It's not just about fitting in; it's about embracing a new, more polished"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "version of you that breathes synergy and exudes productivity. $(br2)Firstly, let's talk about your smile. A smile is not just a smile here; it's a beacon of positivity, a testament to your unwavering commitment to our collective goals. Practice in the mirror each morning. Make it wide, make it bright, make it say, \"I'm ready to tackle challenges and synergize with gusto!\" $(br2)Next up, your language. Forget"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "plain English; we're all about the buzz here. Phrases like \"leverage our synergies\", \"optimize our bandwidth\", and \"think outside the box\" should become your new vernacular. Using these, you'll not only communicate but radiate innovation and forward-thinking. $(br2)Lastly, let's not forget about your online persona. Your LinkedIn profile should be a shrine to your professional achievements and aspirations. Endorsements? Get plenty."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Recommendations? Write them like you're the next Hemingway. Your profile picture? It should say, \"Here stands a paragon of corporate virtue.\" $(br2)By adopting these simple yet effective strategies, you're not just cultivating a corporate persona; you're sculpting an emblem of corporate excellence. Welcome to the future – your future – bright, ambitious, and utterly corporate. Let's synergize, optimize, and actualize our way to the top, together!"
+    }
+  ]
+}

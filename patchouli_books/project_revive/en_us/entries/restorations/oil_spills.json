@@ -1,0 +1,11 @@
+{
+  "name": "Oil Spills",
+  "icon": "ecofriendly:oil_distiller_bottles",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Clean up oil spills with sorbent oil floaters"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Human Resources",
+  "icon": "twilightforest:charm_of_life_1",
+  "category": "patchouli:family",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Greetings, Employee #253! Have you met your Human Resources (HR) Manager yet? If not, get ready to be wowed by the very embodiment of corporate compassion and bureaucratic benevolence! Our HR department isn't just about managing resources that happen to be human; it's about curating a joyous journey of employment for each and every one of you – while also meticulously ensuring the company's back is "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "so covered, it might as well be a turtle. $(br2)Here to Serve (The Company's Interests): Our HR Manager is your go-to guru, your corporate confidant, here to listen to your every grievance (and then gently remind you of the non-disclosure agreement you signed). Whether it's navigating the treacherous waters of inter-office conflicts or decoding the enigma of your benefits package, HR is here to provide guidance, support, and a "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "reassuring nod that says, \"We're all in this together, but remember who's steering the ship.\" $(br2)Advocate, Advisor, Ally (Sort Of): Need help understanding the labyrinthine company policies? HR is at your service, ready to clarify anything and everything with a smile that's equal parts friendly and foreboding. They're your advocate (when it aligns with company policy), your advisor (on how best to align with company policy), and"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "your ally (in promoting company policy). $(br2)Training and Development (For Company Compliance): Eager for growth and development? HR has a library of training modules at the ready, designed to elevate your skills to new heights of corporate compliance. From \"Best Practices in Document Shredding\" to \"Advanced Email Archive Maintenance\", you're sure to find a course that's both utterly specific and vaguely mandatory."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Here for You (When It's Convenient): Our HR Manager champions an open-door policy – figuratively speaking, of course. The door is actually typically closed, but it's the thought that counts! And while their schedule may be packed with very important meetings about meetings, rest assured, your well-being is on their agenda. $(br2)So, dear team member, take heart in knowing that our HR department is the wind beneath your corporate wings, guiding"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "you with the gentle hand of company doctrine. With HR's guidance, you'll soar like an eagle – under careful supervision and within designated airspace, of course. Aren't you lucky to have them?"
+    }
+  ]
+}

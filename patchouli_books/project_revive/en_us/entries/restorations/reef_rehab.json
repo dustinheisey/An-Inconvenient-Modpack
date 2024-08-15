@@ -1,0 +1,11 @@
+{
+  "name": "Coral Reef Rehabilitation",
+  "icon": "minecraft:horn_coral",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Reintroduce 1000 live coral to the coral reefs"
+    }
+  ]
+}

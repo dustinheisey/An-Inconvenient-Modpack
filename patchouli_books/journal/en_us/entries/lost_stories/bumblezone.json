@@ -1,0 +1,26 @@
+{
+  "name": "The Last Flower",
+  "icon": "minecraft:beehive",
+  "category": "patchouli:lost_stories",
+  "sortnum": 5,
+  "secret": true,
+  "advancement": "im:chapter_5_1/bumblezone_lost_story",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": " The world is dying. We are watching it burn before our eyes, and we can't do anything about it. Most people have grown bitter and hopeless. The majority of us are burnt out and broke, and the ones who aren't are either purposefully ignorant of the crisis we are in, or actively contributing to our planet's demise. $(br2)A lot of us are feeling somber tonight, as it was just"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "announced that the last flower on earth had died. The bees and other pollinator species died out a while ago, and with no pollination, all manner of fruits, vegetables, flowers, and other plants stopped reproducing. This massively increased the cost of food and widened the already enormous gap between the rich and everyone else. Companies started offering meals as benefits for employment, adding to the list of ever growing 'benefits' of being a good little consumer"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "and a good little slave. $(br2)These our lives now - We wake up, give ourselves a pep talk, and go to work. We are good little cogs in our employer's, or better yet, our master's machine. When work is over, we eat our meals in our company's cafeterias, then go home and watch some tv to avoid crying. We walk to our bedrooms to try to sleep. We lie awake in bed, dreading tomorrow, trying to convince ourselves that we can do this, we just need to take it one day at a time, again,"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "and again, and again, forever. $(br2)It didn't have to be this way. Why did these rich bastards do this to our planet, our mother? She provides for us, she has given us everything we have. She takes care of us, and we should have taken care of her. But they didn't, and we are angry. I hope someone finds a way out of this nightmare."
+    }
+  ]
+}

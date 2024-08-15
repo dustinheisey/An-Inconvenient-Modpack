@@ -1,0 +1,1 @@
+in chapter 5.2 you decide to go full steam ahead. you are going to create a food can and you are going to line it with bpa plastic. before you can make the can you have to get oil before you can get oil you have to make a computer and travel to blueleaf.

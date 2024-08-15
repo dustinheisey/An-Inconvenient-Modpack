@@ -1,0 +1,11 @@
+{
+  "name": "Forest Biodiveristy",
+  "icon": "rankine:honey_locust_sapling",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Reintroduce all of the different tree types back to the forest"
+    }
+  ]
+}

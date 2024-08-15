@@ -1,0 +1,26 @@
+{
+  "name": "Ocean Acidification",
+  "icon": "endrem:exotic_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 1,
+  "secret": true,
+  "advancement": "im:chapter_2/eye_exotic",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I'm reading news that mass die-offs of wild fish have been occurring due to ocean acidification. I'm not entirely concerned by this, as the fish my company farms are in controlled environments and my profits shouldn't be affected. I look down at my schedule, and I see that I have a visit to one of the fish enclosures today, in fact.$(br2)When I arrive at the farm, I am "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "very surprised to find a big problem. The population of fish has been reduced by 30%. I'm shocked and outraged, not because of all of the fish that have died, but because of all of the profits I see at risk. What will I tell my shareholders?$(br2)Many similar problems have taken over the world recently, causing massive supply chain issues and forcing companies to raise their prices to maintain their profits. Obviously, the companies"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "needed to pass on the cost to the consumer, because companies are the greatest victims, not the millions of homeless people who recently lost their jobs due to automation or the underpaid workers who can barely afford to pay rent or buy food.$(br2)I begin to notice many ideas swirling in my mind, and then I see them all connecting. If I have to raise the cost of my fish a little due to ocean acidification, what is stopping me from raising it even"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "further, using the same excuse? The supply of fish has just been reduced by 30%, but instead of raising prices by 30%, what if I raise them by 80%? 150%? The shareholders will be so pleased! I should call my sales team and set this plan into action."
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "Restriction Data": {
+    "stage": "dimension_nether",
+    "dimensionList": ["minecraft:the_nether"]
+  }
+}

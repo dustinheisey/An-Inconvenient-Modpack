@@ -1,0 +1,6 @@
+{
+  "Restriction Data": {
+    "stage": "dimension_undergarden",
+    "dimensionList": ["undergarden:undergarden"]
+  }
+}

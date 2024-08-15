@@ -1,0 +1,5 @@
+
+[logbegone]
+	phrases = ["Unable to resolve texture reference", "Loaded tile", "Loaded texture", "Auto-registered standard texture set", "Unable to resolve texture due to reference chain", "Using missing texture, unable to load", "Potentially Dangerous alternative prefix"]
+	regex = [""]
+

@@ -1,0 +1,26 @@
+{
+  "Restriction Data": {
+    "stage": "chapter_5_2",
+    "tagList": ["im:chapter_5_2"],
+    "itemList": [
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "pneumaticcraft:book"
+        }
+      }
+    ]
+  },
+  "Settings": {
+    "advancedTooltips": "ADVANCED",
+    "itemTitle": "Unknown Item",
+    "pickupDelay": 15,
+    "hideInJEI": true,
+    "canPickup": false,
+    "containerListWhitelist": false,
+    "checkPlayerInventory": false,
+    "checkPlayerEquipment": true,
+    "usableItems": false,
+    "usableBlocks": false
+  }
+}

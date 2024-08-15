@@ -1,0 +1,27 @@
+{
+  "name": "Hierarchy of Needs",
+  "icon": "twilightforest:charm_of_life_1",
+  "category": "patchouli:family",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Employee #253, as you've graciously chosen to join our corporate family, it's time to introduce you to The Corporate Hierarchy of Needs. It's like Maslow's, but with more Wi-Fi and less self-actualization. $(br2)At the foundation of our pyramid, we have Survival Needs: a steady paycheck and enough coffee to fuel a small spaceship. These are the basics, the ground floor of "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "your corporate existence. Without them, how could one even contemplate productivity or synergy? $(br2)Climbing up, we encounter the Safety Needs: job security (as long as you hit those KPIs), a healthcare plan that's more cryptic than ancient hieroglyphs, and an ergonomic chair that whispers sweet nothings about lower lumbar support. $(br2)Next, we ascend to Belonging Needs. This is where the magic"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "happens. You're not just a cog in the machine; you're a cog in a very exclusive, highly synergistic machine. Team-building retreats, mandatory fun, and an endless stream of corporate newsletters make you feel like you truly belong... or at least, that's the goal. $(br2)Ah, but then we reach the illustrious Esteem Needs: recognition, accolades, and the coveted Employee of the Month parking spot. Here, you're not just working; you're thriving, basking in the glow of your"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "accomplishments and the adoration of your peers. Your email signature grows longer, your business cards heavier, and your sense of corporate identity solidifies. $(br2)Finally, at the pinnacle of our pyramid, we have Actualization Needs, but with a twist. It's not about finding your true self or connecting with the universe. No, it's about becoming the ultimate corporate being, one who transcends mere productivity to become a beacon of"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "corporate values, a true embodiment of the company's mission and vision. $(br2)As you navigate the treacherous but rewarding waters of the corporate culture here at Company Incorporated, remember: it's not just about meeting your needs; it's about aligning them with the greater good of the business. After all, what's good for the company is good for you, right? Right."
+    }
+  ]
+}

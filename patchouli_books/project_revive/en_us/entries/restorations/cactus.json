@@ -1,0 +1,11 @@
+{
+  "name": "Cactus Restoration",
+  "icon": "naturesaura:aura_cactus",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Plant 1000 aura cactuses"
+    }
+  ]
+}

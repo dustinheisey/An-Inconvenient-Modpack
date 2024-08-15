@@ -1,0 +1,22 @@
+{
+  "name": "Hunger",
+  "icon": "kubejs:copper_coin",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 22,
+  "advancement": "im:chapter_5_2/hunger",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Hunger. That is what I feel. Not hunger for food or love, just a ambiguous emptiness that I crave to fill with something. This yearning feels bad, and my solution to this hunger has been to fill it with more, but no matter how much I take, it never stops. I have turned the world of blueleaf into a factory, its oceans and land and people just resources to be utilized for the production of plastic and "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ultimately for profit, which I will use to create more profit. $(br2)I don't see an end to this, no point at which I will be satisfied. The hunger cannot be satiated and so I will continue to drain the oceans of oil, continue to steal more land from the locals, continue finding more pieces of the world that I can take and use to make more profit. But my infinite desires are incongruent with a finite "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "world, and I can only take more for so long.$(br2)My business is going strong, though. I am making so much money. I can buy many things with this money, and I must keep looking for something to fill the aching void inside me."
+    }
+  ]
+}

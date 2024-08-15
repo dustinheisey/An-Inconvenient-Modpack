@@ -1,0 +1,14 @@
+
+#Server settings
+[Server]
+	#Adjusting this setting changes the speed of the raft. (Default: 1.0) [Lower than 1 = slower | higher than 1 = faster]
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	SpeedMultiplier = 0.8
+	#Adjusting this setting changes the speed of turning the raft. (Default: 1.0) [Lower than 1 = slower | higher than 1 = faster]
+	#Range: 4.9E-324 ~ 1.7976931348623157E308
+	TurnMultiplier = 1.0
+	#Changing this to false makes rafts the same speed as on land while on a slippery block. (Default: true)
+	SlipperyFast = true
+	#Changing this to true makes the raft sink if there's 2 entities on it. (Default: false)
+	SinkTheRaft = true
+

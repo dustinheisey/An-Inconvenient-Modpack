@@ -1,0 +1,11 @@
+{
+  "name": "Soil Rehabilitation",
+  "icon": "farmersdelight:rich_soil",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Plant native grasses to rehabilitated dead soil"
+    }
+  ]
+}

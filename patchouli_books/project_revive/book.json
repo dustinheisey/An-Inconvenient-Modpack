@@ -1,0 +1,9 @@
+{
+  "name": "Project Revive",
+  "subtitle": "",
+  "version": 1,
+  "book_texture": "patchouli:textures/gui/book_green.png",
+  "model": "im:project_revive",
+  "landing_text": "Humanity is not a cancer. We are butterflies. We had to be caterpillars while we developed, but now we can transform into shepherds of all life. This is my project now, the restoration of this world.",
+  "show_progress": true
+}

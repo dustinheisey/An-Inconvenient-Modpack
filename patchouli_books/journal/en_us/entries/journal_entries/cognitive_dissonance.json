@@ -1,0 +1,22 @@
+{
+  "name": "Cognitive Dissonance",
+  "icon": "minecraft:beef",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 17,
+  "advancement": "im:chapter_5_1/cognitive_dissonance",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I have constructed a machine that summons different animals existing a thousand years ago, back to the present, using a lot of aura, but I think it was worth the small cost to the environment. I dreamt of these animals, and while I have brought many of their sibling species back from other dimensions, I haven't been able to restore cows and sheep until now. "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "I'm looking at these sweet and docile creatures and feel conflicting emotions surrounding two contradictory truths. I want to give them the biggest hug and protect them from danger, but I really want a hamburger and a wool coat. $(br2)Both of these can be true right? I can love these animals and still eat them right? Aren't humans just the top of the food chain? Isn't this natural? $(br2)I can keep breeding them"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "together and create some automation using the technology I have learned already, making sure to avoid using any fossil fuels so as to also avoid polluting. I can feed the world like I planned. I better get to work."
+    }
+  ]
+}

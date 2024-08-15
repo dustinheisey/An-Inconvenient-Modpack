@@ -1,0 +1,30 @@
+{
+  "name": "Forest Fires",
+  "icon": "endrem:nether_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 7,
+  "secret": true,
+  "advancement": "im:chapter_4/eye_nether",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "My sales manager tells me that beef sales have significantly increased from last year, and that I will need to increase the supply. I have been expecting this and am scheduled to oversee the controlled burn my company is doing to make room for more grain farms and pastures. The extra grain that will be produced will be fed to 95% of my livestock, and the pastures will be used to produce "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "\"grass-fed\" meat, which a growing number of ethically minded consumers prefer. Both types are slaughtered in the same way, but this messaging serves as a great distraction from that fact.$(br2)I quickly board a private jet and fly across countries to my destination, where I meet with a natural resource specialist. He informs me that everything is going according to plan and escorts me to a viewing area, safe from any danger. I see multiple people with large"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "flamethrowers setting a long line of fires at the bases of massive trees. Worldwide, these trees absorb 2.4 billion metric tons of carbon dioxide per year. People have been performing these fires, many controlled, and many accidental, for thousands of years, mainly for animal agriculture. So far, one-third of the planet's forests have been burned down, and the burning won't stop anytime soon.$(br2)My company needs to constantly"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "grow, that's how my shareholders make money, that's how this system works. The customers demand that I give them more meat, and if everyone dies because of it, at least they will have all the meat they could ever want, and at least I will have more money than I could use in a thousand lifetimes.$(br2)One of the burning trees started to collapse. The workers ran away as fast as they could, and most escaped. However, as it hit the ground,"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "it crushed two of them, burning them alive. Watching this made me feel very dizzy, and as I passed out, everyone's attention shifted from the burning workers to me."
+    }
+  ]
+}

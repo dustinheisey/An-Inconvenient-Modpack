@@ -1,0 +1,32 @@
+{
+  "Restriction Data": {
+    "stage": "chapter_1",
+    "tagList": ["im:chapter_1"],
+    "itemList": [
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "patchouli:journal"
+        }
+      },
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "rankine:rankine_journal"
+        }
+      }
+    ]
+  },
+  "Settings": {
+    "advancedTooltips": "ADVANCED",
+    "itemTitle": "Unknown Item",
+    "pickupDelay": 15,
+    "hideInJEI": true,
+    "canPickup": false,
+    "containerListWhitelist": false,
+    "checkPlayerInventory": false,
+    "checkPlayerEquipment": true,
+    "usableItems": false,
+    "usableBlocks": false
+  }
+}

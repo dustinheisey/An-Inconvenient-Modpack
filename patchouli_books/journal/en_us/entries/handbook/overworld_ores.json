@@ -1,0 +1,85 @@
+{
+  "name": "Overworld Materials",
+  "icon": "rankine:malachite",
+  "category": "patchouli:handbook",
+  "advancement": "im:chapter_1/malachite",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "To find some materials in the world, I need to know which biomes and depths above or below sea level (y=62) they are located in. This is a reference I can use to help locate specific materials in the overworld."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "rankine:malachite_ore"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Malachite Ore: Found in Swamps, between y=30 & y=60."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "rankine:cassiterite_ore"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Cassiterite Ore: Found in Taigas, between y=20 & y=50."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "rankine:kaolin"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Kaolin Clay: Found in Deserts, between y=40 & y =80."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "rankine:galena_ore"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Galena Ore: Found in Swamps, between y=-60 & y=-30."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "rankine:acanthite_ore"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Acanthite Ore: Found in Deserts, between y=-60 & y=-30."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "rankine:plumbago_ore"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Plumbago Ore: Found in Extreme Hills, between y=50 and y=100."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:amethyst_cluster"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Amethyst Cluster: Found anywhere underground, between y=-58 and y=30."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "hexerei:selenite_shard"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Selenite Shard: Found in swamps and jungles, between y=-55 and y=36."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "salt:rock_salt_ore"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Salt Ore: Found in the dripstone caves, oceans and beaches, between y=5 & y=100."
+    }
+  ]
+}

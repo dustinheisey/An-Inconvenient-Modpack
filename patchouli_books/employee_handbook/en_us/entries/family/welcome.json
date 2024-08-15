@@ -1,0 +1,27 @@
+{
+  "name": "Welcome to the Family!",
+  "icon": "twilightforest:charm_of_life_1",
+  "category": "patchouli:family",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Hip hip hooray! Throw the confetti, sound the alarms, and cue the fanfare, for today, we welcome a shining new star into our corporate constellation. Yes, that's you! Welcome to the family where every handshake is warm, every smile is free, and every team member is valued like a rare gem in our vast treasure trove of talent. $(br2)Here at Company Incorporated, "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "we don't just offer you a job; we offer you a home. A place where your colleagues become your comrades, your managers become your mentors, and the break room coffee tastes like opportunity (with a hint of hazelnut). We're more than a collective; we're a collective dream weaving an epic saga of synergy, innovation, and occasional casual Fridays. $(br2)As a new member of our family, you're the protagonist in your own corporate adventure, a thrilling tale of growth,"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "ambition, and color-coded filing systems. Here, every task is a quest, every meeting is a roundtable of minds, and every printer jam is a dragon to be slain. Together, we don't just face the challenges of the market; we ride into battle with the banner of our brand billowing gloriously in the wind of commerce. $(br2)But fear not the dragons, dear hero, for you wield the mightiest sword of all: the Support of HR (and a nifty benefits package). With these"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "in hand, there's no peak you can't scale, no sales target you can't vanquish, and no office potluck you can't conquer with your famous guacamole. $(br2)So, straighten that tie, adjust that name badge, and take your first step into a broader world of spreadsheets, water cooler lore, and the occasional motivational poster that reminds you to \"Hang in There!\" like a cat on a clothesline. We are thrilled to have you, Employee #253, and"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "we can't wait to see the incredible feats you'll achieve, the spectacular spreadsheets you'll craft, and the indelible mark you'll leave on the quarterly reports. $(br2)Welcome aboard, Employee #253. Let's make some corporate magic together!"
+    }
+  ]
+}

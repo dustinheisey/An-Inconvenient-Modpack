@@ -1,0 +1,22 @@
+{
+  "name": "Prophecy",
+  "icon": "rankine:gas_mask",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 23,
+  "advancement": "im:chapter_5_2/prophecy",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I was given many chances, many warnings about exactly what would happen if I continued down the path of fossil fuel powered technology, but I ignored them, or maybe I felt powerless to prevent the inevitable. Now the warnings have become prophecies, and the prophecies have been proven correct.$(br2)The smog surrounding my factories is so thick and "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "suffocating that I need to wear a gas mask, otherwise I would choke on the toxic fumes. The oil reserves that seemed endless at first have started to dry up. My overproduction of plastic has lowered the price I can charge for them significantly.$(br2)I fear that the endless growth I felt promised to me was nothing more than a fantasy. I feel that time is running out to prevent a greater catastrophe, and I must search for a more sustainable path"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "forward."
+    }
+  ]
+}

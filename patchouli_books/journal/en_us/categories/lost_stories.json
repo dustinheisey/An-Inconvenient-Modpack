@@ -1,0 +1,7 @@
+{
+  "name": "Lost Stories",
+  "description": "I have found scraps of paper filled with stories in different dimensions. I will compile and log them.",
+  "icon": "kubejs:everbright_lost_page",
+  "sortnum": 4,
+  "secret": true
+}

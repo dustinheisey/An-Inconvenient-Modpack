@@ -1,0 +1,11 @@
+{
+  "name": "Water Filtering & Purification",
+  "icon": "minecraft:water_bucket",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Purify the dirty water"
+    }
+  ]
+}

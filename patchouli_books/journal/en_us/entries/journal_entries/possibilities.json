@@ -1,0 +1,18 @@
+{
+  "name": "Possibilities",
+  "icon": "immersiveengineering:wirecoil_copper",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 20,
+  "advancement": "im:chapter_5_2/root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I've made the decision to push on, cautiously, in the face of the warnings I read and the nightmares I've had. I'm imagining flying cars and towers reaching towards the sky, complex industrial processes that light up the world and power new innovations, and so, so much money to be made. Think of a world that is constantly improving, that is constantly growing. I can't imagine how "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "this could be a bad thing. $(br2)Maybe I can start a business in this world. I'm remembering the many I had previously, and I grow more envious of my past self everyday.$(br2)I feel both butterflies and buzzing excitement thinking about the possibilities of this path. Progress must be the ultimate goal and I will achieve it."
+    }
+  ]
+}

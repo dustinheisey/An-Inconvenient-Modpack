@@ -1,0 +1,6 @@
+{
+  "Restriction Data": {
+    "stage": "dimension_bumblezone",
+    "dimensionList": ["the_bumblezone:the_bumblezone"]
+  }
+}

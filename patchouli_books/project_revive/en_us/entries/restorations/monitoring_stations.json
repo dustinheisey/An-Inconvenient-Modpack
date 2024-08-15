@@ -1,0 +1,11 @@
+{
+  "name": "Cold Monitoring",
+  "icon": "naturesaura:eye_improved",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Build a monitoring station in each biome"
+    }
+  ]
+}

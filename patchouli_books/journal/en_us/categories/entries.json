@@ -1,0 +1,7 @@
+{
+  "name": "Entries",
+  "description": "I will keep track of all of my thoughts on the things I discover, and the ideas that I have.",
+  "icon": "minecraft:writable_book",
+  "sortnum": 0,
+  "secret": true
+}

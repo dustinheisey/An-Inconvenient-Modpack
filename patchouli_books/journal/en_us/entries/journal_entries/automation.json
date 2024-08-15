@@ -1,0 +1,18 @@
+{
+  "name": "Automation",
+  "icon": "kubejs:cinder_dust",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 12,
+  "advancement": "im:chapter_4/root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "With the advent of the millstone, I feel a sudden burst of inspiration thinking of all of the possibilities to develop more advanced forms of technology.$(br2)One thing of special notice is the phenomenal efficiency of these technologies if scaled up beyond a certain point. No manual labor can come close to the level of productivity "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "attained through automation. I can only assume in the future that I will need great amounts of various items and liquids in order to fully actualize my potential, and this new path in which I find myself on thoroughly excites me. I will have to see what roadblocks and opportunities come to me as I move further in the same direction."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Mysterious Eyes",
+  "icon": "endrem:cold_eye",
+  "category": "patchouli:handbook",
+  "secret": true,
+  "advancement": "im:eyes/cold",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "As I learn and improve my technology I remember working through these problems in my past. It's almost as if the act of re-discovering this knowledge is triggering some of my memories to return. One memory that seems particularly important was that of me crafting a small token, a mysterious eye from materials like leather and bronze. I crafted a duplicate following  the steps I used in my memory. "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "I can't remember what it's for, only that it was very important. I should keep it safe. If I remember other tokens I will recreate them as well."
+    }
+  ]
+}

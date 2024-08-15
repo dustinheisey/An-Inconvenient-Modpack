@@ -1,0 +1,22 @@
+{
+  "name": "A Grandmother's Story",
+  "icon": "blue_skies:everbright_portal",
+  "category": "patchouli:lost_stories",
+  "sortnum": 0,
+  "secret": true,
+  "advancement": "im:chapter_2/everbright_lost_story",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "My grandmother told me a story passed down by her ancestors, about a world that was much different from ours, existing long ago. She spoke of a civilization that was sick. The people there worshiped idols sold to them by demons who profited off the destruction of their home.$(br2)The world gave them many warnings over decades to stop the damage they were causing,"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "but the people ignored the warnings and were lulled to sleep by the demons who continued their destruction. This civilization had grown too much at the expense of the world they lived on. They had become cancerous, and the world began to do whatever it could to root out the cancer. $(br2)It started with many floods occurring across the world, that covered cities and entire countries, forcing mass migrations for those who could escape, and mass death for"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "those who couldn't. The flood water was also poisonous, killing all life in the ocean and leaving the few who escaped the destruction with little food.$(br2)Despite the devastation, the demons kept poisoning the world, and the people kept paying them to do it. This is all the people knew how to do; they were never taught another way. The world had no choice but to continue fighting back, harder this time."
+    }
+  ]
+}

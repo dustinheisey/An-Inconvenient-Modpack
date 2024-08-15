@@ -1,0 +1,11 @@
+{
+  "name": "Pollinators",
+  "icon": "minecraft:sunflower",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Spread 1000 flower seeds in a grassland"
+    }
+  ]
+}

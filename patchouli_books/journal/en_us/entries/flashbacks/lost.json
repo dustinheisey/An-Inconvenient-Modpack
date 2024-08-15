@@ -1,0 +1,30 @@
+{
+  "name": "Automation",
+  "icon": "endrem:lost_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 6,
+  "secret": true,
+  "advancement": "im:chapter_3/eye_lost",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "After my plan to automate various aspects of my businesses, I expected to recoup the lost profits caused by the mass quitting of employees. However, after seeing the true effects of implementing it, I never could have imagined the extent to which my expectations were exceeded.$(br2)I wanted to automate the production of our cattle feed "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "because it requires many steps and employs a lot of people, incurring great costs. I started by automating our grain production. The machines were able to perform the work of a hundred workers, so I let go of all the farmers, hundreds of them.$(br2)The grain is sent to mills, where it is used to make soy, oat, barley, wheat, sorghum, and corn flakes. Automating these tasks reduced the workforce by hundreds more."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "All of these components are sent to large mixers where salt, phosphorus, and antibiotics are added. The mixture is then pressed into pellets, packaged, and sent to all of my cattle farms. This process was also automated, eliminating most of the remaining workers.$(br2)With my labor costs so incredibly reduced, I could have reduced my prices for farmers everywhere, but I don't need to. I am the only feed producer now because I merged "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "my company with all of my competitors. In fact, I think I will raise my prices.$(br2)Companies are supposed to compete so they can make better and cheaper products for their customers. The customers are the ones in power because they \"vote\" with their dollars for the companies that best serve them. But in a competition, eventually, there is always a winner, and the same is true for this competition."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The ultimate end for businesses is a monopoly, and I have a monopoly on most things now. Automation has allowed me to produce things faster and more cheaply than anyone else. Now that I have absorbed the entire market, I can charge whatever I want. I am in control now. I have taken all of the power from my customers and won the competition for their dollars."
+    }
+  ]
+}

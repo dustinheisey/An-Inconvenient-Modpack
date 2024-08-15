@@ -1,0 +1,18 @@
+{
+  "Restriction Data": {
+    "stage": "chapter_8",
+    "tagList": ["im:chapter_8"]
+  },
+  "Settings": {
+    "advancedTooltips": "ADVANCED",
+    "itemTitle": "Unknown Item",
+    "pickupDelay": 15,
+    "hideInJEI": true,
+    "canPickup": false,
+    "containerListWhitelist": false,
+    "checkPlayerInventory": false,
+    "checkPlayerEquipment": true,
+    "usableItems": false,
+    "usableBlocks": false
+  }
+}

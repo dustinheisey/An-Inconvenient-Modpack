@@ -1,0 +1,11 @@
+{
+  "name": "Waterholes",
+  "icon": "minecraft:water_bucket",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Create 500 waterholes in savannahs"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Restorations",
+  "description": "Log of all of the restored life",
+  "icon": "kubejs:restoration_token",
+  "sortnum": 0
+}

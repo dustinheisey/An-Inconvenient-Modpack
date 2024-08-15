@@ -1,0 +1,1025 @@
+// find: ((?<!")([a-z])([a-z_]+):([a-z])([a-z_]+)(?!"))\n
+// replace: "\u$2$3 \u$4$5": {\n\t"prefix": "m-$2$3-$4$5",\n\t"body": ["event.remove({output: [], type: ''});", "event.remove({output: [], type: '$2$3:$4$5'});", "event.custom();"],\n\t"description": "Modify \u$2$3 \u$4$5 Recipe"\n},\n
+
+{
+    "Shaped": {
+        "prefix": "m-shaped",
+        "body": ["event.remove({output: [], type: 'minecraft:shaped'});", "event.shaped('output', ['pattern'], {a: 'key'});"],
+        "description": "Add Shaped Recipe"
+    },
+    "Shapeless": {
+        "prefix": "m-shapeless",
+        "body": ["event.remove({output: [], type: 'minecraft:shapeless'});", "event.shapeless('output', ['inputs']);"],
+        "description": "Add Shaped Recipe"
+    },
+    "Minecraft Blasting": {
+        "prefix": "m-minecraft-blasting",
+        "body": ["event.remove({output: [], type: 'minecraft:blasting'});", "event.blasting('output', 'input');"],
+        "description": "Add Minecraft Blasting Recipe"
+    },
+    "Minecraft Campfire": {
+        "prefix": "m-minecraft-campfire",
+        "body": ["event.remove({output: [], type: 'minecraft:campfire_cooking'});", "event.campfireCooking('output', 'input');"],
+        "description": "Add Minecraft Campfire Recipe"
+    },
+    "Minecraft Smelting": {
+        "prefix": "m-minecraft-smelting",
+        "body": ["event.remove({output: [], type: 'minecraft:smelting'});", "event.smelting('output', 'input');"],
+        "description": "Add Minecraft Smelting Recipe"
+    },
+    "Minecraft Smithing": {
+        "prefix": "m-minecraft-smithing",
+        "body": ["event.remove({output: [], type: 'minecraft:smithing'});", "event.smithing('output', 'input1', 'input2');"],
+        "description": "Add Minecraft Smithing Recipe"
+    },
+    "Minecraft Smoking": {
+        "prefix": "m-minecraft-smoking",
+        "body": ["event.remove({output: [], type: 'minecraft:smoking'});", "event.smoking('output', 'input');"],
+        "description": "Add Minecraft Smoking Recipe"
+    },
+    "Minecraft Stonecutting": {
+        "prefix": "m-minecraft-stonecutting",
+        "body": ["event.remove({output: [], type: 'minecraft:stonecutting'});", "event.stonecutting('output', 'input');"],
+        "description": "Add Minecraft Stonecutting Recipe"
+    },
+    "Architects_palette Warping": {
+        "prefix": "m-architects_palette-warping",
+        "body": ["event.remove({output: [], type: 'architects_palette:warping'});", "event.custom({type: 'architects_palette:warping',ingredient: [{item:'input'}],result: {item: 'output'},dimension: 'dimension'});"],
+        "description": "Add Architects_palette Warping Recipe"
+    },
+    "Biomancy Bio_brewing": {
+        "prefix": "m-biomancy-bio_brewing",
+        "body": ["event.remove({output: [], type: 'biomancy:bio_brewing'});", "event.custom({ 'type': 'biomancy:bio_brewing', 'ingredients': [ {'item': 'biomancy:healing_additive'}, {'item': 'biomancy:exotic_dust'}, {'item': 'biomancy:mineral_fragment'} ], 'reactant': {'item': 'biomancy:exotic_compound'}, 'result': {'item': 'biomancy:absorption_boost'}, 'processingTime': 160, 'nutrientsCost': 2 });"],
+        "description": "Add Biomancy Bio_brewing Recipe"
+    },
+    "Biomancy Bio_forging": {
+        "prefix": "m-biomancy-bio_forging",
+        "body": ["event.remove({output: [], type: 'biomancy:bio_forging'});", "event.custom({'type':'biomancy:bio_forging','ingredients':[{'item':'biomancy:elastic_fibers','count':4},{'item':'biomancy:hormone_secretion','count':4},{'item':'biomancy:gem_fragments','count':2}],'result':{'item':'biomancy:adult_permeable_membrane'},'bio_forge_tab':'biomancy:misc','nutrientsCost':1});"],
+        "description": "Add Biomancy Bio_forging Recipe"
+    },
+    "Biomancy Decomposing": {
+        "prefix": "m-biomancy-decomposing",
+        "body": ["event.remove({output: [], type: 'biomancy:decomposing'});", "event.custom({'type':'biomancy:decomposing','ingredient':{'item':'minecraft:amethyst_shard'},'results':[{'item':'biomancy:gem_fragments','countRange':{'type':'uniform','min':3,'max':5}}],'processingTime':250,'nutrientsCost':1});"],
+        "description": "Add Biomancy Decomposing Recipe"
+    },
+    "Biomancy Digesting": {
+        "prefix": "m-biomancy-digesting",
+        "body": ["event.remove({output: [], type: 'biomancy:digesting'});", "event.custom({'type':'biomancy:digesting','ingredient':{'item':'minecraft:red_mushroom_block'},'result':{'item':'biomancy:nutrient_paste','count':6},'processingTime':541,'nutrientsCost':1});"],
+        "description": "Add Biomancy Digesting Recipe"
+    },
+    "Bloodmagic Alchemyarray": {
+        "prefix": "m-bloodmagic-alchemyarray",
+        "body": ["event.remove({output: [], type: 'bloodmagic:array'});", "event.custom({ 'type': 'bloodmagic:array', 'texture': 'bloodmagic:textures/models/alchemyarrays/airsigil.png', 'baseinput': { 'item': 'bloodmagic:reagentair' }, 'addedinput': { 'item': 'bloodmagic:reinforcedslate' }, 'output': { 'item': 'bloodmagic:airsigil' } });"],
+        "description": "Add Bloodmagic Alchemyarray Recipe"
+    },
+    "Bloodmagic Alchemytable": {
+        "prefix": "m-bloodmagic-alchemytable",
+        "body": ["event.remove({output: [], type: 'bloodmagic:alchemytable'});", "event.custom({ 'type': 'bloodmagic:alchemytable', 'input': [ { 'item': 'bloodmagic:bow_power_anointment' }, { 'item': 'bloodmagic:strong_tau' }, { 'item': 'bloodmagic:sand_hellforged' }, { 'item': 'minecraft:glow_berries' }, { 'tag': 'forge:ingots/iron' } ], 'output': { 'item': 'bloodmagic:bow_power_anointment_3' }, 'syphon': 2000, 'ticks': 100, 'upgradeLevel': 4 });"],
+        "description": "Add Bloodmagic Alchemytable Recipe"
+    },
+    "Bloodmagic Altar": {
+        "prefix": "m-bloodmagic-altar",
+        "body": ["event.remove({output: [], type: 'bloodmagic:altar'});", "event.custom({ 'type': 'bloodmagic:altar', 'input': { 'item': 'bloodmagic:rawdemoniteblock' }, 'output': { 'item': 'bloodmagic:bleedingedge' }, 'upgradeLevel': 3, 'altarSyphon': 10000, 'consumptionRate': 20, 'drainRate': 10 });"],
+        "description": "Add Bloodmagic Altar Recipe"
+    },
+    "Bloodmagic Arc": {
+        "prefix": "m-bloodmagic-arc",
+        "body": ["event.remove({output: [], type: 'bloodmagic:arc'});", "event.custom({ 'type': 'bloodmagic:arc', 'input': { 'tag': 'bloodmagic:gravels/copper' }, 'inputsize': 1, 'tool': { 'tag': 'bloodmagic:arc/cuttingfluid' }, 'output': { 'item': 'bloodmagic:coppersand' }, 'consumeingredient': false, 'mainoutputchance': 0.0 });"],
+        "description": "Add Bloodmagic Arc Recipe"
+    },
+    "Bloodmagic Flask": {
+        "prefix": "m-bloodmagic-flask",
+        "body": ["event.remove({output: [], type: 'bloodmagic:flask_potiontransform'});", "event.custom({ 'type': 'bloodmagic:flask_potiontransform', 'input': [ { 'item': 'minecraft:fermented_spider_eye' } ], 'outputEffect': [ { 'effect': 'minecraft:levitation', 'baseDuration': 3600 } ], 'inputEffect': [ 'minecraft:slow_falling' ], 'syphon': 500, 'ticks': 200, 'upgradeLevel': 1 });"],
+        "description": "Add Bloodmagic Flask Recipe"
+    },
+    "Bloodmagic Soulforge": {
+        "prefix": "m-bloodmagic-soulforge",
+        "body": ["event.remove({output: [], type: 'bloodmagic:soulforge'});", "event.custom({ 'type': 'bloodmagic:soulforge', 'input0': { 'item': 'bloodmagic:aug_shaped_charge' }, 'input1': { 'item': 'bloodmagic:smelting_anointment_l' }, 'output': { 'item': 'bloodmagic:aug_shaped_charge', 'nbt': '{anointment_holder:{anointments:[{damage:1,key:'bloodmagic:smelting',level:1,max_damage:1}]}}' }, 'minimumDrain': 300.0, 'drain': 4.0 });"],
+        "description": "Add Bloodmagic Soulforge Recipe"
+    },
+    "Blue_skies Transmute": {
+        "prefix": "m-blue_skies-transmute",
+        "body": ["event.remove({output: [], type: 'blue_skies:transmute'});", "event.custom({ 'type': 'blue_skies:transmute', 'override': false, 'tags': [ 'minecraft:banners' ] });"],
+        "description": "Add Blue_skies Transmute Recipe"
+    },
+    "Blue_skies Catylist": {
+        "prefix": "m-blue_skies-catylist",
+        "body": ["event.remove({output: [], type: 'blue_skies:catylist'});", "event.custom({ 'type': 'blue_skies:catylist', 'override': false, 'input': 'blue_skies:lunar_stone', 'catylist': 'blue_skies:dusk_arc', 'results': [ 'blue_skies:blinding_stone' ] });"],
+        "description": "Add Blue_skies Catylist Recipe"
+    },
+    "Botania Brewery": {
+        "prefix": "m-botania-brewery",
+        "body": ["event.remove({output: [], type: 'botania:brew'});", "event.custom({ 'type': 'botania:brew', 'brew': 'botania:allure', 'ingredients': [ { 'item': 'minecraft:nether_wart' }, { 'item': 'minecraft:cod' }, { 'item': 'minecraft:quartz' }, { 'item': 'minecraft:golden_carrot' } ] });"],
+        "description": "Add Botania Brewery Recipe"
+    },
+    "Botania Elven_trade": {
+        "prefix": "m-botania-elven_trade",
+        "body": ["event.remove({output: [], type: 'botania:elven_trade'});", "event.custom({ 'type': 'botania:elven_trade', 'ingredients': [ { 'item': 'botania:mana_diamond_block' } ], 'output': [ { 'item': 'botania:dragonstone_block' } ] });"],
+        "description": "Add Botania Elven_trade Recipe"
+    },
+    "Botania Mana_infusion": {
+        "prefix": "m-botania-mana_infusion",
+        "body": ["event.remove({output: [], type: 'botania:mana_infusion'});", "event.custom({ 'type': 'botania:mana_infusion', 'input': { 'item': 'minecraft:acacia_sapling' }, 'output': { 'item': 'minecraft:dark_oak_sapling' }, 'mana': 120, 'group': 'botania:sapling_cycle', 'catalyst': { 'type': 'block', 'block': 'botania:alchemy_catalyst' } });"],
+        "description": "Add Botania Mana_infusion Recipe"
+    },
+    "Botania Marimorphosis": {
+        "prefix": "m-botania-marimorphosis",
+        "body": ["event.remove({output: [], type: 'botania:marimorphosis'});", "event.custom({ 'type': 'botania:marimorphosis', 'input': 'minecraft:stone', 'output': { 'type': 'block', 'block': 'botania:metamorphic_desert_stone' }, 'weight': 1, 'biomes': [ 'desert', 'savanna' ], 'biome_bonus': 11 });"],
+        "description": "Add Botania Marimorphosis Recipe"
+    },
+    "Botania Orechid": {
+        "prefix": "m-botania-orechid",
+        "body": ["event.remove({output: [], type: 'botania:orechid'});", "event.custom({ 'type': 'botania:orechid', 'input': 'minecraft:stone', 'output': { 'type': 'block', 'block': 'minecraft:coal_ore' }, 'weight': 67415 });"],
+        "description": "Add Botania Orechid Recipe"
+    },
+    "Botania Orechid_ignem": {
+        "prefix": "m-botania-orechid_ignem",
+        "body": ["event.remove({output: [], type: 'botania:orechid_ignem'});", "event.custom({ 'type': 'botania:orechid_ignem', 'input': 'minecraft:netherrack', 'output': { 'type': 'block', 'block': 'minecraft:nether_gold_ore' }, 'weight': 3635 });"],
+        "description": "Add Botania Orechid_ignem Recipe"
+    },
+    "Botania Petals": {
+        "prefix": "m-botania-petals",
+        "body": ["event.remove({output: [], type: 'botania:petal_apothecary'});", "event.custom({ 'type': 'botania:petal_apothecary', 'output': { 'item': 'botania:clayconia' }, 'ingredients': [ { 'tag': 'botania:petals/light_gray' }, { 'tag': 'botania:petals/light_gray' }, { 'tag': 'botania:petals/gray' }, { 'tag': 'botania:petals/cyan' }, { 'item': 'botania:rune_earth' } ] });"],
+        "description": "Add Botania Petals Recipe"
+    },
+    "Botania Pure_daisy": {
+        "prefix": "m-botania-pure_daisy",
+        "body": ["event.remove({output: [], type: 'botania:pure_daisy'});", "event.custom({ 'type': 'botania:pure_daisy', 'input': { 'type': 'block', 'block': 'minecraft:end_stone' }, 'output': { 'name': 'minecraft:cobbled_deepslate' }, 'success_function': 'botania:ender_air_release' });"],
+        "description": "Add Botania Pure_daisy Recipe"
+    },
+    "Botania Runic_altar": {
+        "prefix": "m-botania-runic_altar",
+        "body": ["event.remove({output: [], type: 'botania:runic_altar'});", "event.custom({ 'type': 'botania:runic_altar', 'output': { 'item': 'botania:rune_gluttony' }, 'mana': 12000, 'ingredients': [ { 'tag': 'botania:mana_diamond_gems' }, { 'tag': 'botania:mana_diamond_gems' }, { 'item': 'botania:rune_winter' }, { 'item': 'botania:rune_fire' } ] });"],
+        "description": "Add Botania Runic_altar Recipe"
+    },
+    "Botania Terra_plate": {
+        "prefix": "m-botania-terra_plate",
+        "body": ["event.remove({output: [], type: 'botania:terra_plate'});", "event.custom({ 'type': 'botania:terra_plate', 'mana': 500000, 'ingredients': [ { 'item': 'botania:manasteel_ingot' }, { 'item': 'botania:mana_pearl' }, { 'item': 'botania:mana_diamond' } ], 'result': { 'item': 'botania:terrasteel_ingot' } });"],
+        "description": "Add Botania Terra_plate Recipe"
+    },
+    "Charcoal_pit Ore Kiln": {
+        "prefix": "m-charcoal_pit-ore-kiln",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:orekiln'});", "event.custom({ 'recipe': { 'type': 'charcoal_pit:orekiln', 'ingredients': [ {'item': 'minecraft:copper_ingot'}, {'item': 'minecraft:copper_ingot'}, {'item': 'minecraft:copper_ingot'}, {'tag': 'forge:ingots/tin'} ], 'result': {'tag': 'forge:ingots/bronze'}, 'amount': 4 } });"],
+        "description": "Add Charcoal_pit Ore Kiln Recipe"
+    },
+    "Charcoal_pit Barrel": {
+        "prefix": "m-charcoal_pit-barrel",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:barrel'});", "event.custom({ 'type': 'charcoal_pit:barrel', 'item_in':{ 'item':'charcoal_pit:ethoxide_bottle' }, 'in_amount': 2, 'fluid_in':{ 'tag':'forge:seed_oil', 'amount': 4000 }, 'fluid_out':{ 'fluid':'charcoal_pit:bio_diesel', 'amount': 4000 }, 'item_out':{ 'item':'charcoal_pit:glycerine' }, 'out_amount': 5, 'time': 24000 });"],
+        "description": "Add Charcoal_pit Barrel Recipe"
+    },
+    "Charcoal_pit Blooming": {
+        "prefix": "m-charcoal_pit-blooming",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:blooming'});", "event.custom({ 'type': 'charcoal_pit:blooming', 'ingredient': { 'tag': 'forge:ores/iron' }, 'result': 'minecraft:iron_ingot', 'experience': 0.7, 'cookingtime': 200 });"],
+        "description": "Add Charcoal_pit Blooming Recipe"
+    },
+    "Charcoal_pit Distillery": {
+        "prefix": "m-charcoal_pit-distillery",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:distill'});", "event.custom({ 'type': 'charcoal_pit:distill', 'input':{ 'fluid':'charcoal_pit:maple_sap', 'amount': 1000 }, 'output':{ 'fluid':'charcoal_pit:maple_syrup', 'amount': 100 }, 'time': 200 });"],
+        "description": "Add Charcoal_pit Distillery Recipe"
+    },
+    "Charcoal_pit Hot_blasting": {
+        "prefix": "m-charcoal_pit-hot_blasting",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:hot_blasting'});", "event.custom({ 'type': 'charcoal_pit:hot_blasting', 'ingredient': { 'tag': 'forge:raw_materials/iron' }, 'result': 'charcoal_pit:alloy_pig_iron', 'experience': 0.7, 'cookingtime': 200 });"],
+        "description": "Add Charcoal_pit Hot_blasting Recipe"
+    },
+    "Charcoal_pit Steam_press": {
+        "prefix": "m-charcoal_pit-steam_press",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:squish'});", "event.custom({ 'type': 'charcoal_pit:squish', 'input':{ 'tag':'forge:seeds' }, 'output':{ 'fluid':'charcoal_pit:seed_oil', 'amount': 10 } });"],
+        "description": "Add Charcoal_pit Steam_press Recipe"
+    },
+    "Chipped Alchemy_bench": {
+        "prefix": "m-chipped-alchemy_bench",
+        "body": ["event.remove({output: [], type: 'chipped:alchemy_bench'});", "event.custom({ 'type': 'chipped:alchemy_bench', 'tags': [ 'chipped:diamond_block', 'chipped:emerald_block', 'chipped:glowstone', 'chipped:gold_block', 'chipped:iron_block', 'chipped:netherite_block', 'chipped:waxed_copper_block', 'chipped:waxed_exposed_copper', 'chipped:waxed_oxidized_copper', 'chipped:waxed_weathered_copper', 'chipped:coal_block', 'chipped:crying_obsidian', 'chipped:gilded_blackstone', 'chipped:lapis_block', 'chipped:lodestone' ] });"],
+        "description": "Add Chipped Alchemy_bench Recipe"
+    },
+    "Chipped Botanist_workbench": {
+        "prefix": "m-chipped-botanist_workbench",
+        "body": ["event.remove({output: [], type: 'chipped:botanist_workbench'});", "event.custom({ 'type': 'chipped:botanist_workbench', 'tags': [ 'chipped:bone_block', 'chipped:brown_mushroom', 'chipped:brown_mushroom_block', 'chipped:carved_pumpkin', 'chipped:clay', 'chipped:cobweb', 'chipped:crimson_fungus', 'chipped:crimson_roots', 'chipped:dried_kelp_block', 'chipped:gravel', 'chipped:hay_block', 'chipped:jack_o_lantern', 'chipped:lily_pad', 'chipped:melon', 'chipped:moss_block', 'chipped:mushroom_stem', 'chipped:nether_sprouts', 'chipped:nether_wart_block', 'chipped:pumpkin', 'chipped:red_mushroom', 'chipped:red_mushroom_block', 'chipped:sand', 'chipped:sea_lantern', 'chipped:shroomlight', 'chipped:soul_sand', 'chipped:sponge', 'chipped:stripped_warped_stem', 'chipped:vine', 'chipped:warped_fungus', 'chipped:warped_roots', 'chipped:warped_wart_block', 'chipped:acacia_leaves', 'chipped:birch_leaves', 'chipped:jungle_leaves', 'chipped:oak_leaves', 'chipped:spruce_leaves', 'chipped:dark_oak_leaves', 'chipped:blue_ice', 'chipped:snow_block', 'chipped:ice', 'chipped:packed_ice' ] });"],
+        "description": "Add Chipped Botanist_workbench Recipe"
+    },
+    "Chipped Carpenters_table": {
+        "prefix": "m-chipped-carpenters_table",
+        "body": ["event.remove({output: [], type: 'chipped:carpenters_table'});", "event.custom({ 'type': 'chipped:carpenters_table', 'tags': [ 'chipped:oak_planks', 'chipped:birch_planks', 'chipped:spruce_planks', 'chipped:jungle_planks', 'chipped:acacia_planks', 'chipped:dark_oak_planks', 'chipped:warped_planks', 'chipped:crimson_planks', 'chipped:torch', 'chipped:acacia_trapdoor', 'chipped:birch_trapdoor', 'chipped:dark_oak_trapdoor', 'chipped:jungle_trapdoor', 'chipped:oak_trapdoor', 'chipped:spruce_trapdoor', 'chipped:crimson_trapdoor', 'chipped:warped_trapdoor', 'chipped:acacia_door', 'chipped:birch_door', 'chipped:dark_oak_door', 'chipped:jungle_door', 'chipped:oak_door', 'chipped:spruce_door', 'chipped:crimson_door', 'chipped:warped_door', 'chipped:barrel', 'chipped:ladder', 'chipped:bookshelf', 'chipped:oak_log', 'chipped:birch_log', 'chipped:spruce_log', 'chipped:jungle_log', 'chipped:acacia_log', 'chipped:dark_oak_log', 'chipped:warped_stem', 'chipped:crimson_stem', 'chipped:stripped_oak_log', 'chipped:stripped_birch_log', 'chipped:stripped_spruce_log', 'chipped:stripped_jungle_log', 'chipped:stripped_acacia_log', 'chipped:stripped_dark_oak_log', 'chipped:stripped_warped_stem', 'chipped:stripped_crimson_stem' ] });"],
+        "description": "Add Chipped Carpenters_table Recipe"
+    },
+    "Chipped Glassblower": {
+        "prefix": "m-chipped-glassblower",
+        "body": ["event.remove({output: [], type: 'chipped:glassblower'});", "event.custom({ 'type': 'chipped:glassblower', 'tags': [ 'chipped:glass', 'chipped:glass_pane', 'chipped:white_stained_glass', 'chipped:white_stained_glass_pane', 'chipped:orange_stained_glass', 'chipped:orange_stained_glass_pane', 'chipped:magenta_stained_glass', 'chipped:magenta_stained_glass_pane', 'chipped:light_blue_stained_glass', 'chipped:light_blue_stained_glass_pane', 'chipped:yellow_stained_glass', 'chipped:yellow_stained_glass_pane', 'chipped:lime_stained_glass', 'chipped:lime_stained_glass_pane', 'chipped:pink_stained_glass', 'chipped:pink_stained_glass_pane', 'chipped:gray_stained_glass', 'chipped:gray_stained_glass_pane', 'chipped:light_gray_stained_glass', 'chipped:light_gray_stained_glass_pane', 'chipped:cyan_stained_glass', 'chipped:cyan_stained_glass_pane', 'chipped:purple_stained_glass', 'chipped:purple_stained_glass_pane', 'chipped:blue_stained_glass', 'chipped:blue_stained_glass_pane', 'chipped:brown_stained_glass', 'chipped:brown_stained_glass_pane', 'chipped:green_stained_glass', 'chipped:green_stained_glass_pane', 'chipped:red_stained_glass', 'chipped:red_stained_glass_pane', 'chipped:black_stained_glass', 'chipped:black_stained_glass_pane' ] });"],
+        "description": "Add Chipped Glassblower Recipe"
+    },
+    "Chipped Loom_table": {
+        "prefix": "m-chipped-loom_table",
+        "body": ["event.remove({output: [], type: 'chipped:loom_table'});", "event.custom({ 'type': 'chipped:loom_table', 'tags': [ 'chipped:white_wool', 'chipped:white_carpet', 'chipped:orange_wool', 'chipped:orange_carpet', 'chipped:magenta_wool', 'chipped:magenta_carpet', 'chipped:light_blue_wool', 'chipped:light_blue_carpet', 'chipped:yellow_wool', 'chipped:yellow_carpet', 'chipped:lime_wool', 'chipped:lime_carpet', 'chipped:pink_wool', 'chipped:pink_carpet', 'chipped:gray_wool', 'chipped:gray_carpet', 'chipped:light_gray_wool', 'chipped:light_gray_carpet', 'chipped:cyan_wool', 'chipped:cyan_carpet', 'chipped:purple_wool', 'chipped:purple_carpet', 'chipped:blue_wool', 'chipped:blue_carpet', 'chipped:brown_wool', 'chipped:brown_carpet', 'chipped:green_wool', 'chipped:green_carpet', 'chipped:red_wool', 'chipped:red_carpet', 'chipped:black_wool', 'chipped:black_carpet' ] });"],
+        "description": "Add Chipped Loom_table Recipe"
+    },
+    "Chipped Mason_table": {
+        "prefix": "m-chipped-mason_table",
+        "body": ["event.remove({output: [], type: 'chipped:mason_table'});", "event.custom({ 'type': 'chipped:mason_table', 'tags': [ 'chipped:granite', 'chipped:diorite', 'chipped:andesite', 'chipped:prismarine', 'chipped:dark_prismarine', 'chipped:purpur_block', 'chipped:quartz_block', 'chipped:sandstone', 'chipped:red_sandstone', 'chipped:nether_bricks', 'chipped:red_nether_bricks', 'chipped:stone', 'chipped:cobblestone', 'chipped:end_stone', 'chipped:netherrack', 'chipped:blackstone', 'chipped:basalt', 'chipped:black_concrete', 'chipped:black_glazed_terracotta', 'chipped:black_terracotta', 'chipped:blue_concrete', 'chipped:blue_glazed_terracotta', 'chipped:blue_terracotta', 'chipped:brown_concrete', 'chipped:brown_glazed_terracotta', 'chipped:brown_terracotta', 'chipped:cyan_concrete', 'chipped:cyan_glazed_terracotta', 'chipped:cyan_terracotta', 'chipped:gray_concrete', 'chipped:gray_glazed_terracotta', 'chipped:gray_terracotta', 'chipped:green_concrete', 'chipped:green_glazed_terracotta', 'chipped:green_terracotta', 'chipped:light_blue_concrete', 'chipped:light_blue_glazed_terracotta', 'chipped:light_blue_terracotta', 'chipped:light_gray_concrete', 'chipped:light_gray_glazed_terracotta', 'chipped:light_gray_terracotta', 'chipped:lime_concrete', 'chipped:lime_glazed_terracotta', 'chipped:lime_terracotta', 'chipped:magenta_concrete', 'chipped:magenta_glazed_terracotta', 'chipped:magenta_terracotta', 'chipped:orange_concrete', 'chipped:orange_glazed_terracotta', 'chipped:orange_terracotta', 'chipped:pink_concrete', 'chipped:pink_glazed_terracotta', 'chipped:pink_terracotta', 'chipped:purple_concrete', 'chipped:purple_glazed_terracotta', 'chipped:purple_terracotta', 'chipped:red_concrete', 'chipped:red_glazed_terracotta', 'chipped:red_terracotta', 'chipped:white_concrete', 'chipped:white_glazed_terracotta', 'chipped:white_terracotta', 'chipped:yellow_concrete', 'chipped:yellow_glazed_terracotta', 'chipped:yellow_terracotta', 'chipped:bricks', 'chipped:pointed_dripstone', 'chipped:amethyst_block', 'chipped:ancient_debris', 'chipped:calcite', 'chipped:dark_prismarine', 'chipped:deepslate', 'chipped:dirt', 'chipped:dripstone_block', 'chipped:magma_block', 'chipped:mossy_cobblestone', 'chipped:mossy_stone_bricks', 'chipped:obsidian', 'chipped:raw_copper_block', 'chipped:raw_gold_block', 'chipped:raw_iron_block', 'chipped:smooth_stone', 'chipped:tuff' ] });"],
+        "description": "Add Chipped Mason_table Recipe"
+    },
+    "Chipped Mechanist_workbench": {
+        "prefix": "m-chipped-mechanist_workbench",
+        "body": ["event.remove({output: [], type: 'chipped:mechanist_workbench'});", "event.custom({ 'type': 'chipped:mechanist_workbench', 'tags': [ 'chipped:redstone_lamp', 'chipped:lantern', 'chipped:soul_lantern', 'chipped:redstone_torch', 'chipped:iron_bars', 'chipped:redstone_block', 'chipped:special_lantern', 'chipped:special_soul_lantern' ] });"],
+        "description": "Add Chipped Mechanist_workbench Recipe"
+    },
+    "Compactcrafting Miniaturization": {
+        "prefix": "m-compactcrafting-miniaturization",
+        "body": ["event.remove({output: [], type: 'compactcrafting:miniaturization'});", "event.custom({ type: 'compactcrafting:miniaturization', recipeSize: 1, layers: [ { type: 'compactcrafting:filled', component: 'R', }, { type: 'compactcrafting:filled', component: 'I', }, ], catalyst: { id: 'minecraft:ender_pearl', Count: 1, }, components: { R: { type: 'compactcrafting:block', block: 'minecraft:redstone_wire', }, I: { type: 'compactcrafting:block', block: 'minecraft:iron_block', }, }, outputs: [ { id: 'compactmachines:wall', Count: 16, }, ], });"],
+        "description": "Add Compactcrafting Miniaturization Recipe"
+    },
+    "Create Crushing": {
+        "prefix": "m-create-crushing",
+        "body": ["event.remove({output: [], type: 'create:crushing'});", "event.custom({ 'type': 'create:crushing', 'ingredients': [ { 'tag': 'create:stone_types/asurine' } ], 'results': [ { 'item': 'create:crushed_raw_zinc', 'chance': 0.3 }, { 'item': 'create:zinc_nugget', 'chance': 0.3 } ], 'processingTime': 250 });"],
+        "description": "Add Create Crushing Recipe"
+    },
+    "Create Deploying": {
+        "prefix": "m-create-deploying",
+        "body": ["event.remove({output: [], type: 'create:deploying'});", "event.custom({ 'type': 'create:deploying', 'ingredients': [ { 'item': 'create:copper_shingle_stairs' }, { 'item': 'minecraft:honeycomb_block' } ], 'results': [ { 'item': 'create:waxed_copper_shingle_stairs' } ], 'keepHeldItem': true });"],
+        "description": "Add Create Deploying Recipe"
+    },
+    "Create Draining": {
+        "prefix": "m-create-draining",
+        "body": ["event.remove({output: [], type: 'create:emptying'});", "event.custom({ 'type': 'create:emptying', 'ingredients': [ { 'item': 'minecraft:honey_bottle' } ], 'results': [ { 'item': 'minecraft:glass_bottle' }, { 'fluid': 'create:honey', 'amount': 250 } ] });"],
+        "description": "Add Create Draining Recipe"
+    },
+    "Create Haunting": {
+        "prefix": "m-create-haunting",
+        "body": ["event.remove({output: [], type: 'create:haunting'});", "event.custom({ 'type': 'create:haunting', 'ingredients': [ { 'item': 'minecraft:chiseled_stone_bricks' } ], 'results': [ { 'item': 'minecraft:infested_chiseled_stone_bricks' } ] });"],
+        "description": "Add Create Haunting Recipe"
+    },
+    "Create Washing": {
+        "prefix": "m-create-washing",
+        "body": ["event.remove({output: [], type: 'create:splashing'});", "event.custom({ 'type': 'create:splashing', 'ingredients': [ { 'item': 'create:crushed_raw_copper' } ], 'results': [ { 'item': 'create:copper_nugget', 'count': 9 }, { 'item': 'minecraft:clay_ball', 'chance': 0.5 } ] });"],
+        "description": "Add Create Washing Recipe"
+    },
+    "Create Item_application": {
+        "prefix": "m-create-item_application",
+        "body": ["event.remove({output: [], type: 'create:item_application'});", "event.custom({ 'type': 'create:item_application', 'ingredients': [ { 'tag': 'forge:stripped_wood' }, { 'tag': 'forge:ingots/brass' } ], 'results': [ { 'item': 'create:brass_casing' } ] });"],
+        "description": "Add Create Item_application Recipe"
+    },
+    "Create Mechanical_crafting": {
+        "prefix": "m-create-mechanical_crafting",
+        "body": ["event.remove({output: [], type: 'create:mechanical_crafting'});", "event.custom({ 'type': 'create:mechanical_crafting', 'pattern': [ ' L ', ' R ', 'SSS', 'SSS', ' H ' ], 'key': { 'L': { 'tag': 'forge:ingots/brass' }, 'R': { 'item': 'create:precision_mechanism' }, 'H': { 'item': 'create:brass_hand' }, 'S': { 'tag': 'forge:rods/wooden' } }, 'result': { 'item': 'create:extendo_grip' }, 'acceptMirrored': false });"],
+        "description": "Add Create Mechanical_crafting Recipe"
+    },
+    "Create Milling": {
+        "prefix": "m-create-milling",
+        "body": ["event.remove({output: [], type: 'create:milling'});", "event.custom({ 'type': 'create:milling', 'ingredients': [ { 'item': 'minecraft:blue_orchid' } ], 'results': [ { 'item': 'minecraft:light_blue_dye', 'count': 2 }, { 'item': 'minecraft:light_gray_dye', 'chance': 0.05 } ], 'processingTime': 50 });"],
+        "description": "Add Create Milling Recipe"
+    },
+    "Create Mixing": {
+        "prefix": "m-create-mixing",
+        "body": ["event.remove({output: [], type: 'create:mixing'});", "event.custom({ 'type': 'create:mixing', 'ingredients': [ { 'item': 'create:bar_of_chocolate' } ], 'results': [ { 'fluid': 'create:chocolate', 'amount': 250 } ], 'heatRequirement': 'heated' });"],
+        "description": "Add Create Mixing Recipe"
+    },
+    "Create Compacting": {
+        "prefix": "m-create-compacting",
+        "body": ["event.remove({output: [], type: 'create:compacting'});", "event.custom({ 'type': 'create:compacting', 'ingredients': [ { 'fluid': 'create:chocolate', 'nbt': {}, 'amount': 250 } ], 'results': [ { 'item': 'create:bar_of_chocolate' } ] });"],
+        "description": "Add Create Compacting Recipe"
+    },
+    "Create Pressing": {
+        "prefix": "m-create-pressing",
+        "body": ["event.remove({output: [], type: 'create:pressing'});", "event.custom({ 'type': 'create:pressing', 'ingredients': [ { 'tag': 'forge:ingots/gold' } ], 'results': [ { 'item': 'create:golden_sheet' } ] });"],
+        "description": "Add Create Pressing Recipe"
+    },
+    "Create Sandpaper_polishing": {
+        "prefix": "m-create-sandpaper_polishing",
+        "body": ["event.remove({output: [], type: 'create:sandpaper_polishing'});", "event.custom({ 'type': 'create:sandpaper_polishing', 'ingredients': [ { 'item': 'create:rose_quartz' } ], 'results': [ { 'item': 'create:polished_rose_quartz' } ] });"],
+        "description": "Add Create Sandpaper_polishing Recipe"
+    },
+    "Create Cutting": {
+        "prefix": "m-create-cutting",
+        "body": ["event.remove({output: [], type: 'create:cutting'});", "event.custom({ 'type': 'create:cutting', 'ingredients': [ { 'item': 'minecraft:birch_wood' } ], 'results': [ { 'item': 'minecraft:stripped_birch_wood' } ], 'processingTime': 50 });"],
+        "description": "Add Create Cutting Recipe"
+    },
+    "Create Sequenced_assembly": {
+        "prefix": "m-create-sequenced_assembly",
+        "body": ["event.remove({output: [], type: 'create:sequenced_assembly'});", "event.custom({ 'type': 'create:sequenced_assembly', 'ingredient': { 'item': 'create:powdered_obsidian' }, 'transitionalItem': { 'item': 'create:unprocessed_obsidian_sheet' }, 'sequence': [ { 'type': 'create:filling', 'ingredients': [ { 'item': 'create:unprocessed_obsidian_sheet' }, { 'fluid': 'minecraft:lava', 'nbt': {}, 'amount': 500 } ], 'results': [ { 'item': 'create:unprocessed_obsidian_sheet' } ] }, { 'type': 'create:pressing', 'ingredients': [ { 'item': 'create:unprocessed_obsidian_sheet' } ], 'results': [ { 'item': 'create:unprocessed_obsidian_sheet' } ] }, { 'type': 'create:pressing', 'ingredients': [ { 'item': 'create:unprocessed_obsidian_sheet' } ], 'results': [ { 'item': 'create:unprocessed_obsidian_sheet' } ] } ], 'results': [ { 'item': 'create:sturdy_sheet' } ], 'loops': 1 });"],
+        "description": "Add Create Sequenced_assembly Recipe"
+    },
+    "Create Filling": {
+        "prefix": "m-create-filling",
+        "body": ["event.remove({output: [], type: 'create:filling'});", "event.custom({ 'type': 'create:filling', 'ingredients': [ { 'item': 'create:cinder_flour' }, { 'fluid': 'create:potion', 'nbt': { 'Bottle': 'REGULAR', 'Potion': 'minecraft:night_vision' }, 'amount': 25 } ], 'results': [ { 'item': 'minecraft:glowstone_dust' } ] });"],
+        "description": "Add Create Filling Recipe"
+    },
+    "Create_enchantment_industry Disenchanting": {
+        "prefix": "m-create_enchantment_industry-disenchanting",
+        "body": ["event.remove({output: [], type: 'create_enchantment_industry:disenchanting'});", "event.custom({ 'type': 'create_enchantment_industry:disenchanting', 'ingredients': [ { 'item': 'create:experience_block' } ], 'results': [ { 'fluid': 'create_enchantment_industry:experience', 'amount': 27 } ] });"],
+        "description": "Add Create_enchantment_industry Disenchanting Recipe"
+    },
+    "Createaddition Charging": {
+        "prefix": "m-createaddition-charging",
+        "body": ["event.remove({output: [], type: 'createaddition:charging'});", "event.custom(  event.custom({type: 'createaddition:charging',input: {item: 'create:chromatic_compound',count: 1,},result: {item: 'create:refined_radiance',count: 1,},energy: 10000,}););"],
+        "description": "Add Createaddition Charging Recipe"
+    },
+    "Createaddition Liquid_burning": {
+        "prefix": "m-createaddition-liquid_burning",
+        "body": ["event.remove({output: [], type: 'createaddition:liquid_burning'});", "event.custom({ 'type': 'createaddition:liquid_burning', 'input': {'fluidTag': 'forge:crude_oil', 'amount': 1000}, 'burnTime': 9600, 'conditions': [ {'fluidTag': 'forge:crude_oil', 'type': 'createaddition:has_fluid_tag'} ] });"],
+        "description": "Add Createaddition Liquid_burning Recipe"
+    },
+    "Createaddition Rolling": {
+        "prefix": "m-createaddition-rolling",
+        "body": ["event.remove({output: [], type: 'createaddition:rolling'});", "event.custom({ 'type':'createaddition:rolling', 'input': { 'tag': 'forge:ingots/brass' }, 'result': { 'item': 'createaddition:brass_rod', 'count': 2 } });"],
+        "description": "Add Createaddition Rolling Recipe"
+    },
+    "Extendedcrafting Advanced_crafting": {
+        "prefix": "m-extendedcrafting-advanced_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:shaped_table'});", "event.custom({ 'type': 'extendedcrafting:shaped_table', 'pattern': ['XXXXX', 'X   X', 'X   X', 'X   X', 'XXXXX'], 'key': { 'X': { 'tag': 'forge:ingots/gold' } }, 'result': { 'item': 'minecraft:apple' } });"],
+        "description": "Add Extendedcrafting Advanced_crafting Recipe"
+    },
+    "Extendedcrafting Basic_crafting": {
+        "prefix": "m-extendedcrafting-basic_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:shaped_table'});", "event.custom({ 'type': 'extendedcrafting:shaped_table', 'pattern': ['XXX', 'X X', 'XXX'], 'key': { 'X': { 'tag': 'forge:ingots/gold' } }, 'result': { 'item': 'minecraft:apple' } });"],
+        "description": "Add Extendedcrafting Basic_crafting Recipe"
+    },
+    "Extendedcrafting Combination": {
+        "prefix": "m-extendedcrafting-combination",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:combination'});", "event.custom({ 'type': 'extendedcrafting:combination', 'powerCost': 400000, 'input': { 'item': 'minecraft:iron_ingot' }, 'ingredients': [ { 'item': 'minecraft:potato' }, { 'item': 'minecraft:potato' }, { 'item': 'minecraft:potato' }, { 'item': 'minecraft:potato' }, { 'item': 'minecraft:potato' }, { 'item': 'minecraft:potato' }, { 'item': 'minecraft:potato' }, { 'item': 'minecraft:potato' } ], 'result': { 'item': 'minecraft:stone' } });"],
+        "description": "Add Extendedcrafting Combination Recipe"
+    },
+    "Extendedcrafting Compressor": {
+        "prefix": "m-extendedcrafting-compressor",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:compressor'});", "event.custom({ 'type': 'extendedcrafting:compressor', 'powerCost': 500000, 'inputCount': 10000, 'ingredient': { 'item': 'minecraft:carrot' }, 'catalyst': { 'item': 'extendedcrafting:ender_catalyst' }, 'result': { 'item': 'minecraft:cobblestone' } });"],
+        "description": "Add Extendedcrafting Compressor Recipe"
+    },
+    "Extendedcrafting Elite_crafting": {
+        "prefix": "m-extendedcrafting-elite_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:shaped_table'});", "event.custom({ 'type': 'extendedcrafting:shaped_table', 'pattern': [ 'XXXXXXX', 'X     X', 'X     X', 'X     X', 'X     X', 'X     X', 'XXXXXXX' ], 'key': { 'X': { 'tag': 'forge:ingots/gold' } }, 'result': { 'item': 'minecraft:apple' } });"],
+        "description": "Add Extendedcrafting Elite_crafting Recipe"
+    },
+    "Extendedcrafting Ender_crafting": {
+        "prefix": "m-extendedcrafting-ender_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:shaped_ender_crafter'});", "event.custom({ 'type': 'extendedcrafting:shaped_ender_crafter', 'pattern': ['XXX', 'X X', 'XXX'], 'key': { 'X': { 'tag': 'forge:ingots/gold' } }, 'result': { 'item': 'minecraft:apple' } });"],
+        "description": "Add Extendedcrafting Ender_crafting Recipe"
+    },
+    "Extendedcrafting Ultimate_crafting": {
+        "prefix": "m-extendedcrafting-ultimate_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:shaped_table'});", "event.custom({ 'type': 'extendedcrafting:shaped_table', 'pattern': [ 'XXXXXXXXX', 'X       X', 'X       X', 'X       X', 'X       X', 'X       X', 'X       X', 'X       X', 'XXXXXXXXX' ], 'key': { 'X': { 'tag': 'forge:ingots/gold' } }, 'result': { 'item': 'minecraft:apple' } });"],
+        "description": "Add Extendedcrafting Ultimate_crafting Recipe"
+    },
+    "Extendedcrafting Shapeless": {
+        "prefix": "m-extendedcrafting-shapeless",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:shapeless_table'});", "event.custom({ 'type': 'extendedcrafting:shapeless_table', 'ingredients': [ { 'item': 'minecraft:coal' }, { 'item': 'minecraft:coal' } ], 'result': { 'item': 'minecraft:apple' } });"],
+        "description": "Add Extendedcrafting Shapeless Recipe"
+    },
+    "Farmersdelight Cooking": {
+        "prefix": "m-farmersdelight-cooking",
+        "body": ["event.remove({output: [], type: 'farmersdelight:cooking'});", "event.custom({ 'type': 'farmersdelight:cooking', 'recipe_book_tab': 'meals', 'ingredients': [ { 'tag': 'forge:raw_beef' }, { 'item': 'minecraft:carrot' }, { 'item': 'minecraft:potato' } ], 'result': { 'item': 'farmersdelight:beef_stew' }, 'experience': 1.0, 'cookingtime': 200 });"],
+        "description": "Add Farmersdelight Cooking Recipe"
+    },
+    "Farmersdelight Cutting": {
+        "prefix": "m-farmersdelight-cutting",
+        "body": ["event.remove({output: [], type: 'farmersdelight:cutting'});", "event.custom({ 'type': 'farmersdelight:cutting', 'ingredients': [ { 'item': 'minecraft:acacia_sign' } ], 'tool': { 'type': 'farmersdelight:tool_action', 'action': 'axe_dig' }, 'result': [ { 'item': 'minecraft:acacia_planks' } ] });"],
+        "description": "Add Farmersdelight Cutting Recipe"
+    },
+    "Farmersrespite Brewing": {
+        "prefix": "m-farmersrespite-brewing",
+        "body": ["event.remove({output: [], type: 'farmersrespite:brewing'});", "event.custom({ 'type': 'farmersrespite:brewing', 'ingredients': [ { 'item': 'farmersrespite:green_tea_leaves' }, { 'item': 'farmersrespite:green_tea_leaves' } ], 'result': { 'item': 'farmersrespite:green_tea' }, 'experience': 0.35, 'brewingtime': 2400, 'needwater': true });"],
+        "description": "Add Farmersrespite Brewing Recipe"
+    },
+    "Hexerei Dipper": {
+        "prefix": "m-hexerei-dipper",
+        "body": ["event.remove({output: [], type: 'hexerei:dipper'});", "event.custom({ 'type': 'hexerei:dipper', 'liquid': { 'fluid': 'hexerei:tallow_fluid' }, 'ingredients': [ { 'item': 'minecraft:string' } ], 'output': { 'item': 'hexerei:candle' }, 'fluidLevelsConsumed': 50, 'dippingTimeInTicks': 200, 'dryingTimeInTicks': 200, 'numberOfDips': 3 });"],
+        "description": "Add Hexerei Dipper Recipe"
+    },
+    "Hexerei Drying_rack": {
+        "prefix": "m-hexerei-drying_rack",
+        "body": ["event.remove({output: [], type: 'hexerei:drying_rack'});", "event.custom({ 'type': 'hexerei:drying_rack', 'ingredients': [ { 'item': 'hexerei:wet_broom_brush' } ], 'output': { 'item': 'hexerei:broom_brush' }, 'dryingTimeInTicks': 1000 });"],
+        "description": "Add Hexerei Drying_rack Recipe"
+    },
+    "Hexerei Mixingcauldron": {
+        "prefix": "m-hexerei-mixingcauldron",
+        "body": ["event.remove({output: [], type: 'hexerei:mixingcauldron'});", "event.custom({ 'type': 'hexerei:mixingcauldron', 'liquid': { 'fluid': 'minecraft:lava' }, 'ingredients': [ { 'item': 'minecraft:redstone' }, { 'item': 'minecraft:polished_blackstone' }, { 'item': 'minecraft:redstone' }, { 'item': 'minecraft:polished_blackstone' }, { 'item': 'minecraft:redstone' }, { 'item': 'minecraft:polished_blackstone' }, { 'item': 'minecraft:redstone' }, { 'item': 'minecraft:polished_blackstone' } ], 'output': { 'item': 'hexerei:blood_sigil' }, 'liquidOutput': { 'fluid': 'minecraft:lava' }, 'fluidLevelsConsumed': 333 });"],
+        "description": "Add Hexerei Mixingcauldron Recipe"
+    },
+    "Hexerei Pestle_and_mortar": {
+        "prefix": "m-hexerei-pestle_and_mortar",
+        "body": ["event.remove({output: [], type: 'hexerei:pestle_and_mortar'});", "event.custom({ 'type': 'hexerei:pestle_and_mortar', 'ingredients': [ { 'item': 'hexerei:belladonna_flowers' }, { 'item': 'hexerei:belladonna_berries' }, { 'item': 'hexerei:belladonna_berries' }, { 'item': 'hexerei:belladonna_berries' }, { 'item': 'hexerei:sage' } ], 'output': { 'item': 'hexerei:mindful_trance_blend', 'count': 1 }, 'grindingTime': 300 });"],
+        "description": "Add Hexerei Pestle_and_mortar Recipe"
+    },
+    "Immersiveengineering Alloysmelter": {
+        "prefix": "m-immersiveengineering-alloysmelter",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:alloy'});", "event.custom({'type':'immersiveengineering:alloy','time':200,'result':{'count':2,'base_ingredient':{'tag':'forge:ingots/electrum'}},'input0':{'tag':'forge:ingots/gold'},'input1':{'tag':'forge:ingots/silver'}});"],
+        "description": "Add Immersiveengineering Alloysmelter Recipe"
+    },
+    "Immersiveengineering Arcfurnace": {
+        "prefix": "m-immersiveengineering-arcfurnace",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:arc_furnace'});", "event.custom({'type':'immersiveengineering:arc_furnace','results':[{'count':2,'base_ingredient':{'tag':'forge:ingots/electrum'}}],'additives':[{'tag':'forge:ingots/silver'}],'input':{'tag':'forge:ingots/gold'},'time':100,'energy':51200});"],
+        "description": "Add Immersiveengineering Arcfurnace Recipe"
+    },
+    "Immersiveengineering Blastfurnace_fuel": {
+        "prefix": "m-immersiveengineering-blastfurnace_fuel",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:blast_furnace_fuel'});", "event.custom({'type':'immersiveengineering:blast_furnace_fuel','input':{'tag':'forge:storage_blocks/coal_coke'},'time':12000});"],
+        "description": "Add Immersiveengineering Blastfurnace_fuel Recipe"
+    },
+    "Immersiveengineering Bottlingmachine": {
+        "prefix": "m-immersiveengineering-bottlingmachine",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:bottling_machine'});", "event.custom({'type':'immersiveengineering:bottling_machine','results':[{'item':'immersiveengineering:plate_duroplast'},{'item':'immersiveengineering:mold_plate'}],'input':{'item':'immersiveengineering:mold_plate'},'fluid':{'tag':'forge:phenolic_resin','amount':250}});"],
+        "description": "Add Immersiveengineering Bottlingmachine Recipe"
+    },
+    "Immersiveengineering Cloche": {
+        "prefix": "m-immersiveengineering-cloche",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:cloche'});", "event.custom({'type':'immersiveengineering:cloche','results':[{'item':'minecraft:cactus'}],'input':{'item':'minecraft:cactus'},'soil':{'tag':'forge:sand'},'time':560,'render':{'type':'stacking','block':'minecraft:cactus'}});"],
+        "description": "Add Immersiveengineering Cloche Recipe"
+    },
+    "Immersiveengineering Cokeoven": {
+        "prefix": "m-immersiveengineering-cokeoven",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:coke_oven'});", "event.custom({'type':'immersiveengineering:coke_oven','result':{'tag':'forge:storage_blocks/coal_coke'},'input':{'item':'minecraft:coal_block'},'creosote':5000,'time':16200});"],
+        "description": "Add Immersiveengineering Cokeoven Recipe"
+    },
+    "Immersiveengineering Crusher": {
+        "prefix": "m-immersiveengineering-crusher",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:crusher'});", "event.custom({'type':'immersiveengineering:crusher','secondaries':[],'result':{'tag':'forge:dusts/coal'},'conditions':[{'value':{'tag':'forge:dusts/coal','type':'forge:tag_empty'},'type':'forge:not'}],'input':{'item':'minecraft:coal'},'energy':2400});"],
+        "description": "Add Immersiveengineering Crusher Recipe"
+    },
+    "Immersiveengineering Fermenter": {
+        "prefix": "m-immersiveengineering-fermenter",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:fermenter'});", "event.custom({'type':'immersiveengineering:fermenter','fluid':{'fluid':'immersiveengineering:ethanol','amount':250},'result':{'item':'minecraft:glass_bottle'},'input':{'item':'minecraft:honey_bottle'},'energy':6400});"],
+        "description": "Add Immersiveengineering Fermenter Recipe"
+    },
+    "Immersiveengineering Metalpress": {
+        "prefix": "m-immersiveengineering-metalpress",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:metal_press'});", "event.custom({'type':'immersiveengineering:metal_press','mold':'immersiveengineering:mold_gear','result':{'tag':'forge:gears/ardite'},'conditions':[{'value':{'tag':'forge:ingots/ardite','type':'forge:tag_empty'},'type':'forge:not'},{'value':{'tag':'forge:gears/ardite','type':'forge:tag_empty'},'type':'forge:not'}],'input':{'count':4,'base_ingredient':{'tag':'forge:ingots/ardite'}},'energy':2400});"],
+        "description": "Add Immersiveengineering Metalpress Recipe"
+    },
+    "Immersiveengineering Mixer": {
+        "prefix": "m-immersiveengineering-mixer",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:mixer'});", "event.custom({'type':'immersiveengineering:mixer','inputs':[{'tag':'forge:dusts/sulfur'},{'tag':'forge:dusts/copper'}],'result':{'fluid':'immersiveengineering:herbicide','amount':500},'fluid':{'tag':'forge:ethanol','amount':500},'energy':3200});"],
+        "description": "Add Immersiveengineering Mixer Recipe"
+    },
+    "Immersiveengineering Blueprint": {
+        "prefix": "m-immersiveengineering-blueprint",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:blueprint'});", "event.custom({ 'type': 'immersiveengineering:blueprint', 'inputs': [{'item': 'minecraft:paper'}, {'tag': 'forge:treated_wood'}], 'category': 'bannerpatterns', 'result': {'item': 'immersiveengineering:bannerpattern_treated_wood'} });"],
+        "description": "Add Immersiveengineering Blueprint Recipe"
+    },
+    "Immersiveengineering Fertilizer": {
+        "prefix": "m-immersiveengineering-fertilizer",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:fertilizer'});", "event.custom({ 'type': 'immersiveengineering:fertilizer', 'growthModifier': 1.25, 'input': {'item': 'immersiveengineering:fertilizer'} });"],
+        "description": "Add Immersiveengineering Fertilizer Recipe"
+    },
+    "Immersiveengineering Thermoelectric": {
+        "prefix": "m-immersiveengineering-thermoelectric",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:thermoelectric_source'});", "event.custom({'type':'immersiveengineering:thermoelectric_source','singleBlock':'minecraft:packed_ice','tempKelvin':240});"],
+        "description": "Add Immersiveengineering Thermoelectric Recipe"
+    },
+    "Immersiveengineering Windmill_biome": {
+        "prefix": "m-immersiveengineering-windmill_biome",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:windmill_biome'});", "event.custom({'type':'immersiveengineering:windmill_biome','biomeTag':'minecraft:is_ocean','modifier':1.15});"],
+        "description": "Add Immersiveengineering Windmill_biome Recipe"
+    },
+    "Immersiveengineering Generator_fuel": {
+        "prefix": "m-immersiveengineering-generator_fuel",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:generator_fuel'});", "event.custom({ 'type': 'immersiveengineering:generator_fuel', 'fluidTag': 'forge:biodiesel', 'burnTime': 250 });"],
+        "description": "Add Immersiveengineering Generator_fuel Recipe"
+    },
+    "Immersiveengineering Refinery": {
+        "prefix": "m-immersiveengineering-refinery",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:refinery'});", "event.custom({'type':'immersiveengineering:refinery','result':{'fluid':'immersiveengineering:biodiesel','amount':16},'catalyst':{'tag':'forge:dusts/saltpeter'},'input0':{'tag':'forge:plantoil','amount':8},'input1':{'tag':'forge:ethanol','amount':8},'energy':80});"],
+        "description": "Add Immersiveengineering Refinery Recipe"
+    },
+    "Immersiveengineering Sawmill": {
+        "prefix": "m-immersiveengineering-sawmill",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:sawmill'});", "event.custom({'type':'immersiveengineering:sawmill','secondaries':[{'output':{'tag':'forge:dusts/wood'},'stripping':true},{'output':{'tag':'forge:dusts/wood'},'stripping':false}],'result':{'item':'minecraft:birch_planks','count':6},'energy':1600,'input':[{'item':'minecraft:birch_log'},{'item':'minecraft:birch_wood'}],'stripped':{'item':'minecraft:stripped_birch_log'}});"],
+        "description": "Add Immersiveengineering Sawmill Recipe"
+    },
+    "Immersiveengineering Squeezer": {
+        "prefix": "m-immersiveengineering-squeezer",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:squeezer'});", "event.custom({'type':'immersiveengineering:squeezer','fluid':{'fluid':'immersiveengineering:plantoil','amount':120},'input':{'item':'immersiveengineering:seed'},'energy':6400});"],
+        "description": "Add Immersiveengineering Squeezer Recipe"
+    },
+    "Immersiveengineering Mineral": {
+        "prefix": "m-immersiveengineering-mineral",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:mineral_mix'});", "event.custom({ 'type': 'immersiveengineering:mineral_mix', 'ores': [ {'chance': 0.6, 'output': {'tag': 'forge:ores/redstone'}}, {'chance': 0.4, 'output': {'tag': 'forge:dusts/sulfur'}}, { 'conditions': [ { 'value': {'tag': 'forge:ores/mercury', 'type': 'forge:tag_empty'}, 'type': 'forge:not' } ], 'chance': 0.3, 'output': {'tag': 'forge:ores/mercury'} } ], 'spoils': [ {'chance': 0.2, 'output': {'item': 'minecraft:gravel'}}, {'chance': 0.5, 'output': {'item': 'minecraft:cobblestone'}}, {'chance': 0.3, 'output': {'item': 'minecraft:cobbled_deepslate'}} ], 'dimensions': ['minecraft:overworld'], 'weight': 15, 'fail_chance': 0.1 });"],
+        "description": "Add Immersiveengineering Mineral Recipe"
+    },
+    "Immersivepetroleum Cokerunit": {
+        "prefix": "m-immersivepetroleum-cokerunit",
+        "body": ["event.remove({output: [], type: 'immersivepetroleum:coker'});", "event.custom({ 'type': 'immersivepetroleum:coker', 'result': { 'item': 'immersivepetroleum:petcoke', 'count': 2 }, 'resultfluid': { 'fluid': 'immersivepetroleum:diesel_sulfur', 'amount': 27 }, 'input': { 'count': 2, 'base_ingredient': { 'tag': 'forge:bitumen' } }, 'inputfluid': { 'tag': 'minecraft:water', 'amount': 125 }, 'time': 30, 'energy': 15360 });"],
+        "description": "Add Immersivepetroleum Cokerunit Recipe"
+    },
+    "Immersivepetroleum Distillation": {
+        "prefix": "m-immersivepetroleum-distillation",
+        "body": ["event.remove({output: [], type: 'immersivepetroleum:distillation'});", "event.custom({ 'type': 'immersivepetroleum:distillation', 'results': [ { 'fluid': 'immersivepetroleum:kerosene', 'amount': 6 }, { 'fluid': 'immersivepetroleum:diesel_sulfur', 'amount': 10 } ], 'input': { 'tag': 'forge:lubricant_cracked', 'amount': 12 }, 'time': 1, 'energy': 1024 });"],
+        "description": "Add Immersivepetroleum Distillation Recipe"
+    },
+    "Immersivepetroleum Hydrotreater": {
+        "prefix": "m-immersivepetroleum-hydrotreater",
+        "body": ["event.remove({output: [], type: 'immersivepetroleum:hydrotreater'});", "event.custom({ 'type': 'immersivepetroleum:hydrotreater', 'time': 5, 'energy': 2560, 'result': { 'fluid': 'immersivepetroleum:naphtha_cracked', 'amount': 20 }, 'input': { 'tag': 'forge:naphtha', 'amount': 20 }, 'secondary_input': { 'tag': 'minecraft:water', 'amount': 5 } });"],
+        "description": "Add Immersivepetroleum Hydrotreater Recipe"
+    },
+    "Immersivepetroleum Reservoirs": {
+        "prefix": "m-immersivepetroleum-reservoirs",
+        "body": ["event.remove({output: [], type: 'immersivepetroleum:reservoirs'});", "event.custom({ 'type': 'immersivepetroleum:reservoirs', 'fluid': 'immersivepetroleum:crudeoil', 'fluidminimum': 2500000, 'fluidcapacity': 32500000, 'fluidtrace': 6, 'weight': 40, 'equilibrium': 0, 'dimensions': { 'isBlacklist': true, 'list': [ 'minecraft:the_end' ] }, 'biomes': { 'isBlacklist': false, 'list': [] }, 'name': 'oil' });"],
+        "description": "Add Immersivepetroleum Reservoirs Recipe"
+    },
+    "Industrialforegoing Dissolution": {
+        "prefix": "m-industrialforegoing-dissolution",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:dissolution_chamber'});", "event.custom({ 'input': [ { 'item': 'minecraft:redstone' }, { 'item': 'minecraft:redstone' }, { 'item': 'minecraft:glass_pane' }, { 'item': 'minecraft:glass_pane' }, { 'tag': 'forge:gears/diamond' }, { 'tag': 'forge:gears/diamond' }, { 'item': 'minecraft:blaze_rod' }, { 'item': 'minecraft:blaze_rod' } ], 'inputFluid': '{FluidName:'industrialforegoing:latex',Amount:1000}', 'processingTime': 200, 'output': { 'item': 'industrialforegoing:efficiency_addon_2', 'count': 1, 'nbt': '{TitaniumAugment:{Efficiency:0.8f}}' }, 'type': 'industrialforegoing:dissolution_chamber' });"],
+        "description": "Add Industrialforegoing Dissolution Recipe"
+    },
+    "Industrialforegoing Fluid_extractor": {
+        "prefix": "m-industrialforegoing-fluid_extractor",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:fluid_extractor'});", "event.custom({ 'input': { 'item': 'minecraft:dark_oak_log' }, 'result': 'minecraft:stripped_dark_oak_log', 'breakChance': 0.010, 'output': '{FluidName:'industrialforegoing:latex',Amount:3}', 'defaultRecipe': false, 'type': 'industrialforegoing:fluid_extractor' });"],
+        "description": "Add Industrialforegoing Fluid_extractor Recipe"
+    },
+    "Industrialforegoing Laser_fluid": {
+        "prefix": "m-industrialforegoing-laser_fluid",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:laser_drill_fluid'});", "event.custom({ 'output': '{FluidName:'minecraft:lava',Amount:100}', 'rarity': [ { 'whitelist': { 'type': 'minecraft:worldgen/biome', 'values': [ 'minecraft:nether_wastes', 'minecraft:basalt_deltas', 'minecraft:warped_forest', 'minecraft:crimson_forest', 'minecraft:soul_sand_valley' ] }, 'blacklist': {}, 'depth_min': 5, 'depth_max': 20, 'weight': 8 } ], 'pointer': 0, 'catalyst': { 'item': 'industrialforegoing:laser_lens1' }, 'entity': 'minecraft:empty', 'type': 'industrialforegoing:laser_drill_fluid' });"],
+        "description": "Add Industrialforegoing Laser_fluid Recipe"
+    },
+    "Industrialforegoing Laser_ore": {
+        "prefix": "m-industrialforegoing-laser_ore",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:laser_drill_ore'});", "event.custom({ 'output': { 'item': 'minecraft:coal_ore' }, 'rarity': [ { 'whitelist': {}, 'blacklist': { 'type': 'minecraft:worldgen/biome', 'values': [ 'minecraft:the_end', 'minecraft:the_void', 'minecraft:small_end_islands', 'minecraft:end_barrens', 'minecraft:end_highlands', 'minecraft:end_midlands' ] }, 'depth_min': 5, 'depth_max': 132, 'weight': 10 }, { 'whitelist': {}, 'blacklist': { 'type': 'minecraft:worldgen/biome', 'values': [ 'minecraft:the_end', 'minecraft:the_void', 'minecraft:small_end_islands', 'minecraft:end_barrens', 'minecraft:end_highlands', 'minecraft:end_midlands' ] }, 'depth_min': 0, 'depth_max': 255, 'weight': 4 } ], 'pointer': 0, 'catalyst': { 'item': 'industrialforegoing:laser_lens15' }, 'type': 'industrialforegoing:laser_drill_ore' });"],
+        "description": "Add Industrialforegoing Laser_ore Recipe"
+    },
+    "Industrialforegoing Stone_work": {
+        "prefix": "m-industrialforegoing-stone_work",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:stonework_generate'});", "event.custom({ 'output': { 'item': 'minecraft:granite', 'count': 1 }, 'waterNeed': 200, 'lavaNeed': 200, 'waterConsume': 200, 'lavaConsume': 200, 'type': 'industrialforegoing:stonework_generate' });"],
+        "description": "Add Industrialforegoing Stone_work Recipe"
+    },
+    "Lychee Block_crushing": {
+        "prefix": "m-lychee-block_crushing",
+        "body": ["event.remove({output: [], type: 'lychee:block_crushing'});", "event.custom({ 'type': 'lychee:block_crushing', 'item_in': [ { 'item': 'sugar_cane' }, { 'item': 'sugar_cane' }, { 'item': 'sugar_cane' } ], 'post': [ { 'type': 'drop_item', 'item': 'paper', 'count': 3 } ] });"],
+        "description": "Add Lychee Block_crushing Recipe"
+    },
+    "Lychee Block_interacting": {
+        "prefix": "m-lychee-block_interacting",
+        "body": ["event.remove({output: [], type: 'lychee:block_interacting'});", "event.custom({ 'type': 'lychee:block_interacting', 'item_in': { 'item': 'iron_axe' }, 'block_in': 'oak_log', 'post': [ { 'type': 'drop_item', 'item': 'diamond', 'contextual': { 'type': 'chance', 'chance': 0.5 } }, { 'type': 'place', 'block': 'stripped_oak_log' }, { 'type': 'damage_item' } ] });"],
+        "description": "Add Lychee Block_interacting Recipe"
+    },
+    "Lychee Item_burning": {
+        "prefix": "m-lychee-item_burning",
+        "body": ["event.remove({output: [], type: 'lychee:item_burning'});", "event.custom({ 'type': 'lychee:item_burning', 'item_in': { 'tag': 'logs_that_burn' }, 'post': { 'type': 'drop_item', 'item': 'charcoal' } });"],
+        "description": "Add Lychee Item_burning Recipe"
+    },
+    "Lychee Item_inside": {
+        "prefix": "m-lychee-item_inside",
+        "body": ["event.remove({output: [], type: 'lychee:item_inside'});", "event.custom({ 'type': 'lychee:item_inside', 'item_in': { 'item': 'bucket' }, 'block_in': { 'blocks': ['water_cauldron'], 'state': { 'level': 3 } }, 'post': [ { 'type': 'drop_item', 'item': 'water_bucket' }, { 'type': 'place', 'block': 'cauldron' } ] });"],
+        "description": "Add Lychee Item_inside Recipe"
+    },
+    "Lychee Lightning_channeling": {
+        "prefix": "m-lychee-lightning_channeling",
+        "body": ["event.remove({output: [], type: 'lychee:lightning_channeling'});", "event.custom({ 'type': 'lychee:lightning_channeling', 'post': [ { 'type': 'execute', 'command': 'fill ~-3 ~-3 ~-3 ~3 ~3 ~3 stone replace calcite' } ] });"],
+        "description": "Add Lychee Lightning_channeling Recipe"
+    },
+    "Malum Spirit_focusing": {
+        "prefix": "m-malum-spirit_focusing",
+        "body": ["event.remove({output: [], type: 'malum:spirit_focusing'});", "event.custom({ 'type': 'malum:spirit_focusing', 'time': 300, 'durabilityCost': 1, 'input': { 'item': 'malum:alchemical_impetus' }, 'output': { 'item': 'minecraft:prismarine_shard', 'count': 8 }, 'spirits': [ { 'type': 'aqueous', 'count': 2 }, { 'type': 'arcane', 'count': 2 } ] });"],
+        "description": "Add Malum Spirit_focusing Recipe"
+    },
+    "Malum Spirit_infusion": {
+        "prefix": "m-malum-spirit_infusion",
+        "body": ["event.remove({output: [], type: 'malum:spirit_infusion'});", "event.custom({ 'type': 'malum:spirit_infusion', 'input': { 'tag': 'minecraft:stone_tool_materials', 'count': 16 }, 'output': { 'item': 'malum:twisted_rock', 'count': 16 }, 'extra_items': [], 'spirits': [ { 'type': 'wicked' }, { 'type': 'arcane' } ] });"],
+        "description": "Add Malum Spirit_infusion Recipe"
+    },
+    "Malum Spirit_repair": {
+        "prefix": "m-malum-spirit_repair",
+        "body": ["event.remove({output: [], type: 'malum:spirit_repair'});", "event.custom({ 'type': 'malum:spirit_repair', 'itemIdRegex': 'flint_.+', 'modIdRegex': '', 'durabilityPercentage': 0.5, 'inputs': [], 'repairMaterial': { 'item': 'minecraft:flint', 'count': 2 }, 'spirits': [ { 'type': 'earthen', 'count': 4 } ] });"],
+        "description": "Add Malum Spirit_repair Recipe"
+    },
+    "Malum Spirit_transmutation": {
+        "prefix": "m-malum-spirit_transmutation",
+        "body": ["event.remove({output: [], type: 'malum:spirit_transmutation'});", "event.custom({ 'type': 'malum:spirit_transmutation', 'input': { 'item': 'minecraft:clay' }, 'output': { 'item': 'minecraft:prismarine' } });"],
+        "description": "Add Malum Spirit_transmutation Recipe"
+    },
+    "Mekanism Antiprotonic_nucleosynthesizer": {
+        "prefix": "m-mekanism-antiprotonic_nucleosynthesizer",
+        "body": ["event.remove({output: [], type: 'mekanism:nucleosynthesizing'});", "event.custom({'type':'mekanism:nucleosynthesizing','itemInput':{'ingredient':{'item':'minecraft:diamond'}},'gasInput':{'amount':4,'gas':'mekanism:antimatter'},'output':{'item':'minecraft:emerald'},'duration':1000});"],
+        "description": "Add Mekanism Antiprotonic_nucleosynthesizer Recipe"
+    },
+    "Mekanism Chemical_crystallizer": {
+        "prefix": "m-mekanism-chemical_crystallizer",
+        "body": ["event.remove({output: [], type: 'mekanism:crystallizing'});", "event.custom({'type':'mekanism:crystallizing','chemicalType':'gas','input':{'amount':100,'gas':'mekanism:lithium'},'output':{'item':'mekanism:dust_lithium'}});"],
+        "description": "Add Mekanism Chemical_crystallizer Recipe"
+    },
+    "Mekanism Chemical_dissolution_chamber": {
+        "prefix": "m-mekanism-chemical_dissolution_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:dissolution'});", "event.custom({'type':'mekanism:dissolution','itemInput':{'ingredient':{'tag':'forge:storage_blocks/raw_osmium'}},'gasInput':{'amount':2,'gas':'mekanism:sulfuric_acid'},'output':{'slurry':'mekanism:dirty_osmium','amount':6000,'chemicalType':'slurry'}});"],
+        "description": "Add Mekanism Chemical_dissolution_chamber Recipe"
+    },
+    "Mekanism Chemical_infuser": {
+        "prefix": "m-mekanism-chemical_infuser",
+        "body": ["event.remove({output: [], type: 'mekanism:chemical_infusing'});", "event.custom({'type':'mekanism:chemical_infusing','leftInput':{'amount':1,'gas':'mekanism:hydrogen'},'rightInput':{'amount':1,'gas':'mekanism:chlorine'},'output':{'gas':'mekanism:hydrogen_chloride','amount':1}});"],
+        "description": "Add Mekanism Chemical_infuser Recipe"
+    },
+    "Mekanism Chemical_injection_chamber": {
+        "prefix": "m-mekanism-chemical_injection_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:injecting'});", "event.custom({'type':'mekanism:injecting','itemInput':{'ingredient':{'item':'minecraft:dirt'}},'chemicalInput':{'amount':1,'tag':'mekanism:water_vapor'},'output':{'item':'minecraft:clay'}});"],
+        "description": "Add Mekanism Chemical_injection_chamber Recipe"
+    },
+    "Mekanism Chemical_oxidizer": {
+        "prefix": "m-mekanism-chemical_oxidizer",
+        "body": ["event.remove({output: [], type: 'mekanism:oxidizing'});", "event.custom({'type':'mekanism:oxidizing','input':{'ingredient':{'tag':'forge:dusts/lithium'}},'output':{'gas':'mekanism:lithium','amount':100}});"],
+        "description": "Add Mekanism Chemical_oxidizer Recipe"
+    },
+    "Mekanism Chemical_washer": {
+        "prefix": "m-mekanism-chemical_washer",
+        "body": ["event.remove({output: [], type: 'mekanism:washing'});", "event.custom({'type':'mekanism:washing','fluidInput':{'amount':5,'tag':'minecraft:water'},'slurryInput':{'amount':1,'slurry':'mekanism:dirty_tin'},'output':{'slurry':'mekanism:clean_tin','amount':1}});"],
+        "description": "Add Mekanism Chemical_washer Recipe"
+    },
+    "Mekanism Combiner": {
+        "prefix": "m-mekanism-combiner",
+        "body": ["event.remove({output: [], type: 'mekanism:combining'});", "event.custom({'type':'mekanism:combining','mainInput':{'amount':4,'ingredient':{'tag':'forge:dusts/obsidian'}},'extraInput':{'ingredient':{'tag':'forge:cobblestone/deepslate'}},'output':{'item':'minecraft:obsidian'}});"],
+        "description": "Add Mekanism Combiner Recipe"
+    },
+    "Mekanism Rotary": {
+        "prefix": "m-mekanism-rotary",
+        "body": ["event.remove({output: [], type: 'mekanism:rotary'});", "event.custom({'type':'mekanism:rotary','fluidInput':{'amount':1,'tag':'forge:oxygen'},'gasOutput':{'gas':'mekanism:oxygen','amount':1},'gasInput':{'amount':1,'gas':'mekanism:oxygen'},'fluidOutput':{'fluid':'mekanism:oxygen','amount':1}});"],
+        "description": "Add Mekanism Rotary Recipe"
+    },
+    "Mekanism Crusher": {
+        "prefix": "m-mekanism-crusher",
+        "body": ["event.remove({output: [], type: 'mekanism:crushing'});", "event.custom({'type':'mekanism:crushing','input':{'ingredient':{'item':'minecraft:flint'}},'output':{'item':'minecraft:gunpowder'}});"],
+        "description": "Add Mekanism Crusher Recipe"
+    },
+    "Mekanism Electrolytic_separator": {
+        "prefix": "m-mekanism-electrolytic_separator",
+        "body": ["event.remove({output: [], type: 'mekanism:separating'});", "event.custom({ 'type': 'mekanism:separating', 'input': {'amount': 2, 'tag': 'minecraft:water'}, 'leftGasOutput': {'gas': 'mekanism:hydrogen', 'amount': 2}, 'rightGasOutput': {'gas': 'mekanism:oxygen', 'amount': 1} });"],
+        "description": "Add Mekanism Electrolytic_separator Recipe"
+    },
+    "Mekanism Energy_conversion": {
+        "prefix": "m-mekanism-energy_conversion",
+        "body": ["event.remove({output: [], type: 'mekanism:energy_conversion'});", "event.custom({'type':'mekanism:energy_conversion','input':{'ingredient':{'tag':'forge:storage_blocks/redstone'}},'output':90000});"],
+        "description": "Add Mekanism Energy_conversion Recipe"
+    },
+    "Mekanism Enrichment_chamber": {
+        "prefix": "m-mekanism-enrichment_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:enriching'});", "event.custom({'type':'mekanism:enriching','input':{'ingredient':{'tag':'forge:dusts/lapis'}},'output':{'item':'minecraft:lapis_lazuli'}});"],
+        "description": "Add Mekanism Enrichment_chamber Recipe"
+    },
+    "Mekanism Gas_conversion": {
+        "prefix": "m-mekanism-gas_conversion",
+        "body": ["event.remove({output: [], type: 'mekanism:gas_conversion'});", "event.custom({'type':'mekanism:gas_conversion','input':{'ingredient':{'tag':'forge:ingots/osmium'}},'output':{'gas':'mekanism:osmium','amount':200}});"],
+        "description": "Add Mekanism Gas_conversion Recipe"
+    },
+    "Mekanism Infusion_conversion": {
+        "prefix": "m-mekanism-infusion_conversion",
+        "body": ["event.remove({output: [], type: 'mekanism:infusion_conversion'});", "event.custom({'type':'mekanism:infusion_conversion','input':{'ingredient':{'tag':'forge:dusts/gold'}},'output':{'infuse_type':'mekanism:gold','amount':10}});"],
+        "description": "Add Mekanism Infusion_conversion Recipe"
+    },
+    "Mekanism Isotopic_centrifuge": {
+        "prefix": "m-mekanism-isotopic_centrifuge",
+        "body": ["event.remove({output: [], type: 'mekanism:centrifuging'});", "event.custom({'type': 'mekanism:centrifuging','input': {'gas':'mekanism:osmium','amount':200}},'output': {'gas':'mekanism:osmium','amount':200}}});"],
+        "description": "Add Mekanism Isotopic_centrifuge Recipe"
+    },
+    "Mekanism Metallurgic_infuser": {
+        "prefix": "m-mekanism-metallurgic_infuser",
+        "body": ["event.remove({output: [], type: 'mekanism:metallurgic_infusing'});", "event.custom({'type':'mekanism:metallurgic_infusing','itemInput':{'ingredient':{'tag':'forge:ingots/osmium'}},'chemicalInput':{'amount':20,'tag':'mekanism:redstone'},'output':{'item':'mekanism:basic_control_circuit'}});"],
+        "description": "Add Mekanism Metallurgic_infuser Recipe"
+    },
+    "Mekanism Osmium_compressor": {
+        "prefix": "m-mekanism-osmium_compressor",
+        "body": ["event.remove({output: [], type: 'mekanism:compressing'});", "event.custom({'type':'mekanism:compressing','itemInput':{'ingredient':{'tag':'forge:dusts/refined_obsidian'}},'chemicalInput':{'amount':1,'gas':'mekanism:osmium'},'output':{'item':'mekanism:ingot_refined_obsidian'}});"],
+        "description": "Add Mekanism Osmium_compressor Recipe"
+    },
+    "Mekanism Painting_machine": {
+        "prefix": "m-mekanism-painting_machine",
+        "body": ["event.remove({output: [], type: 'mekanism:painting'});", "event.custom({'type':'mekanism:painting','itemInput':{'ingredient':{'type':'forge:difference','base':{'tag':'mekanism:colorable/glass'},'subtracted':{'item':'minecraft:blue_stained_glass'}}},'chemicalInput':{'amount':32,'pigment':'mekanism:blue'},'output':{'item':'minecraft:blue_stained_glass'}});"],
+        "description": "Add Mekanism Painting_machine Recipe"
+    },
+    "Mekanism Pigment_extractor": {
+        "prefix": "m-mekanism-pigment_extractor",
+        "body": ["event.remove({output: [], type: 'mekanism:pigment_extracting'});", "event.custom({'type':'mekanism:pigment_extracting','input':{'ingredient':{'item':'minecraft:blue_concrete_powder'}},'output':{'pigment':'mekanism:blue','amount':32}});"],
+        "description": "Add Mekanism Pigment_extractor Recipe"
+    },
+    "Mekanism Pigment_mixer": {
+        "prefix": "m-mekanism-pigment_mixer",
+        "body": ["event.remove({output: [], type: 'mekanism:pigment_mixing'});", "event.custom({'type':'mekanism:pigment_mixing','leftInput':{'amount':1,'pigment':'mekanism:cyan'},'rightInput':{'amount':1,'pigment':'mekanism:white'},'output':{'pigment':'mekanism:aqua','amount':2}});"],
+        "description": "Add Mekanism Pigment_mixer Recipe"
+    },
+    "Mekanism Precision_sawmill": {
+        "prefix": "m-mekanism-precision_sawmill",
+        "body": ["event.remove({output: [], type: 'mekanism:sawing'});", "event.custom({'type':'mekanism:sawing','input':{'ingredient':{'tag':'forge:bookshelves'}},'mainOutput':{'item':'minecraft:oak_planks','count':6},'secondaryOutput':{'item':'minecraft:book','count':3},'secondaryChance':1.0});"],
+        "description": "Add Mekanism Precision_sawmill Recipe"
+    },
+    "Mekanism Pressurized_reaction_chamber": {
+        "prefix": "m-mekanism-pressurized_reaction_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:reaction'});", "event.custom({'type':'mekanism:reaction','itemInput':{'ingredient':{'item':'mekanism:substrate'}},'fluidInput':{'amount':200,'tag':'minecraft:water'},'gasInput':{'amount':100,'gas':'mekanism:ethene'},'energyRequired':200,'duration':400,'itemOutput':{'item':'mekanism:substrate','count':8},'gasOutput':{'gas':'mekanism:oxygen','amount':10}});"],
+        "description": "Add Mekanism Pressurized_reaction_chamber Recipe"
+    },
+    "Mekanism Purification_chamber": {
+        "prefix": "m-mekanism-purification_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:purifying'});", "event.custom({'type':'mekanism:purifying','itemInput':{'ingredient':{'tag':'forge:ores/tin'}},'chemicalInput':{'amount':1,'gas':'mekanism:oxygen'},'output':{'item':'mekanism:clump_tin','count':3}});"],
+        "description": "Add Mekanism Purification_chamber Recipe"
+    },
+    "Mekanism Solar_neutron_activator": {
+        "prefix": "m-mekanism-solar_neutron_activator",
+        "body": ["event.remove({output: [], type: 'mekanism:activating'});", "event.custom({'type':'mekanism:activating','input':{'amount':1,'gas':'mekanism:lithium'},'output':{'gas':'mekanismgenerators:tritium','amount':1}});"],
+        "description": "Add Mekanism Solar_neutron_activator Recipe"
+    },
+    "Mekanism Evaporating": {
+        "prefix": "m-mekanism-evaporating",
+        "body": ["event.remove({output: [], type: 'mekanism:evaporating'});", "event.custom({'type':'mekanism:evaporating','input':{'amount':10,'tag':'minecraft:water'},'output':{'fluid':'mekanism:brine','amount':1}});"],
+        "description": "Add Mekanism Evaporating Recipe"
+    },
+    "Mythicbotany Jei_category_infusion": {
+        "prefix": "m-mythicbotany-jei_category_infusion",
+        "body": ["event.remove({output: [], type: 'mythicbotany:infusion'});", "event.custom({ 'type': 'mythicbotany:infusion', 'group': 'infuser', 'output': { 'item': 'mythicbotany:alfsteel_ingot', 'count': 1 }, 'mana': 2000000, 'ingredients': [ { 'tag': 'botania:elementium_ingots' }, { 'tag': 'botania:dragonstone_gems' }, { 'item': 'botania:pixie_dust' } ], 'fromColor': 16711821, 'toColor': 16750080 });"],
+        "description": "Add Mythicbotany Jei_category_infusion Recipe"
+    },
+    "Mythicbotany Jei_category_rune_ritual": {
+        "prefix": "m-mythicbotany-jei_category_rune_ritual",
+        "body": ["event.remove({output: [], type: 'mythicbotany:rune_ritual'});", "event.custom({ 'type': 'mythicbotany:rune_ritual', 'group': 'rune_rituals', 'center': { 'item': 'mythicbotany:fimbultyr_tablet' }, 'runes': [ { 'rune': { 'item': 'mythicbotany:midgard_rune' }, 'x': -2, 'z': -2, 'consume': false }, { 'rune': { 'item': 'mythicbotany:midgard_rune' }, 'x': 2, 'z': 2, 'consume': false }, { 'rune': { 'item': 'mythicbotany:helheim_rune' }, 'x': 2, 'z': -2, 'consume': false }, { 'rune': { 'item': 'mythicbotany:helheim_rune' }, 'x': -2, 'z': 2, 'consume': false }, { 'rune': { 'item': 'botania:rune_summer' }, 'x': -1, 'z': -3, 'consume': false }, { 'rune': { 'item': 'botania:rune_summer' }, 'x': 1, 'z': 3, 'consume': false }, { 'rune': { 'item': 'botania:rune_summer' }, 'x': -3, 'z': -1, 'consume': false }, { 'rune': { 'item': 'botania:rune_summer' }, 'x': 3, 'z': 1, 'consume': false }, { 'rune': { 'item': 'botania:rune_fire' }, 'x': 1, 'z': -3, 'consume': false }, { 'rune': { 'item': 'botania:rune_fire' }, 'x': -1, 'z': 3, 'consume': false }, { 'rune': { 'item': 'botania:rune_fire' }, 'x': 3, 'z': -1, 'consume': false }, { 'rune': { 'item': 'botania:rune_fire' }, 'x': -3, 'z': 1, 'consume': false } ], 'mana': 20000, 'ticks': 200, 'inputs': [ { 'item': 'botania:ender_dagger' }, { 'item': 'mythicbotany:alfsteel_nugget' }, { 'item': 'botania:vial' } ], 'outputs': [ { 'item': 'mythicbotany:kvasir_blood', 'count': 1 } ], 'special_input': 'mythicbotany:wandering_trader' });"],
+        "description": "Add Mythicbotany Jei_category_rune_ritual Recipe"
+    },
+    "Naturesaura Altar": {
+        "prefix": "m-naturesaura-altar",
+        "body": ["event.remove({output: [], type: 'naturesaura:altar'});", "event.custom({ 'type': 'naturesaura:altar', 'input': { 'item': 'minecraft:arrow' }, 'output': { 'item': 'minecraft:spectral_arrow' }, 'aura_type': 'naturesaura:overworld', 'catalyst': { 'item': 'naturesaura:conversion_catalyst' }, 'aura': 10000, 'time': 50 });"],
+        "description": "Add Naturesaura Altar Recipe"
+    },
+    "Naturesaura Animal_spawner": {
+        "prefix": "m-naturesaura-animal_spawner",
+        "body": ["event.remove({output: [], type: 'naturesaura:animal_spawner'});", "event.custom({ 'type': 'naturesaura:animal_spawner', 'ingredients': [ { 'item': 'naturesaura:birth_spirit' }, { 'item': 'minecraft:feather' } ], 'entity': 'minecraft:bat', 'aura': 30000, 'time': 40 });"],
+        "description": "Add Naturesaura Animal_spawner Recipe"
+    },
+    "Naturesaura Offering": {
+        "prefix": "m-naturesaura-offering",
+        "body": ["event.remove({output: [], type: 'naturesaura:offering'});", "event.custom({ 'type': 'naturesaura:offering', 'input': { 'item': 'naturesaura:tainted_gold' }, 'start_item': { 'item': 'naturesaura:calling_spirit' }, 'output': { 'item': 'naturesaura:sky_ingot', 'count': 2 } });"],
+        "description": "Add Naturesaura Offering Recipe"
+    },
+    "Naturesaura Tree_ritual": {
+        "prefix": "m-naturesaura-tree_ritual",
+        "body": ["event.remove({output: [], type: 'naturesaura:tree_ritual'});", "event.custom({ 'type': 'naturesaura:tree_ritual', 'ingredients': [ { 'item': 'naturesaura:gold_powder' }, { 'item': 'naturesaura:gold_powder' }, { 'item': 'naturesaura:sky_ingot' }, { 'item': 'naturesaura:aura_cache' } ], 'sapling': { 'item': 'minecraft:oak_sapling' }, 'output': { 'nbt': { 'effect': 'naturesaura:cache_recharge' }, 'item': 'naturesaura:effect_powder', 'count': 32 }, 'time': 400 });"],
+        "description": "Add Naturesaura Tree_ritual Recipe"
+    },
+    "Occultism Crushing": {
+        "prefix": "m-occultism-crushing",
+        "body": ["event.remove({output: [], type: 'occultism:crushing'});", "event.custom({ 'type': 'occultism:crushing', 'conditions': [ { 'type': 'forge:not', 'value': { 'type': 'forge:tag_empty', 'tag': 'forge:ores/amber' } }, { 'type': 'forge:not', 'value': { 'type': 'forge:tag_empty', 'tag': 'forge:dusts/amber' } } ], 'ingredient': { 'tag': 'forge:ores/amber' }, 'result': { 'tag': 'forge:dusts/amber', 'count': 2 }, 'crushing_time': 200, 'ignore_crushing_multiplier': false });"],
+        "description": "Add Occultism Crushing Recipe"
+    },
+    "Occultism Miner": {
+        "prefix": "m-occultism-miner",
+        "body": ["event.remove({output: [], type: 'occultism:miner'});", "event.custom({ 'type': 'occultism:miner', 'ingredient': { 'tag': 'occultism:miners/master' }, 'result': { 'item': 'occultism:iesnium_ore' }, 'weight': 100 });"],
+        "description": "Add Occultism Miner Recipe"
+    },
+    "Occultism Ritual": {
+        "prefix": "m-occultism-ritual",
+        "body": ["event.remove({output: [], type: 'occultism:ritual'});", "event.custom({ 'type': 'occultism:ritual', 'ritual_type': 'occultism:craft', 'activation_item': { 'item': 'occultism:book_of_binding_bound_foliot' }, 'pentacle_id': 'occultism:craft_foliot', 'duration': 60, 'ritual_dummy': { 'item': 'occultism:ritual_dummy/craft_infused_lenses' }, 'ingredients': [ { 'item': 'occultism:lenses' }, { 'tag': 'forge:ingots/silver' }, { 'tag': 'forge:ingots/silver' }, { 'tag': 'forge:ingots/gold' } ], 'result': { 'item': 'occultism:infused_lenses' } });"],
+        "description": "Add Occultism Ritual Recipe"
+    },
+    "Occultism Spirit_fire": {
+        "prefix": "m-occultism-spirit_fire",
+        "body": ["event.remove({output: [], type: 'occultism:spirit_fire'});", "event.custom({ 'type': 'occultism:spirit_fire', 'ingredient': { 'item': 'occultism:chalk_white_impure' }, 'result': { 'item': 'occultism:chalk_white' } });"],
+        "description": "Add Occultism Spirit_fire Recipe"
+    },
+    "Occultism Spirit_trade": {
+        "prefix": "m-occultism-spirit_trade",
+        "body": ["event.remove({output: [], type: 'occultism:spirit_trade'});", "event.custom({ 'type': 'occultism:spirit_trade', 'ingredients': [ { 'item': 'minecraft:stone' } ], 'result': { 'item': 'occultism:otherstone', 'count': 4 } });"],
+        "description": "Add Occultism Spirit_trade Recipe"
+    },
+    "Pneumaticcraft Amadron_trade": {
+        "prefix": "m-pneumaticcraft-amadron_trade",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:amadron'});", "event.custom({ 'type': 'pneumaticcraft:amadron', 'id': 'pneumaticcraft:amadron/emerald_to_lubricant', 'input': { 'type': 'ITEM', 'id': 'minecraft:emerald', 'amount': 5 }, 'output': { 'type': 'FLUID', 'id': 'pneumaticcraft:lubricant', 'amount': 1000 }, 'static': true, 'level': 0 });"],
+        "description": "Add Pneumaticcraft Amadron_trade Recipe"
+    },
+    "Pneumaticcraft Assembly": {
+        "prefix": "m-pneumaticcraft-assembly",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:assembly_drill'});", "event.custom({ 'type': 'pneumaticcraft:assembly_drill', 'input': { 'item': 'pneumaticcraft:unassembled_netherite_drill_bit' }, 'result': { 'item': 'pneumaticcraft:drill_bit_netherite' }, 'program': 'drill' });"],
+        "description": "Add Pneumaticcraft Assembly Recipe"
+    },
+    "Pneumaticcraft Explosion_crafting": {
+        "prefix": "m-pneumaticcraft-explosion_crafting",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:explosion_crafting'});", "event.custom({ 'type': 'pneumaticcraft:explosion_crafting', 'input': { 'tag': 'forge:ingots/iron' }, 'results': [ { 'item': 'pneumaticcraft:ingot_iron_compressed' } ], 'loss_rate': 20 });"],
+        "description": "Add Pneumaticcraft Explosion_crafting Recipe"
+    },
+    "Pneumaticcraft Fluid_mixer": {
+        "prefix": "m-pneumaticcraft-fluid_mixer",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:fluid_mixer'});", "event.custom({ 'type': 'pneumaticcraft:fluid_mixer', 'input1': { 'type': 'pneumaticcraft:fluid', 'fluid': 'minecraft:water', 'amount': 1000 }, 'input2': { 'type': 'pneumaticcraft:fluid', 'fluid': 'minecraft:lava', 'amount': 1000 }, 'item_output': { 'item': 'minecraft:obsidian' }, 'pressure': 0.5, 'time': 40 });"],
+        "description": "Add Pneumaticcraft Fluid_mixer Recipe"
+    },
+    "Pneumaticcraft Heat_frame_cooling": {
+        "prefix": "m-pneumaticcraft-heat_frame_cooling",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:heat_frame_cooling'});", "event.custom({ 'type': 'pneumaticcraft:heat_frame_cooling', 'input': { 'type': 'pneumaticcraft:fluid', 'tag': 'minecraft:lava', 'amount': 1000 }, 'max_temp': 273, 'result': { 'item': 'minecraft:obsidian' }, 'bonus_output': { 'multiplier': 0.025, 'limit': 0.5 } });"],
+        "description": "Add Pneumaticcraft Heat_frame_cooling Recipe"
+    },
+    "Pneumaticcraft Heat_properties": {
+        "prefix": "m-pneumaticcraft-heat_properties",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:heat_properties'});", "event.custom({ 'type': 'pneumaticcraft:heat_properties', 'block': 'mekanism:block_uranium', 'temperature': 438, 'thermalResistance': 500, 'transformCold': { 'block': 'mekanism:block_lead' }, 'heatCapacity': 500000 });"],
+        "description": "Add Pneumaticcraft Heat_properties Recipe"
+    },
+    "Pneumaticcraft Pressure_chamber": {
+        "prefix": "m-pneumaticcraft-pressure_chamber",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:pressure_chamber'});", "event.custom({ 'type': 'pneumaticcraft:pressure_chamber', 'inputs': [ { 'type': 'pneumaticcraft:stacked_item', 'item': 'minecraft:packed_ice', 'count': 4 } ], 'pressure': 2.5, 'results': [ { 'item': 'minecraft:blue_ice' } ] });"],
+        "description": "Add Pneumaticcraft Pressure_chamber Recipe"
+    },
+    "Pneumaticcraft Refinery": {
+        "prefix": "m-pneumaticcraft-refinery",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:refinery'});", "event.custom({ 'type': 'pneumaticcraft:refinery', 'input': { 'type': 'pneumaticcraft:fluid', 'tag': 'forge:crude_oil', 'amount': 10 }, 'temperature': { 'min_temp': 373 }, 'results': [ { 'fluid': 'pneumaticcraft:diesel', 'amount': 2 }, { 'fluid': 'pneumaticcraft:kerosene', 'amount': 3 }, { 'fluid': 'pneumaticcraft:lpg', 'amount': 2 } ] });"],
+        "description": "Add Pneumaticcraft Refinery Recipe"
+    },
+    "Pneumaticcraft Thermo_plant": {
+        "prefix": "m-pneumaticcraft-thermo_plant",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:thermo_plant'});", "event.custom({ 'type': 'pneumaticcraft:thermo_plant', 'item_input': { 'item': 'minecraft:melon_slice' }, 'fluid_input': { 'type': 'pneumaticcraft:fluid', 'tag': 'pneumaticcraft:yeast_culture', 'amount': 100 }, 'fluid_output': { 'fluid': 'pneumaticcraft:ethanol', 'amount': 10 }, 'temperature': { 'min_temp': 303, 'max_temp': 333 }, 'speed': 0.4, 'exothermic': true });"],
+        "description": "Add Pneumaticcraft Thermo_plant Recipe"
+    },
+    "Productivebees Advanced_beehive": {
+        "prefix": "m-productivebees-advanced_beehive",
+        "body": ["event.remove({output: [], type: 'productivebees:advanced_beehive'});", "event.custom({ 'type': 'productivebees:advanced_beehive', 'ingredient': 'productivebees:creeper_bee', 'results': [ { 'item': { 'item': 'productivebees:honeycomb_powdery' } }, { 'item': { 'tag': 'forge:pollen' }, 'chance': 5 } ] });"],
+        "description": "Add Productivebees Advanced_beehive Recipe"
+    },
+    "Productivebees Bee_breeding": {
+        "prefix": "m-productivebees-bee_breeding",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_breeding'});", "event.custom({ 'type': 'productivebees:bee_breeding', 'parent1': 'productivebees:emerald', 'parent2': 'productivebees:lapis', 'offspring': [ 'productivebees:experience' ], 'conditions': [ { 'type': 'productivebees:bee_exists', 'bee': 'productivebees:emerald' }, { 'type': 'productivebees:bee_exists', 'bee': 'productivebees:lapis' }, { 'type': 'productivebees:bee_exists', 'bee': 'productivebees:experience' } ] });"],
+        "description": "Add Productivebees Bee_breeding Recipe"
+    },
+    "Productivebees Bee_conversion": {
+        "prefix": "m-productivebees-bee_conversion",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_conversion'});", "event.custom({ 'type': 'productivebees:bee_conversion', 'source': 'minecraft:bee', 'result': 'productivebees:creeper_bee', 'item': { 'item': 'minecraft:tnt' } });"],
+        "description": "Add Productivebees Bee_conversion Recipe"
+    },
+    "Productivebees Bee_fishing": {
+        "prefix": "m-productivebees-bee_fishing",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_fishing'});", "event.custom({ 'type': 'productivebees:bee_fishing', 'bee': 'productivebees:prismarine', 'biomes': [ 'minecraft:deep_frozen_ocean', 'minecraft:deep_cold_ocean', 'minecraft:deep_ocean', 'minecraft:deep_lukewarm_ocean' ], 'conditions': [ { 'type': 'productivebees:bee_exists', 'bee': 'productivebees:prismarine' } ] });"],
+        "description": "Add Productivebees Bee_fishing Recipe"
+    },
+    "Productivebees Bee_spawning": {
+        "prefix": "m-productivebees-bee_spawning",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_spawning'});", "event.custom({ 'type': 'productivebees:bee_spawning', 'ingredient': { 'item': 'productivebees:sand_nest' }, 'results': [ { 'bee': 'productivebees:ashy_mining_bee' } ], 'biomes': [ 'desert' ] });"],
+        "description": "Add Productivebees Bee_spawning Recipe"
+    },
+    "Productivebees Block_conversion": {
+        "prefix": "m-productivebees-block_conversion",
+        "body": ["event.remove({output: [], type: 'productivebees:block_conversion'});", "event.custom({ 'type': 'productivebees:block_conversion', 'bee': 'productivebees:magmatic', 'from': { 'Name': 'minecraft:cobblestone' }, 'to': { 'Name': 'minecraft:lava' }, 'chance': 30, 'conditions': [ { 'type': 'productivebees:bee_exists', 'bee': 'productivebees:magmatic' } ] });"],
+        "description": "Add Productivebees Block_conversion Recipe"
+    },
+    "Productivebees Bottler": {
+        "prefix": "m-productivebees-bottler",
+        "body": ["event.remove({output: [], type: 'productivebees:bottler'});", "event.custom({ 'type': 'productivebees:bottler', 'fluid': { 'tag': 'forge:honey', 'amount': 250 }, 'input': { 'item': 'minecraft:honeycomb' }, 'output': { 'item': 'productivebees:honey_treat' } });"],
+        "description": "Add Productivebees Bottler Recipe"
+    },
+    "Productivebees Centrifuge": {
+        "prefix": "m-productivebees-centrifuge",
+        "body": ["event.remove({output: [], type: 'productivebees:centrifuge'});", "event.custom({ 'type': 'productivebees:centrifuge', 'ingredient': { 'type': 'forge:nbt', 'item': 'productivebees:configurable_honeycomb', 'nbt': { 'EntityTag': { 'type': 'productivebees:ender' } } }, 'outputs': [ { 'item': { 'item': 'minecraft:ender_pearl' }, 'chance': 20 }, { 'item': { 'tag': 'forge:wax' } }, { 'fluid': { 'fluid': 'productivebees:honey' }, 'amount': 50 } ], 'conditions': [ { 'type': 'forge:not', 'value': { 'type': 'forge:mod_loaded', 'modid': 'integrateddynamics' } } ] });"],
+        "description": "Add Productivebees Centrifuge Recipe"
+    },
+    "Rankine Air_distillation": {
+        "prefix": "m-rankine-air_distillation",
+        "body": ["event.remove({output: [], type: 'rankine:air_distillation'});", "event.custom({ 'type': 'rankine:air_distillation', 'dimensions': ['minecraft:the_nether'], 'output1': { 'item': 'rankine:sulfur_dioxide_gas_block', 'chance': 0.4 }, 'output2': { 'item': 'rankine:ammonia_gas_block', 'chance': 0.2 }, 'output3': { 'item': 'rankine:fluorine_gas_block', 'chance': 0.1 }, 'output4': { 'item': 'rankine:chlorine_gas_block', 'chance': 0.1 }, 'output5': { 'item': 'rankine:hydrogen_fluoride_gas_block', 'chance': 0.05 }, 'output6': { 'item': 'rankine:hydrogen_chloride_gas_block', 'chance': 0.05 }, 'output8': { 'item': 'rankine:xenon_gas_block', 'chance': 0.008 }, 'output9': { 'item': 'rankine:radon_gas_block', 'chance': 0.004 }, 'output10': { 'item': 'rankine:oganesson_gas_block', 'chance': 0.001 } });"],
+        "description": "Add Rankine Air_distillation Recipe"
+    },
+    "Rankine Alloying": {
+        "prefix": "m-rankine-alloying",
+        "body": ["event.remove({output: [], type: 'rankine:alloying'});", "event.custom({ 'type': 'rankine:alloying', 'total': 5, 'color': 3684408, 'input1': { 'element': 'rankine:elements/gold', 'min': 0.75, 'max': 0.80, 'required': true }, 'input2': { 'element': 'rankine:elements/cobalt', 'min': 0.15, 'max': 0.20, 'required': true }, 'input3': { 'element': 'rankine:elements/chromium', 'min': 0.0, 'max': 0.10 }, 'input4': { 'element': 'rankine:elements/rubidium', 'min': 0.0, 'max': 0.1 }, 'input5': { 'element': 'rankine:elements/germanium', 'min': 0.0, 'max': 0.1 }, 'result': 'rankine:black_gold_ingot', 'durability': 50, 'enchantments': ['minecraft:bane_of_arthropods','rankine:excavate','rankine:foraging','rankine:quake','rankine:quake','minecraft:loyalty','minecraft:bane_of_arthropods','rankine:retreat','rankine:prying','minecraft:blast_protection'], 'enchantmentTypes': ['AXE','HAMMER','HOE','PICKAXE','SHOVEL','SPEAR','SWORD','KNIFE','CROWBAR','ARMOR'] });"],
+        "description": "Add Rankine Alloying Recipe"
+    },
+    "Rankine Beehive_oven": {
+        "prefix": "m-rankine-beehive_oven",
+        "body": ["event.remove({output: [], type: 'rankine:beehive_oven'});", "event.custom({ 'type': 'rankine:beehive_oven', 'input': { 'item': 'rankine:bismuthinite_block' }, 'result': 'rankine:bismuth_block', 'minCookTime': 2400, 'maxCookTime': 4800 });"],
+        "description": "Add Rankine Beehive_oven Recipe"
+    },
+    "Rankine Crucible": {
+        "prefix": "m-rankine-crucible",
+        "body": ["event.remove({output: [], type: 'rankine:crucible'});", "event.custom({ 'type': 'rankine:crucible', 'result': { 'item': 'minecraft:cyan_stained_glass' }, 'secondary': { 'item': 'rankine:slag' }, 'cookTime': 2400, 'required': [true,true,false,false], 'total': 8, 'input1': { 'tag': 'rankine:glass_inputs', 'countMod': 1, 'group': 0 }, 'input2': { 'tag': 'forge:dyes/cyan', 'countMod': 1, 'group': 1 }, 'input3': { 'tag': 'forge:feldspar' }, 'input4': { 'item': 'rankine:alumina', 'countMod': 1 }, 'input5': { 'item': 'rankine:magnesia', 'countMod': 1 }, 'input6': { 'item': 'rankine:quicklime', 'countMod': 1, 'cookMod': -600 }, 'input7': { 'item': 'rankine:petalite', 'countMod': 3 }, 'input8': { 'item': 'rankine:sodium_carbonate', 'countMod': 2, 'cookMod': -600 } });"],
+        "description": "Add Rankine Crucible Recipe"
+    },
+    "Rankine Crushing": {
+        "prefix": "m-rankine-crushing",
+        "body": ["event.remove({output: [], type: 'rankine:crushing'});", "event.custom({ 'type': 'rankine:crushing', 'input': { 'item': 'rankine:anorthosite' }, 'guaranteed': [ { 'item': 'minecraft:cobblestone' } ], 'outputs': [ { 'weight': 80, 'remove': false }, { 'item': 'rankine:plagioclase_feldspar', 'weight': 40, 'remove': false }, { 'item': 'rankine:labradorite', 'weight': 20, 'remove': false }, { 'item': 'rankine:olivine', 'weight': 15, 'remove': false }, { 'item': 'rankine:pyroxene', 'weight': 10, 'remove': false }, { 'item': 'rankine:ilmenite', 'weight': 2, 'tier': 'minecraft:diamond' }, { 'item': 'rankine:magnetite', 'weight': 2, 'tier': 'minecraft:diamond' } ] });"],
+        "description": "Add Rankine Crushing Recipe"
+    },
+    "Rankine Element": {
+        "prefix": "m-rankine-element",
+        "body": ["event.remove({output: [], type: 'rankine:element'});", "event.custom({ 'type': 'rankine:element', 'name': 'antimony', 'symbol': 'Sb', 'color': 16777215, 'atomic': 51, 'potential': 0.2, 'items': ['T#forge:nuggets/antimony','T#forge:antimony','T#forge:storage_blocks/antimony'], 'values': [1,9,81], 'durability': { 'breaks': [100], 'formulas': ['POWER'], 'a': [0.8], 'b': [0], 'modifiers': ['NONE'], 'limit': [0] }, 'attackspeed': { 'breaks': [100], 'formulas': ['LINEAR'], 'a': [0.1], 'b': [0], 'modifiers': ['MIN'], 'limit': [1] }, 'enchantability': { 'breaks': [100], 'formulas': ['LINEAR'], 'a': [0.25], 'b': [0], 'modifiers': ['NONE'], 'limit': [0] } });"],
+        "description": "Add Rankine Element Recipe"
+    },
+    "Rankine Evaporation": {
+        "prefix": "m-rankine-evaporation",
+        "body": ["event.remove({output: [], type: 'rankine:evaporation'});", "event.custom({ 'type': 'rankine:evaporation', 'processTime': 12000, 'biomes': { 'biomeTags': ['minecraft:is_taiga','minecraft:is_forest','forge:is_plains','minecraft:is_jungle','minecraft:is_hill','minecraft:is_mountain','forge:is_mushroom','forge:is_savanna'] }, 'input': { 'fluid': 'minecraft:water' }, 'outputs': [ { 'item': 'minecraft:coarse_dirt', 'weight': 40 }, { 'item': 'rankine:silt', 'weight': 40 }, { 'item': 'rankine:calcite', 'weight': 10 }, { 'item': 'rankine:pink_salt', 'weight': 5 }, { 'item': 'rankine:lead_nugget', 'weight': 1 }, { 'item': 'minecraft:iron_nugget', 'weight': 1 }, { 'item': 'rankine:bismuth_nugget', 'weight': 1 }, { 'item': 'rankine:zinc_nugget', 'weight': 1 } ] });"],
+        "description": "Add Rankine Evaporation Recipe"
+    },
+    "Rankine Extrusive_igneous": {
+        "prefix": "m-rankine-extrusive_igneous",
+        "body": ["event.remove({output: [], type: 'rankine:rock_generator'});", "event.custom({ 'type': 'rankine:rock_generator', 'genType': 'extrusive_igneous', 'input1': { 'item': 'rankine:sanidine_block' }, 'result': { 'block': 'rankine:comendite' } });"],
+        "description": "Add Rankine Extrusive_igneous Recipe"
+    },
+    "Rankine Foraging": {
+        "prefix": "m-rankine-foraging",
+        "body": ["event.remove({output: [], type: 'rankine:foraging'});", "event.custom({ 'type': 'rankine:foraging', 'biomes': { 'biomeTag': 'minecraft:is_hill' }, 'input': { 'tag': 'forge:grass_blocks' }, 'outputs': [ { 'weight': 20 }, { 'item': 'rankine:grass_seeds', 'weight': 1 }, { 'item': 'rankine:plant_fiber', 'weight': 2 }, { 'item': 'rankine:strawberries', 'weight': 1 }, { 'item': 'rankine:snowberries', 'weight': 1 }, { 'item': 'rankine:saltpeter', 'weight': 1, 'enchantmentRequired': true } ] });"],
+        "description": "Add Rankine Foraging Recipe"
+    },
+    "Rankine Fusion_furnace": {
+        "prefix": "m-rankine-fusion_furnace",
+        "body": ["event.remove({output: [], type: 'rankine:fusion_furnace'});", "event.custom({ 'type': 'rankine:fusion_furnace', 'cookTime': 3200, 'input1': { 'item': 'minecraft:ancient_debris' }, 'input2': { 'item': 'minecraft:gold_block' }, 'fluidInput': { 'fluid': 'rankine:aqua_regia' }, 'result1': { 'item': 'minecraft:netherite_ingot' }, 'result2': { 'item': 'rankine:slag' } });"],
+        "description": "Add Rankine Fusion_furnace Recipe"
+    },
+    "Rankine Induction_alloying": {
+        "prefix": "m-rankine-induction_alloying",
+        "body": ["event.remove({output: [], type: 'rankine:alloying'});", "event.custom({ 'type': 'rankine:alloying', 'total': 12, 'tier': 2, 'color': 13750746, 'input1': { 'element': 'rankine:elements/niobium', 'min': 0.55, 'max': 0.95, 'required': true }, 'input2': { 'element': 'rankine:elements/tantalum', 'min': 0.00, 'max': 0.45 }, 'input3': { 'element': 'rankine:elements/hafnium', 'min': 0.20, 'max': 0.30 }, 'input4': { 'element': 'rankine:elements/iron', 'min': 0.20, 'max': 0.30 }, 'input5': { 'element': 'rankine:elements/tin', 'min': 0.16, 'max': 0.24 }, 'input6': { 'element': 'rankine:elements/aluminum', 'min': 0.0, 'max': 0.1 }, 'input7': { 'element': 'rankine:elements/zirconium', 'min': 0.0, 'max': 0.1 }, 'input8': { 'element': 'rankine:elements/titanium', 'min': 0.0, 'max': 0.1 }, 'input9': { 'element': 'rankine:elements/tungsten', 'min': 0.0, 'max': 0.1 }, 'input10': { 'element': 'rankine:elements/yttrium', 'min': 0.0, 'max': 0.1 }, 'input11': { 'element': 'rankine:elements/uranium', 'min': 0.0, 'max': 0.1 }, 'input12': { 'element': 'rankine:elements/oxygen', 'min': 0.0, 'max': 0.05 }, 'result': 'rankine:niobium_alloy_ingot', 'durability': 600, 'miningspeed': 3, 'toughness': 0.1, 'enchantments': ['rankine:daze'], 'enchantmentTypes': ['HAMMER'] });"],
+        "description": "Add Rankine Induction_alloying Recipe"
+    },
+    "Rankine Intrusive_igneous": {
+        "prefix": "m-rankine-intrusive_igneous",
+        "body": ["event.remove({output: [], type: 'rankine:rock_generator'});", "event.custom({ 'type': 'rankine:rock_generator', 'genType': 'intrusive_igneous', 'input1': { 'item': 'rankine:olivine_block' }, 'input2': { 'item': 'rankine:garnet_block' }, 'result': { 'block': 'rankine:dunite' } });"],
+        "description": "Add Rankine Intrusive_igneous Recipe"
+    },
+    "Rankine Metamorphic": {
+        "prefix": "m-rankine-metamorphic",
+        "body": ["event.remove({output: [], type: 'rankine:rock_generator'});", "event.custom({ 'type': 'rankine:rock_generator', 'genType': 'metamorphic', 'input1': { 'item': 'rankine:blueschist' }, 'result': { 'block': 'rankine:eclogite' } });"],
+        "description": "Add Rankine Metamorphic Recipe"
+    },
+    "Rankine Mixing": {
+        "prefix": "m-rankine-mixing",
+        "body": ["event.remove({output: [], type: 'rankine:mixing'});", "event.custom({ 'type': 'rankine:mixing', 'mixTime': 100, 'ingredientTotal': 4, 'matScale': 2, 'fluidInput': { 'fluid': 'minecraft:water', 'amount': 50 }, 'input1': { 'tag': 'forge:gravel', 'required': true, 'min': 0.40, 'max': 0.60 }, 'input2': { 'tag': 'forge:sand', 'required': true, 'min': 0.20, 'max': 0.30 }, 'input3': { 'item': 'rankine:bitumen', 'required': true, 'min': 0.10, 'max': 0.20 }, 'input4': { 'item': 'rankine:black_dacite', 'required': true, 'min': 0.10, 'max': 0.20 }, 'result': { 'item': 'rankine:blue_asphalt' } });"],
+        "description": "Add Rankine Mixing Recipe"
+    },
+    "Rankine Sedimentary": {
+        "prefix": "m-rankine-sedimentary",
+        "body": ["event.remove({output: [], type: 'rankine:rock_generator'});", "event.custom({ 'type': 'rankine:rock_generator', 'genType': 'sedimentary', 'input1': { 'item': 'rankine:pearl' }, 'result': { 'block': 'rankine:chalk' } });"],
+        "description": "Add Rankine Sedimentary Recipe"
+    },
+    "Rankine Sluicing": {
+        "prefix": "m-rankine-sluicing",
+        "body": ["event.remove({output: [], type: 'rankine:sluicing'});", "event.custom({ 'type': 'rankine:sluicing', 'input': { 'item': 'rankine:clay_loam_podzol' }, 'tool': { 'tag': 'rankine:gold_pans' }, 'outputs': [ { 'item': 'minecraft:dirt', 'weight': 40 }, { 'item': 'minecraft:sand', 'weight': 3.25 }, { 'item': 'minecraft:clay_ball', 'weight': 3.5 }, { 'item': 'rankine:silt', 'weight': 3.25 } ] });"],
+        "description": "Add Rankine Sluicing Recipe"
+    },
+    "Rankine Stripping": {
+        "prefix": "m-rankine-stripping",
+        "body": ["event.remove({output: [], type: 'rankine:stripping'});", "event.custom({ 'type': 'rankine:stripping', 'chance': 0.3, 'input': { 'item': 'minecraft:birch_log' }, 'result': { 'item': 'minecraft:paper', 'count': 1 } });"],
+        "description": "Add Rankine Stripping Recipe"
+    },
+    "Rankine Treetapping": {
+        "prefix": "m-rankine-treetapping",
+        "body": ["event.remove({output: [], type: 'rankine:treetapping'});", "event.custom({ 'type': 'rankine:treetapping', 'tapTime': 80, 'input': { 'item': 'rankine:balsam_fir_log' }, 'result': { 'fluid': 'rankine:resin', 'amount': 10 } });"],
+        "description": "Add Rankine Treetapping Recipe"
+    },
+    "Rankine Volcanic": {
+        "prefix": "m-rankine-volcanic",
+        "body": ["event.remove({output: [], type: 'rankine:rock_generator'});", "event.custom({ 'type': 'rankine:rock_generator', 'genType': 'volcanic', 'input1': { 'item': 'rankine:magnetite_block' }, 'result': { 'block': 'rankine:blood_obsidian' } });"],
+        "description": "Add Rankine Volcanic Recipe"
+    },
+    "Tconstruct Alloy": {
+        "prefix": "m-tconstruct-alloy",
+        "body": ["event.remove({output: [], type: 'tconstruct:alloy'});", "event.custom({ 'type': 'tconstruct:alloy', 'conditions': [ { 'value': { 'tag': 'forge:ingots/electrum', 'type': 'forge:tag_empty' }, 'type': 'forge:not' }, { 'value': { 'tag': 'forge:ingots/silver', 'type': 'forge:tag_empty' }, 'type': 'forge:not' } ], 'inputs': [ { 'tag': 'forge:molten_gold', 'amount': 90 }, { 'tag': 'forge:molten_silver', 'amount': 90 } ], 'result': { 'fluid': 'tconstruct:molten_electrum', 'amount': 180 }, 'temperature': 760 });"],
+        "description": "Add Tconstruct Alloy Recipe"
+    },
+    "Tconstruct Casting_basin": {
+        "prefix": "m-tconstruct-casting_basin",
+        "body": ["event.remove({output: [], type: 'tconstruct:casting_basin'});", "event.custom({ 'type': 'tconstruct:casting_basin', 'fluid': { 'tag': 'tconstruct:molten_emerald', 'amount': 900 }, 'result': 'minecraft:emerald_block', 'cooling_time': 203 });"],
+        "description": "Add Tconstruct Casting_basin Recipe"
+    },
+    "Tconstruct Casting_table": {
+        "prefix": "m-tconstruct-casting_table",
+        "body": ["event.remove({output: [], type: 'tconstruct:casting_table'});", "event.custom({ 'type': 'tconstruct:casting_table', 'cast': { 'item': 'minecraft:saddle' }, 'cast_consumed': true, 'fluid': { 'tag': 'tconstruct:blood', 'amount': 1000 }, 'result': 'tconstruct:piggy_backpack', 'cooling_time': 100 });"],
+        "description": "Add Tconstruct Casting_table Recipe"
+    },
+    "Tconstruct Entity_melting": {
+        "prefix": "m-tconstruct-entity_melting",
+        "body": ["event.remove({output: [], type: 'tconstruct:entity_melting'});", "event.custom({ 'type': 'tconstruct:entity_melting', 'entity': { 'type': 'minecraft:creeper' }, 'result': { 'fluid': 'tconstruct:molten_glass', 'amount': 50 }, 'damage': 2 });"],
+        "description": "Add Tconstruct Entity_melting Recipe"
+    },
+    "Tconstruct Melting": {
+        "prefix": "m-tconstruct-melting",
+        "body": ["event.remove({output: [], type: 'tconstruct:melting'});", "event.custom({ 'type': 'tconstruct:melting', 'conditions': [ { 'value': { 'tag': 'forge:geore_blocks/diamond', 'type': 'forge:tag_empty' }, 'type': 'forge:not' } ], 'ingredient': { 'tag': 'forge:geore_blocks/diamond' }, 'result': { 'fluid': 'tconstruct:molten_diamond', 'amount': 400 }, 'temperature': 1450, 'time': 158 });"],
+        "description": "Add Tconstruct Melting Recipe"
+    },
+    "Tconstruct Modifiers": {
+        "prefix": "m-tconstruct-modifiers",
+        "body": ["event.remove({output: [], type: 'tconstruct:modifier'});", "event.custom({ 'type': 'tconstruct:modifier', 'inputs': [ { 'item': 'minecraft:leather' }, { 'tag': 'forge:gems/diamond' }, { 'item': 'minecraft:leather' }, { 'tag': 'forge:string' }, { 'tag': 'forge:string' } ], 'tools': { 'tag': 'tconstruct:modifiable/unarmed' }, 'slots': { 'abilities': 1 }, 'allow_crystal': true, 'result': { 'name': 'tconstruct:ambidextrous', 'level': 1 }, 'max_level': 1 });"],
+        "description": "Add Tconstruct Modifiers Recipe"
+    },
+    "Tconstruct Part_builder": {
+        "prefix": "m-tconstruct-part_builder",
+        "body": ["event.remove({output: [], type: 'tconstruct:part_builder'});", "event.custom({ 'type': 'tconstruct:part_builder', 'pattern': 'tconstruct:hammer_head', 'pattern_item': [ { 'tag': 'tconstruct:patterns/default' }, { 'item': 'tconstruct:hammer_head_cast' } ], 'cost': 8, 'result': { 'item': 'tconstruct:hammer_head' } });"],
+        "description": "Add Tconstruct Part_builder Recipe"
+    },
+    "Tconstruct Severing": {
+        "prefix": "m-tconstruct-severing",
+        "body": ["event.remove({output: [], type: 'tconstruct:severing'});", "event.custom({ 'type': 'tconstruct:severing', 'entity': { 'type': 'minecraft:blaze' }, 'result': 'tconstruct:blaze_head' });"],
+        "description": "Add Tconstruct Severing Recipe"
+    },
+    "Vintageimprovements Centrifugation": {
+        "prefix": "m-vintageimprovements-centrifugation",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:centrifugation'});", "event.custom({ 'type':'vintageimprovements:centrifugation', 'ingredients': [ { 'tag': 'forge:dyes/light_blue' }, { 'tag': 'forge:dyes/light_blue' } ], 'results': [ { 'item': 'minecraft:white_dye', 'count': 1 }, { 'item': 'minecraft:blue_dye', 'count': 1 } ], 'processingTime': 1000 });"],
+        "description": "Add Vintageimprovements Centrifugation Recipe"
+    },
+    "Vintageimprovements Coiling": {
+        "prefix": "m-vintageimprovements-coiling",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:coiling'});", "event.custom({ 'type':'vintageimprovements:coiling', 'ingredients': [ { 'tag': 'forge:wires/brass' } ], 'results': [ { 'item': 'vintageimprovements:small_brass_spring', 'count': 1 } ], 'processingTime': 60 });"],
+        "description": "Add Vintageimprovements Coiling Recipe"
+    },
+    "Vintageimprovements Curving": {
+        "prefix": "m-vintageimprovements-curving",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:curving'});", "event.custom({ 'type': 'vintageimprovements:curving', 'ingredients': [ { 'tag': 'forge:plates/iron' } ], 'results': [ { 'item': 'minecraft:bucket' } ] });"],
+        "description": "Add Vintageimprovements Curving Recipe"
+    },
+    "Vintageimprovements Polishing": {
+        "prefix": "m-vintageimprovements-polishing",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:polishing'});", "event.custom({ 'type':'vintageimprovements:polishing', 'speed_limits': 1, 'ingredients': [ { 'item': 'create:rose_quartz' } ], 'results': [ { 'item': 'create:polished_rose_quartz', 'count': 1 } ], 'processingTime': 20 });"],
+        "description": "Add Vintageimprovements Polishing Recipe"
+    },
+    "Vintageimprovements Pressurizing": {
+        "prefix": "m-vintageimprovements-pressurizing",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:pressurizing'});", "event.custom({ 'type':'vintageimprovements:pressurizing', 'secondaryFluidResults': 0, 'heatRequirement': 'heated', 'ingredients': [ { 'tag': 'forge:gems/sulfur' } ], 'results': [ { 'fluid': 'vintageimprovements:sulfur_dioxide', 'amount': 1000 } ], 'processingTime': 600 });"],
+        "description": "Add Vintageimprovements Pressurizing Recipe"
+    },
+    "Vintageimprovements Vacuumizing": {
+        "prefix": "m-vintageimprovements-vacuumizing",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:vacuumizing'});", "event.custom({ 'type':'vintageimprovements:vacuumizing', 'ingredients': [ { 'item': 'minecraft:bucket' }, { 'item': 'minecraft:snow_block' } ], 'results': [ { 'item': 'minecraft:powder_snow_bucket', 'count': 1 } ], 'processingTime': 600 });"],
+        "description": "Add Vintageimprovements Vacuumizing Recipe"
+    },
+    "Vintageimprovements Vibrating": {
+        "prefix": "m-vintageimprovements-vibrating",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:vibrating'});", "event.custom({ 'type':'vintageimprovements:vibrating', 'ingredients': [ { 'item': 'minecraft:snow_block' } ], 'results': [ { 'item': 'minecraft:snowball', 'count': 4 } ], 'processingTime': 300 });"],
+        "description": "Add Vintageimprovements Vibrating Recipe"
+    },
+}

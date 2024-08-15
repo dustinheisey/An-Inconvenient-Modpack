@@ -1,0 +1,27 @@
+- Testing Checklist:
+    - client_scripts checklist:
+        - All things that should be hidden in JEI are hidden
+        - All things that should have been added in JEI are showing
+        - All recipe categories that should be hidden in JEI are hidden
+        - Splash screen looks like it is supposed to
+        - Item unification is working, unified items are showing and unified recipes are cleaned up
+    - chapters checklist:
+        - Chapter 1 jei is correct
+        - Chapter 2 jei is correct
+        - Chapter 3 jei is correct
+        - Chapter 4 jei is correct
+        - Chapter 5 jei is correct
+        - Chapter 5.1 jei is correct
+        - Chapter 5.2 jei is correct
+        - Chapter 6 jei is correct
+        - Chapter 7 jei is correct
+        - Chapter 7.1 jei is correct
+        - Chapter 7.2 jei is correct
+        - All collection tags are staged correctly
+        - All tags chapters are staged correctly
+    - tags checklist:
+        - All mining level tags are correct
+        - All block tags changes are being made
+        - All collection tag additions are showing
+        - All item tag removals & additions and replacements are working
+        - All structure tags are working

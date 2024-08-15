@@ -1,0 +1,22 @@
+{
+  "name": "The Bunker",
+  "icon": "endrem:cold_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 0,
+  "secret": true,
+  "advancement": "im:chapter_1/eye_cold",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I am sitting in an office chair, looking at my desktop. It has multiple files open, showing schematic plans for an underground bunker. I look down at my phone and see two notifications.$(br2)The first is from a press release my PR consultant held about the unveiling of our state-of-the-art cryogenic stasis chamber. It mentions the plans our company has to "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "install thousands of these chambers in bunkers across the world and that these bunkers will open, for those who can afford to enter, next month.$(br2)The second notification is a text from my chauffeur, telling me my car is ready. I walk out of my office and take the elevator, descending 80 floors to the entrance of our office building. My chauffeur greets me and I enter the car.$(br2)I am taken to one of the "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "bunkers mentioned in the press release, the same one that I woke up in. I am led to the entrance of the bunker. I am the first inhabitant; the others will arrive soon. I walk down the stairs and into the corridor, and lie in an open cryo-chamber. A technician closes the chamber lid around me, and I start to drift off to sleep."
+    }
+  ]
+}

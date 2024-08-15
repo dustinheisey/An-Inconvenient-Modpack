@@ -1,0 +1,18 @@
+
+["Limits settings"]
+	#Y level for Void/Lava junction
+	#Range: 0 ~ 256
+	limitVoidToLava = 0
+	#Y level for Lava/Cave junction
+	#Constraint : limitLavaToCave > limitVoidToLava
+	#Range: 0 ~ 256
+	limitLavaToCave = 13
+	#Y level for Cave/Surface junction
+	#Constraint : limitCaveToSurface > limitLavaToCave
+	#Range: 0 ~ 256
+	limitCaveToSurface = 51
+	#Y level for Surface/Sky junction
+	#Constraint : limitSurfaceToSky > limitCaveToSurface
+	#Range: 0 ~ 256
+	limitSurfaceToSky = 129
+

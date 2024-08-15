@@ -1,0 +1,11 @@
+{
+  "name": "Natural Medicine",
+  "icon": "croptopia:cucumber",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Reintroduce 1000 medicinal plants, lichen and moss to the forest"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Trash",
+  "icon": "ecofriendly:tossed_can_ym",
+  "category": "patchouli:entries",
+  "sortnum": 2,
+  "secret": true,
+  "advancement": "im:chapter_1/trash",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I found some empty cans. I wonder where these came from. I looked closely at one of them, and if processed correctly I think I can use the iron from them. I've collected a few and I should gather as many as I can find."
+    }
+  ]
+}

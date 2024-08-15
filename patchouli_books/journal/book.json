@@ -1,0 +1,8 @@
+{
+  "name": "Journal",
+  "version": 1,
+  "book_texture": "patchouli:textures/gui/book_brown.png",
+  "model": "im:journal",
+  "landing_text": "I found this journal in an underground bunker. I'll document what I learn as I explore and remember. Maybe it will help me figure out what happened.",
+  "show_progress": false
+}

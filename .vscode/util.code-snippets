@@ -1,0 +1,66 @@
+{
+    "Full Happy Path Recipe": {
+		"prefix": "/f",
+		"body": [
+			"{id: '', recipe: () => {}, children: []},"
+		],
+		"description": "Full Happy Path Recipe"
+	},
+	"Happy Path Recipe": {
+		"prefix": "/r",
+		"body": [
+			"{id: '', recipe: () => {}},"
+		],
+		"description": "Happy Path Recipe"
+	},
+	"Happy Path Children": {
+		"prefix": "/c",
+		"body": [
+			"{id: '', children: []},"
+		],
+		"description": "Happy Path Children"
+	},
+	"Happy Path ID": {
+		"prefix": "/i",
+		"body": [
+			"{id: ''},"
+		],
+		"description": "Happy Path ID"
+	},
+	"Recipe": {
+		"prefix": "recipe",
+		"body": [
+			"{id: '', recipe: () => {}, children: []},"
+		],
+		"description": "Recipe"
+	},
+    "Milestone": {
+		"prefix": "milestone",
+		"body": [
+			"onEvent('recipes', event => {setMilestoneRecipes({});});"
+		],
+		"description": "Milestone Recipe Function"
+	},
+	"Supplementary": {
+		"prefix": "supplementary",
+		"body": [
+			"onEvent('recipes', event => {setSideRecipes({});});"
+		],
+		"description": "Supplementary Recipe Function"
+	},
+	"Balance": {
+		"prefix": "balance",
+		"body": [
+			"onEvent('recipes', event => {setBalanceRecipes({});});"
+		],
+		"description": "Balance Recipe Function"
+	},
+	 "Remove IDs": {
+		"prefix": "/ids",
+		"body": [
+			"[].forEach(id => event.remove({id: id}));"
+		],
+		"description": "Remove IDs"
+	},
+}
+

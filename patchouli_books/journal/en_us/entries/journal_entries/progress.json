@@ -1,0 +1,26 @@
+{
+  "name": "Progress",
+  "icon": "croptopia:cheeseburger",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 19,
+  "advancement": "im:chapter_5_1/progress",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I have seen that the \"sustainable\" path forward causes the climate chaos I was trying to avoid. It seems impossible to do something ethical. Every choice I make has some unintended negative consequences. I feel hopeless that the world can even be saved with humanity still here. We are poisonous, a parasite that consumes every part of its host until it is too weak to support the parasite,"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "killing it along with all of the remaining life. $(br2)The urge to grow, to continue to improve my efficiency and to explore new technology followed me here even when I made such an effort to lead a simple life. Is it human nature to seek more, to never be satisfied with life in the present? Is greed a part of the human condition, and if so, is it a natural consequence that the world has to rid itself of our species eventually?"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "With this new hopelessness, my mind becomes less burdened with guilt. If the calamities caused by the wealthy a thousand years ago, and the similar problems that are starting to arise now are destiny, what is the point in trying to save the world, to try to be better? $(br2)I have hit a wall with my industrial agricultural practices that can't be overcome without investing in more advanced technology, and with the weight of being"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "personally responsible for the end of the world off of my shoulders, I should push forward."
+    }
+  ]
+}

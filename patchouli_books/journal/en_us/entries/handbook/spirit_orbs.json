@@ -1,0 +1,13 @@
+{
+  "name": "Spirit Orbs",
+  "icon": "paraglider:spirit_orb",
+  "category": "patchouli:handbook",
+  "advancement": "im:chapter_1/goddess_statue",
+  "secret": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A spirit orb is granted when I complete various achievements related to my progress in understanding the world and who I am. Four of them can be sacrificed at a goddess statue in return for a boost to my max health or stamina."
+    }
+  ]
+}

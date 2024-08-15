@@ -1,0 +1,11 @@
+{
+  "name": "Sustainable Farming",
+  "icon": "immersiveengineering:cloche",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Develop sustainable farming practices"
+    }
+  ]
+}

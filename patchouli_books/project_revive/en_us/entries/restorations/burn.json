@@ -1,0 +1,11 @@
+{
+  "name": "Controlled Burn",
+  "icon": "minecraft:flint_and_steel",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Set off a controlled burn to reduce wildfire risk"
+    }
+  ]
+}

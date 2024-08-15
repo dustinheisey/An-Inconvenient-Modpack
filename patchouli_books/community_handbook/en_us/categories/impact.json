@@ -1,0 +1,7 @@
+{
+  "name": "Impacts",
+  "description": "Documenting the tangible improvements in the quality of life of everyone in our community",
+  "icon": "minecraft:oak_sapling",
+  "sortnum": 2,
+  "secret": true
+}

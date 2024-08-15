@@ -1,0 +1,18 @@
+{
+  "name": "Gateways",
+  "icon": "gateways:gate_pearl",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 6,
+  "advancement": "im:chapter_2/gateways",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Through my exploration into occult magic I have designed a way to bring life back home from Everbright. This is done through the creation of a gateway connecting both dimensions. These gateways bring with them scores of enemies that need to be dealt with, but after all of them are defeated the energy here lightens, just a bit.$(br2)I opened the gateway and dealt"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "with the monsters a few days ago. When I wander around outside I notice new life around me, creatures like dolphins and turtles and fish. This is so incredible, I can't believe it!$(br2)Maybe there are other places I should explore. Maybe there are more stories that will help me understand what happened here, and maybe I can bring the life I find back here."
+    }
+  ]
+}

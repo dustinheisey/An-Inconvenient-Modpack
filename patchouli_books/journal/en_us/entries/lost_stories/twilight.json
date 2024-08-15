@@ -1,0 +1,22 @@
+{
+  "name": "The Rise of A Dictator",
+  "icon": "twilightforest:twilight_portal_miniature_structure",
+  "category": "patchouli:lost_stories",
+  "sortnum": 3,
+  "secret": true,
+  "advancement": "im:chapter_3/twilight_lost_story",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "We were lucky. While the world around us fell apart, our land maintained relative calm. It stayed cool in the summer, there was enough water to drink and grow crops, and people had enough to eat.$(br2)We were not prepared for the influx of migrants, however. People came from across the globe to escape climate chaos. We only had enough resources for ourselves."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "We tried to be gracious with the first few hundred migrants, but their numbers quickly reached 100,000 and continued to grow. Our home also started to resemble the places they came from, as climate chaos caught up with us.$(br2)The locals grew to hate the migrants, who were only trying to keep themselves and their families alive. This hatred found a voice in a charismatic leader who blamed all of our problems on the migrants. They promised a great future by"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "telling us stories of a fictional past.$(br2)This ended in tragedy, as those opposing this leader failed to extinguish the mounting rage of the citizens. The migrants were removed, one way or another, from this land. Those of us who survived will always remember what happened here."
+    }
+  ]
+}

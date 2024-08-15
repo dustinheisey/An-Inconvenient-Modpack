@@ -1,0 +1,22 @@
+{
+  "name": "Witherstorm",
+  "icon": "endrem:wither_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 8,
+  "secret": true,
+  "advancement": "im:chapter_4/eye_wither",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I'm sitting on a large sectional couch, focused on my flat-screen TV. I'm watching the news of a Category 6 hurricane that has been sweeping through the country for weeks now. It's bringing with it massive floods that have forced millions to evacuate and lose their homes.$(br2)Part of me wonders why people are so distraught by this. Can't they just buy"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "a new house where the floods haven't reached? As I keep watching, however, I learn that this flooding is happening around the world and in one case has covered an entire country.$(br2)The monsoon season is almost over, but it seems like it comes sooner and lasts longer each year. The flooding is also just one of many disasters happening ever more frequently.$(br2)It hasn't affected me yet, but "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "it probably will soon. I wonder how best I can protect myself, and an idea comes to me: build a bunker. Oh, and I can patent it and license it to builders across the world. I'll make billions! I should call my architects to design some plans. I've been meaning to spend some money, and this could be a fun project."
+    }
+  ]
+}

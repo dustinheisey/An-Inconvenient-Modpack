@@ -1,0 +1,44 @@
+{
+  "Restriction Data": {
+    "stage": "chapter_5_1",
+    "tagList": ["im:chapter_5_1"],
+    "itemList": [
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "productivebees:guide"
+        }
+      },
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "industrialforegoing:industrial_foregoing"
+        }
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:small_bumblezone_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:medium_bumblezone_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:large_bumblezone_gateway"}
+      }
+    ]
+  },
+  "Settings": {
+    "advancedTooltips": "ADVANCED",
+    "itemTitle": "Unknown Item",
+    "pickupDelay": 15,
+    "hideInJEI": true,
+    "canPickup": false,
+    "containerListWhitelist": false,
+    "checkPlayerInventory": false,
+    "checkPlayerEquipment": true,
+    "usableItems": false,
+    "usableBlocks": false
+  }
+}

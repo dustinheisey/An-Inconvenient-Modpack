@@ -1,0 +1,56 @@
+{
+  "name": "Wetlands Fauna",
+  "icon": "minecraft:lily_pad",
+  "category": "patchouli:bestiary",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": ""
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:peach_isopod_ym",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:vulgare_isopod_ym",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:pek_chong_isopod_ym",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:clown_isopod_ym",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:zebra_isopod_ym",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "crittersandcompanions:dragonfly",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cnb:minipad",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "cnb:lilytad",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "minecraft:mooshroom",
+      "scale": 0.75
+    }
+  ]
+}

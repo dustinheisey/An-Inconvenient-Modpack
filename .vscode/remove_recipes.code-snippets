@@ -1,0 +1,1390 @@
+// find: ((?<!")([a-z])([a-z_]+):([a-z])([a-z_]+)(?!"))\n
+// replace: "\u$2$3 \u$4$5": {\n\t"prefix": "r-$2$3-$4$5",\n\t"body": ["event.remove({output: [], type: '$2$3:$4$5'});"],\n\t"description": "Remove \u$2$3 \u$4$5 Recipe"\n},\n
+
+{
+    "Shaped": {
+        "prefix": "r-shaped",
+        "body": ["event.remove({output: [], type: 'minecraft:crafting_shaped'});"],
+        "description": "Remove Shaped Recipe"
+    },
+    "Shapeless": {
+        "prefix": "r-shapeless",
+        "body": ["event.remove({output: [], type: 'minecraft:crafting_shapeless'});"],
+        "description": "Remove Shapeless Recipe"
+    },
+    "Minecraft Anvil": {
+        "prefix": "r-minecraft-anvil",
+        "body": ["event.remove({output: [], type: 'minecraft:anvil'});"],
+        "description": "Remove Minecraft Anvil Recipe"
+    },
+    "Minecraft Blasting": {
+        "prefix": "r-minecraft-blasting",
+        "body": ["event.remove({output: [], type: 'minecraft:blasting'});"],
+        "description": "Remove Minecraft Blasting Recipe"
+    },
+    "Minecraft Brewing": {
+        "prefix": "r-minecraft-brewing",
+        "body": ["event.remove({output: [], type: 'minecraft:brewing'});"],
+        "description": "Remove Minecraft Brewing Recipe"
+    },
+    "Minecraft Campfire": {
+        "prefix": "r-minecraft-campfire",
+        "body": ["event.remove({output: [], type: 'minecraft:campfire'});"],
+        "description": "Remove Minecraft Campfire Recipe"
+    },
+    "Minecraft Compostable": {
+        "prefix": "r-minecraft-compostable",
+        "body": ["event.remove({output: [], type: 'minecraft:compostable'});"],
+        "description": "Remove Minecraft Compostable Recipe"
+    },
+    "Minecraft Fuel": {
+        "prefix": "r-minecraft-fuel",
+        "body": ["event.remove({output: [], type: 'minecraft:fuel'});"],
+        "description": "Remove Minecraft Fuel Recipe"
+    },
+    "Minecraft Furnace": {
+        "prefix": "r-minecraft-furnace",
+        "body": ["event.remove({output: [], type: 'minecraft:furnace'});"],
+        "description": "Remove Minecraft Furnace Recipe"
+    },
+    "Minecraft Smithing": {
+        "prefix": "r-minecraft-smithing",
+        "body": ["event.remove({output: [], type: 'minecraft:smithing'});"],
+        "description": "Remove Minecraft Smithing Recipe"
+    },
+    "Minecraft Smoking": {
+        "prefix": "r-minecraft-smoking",
+        "body": ["event.remove({output: [], type: 'minecraft:smoking'});"],
+        "description": "Remove Minecraft Smoking Recipe"
+    },
+    "Minecraft Stonecutting": {
+        "prefix": "r-minecraft-stonecutting",
+        "body": ["event.remove({output: [], type: 'minecraft:stonecutting'});"],
+        "description": "Remove Minecraft Stonecutting Recipe"
+    },
+    "Architects_palette Warping": {
+        "prefix": "r-architects_palette-warping",
+        "body": ["event.remove({output: [], type: 'architects_palette:warping'});"],
+        "description": "Remove Architects_palette Warping Recipe"
+    },
+    "Biomancy Bio_brewing": {
+        "prefix": "r-biomancy-bio_brewing",
+        "body": ["event.remove({output: [], type: 'biomancy:bio_brewing'});"],
+        "description": "Remove Biomancy Bio_brewing Recipe"
+    },
+    "Biomancy Bio_forging": {
+        "prefix": "r-biomancy-bio_forging",
+        "body": ["event.remove({output: [], type: 'biomancy:bio_forging'});"],
+        "description": "Remove Biomancy Bio_forging Recipe"
+    },
+    "Biomancy Decomposing": {
+        "prefix": "r-biomancy-decomposing",
+        "body": ["event.remove({output: [], type: 'biomancy:decomposing'});"],
+        "description": "Remove Biomancy Decomposing Recipe"
+    },
+    "Biomancy Digesting": {
+        "prefix": "r-biomancy-digesting",
+        "body": ["event.remove({output: [], type: 'biomancy:digesting'});"],
+        "description": "Remove Biomancy Digesting Recipe"
+    },
+    "Bloodmagic Alchemyarray": {
+        "prefix": "r-bloodmagic-alchemyarray",
+        "body": ["event.remove({output: [], type: 'bloodmagic:alchemyarray'});"],
+        "description": "Remove Bloodmagic Alchemyarray Recipe"
+    },
+    "Bloodmagic Alchemytable": {
+        "prefix": "r-bloodmagic-alchemytable",
+        "body": ["event.remove({output: [], type: 'bloodmagic:alchemytable'});"],
+        "description": "Remove Bloodmagic Alchemytable Recipe"
+    },
+    "Bloodmagic Altar": {
+        "prefix": "r-bloodmagic-altar",
+        "body": ["event.remove({output: [], type: 'bloodmagic:altar'});"],
+        "description": "Remove Bloodmagic Altar Recipe"
+    },
+    "Bloodmagic Arc": {
+        "prefix": "r-bloodmagic-arc",
+        "body": ["event.remove({output: [], type: 'bloodmagic:arc'});"],
+        "description": "Remove Bloodmagic Arc Recipe"
+    },
+    "Bloodmagic Arcfurnace": {
+        "prefix": "r-bloodmagic-arcfurnace",
+        "body": ["event.remove({output: [], type: 'bloodmagic:arcfurnace'});"],
+        "description": "Remove Bloodmagic Arcfurnace Recipe"
+    },
+    "Bloodmagic Potion": {
+        "prefix": "r-bloodmagic-potion",
+        "body": ["event.remove({output: [], type: 'bloodmagic:potion'});"],
+        "description": "Remove Bloodmagic Potion Recipe"
+    },
+    "Bloodmagic Soulforge": {
+        "prefix": "r-bloodmagic-soulforge",
+        "body": ["event.remove({output: [], type: 'bloodmagic:soulforge'});"],
+        "description": "Remove Bloodmagic Soulforge Recipe"
+    },
+    "Blue_skies Alchemy": {
+        "prefix": "r-blue_skies-alchemy",
+        "body": ["event.remove({output: [], type: 'blue_skies:alchemy'});"],
+        "description": "Remove Blue_skies Alchemy Recipe"
+    },
+    "Blue_skies Horizonite_forge_fuel": {
+        "prefix": "r-blue_skies-horizonite_forge_fuel",
+        "body": ["event.remove({output: [], type: 'blue_skies:horizonite_forge_fuel'});"],
+        "description": "Remove Blue_skies Horizonite_forge_fuel Recipe"
+    },
+    "Blue_skies Snowcap_mushroom_freezing": {
+        "prefix": "r-blue_skies-snowcap_mushroom_freezing",
+        "body": ["event.remove({output: [], type: 'blue_skies:snowcap_mushroom_freezing'});"],
+        "description": "Remove Blue_skies Snowcap_mushroom_freezing Recipe"
+    },
+    "Blue_skies Snowcap_oven_freezing": {
+        "prefix": "r-blue_skies-snowcap_oven_freezing",
+        "body": ["event.remove({output: [], type: 'blue_skies:snowcap_oven_freezing'});"],
+        "description": "Remove Blue_skies Snowcap_oven_freezing Recipe"
+    },
+    "Botania Brewery": {
+        "prefix": "r-botania-brewery",
+        "body": ["event.remove({output: [], type: 'botania:brewery'});"],
+        "description": "Remove Botania Brewery Recipe"
+    },
+    "Botania Elven_trade": {
+        "prefix": "r-botania-elven_trade",
+        "body": ["event.remove({output: [], type: 'botania:elven_trade'});"],
+        "description": "Remove Botania Elven_trade Recipe"
+    },
+    "Botania Mana_pool": {
+        "prefix": "r-botania-mana_pool",
+        "body": ["event.remove({output: [], type: 'botania:mana_pool'});"],
+        "description": "Remove Botania Mana_pool Recipe"
+    },
+    "Botania Marimorphosis": {
+        "prefix": "r-botania-marimorphosis",
+        "body": ["event.remove({output: [], type: 'botania:marimorphosis'});"],
+        "description": "Remove Botania Marimorphosis Recipe"
+    },
+    "Botania Orechid": {
+        "prefix": "r-botania-orechid",
+        "body": ["event.remove({output: [], type: 'botania:orechid'});"],
+        "description": "Remove Botania Orechid Recipe"
+    },
+    "Botania Orechid_ignem": {
+        "prefix": "r-botania-orechid_ignem",
+        "body": ["event.remove({output: [], type: 'botania:orechid_ignem'});"],
+        "description": "Remove Botania Orechid_ignem Recipe"
+    },
+    "Botania Petals": {
+        "prefix": "r-botania-petals",
+        "body": ["event.remove({output: [], type: 'botania:petals'});"],
+        "description": "Remove Botania Petals Recipe"
+    },
+    "Botania Pure_daisy": {
+        "prefix": "r-botania-pure_daisy",
+        "body": ["event.remove({output: [], type: 'botania:pure_daisy'});"],
+        "description": "Remove Botania Pure_daisy Recipe"
+    },
+    "Botania Runic_altar": {
+        "prefix": "r-botania-runic_altar",
+        "body": ["event.remove({output: [], type: 'botania:runic_altar'});"],
+        "description": "Remove Botania Runic_altar Recipe"
+    },
+    "Botania Terra_plate": {
+        "prefix": "r-botania-terra_plate",
+        "body": ["event.remove({output: [], type: 'botania:terra_plate'});"],
+        "description": "Remove Botania Terra_plate Recipe"
+    },
+    "Charcoal_pit Alloy_mold": {
+        "prefix": "r-charcoal_pit-alloy_mold",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:alloy_mold'});"],
+        "description": "Remove Charcoal_pit Alloy_mold Recipe"
+    },
+    "Charcoal_pit Barrel": {
+        "prefix": "r-charcoal_pit-barrel",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:barrel'});"],
+        "description": "Remove Charcoal_pit Barrel Recipe"
+    },
+    "Charcoal_pit Blooming": {
+        "prefix": "r-charcoal_pit-blooming",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:blooming'});"],
+        "description": "Remove Charcoal_pit Blooming Recipe"
+    },
+    "Charcoal_pit Charcoal": {
+        "prefix": "r-charcoal_pit-charcoal",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:charcoal'});"],
+        "description": "Remove Charcoal_pit Charcoal Recipe"
+    },
+    "Charcoal_pit Distillery": {
+        "prefix": "r-charcoal_pit-distillery",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:distillery'});"],
+        "description": "Remove Charcoal_pit Distillery Recipe"
+    },
+    "Charcoal_pit Hot_blasting": {
+        "prefix": "r-charcoal_pit-hot_blasting",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:hot_blasting'});"],
+        "description": "Remove Charcoal_pit Hot_blasting Recipe"
+    },
+    "Charcoal_pit Steam_press": {
+        "prefix": "r-charcoal_pit-steam_press",
+        "body": ["event.remove({output: [], type: 'charcoal_pit:steam_press'});"],
+        "description": "Remove Charcoal_pit Steam_press Recipe"
+    },
+    "Chipped Alchemy_bench": {
+        "prefix": "r-chipped-alchemy_bench",
+        "body": ["event.remove({output: [], type: 'chipped:alchemy_bench'});"],
+        "description": "Remove Chipped Alchemy_bench Recipe"
+    },
+    "Chipped Botanist_workbench": {
+        "prefix": "r-chipped-botanist_workbench",
+        "body": ["event.remove({output: [], type: 'chipped:botanist_workbench'});"],
+        "description": "Remove Chipped Botanist_workbench Recipe"
+    },
+    "Chipped Carpenters_table": {
+        "prefix": "r-chipped-carpenters_table",
+        "body": ["event.remove({output: [], type: 'chipped:carpenters_table'});"],
+        "description": "Remove Chipped Carpenters_table Recipe"
+    },
+    "Chipped Glassblower": {
+        "prefix": "r-chipped-glassblower",
+        "body": ["event.remove({output: [], type: 'chipped:glassblower'});"],
+        "description": "Remove Chipped Glassblower Recipe"
+    },
+    "Chipped Loom_table": {
+        "prefix": "r-chipped-loom_table",
+        "body": ["event.remove({output: [], type: 'chipped:loom_table'});"],
+        "description": "Remove Chipped Loom_table Recipe"
+    },
+    "Chipped Mason_table": {
+        "prefix": "r-chipped-mason_table",
+        "body": ["event.remove({output: [], type: 'chipped:mason_table'});"],
+        "description": "Remove Chipped Mason_table Recipe"
+    },
+    "Chipped Mechanist_workbench": {
+        "prefix": "r-chipped-mechanist_workbench",
+        "body": ["event.remove({output: [], type: 'chipped:mechanist_workbench'});"],
+        "description": "Remove Chipped Mechanist_workbench Recipe"
+    },
+    "Compactcrafting Miniaturization": {
+        "prefix": "r-compactcrafting-miniaturization",
+        "body": ["event.remove({output: [], type: 'compactcrafting:miniaturization'});"],
+        "description": "Remove Compactcrafting Miniaturization Recipe"
+    },
+    "Create Automatic_brewing": {
+        "prefix": "r-create-automatic_brewing",
+        "body": ["event.remove({output: [], type: 'create:automatic_brewing'});"],
+        "description": "Remove Create Automatic_brewing Recipe"
+    },
+    "Create Automatic_packing": {
+        "prefix": "r-create-automatic_packing",
+        "body": ["event.remove({output: [], type: 'create:automatic_packing'});"],
+        "description": "Remove Create Automatic_packing Recipe"
+    },
+    "Create Automatic_shaped": {
+        "prefix": "r-create-automatic_shaped",
+        "body": ["event.remove({output: [], type: 'create:automatic_shaped'});"],
+        "description": "Remove Create Automatic_shaped Recipe"
+    },
+    "Create Automatic_shapeless": {
+        "prefix": "r-create-automatic_shapeless",
+        "body": ["event.remove({output: [], type: 'create:automatic_shapeless'});"],
+        "description": "Remove Create Automatic_shapeless Recipe"
+    },
+    "Create Block_cutting": {
+        "prefix": "r-create-block_cutting",
+        "body": ["event.remove({output: [], type: 'create:block_cutting'});"],
+        "description": "Remove Create Block_cutting Recipe"
+    },
+    "Create Crushing": {
+        "prefix": "r-create-crushing",
+        "body": ["event.remove({output: [], type: 'create:crushing'});"],
+        "description": "Remove Create Crushing Recipe"
+    },
+    "Create Deploying": {
+        "prefix": "r-create-deploying",
+        "body": ["event.remove({output: [], type: 'create:deploying'});"],
+        "description": "Remove Create Deploying Recipe"
+    },
+    "Create Draining": {
+        "prefix": "r-create-draining",
+        "body": ["event.remove({output: [], type: 'create:draining'});"],
+        "description": "Remove Create Draining Recipe"
+    },
+    "Create Fan_blasting": {
+        "prefix": "r-create-fan_blasting",
+        "body": ["event.remove({output: [], type: 'create:fan_blasting'});"],
+        "description": "Remove Create Fan_blasting Recipe"
+    },
+    "Create Fan_haunting": {
+        "prefix": "r-create-fan_haunting",
+        "body": ["event.remove({output: [], type: 'create:fan_haunting'});"],
+        "description": "Remove Create Fan_haunting Recipe"
+    },
+    "Create Fan_smoking": {
+        "prefix": "r-create-fan_smoking",
+        "body": ["event.remove({output: [], type: 'create:fan_smoking'});"],
+        "description": "Remove Create Fan_smoking Recipe"
+    },
+    "Create Fan_washing": {
+        "prefix": "r-create-fan_washing",
+        "body": ["event.remove({output: [], type: 'create:fan_washing'});"],
+        "description": "Remove Create Fan_washing Recipe"
+    },
+    "Create Item_application": {
+        "prefix": "r-create-item_application",
+        "body": ["event.remove({output: [], type: 'create:item_application'});"],
+        "description": "Remove Create Item_application Recipe"
+    },
+    "Create Mechanical_crafting": {
+        "prefix": "r-create-mechanical_crafting",
+        "body": ["event.remove({output: [], type: 'create:mechanical_crafting'});"],
+        "description": "Remove Create Mechanical_crafting Recipe"
+    },
+    "Create Milling": {
+        "prefix": "r-create-milling",
+        "body": ["event.remove({output: [], type: 'create:milling'});"],
+        "description": "Remove Create Milling Recipe"
+    },
+    "Create Mixing": {
+        "prefix": "r-create-mixing",
+        "body": ["event.remove({output: [], type: 'create:mixing'});"],
+        "description": "Remove Create Mixing Recipe"
+    },
+    "Create Mystery_conversion": {
+        "prefix": "r-create-mystery_conversion",
+        "body": ["event.remove({output: [], type: 'create:mystery_conversion'});"],
+        "description": "Remove Create Mystery_conversion Recipe"
+    },
+    "Create Packing": {
+        "prefix": "r-create-packing",
+        "body": ["event.remove({output: [], type: 'create:packing'});"],
+        "description": "Remove Create Packing Recipe"
+    },
+    "Create Pressing": {
+        "prefix": "r-create-pressing",
+        "body": ["event.remove({output: [], type: 'create:pressing'});"],
+        "description": "Remove Create Pressing Recipe"
+    },
+    "Create Sandpaper_polishing": {
+        "prefix": "r-create-sandpaper_polishing",
+        "body": ["event.remove({output: [], type: 'create:sandpaper_polishing'});"],
+        "description": "Remove Create Sandpaper_polishing Recipe"
+    },
+    "Create Sawing": {
+        "prefix": "r-create-sawing",
+        "body": ["event.remove({output: [], type: 'create:sawing'});"],
+        "description": "Remove Create Sawing Recipe"
+    },
+    "Create Sequenced_assembly": {
+        "prefix": "r-create-sequenced_assembly",
+        "body": ["event.remove({output: [], type: 'create:sequenced_assembly'});"],
+        "description": "Remove Create Sequenced_assembly Recipe"
+    },
+    "Create Spout_filling": {
+        "prefix": "r-create-spout_filling",
+        "body": ["event.remove({output: [], type: 'create:spout_filling'});"],
+        "description": "Remove Create Spout_filling Recipe"
+    },
+    "Create Wood_cutting": {
+        "prefix": "r-create-wood_cutting",
+        "body": ["event.remove({output: [], type: 'create:wood_cutting'});"],
+        "description": "Remove Create Wood_cutting Recipe"
+    },
+    "Create_central_kitchen Cutting_board_deploying": {
+        "prefix": "r-create_central_kitchen-cutting_board_deploying",
+        "body": ["event.remove({output: [], type: 'create_central_kitchen:cutting_board_deploying'});"],
+        "description": "Remove Create_central_kitchen Cutting_board_deploying Recipe"
+    },
+    "Create_enchantment_industry Disenchanting": {
+        "prefix": "r-create_enchantment_industry-disenchanting",
+        "body": ["event.remove({output: [], type: 'create_enchantment_industry:disenchanting'});"],
+        "description": "Remove Create_enchantment_industry Disenchanting Recipe"
+    },
+    "Createaddition Charging": {
+        "prefix": "r-createaddition-charging",
+        "body": ["event.remove({output: [], type: 'createaddition:charging'});"],
+        "description": "Remove Createaddition Charging Recipe"
+    },
+    "Createaddition Liquid_burning": {
+        "prefix": "r-createaddition-liquid_burning",
+        "body": ["event.remove({output: [], type: 'createaddition:liquid_burning'});"],
+        "description": "Remove Createaddition Liquid_burning Recipe"
+    },
+    "Createaddition Rolling": {
+        "prefix": "r-createaddition-rolling",
+        "body": ["event.remove({output: [], type: 'createaddition:rolling'});"],
+        "description": "Remove Createaddition Rolling Recipe"
+    },
+    "Extendedcrafting Advanced_crafting": {
+        "prefix": "r-extendedcrafting-advanced_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:advanced_crafting'});"],
+        "description": "Remove Extendedcrafting Advanced_crafting Recipe"
+    },
+    "Extendedcrafting Basic_crafting": {
+        "prefix": "r-extendedcrafting-basic_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:basic_crafting'});"],
+        "description": "Remove Extendedcrafting Basic_crafting Recipe"
+    },
+    "Extendedcrafting Combination": {
+        "prefix": "r-extendedcrafting-combination",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:combination'});"],
+        "description": "Remove Extendedcrafting Combination Recipe"
+    },
+    "Extendedcrafting Compressor": {
+        "prefix": "r-extendedcrafting-compressor",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:compressor'});"],
+        "description": "Remove Extendedcrafting Compressor Recipe"
+    },
+    "Extendedcrafting Elite_crafting": {
+        "prefix": "r-extendedcrafting-elite_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:elite_crafting'});"],
+        "description": "Remove Extendedcrafting Elite_crafting Recipe"
+    },
+    "Extendedcrafting Ender_crafting": {
+        "prefix": "r-extendedcrafting-ender_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:ender_crafting'});"],
+        "description": "Remove Extendedcrafting Ender_crafting Recipe"
+    },
+    "Extendedcrafting Ultimate_crafting": {
+        "prefix": "r-extendedcrafting-ultimate_crafting",
+        "body": ["event.remove({output: [], type: 'extendedcrafting:ultimate_crafting'});"],
+        "description": "Remove Extendedcrafting Ultimate_crafting Recipe"
+    },
+    "Farmersdelight Cooking": {
+        "prefix": "r-farmersdelight-cooking",
+        "body": ["event.remove({output: [], type: 'farmersdelight:cooking'});"],
+        "description": "Remove Farmersdelight Cooking Recipe"
+    },
+    "Farmersdelight Cutting": {
+        "prefix": "r-farmersdelight-cutting",
+        "body": ["event.remove({output: [], type: 'farmersdelight:cutting'});"],
+        "description": "Remove Farmersdelight Cutting Recipe"
+    },
+    "Farmersdelight Decomposition": {
+        "prefix": "r-farmersdelight-decomposition",
+        "body": ["event.remove({output: [], type: 'farmersdelight:decomposition'});"],
+        "description": "Remove Farmersdelight Decomposition Recipe"
+    },
+    "Farmersrespite Brewing": {
+        "prefix": "r-farmersrespite-brewing",
+        "body": ["event.remove({output: [], type: 'farmersrespite:brewing'});"],
+        "description": "Remove Farmersrespite Brewing Recipe"
+    },
+    "Hexerei Dipper": {
+        "prefix": "r-hexerei-dipper",
+        "body": ["event.remove({output: [], type: 'hexerei:dipper'});"],
+        "description": "Remove Hexerei Dipper Recipe"
+    },
+    "Hexerei Drying_rack": {
+        "prefix": "r-hexerei-drying_rack",
+        "body": ["event.remove({output: [], type: 'hexerei:drying_rack'});"],
+        "description": "Remove Hexerei Drying_rack Recipe"
+    },
+    "Hexerei Mixingcauldron": {
+        "prefix": "r-hexerei-mixingcauldron",
+        "body": ["event.remove({output: [], type: 'hexerei:mixingcauldron'});"],
+        "description": "Remove Hexerei Mixingcauldron Recipe"
+    },
+    "Hexerei Pestle_and_mortar": {
+        "prefix": "r-hexerei-pestle_and_mortar",
+        "body": ["event.remove({output: [], type: 'hexerei:pestle_and_mortar'});"],
+        "description": "Remove Hexerei Pestle_and_mortar Recipe"
+    },
+    "Hordes Infection": {
+        "prefix": "r-hordes-infection",
+        "body": ["event.remove({output: [], type: 'hordes:infection'});"],
+        "description": "Remove Hordes Infection Recipe"
+    },
+    "Immersiveengineering Alloysmelter": {
+        "prefix": "r-immersiveengineering-alloysmelter",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:alloysmelter'});"],
+        "description": "Remove Immersiveengineering Alloysmelter Recipe"
+    },
+    "Immersiveengineering Arcfurnace": {
+        "prefix": "r-immersiveengineering-arcfurnace",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:arcfurnace'});"],
+        "description": "Remove Immersiveengineering Arcfurnace Recipe"
+    },
+    "Immersiveengineering Arcfurnace_recycling": {
+        "prefix": "r-immersiveengineering-arcfurnace_recycling",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:arcfurnace_recycling'});"],
+        "description": "Remove Immersiveengineering Arcfurnace_recycling Recipe"
+    },
+    "Immersiveengineering Blastfurnace": {
+        "prefix": "r-immersiveengineering-blastfurnace",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:blastfurnace'});"],
+        "description": "Remove Immersiveengineering Blastfurnace Recipe"
+    },
+    "Immersiveengineering Blastfurnace_fuel": {
+        "prefix": "r-immersiveengineering-blastfurnace_fuel",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:blastfurnace_fuel'});"],
+        "description": "Remove Immersiveengineering Blastfurnace_fuel Recipe"
+    },
+    "Immersiveengineering Bottlingmachine": {
+        "prefix": "r-immersiveengineering-bottlingmachine",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:bottlingmachine'});"],
+        "description": "Remove Immersiveengineering Bottlingmachine Recipe"
+    },
+    "Immersiveengineering Cloche": {
+        "prefix": "r-immersiveengineering-cloche",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:cloche'});"],
+        "description": "Remove Immersiveengineering Cloche Recipe"
+    },
+    "Immersiveengineering Cokeoven": {
+        "prefix": "r-immersiveengineering-cokeoven",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:cokeoven'});"],
+        "description": "Remove Immersiveengineering Cokeoven Recipe"
+    },
+    "Immersiveengineering Crusher": {
+        "prefix": "r-immersiveengineering-crusher",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:crusher'});"],
+        "description": "Remove Immersiveengineering Crusher Recipe"
+    },
+    "Immersiveengineering Fermenter": {
+        "prefix": "r-immersiveengineering-fermenter",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:fermenter'});"],
+        "description": "Remove Immersiveengineering Fermenter Recipe"
+    },
+    "Immersiveengineering Metalpress": {
+        "prefix": "r-immersiveengineering-metalpress",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:metalpress'});"],
+        "description": "Remove Immersiveengineering Metalpress Recipe"
+    },
+    "Immersiveengineering Mixer": {
+        "prefix": "r-immersiveengineering-mixer",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:mixer'});"],
+        "description": "Remove Immersiveengineering Mixer Recipe"
+    },
+    "Immersiveengineering Refinery": {
+        "prefix": "r-immersiveengineering-refinery",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:refinery'});"],
+        "description": "Remove Immersiveengineering Refinery Recipe"
+    },
+    "Immersiveengineering Sawmill": {
+        "prefix": "r-immersiveengineering-sawmill",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:sawmill'});"],
+        "description": "Remove Immersiveengineering Sawmill Recipe"
+    },
+    "Immersiveengineering Squeezer": {
+        "prefix": "r-immersiveengineering-squeezer",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:squeezer'});"],
+        "description": "Remove Immersiveengineering Squeezer Recipe"
+    },
+    "Immersiveengineering Workbench": {
+        "prefix": "r-immersiveengineering-workbench",
+        "body": ["event.remove({output: [], type: 'immersiveengineering:workbench'});"],
+        "description": "Remove Immersiveengineering Workbench Recipe"
+    },
+    "Immersivepetroleum Cokerunit": {
+        "prefix": "r-immersivepetroleum-cokerunit",
+        "body": ["event.remove({output: [], type: 'immersivepetroleum:cokerunit'});"],
+        "description": "Remove Immersivepetroleum Cokerunit Recipe"
+    },
+    "Immersivepetroleum Distillation": {
+        "prefix": "r-immersivepetroleum-distillation",
+        "body": ["event.remove({output: [], type: 'immersivepetroleum:distillation'});"],
+        "description": "Remove Immersivepetroleum Distillation Recipe"
+    },
+    "Immersivepetroleum Hydrotreater": {
+        "prefix": "r-immersivepetroleum-hydrotreater",
+        "body": ["event.remove({output: [], type: 'immersivepetroleum:hydrotreater'});"],
+        "description": "Remove Immersivepetroleum Hydrotreater Recipe"
+    },
+    "Industrialforegoing Bioreactor": {
+        "prefix": "r-industrialforegoing-bioreactor",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:bioreactor'});"],
+        "description": "Remove Industrialforegoing Bioreactor Recipe"
+    },
+    "Industrialforegoing Dissolution": {
+        "prefix": "r-industrialforegoing-dissolution",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:dissolution'});"],
+        "description": "Remove Industrialforegoing Dissolution Recipe"
+    },
+    "Industrialforegoing Fermenter": {
+        "prefix": "r-industrialforegoing-fermenter",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:fermenter'});"],
+        "description": "Remove Industrialforegoing Fermenter Recipe"
+    },
+    "Industrialforegoing Fluid_extractor": {
+        "prefix": "r-industrialforegoing-fluid_extractor",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:fluid_extractor'});"],
+        "description": "Remove Industrialforegoing Fluid_extractor Recipe"
+    },
+    "Industrialforegoing Laser_fluid": {
+        "prefix": "r-industrialforegoing-laser_fluid",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:laser_fluid'});"],
+        "description": "Remove Industrialforegoing Laser_fluid Recipe"
+    },
+    "Industrialforegoing Laser_ore": {
+        "prefix": "r-industrialforegoing-laser_ore",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:laser_ore'});"],
+        "description": "Remove Industrialforegoing Laser_ore Recipe"
+    },
+    "Industrialforegoing Machine_produce": {
+        "prefix": "r-industrialforegoing-machine_produce",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:machine_produce'});"],
+        "description": "Remove Industrialforegoing Machine_produce Recipe"
+    },
+    "Industrialforegoing Mycelial_crimed": {
+        "prefix": "r-industrialforegoing-mycelial_crimed",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_crimed'});"],
+        "description": "Remove Industrialforegoing Mycelial_crimed Recipe"
+    },
+    "Industrialforegoing Mycelial_culinary": {
+        "prefix": "r-industrialforegoing-mycelial_culinary",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_culinary'});"],
+        "description": "Remove Industrialforegoing Mycelial_culinary Recipe"
+    },
+    "Industrialforegoing Mycelial_death": {
+        "prefix": "r-industrialforegoing-mycelial_death",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_death'});"],
+        "description": "Remove Industrialforegoing Mycelial_death Recipe"
+    },
+    "Industrialforegoing Mycelial_disenchantment": {
+        "prefix": "r-industrialforegoing-mycelial_disenchantment",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_disenchantment'});"],
+        "description": "Remove Industrialforegoing Mycelial_disenchantment Recipe"
+    },
+    "Industrialforegoing Mycelial_ender": {
+        "prefix": "r-industrialforegoing-mycelial_ender",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_ender'});"],
+        "description": "Remove Industrialforegoing Mycelial_ender Recipe"
+    },
+    "Industrialforegoing Mycelial_explosive": {
+        "prefix": "r-industrialforegoing-mycelial_explosive",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_explosive'});"],
+        "description": "Remove Industrialforegoing Mycelial_explosive Recipe"
+    },
+    "Industrialforegoing Mycelial_frosty": {
+        "prefix": "r-industrialforegoing-mycelial_frosty",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_frosty'});"],
+        "description": "Remove Industrialforegoing Mycelial_frosty Recipe"
+    },
+    "Industrialforegoing Mycelial_furnace": {
+        "prefix": "r-industrialforegoing-mycelial_furnace",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_furnace'});"],
+        "description": "Remove Industrialforegoing Mycelial_furnace Recipe"
+    },
+    "Industrialforegoing Mycelial_halitosis": {
+        "prefix": "r-industrialforegoing-mycelial_halitosis",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_halitosis'});"],
+        "description": "Remove Industrialforegoing Mycelial_halitosis Recipe"
+    },
+    "Industrialforegoing Mycelial_magma": {
+        "prefix": "r-industrialforegoing-mycelial_magma",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_magma'});"],
+        "description": "Remove Industrialforegoing Mycelial_magma Recipe"
+    },
+    "Industrialforegoing Mycelial_meatallurgic": {
+        "prefix": "r-industrialforegoing-mycelial_meatallurgic",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_meatallurgic'});"],
+        "description": "Remove Industrialforegoing Mycelial_meatallurgic Recipe"
+    },
+    "Industrialforegoing Mycelial_netherstar": {
+        "prefix": "r-industrialforegoing-mycelial_netherstar",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_netherstar'});"],
+        "description": "Remove Industrialforegoing Mycelial_netherstar Recipe"
+    },
+    "Industrialforegoing Mycelial_pink": {
+        "prefix": "r-industrialforegoing-mycelial_pink",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_pink'});"],
+        "description": "Remove Industrialforegoing Mycelial_pink Recipe"
+    },
+    "Industrialforegoing Mycelial_potion": {
+        "prefix": "r-industrialforegoing-mycelial_potion",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_potion'});"],
+        "description": "Remove Industrialforegoing Mycelial_potion Recipe"
+    },
+    "Industrialforegoing Mycelial_rocket": {
+        "prefix": "r-industrialforegoing-mycelial_rocket",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_rocket'});"],
+        "description": "Remove Industrialforegoing Mycelial_rocket Recipe"
+    },
+    "Industrialforegoing Mycelial_slimey": {
+        "prefix": "r-industrialforegoing-mycelial_slimey",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:mycelial_slimey'});"],
+        "description": "Remove Industrialforegoing Mycelial_slimey Recipe"
+    },
+    "Industrialforegoing Ore_sieve": {
+        "prefix": "r-industrialforegoing-ore_sieve",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:ore_sieve'});"],
+        "description": "Remove Industrialforegoing Ore_sieve Recipe"
+    },
+    "Industrialforegoing Ore_washer": {
+        "prefix": "r-industrialforegoing-ore_washer",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:ore_washer'});"],
+        "description": "Remove Industrialforegoing Ore_washer Recipe"
+    },
+    "Industrialforegoing Stone_work": {
+        "prefix": "r-industrialforegoing-stone_work",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:stone_work'});"],
+        "description": "Remove Industrialforegoing Stone_work Recipe"
+    },
+    "Industrialforegoing Stone_work_generator": {
+        "prefix": "r-industrialforegoing-stone_work_generator",
+        "body": ["event.remove({output: [], type: 'industrialforegoing:stone_work_generator'});"],
+        "description": "Remove Industrialforegoing Stone_work_generator Recipe"
+    },
+    "Jeed Effects": {
+        "prefix": "r-jeed-effects",
+        "body": ["event.remove({output: [], type: 'jeed:effects'});"],
+        "description": "Remove Jeed Effects Recipe"
+    },
+    "Jei Information": {
+        "prefix": "r-jei-information",
+        "body": ["event.remove({output: [], type: 'jei:information'});"],
+        "description": "Remove Jei Information Recipe"
+    },
+    "Lychee Block_crushing": {
+        "prefix": "r-lychee-block_crushing",
+        "body": ["event.remove({output: [], type: 'lychee:block_crushing'});"],
+        "description": "Remove Lychee Block_crushing Recipe"
+    },
+    "Lychee Block_exploding": {
+        "prefix": "r-lychee-block_exploding",
+        "body": ["event.remove({output: [], type: 'lychee:block_exploding'});"],
+        "description": "Remove Lychee Block_exploding Recipe"
+    },
+    "Lychee Block_interacting": {
+        "prefix": "r-lychee-block_interacting",
+        "body": ["event.remove({output: [], type: 'lychee:block_interacting'});"],
+        "description": "Remove Lychee Block_interacting Recipe"
+    },
+    "Lychee Item_burning": {
+        "prefix": "r-lychee-item_burning",
+        "body": ["event.remove({output: [], type: 'lychee:item_burning'});"],
+        "description": "Remove Lychee Item_burning Recipe"
+    },
+    "Lychee Item_exploding": {
+        "prefix": "r-lychee-item_exploding",
+        "body": ["event.remove({output: [], type: 'lychee:item_exploding'});"],
+        "description": "Remove Lychee Item_exploding Recipe"
+    },
+    "Lychee Item_inside": {
+        "prefix": "r-lychee-item_inside",
+        "body": ["event.remove({output: [], type: 'lychee:item_inside'});"],
+        "description": "Remove Lychee Item_inside Recipe"
+    },
+    "Lychee Lightning_channeling": {
+        "prefix": "r-lychee-lightning_channeling",
+        "body": ["event.remove({output: [], type: 'lychee:lightning_channeling'});"],
+        "description": "Remove Lychee Lightning_channeling Recipe"
+    },
+    "Malum Spirit_focusing": {
+        "prefix": "r-malum-spirit_focusing",
+        "body": ["event.remove({output: [], type: 'malum:spirit_focusing'});"],
+        "description": "Remove Malum Spirit_focusing Recipe"
+    },
+    "Malum Spirit_infusion": {
+        "prefix": "r-malum-spirit_infusion",
+        "body": ["event.remove({output: [], type: 'malum:spirit_infusion'});"],
+        "description": "Remove Malum Spirit_infusion Recipe"
+    },
+    "Malum Spirit_repair": {
+        "prefix": "r-malum-spirit_repair",
+        "body": ["event.remove({output: [], type: 'malum:spirit_repair'});"],
+        "description": "Remove Malum Spirit_repair Recipe"
+    },
+    "Malum Spirit_rite": {
+        "prefix": "r-malum-spirit_rite",
+        "body": ["event.remove({output: [], type: 'malum:spirit_rite'});"],
+        "description": "Remove Malum Spirit_rite Recipe"
+    },
+    "Malum Spirit_transmutation": {
+        "prefix": "r-malum-spirit_transmutation",
+        "body": ["event.remove({output: [], type: 'malum:spirit_transmutation'});"],
+        "description": "Remove Malum Spirit_transmutation Recipe"
+    },
+    "Mekanism Antiprotonic_nucleosynthesizer": {
+        "prefix": "r-mekanism-antiprotonic_nucleosynthesizer",
+        "body": ["event.remove({output: [], type: 'mekanism:antiprotonic_nucleosynthesizer'});"],
+        "description": "Remove Mekanism Antiprotonic_nucleosynthesizer Recipe"
+    },
+    "Mekanism Boiler_casing": {
+        "prefix": "r-mekanism-boiler_casing",
+        "body": ["event.remove({output: [], type: 'mekanism:boiler_casing'});"],
+        "description": "Remove Mekanism Boiler_casing Recipe"
+    },
+    "Mekanism Chemical_crystallizer": {
+        "prefix": "r-mekanism-chemical_crystallizer",
+        "body": ["event.remove({output: [], type: 'mekanism:chemical_crystallizer'});"],
+        "description": "Remove Mekanism Chemical_crystallizer Recipe"
+    },
+    "Mekanism Chemical_dissolution_chamber": {
+        "prefix": "r-mekanism-chemical_dissolution_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:chemical_dissolution_chamber'});"],
+        "description": "Remove Mekanism Chemical_dissolution_chamber Recipe"
+    },
+    "Mekanism Chemical_infuser": {
+        "prefix": "r-mekanism-chemical_infuser",
+        "body": ["event.remove({output: [], type: 'mekanism:chemical_infuser'});"],
+        "description": "Remove Mekanism Chemical_infuser Recipe"
+    },
+    "Mekanism Chemical_injection_chamber": {
+        "prefix": "r-mekanism-chemical_injection_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:chemical_injection_chamber'});"],
+        "description": "Remove Mekanism Chemical_injection_chamber Recipe"
+    },
+    "Mekanism Chemical_oxidizer": {
+        "prefix": "r-mekanism-chemical_oxidizer",
+        "body": ["event.remove({output: [], type: 'mekanism:chemical_oxidizer'});"],
+        "description": "Remove Mekanism Chemical_oxidizer Recipe"
+    },
+    "Mekanism Chemical_washer": {
+        "prefix": "r-mekanism-chemical_washer",
+        "body": ["event.remove({output: [], type: 'mekanism:chemical_washer'});"],
+        "description": "Remove Mekanism Chemical_washer Recipe"
+    },
+    "Mekanism Combiner": {
+        "prefix": "r-mekanism-combiner",
+        "body": ["event.remove({output: [], type: 'mekanism:combiner'});"],
+        "description": "Remove Mekanism Combiner Recipe"
+    },
+    "Mekanism Condensentrating": {
+        "prefix": "r-mekanism-condensentrating",
+        "body": ["event.remove({output: [], type: 'mekanism:condensentrating'});"],
+        "description": "Remove Mekanism Condensentrating Recipe"
+    },
+    "Mekanism Crusher": {
+        "prefix": "r-mekanism-crusher",
+        "body": ["event.remove({output: [], type: 'mekanism:crusher'});"],
+        "description": "Remove Mekanism Crusher Recipe"
+    },
+    "Mekanism Decondensentrating": {
+        "prefix": "r-mekanism-decondensentrating",
+        "body": ["event.remove({output: [], type: 'mekanism:decondensentrating'});"],
+        "description": "Remove Mekanism Decondensentrating Recipe"
+    },
+    "Mekanism Electrolytic_separator": {
+        "prefix": "r-mekanism-electrolytic_separator",
+        "body": ["event.remove({output: [], type: 'mekanism:electrolytic_separator'});"],
+        "description": "Remove Mekanism Electrolytic_separator Recipe"
+    },
+    "Mekanism Energized_smelter": {
+        "prefix": "r-mekanism-energized_smelter",
+        "body": ["event.remove({output: [], type: 'mekanism:energized_smelter'});"],
+        "description": "Remove Mekanism Energized_smelter Recipe"
+    },
+    "Mekanism Energy_conversion": {
+        "prefix": "r-mekanism-energy_conversion",
+        "body": ["event.remove({output: [], type: 'mekanism:energy_conversion'});"],
+        "description": "Remove Mekanism Energy_conversion Recipe"
+    },
+    "Mekanism Enrichment_chamber": {
+        "prefix": "r-mekanism-enrichment_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:enrichment_chamber'});"],
+        "description": "Remove Mekanism Enrichment_chamber Recipe"
+    },
+    "Mekanism Gas_conversion": {
+        "prefix": "r-mekanism-gas_conversion",
+        "body": ["event.remove({output: [], type: 'mekanism:gas_conversion'});"],
+        "description": "Remove Mekanism Gas_conversion Recipe"
+    },
+    "Mekanism Infusion_conversion": {
+        "prefix": "r-mekanism-infusion_conversion",
+        "body": ["event.remove({output: [], type: 'mekanism:infusion_conversion'});"],
+        "description": "Remove Mekanism Infusion_conversion Recipe"
+    },
+    "Mekanism Isotopic_centrifuge": {
+        "prefix": "r-mekanism-isotopic_centrifuge",
+        "body": ["event.remove({output: [], type: 'mekanism:isotopic_centrifuge'});"],
+        "description": "Remove Mekanism Isotopic_centrifuge Recipe"
+    },
+    "Mekanism Metallurgic_infuser": {
+        "prefix": "r-mekanism-metallurgic_infuser",
+        "body": ["event.remove({output: [], type: 'mekanism:metallurgic_infuser'});"],
+        "description": "Remove Mekanism Metallurgic_infuser Recipe"
+    },
+    "Mekanism Nutritional_liquifier": {
+        "prefix": "r-mekanism-nutritional_liquifier",
+        "body": ["event.remove({output: [], type: 'mekanism:nutritional_liquifier'});"],
+        "description": "Remove Mekanism Nutritional_liquifier Recipe"
+    },
+    "Mekanism Osmium_compressor": {
+        "prefix": "r-mekanism-osmium_compressor",
+        "body": ["event.remove({output: [], type: 'mekanism:osmium_compressor'});"],
+        "description": "Remove Mekanism Osmium_compressor Recipe"
+    },
+    "Mekanism Painting_machine": {
+        "prefix": "r-mekanism-painting_machine",
+        "body": ["event.remove({output: [], type: 'mekanism:painting_machine'});"],
+        "description": "Remove Mekanism Painting_machine Recipe"
+    },
+    "Mekanism Pigment_extractor": {
+        "prefix": "r-mekanism-pigment_extractor",
+        "body": ["event.remove({output: [], type: 'mekanism:pigment_extractor'});"],
+        "description": "Remove Mekanism Pigment_extractor Recipe"
+    },
+    "Mekanism Pigment_mixer": {
+        "prefix": "r-mekanism-pigment_mixer",
+        "body": ["event.remove({output: [], type: 'mekanism:pigment_mixer'});"],
+        "description": "Remove Mekanism Pigment_mixer Recipe"
+    },
+    "Mekanism Precision_sawmill": {
+        "prefix": "r-mekanism-precision_sawmill",
+        "body": ["event.remove({output: [], type: 'mekanism:precision_sawmill'});"],
+        "description": "Remove Mekanism Precision_sawmill Recipe"
+    },
+    "Mekanism Pressurized_reaction_chamber": {
+        "prefix": "r-mekanism-pressurized_reaction_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:pressurized_reaction_chamber'});"],
+        "description": "Remove Mekanism Pressurized_reaction_chamber Recipe"
+    },
+    "Mekanism Purification_chamber": {
+        "prefix": "r-mekanism-purification_chamber",
+        "body": ["event.remove({output: [], type: 'mekanism:purification_chamber'});"],
+        "description": "Remove Mekanism Purification_chamber Recipe"
+    },
+    "Mekanism Solar_neutron_activator": {
+        "prefix": "r-mekanism-solar_neutron_activator",
+        "body": ["event.remove({output: [], type: 'mekanism:solar_neutron_activator'});"],
+        "description": "Remove Mekanism Solar_neutron_activator Recipe"
+    },
+    "Mekanism Sps_casing": {
+        "prefix": "r-mekanism-sps_casing",
+        "body": ["event.remove({output: [], type: 'mekanism:sps_casing'});"],
+        "description": "Remove Mekanism Sps_casing Recipe"
+    },
+    "Mekanism Thermal_evaporation_controller": {
+        "prefix": "r-mekanism-thermal_evaporation_controller",
+        "body": ["event.remove({output: [], type: 'mekanism:thermal_evaporation_controller'});"],
+        "description": "Remove Mekanism Thermal_evaporation_controller Recipe"
+    },
+    "Mekanismgenerators Fission": {
+        "prefix": "r-mekanismgenerators-fission",
+        "body": ["event.remove({output: [], type: 'mekanismgenerators:fission'});"],
+        "description": "Remove Mekanismgenerators Fission Recipe"
+    },
+    "Mythicbotany Jei_category_infusion": {
+        "prefix": "r-mythicbotany-jei_category_infusion",
+        "body": ["event.remove({output: [], type: 'mythicbotany:jei_category_infusion'});"],
+        "description": "Remove Mythicbotany Jei_category_infusion Recipe"
+    },
+    "Mythicbotany Jei_category_rune_ritual": {
+        "prefix": "r-mythicbotany-jei_category_rune_ritual",
+        "body": ["event.remove({output: [], type: 'mythicbotany:jei_category_rune_ritual'});"],
+        "description": "Remove Mythicbotany Jei_category_rune_ritual Recipe"
+    },
+    "Naturesaura Altar": {
+        "prefix": "r-naturesaura-altar",
+        "body": ["event.remove({output: [], type: 'naturesaura:altar'});"],
+        "description": "Remove Naturesaura Altar Recipe"
+    },
+    "Naturesaura Animal_spawner": {
+        "prefix": "r-naturesaura-animal_spawner",
+        "body": ["event.remove({output: [], type: 'naturesaura:animal_spawner'});"],
+        "description": "Remove Naturesaura Animal_spawner Recipe"
+    },
+    "Naturesaura Offering": {
+        "prefix": "r-naturesaura-offering",
+        "body": ["event.remove({output: [], type: 'naturesaura:offering'});"],
+        "description": "Remove Naturesaura Offering Recipe"
+    },
+    "Naturesaura Tree_ritual": {
+        "prefix": "r-naturesaura-tree_ritual",
+        "body": ["event.remove({output: [], type: 'naturesaura:tree_ritual'});"],
+        "description": "Remove Naturesaura Tree_ritual Recipe"
+    },
+    "Nethersdelight Composition": {
+        "prefix": "r-nethersdelight-composition",
+        "body": ["event.remove({output: [], type: 'nethersdelight:composition'});"],
+        "description": "Remove Nethersdelight Composition Recipe"
+    },
+    "Occultism Crushing": {
+        "prefix": "r-occultism-crushing",
+        "body": ["event.remove({output: [], type: 'occultism:crushing'});"],
+        "description": "Remove Occultism Crushing Recipe"
+    },
+    "Occultism Miner": {
+        "prefix": "r-occultism-miner",
+        "body": ["event.remove({output: [], type: 'occultism:miner'});"],
+        "description": "Remove Occultism Miner Recipe"
+    },
+    "Occultism Ritual": {
+        "prefix": "r-occultism-ritual",
+        "body": ["event.remove({output: [], type: 'occultism:ritual'});"],
+        "description": "Remove Occultism Ritual Recipe"
+    },
+    "Occultism Spirit_fire": {
+        "prefix": "r-occultism-spirit_fire",
+        "body": ["event.remove({output: [], type: 'occultism:spirit_fire'});"],
+        "description": "Remove Occultism Spirit_fire Recipe"
+    },
+    "Pneumaticcraft Amadron_trade": {
+        "prefix": "r-pneumaticcraft-amadron_trade",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:amadron_trade'});"],
+        "description": "Remove Pneumaticcraft Amadron_trade Recipe"
+    },
+    "Pneumaticcraft Assembly": {
+        "prefix": "r-pneumaticcraft-assembly",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:assembly'});"],
+        "description": "Remove Pneumaticcraft Assembly Recipe"
+    },
+    "Pneumaticcraft Etching_tank": {
+        "prefix": "r-pneumaticcraft-etching_tank",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:etching_tank'});"],
+        "description": "Remove Pneumaticcraft Etching_tank Recipe"
+    },
+    "Pneumaticcraft Explosion_crafting": {
+        "prefix": "r-pneumaticcraft-explosion_crafting",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:explosion_crafting'});"],
+        "description": "Remove Pneumaticcraft Explosion_crafting Recipe"
+    },
+    "Pneumaticcraft Fluid_mixer": {
+        "prefix": "r-pneumaticcraft-fluid_mixer",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:fluid_mixer'});"],
+        "description": "Remove Pneumaticcraft Fluid_mixer Recipe"
+    },
+    "Pneumaticcraft Heat_frame_cooling": {
+        "prefix": "r-pneumaticcraft-heat_frame_cooling",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:heat_frame_cooling'});"],
+        "description": "Remove Pneumaticcraft Heat_frame_cooling Recipe"
+    },
+    "Pneumaticcraft Heat_properties": {
+        "prefix": "r-pneumaticcraft-heat_properties",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:heat_properties'});"],
+        "description": "Remove Pneumaticcraft Heat_properties Recipe"
+    },
+    "Pneumaticcraft Memory_essence": {
+        "prefix": "r-pneumaticcraft-memory_essence",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:memory_essence'});"],
+        "description": "Remove Pneumaticcraft Memory_essence Recipe"
+    },
+    "Pneumaticcraft Plastic_solidifying": {
+        "prefix": "r-pneumaticcraft-plastic_solidifying",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:plastic_solidifying'});"],
+        "description": "Remove Pneumaticcraft Plastic_solidifying Recipe"
+    },
+    "Pneumaticcraft Pressure_chamber": {
+        "prefix": "r-pneumaticcraft-pressure_chamber",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:pressure_chamber'});"],
+        "description": "Remove Pneumaticcraft Pressure_chamber Recipe"
+    },
+    "Pneumaticcraft Refinery": {
+        "prefix": "r-pneumaticcraft-refinery",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:refinery'});"],
+        "description": "Remove Pneumaticcraft Refinery Recipe"
+    },
+    "Pneumaticcraft Spawner_extraction": {
+        "prefix": "r-pneumaticcraft-spawner_extraction",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:spawner_extraction'});"],
+        "description": "Remove Pneumaticcraft Spawner_extraction Recipe"
+    },
+    "Pneumaticcraft Thermo_plant": {
+        "prefix": "r-pneumaticcraft-thermo_plant",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:thermo_plant'});"],
+        "description": "Remove Pneumaticcraft Thermo_plant Recipe"
+    },
+    "Pneumaticcraft Uv_light_box": {
+        "prefix": "r-pneumaticcraft-uv_light_box",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:uv_light_box'});"],
+        "description": "Remove Pneumaticcraft Uv_light_box Recipe"
+    },
+    "Pneumaticcraft Yeast_crafting": {
+        "prefix": "r-pneumaticcraft-yeast_crafting",
+        "body": ["event.remove({output: [], type: 'pneumaticcraft:yeast_crafting'});"],
+        "description": "Remove Pneumaticcraft Yeast_crafting Recipe"
+    },
+    "Productivebees Advanced_beehive": {
+        "prefix": "r-productivebees-advanced_beehive",
+        "body": ["event.remove({output: [], type: 'productivebees:advanced_beehive'});"],
+        "description": "Remove Productivebees Advanced_beehive Recipe"
+    },
+    "Productivebees Bee_breeding": {
+        "prefix": "r-productivebees-bee_breeding",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_breeding'});"],
+        "description": "Remove Productivebees Bee_breeding Recipe"
+    },
+    "Productivebees Bee_conversion": {
+        "prefix": "r-productivebees-bee_conversion",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_conversion'});"],
+        "description": "Remove Productivebees Bee_conversion Recipe"
+    },
+    "Productivebees Bee_fishing": {
+        "prefix": "r-productivebees-bee_fishing",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_fishing'});"],
+        "description": "Remove Productivebees Bee_fishing Recipe"
+    },
+    "Productivebees Bee_flowering": {
+        "prefix": "r-productivebees-bee_flowering",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_flowering'});"],
+        "description": "Remove Productivebees Bee_flowering Recipe"
+    },
+    "Productivebees Bee_spawning": {
+        "prefix": "r-productivebees-bee_spawning",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_spawning'});"],
+        "description": "Remove Productivebees Bee_spawning Recipe"
+    },
+    "Productivebees Bee_spawning_big": {
+        "prefix": "r-productivebees-bee_spawning_big",
+        "body": ["event.remove({output: [], type: 'productivebees:bee_spawning_big'});"],
+        "description": "Remove Productivebees Bee_spawning_big Recipe"
+    },
+    "Productivebees Block_conversion": {
+        "prefix": "r-productivebees-block_conversion",
+        "body": ["event.remove({output: [], type: 'productivebees:block_conversion'});"],
+        "description": "Remove Productivebees Block_conversion Recipe"
+    },
+    "Productivebees Bottler": {
+        "prefix": "r-productivebees-bottler",
+        "body": ["event.remove({output: [], type: 'productivebees:bottler'});"],
+        "description": "Remove Productivebees Bottler Recipe"
+    },
+    "Productivebees Centrifuge": {
+        "prefix": "r-productivebees-centrifuge",
+        "body": ["event.remove({output: [], type: 'productivebees:centrifuge'});"],
+        "description": "Remove Productivebees Centrifuge Recipe"
+    },
+    "Productivebees Incubation": {
+        "prefix": "r-productivebees-incubation",
+        "body": ["event.remove({output: [], type: 'productivebees:incubation'});"],
+        "description": "Remove Productivebees Incubation Recipe"
+    },
+    "Rankine Air_distillation": {
+        "prefix": "r-rankine-air_distillation",
+        "body": ["event.remove({output: [], type: 'rankine:air_distillation'});"],
+        "description": "Remove Rankine Air_distillation Recipe"
+    },
+    "Rankine Alloying": {
+        "prefix": "r-rankine-alloying",
+        "body": ["event.remove({output: [], type: 'rankine:alloying'});"],
+        "description": "Remove Rankine Alloying Recipe"
+    },
+    "Rankine Battery": {
+        "prefix": "r-rankine-battery",
+        "body": ["event.remove({output: [], type: 'rankine:battery'});"],
+        "description": "Remove Rankine Battery Recipe"
+    },
+    "Rankine Beehive_oven": {
+        "prefix": "r-rankine-beehive_oven",
+        "body": ["event.remove({output: [], type: 'rankine:beehive_oven'});"],
+        "description": "Remove Rankine Beehive_oven Recipe"
+    },
+    "Rankine Cauldron_drying": {
+        "prefix": "r-rankine-cauldron_drying",
+        "body": ["event.remove({output: [], type: 'rankine:cauldron_drying'});"],
+        "description": "Remove Rankine Cauldron_drying Recipe"
+    },
+    "Rankine Crucible": {
+        "prefix": "r-rankine-crucible",
+        "body": ["event.remove({output: [], type: 'rankine:crucible'});"],
+        "description": "Remove Rankine Crucible Recipe"
+    },
+    "Rankine Crushing": {
+        "prefix": "r-rankine-crushing",
+        "body": ["event.remove({output: [], type: 'rankine:crushing'});"],
+        "description": "Remove Rankine Crushing Recipe"
+    },
+    "Rankine Element": {
+        "prefix": "r-rankine-element",
+        "body": ["event.remove({output: [], type: 'rankine:element'});"],
+        "description": "Remove Rankine Element Recipe"
+    },
+    "Rankine Evaporation": {
+        "prefix": "r-rankine-evaporation",
+        "body": ["event.remove({output: [], type: 'rankine:evaporation'});"],
+        "description": "Remove Rankine Evaporation Recipe"
+    },
+    "Rankine Extrusive_igneous": {
+        "prefix": "r-rankine-extrusive_igneous",
+        "body": ["event.remove({output: [], type: 'rankine:extrusive_igneous'});"],
+        "description": "Remove Rankine Extrusive_igneous Recipe"
+    },
+    "Rankine Foraging": {
+        "prefix": "r-rankine-foraging",
+        "body": ["event.remove({output: [], type: 'rankine:foraging'});"],
+        "description": "Remove Rankine Foraging Recipe"
+    },
+    "Rankine Fusion_furnace": {
+        "prefix": "r-rankine-fusion_furnace",
+        "body": ["event.remove({output: [], type: 'rankine:fusion_furnace'});"],
+        "description": "Remove Rankine Fusion_furnace Recipe"
+    },
+    "Rankine Induction_alloying": {
+        "prefix": "r-rankine-induction_alloying",
+        "body": ["event.remove({output: [], type: 'rankine:induction_alloying'});"],
+        "description": "Remove Rankine Induction_alloying Recipe"
+    },
+    "Rankine Intrusive_igneous": {
+        "prefix": "r-rankine-intrusive_igneous",
+        "body": ["event.remove({output: [], type: 'rankine:intrusive_igneous'});"],
+        "description": "Remove Rankine Intrusive_igneous Recipe"
+    },
+    "Rankine Metamorphic": {
+        "prefix": "r-rankine-metamorphic",
+        "body": ["event.remove({output: [], type: 'rankine:metamorphic'});"],
+        "description": "Remove Rankine Metamorphic Recipe"
+    },
+    "Rankine Mixing": {
+        "prefix": "r-rankine-mixing",
+        "body": ["event.remove({output: [], type: 'rankine:mixing'});"],
+        "description": "Remove Rankine Mixing Recipe"
+    },
+    "Rankine Sedimentary": {
+        "prefix": "r-rankine-sedimentary",
+        "body": ["event.remove({output: [], type: 'rankine:sedimentary'});"],
+        "description": "Remove Rankine Sedimentary Recipe"
+    },
+    "Rankine Sluicing": {
+        "prefix": "r-rankine-sluicing",
+        "body": ["event.remove({output: [], type: 'rankine:sluicing'});"],
+        "description": "Remove Rankine Sluicing Recipe"
+    },
+    "Rankine Stripping": {
+        "prefix": "r-rankine-stripping",
+        "body": ["event.remove({output: [], type: 'rankine:stripping'});"],
+        "description": "Remove Rankine Stripping Recipe"
+    },
+    "Rankine Treetapping": {
+        "prefix": "r-rankine-treetapping",
+        "body": ["event.remove({output: [], type: 'rankine:treetapping'});"],
+        "description": "Remove Rankine Treetapping Recipe"
+    },
+    "Rankine Volcanic": {
+        "prefix": "r-rankine-volcanic",
+        "body": ["event.remove({output: [], type: 'rankine:volcanic'});"],
+        "description": "Remove Rankine Volcanic Recipe"
+    },
+    "Salt Salt_crystal_growing": {
+        "prefix": "r-salt-salt_crystal_growing",
+        "body": ["event.remove({output: [], type: 'salt:salt_crystal_growing'});"],
+        "description": "Remove Salt Salt_crystal_growing Recipe"
+    },
+    "Salt Salt_evaporation": {
+        "prefix": "r-salt-salt_evaporation",
+        "body": ["event.remove({output: [], type: 'salt:salt_evaporation'});"],
+        "description": "Remove Salt Salt_evaporation Recipe"
+    },
+    "Tconstruct Alloy": {
+        "prefix": "r-tconstruct-alloy",
+        "body": ["event.remove({output: [], type: 'tconstruct:alloy'});"],
+        "description": "Remove Tconstruct Alloy Recipe"
+    },
+    "Tconstruct Casting_basin": {
+        "prefix": "r-tconstruct-casting_basin",
+        "body": ["event.remove({output: [], type: 'tconstruct:casting_basin'});"],
+        "description": "Remove Tconstruct Casting_basin Recipe"
+    },
+    "Tconstruct Casting_table": {
+        "prefix": "r-tconstruct-casting_table",
+        "body": ["event.remove({output: [], type: 'tconstruct:casting_table'});"],
+        "description": "Remove Tconstruct Casting_table Recipe"
+    },
+    "Tconstruct Entity_melting": {
+        "prefix": "r-tconstruct-entity_melting",
+        "body": ["event.remove({output: [], type: 'tconstruct:entity_melting'});"],
+        "description": "Remove Tconstruct Entity_melting Recipe"
+    },
+    "Tconstruct Foundry": {
+        "prefix": "r-tconstruct-foundry",
+        "body": ["event.remove({output: [], type: 'tconstruct:foundry'});"],
+        "description": "Remove Tconstruct Foundry Recipe"
+    },
+    "Tconstruct Melting": {
+        "prefix": "r-tconstruct-melting",
+        "body": ["event.remove({output: [], type: 'tconstruct:melting'});"],
+        "description": "Remove Tconstruct Melting Recipe"
+    },
+    "Tconstruct Modifiers": {
+        "prefix": "r-tconstruct-modifiers",
+        "body": ["event.remove({output: [], type: 'tconstruct:modifiers'});"],
+        "description": "Remove Tconstruct Modifiers Recipe"
+    },
+    "Tconstruct Molding": {
+        "prefix": "r-tconstruct-molding",
+        "body": ["event.remove({output: [], type: 'tconstruct:molding'});"],
+        "description": "Remove Tconstruct Molding Recipe"
+    },
+    "Tconstruct Part_builder": {
+        "prefix": "r-tconstruct-part_builder",
+        "body": ["event.remove({output: [], type: 'tconstruct:part_builder'});"],
+        "description": "Remove Tconstruct Part_builder Recipe"
+    },
+    "Tconstruct Severing": {
+        "prefix": "r-tconstruct-severing",
+        "body": ["event.remove({output: [], type: 'tconstruct:severing'});"],
+        "description": "Remove Tconstruct Severing Recipe"
+    },
+    "Tconstruct Worktable": {
+        "prefix": "r-tconstruct-worktable",
+        "body": ["event.remove({output: [], type: 'tconstruct:worktable'});"],
+        "description": "Remove Tconstruct Worktable Recipe"
+    },
+    "Tofucraft Bittern": {
+        "prefix": "r-tofucraft-bittern",
+        "body": ["event.remove({output: [], type: 'tofucraft:bittern'});"],
+        "description": "Remove Tofucraft Bittern Recipe"
+    },
+    "Tofucraft Harden": {
+        "prefix": "r-tofucraft-harden",
+        "body": ["event.remove({output: [], type: 'tofucraft:harden'});"],
+        "description": "Remove Tofucraft Harden Recipe"
+    },
+    "Twilightforest Uncrafting": {
+        "prefix": "r-twilightforest-uncrafting",
+        "body": ["event.remove({output: [], type: 'twilightforest:uncrafting'});"],
+        "description": "Remove Twilightforest Uncrafting Recipe"
+    },
+    "Vintageimprovements Auto_curving": {
+        "prefix": "r-vintageimprovements-auto_curving",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:auto_curving'});"],
+        "description": "Remove Vintageimprovements Auto_curving Recipe"
+    },
+    "Vintageimprovements Centrifugation": {
+        "prefix": "r-vintageimprovements-centrifugation",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:centrifugation'});"],
+        "description": "Remove Vintageimprovements Centrifugation Recipe"
+    },
+    "Vintageimprovements Coiling": {
+        "prefix": "r-vintageimprovements-coiling",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:coiling'});"],
+        "description": "Remove Vintageimprovements Coiling Recipe"
+    },
+    "Vintageimprovements Curving": {
+        "prefix": "r-vintageimprovements-curving",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:curving'});"],
+        "description": "Remove Vintageimprovements Curving Recipe"
+    },
+    "Vintageimprovements Grinder_sandpaper_polishing": {
+        "prefix": "r-vintageimprovements-grinder_sandpaper_polishing",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:grinder_sandpaper_polishing'});"],
+        "description": "Remove Vintageimprovements Grinder_sandpaper_polishing Recipe"
+    },
+    "Vintageimprovements Leaves_vibrating": {
+        "prefix": "r-vintageimprovements-leaves_vibrating",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:leaves_vibrating'});"],
+        "description": "Remove Vintageimprovements Leaves_vibrating Recipe"
+    },
+    "Vintageimprovements Polishing": {
+        "prefix": "r-vintageimprovements-polishing",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:polishing'});"],
+        "description": "Remove Vintageimprovements Polishing Recipe"
+    },
+    "Vintageimprovements Pressurizing": {
+        "prefix": "r-vintageimprovements-pressurizing",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:pressurizing'});"],
+        "description": "Remove Vintageimprovements Pressurizing Recipe"
+    },
+    "Vintageimprovements Unpacking": {
+        "prefix": "r-vintageimprovements-unpacking",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:unpacking'});"],
+        "description": "Remove Vintageimprovements Unpacking Recipe"
+    },
+    "Vintageimprovements Vacuumizing": {
+        "prefix": "r-vintageimprovements-vacuumizing",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:vacuumizing'});"],
+        "description": "Remove Vintageimprovements Vacuumizing Recipe"
+    },
+    "Vintageimprovements Vibrating": {
+        "prefix": "r-vintageimprovements-vibrating",
+        "body": ["event.remove({output: [], type: 'vintageimprovements:vibrating'});"],
+        "description": "Remove Vintageimprovements Vibrating Recipe"
+    },
+    "Waystones Warp_plate": {
+        "prefix": "r-waystones-warp_plate",
+        "body": ["event.remove({output: [], type: 'waystones:warp_plate'});"],
+        "description": "Remove Waystones Warp_plate Recipe"
+    },
+    "Justenoughbreeding Breeding": {
+        "prefix": "r-justenoughbreeding-breeding",
+        "body": ["event.remove({output: [], type: 'justenoughbreeding:breeding'});"],
+        "description": "Remove Justenoughbreeding Breeding Recipe"
+    },
+}

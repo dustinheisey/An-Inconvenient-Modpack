@@ -1,0 +1,30 @@
+{
+  "name": "Black Gold",
+  "icon": "endrem:black_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 10,
+  "secret": true,
+  "advancement": "im:chapter_5_2/eye_black",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "My company is looking to expand into producing its own energy and the raw materials for its many products. The initial investment will be great, but if successful, it will reduce my costs tremendously.$(br2)There is a belief held among the public that business owners who take on great risk should be rewarded with all of the wealth they amass."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "While this may be beneficial for the business owners, I can't help but wonder how much risk I'm actually taking on. If this expansion doesn't work out as planned, I still have my multiple other successful businesses to fall back on. I guess this security makes my conglomerate of companies too big to actually fail, no matter what we do. Maybe it makes me more ambitious, or maybe more reckless.$(br2)When I arrive at what will become the drilling site,"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "my team and I are surprised to find many groups of native people already living there. When we try to speak with them, they don't understand our language, but their body language suggests they don't want us there. This doesn't matter to me, as I can use the misunderstanding to justify my mission anyways.$(br2)A large oil rig is installed to begin the drilling, but when a core sample is extracted showing such a massive reserve of oil and an even"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "larger underground cavern, I decide to change the drilling site. We find an entrance to the cave at the base of a nearby mountain and I send my pathfinder in to find a path underground.$(br2)An elevator is installed and when I descend to the cave floor, my jaw drops. I have never seen so much oil in one place before, and in lakes that are so easily accessible to pump. Seeing so much potential profit, I quickly call my Geologist, Drilling Engineer,"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "and Pipeline Technician and make plans for them to start pumping and processing the oil at once. The thought of how this massive project will affect the locals and other life in this area never crosses my mind."
+    }
+  ]
+}

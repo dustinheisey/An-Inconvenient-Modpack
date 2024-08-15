@@ -1,0 +1,10 @@
+To refresh this file, delete it and run /reload command again! Last updated: Apr 7, 2024, 5:19:46 PM
+
+#terrablender:nether_regions
+- minecraft:the_nether
+
+#cold_sweat:soulspring_lamp_valid
+- minecraft:the_nether
+
+#terrablender:overworld_regions
+- minecraft:overworld

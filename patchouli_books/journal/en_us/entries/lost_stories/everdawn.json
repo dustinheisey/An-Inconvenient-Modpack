@@ -1,0 +1,22 @@
+{
+  "name": "Chaos",
+  "icon": "blue_skies:everdawn_portal",
+  "category": "patchouli:lost_stories",
+  "sortnum": 2,
+  "secret": true,
+  "advancement": "im:chapter_3/everdawn_lost_story",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "We acted as if we cared when most of the animals died, but in reality, we didn't. The outrage about it was good for getting donations. We started to care more when the water dried up and we couldn't grow grain for our livestock. Those animals mattered.$(br2)We had become accustomed to wildfires, hurricanes, and tornadoes, but no matter how accustomed we became, the next"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "disaster was always worse than we could have imagined.$(br2)We were not prepared for the infestations. Billions of mosquitoes, locusts, and ticks laid waste to the crops we had left and infected our livestock with a myriad of new diseases. Almost as devastating was the scores of spiders that followed shortly after the first wave.$(br2)As our resources dried up, everything became more expensive, but our employers"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "would not pay us more to meet the rising costs. In fact, we were forced to spend more of our increasingly worthless money just to survive, as those in power cut public spending to reduce inflation.$(br2)There is a growing movement to emigrate from this place and find somewhere safer, if there is anywhere safe left on this dying world."
+    }
+  ]
+}

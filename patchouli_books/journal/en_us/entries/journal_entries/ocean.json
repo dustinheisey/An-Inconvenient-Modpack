@@ -1,0 +1,18 @@
+{
+  "name": "Ocean City",
+  "icon": "minecraft:heart_of_the_sea",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 7,
+  "advancement": "im:chapter_2/ocean",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The story I found in Everbright spoke of a flood that covered much of the land, including many cities. Through my travels, I have come across a new city, this one almost completely submerged. I descended into its depths and found an enormous fish-like creature at the city's center."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "This discovery makes me think that the story I read was real, and that the flooding was caused by something similar to what caused the giant craters near the bunker.TODO: fix"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+To refresh this file, delete it and run /reload command again! Last updated: Apr 7, 2024, 5:19:50 PM
+
+#the_bumblezone:no_dungeons
+- the_bumblezone:cell_maze
+
+#dungeons_arise:explorer_maps/plague_asylum
+- dungeons_arise:plague_asylum
+
+#the_bumblezone:wrath_causing
+- the_bumblezone:cell_maze
+
+#dungeons_arise:explorer_maps/shiraz_palace
+- dungeons_arise:shiraz_palace
+
+#dungeons_arise:explorer_maps/illager_fort
+- dungeons_arise:illager_fort
+
+#blue_skies:on_blinding_maps
+- blue_skies:everbright_blinding_dungeon
+- blue_skies:everdawn_blinding_dungeon
+
+#pneumaticcraft:no_oil_lakes
+- #minecraft:village
+
+#the_bumblezone:honey_compass_locating
+- the_bumblezone:cell_maze
+
+#bettermineshafts:better_mineshafts
+- bettermineshafts:mineshaft_acacia
+- bettermineshafts:mineshaft_desert
+- bettermineshafts:mineshaft_dripstone
+- bettermineshafts:mineshaft_forest
+- bettermineshafts:mineshaft_ice
+- bettermineshafts:mineshaft_jungle
+- bettermineshafts:mineshaft_lush
+- bettermineshafts:mineshaft_mesa
+- bettermineshafts:mineshaft_mushroom
+- bettermineshafts:mineshaft_oak
+- bettermineshafts:mineshaft_red_desert
+- bettermineshafts:mineshaft_spruce
+- bettermineshafts:mineshaft_spruce_snowy
+
+#dungeons_arise:explorer_maps/mining_system
+- dungeons_arise:mining_system
+
+#dungeons_arise:explorer_maps/illager_corsair
+- dungeons_arise:illager_corsair
+
+#minecraft:shipwreck
+- minecraft:shipwreck
+- minecraft:shipwreck_beached
+
+#minecraft:on_ocean_explorer_maps
+- minecraft:monument
+- betteroceanmonuments:ocean_monument
+
+#blue_skies:tree_disallowed
+- #blue_skies:on_nature_maps
+- blue_skies:village_calming_skies
+- blue_skies:village_crystal_dunes
+- blue_skies:village_brightlands
+- blue_skies:village_sunset_maple_forest
+- blue_skies:village_slushlands
+
+#blue_skies:on_poison_maps
+- blue_skies:poison_dungeon
+
+#betterstrongholds:stronghold
+- betterstrongholds:stronghold
+
+#minecraft:on_treasure_maps
+- minecraft:buried_treasure
+
+#morevillagers:on_mineshaft_explorer_maps
+- #bettermineshafts:better_mineshafts
+
+#minecraft:ruined_portal
+- minecraft:ruined_portal_desert
+- minecraft:ruined_portal_jungle
+- minecraft:ruined_portal_mountain
+- minecraft:ruined_portal_nether
+- minecraft:ruined_portal_ocean
+- minecraft:ruined_portal
+- minecraft:ruined_portal_swamp
+
+#minecraft:village
+- minecraft:village_plains
+- minecraft:village_desert
+- minecraft:village_savanna
+- minecraft:village_snowy
+- minecraft:village_taiga
+- blue_skies:village_calming_skies
+- blue_skies:village_crystal_dunes
+- blue_skies:village_brightlands
+- blue_skies:village_shaded_woodlands
+- blue_skies:village_sunset_maple_forest
+- blue_skies:village_slushlands
+
+#dungeons_arise:explorer_maps/foundry
+- dungeons_arise:foundry
+
+#minecraft:ocean_ruin
+- minecraft:ocean_ruin_cold
+- minecraft:ocean_ruin_warm
+
+#blue_skies:on_bunker_maps
+- blue_skies:frozen_bunker
+
+#minecraft:mineshaft
+- minecraft:mineshaft
+- minecraft:mineshaft_mesa
+- bettermineshafts:mineshaft_acacia
+- bettermineshafts:mineshaft_desert
+- bettermineshafts:mineshaft_ice
+- bettermineshafts:mineshaft_jungle
+- bettermineshafts:mineshaft_lush
+- bettermineshafts:mineshaft_mesa
+- bettermineshafts:mineshaft_mushroom
+- bettermineshafts:mineshaft_oak
+- bettermineshafts:mineshaft_red_desert
+- bettermineshafts:mineshaft_spruce
+- bettermineshafts:mineshaft_spruce_snowy
+- bettermineshafts:mineshaft_forest
+- bettermineshafts:mineshaft_dripstone
+
+#minecraft:on_woodland_explorer_maps
+- minecraft:mansion
+
+#blue_skies:on_nature_maps
+- blue_skies:nature_dungeon
+
+#dungeons_arise:explorer_maps/thornborn_towers
+- dungeons_arise:thornborn_towers
+
+#dungeons_arise:explorer_maps/mushroom_mines
+- dungeons_arise:mushroom_mines
+
+#betterfortresses:fortress
+- betterfortresses:fortress
+
+#blue_skies:dungeons
+- blue_skies:everbright_blinding_dungeon
+- blue_skies:everdawn_blinding_dungeon
+- blue_skies:nature_dungeon
+- blue_skies:poison_dungeon
+
+#minecraft:eye_of_ender_located
+- minecraft:stronghold
+- #betterstrongholds:stronghold
+
+#dungeons_arise:explorer_maps/monastery
+- dungeons_arise:monastery
+
+#dungeons_arise:explorer_maps/illager_campsite
+- dungeons_arise:illager_campsite
+
+#minecraft:dolphin_located
+- #minecraft:ocean_ruin
+- #minecraft:shipwreck

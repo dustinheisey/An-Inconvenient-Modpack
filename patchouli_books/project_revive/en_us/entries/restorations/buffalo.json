@@ -1,0 +1,11 @@
+{
+  "name": "Buffalo",
+  "icon": "totemic:buffalo_tooth",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Bring buffalo back to the grasslands & create a buffalo sanctuary"
+    }
+  ]
+}

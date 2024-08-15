@@ -1,0 +1,59 @@
+
+[Harvestables]
+	#A global modifier for the probability that the "age" property of retting fiber bales will progress with each growth opportunity.
+	#Lower values mean a lower chance of progress (slower progress), whereas higher values mean a higher chance (quicker progress).
+	#Range: 0.0 ~ 1.0
+	retting_bale_tick_age_chance = 0.65
+	#A global modifier for the probability that the "age" value of the flax crop will increase with each growth opportunity.
+	#Lower values mean a lower chance of increase (slower growth), whereas higher values mean a higher chance of increase (quicker growth).
+	#Range: 0.0 ~ 1.0
+	flax_crop_growth_modifier = 1.0
+	#The minimum light level that Flax needs in order to grow.
+	#The light level at the crop's position must equal or exceed this value, else no growth will occur.
+	#Range: 0 ~ 15
+	flax_min_lightlevel = 8
+	#The additive percentage harvest speed bonus awarded when breaking flax crops with shears.
+	#For example, a value of 1.0 means a break speed bonus of +100% (twice as fast), and a value of 2.53 means a break speed bonus of +253% (more than three times as fast).
+	#Modify with caution as this value is cumulative with other effects that modify break speed, such as potion effects.
+	#Range: 0.0 ~ 1.7976931348623157E308
+	flax_shears_harvest_bonus = 1.0
+
+[Trading]
+	#Whether Shepherd villagers should sell Fabric if they are sufficiently skilled.
+	#Changes to this value will require that the current World be reloaded.
+	shepherd_trade_fabrics = false
+	#The minimum skill level that Shepherd villagers must reach before Fabric trades become available.
+	#This value will have no effect if the shepherd trading feature is disabled.
+	#Changes to this value will require that the current World be reloaded.
+	#Allowed Values: NOVICE, APPRENTICE, JOURNEYMAN, EXPERT, MASTER
+	shepherd_trade_skill_threshold = "JOURNEYMAN"
+	#Whether the Wandering Trader will occasionally deal in Fabrics.
+	#Changes to this value will require that the current World be reloaded.
+	wandering_trader_trade_fabrics = false
+
+["Cushions and Padding"]
+	#Whether cushion blocks reduce effective fall distance when landed upon.
+	cushion_fall_reduction_enabled = true
+	#Whether bundled feather blocks reduce effective fall distance when landed upon.
+	featherblock_fall_reduction_enabled = true
+	#The amount each cushion in a stack of cushions will reduce effective fall distance by when landed upon.
+	#The formula used is: (EffectiveDistance) = (RealDistance) * (1.0 - (Reduction)^(CushionQuantity))
+	#Therefore, if this value is set to 0.2 and there are three cushions in the stack, the effective fall distance will be roughly halved.
+	#This value will have no effect if the cushion fall reduction feature is disabled.
+	#Range: 0.0 ~ 1.0
+	cushion_fall_reduction_per = 0.2
+	#The maximum number of additional blocks to consider when calculating fall damage reduction for the Cushion block. Use in conjuction with the cushion fall reduction value for fine-tuning this feature.
+	#This is the maximum number of whole block spaces BENEATH the fallen-upon cushion that will be examined. Use caution when supplying larger values.
+	#This value will have no effect if the cushion fall reduction feature is disabled.
+	#Range: 0 ~ 16
+	cushion_fall_reduction_seek = 4
+	#The flat amount of effective fall distance reduction applied by landing on a bundled feather block.
+	#The formula used is (EffectiveDistance) = (RealDistance) * (1.0 - (Reduction))
+	#Therefore, a value of 0.3 will reduce the effective fall distance by 30%.
+	#This value will have no effect if the feather fall reduction feature is disabled.
+	#Range: 0.0 ~ 1.0
+	featherblock_fall_reduction = 0.2
+	#The fall-distance threshold, in blocks, beyond which falling upon a feather bundle block will cause it to break.
+	#Range: 0.0 ~ 1.7976931348623157E308
+	featherblock_fall_break_threshold = 0.5
+

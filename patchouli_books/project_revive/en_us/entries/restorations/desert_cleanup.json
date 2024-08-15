@@ -1,0 +1,11 @@
+{
+  "name": "Desert Cleanup",
+  "icon": "ecofriendly:sea_glass_ym",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Clean up 1000 blocks of sea glass"
+    }
+  ]
+}

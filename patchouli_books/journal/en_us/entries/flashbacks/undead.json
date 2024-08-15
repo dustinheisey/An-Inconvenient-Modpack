@@ -1,0 +1,22 @@
+{
+  "name": "Pandemic",
+  "icon": "endrem:undead_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 3,
+  "secret": true,
+  "advancement": "im:chapter_3/eye_undead",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I'm looking at my phone as I sit in the back seat of my car on the way to my office. I read multiple reports of a strange illness affecting people across the world, causing their skin to rot and their minds to become increasingly confused and violent. This just seems like propaganda to me, so I ignore it.$(br2)A few weeks pass and the first case of the virus appears in "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "our country. After a few more weeks, it is present almost everywhere on the planet. It clusters in large population centers, and starts to infect the workers at my factories.$(br2)Workers start calling in sick in mass, and productivity decreases tremendously. I send them an ultimatum by email stating that if they are not willing to work when they are not feeling well, then they should look for another job. I run a hardcore company and I need hardcore workers who"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "believe in my mission more than they do their health. Most workers quit, prioritizing their health over my mission.$(br2)My profits are decreasing rapidly, and I start to panic. I call my operations team and schedule an emergency meeting to determine the best course of action that can maintain our profits with the workforce leaving in droves. It seems I will need to prioritize investment in automation."
+    }
+  ]
+}

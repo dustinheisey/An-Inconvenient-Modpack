@@ -1,0 +1,41 @@
+{
+  "name": "Savannahs Fauna",
+  "icon": "minecraft:acacia_sapling",
+  "category": "patchouli:bestiary",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": ""
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:rhino",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:lion",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:hippo",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:giraffe",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:elephant",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "naturalist:firefly",
+      "scale": 0.75
+    }
+  ]
+}

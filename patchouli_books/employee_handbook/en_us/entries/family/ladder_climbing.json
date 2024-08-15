@@ -1,0 +1,27 @@
+{
+  "name": "Ladder Climbing 101",
+  "icon": "twilightforest:charm_of_life_1",
+  "category": "patchouli:family",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Welcome to Ladder Climbing 101, your definitive guide to ascending the corporate ranks with the agility of a cat and the grace of a gazelle in a suit. $(br2)1. Master the Art of Meeting Nodding: Attend every meeting, even those not relevant to your role. The key here is visibility. Sit at the forefront, nod sagely at everything said, and occasionally interject "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "with, \"Great point!\" or \"Let's leverage that.\" Your presence (and your nods) will become synonymous with proactive engagement. $(br2)2. Be a Buzzword Black Belt: Fluency in corporate speak isn't just recommended; it's required. Words like \"synergy,\" \"pivot,\" and \"streamline\" should be sprinkled throughout your conversations like confetti. The less anyone understands, the more impressed they'll be."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "3. Claim Credit Wisely: In the rare event something goes right, be swift in your claim. Articulate your contributions with the finesse of a politician, ensuring your name is etched into the annals of corporate victory. Conversely, when projects go south, become a master of the discreet fade, blending into the background with the skill of a chameleon. $(br2)4. Feedback Loops: Seek feedback like a detective on a case. Not only does it show your dedication to"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "self-improvement, but it also provides ample opportunities to subtly remind others of your achievements and aspirations. $(br2)5. Mentorship Machinations: Secure a mentor high up the ladder. This isn't just about growth; it's about having someone in the echelons above who has a vested interest in your ascent. Their endorsement can open doors that no amount of nodding ever could. $(br2)Remember, climbing the"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "corporate ladder isn't a sprint; it's a marathon—a marathon where you have to look good, sound smart, and navigate the maze of office politics with the cunning of a fox. With these strategies in hand, you're not just climbing; you're soaring. Welcome to the top, climber. The view's quite something, isn't it?"
+    }
+  ]
+}

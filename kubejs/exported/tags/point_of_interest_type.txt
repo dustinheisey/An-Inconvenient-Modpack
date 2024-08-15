@@ -1,0 +1,9 @@
+To refresh this file, delete it and run /reload command again! Last updated: Apr 7, 2024, 5:20:03 PM
+
+#tofucraft:tofunian_job
+- minecraft:armorer
+- minecraft:farmer
+- minecraft:leatherworker
+
+#minecraft:acquirable_job_site
+- tofucraft:tofu_craftsman

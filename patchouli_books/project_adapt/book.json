@@ -1,0 +1,8 @@
+{
+  "name": "Project Adapt",
+  "version": 1,
+  "book_texture": "patchouli:textures/gui/book_red.png",
+  "model": "im:project_adapt",
+  "landing_text": "",
+  "show_progress": false
+}

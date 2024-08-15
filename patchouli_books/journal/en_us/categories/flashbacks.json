@@ -1,0 +1,7 @@
+{
+  "name": "Flashbacks",
+  "description": "Sometimes I have flashbacks that reveal something about my past. I will describe them here.",
+  "icon": "endrem:lost_eye",
+  "sortnum": 2,
+  "secret": true
+}

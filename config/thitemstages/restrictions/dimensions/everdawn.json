@@ -1,0 +1,6 @@
+{
+  "Restriction Data": {
+    "stage": "dimension_everdawn",
+    "dimensionList": ["blue_skies:everdawn"]
+  }
+}

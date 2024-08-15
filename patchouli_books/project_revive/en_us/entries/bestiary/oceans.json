@@ -1,0 +1,92 @@
+{
+  "name": "Oceans Fauna",
+  "icon": "minecraft:tube_coral",
+  "category": "patchouli:bestiary",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": ""
+    },
+
+    {
+      "type": "patchouli:entity",
+      "entity": "upgrade_aquatic:thrasher",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "upgrade_aquatic:pike",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "upgrade_aquatic:perch",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "upgrade_aquatic:nautilus",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "upgrade_aquatic:lionfish",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "upgrade_aquatic:great_thrasher",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "upgrade_aquatic:goose",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "upgrade_aquatic:flare",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "crittersandcompanions:sea_bunny",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "crittersandcompanions:otter",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "crittersandcompanions:koi_fish",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "crittersandcompanions:dumbo_octopus",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:vaquita",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:kelpalo_ym",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:matamata_ym",
+      "scale": 0.75
+    },
+    {
+      "type": "patchouli:entity",
+      "entity": "ecofriendly:totoba_ym",
+      "scale": 0.75
+    }
+  ]
+}

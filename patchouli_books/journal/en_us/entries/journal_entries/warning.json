@@ -1,0 +1,26 @@
+{
+  "name": "Warning",
+  "icon": "rankine:carbon_dioxide_gas_bottle",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 13,
+  "advancement": "im:chapter_4/warning",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "So this is what has been behind these global catastrophes all along? It has been carbon dioxide caused by fossil fuels such as oil & coal? Multiple centuries ago, I was one of the top executives making this disastrous decision for the rest of humanity? What could have drove my insanity to a point where the numbers rising in my bank account were more important, worth more "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "consideration and worship than the existence of all of the life on this planet? I am deeply ashamed, and I wonder about the state of the human condition which compelled millions, billions of people to allow my rise to the top, even while I stepped on their faces to get there.$(br2)Why was I and executives like me allowed to pass from the age we destroyed into the new one, while everyone else was butchered by natural disasters, pestilence, and war?"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Even in this new age, having forgotten the past, I have polluted further in my quest to understand what happened. $(br2)I wonder if I would have done things differently if I knew then what I know now. Would I have found a different path that excludes the burning of fossil fuels? Would I have treated the lives of my workers as sacred and worth protecting, even if it meant that I would sacrifice my profits? I guess now that I know, I have a choice, but do I"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "really, in the face of all of the destruction I caused? I must follow a better path this time around."
+    }
+  ]
+}

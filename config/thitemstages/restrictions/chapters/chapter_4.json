@@ -1,0 +1,44 @@
+{
+  "Restriction Data": {
+    "stage": "chapter_4",
+    "tagList": ["im:chapter_4"],
+    "itemList": [
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:small_nether_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:small_blueleaf_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:medium_nether_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:medium_blueleaf_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:large_nether_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:large_blueleaf_gateway"}
+      }
+    ]
+  },
+  "Settings": {
+    "advancedTooltips": "ADVANCED",
+    "itemTitle": "Unknown Item",
+    "pickupDelay": 15,
+    "hideInJEI": true,
+    "canPickup": false,
+    "containerListWhitelist": false,
+    "checkPlayerInventory": false,
+    "checkPlayerEquipment": true,
+    "usableItems": false,
+    "usableBlocks": false
+  }
+}

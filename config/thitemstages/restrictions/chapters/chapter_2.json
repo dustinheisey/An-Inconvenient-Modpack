@@ -1,0 +1,44 @@
+{
+  "Restriction Data": {
+    "stage": "chapter_2",
+    "tagList": ["im:chapter_2"],
+    "itemList": [
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "naturesaura:book"
+        }
+      },
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "totemic:totempedia"
+        }
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:small_everbright_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:medium_everbright_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:large_everbright_gateway"}
+      }
+    ]
+  },
+  "Settings": {
+    "advancedTooltips": "ADVANCED",
+    "itemTitle": "Unknown Item",
+    "pickupDelay": 15,
+    "hideInJEI": true,
+    "canPickup": false,
+    "containerListWhitelist": false,
+    "checkPlayerInventory": false,
+    "checkPlayerEquipment": true,
+    "usableItems": false,
+    "usableBlocks": false
+  }
+}

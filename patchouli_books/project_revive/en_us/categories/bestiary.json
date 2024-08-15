@@ -1,0 +1,7 @@
+{
+  "name": "Bestiary",
+  "description": "Log of all of the restored life",
+  "icon": "kubejs:earth_token",
+  "sortnum": 1,
+  "secret": true
+}

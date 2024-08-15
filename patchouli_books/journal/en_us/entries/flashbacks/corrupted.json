@@ -1,0 +1,9 @@
+{
+  "name": "Parasite",
+  "icon": "endrem:corrupted_eye",
+  "category": "patchouli:flashbacks",
+  "sortnum": 4,
+  "secret": true,
+  "advancement": "im:chapter_3/eye_corrupted",
+  "pages": []
+}

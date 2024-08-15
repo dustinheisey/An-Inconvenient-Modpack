@@ -1,0 +1,19 @@
+
+["CharcoalPit/CokeOven"]
+	#The time charcoal pits take to finish. 1000 Ticks = 1 MC hour
+	#Range: > 1000
+	CharcoalTime = 8000
+	#The time coke ovens take to finish. 1000 Ticks = 1 MC hour
+	#Range: > 1000
+	CokeTime = 18000
+	#Amount of creosote oil in mB produced per log
+	#Range: 0 ~ 1000
+	CharcoalCreosote = 50
+	#Amount of creosote oil in mB produced per coal
+	#Range: 0 ~ 1000
+	CokeCreosote = 100
+	#If flower tree leaves should cycle between green and blooming variants with time
+	CycleFlowerTrees = true
+	#If Stone(Flint) tools should be downgraded to wood tier
+	DowngradeStone = true
+

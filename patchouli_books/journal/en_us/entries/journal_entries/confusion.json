@@ -1,0 +1,18 @@
+{
+  "name": "Confusion",
+  "icon": "farmersdelight:hamburger",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 18,
+  "advancement": "im:chapter_5_1/confusion",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I don't understand, I thought I was doing everything right? Why is the temperature still raising? Why haven't I seen any wild animals recently, they were here just months ago? $(br2)What is going on? Sure, I have probably burned some fossil fuels to get my factory farm running, but far less than I could have. I have farmed a lot of animals."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "I've fed them a massive amount of feed. I've dumped many tons of their waste into the rivers. I cleared many hectares of forest to make room for them. $(br2)I can't fathom how this could have caused these problems. How could all this add up to cancel my efforts to avoid fossil fuels? I feel confused and a mounting sense of hopelessness."
+    }
+  ]
+}

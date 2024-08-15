@@ -1,0 +1,18 @@
+{
+  "name": "Energy",
+  "icon": "naturesaura:gold_leaf",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 4,
+  "advancement": "im:chapter_2/root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Now that it's more or less safe in my home and I'm not obsessed with the heat or my hunger, I notice some new things about the environment. When I walk, I can feel an energy humming around me. Even if I can't see anything I feel strongly that I am not imagining it. Just like the temperature changes in different areas, the vibration of this energy seems to change also. In some places full of "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "plant life, the energy feels vibrant and pleasing, while in other places, namely those with little life, it feels hollow and depressing.$(br2)I'm curious if I can develop any method of understanding or seeing this energy, and I wonder what it means that it is here at all."
+    }
+  ]
+}

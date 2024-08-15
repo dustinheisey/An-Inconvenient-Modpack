@@ -1,0 +1,11 @@
+{
+  "name": "Beach Cleanup",
+  "icon": "ecofriendly:plastic_bag_ym",
+  "category": "patchouli:restorations",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Pick up 1000 pieces of trash & clean up fishing nets"
+    }
+  ]
+}

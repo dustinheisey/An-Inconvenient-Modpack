@@ -1,0 +1,50 @@
+{
+  "Restriction Data": {
+    "stage": "chapter_7_1",
+    "tagList": ["im:chapter_7_1"],
+    "itemList": [
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "patchouli:community_handbook"
+        }
+      },
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "patchouli:project_revive"
+        }
+      },
+      {
+        "item": "patchouli:guide_book",
+        "nbt": {
+          "patchouli:book": "tofucraft:tofu_book"
+        }
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:small_end_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:medium_end_gateway"}
+      },
+      {
+        "item": "gateways:gate_pearl",
+        "nbt": {"gateway": "gateways:large_end_gateway"}
+      }
+    ]
+  },
+  "Settings": {
+    "advancedTooltips": "ADVANCED",
+    "itemTitle": "Unknown Item",
+    "pickupDelay": 15,
+    "hideInJEI": true,
+    "canPickup": false,
+    "containerListWhitelist": false,
+    "checkPlayerInventory": false,
+    "checkPlayerEquipment": true,
+    "usableItems": false,
+    "usableBlocks": false
+  }
+}

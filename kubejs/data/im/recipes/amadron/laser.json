@@ -1,0 +1,15 @@
+{
+  "type": "pneumaticcraft:amadron",
+  "static": true,
+  "input": {
+    "type": "ITEM",
+    "id": "kubejs:iron_coin",
+    "amount": 1
+  },
+  "output": {
+    "type": "ITEM",
+    "id": "pneumaticcraft:assembly_program_laser",
+    "amount": 1
+  },
+  "level": 0
+}

@@ -1,0 +1,22 @@
+{
+  "name": "Everbright",
+  "icon": "blue_skies:everbright_portal",
+  "category": "patchouli:entries",
+  "sortnum": 5,
+  "secret": true,
+  "advancement": "im:chapter_2/everbright",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I opened a portal to a new dimension, or maybe it teleported me to a new place in this one, I'm not sure. The environment is much different than the one I woke up in. Previously I found no animals besides the undead, whereas here There is a multitude of different animal species. Some are gentle and others aggressive. I also notice that it is much colder here, so cold that I need to find a way "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "to insulate my armor, otherwise I will quickly freeze.$(br2)After a while of exploring this new place I found a village with live inhabitants, however they spoke a language I could not begin to understand, and communication was impossible. I will have to keep looking for answers elsewhere.$(br2)In other buildings I found chests filled with some useful items along with some scraps of paper with "
+    },
+    {
+      "type": "patchouli:text",
+      "text": "notes on them. I read a few of them and they seem to be parts of a single story. I should find all of them."
+    }
+  ]
+}

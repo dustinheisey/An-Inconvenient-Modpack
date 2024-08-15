@@ -1,0 +1,15 @@
+{
+  "type": "pneumaticcraft:amadron",
+  "static": true,
+  "input": {
+    "type": "ITEM",
+    "id": "pneumaticcraft:plastic",
+    "amount": 24
+  },
+  "output": {
+    "type": "ITEM",
+    "id": "kubejs:copper_coin",
+    "amount": 24
+  },
+  "level": 0
+}

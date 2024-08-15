@@ -1,0 +1,22 @@
+{
+  "name": "A Strange Place",
+  "icon": "minecraft:dead_bush",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 0,
+  "advancement": "im:chapter_1/first_night",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "I awoke inside a cryogenic chamber. There were many other chambers around me, and most of them still contained people in hibernation. Perhaps a malfunction in my chamber had awakened me prematurely. I had no memory from before, but I felt that this amnesia was only temporary. I found an empty journal and a pencil in the chamber hallway, so I took it to record any memories that resurfaced."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "I proceeded down a long spiral staircase in the center of the enclosure and at the top I noticed a caveentered another corridor. At the end of it, I saw a large opening where a door should have been. Stepping through the gaping hole, I surveyed the barren landscape beyond me. Everywhere I looked, craters were scattered about as if hit by explosives. In the distance, I could see some greenery but there were no animals anywhere and an eerie silence cloaked everything."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Night was quickly descending and my stomach began to grumble as hunger set in. It was time to go out and find something to eat before returning to this bunker where it was safe."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "A Dire Warning",
+  "icon": "minecraft:obsidian",
+  "category": "patchouli:lost_stories",
+  "sortnum": 4,
+  "secret": true,
+  "advancement": "im:chapter_4/nether_lost_story",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "To those reading, heed this warning. This place was once much different. 100 years ago, we found this cavern deep underground while searching for oil. We found an almost endless supply of it in large lakes, so we settled here and built pumps to extract it and factories to process it.$(br2)We burned most of the oil to produce energy and used the rest to make plastic. Companies"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "started to make more than we ever could use and began to sell it to other nations across the world where demand was higher.$(br2)We noticed the temperature around us rising along with the owners' profits. Weird things started to happen. Fires happened more frequently and became more devastating. Workers began to fall ill with mysterious illnesses and then started to collapse while on the job from heat exhaustion."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Scientists detected the presence of large quantities of the gas carbon dioxide in the cavern atmosphere and determined that it was coming from the oil we had been burning and that it was directly causing all of these strange catastrophes.$(br2)We began protesting that the factories were no longer safe, but the owners would not see reason, and even made us work longer hours despite all of the evidence in favor of leaving. We had no choice but"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "to keep working, we needed to feed our families.$(br2)This kept getting worse, and we kept being forced to work until we all decided that the conditions were not much safer than starvation and quit. With no workforce, the owners finally closed the factory and it was abandoned.$(br2)Please, do not repeat the mistakes of the owners. It will not end well."
+    }
+  ]
+}

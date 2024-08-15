@@ -1,0 +1,14 @@
+{
+  "name": "Blood",
+  "icon": "hexerei:blood_bottle",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 9,
+  "advancement": "im:chapter_3/blood",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "My experiments with aura have taken a dark turn. I attempted to use the occult magic I learned previously to manipulate aura, and found that it reacts very interestingly to my own blood. It seems that blood carries with it a stronger energy that the air around me, and if put to use, can be incredibly powerful. I should follow where this path leads, I sense that I will learn a lot."
+    }
+  ]
+}

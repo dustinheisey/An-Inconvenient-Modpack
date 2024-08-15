@@ -1,0 +1,7 @@
+{
+  "name": "Handbook",
+  "description": "As a reminder, I will log the various techniques I learn and phenomenon I encounter.",
+  "icon": "rankine:stone_hammer",
+  "sortnum": 1,
+  "secret": true
+}

@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "factor": 1,
+      "value": "minecraft:zombie"
+    },
+    {
+      "factor": 1,
+      "value": "minecraft:husk"
+    },
+    {
+      "factor": 1,
+      "value": "biomancy:flesh_blob"
+    }
+  ]
+}

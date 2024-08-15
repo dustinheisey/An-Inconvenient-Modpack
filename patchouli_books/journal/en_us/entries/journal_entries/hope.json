@@ -1,0 +1,14 @@
+{
+  "name": "Hope",
+  "icon": "minecraft:compass",
+  "category": "patchouli:entries",
+  "secret": true,
+  "sortnum": 24,
+  "advancement": "im:chapter_5_2/hope",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Through the dense fog of my hopelessness I sense a small glimmer of hope in the back of my mind. This cannot be the end of the story, I must be missing something vital. I should wait until more information comes to me."
+    }
+  ]
+}

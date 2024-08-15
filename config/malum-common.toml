@@ -1,0 +1,119 @@
+
+[worldgen]
+
+	[worldgen.soulstone]
+		#Should soulstone ore generate underground?
+		generateSoulstone = false
+		#Size of soulstone ore veins underground.
+		soulstoneSize = 8
+		#Amount of soulstone ore veins.
+		soulstoneAmount = 3
+		#Minimum height at which soulstone ore can spawn.
+		soulstoneMinY = -64
+		#Maximum height at which soulstone ore can spawn.
+		soulstoneMaxY = 30
+		#Should soulstone ore generate on the surface?
+		generateSurfaceSoulstone = false
+		#Size of soulstone ore veins on the surface.
+		surfaceSoulstoneSize = 4
+		#Amount of soulstone ore veins on the surface.
+		surfaceSoulstoneAmount = 4
+		#Minimum height at which surface soulstone ore can spawn.
+		surfaceSoulstoneMinY = 60
+		#Maximum height at which surface soulstone ore can spawn.
+		surfaceSoulstoneMaxY = 100
+
+	[worldgen.weeping_well]
+		#Should the void be curious?
+		generateTheUnknown = false
+		#Which dimensions is the void interested in?
+		markedDimensions = ["minecraft:overworld"]
+
+	[worldgen.blazing_quartz]
+		#Should blaze quartz ore generate?
+		generateBlazeQuartz = true
+		#Size of blaze quartz ore veins.
+		blazeQuartzSize = 14
+		#Amount of blaze quartz ore veins.
+		blazeQuartzAmount = 16
+
+	[worldgen.natural_quartz_geode]
+		#Should quartz geodes generate?
+		generateQuartzGeodes = false
+		#Which dimensions can quartz geodes generate in?
+		quartzGeodeDimensions = ["minecraft:overworld"]
+
+	[worldgen.cthonic_gold]
+		#Should cthonic gold generate?
+		generateCthonicGold = false
+		#Which dimensions can cthonic gold generate in?
+		cthonicGoldDimensions = ["minecraft:overworld"]
+
+	[worldgen.brilliance]
+		#Should brilliant stone generate?
+		generateBrilliantStone = false
+		#Size of brilliant stone veins.
+		brilliantStoneSize = 4
+		#Amount of brilliant stone veins.
+		brilliantStoneAmount = 3
+		#Minimum height at which brilliant stone can spawn.
+		brilliantStoneMinY = -64
+		#Maximum height at which brilliant stone can spawn.
+		brilliantStoneMaxY = 40
+
+	[worldgen.runewood]
+		#Should runewood trees naturally generate?
+		generateRunewood = false
+		#Chance for runewood trees to generate in open biomes such as plains.
+		#Range: 0.0 ~ 1.0
+		runewoodCommonChance = 0.02
+		#Chance for runewood trees to generate in forest biomes.
+		#Range: 0.0 ~ 1.0
+		runewoodRareChance = 0.01
+
+	[worldgen.natural_quartz]
+		#Should natural quartz ore generate?
+		generateNaturalQuartz = false
+		#Size of natural quartz ore veins.
+		naturalQuartzSize = 5
+		#Amount of natural quartz ore veins.
+		naturalQuartzAmount = 2
+		#Minimum height at which natural quartz ore can spawn.
+		naturalQuartzMinY = -64
+		#Maximum height at which natural quartz ore can spawn.
+		naturalQuartzMaxY = 10
+
+[spirit]
+	#If set to true, any spirits dropped will simply take the form of an item.
+	noFancySpirits = true
+
+	[spirit.spawner]
+		#If set to true, mob spawners will create soulless mobs instead.
+		lameSpawners = false
+
+	[spirit.defaults]
+		#Whether entities without spirit jsons will use the default spirit data for their category.
+		defaultSpiritValues = true
+
+	[spirit.affinity]
+
+		[spirit.affinity.soul_ward]
+			#Multiplier for physical damage taken while soul ward is active.
+			#Range: 0.0 ~ 1.0
+			soulWardPhysical = 0.699999988079071
+			#Multiplier for magic damage taken while soul ward is active.
+			#Range: 0.0 ~ 1.0
+			soulWardMagic = 0.10000000149011612
+			#Base time in ticks it takes for one point of soul ward to recover.
+			soulWardRate = 60
+
+[codex]
+	#If set to true, the first undead enemy a player slays will drop the encyclopedia arcana.
+	enableCodexDrop = false
+
+[item]
+
+	[item.rebound]
+		#If set to true, you may put rebound on any weapon in the game.
+		enableUltimateRebound = false
+
