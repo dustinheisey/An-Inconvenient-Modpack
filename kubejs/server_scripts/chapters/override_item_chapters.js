@@ -1378,6 +1378,7 @@ onEvent('tags.items', event => {
       'rankine:mossy_dolostone_bricks_wall',
     ],
     chapter_2: [
+      'rankine:totem_of_cobbling',
       'rankine:gypsum',
       'rankine:gypsum_block',
       'rankine:compost',
@@ -1520,6 +1521,9 @@ onEvent('tags.items', event => {
       'rankine:cement_mix',
     ],
     chapter_3: [
+      'rankine:totem_of_timesaving',
+      'rankine:totem_of_hastening',
+      'rankine:totem_of_infusing',
       'rankine:hematite_ore',
       'rankine:yellow_glazed_porcelain',
       'rankine:lime_glazed_porcelain',
@@ -1876,6 +1880,10 @@ onEvent('tags.items', event => {
       'rankine:soul_sandstone_wall',
     ],
     chapter_4: [
+      'rankine:totem_of_enduring',
+      'rankine:totem_of_promising',
+      'rankine:totem_of_softening',
+      'rankine:totem_of_blazing',
       'rankine:ultra_high_refractory_brick',
       'rankine:ultra_high_refractory_bricks',
       'rankine:ultra_high_refractory_bricks_wall',
@@ -2676,6 +2684,10 @@ onEvent('tags.items', event => {
       'rankine:coin',
     ],
     chapter_7_1: [
+      'rankine:totem_of_levitating',
+      'rankine:totem_of_repulsing',
+      'rankine:totem_of_powering',
+      'rankine:totem_of_invigorating',
       'rankine:gold_ore',
       'rankine:mossy_ringwoodine_bricks',
       'rankine:mossy_ringwoodine_bricks_slab',
