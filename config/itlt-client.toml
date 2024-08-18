@@ -334,7 +334,7 @@
 	[Display.WindowTitle]
 		# 
 		# Enable this if you want to change the name of the Minecraft window.
-		enableCustomWindowTitle = true
+		enableCustomWindowTitle = false
 		# 
 		# The name you want your Minecraft window to be. Put "%mc" to include the original
 		# window title's contents to help identify the Minecraft version for example.
