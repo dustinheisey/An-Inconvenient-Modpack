@@ -1,3 +1,5 @@
+#!/bin/sh
+
 cp -a ../template/* ../../../../../world
 
 cd ../../../../

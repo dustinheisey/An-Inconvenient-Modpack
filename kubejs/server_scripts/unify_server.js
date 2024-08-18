@@ -91,7 +91,7 @@ let customtags = [
 function esplit(str) {
     let data = str.split("=")
     if (data.length == 1) {
-        for (let v of data[0].split(",")) yield v
+        for (let v of data[0].split(",")) yield v;
     } else if (data.length == 2) {
         for (let l of data[0].split(",")) {
             for (let r of data[1].split(",")) {
