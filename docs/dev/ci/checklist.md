@@ -22,7 +22,7 @@
 - All block loot is correctly dropping
 - All block loot that should be removed is correctly removed
 - All chest loot is correctly showing up
-- All chest loost that should be removed is correctly removed
+- All chest loot that should be removed is correctly removed
 - All mob loot is correctly dropping
 - All mob loot that should be removed is correctly removed
 - Lost pages are correctly loading in chests

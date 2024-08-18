@@ -1,16 +1,19 @@
-# Stories
+# Cohesive Narrative
+
+we need to make the nightmares/flashbacks/dreams tell a singular story in parts instead of joining together a bunch of mismatched stories and making a whole from that
 
 **pattern** - climate change | what triggered the memory | what is next to do
 
 ## Chapter 1
 
 1. cold eye
-    - triggered by hearth | about cryo chamber and bunker | points to smeltery
-    - desc - wake up in your living room staring at a hearth, drive to the factory and see smelteries making lots of ingots, either go to a showroom of the cryochamber and or a city or something or go strait to the bunker and sleep
+   - triggered by hearth | about cryo chamber and bunker | points to smeltery
+   - desc - wake up in your living room staring at a hearth, drive to the factory and see smelteries making lots of ingots, either go to a showroom of the cryochamber and or a city or something or go strait to the bunker and sleep
 
 ## Chapter 2
 
-2. exotic eye 
+2. exotic eye
+
    - triggered by smeltery | about ocean acidification | points to heart of sea
    - desc - notice ocean is acidifying, notice rare fish population dying, notice profit potential, description of heart of the sea a delicate rare organ from a fish that you eat
 
@@ -21,20 +24,23 @@
 ## Chapter 3
 
 4. undead eye
+
    - triggered by lost ingot | about pandemic | points to venom sac
-   - desc - 
+   - desc -
 
 5. corrupted eye
+
    - triggered by venom sac | about parasite capitalism | points to corrupted resonance
-   - desc - 
+   - desc -
 
 6. evil eye
+
    - triggered by corrupted resonance | about funding genocide | points to cinder dust
-   - desc - 
+   - desc -
 
 7. lost eye
    - triggered by cinder dust | about forest fires & automation, water scarcity | points to blaze cake
-   - desc - 
+   - desc -
 
 ## Chapter 4
 

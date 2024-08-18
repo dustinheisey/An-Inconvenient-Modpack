@@ -1,0 +1,47 @@
+# Restoration Procedures
+
+- oceans
+  - pick up 1000 pieces of trash & clean up fishing nets
+  - clean up oil spills with sorbent oil floaters
+  - coral reef rehabilitation
+  - build an ocean monitoring station
+- wetlands
+  - plant 1000 mangrove trees
+  - large scale permaculture composting & waste management (mushrooms)
+  - water filtering & purification
+  - build a wetlands monitoring station
+- savannahs
+  - controlled burns to reduce wildfires
+  - create 500 waterholes in savannahs
+  - plant native grasses to rehabilitated dead soil
+  - build a research station in the savannah
+- jungles
+  - build a food forest, with a canopy layer, next layer, next layer, bottom layer, etc
+  - create a bee sanctuary
+  - create a rainwater harvesting system
+  - setup a jungle weather station
+- forests
+  - create a bird sanctuary
+  - reintroduce all the different tree types back to the forest
+  - restore medicinal plants, lichen and moss to the forest
+  - build a forest monitoring station
+- grasslands
+  - build a grassland monitoring station
+  - bring buffalo back to the grasslands & create a buffalo sanctuary
+  - develop sustainable farming practices
+  - create a field of flowers for pollinator species
+- colds
+  - build a mountain monitoring station
+  - restore peatlands
+  - set wind power installation in the mountains
+  - build an arboretum
+- deserts
+  - plant 500 cactuses
+  - clean up sandy glass
+  - setup solar power installation
+  - build reptile oasis
+- civilization
+  - create a fusion reactor
+  - create a vertical eco garden and feed your community with vegan food
+  - setup a public transportation system
+  - Create an eco village for your community to live in, using trash
