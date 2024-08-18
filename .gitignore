@@ -12,7 +12,7 @@ minecraftinstance.json
 xaerominimap_entities.json
 /config/jei/world/**/*
 /node_modules
-/docs/process/mods_src/
+/docs/**/mods_src/
 /icon-exports-x32/
 package-lock.json
 .vscode/settings.json
