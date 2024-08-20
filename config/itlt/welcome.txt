@@ -1,1 +1,5 @@
-sldfkj t?
+You are about to wake up in an ice chamber in an underground bunker. You won't remember who you are, how you got there, or what happened to the world while you were frozen. You need to figure out who you are and what happened. But first you are going to need to figure out how to survive.
+
+To help you along the way you can find your next task in the advancement page (default key is "l"). You also found an empty journal and a pen near your ice chamber, and you can write about any discoveries or thoughts you have. You can access it by clicking the journal button in your inventory.
+
+Good luck and sorry if it the journey ends up being a little inconvenient...

@@ -7,6 +7,8 @@ onEvent('recipes', event => {
       [
         'rankine:hardness_tester',
         'rankine:flint_and_steel_from_pyrite',
+        'rankine:rope',
+        'rankine:fiber_block',
       ].forEach(id => event.remove({id: id}));
       event.shaped('rankine:fiber_block', ['aaa', 'aaa', 'aaa'], {
         a: 'paragon_textiles:plant_fibers',

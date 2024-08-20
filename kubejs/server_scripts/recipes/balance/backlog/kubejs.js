@@ -33,20 +33,15 @@ onEvent('recipes', event => {
   setBalanceRecipes({
     replaceInput: () => {
       event.replaceInput(
-        {output: 'malum:encyclopedia_arcana'},
-        'malum:processed_soulstone',
-        'malum:holy_sap'
-      );
-      event.replaceInput(
-        {output: 'botania:dodge_ring'},
+        { output: 'botania:dodge_ring' },
         'minecraft:emerald',
         'botania:terrasteel_nugget'
       );
       event.replaceInput(
-        {output: 'botania:itemfinder'},
+        { output: 'botania:itemfinder' },
         'minecraft:emerald',
         'botania:terrasteel_ingot'
-      );
+      )
       event.replaceInput(
         {output: 'naturesaura:shockwave_creator'},
         'minecraft:diamond_boots',
@@ -698,8 +693,6 @@ onEvent('recipes', event => {
           'malum:brilliant_deepslate',
           'malum:deepslate_soulstone_ore',
           'malum:soulstone_ore',
-          'rankine:plant_fiber',
-          'rankine:rope',
           'immersiveengineering:raw_block_silver',
           'immersiveengineering:raw_block_lead',
           '#farmersdelight:wild_crops',
