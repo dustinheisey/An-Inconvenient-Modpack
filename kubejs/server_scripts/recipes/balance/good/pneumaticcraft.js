@@ -2,20 +2,9 @@ onEvent('recipes', event => {
   setBalanceRecipes({
     amadron_trade: () => {},
     explosion_crafting: () => {
-      event.remove({output: 'pneumaticcraft:ingot_iron_compressed'});
-      event.remove({output: 'pneumaticcraft:compressed_iron_block'});
     },
     fluid_mixer: () => {},
     pressure_chamber: () => {
-      event.remove({
-        output: [
-          'pneumaticcraft:empty_pcb',
-          'pneumaticcraft:pcb_blueprint',
-          'pneumaticcraft:etching_acid_bucket',
-          'pneumaticcraft:capacitor',
-        ],
-        type: 'pneumaticcraft:pressure_chamber',
-      });
     },
     refinery: () => {},
     thermo_plant: () => {
@@ -37,25 +26,7 @@ onEvent('recipes', event => {
         temperature: {
           min_temp: 500,
         },
-      });
-
-      event.custom({
-        type: 'pneumaticcraft:thermo_plant',
-        exothermic: false,
-        fluid_input: {
-          type: 'pneumaticcraft:fluid',
-          amount: 100,
-          fluid: 'immersivepetroleum:naphtha',
-        },
-        fluid_output: {
-          amount: 80,
-          fluid: 'pneumaticcraft:lpg',
-        },
-        pressure: 2.0,
-        temperature: {
-          min_temp: 573,
-        },
-      });
+      }).id('inconvenient:drill_bit_platinum');
     },
   });
 });

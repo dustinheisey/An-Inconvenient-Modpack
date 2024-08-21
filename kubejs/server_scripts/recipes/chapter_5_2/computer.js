@@ -33,6 +33,26 @@ onEvent('recipes', event => {
       },
     ],
   });
+
+  event.custom({
+        type: 'pneumaticcraft:thermo_plant',
+        exothermic: false,
+        fluid_input: {
+          type: 'pneumaticcraft:fluid',
+          amount: 100,
+          fluid: 'immersivepetroleum:naphtha',
+        },
+        fluid_output: {
+          amount: 80,
+          fluid: 'pneumaticcraft:lpg',
+        },
+        pressure: 2.0,
+        temperature: {
+          min_temp: 573,
+        },
+  }).id('inconvenient:lpg');
+  
+  ['pneumaticcraft:pressure_chamber/empty_pcb'].forEach(id => event.remove({id: id}));
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
     results: [
@@ -58,7 +78,7 @@ onEvent('recipes', event => {
       },
     ],
     pressure: 1.5,
-  });
+  }).id('inconvenient:empty_pcb');
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
     results: [{item: 'pneumaticcraft:pcb_blueprint'}],
@@ -80,7 +100,8 @@ onEvent('recipes', event => {
       },
     ],
     pressure: 3,
-  });
+  }).id('inconvenient:pcb_blueprint');
+  ['pneumaticcraft:pressure_chamber/etching_acid'].forEach(id => event.remove({id: id}));
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
     results: [{item: 'pneumaticcraft:etching_acid_bucket'}],
@@ -93,7 +114,7 @@ onEvent('recipes', event => {
       },
     ],
     pressure: 1,
-  });
+  }).id('inconvenient:etching_acid');
 
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
@@ -117,6 +138,8 @@ onEvent('recipes', event => {
       },
     ],
   });
+
+  ['pneumaticcraft:pressure_chamber/capacitor'].forEach(id => event.remove({id: id}));
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
     inputs: [
@@ -138,20 +161,26 @@ onEvent('recipes', event => {
         item: 'pneumaticcraft:capacitor',
       },
     ],
-  });
+  }).id('inconvenient:capacitor');
 
+  ['pneumaticcraft:pressure_chamber/compressed_iron_ingot', 'pneumaticcraft:pressure_chamber/compressed_iron_block'].forEach(id => event.remove({ id: id }));
+  
   event.custom({
     type: 'pneumaticcraft:explosion_crafting',
     results: [{item: 'pneumaticcraft:ingot_iron_compressed'}],
     input: {item: 'rankine:steel_ingot'},
     loss_rate: 20,
-  });
+  }).id('inconvenient:explosion_compressed_iron');
   event.custom({
     type: 'pneumaticcraft:explosion_crafting',
     results: [{item: 'pneumaticcraft:compressed_iron_block'}],
     input: {item: 'rankine:steel_block'},
     loss_rate: 20,
-  });
+  }).id('inconvenient:explosion_compressed_iron_block');
+
+  event.custom({ 'type': 'pneumaticcraft:pressure_chamber', 'inputs': [{ 'type': 'pneumaticcraft:stacked_item', 'item': 'rankine:steel_ingot' }], 'pressure': 2, 'results': [{ 'item': 'pneumaticcraft:ingot_iron_compressed' }] }).id('inconvenient:compressed_iron');
+  
+    event.custom({ 'type': 'pneumaticcraft:pressure_chamber', 'inputs': [ { 'type': 'pneumaticcraft:stacked_item', 'item': 'rankine:steel_block' } ], 'pressure': 2, 'results': [ { 'item': 'pneumaticcraft:compressed_iron_block' } ] }).id('inconvenient:compressed_iron_block');
   event.blasting(
     'immersiveengineering:dust_hop_graphite',
     'immersiveengineering:ingot_hop_graphite'
