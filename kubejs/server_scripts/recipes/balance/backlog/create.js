@@ -993,7 +993,6 @@ onEvent('recipes', event => {
           'chemlib:silicon_dioxide',
           'create:dough',
           'minecraft:cookie',
-          'botania:fertilizer',
           'rankine:vulcanized_rubber',
           'extendedcrafting:redstone_ingot',
           'tconstruct:pig_iron_ingot',

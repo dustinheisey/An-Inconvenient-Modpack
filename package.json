@@ -1,6 +1,6 @@
 {
-  "name": "inconvenient-modpack",
-  "version": "0.5.3",
+  "name": "an-inconvenient-modpack",
+  "version": "0.7.0",
   "scripts": {
     "commit": "cz",
     "format": "npx prettier --write .",

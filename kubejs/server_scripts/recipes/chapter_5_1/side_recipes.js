@@ -104,7 +104,81 @@ onEvent('recipes', event => {
         },
       ],
     },
+    {
+      id: 'petals',
+      recipe: () => { 
+        [
+          'botania:petal_apothecary/pure_daisy',
+          'botania:fertilizer_dye',
+          'botania:petal_apothecary/marimorphosis',
+          'botania:petal_apothecary/kekimurus',
+          'botania:petal_apothecary/gourmaryllis',
+          'botania:petal_apothecary/spectrolus',
+          'botania:elven_trade/pixie_dust'
+        ].forEach(id => event.remove({ id: id }));
+
+        event.custom({
+          type: 'botania:petal_apothecary',
+          output: {item: 'botania:kekimurus'},
+          ingredients: [
+            {item: 'botania:white_petal'},
+            {item: 'botania:white_petal'},
+            {item: 'botania:orange_petal'},
+            {item: 'botania:orange_petal'},
+            {item: 'botania:brown_petal'},
+            {item: 'botania:brown_petal'},
+            {item: 'botania:pixie_dust'},
+            {item: 'botania:rune_pride'},
+            {item: 'botania:rune_lust'},
+          ],
+        }).id('inconvenient:kekimurus');
+        event.custom({
+          type: 'botania:petal_apothecary',
+          output: {item: 'botania:gourmaryllis'},
+          ingredients: [
+            {item: 'botania:light_gray_petal'},
+            {item: 'botania:light_gray_petal'},
+            {item: 'botania:yellow_petal'},
+            {item: 'botania:yellow_petal'},
+            {item: 'botania:red_petal'},
+            {item: 'botania:red_petal'},
+            {item: 'botania:rune_greed'},
+            {item: 'botania:rune_wrath'},
+          ],
+        }).id('inconvenient:gourmaryllis');
+        event.custom({
+          type: 'botania:petal_apothecary',
+          output: {item: 'botania:spectrolus'},
+          ingredients: [
+            {item: 'botania:white_petal'},
+            {item: 'botania:white_petal'},
+            {item: 'botania:red_petal'},
+            {item: 'botania:red_petal'},
+            {item: 'botania:green_petal'},
+            {item: 'botania:green_petal'},
+            {item: 'botania:blue_petal'},
+            {item: 'botania:blue_petal'},
+            {item: 'botania:pixie_dust'},
+            {item: 'botania:rune_gluttony'},
+            {item: 'botania:rune_sloth'},
+          ],
+        }).id('inconvenient:spectrolus');
+        event.custom({
+          type: 'botania:petal_apothecary',
+          output: {item: 'botania:marimorphosis'},
+          ingredients: [
+            {item: 'botania:gray_petal'},
+            {item: 'botania:yellow_petal'},
+            {item: 'botania:red_petal'},
+            {item: 'botania:green_petal'},
+            {item: 'botania:redstone_root'},
+            {item: 'botania:rune_pride'},
+          ],
+        }).id('inconvenient:marimorphosis');
+      }
+    }
   ]);
+
 
   event.custom({
     type: 'bloodmagic:altar',

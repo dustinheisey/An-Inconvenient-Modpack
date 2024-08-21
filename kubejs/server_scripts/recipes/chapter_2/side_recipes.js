@@ -811,31 +811,6 @@ onEvent('recipes', event => {
     {
       id: 'cutting_board',
       recipe: () => {
-        [
-          'farmersdelight:cutting_board',
-          'undergardendelight:cutting/knife/blood_mushroom',
-          'farmersdelight:cutting/azure_bluet',
-          'farmersdelight:cutting/pink_tulip',
-          'farmersdelight:cutting/ink_sac',
-          'undergardendelight:cutting/knife/veil_mushroom',
-          'farmersdelight:cutting/allium',
-          'undergardendelight:cutting/knife/blood_mushroom_globule',
-          'farmersdelight:cutting/beef',
-          'undergardendelight:cutting/knife/ink_mushroom',
-          'farmersdelight:cutting/blue_orchid',
-          'farmersdelight:cutting/lily_of_the_valley',
-          'farmersdelight:cutting/cornflower',
-          'farmersdelight:cutting/dandelion',
-          'farmersdelight:cutting/poppy',
-          'undergardendelight:cutting/knife/indigo_mushroom',
-          'farmersdelight:cutting/red_tulip',
-          'farmersdelight:cutting/white_tulip',
-          'farmersdelight:cutting/orange_tulip',
-          'undergardendelight:cutting/knife/mogmoss',
-          'farmersdelight:cutting/oxeye_daisy',
-          'farmersdelight:cutting/wither_rose',
-        ].forEach(id => event.remove({id: id}));
-
         event.shaped('farmersdelight:cutting_board', ['abb', 'abb'], {
           a: '#forge:rods/wooden',
           b: 'malum:runewood_planks',

@@ -7,12 +7,6 @@ onEvent('recipes', event => {
   });
 
   event.custom({
-    type: 'botania:pure_daisy',
-    input: {type: 'block', block: 'rankine:rose_marble'},
-    output: {name: 'botania:livingrock'},
-  });
-
-  event.custom({
     type: 'pneumaticcraft:thermo_plant',
     exothermic: false,
     fluid_input: {

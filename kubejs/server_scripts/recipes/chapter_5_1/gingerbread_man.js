@@ -31,7 +31,7 @@ onEvent('recipes', event => {
       {item: 'farmersdelight:ratatouille'},
       {item: 'farmersdelight:grilled_salmon'},
     ],
-  });
+  }).id('inconvenient:pure_daisy');
 
   event.custom({
     type: 'botania:petal_apothecary',
@@ -43,7 +43,7 @@ onEvent('recipes', event => {
       {tag: 'forge:dyes'},
       {tag: 'forge:dyes'},
     ],
-  });
+  }).id('inconveient:petal_apothecary_fertilizer');
 
   event.custom({
     type: 'bloodmagic:altar',
@@ -85,6 +85,33 @@ onEvent('recipes', event => {
     });
   });
 
+  ['botania:pure_daisy/livingrock','productivebees:block_conversion/botania/stone_to_livingrock'].forEach(id => event.remove({ id: id }));
+  
+
+   event.custom({
+    type: 'botania:pure_daisy',
+    input: {type: 'block', block: 'rankine:rose_marble'},
+    output: {name: 'botania:livingrock'},
+   }).id('iconvenient:livingrock');
+  
+  event.custom({
+    type: 'productivebees:block_conversion',
+    bee: 'productivebees:pure',
+    from: {
+      Name: 'rankine:rose_marble',
+    },
+    to: {
+      Name: 'botania:livingrock',
+    },
+    chance: 0.25,
+    conditions: [
+      {
+        type: 'productivebees:bee_exists',
+        bee: 'productivebees:pure',
+      },
+    ],
+  });
+
   event.custom({
     type: 'create:mixing',
     results: [{item: 'botania:fertilizer'}],
@@ -95,7 +122,7 @@ onEvent('recipes', event => {
       {count: 4, item: 'rankine:bone_char'},
     ],
     heatRequirement: 'superheated',
-  });
+  }).id('inconvenient:fertilizer');
   event.custom({
     type: 'create:mechanical_crafting',
     result: {item: 'botania:runic_altar'},
