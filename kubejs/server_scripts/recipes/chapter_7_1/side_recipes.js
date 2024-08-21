@@ -139,4 +139,23 @@ onEvent('recipes', event => {
       ],
     },
   ]);
+
+
+  ['naturesaura:tree_ritual/eye_improved'].forEach(id => event.remove({id: id}));
+  event.custom({
+        type: 'naturesaura:tree_ritual',
+        sapling: {item: 'hexerei:mahogany_sapling'},
+        ingredients: [
+          {item: 'botania:rune_gluttony'},
+          {item: 'botania:rune_greed'},
+          {item: 'naturesaura:sky_ingot'},
+          {item: 'naturesaura:sky_ingot'},
+          {item: 'naturesaura:gold_powder'},
+          {item: 'naturesaura:gold_powder'},
+          {item: 'naturesaura:eye'},
+          {item: 'botania:rune_pride'},
+        ],
+        time: 250,
+        output: {item: 'naturesaura:eye_improved'},
+      }).id('inconvenient:environmental_ocular');
 });

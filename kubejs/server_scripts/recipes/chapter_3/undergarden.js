@@ -128,6 +128,7 @@ onEvent('recipes', event => {
               {
                 id: 'natural_altar',
                 recipe: () => {
+                  ['naturesaura:tree_ritual/nature_altar'].forEach(id => event.remove({id: id}));
                   event.custom({
                     type: 'naturesaura:tree_ritual',
                     sapling: {item: 'blue_skies:bluebright_sapling'},
@@ -142,7 +143,7 @@ onEvent('recipes', event => {
                     ],
                     time: 250,
                     output: {item: 'naturesaura:nature_altar'},
-                  });
+                  }).id('inconvenient:nature_altar');
                 },
                 children: [
                   {
@@ -165,7 +166,7 @@ onEvent('recipes', event => {
                         ],
                         time: 250,
                         output: {item: 'naturesaura:token_joy'},
-                      });
+                      }).id('inconvenient:token_joy');
                     },
                     children: [],
                   },
