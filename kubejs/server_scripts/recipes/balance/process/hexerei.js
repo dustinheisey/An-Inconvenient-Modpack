@@ -1,6 +1,9 @@
 onEvent('recipes', event => {
   setBalanceRecipes({
     cauldron: () => {
+      ['hexerei:reading_glasses_from_mixing_cauldron', 'hexerei:broom_waterproof_tip_from_mixing_cauldron', 'hexerei:willow_broom_from_mixing_cauldron', 'hexerei:warhammer_from_mixing_cauldron', 'hexerei:sage_burning_plate_from_mixing_cauldron', 'hexerei:infused_fabric_from_mixing_cauldron', 'hexerei:candelabra_from_mixing_cauldron'].forEach(id => event.remove({ id: id }));
+      
+      
       event.custom({
         type: 'hexerei:mixingcauldron',
         ingredients: [
@@ -40,7 +43,7 @@ onEvent('recipes', event => {
           fluid: 'minecraft:water',
         },
         fluidLevelsConsumed: 2000,
-      });
+      }).id('inconvenient:broom_waterproof_tip');
       event.custom({
         type: 'hexerei:mixingcauldron',
         ingredients: [
@@ -80,7 +83,7 @@ onEvent('recipes', event => {
           fluid: 'minecraft:water',
         },
         fluidLevelsConsumed: 1000,
-      });
+      }).id('inconvenient:willow_broom');
 
       event.custom({
         type: 'hexerei:mixingcauldron',
@@ -121,7 +124,7 @@ onEvent('recipes', event => {
           fluid: 'minecraft:lava',
         },
         fluidLevelsConsumed: 1500,
-      });
+      }).id('inconvenient:sage_burning_plate');
       event.custom({
         type: 'hexerei:mixingcauldron',
         ingredients: [
@@ -161,7 +164,7 @@ onEvent('recipes', event => {
           fluid: 'minecraft:lava',
         },
         fluidLevelsConsumed: 1500,
-      });
+      }).id('inconvenient:warhammer');
 
       event.custom({
         type: 'hexerei:mixingcauldron',
@@ -202,47 +205,7 @@ onEvent('recipes', event => {
           count: 1,
         },
         fluidLevelsConsumed: 500,
-      });
-      event.custom({
-        type: 'hexerei:mixingcauldron',
-        ingredients: [
-          {
-            item: 'blue_skies:soul_fragment',
-          },
-          {
-            item: 'tconstruct:amethyst_bronze_ingot',
-          },
-          {
-            item: 'rankine:sterling_silver_ingot',
-          },
-          {
-            item: 'tconstruct:amethyst_bronze_ingot',
-          },
-          {
-            item: 'rankine:sterling_silver_ingot',
-          },
-          {
-            item: 'tconstruct:amethyst_bronze_ingot',
-          },
-          {
-            item: 'rankine:sterling_silver_ingot',
-          },
-          {
-            item: 'tconstruct:amethyst_bronze_ingot',
-          },
-        ],
-        liquid: {
-          fluid: 'minecraft:water',
-        },
-        liquidOutput: {
-          fluid: 'minecraft:water',
-        },
-        output: {
-          item: 'rankine:sediment_fan',
-          count: 1,
-        },
-        fluidLevelsConsumed: 1000,
-      });
+      }).id('inconvenient:infused_fabric');
 
       event.custom({
         type: 'hexerei:mixingcauldron',
@@ -283,7 +246,7 @@ onEvent('recipes', event => {
           count: 1,
         },
         fluidLevelsConsumed: 2000,
-      });
+      }).id('inconvenient:candelabra');
       event.custom({
         type: 'hexerei:mixingcauldron',
         ingredients: [
@@ -323,19 +286,19 @@ onEvent('recipes', event => {
           fluid: 'minecraft:lava',
         },
         fluidLevelsConsumed: 333,
-      });
+      }).id('inconvenient:reading_glasses');
     },
     dipper: () => {},
     drying: () => {},
     pestle: () => {
-      event.remove({
-        output: [
-          'naturesaura:gold_fiber',
-          'minecraft:bone_meal',
-          'naturesaura:gold_powder',
-          'charcoal_pit:nether_shard',
-        ],
-      });
+      // event.remove({
+      //   output: [
+      //     'naturesaura:gold_fiber',
+      //     'minecraft:bone_meal',
+      //     'naturesaura:gold_powder',
+      //     'charcoal_pit:nether_shard',
+      //   ],
+      // });
 
       event.custom({
         type: 'hexerei:pestle_and_mortar',
@@ -346,18 +309,7 @@ onEvent('recipes', event => {
           },
         ],
         grindingTime: 300,
-      });
-
-      event.custom({
-        type: 'hexerei:pestle_and_mortar',
-        output: {item: 'charcoal_pit:nether_shard', count: 3},
-        ingredients: [
-          {
-            item: 'minecraft:nether_star',
-          },
-        ],
-        grindingTime: 300,
-      });
+      }).id('inconvenient:bone_meal');
     },
   });
 });

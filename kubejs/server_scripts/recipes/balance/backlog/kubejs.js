@@ -670,7 +670,6 @@ onEvent('recipes', event => {
           'blue_skies:tool_box',
           'extendedcrafting:basic_auto_table',
           'rankine:piston_crusher',
-          'rankine:sediment_fan',
           'smallships:oak_brigg',
           'smallships:spruce_brigg',
           'smallships:birch_brigg',

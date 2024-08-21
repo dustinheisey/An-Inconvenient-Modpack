@@ -611,7 +611,7 @@ onEvent('recipes', event => {
                   },
                 ],
                 grindingTime: 300,
-              });
+              }).id('inconvenient:gold_powder');
             },
             children: [
               {
@@ -642,7 +642,7 @@ onEvent('recipes', event => {
                           },
                         ],
                         grindingTime: 300,
-                      });
+                      }).id('inconvenient:brilliant_fiber');
                     },
                     children: [],
                   },

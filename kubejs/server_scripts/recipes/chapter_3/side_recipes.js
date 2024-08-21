@@ -362,6 +362,24 @@ onEvent('recipes', event => {
                   drainRate: 5,
                 });
               },
+              children: [
+                {
+                  id: 'nether_shard',
+                  recipe: () => {
+                    ['charcoal_pit:nether_shard'].forEach(id => event.remove({id: id}));
+                    event.custom({
+                      type: 'hexerei:pestle_and_mortar',
+                      output: {item: 'charcoal_pit:nether_shard', count: 3},
+                      ingredients: [
+                        {
+                          item: 'minecraft:nether_star',
+                        },
+                      ],
+                      grindingTime: 300,
+                    }).id('inconvenient:nether_shard');
+                  }
+                }
+              ]
             },
           ],
         },

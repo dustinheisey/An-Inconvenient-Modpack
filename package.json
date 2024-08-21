@@ -18,7 +18,7 @@
     "arrowParens": "avoid"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.3",
     "standard-version": "^9.5.0",
     "cz-conventional-changelog": "^3.3.0"
   },

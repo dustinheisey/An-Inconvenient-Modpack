@@ -844,5 +844,51 @@ onEvent('recipes', event => {
         });
       },
     },
+    {
+      id: 'sediment_fan', recipe: () => {
+        ['rankine:alloy_crafting/sediment_fan'].forEach(id => event.remove({id: id}));
+      
+        event.custom({
+        type: 'hexerei:mixingcauldron',
+        ingredients: [
+          {
+            item: 'blue_skies:soul_fragment',
+          },
+          {
+            item: 'tconstruct:amethyst_bronze_ingot',
+          },
+          {
+            item: 'rankine:sterling_silver_ingot',
+          },
+          {
+            item: 'tconstruct:amethyst_bronze_ingot',
+          },
+          {
+            item: 'rankine:sterling_silver_ingot',
+          },
+          {
+            item: 'tconstruct:amethyst_bronze_ingot',
+          },
+          {
+            item: 'rankine:sterling_silver_ingot',
+          },
+          {
+            item: 'tconstruct:amethyst_bronze_ingot',
+          },
+        ],
+        liquid: {
+          fluid: 'minecraft:water',
+        },
+        liquidOutput: {
+          fluid: 'minecraft:water',
+        },
+        output: {
+          item: 'rankine:sediment_fan',
+          count: 1,
+        },
+        fluidLevelsConsumed: 1000,
+        }).id('inconvenient:sediment_fan');
+      }
+    },
   ]);
 });
