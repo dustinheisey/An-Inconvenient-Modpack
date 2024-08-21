@@ -6,7 +6,7 @@ onEvent('recipes', event => {
       event.shapeless('productivebees:bee_nest_diamond_helmet', [
         'minecraft:bee_nest',
         'botania:manasteel_helmet',
-      ]);
+      ]).id('inconvenient:bee_nest_manasteel_helmet');
     },
     bee_breeding: () => {},
     bee_fishing: () => {

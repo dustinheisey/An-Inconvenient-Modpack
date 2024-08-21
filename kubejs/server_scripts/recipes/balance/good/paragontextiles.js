@@ -4,7 +4,7 @@ onEvent('recipes', event => {
       ['paragon_textiles:silk_wisps'].forEach(id => event.remove({id: id}));
       event.shapeless('3x paragon_textiles:silk_wisps', [
         'blue_skies:spider_webbing',
-      ]);
+      ]).id('inconvenient:silk_wisps');
 
       colors.forEach(color => {
         if (color !== 'red') {
@@ -16,7 +16,7 @@ onEvent('recipes', event => {
             event.shapeless(`paragon_textiles:fabric_${color}`, [
               `minecraft:${color}_dye`,
               'paragon_textiles:fabric_plain',
-            ]);
+            ]).id(`inconvenient:fabric_${color}`);
           }
         }
       });

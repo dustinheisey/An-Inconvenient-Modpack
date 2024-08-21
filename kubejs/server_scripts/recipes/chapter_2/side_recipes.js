@@ -660,7 +660,7 @@ onEvent('recipes', event => {
         event.shaped(`cold_sweat:sewing_table`, ['aaa', 'bbb', 'bbb'], {
           a: 'paragon_textiles:fabric_red',
           b: '#minecraft:planks',
-        });
+        }).id('inconvenient:sewing_table');
       },
       children: [
         {
@@ -670,9 +670,9 @@ onEvent('recipes', event => {
               event.remove({id: id})
             );
             event.shapeless('paragon_textiles:fabric_red', [
-              'paragon_textiles:fabric_plain',
               'minecraft:red_dye',
-            ]);
+              'paragon_textiles:fabric_plain',
+            ]).id('inconvenient:fabric_red');
           },
         },
       ],

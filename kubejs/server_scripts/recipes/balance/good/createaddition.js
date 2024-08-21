@@ -15,7 +15,7 @@ onEvent('recipes', event => {
           item: 'immersiveengineering:wire_copper',
           count: 2,
         },
-      });
+      }).id('iconvenient:wire_copper');
 
       event.custom({
         type: 'createaddition:rolling',
@@ -26,7 +26,7 @@ onEvent('recipes', event => {
           item: 'immersiveengineering:stick_iron',
           count: 2,
         },
-      });
+      }).id('iconvenient:stick_iron');
     },
   });
 });

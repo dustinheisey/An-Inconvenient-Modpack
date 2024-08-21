@@ -7,7 +7,7 @@ onEvent('recipes', event => {
         a: '#forge:rods/wooden',
         b: 'realistictorches:lit_torch',
         c: '#minecraft:logs',
-      });
+      }).id('inconvenient:totem_torch');
     },
   });
 });
