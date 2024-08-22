@@ -13,3 +13,7 @@
 - [ ] deal with gamestages mods and crafttweaker
 - [ ] change splash screen visuals
 - [ ] change music and create ai music for modpack
+
+## Bugs
+
+- [ ] fix ticking entity crashes somehow

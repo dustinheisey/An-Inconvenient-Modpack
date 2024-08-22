@@ -657,10 +657,12 @@ onEvent('recipes', event => {
       id: 'sewing_table',
       recipe: () => {
         ['cold_sweat:sewing_table'].forEach(id => event.remove({id: id}));
-        event.shaped(`cold_sweat:sewing_table`, ['aaa', 'bbb', 'bbb'], {
-          a: 'paragon_textiles:fabric_red',
-          b: '#minecraft:planks',
-        }).id('inconvenient:sewing_table');
+        event
+          .shaped(`cold_sweat:sewing_table`, ['aaa', 'bbb', 'bbb'], {
+            a: 'paragon_textiles:fabric_red',
+            b: '#minecraft:planks',
+          })
+          .id('inconvenient:sewing_table');
       },
       children: [
         {
@@ -669,10 +671,12 @@ onEvent('recipes', event => {
             ['paragon_textiles:fabric_red'].forEach(id =>
               event.remove({id: id})
             );
-            event.shapeless('paragon_textiles:fabric_red', [
-              'minecraft:red_dye',
-              'paragon_textiles:fabric_plain',
-            ]).id('inconvenient:fabric_red');
+            event
+              .shapeless('paragon_textiles:fabric_red', [
+                'minecraft:red_dye',
+                'paragon_textiles:fabric_plain',
+              ])
+              .id('inconvenient:fabric_red');
           },
         },
       ],
@@ -845,50 +849,55 @@ onEvent('recipes', event => {
       },
     },
     {
-      id: 'sediment_fan', recipe: () => {
-        ['rankine:alloy_crafting/sediment_fan'].forEach(id => event.remove({id: id}));
-      
-        event.custom({
-        type: 'hexerei:mixingcauldron',
-        ingredients: [
-          {
-            item: 'blue_skies:soul_fragment',
-          },
-          {
-            item: 'tconstruct:amethyst_bronze_ingot',
-          },
-          {
-            item: 'rankine:sterling_silver_ingot',
-          },
-          {
-            item: 'tconstruct:amethyst_bronze_ingot',
-          },
-          {
-            item: 'rankine:sterling_silver_ingot',
-          },
-          {
-            item: 'tconstruct:amethyst_bronze_ingot',
-          },
-          {
-            item: 'rankine:sterling_silver_ingot',
-          },
-          {
-            item: 'tconstruct:amethyst_bronze_ingot',
-          },
-        ],
-        liquid: {
-          fluid: 'minecraft:water',
-        },
-        liquidOutput: {
-          fluid: 'minecraft:water',
-        },
-        output: {
-          item: 'rankine:sediment_fan',
-          count: 1,
-        },
-        fluidLevelsConsumed: 1000,
-        }).id('inconvenient:sediment_fan');
-      }
+      id: 'sediment_fan',
+      recipe: () => {
+        ['rankine:alloy_crafting/sediment_fan'].forEach(id =>
+          event.remove({id: id})
+        );
+
+        event
+          .custom({
+            type: 'hexerei:mixingcauldron',
+            ingredients: [
+              {
+                item: 'blue_skies:soul_fragment',
+              },
+              {
+                item: 'tconstruct:amethyst_bronze_ingot',
+              },
+              {
+                item: 'rankine:sterling_silver_ingot',
+              },
+              {
+                item: 'tconstruct:amethyst_bronze_ingot',
+              },
+              {
+                item: 'rankine:sterling_silver_ingot',
+              },
+              {
+                item: 'tconstruct:amethyst_bronze_ingot',
+              },
+              {
+                item: 'rankine:sterling_silver_ingot',
+              },
+              {
+                item: 'tconstruct:amethyst_bronze_ingot',
+              },
+            ],
+            liquid: {
+              fluid: 'minecraft:water',
+            },
+            liquidOutput: {
+              fluid: 'minecraft:water',
+            },
+            output: {
+              item: 'rankine:sediment_fan',
+              count: 1,
+            },
+            fluidLevelsConsumed: 1000,
+          })
+          .id('inconvenient:sediment_fan');
+      },
     },
   ]);
 });

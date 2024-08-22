@@ -53,13 +53,14 @@ onEvent('recipes', event => {
     result: {item: 'botania:terrasteel_ingot'},
   });
 
-
   ['botania:elven_trade/pixie_dust'].forEach(id => event.remove({id: id}));
-  event.custom({
-    type: 'botania:elven_trade',
-    ingredients: [{item: 'minecraft:honeycomb'}],
-    output: [{item: 'botania:pixie_dust'}],
-  }).id('inconvenient:pixie_dust');
+  event
+    .custom({
+      type: 'botania:elven_trade',
+      ingredients: [{item: 'minecraft:honeycomb'}],
+      output: [{item: 'botania:pixie_dust'}],
+    })
+    .id('inconvenient:pixie_dust');
 
   event.custom({
     type: 'botania:elven_trade',
@@ -92,28 +93,28 @@ onEvent('recipes', event => {
     ingredients: [{tag: 'minecraft:planks'}, {item: 'create:refined_radiance'}],
     results: [{item: 'create:refined_radiance_casing'}],
   });
-  
-  event.remove({
-        output: Item.of(
-          'productivebees:spawn_egg_configurable_bee',
-          '{EntityTag:{type:"productivebees:manasteel"}}'
-        ),
-      });
 
-      event.custom({
-        type: 'botania:mana_infusion',
-        input: {
-          type: 'forge:nbt',
-          item: 'productivebees:spawn_egg_configurable_bee',
-          nbt: '{EntityTag:{type:"productivebees:rose_gold"}}',
-        },
-        output: {
-          type: 'forge:nbt',
-          item: 'productivebees:spawn_egg_configurable_bee',
-          nbt: '{EntityTag:{type:"productivebees:manasteel"}}',
-        },
-        mana: 10000,
-      });
+  event.remove({
+    output: Item.of(
+      'productivebees:spawn_egg_configurable_bee',
+      '{EntityTag:{type:"productivebees:manasteel"}}'
+    ),
+  });
+
+  event.custom({
+    type: 'botania:mana_infusion',
+    input: {
+      type: 'forge:nbt',
+      item: 'productivebees:spawn_egg_configurable_bee',
+      nbt: '{EntityTag:{type:"productivebees:rose_gold"}}',
+    },
+    output: {
+      type: 'forge:nbt',
+      item: 'productivebees:spawn_egg_configurable_bee',
+      nbt: '{EntityTag:{type:"productivebees:manasteel"}}',
+    },
+    mana: 10000,
+  });
 
   event.custom({
     type: 'create:mechanical_crafting',

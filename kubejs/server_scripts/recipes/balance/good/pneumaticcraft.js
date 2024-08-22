@@ -1,32 +1,32 @@
 onEvent('recipes', event => {
   setBalanceRecipes({
     amadron_trade: () => {},
-    explosion_crafting: () => {
-    },
+    explosion_crafting: () => {},
     fluid_mixer: () => {},
-    pressure_chamber: () => {
-    },
+    pressure_chamber: () => {},
     refinery: () => {},
     thermo_plant: () => {
-      event.custom({
-        type: 'pneumaticcraft:thermo_plant',
-        exothermic: false,
-        fluid_input: {
-          type: 'pneumaticcraft:fluid',
-          amount: 100,
-          tag: 'forge:lubricant',
-        },
-        item_input: {
-          item: 'rankine:titanium_alloy_block',
-        },
-        item_output: {
-          item: 'pneumaticcraft:drill_bit_diamond',
-        },
-        pressure: 7.5,
-        temperature: {
-          min_temp: 500,
-        },
-      }).id('inconvenient:drill_bit_platinum');
+      event
+        .custom({
+          type: 'pneumaticcraft:thermo_plant',
+          exothermic: false,
+          fluid_input: {
+            type: 'pneumaticcraft:fluid',
+            amount: 100,
+            tag: 'forge:lubricant',
+          },
+          item_input: {
+            item: 'rankine:titanium_alloy_block',
+          },
+          item_output: {
+            item: 'pneumaticcraft:drill_bit_diamond',
+          },
+          pressure: 7.5,
+          temperature: {
+            min_temp: 500,
+          },
+        })
+        .id('inconvenient:drill_bit_platinum');
     },
   });
 });

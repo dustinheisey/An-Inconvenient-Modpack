@@ -138,46 +138,50 @@ onEvent('recipes', event => {
   });
 
   ['naturesaura:tree_ritual/token_anger'].forEach(id => event.remove({id: id}));
-  event.custom({
-    type: 'naturesaura:tree_ritual',
-    sapling: {item: 'architects_palette:twisted_sapling'},
-    ingredients: [
-      {item: 'minecraft:gunpowder'},
-      {item: 'minecraft:magma_block'},
-      {item: 'minecraft:netherite_scrap'},
-      {item: 'minecraft:blaze_rod'},
-      {item: 'naturesaura:gold_leaf'},
-      {
-        type: 'forge:nbt',
-        item: 'naturesaura:aura_bottle',
-        count: 1,
-        nbt: '{stored_type:"naturesaura:nether"}',
-      },
-    ],
-    time: 250,
-    output: {item: 'naturesaura:token_anger'},
-  }).id('inconvenient:token_anger');
+  event
+    .custom({
+      type: 'naturesaura:tree_ritual',
+      sapling: {item: 'architects_palette:twisted_sapling'},
+      ingredients: [
+        {item: 'minecraft:gunpowder'},
+        {item: 'minecraft:magma_block'},
+        {item: 'minecraft:netherite_scrap'},
+        {item: 'minecraft:blaze_rod'},
+        {item: 'naturesaura:gold_leaf'},
+        {
+          type: 'forge:nbt',
+          item: 'naturesaura:aura_bottle',
+          count: 1,
+          nbt: '{stored_type:"naturesaura:nether"}',
+        },
+      ],
+      time: 250,
+      output: {item: 'naturesaura:token_anger'},
+    })
+    .id('inconvenient:token_anger');
 
   ['naturesaura:tree_ritual/token_fear'].forEach(id => event.remove({id: id}));
-  event.custom({
-    type: 'naturesaura:tree_ritual',
-    sapling: {item: 'architects_palette:twisted_sapling'},
-    ingredients: [
-      {item: 'minecraft:bone'},
-      {item: 'minecraft:rotten_flesh'},
-      {item: 'minecraft:netherite_scrap'},
-      {item: 'minecraft:soul_sand'},
-      {item: 'naturesaura:gold_leaf'},
-      {
-        type: 'forge:nbt',
-        item: 'naturesaura:aura_bottle',
-        count: 1,
-        nbt: '{stored_type:"naturesaura:nether"}',
-      },
-    ],
-    time: 250,
-    output: {item: 'naturesaura:token_fear'},
-  }).id('inconvenient:token_fear');
+  event
+    .custom({
+      type: 'naturesaura:tree_ritual',
+      sapling: {item: 'architects_palette:twisted_sapling'},
+      ingredients: [
+        {item: 'minecraft:bone'},
+        {item: 'minecraft:rotten_flesh'},
+        {item: 'minecraft:netherite_scrap'},
+        {item: 'minecraft:soul_sand'},
+        {item: 'naturesaura:gold_leaf'},
+        {
+          type: 'forge:nbt',
+          item: 'naturesaura:aura_bottle',
+          count: 1,
+          nbt: '{stored_type:"naturesaura:nether"}',
+        },
+      ],
+      time: 250,
+      output: {item: 'naturesaura:token_fear'},
+    })
+    .id('inconvenient:token_fear');
 
   event.custom({
     type: 'create:mixing',

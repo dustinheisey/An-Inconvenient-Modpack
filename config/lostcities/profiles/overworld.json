@@ -7,7 +7,7 @@
     "cityLevel1Height": 83,
     "cityMaxRadius": 128,
     "cityStyleThreshold": -1.0,
-    "cityChance": 8.0E-4,
+    "cityChance": 8.0e-4,
     "cityThreshold": 0.2,
     "cityLevel0Height": 75,
     "cityStyleAlternative": "",

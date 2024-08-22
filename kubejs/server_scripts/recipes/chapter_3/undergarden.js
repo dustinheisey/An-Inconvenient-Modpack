@@ -128,45 +128,51 @@ onEvent('recipes', event => {
               {
                 id: 'natural_altar',
                 recipe: () => {
-                  ['naturesaura:tree_ritual/nature_altar'].forEach(id => event.remove({id: id}));
-                  event.custom({
-                    type: 'naturesaura:tree_ritual',
-                    sapling: {item: 'blue_skies:bluebright_sapling'},
-                    ingredients: [
-                      {item: 'minecraft:stone'},
-                      {item: 'minecraft:stone'},
-                      {item: 'minecraft:stone'},
-                      {item: 'rankine:sterling_silver_ingot'},
-                      {item: 'rankine:pewter_ingot'},
-                      {item: 'naturesaura:gold_leaf'},
-                      {item: 'naturesaura:token_joy'},
-                    ],
-                    time: 250,
-                    output: {item: 'naturesaura:nature_altar'},
-                  }).id('inconvenient:nature_altar');
+                  ['naturesaura:tree_ritual/nature_altar'].forEach(id =>
+                    event.remove({id: id})
+                  );
+                  event
+                    .custom({
+                      type: 'naturesaura:tree_ritual',
+                      sapling: {item: 'blue_skies:bluebright_sapling'},
+                      ingredients: [
+                        {item: 'minecraft:stone'},
+                        {item: 'minecraft:stone'},
+                        {item: 'minecraft:stone'},
+                        {item: 'rankine:sterling_silver_ingot'},
+                        {item: 'rankine:pewter_ingot'},
+                        {item: 'naturesaura:gold_leaf'},
+                        {item: 'naturesaura:token_joy'},
+                      ],
+                      time: 250,
+                      output: {item: 'naturesaura:nature_altar'},
+                    })
+                    .id('inconvenient:nature_altar');
                 },
                 children: [
                   {
                     id: 'token_of_joy',
                     recipe: () => {
-                      event.custom({
-                        type: 'naturesaura:tree_ritual',
-                        sapling: {item: 'minecraft:oak_sapling'},
-                        ingredients: [
-                          {item: 'occultism:crushed_end_stone'},
-                          {item: 'minecraft:cod'},
-                          {item: 'rankine:sterling_silver_ingot'},
-                          {item: 'naturesaura:gold_leaf'},
-                          {
-                            type: 'forge:nbt',
-                            item: 'naturesaura:aura_bottle',
-                            count: 1,
-                            nbt: '{stored_type:"naturesaura:overworld"}',
-                          },
-                        ],
-                        time: 250,
-                        output: {item: 'naturesaura:token_joy'},
-                      }).id('inconvenient:token_joy');
+                      event
+                        .custom({
+                          type: 'naturesaura:tree_ritual',
+                          sapling: {item: 'minecraft:oak_sapling'},
+                          ingredients: [
+                            {item: 'occultism:crushed_end_stone'},
+                            {item: 'minecraft:cod'},
+                            {item: 'rankine:sterling_silver_ingot'},
+                            {item: 'naturesaura:gold_leaf'},
+                            {
+                              type: 'forge:nbt',
+                              item: 'naturesaura:aura_bottle',
+                              count: 1,
+                              nbt: '{stored_type:"naturesaura:overworld"}',
+                            },
+                          ],
+                          time: 250,
+                          output: {item: 'naturesaura:token_joy'},
+                        })
+                        .id('inconvenient:token_joy');
                     },
                     children: [],
                   },

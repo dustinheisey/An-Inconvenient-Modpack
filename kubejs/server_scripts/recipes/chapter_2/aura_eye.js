@@ -2,25 +2,26 @@ onEvent('recipes', event => {
   setMilestoneRecipes({
     id: 'naturesaura:eye',
     recipe: () => {
+      ['naturesaura:tree_ritual/eye'].forEach(id => event.remove({id: id}));
 
-      ['naturesaura:tree_ritual/eye'].forEach(id => event.remove({ id: id }));
-      
-      event.custom({
-        type: 'naturesaura:tree_ritual',
-        sapling: {item: 'blue_skies:starlit_sapling'},
-        ingredients: [
-          {item: 'minecraft:heart_of_the_sea'}, // 1
-          {item: 'rankine:white_marble'}, // 3 or 4 or 5 or 6
-          {item: 'malum:runewood_log'}, // 2 or 7
-          {item: 'malum:runewood_log'}, // 3 or 4 or 5 or 6
-          {item: 'malum:runewood_log'}, // 8
-          {item: 'naturesaura:gold_powder'}, // 3 or 4 or 5 or 6
-          {item: 'rankine:white_marble'}, // 2 or 7
-          {item: 'malum:runewood_log'}, // 3 or 4 or 5 or 6
-        ],
-        time: 250,
-        output: {item: 'naturesaura:eye'},
-      }).id('inconvenient:environmental_eye');
+      event
+        .custom({
+          type: 'naturesaura:tree_ritual',
+          sapling: {item: 'blue_skies:starlit_sapling'},
+          ingredients: [
+            {item: 'minecraft:heart_of_the_sea'}, // 1
+            {item: 'rankine:white_marble'}, // 3 or 4 or 5 or 6
+            {item: 'malum:runewood_log'}, // 2 or 7
+            {item: 'malum:runewood_log'}, // 3 or 4 or 5 or 6
+            {item: 'malum:runewood_log'}, // 8
+            {item: 'naturesaura:gold_powder'}, // 3 or 4 or 5 or 6
+            {item: 'rankine:white_marble'}, // 2 or 7
+            {item: 'malum:runewood_log'}, // 3 or 4 or 5 or 6
+          ],
+          time: 250,
+          output: {item: 'naturesaura:eye'},
+        })
+        .id('inconvenient:environmental_eye');
     },
 
     // get heart of the sea from gateway. gateway is filled with ocean mobs and can only be summoned in the water. iridescent scales from elder guardian boss. scales are part of dream. ocean monument spawns in everbright. everbright is the country that was flooded. maybe get rid of the underwater palace and make guardians spawn in everbright waters naturally.
@@ -602,16 +603,18 @@ onEvent('recipes', event => {
           {
             id: 'gold_powder',
             recipe: () => {
-              event.custom({
-                type: 'hexerei:pestle_and_mortar',
-                output: {item: 'naturesaura:gold_powder'},
-                ingredients: [
-                  {
-                    item: 'naturesaura:gold_leaf',
-                  },
-                ],
-                grindingTime: 300,
-              }).id('inconvenient:gold_powder');
+              event
+                .custom({
+                  type: 'hexerei:pestle_and_mortar',
+                  output: {item: 'naturesaura:gold_powder'},
+                  ingredients: [
+                    {
+                      item: 'naturesaura:gold_leaf',
+                    },
+                  ],
+                  grindingTime: 300,
+                })
+                .id('inconvenient:gold_powder');
             },
             children: [
               {
@@ -621,28 +624,30 @@ onEvent('recipes', event => {
                   {
                     id: 'gold_fibers',
                     recipe: () => {
-                      event.custom({
-                        type: 'hexerei:pestle_and_mortar',
-                        output: {item: 'naturesaura:gold_fiber'},
-                        ingredients: [
-                          {
-                            item: 'blue_skies:winter_leaves',
-                          },
-                          {
-                            item: 'blue_skies:snowbloom',
-                          },
-                          {
-                            item: 'blue_skies:brumble_vine_top',
-                          },
-                          {
-                            item: 'totemic:cedar_leaves',
-                          },
-                          {
-                            item: 'blue_skies:snowcap_pinhead',
-                          },
-                        ],
-                        grindingTime: 300,
-                      }).id('inconvenient:brilliant_fiber');
+                      event
+                        .custom({
+                          type: 'hexerei:pestle_and_mortar',
+                          output: {item: 'naturesaura:gold_fiber'},
+                          ingredients: [
+                            {
+                              item: 'blue_skies:winter_leaves',
+                            },
+                            {
+                              item: 'blue_skies:snowbloom',
+                            },
+                            {
+                              item: 'blue_skies:brumble_vine_top',
+                            },
+                            {
+                              item: 'totemic:cedar_leaves',
+                            },
+                            {
+                              item: 'blue_skies:snowcap_pinhead',
+                            },
+                          ],
+                          grindingTime: 300,
+                        })
+                        .id('inconvenient:brilliant_fiber');
                     },
                     children: [],
                   },

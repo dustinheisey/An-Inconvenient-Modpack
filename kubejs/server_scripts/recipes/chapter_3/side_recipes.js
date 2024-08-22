@@ -366,20 +366,24 @@ onEvent('recipes', event => {
                 {
                   id: 'nether_shard',
                   recipe: () => {
-                    ['charcoal_pit:nether_shard'].forEach(id => event.remove({id: id}));
-                    event.custom({
-                      type: 'hexerei:pestle_and_mortar',
-                      output: {item: 'charcoal_pit:nether_shard', count: 3},
-                      ingredients: [
-                        {
-                          item: 'minecraft:nether_star',
-                        },
-                      ],
-                      grindingTime: 300,
-                    }).id('inconvenient:nether_shard');
-                  }
-                }
-              ]
+                    ['charcoal_pit:nether_shard'].forEach(id =>
+                      event.remove({id: id})
+                    );
+                    event
+                      .custom({
+                        type: 'hexerei:pestle_and_mortar',
+                        output: {item: 'charcoal_pit:nether_shard', count: 3},
+                        ingredients: [
+                          {
+                            item: 'minecraft:nether_star',
+                          },
+                        ],
+                        grindingTime: 300,
+                      })
+                      .id('inconvenient:nether_shard');
+                  },
+                },
+              ],
             },
           ],
         },
@@ -834,25 +838,29 @@ onEvent('recipes', event => {
     },
   ]);
 
-  ['naturesaura:tree_ritual/token_sorrow'].forEach(id => event.remove({id: id}));
+  ['naturesaura:tree_ritual/token_sorrow'].forEach(id =>
+    event.remove({id: id})
+  );
 
-  event.custom({
-    type: 'naturesaura:tree_ritual',
-    sapling: {item: 'undergarden:smogstem_sapling'},
-    ingredients: [
-      {item: 'minecraft:ghast_tear'},
-      {item: 'minecraft:glass'},
-      {item: 'minecraft:chicken'},
-      {item: 'blue_skies:charscale_moki'},
-      {item: 'naturesaura:gold_leaf'},
-      {
-        type: 'forge:nbt',
-        item: 'naturesaura:aura_bottle',
-        count: 1,
-        nbt: '{stored_type:"naturesaura:nether"}',
-      },
-    ],
-    time: 250,
-    output: {item: 'naturesaura:token_sorrow'},
-  }).id('inconvenient:token_sorrow');
+  event
+    .custom({
+      type: 'naturesaura:tree_ritual',
+      sapling: {item: 'undergarden:smogstem_sapling'},
+      ingredients: [
+        {item: 'minecraft:ghast_tear'},
+        {item: 'minecraft:glass'},
+        {item: 'minecraft:chicken'},
+        {item: 'blue_skies:charscale_moki'},
+        {item: 'naturesaura:gold_leaf'},
+        {
+          type: 'forge:nbt',
+          item: 'naturesaura:aura_bottle',
+          count: 1,
+          nbt: '{stored_type:"naturesaura:nether"}',
+        },
+      ],
+      time: 250,
+      output: {item: 'naturesaura:token_sorrow'},
+    })
+    .id('inconvenient:token_sorrow');
 });

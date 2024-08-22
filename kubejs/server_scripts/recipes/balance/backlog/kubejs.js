@@ -33,15 +33,15 @@ onEvent('recipes', event => {
   setBalanceRecipes({
     replaceInput: () => {
       event.replaceInput(
-        { output: 'botania:dodge_ring' },
+        {output: 'botania:dodge_ring'},
         'minecraft:emerald',
         'botania:terrasteel_nugget'
       );
       event.replaceInput(
-        { output: 'botania:itemfinder' },
+        {output: 'botania:itemfinder'},
         'minecraft:emerald',
         'botania:terrasteel_ingot'
-      )
+      );
       event.replaceInput(
         {output: 'naturesaura:shockwave_creator'},
         'minecraft:diamond_boots',

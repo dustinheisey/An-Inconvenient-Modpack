@@ -13,37 +13,41 @@ onEvent('recipes', event => {
     ],
   });
 
-  event.custom({
-    type: 'botania:petal_apothecary',
-    output: {item: 'botania:pure_daisy'},
-    ingredients: [
-      {item: 'naturesaura:token_joy'},
-      {item: 'naturesaura:token_fear'},
-      {item: 'naturesaura:token_anger'},
-      {item: 'naturesaura:token_sorrow'},
-      {item: 'botania:white_petal'},
-      {item: 'botania:white_petal'},
-      {item: 'botania:white_petal'},
-      {item: 'botania:white_petal'},
-      {item: 'farmersdelight:squid_ink_pasta'},
-      {item: 'farmersdelight:roast_chicken_block'},
-      {item: 'farmersdelight:stuffed_pumpkin_block'},
-      {item: 'farmersdelight:ratatouille'},
-      {item: 'farmersdelight:grilled_salmon'},
-    ],
-  }).id('inconvenient:pure_daisy');
+  event
+    .custom({
+      type: 'botania:petal_apothecary',
+      output: {item: 'botania:pure_daisy'},
+      ingredients: [
+        {item: 'naturesaura:token_joy'},
+        {item: 'naturesaura:token_fear'},
+        {item: 'naturesaura:token_anger'},
+        {item: 'naturesaura:token_sorrow'},
+        {item: 'botania:white_petal'},
+        {item: 'botania:white_petal'},
+        {item: 'botania:white_petal'},
+        {item: 'botania:white_petal'},
+        {item: 'farmersdelight:squid_ink_pasta'},
+        {item: 'farmersdelight:roast_chicken_block'},
+        {item: 'farmersdelight:stuffed_pumpkin_block'},
+        {item: 'farmersdelight:ratatouille'},
+        {item: 'farmersdelight:grilled_salmon'},
+      ],
+    })
+    .id('inconvenient:pure_daisy');
 
-  event.custom({
-    type: 'botania:petal_apothecary',
-    output: {item: 'botania:fertilizer'},
-    ingredients: [
-      {item: 'minecraft:bone_meal'},
-      {tag: 'forge:dyes'},
-      {tag: 'forge:dyes'},
-      {tag: 'forge:dyes'},
-      {tag: 'forge:dyes'},
-    ],
-  }).id('inconveient:petal_apothecary_fertilizer');
+  event
+    .custom({
+      type: 'botania:petal_apothecary',
+      output: {item: 'botania:fertilizer'},
+      ingredients: [
+        {item: 'minecraft:bone_meal'},
+        {tag: 'forge:dyes'},
+        {tag: 'forge:dyes'},
+        {tag: 'forge:dyes'},
+        {tag: 'forge:dyes'},
+      ],
+    })
+    .id('inconveient:petal_apothecary_fertilizer');
 
   event.custom({
     type: 'bloodmagic:altar',
@@ -85,15 +89,19 @@ onEvent('recipes', event => {
     });
   });
 
-  ['botania:pure_daisy/livingrock','productivebees:block_conversion/botania/stone_to_livingrock'].forEach(id => event.remove({ id: id }));
-  
+  [
+    'botania:pure_daisy/livingrock',
+    'productivebees:block_conversion/botania/stone_to_livingrock',
+  ].forEach(id => event.remove({id: id}));
 
-   event.custom({
-    type: 'botania:pure_daisy',
-    input: {type: 'block', block: 'rankine:rose_marble'},
-    output: {name: 'botania:livingrock'},
-   }).id('iconvenient:livingrock');
-  
+  event
+    .custom({
+      type: 'botania:pure_daisy',
+      input: {type: 'block', block: 'rankine:rose_marble'},
+      output: {name: 'botania:livingrock'},
+    })
+    .id('iconvenient:livingrock');
+
   event.custom({
     type: 'productivebees:block_conversion',
     bee: 'productivebees:pure',
@@ -112,17 +120,19 @@ onEvent('recipes', event => {
     ],
   });
 
-  event.custom({
-    type: 'create:mixing',
-    results: [{item: 'botania:fertilizer'}],
-    ingredients: [
-      {item: 'create:refined_radiance'},
-      {item: 'tconstruct:pig_iron_ingot'},
-      {item: 'hem:copparite'},
-      {count: 4, item: 'rankine:bone_char'},
-    ],
-    heatRequirement: 'superheated',
-  }).id('inconvenient:fertilizer');
+  event
+    .custom({
+      type: 'create:mixing',
+      results: [{item: 'botania:fertilizer'}],
+      ingredients: [
+        {item: 'create:refined_radiance'},
+        {item: 'tconstruct:pig_iron_ingot'},
+        {item: 'hem:copparite'},
+        {count: 4, item: 'rankine:bone_char'},
+      ],
+      heatRequirement: 'superheated',
+    })
+    .id('inconvenient:fertilizer');
   event.custom({
     type: 'create:mechanical_crafting',
     result: {item: 'botania:runic_altar'},
