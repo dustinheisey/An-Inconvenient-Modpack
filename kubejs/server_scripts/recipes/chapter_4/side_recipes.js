@@ -1366,5 +1366,47 @@ onEvent('recipes', event => {
         });
       },
     },
+    {
+      id: 'soulspring_lamp',
+      recipe: () => {
+        ['cold_sweat:soulspring_lamp'].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'extendedcrafting:shaped_table',
+            result: {
+              item: 'cold_sweat:soulspring_lamp',
+            },
+            pattern: [' a ', 'bcb', ' d '],
+            key: {
+              a: 'tconstruct:slimesteel_nugget',
+              b: 'twilightforest:knightmetal_ingot',
+              c: 'minecraft:soul_lantern',
+              d: 'minecraft:chain',
+            },
+          })
+          .id('inconvenient:soulspring_lamp');
+      },
+      children: [],
+    },
+    {
+      id: 'advanced_auto_table',
+      recipe: () => {
+        event
+          .custom({
+            type: 'extendedcrafting:shaped_table',
+            result: {
+              item: 'extendedcrafting:basic_auto_table',
+            },
+            pattern: ['aba', 'cdc', 'aba'],
+            key: {
+              a: 'extendedcrafting:black_iron_ingot',
+              b: 'extendedcrafting:redstone_component',
+              c: 'extendedcrafting:redstone_catalyst',
+              d: 'extendedcrafting:basic_table',
+            },
+          })
+          .id('inconvenient:basic_auto_table');
+      },
+    },
   ]);
 });

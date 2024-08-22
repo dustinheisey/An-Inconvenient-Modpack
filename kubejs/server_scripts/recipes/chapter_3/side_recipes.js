@@ -822,21 +822,316 @@ onEvent('recipes', event => {
     {
       id: 'explorers_compass',
       recipe: () => {
-        event.custom({
-          type: 'extendedcrafting:shaped_table',
-          result: {
-            item: 'explorerscompass:explorerscompass',
-          },
-          pattern: ['aba', 'bcb', 'aba'],
-          key: {
-            a: 'blue_skies:spider_webbing',
-            b: 'extendedcrafting:black_iron_ingot',
-            c: 'naturescompass:naturescompass',
-          },
-        });
+        event
+          .custom({
+            type: 'extendedcrafting:shaped_table',
+            result: {
+              item: 'explorerscompass:explorerscompass',
+            },
+            pattern: ['aba', 'bcb', 'aba'],
+            key: {
+              a: 'blue_skies:spider_webbing',
+              b: 'extendedcrafting:black_iron_ingot',
+              c: 'naturescompass:naturescompass',
+            },
+          })
+          .id('inconvenient:explorers_compass');
+      },
+    },
+    {
+      id: 'wood_tier_crushing_head',
+      recipe: () => {
+        ['rankine:wood_tier_crushing_head'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .custom({
+            type: 'extendedcrafting:shaped_table',
+            result: {
+              item: 'rankine:wood_tier_crushing_head',
+            },
+            pattern: [' a ', 'aba', 'cdc'],
+            key: {
+              a: 'undergarden:wigglewood_planks',
+              b: 'twilightforest:carminite',
+              c: 'minecraft:sticky_piston',
+              d: 'blue_skies:horizonite_block',
+            },
+          })
+          .id('inconvenient:wood_tier_crushing_head');
+      },
+    },
+    {
+      id: 'smoker',
+      recipe: () => {
+        ['minecraft:smoker'].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'extendedcrafting:shaped_table',
+            result: {
+              item: 'minecraft:smoker',
+            },
+            pattern: [' a ', 'aba', ' a '],
+            key: {
+              a: 'undergarden:wigglewood_log',
+              b: 'minecraft:furnace',
+            },
+          })
+          .id('inconvenient:smoker');
+      },
+    },
+    {
+      id: 'blast_furnace',
+      recipe: () => {
+        [
+          'rankine:blast_furnace_from_sheetmetal',
+          'minecraft:blast_furnace',
+          'tconstruct:common/basalt_blast_furnace',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'extendedcrafting:shaped_table',
+            result: {
+              item: 'minecraft:blast_furnace',
+            },
+            pattern: ['aaa', 'aba', 'ccc'],
+            key: {
+              a: 'minecraft:iron_ingot',
+              b: 'minecraft:furnace',
+              c: 'minecraft:smooth_stone',
+            },
+          })
+          .id('inconvenient:blast_furnace');
       },
     },
   ]);
+
+  ['minecraft:cartography_table'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:cartography_table',
+      },
+      pattern: ['aa', 'bb', 'bb'],
+      key: {
+        a: 'minecraft:paper',
+        b: 'undergarden:wigglewood_planks',
+      },
+    })
+    .id('inconvenient:cartography_table');
+
+  ['minecraft:fletching_table'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:fletching_table',
+      },
+      pattern: ['aa', 'bb', 'bb'],
+      key: {
+        a: 'minecraft:flint',
+        b: 'undergarden:wigglewood_planks',
+      },
+    })
+    .id('inconvenient:fletching_table');
+
+  ['minecraft:grindstone'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:grindstone',
+      },
+      pattern: ['aba', 'c c'],
+      key: {
+        a: 'undergarden:twistytwig',
+        b: 'minecraft:stone_slab',
+        c: 'undergarden:wigglewood_planks',
+      },
+    })
+    .id('inconvenient:grindstone');
+
+  ['minecraft:stonecutter', 'blue_skies:stonecutter_compat'].forEach(id =>
+    event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:stonecutter',
+      },
+      pattern: [' a ', 'bbb'],
+      key: {a: 'minecraft:iron_ingot', b: 'minecraft:smooth_stone'},
+    })
+    .id('inconvenient:stonecutter');
+
+  ['rankine:piston_from_metals', 'minecraft:piston'].forEach(id =>
+    event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:piston',
+      },
+      pattern: ['aaa', 'bcb', 'bdb'],
+      key: {
+        a: 'blue_skies:dusk_planks',
+        b: 'rankine:gray_marble',
+        c: 'twilightforest:carminite',
+        d: 'blue_skies:horizonite_ingot',
+      },
+    })
+    .id('inconvenient:piston');
+
+  [
+    'minecraft:compass',
+    'tconstruct:smeltery/casting/metal/iron/compass',
+  ].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:compass',
+      },
+      pattern: [' a ', 'aba', ' a '],
+      key: {
+        a: 'blue_skies:horizonite_ingot',
+        b: 'minecraft:redstone',
+      },
+    })
+    .id('inconvenient:compass');
+
+  ['minecraft:brewing_stand', 'rankine:alloy_crafting/brewing_stand'].forEach(
+    id => event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:brewing_stand',
+      },
+      pattern: [' a ', 'bbb'],
+      key: {
+        a: 'minecraft:blaze_rod',
+        b: 'twilightforest:mazestone',
+      },
+    })
+    .id('inconvenient:brewing_stand');
+
+  ['minecraft:crossbow', 'paragon_textiles:crossbow'].forEach(id =>
+    event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:crossbow',
+      },
+      pattern: ['aba', 'cdc', ' a '],
+      key: {
+        a: 'undergarden:twistytwig',
+        b: 'minecraft:iron_ingot',
+        c: 'minecraft:string',
+        d: 'minecraft:tripwire_hook',
+      },
+    })
+    .id('inconvenient:crossbow');
+
+  ['minecraft:map'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'minecraft:map',
+      },
+      pattern: ['aaa', 'aba', 'aaa'],
+      key: {
+        a: 'minecraft:paper',
+        b: 'minecraft:compass',
+      },
+    })
+    .id('inconvenient:map');
+  ['blue_skies:tool_box'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'blue_skies:tool_box',
+      },
+      pattern: ['aa', 'bb', 'bb'],
+      key: {
+        a: 'blue_skies:ventium_ingot',
+        b: 'blue_skies:maple_planks',
+      },
+    })
+    .id('inconvenient:tool_box');
+
+  [
+    'charcoal_pit:mechanical_bellows',
+    'charcoal_pit:mechanical_bellows2',
+  ].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'charcoal_pit:mechanical_bellows',
+      },
+      pattern: [' a ', 'bcd', ' a '],
+      key: {
+        a: 'minecraft:smooth_stone',
+        b: 'minecraft:redstone',
+        c: 'charcoal_pit:bellows',
+        d: 'minecraft:iron_ingot',
+      },
+    })
+    .id('inconvenient:mechanical_bellows');
+
+  ['twilightforest:magic_map'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'twilightforest:magic_map',
+      },
+      pattern: ['aaa', 'aba', 'aaa'],
+      key: {
+        a: 'minecraft:paper',
+        b: 'twilightforest:magic_map_focus',
+      },
+    })
+    .id('inconvenient:magic_map');
+
+  ['twilightforest:maze_map'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'twilightforest:maze_map',
+      },
+      pattern: ['aaa', 'aba', 'aaa'],
+      key: {
+        a: 'minecraft:paper',
+        b: 'twilightforest:maze_map_focus',
+      },
+    })
+    .id('inconvenient:maze_map');
+
+  ['twilightforest:ore_map'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'twilightforest:ore_map',
+      },
+      pattern: ['aaa', 'aba', 'aaa'],
+      key: {
+        a: 'minecraft:paper',
+        b: 'blue_skies:horizonite_block',
+      },
+    })
+    .id('inconvenient:ore_map');
 
   ['naturesaura:tree_ritual/token_sorrow'].forEach(id =>
     event.remove({id: id})

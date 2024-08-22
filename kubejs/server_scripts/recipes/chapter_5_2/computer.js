@@ -399,17 +399,21 @@ onEvent('recipes', event => {
       d: 'minecraft:redstone',
     },
   });
-  event.custom({
-    type: 'create:mechanical_crafting',
-    result: {item: 'immersive_aircraft:boiler'},
-    pattern: ['aaa', 'aba', 'cbd'],
-    key: {
-      a: 'hem:copparite',
-      b: 'tconstruct:molten_pig_iron_bucket',
-      c: 'minecraft:gunpowder',
-      d: 'tconstruct:blazing_blood_bucket',
-    },
-  });
+
+  ['immersive_aircraft:boiler'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'create:mechanical_crafting',
+      result: {item: 'immersive_aircraft:boiler'},
+      pattern: ['aaa', 'aba', 'cbd'],
+      key: {
+        a: 'hem:copparite',
+        b: 'tconstruct:molten_pig_iron_bucket',
+        c: 'minecraft:gunpowder',
+        d: 'tconstruct:blazing_blood_bucket',
+      },
+    })
+    .id('inconvenient:boiler');
 
   event.custom({
     type: 'create:mechanical_crafting',

@@ -164,34 +164,41 @@ onEvent('recipes', event => {
           {
             id: 'millstone',
             recipe: () => {
-              event.custom({
-                type: 'extendedcrafting:shaped_table',
-                result: {
-                  item: 'create:millstone',
-                },
-                pattern: [' a ', ' b ', 'cdc'],
-                key: {
-                  a: 'create:cogwheel',
-                  b: 'create:andesite_casing',
-                  c: 'rankine:gray_marble',
-                  d: 'occultism:afrit_essence',
-                },
-              });
+              event
+                .custom({
+                  type: 'extendedcrafting:shaped_table',
+                  result: {
+                    item: 'create:millstone',
+                  },
+                  pattern: [' a ', ' b ', 'cdc'],
+                  key: {
+                    a: 'create:cogwheel',
+                    b: 'create:andesite_casing',
+                    c: 'rankine:gray_marble',
+                    d: 'occultism:afrit_essence',
+                  },
+                })
+                .id('inconvenient:millstone');
             },
             children: [
               {
                 id: 'basic_table',
                 recipe: () => {
-                  event.shaped(
-                    'extendedcrafting:basic_table',
-                    ['aba', 'bcb', 'dad'],
-                    {
-                      a: 'extendedcrafting:black_iron_ingot',
-                      b: 'extendedcrafting:basic_component',
-                      c: 'extendedcrafting:basic_catalyst',
-                      d: 'extendedcrafting:black_iron_slate',
-                    }
+                  ['extendedcrafting:basic_table'].forEach(id =>
+                    event.remove({id: id})
                   );
+                  event
+                    .shaped(
+                      'extendedcrafting:basic_table',
+                      ['aba', 'bcb', 'dad'],
+                      {
+                        a: 'extendedcrafting:black_iron_ingot',
+                        b: 'extendedcrafting:basic_component',
+                        c: 'extendedcrafting:basic_catalyst',
+                        d: 'extendedcrafting:black_iron_slate',
+                      }
+                    )
+                    .id('inconvenient:basic_table');
                 },
                 children: [
                   {
@@ -500,17 +507,23 @@ onEvent('recipes', event => {
                   {
                     id: 'andesite_alloy',
                     recipe: () => {
-                      event.custom({
-                        type: 'extendedcrafting:shaped_table',
-                        result: {
-                          item: 'create:andesite_alloy',
-                        },
-                        pattern: ['aba', 'bab', 'aba'],
-                        key: {
-                          a: 'minecraft:andesite',
-                          b: 'ecofriendly:garbage_item_ym',
-                        },
-                      });
+                      [
+                        'create:crafting/materials/andesite_alloy_from_zinc',
+                        'create:mixing/andesite_alloy_from_zinc',
+                      ].forEach(id => event.remove({id: id}));
+                      event
+                        .custom({
+                          type: 'extendedcrafting:shaped_table',
+                          result: {
+                            item: 'create:andesite_alloy',
+                          },
+                          pattern: ['aba', 'bab', 'aba'],
+                          key: {
+                            a: 'minecraft:andesite',
+                            b: 'ecofriendly:garbage_item_ym',
+                          },
+                        })
+                        .id('inconvenient:andesite_alloy');
                     },
                     children: [],
                   },
@@ -519,41 +532,47 @@ onEvent('recipes', event => {
               {
                 id: 'cogwheel',
                 recipe: () => {
-                  event.custom({
-                    type: 'extendedcrafting:shaped_table',
-                    result: {
-                      item: 'create:cogwheel',
-                    },
-                    pattern: ['ab'],
-                    key: {
-                      a: 'create:shaft',
-                      b: 'undergarden:wigglewood_planks',
-                    },
-                  });
-                  event.custom({
-                    type: 'extendedcrafting:shaped_table',
-                    result: {
-                      item: 'create:large_cogwheel',
-                    },
-                    pattern: ['ab'],
-                    key: {
-                      a: 'create:cogwheel',
-                      b: 'undergarden:wigglewood_planks',
-                    },
-                  });
+                  event
+                    .custom({
+                      type: 'extendedcrafting:shaped_table',
+                      result: {
+                        item: 'create:cogwheel',
+                      },
+                      pattern: ['ab'],
+                      key: {
+                        a: 'create:shaft',
+                        b: 'undergarden:wigglewood_planks',
+                      },
+                    })
+                    .id('inconvenient:cogwheel');
+                  event
+                    .custom({
+                      type: 'extendedcrafting:shaped_table',
+                      result: {
+                        item: 'create:large_cogwheel',
+                      },
+                      pattern: ['ab'],
+                      key: {
+                        a: 'create:cogwheel',
+                        b: 'undergarden:wigglewood_planks',
+                      },
+                    })
+                    .id('inconvenient:large_cogwheel');
                 },
                 children: [
                   {
                     id: 'shaft',
                     recipe: () => {
-                      event.custom({
-                        type: 'extendedcrafting:shaped_table',
-                        result: {
-                          item: 'create:shaft',
-                        },
-                        pattern: ['a', 'a'],
-                        key: {a: 'create:andesite_alloy'},
-                      });
+                      event
+                        .custom({
+                          type: 'extendedcrafting:shaped_table',
+                          result: {
+                            item: 'create:shaft',
+                          },
+                          pattern: ['a', 'a'],
+                          key: {a: 'create:andesite_alloy'},
+                        })
+                        .id('inconvenient:shaft');
                     },
                     children: [],
                   },
@@ -565,17 +584,19 @@ onEvent('recipes', event => {
           {
             id: 'hand_crank',
             recipe: () => {
-              event.custom({
-                type: 'extendedcrafting:shaped_table',
-                result: {
-                  item: 'create:hand_crank',
-                },
-                pattern: ['aaa', '  b'],
-                key: {
-                  a: 'undergarden:wigglewood_planks',
-                  b: 'create:andesite_alloy',
-                },
-              });
+              event
+                .custom({
+                  type: 'extendedcrafting:shaped_table',
+                  result: {
+                    item: 'create:hand_crank',
+                  },
+                  pattern: ['aaa', '  b'],
+                  key: {
+                    a: 'undergarden:wigglewood_planks',
+                    b: 'create:andesite_alloy',
+                  },
+                })
+                .id('inconvenient:hand_crank');
             },
           },
         ],

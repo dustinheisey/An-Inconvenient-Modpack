@@ -1019,4 +1019,22 @@ onEvent('recipes', event => {
     },
     energy: 10000,
   });
+
+  ['extendedcrafting:advanced_table'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'extendedcrafting:advanced_table',
+      },
+      pattern: ['aba', 'cdc', 'aea'],
+      key: {
+        a: 'extendedcrafting:advanced_component',
+        b: 'extendedcrafting:advanced_catalyst',
+        c: 'extendedcrafting:basic_table',
+        d: 'bloodmagic:demonslate',
+        e: 'extendedcrafting:black_iron_slate',
+      },
+    })
+    .id('inconvenient:advanced_table');
 });

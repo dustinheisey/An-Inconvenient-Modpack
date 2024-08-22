@@ -66,54 +66,69 @@ onEvent('recipes', event => {
     temperature: 605,
   });
 
-  event.custom({
-    type: 'extendedcrafting:shaped_table',
-    result: {
-      item: 'rankine:air_distillation_packing',
-    },
-    pattern: ['aba', 'bab', 'aba'],
-    key: {
-      a: 'rankine:aluminum_sheetmetal',
-      b: 'architects_palette:warpstone',
-    },
-  });
-  event.custom({
-    type: 'extendedcrafting:shaped_table',
-    result: {
-      item: 'rankine:gas_bottler',
-    },
-    pattern: ['aba', 'bab', 'aba'],
-    key: {
-      a: 'rankine:purple_gold_sheetmetal',
-      b: 'rankine:brass_ingot',
-    },
-  });
-  event.custom({
-    type: 'extendedcrafting:shaped_table',
-    result: {
-      item: 'rankine:gas_vent',
-    },
-    pattern: ['aba', 'bcb', 'aba'],
-    key: {
-      a: 'rankine:copper_sheetmetal',
-      b: 'tconstruct:scorched_glass',
-      c: 'minecraft:glass_bottle',
-    },
-  });
+  ['rankine:air_distillation_packing'].forEach(id => event.remove({id: id}));
 
-  event.custom({
-    type: 'extendedcrafting:shaped_table',
-    result: {
-      item: 'rankine:distillation_tower',
-    },
-    pattern: ['aba', 'aca', 'ada'],
-    key: {
-      a: 'rankine:aluminum_sheetmetal',
-      b: 'occultism:iesnium_block',
-      c: 'rankine:rose_gold_block',
-      d: 'cataclysm:ignitium_block',
-    },
-  });
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'rankine:air_distillation_packing',
+      },
+      pattern: ['aba', 'bab', 'aba'],
+      key: {
+        a: 'rankine:aluminum_sheetmetal',
+        b: 'architects_palette:warpstone',
+      },
+    })
+    .id('inconvenient:air_distillation_packing');
+
+  ['rankine:gas_bottler'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'rankine:gas_bottler',
+      },
+      pattern: ['aba', 'bab', 'aba'],
+      key: {
+        a: 'rankine:purple_gold_sheetmetal',
+        b: 'rankine:brass_ingot',
+      },
+    })
+    .id('inconvenient:gas_bottler');
+
+  ['rankine:gas_vent'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'rankine:gas_vent',
+      },
+      pattern: ['aba', 'bcb', 'aba'],
+      key: {
+        a: 'rankine:copper_sheetmetal',
+        b: 'tconstruct:scorched_glass',
+        c: 'minecraft:glass_bottle',
+      },
+    })
+    .id('inconvenient:gas_vent');
+
+  ['rankine:distillation_tower'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'rankine:distillation_tower',
+      },
+      pattern: ['aba', 'aca', 'ada'],
+      key: {
+        a: 'rankine:aluminum_sheetmetal',
+        b: 'occultism:iesnium_block',
+        c: 'rankine:rose_gold_block',
+        d: 'cataclysm:ignitium_block',
+      },
+    })
+    .id('inconvenient:distillation_tower');
 
   event.shaped(`rankine:alloy_furnace`, ['aba', 'aba', 'aca'], {
     a: `rankine:ultra_high_refractory_bricks`,

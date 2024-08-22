@@ -312,23 +312,32 @@ onEvent('recipes', event => {
                                                   {
                                                     id: 'evaporation_tower',
                                                     recipe: () => {
-                                                      event.custom({
-                                                        type: 'extendedcrafting:shaped_table',
-                                                        result: {
-                                                          item: 'rankine:evaporation_tower',
-                                                        },
-                                                        pattern: [
-                                                          'aaa',
-                                                          'bcb',
-                                                          'ada',
-                                                        ],
-                                                        key: {
-                                                          a: 'kubejs:cinder_ingot',
-                                                          b: 'minecraft:magma_block',
-                                                          c: 'immersivepetroleum:crudeoil_bucket',
-                                                          d: 'minecraft:hopper',
-                                                        },
-                                                      });
+                                                      [
+                                                        'rankine:evaporation_tower',
+                                                      ].forEach(id =>
+                                                        event.remove({id: id})
+                                                      );
+                                                      event
+                                                        .custom({
+                                                          type: 'extendedcrafting:shaped_table',
+                                                          result: {
+                                                            item: 'rankine:evaporation_tower',
+                                                          },
+                                                          pattern: [
+                                                            'aaa',
+                                                            'bcb',
+                                                            'ada',
+                                                          ],
+                                                          key: {
+                                                            a: 'kubejs:cinder_ingot',
+                                                            b: 'minecraft:magma_block',
+                                                            c: 'immersivepetroleum:crudeoil_bucket',
+                                                            d: 'minecraft:hopper',
+                                                          },
+                                                        })
+                                                        .id(
+                                                          'inconvenient:evaporation_tower'
+                                                        );
                                                     },
                                                     children: [
                                                       {

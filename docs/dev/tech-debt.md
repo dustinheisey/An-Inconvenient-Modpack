@@ -13,6 +13,9 @@
 - [ ] deal with gamestages mods and crafttweaker
 - [ ] change splash screen visuals
 - [ ] change music and create ai music for modpack
+- [ ] update the end eye tooltip text
+- [ ] integrate immersive aircraft updates into modpack
+- [ ] add all crushing head tiers correctly
 
 ## Bugs
 

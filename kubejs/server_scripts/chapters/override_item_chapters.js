@@ -3793,8 +3793,6 @@ onEvent('tags.items', event => {
       'minecraft:lead',
       'minecraft:glass_bottle',
       'minecraft:bookshelf',
-      'minecraft:smoker',
-      'minecraft:blast_furnace',
       'minecraft:brewing_stand',
       'minecraft:white_wool',
       'minecraft:orange_wool',
@@ -3815,6 +3813,8 @@ onEvent('tags.items', event => {
       'minecraft:composter',
     ],
     chapter_3: [
+      'minecraft:smoker',
+      'minecraft:blast_furnace',
       'minecraft:potion',
       'minecraft:splash_potion',
       'minecraft:polished_blackstone_pressure_plate',

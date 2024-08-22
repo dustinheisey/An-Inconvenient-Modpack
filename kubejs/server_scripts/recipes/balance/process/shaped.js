@@ -191,7 +191,6 @@ onEvent('recipes', event => {
         output: [
           'occultism:book_of_binding_foliot',
           'undergarden:catalyst',
-          'extendedcrafting:basic_table',
           'malum:spirit_pouch',
           'extendedcrafting:basic_component',
           'malum:spirit_altar',
@@ -448,17 +447,6 @@ onEvent('recipes', event => {
           a: `rankine:${id}_nugget`,
           b: `rankine:${id}_ingot`,
         });
-      });
-
-      event.shaped('minecraft:brewing_stand', [' a ', 'bbb'], {
-        a: 'minecraft:blaze_rod',
-        b: '#forge:stone',
-      });
-      event.shaped('minecraft:piston', ['aaa', 'bcb', 'bdb'], {
-        a: '#minecraft:planks',
-        b: 'minecraft:cobblestone',
-        c: 'minecraft:iron_ingot',
-        d: 'minecraft:redstone',
       });
     },
     chapter_5_1: () => {

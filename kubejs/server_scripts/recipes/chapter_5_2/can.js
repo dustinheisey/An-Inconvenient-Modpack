@@ -1,4 +1,5 @@
 onEvent('recipes', event => {
+  ['pneumaticcraft:amadron_tablet'].forEach(id => event.remove({id: id}));
   event.custom({
     type: 'extendedcrafting:shaped_table',
     result: {item: 'pneumaticcraft:amadron_tablet'},
@@ -20,6 +21,8 @@ onEvent('recipes', event => {
       f: 'pneumaticcraft:air_canister',
     },
   });
+
+  ['adpother:aerometer'].forEach(id => event.remove({id: id}));
   event.custom({
     type: 'extendedcrafting:shaped_table',
     result: {item: 'adpother:aerometer'},
