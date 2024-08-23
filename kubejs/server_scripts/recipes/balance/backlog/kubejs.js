@@ -82,12 +82,6 @@ onEvent('recipes', event => {
       event.replaceInput('charcoal_pit:straw', 'farmersdelight:straw');
 
       event.replaceInput(
-        {output: 'salt:salt_lamp'},
-        'salt:raw_rock_salt_block',
-        'salt:salt_block'
-      );
-
-      event.replaceInput(
         {output: 'minecraft:bone_block'},
         'minecraft:bone_meal',
         'minecraft:bone'
@@ -549,7 +543,6 @@ onEvent('recipes', event => {
           'rankine:fire_clay_ball',
           'minecraft:rotten_flesh',
           'minecraft:leather',
-          'minecraft:flint',
           '#forge:dyes',
           'minecraft:bone_meal',
           'minecraft:rabbit_stew',
@@ -2030,11 +2023,6 @@ onEvent('recipes', event => {
         {
           input: [
             'rankine:steel_nugget',
-            'rankine:subbituminous_coal',
-            'rankine:lignite',
-            'rankine:coke',
-            'rankine:bituminous_coal',
-            'rankine:anthracite_coal',
             'immersiveengineering:creosote_bucket',
             'rankine:graphite_electrode',
           ],

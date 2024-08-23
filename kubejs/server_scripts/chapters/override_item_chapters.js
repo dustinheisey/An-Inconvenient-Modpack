@@ -3595,6 +3595,7 @@ onEvent('tags.items', event => {
   });
   overrideChapters('minecraft', {
     chapter_1: [
+      'minecraft:campfire',
       'minecraft:deepslate_brick_stairs',
       'minecraft:deepslate_brick_slab',
       'minecraft:deepslate_brick_wall',
@@ -3657,9 +3658,9 @@ onEvent('tags.items', event => {
       'minecraft:brick_wall',
       'minecraft:cauldron',
       'minecraft:smooth_basalt',
+      'minecraft:flint_and_steel',
     ],
     chapter_2: [
-      'minecraft:flint_and_steel',
       'minecraft:sculk_sensor',
       'minecraft:carved_pumpkin',
       'minecraft:pumpkin',
@@ -6751,7 +6752,10 @@ onEvent('tags.items', event => {
   overrideChapters('biomancy', {
     chapter_1: ['biomancy:living_flesh'],
   });
-  overrideChapters('salt', {chapter_3: ['salt:salt_lamp']});
+  overrideChapters('salt', {
+    chapter_3: ['salt:salt_lamp'],
+    chapter_5_1: ['salt:salt_block'],
+  });
   overrideChapters('thirst', {
     chapter_4: ['thirst:sand_filter'],
   });
