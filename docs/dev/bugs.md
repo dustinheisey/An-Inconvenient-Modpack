@@ -9,21 +9,21 @@
 - [ ] flint from gravel recipe
 - [ ] salt block recipe
 - [ ] salt from hammering instead of pickaxe
-- [ ] remove extra tin recipes
-- [ ] cassiterite block to tin block beehive oven
+- [x] remove extra tin recipes
+- [x] cassiterite block to tin block beehive oven
 - [ ] remove extra crushing recipes
 - [ ] remove limestone to quicklime
-- [ ] remove extra copper recipes
-- [ ] malachite block to copper block beehive oven
+- [x] remove extra copper recipes
+- [x] malachite block to copper block beehive oven
 - [ ] ultra high refractory recipes
 - [ ] block of charcoal recipe
 - [ ] block of bone recipe
-- [ ] get rid of extra bronze recipes
-- [ ] get rid of extra iron recipes
-- [ ] get rid of extra lead recipes
-- [ ] galena block to lead block beehive oven
-- [ ] get rid of extra silver recipes
-- [ ] acanthite to silver block beehive oven
+- [x] get rid of extra bronze recipes
+- [x] get rid of extra iron recipes
+- [x] get rid of extra lead recipes
+- [x] galena block to lead block beehive oven
+- [x] get rid of extra silver recipes
+- [x] acanthite to silver block beehive oven
 - [ ] refractory brick recipe for engineers hammer
 - [ ] flint recipe for fire starter
 

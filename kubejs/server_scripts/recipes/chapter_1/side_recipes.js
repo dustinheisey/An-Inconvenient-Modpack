@@ -411,6 +411,14 @@ onEvent('recipes', event => {
                   result: {item: 'rankine:silver_ingot'},
                   amount: 1,
                 });
+
+                event.custom({
+                  type: 'rankine:beehive_oven',
+                  input: {item: 'rankine:acanthite_block'},
+                  result: 'rankine:silver_block',
+                  minCookTime: 2400,
+                  maxCookTime: 4800,
+                });
               },
               children: [
                 {
@@ -447,6 +455,14 @@ onEvent('recipes', event => {
                   ingredients: [{item: 'rankine:galena'}],
                   result: {item: 'rankine:lead_ingot'},
                   amount: 1,
+                });
+
+                event.custom({
+                  type: 'rankine:beehive_oven',
+                  input: {item: 'rankine:galena_block'},
+                  result: 'rankine:lead_block',
+                  minCookTime: 2400,
+                  maxCookTime: 4800,
                 });
               },
               children: [

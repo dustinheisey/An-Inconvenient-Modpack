@@ -668,6 +668,14 @@ onEvent('recipes', event => {
                             result: {item: 'rankine:tin_ingot'},
                             amount: 1,
                           });
+
+                          event.custom({
+                            type: 'rankine:beehive_oven',
+                            input: {item: 'rankine:cassiterite_block'},
+                            result: 'rankine:tin_block',
+                            minCookTime: 2400,
+                            maxCookTime: 4800,
+                          });
                         },
                         children: [
                           {
@@ -763,6 +771,14 @@ onEvent('recipes', event => {
                             ingredients: [{item: 'rankine:malachite'}],
                             result: {item: 'minecraft:copper_ingot'},
                             amount: 1,
+                          });
+
+                          event.custom({
+                            type: 'rankine:beehive_oven',
+                            input: {item: 'rankine:malachite_block'},
+                            result: 'minecraft:copper_block',
+                            minCookTime: 2400,
+                            maxCookTime: 4800,
                           });
                         },
                         children: [
