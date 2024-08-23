@@ -37,8 +37,6 @@
 
 ## Weird
 
-- [ ] torch not rendering
-
 ## Staging
 
 - [x] totems showing in chapter 1
@@ -76,3 +74,4 @@
 - [ ] unification errors
 - [ ] jerky not staged correctly
 - [ ] acorn is gone
+- [ ] torch not rendering
