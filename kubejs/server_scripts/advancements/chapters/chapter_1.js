@@ -56,6 +56,11 @@ onEvent('server.datapack.high_priority', event => {
         frame: 'goal',
         children: [
           {
+            item: 'charcoal_pit:fire_starter',
+            title: '',
+            description: '',
+          },
+          {
             item: 'rankine:flint_knife',
             title: 'Crude Cutting Edge',
             description: 'Carve out a basic flint knife',
@@ -68,102 +73,15 @@ onEvent('server.datapack.high_priority', event => {
                 frame: 'goal',
                 children: [
                   {
+                    item: 'rankine:prospecting_stick',
+                    title: '',
+                    description: '',
+                  },
+                  {
                     item: 'hexerei:dowsing_rod',
                     title: 'Swamp Seeker',
                     description:
                       'Create a dowsing rod & use it to find a swamp',
-                  },
-                  {
-                    item: 'rankine:flint_spear',
-                    title: 'Primitive Piercer',
-                    description: 'Craft a crude flint spear',
-                    children: [
-                      {
-                        item: 'kubejs:rotten_brain',
-                        title: 'Rancid Relic',
-                        description: 'Collect a rotten brain from the undead',
-                        children: [
-                          {
-                            item: 'ceramicbucket:ceramic_bucket',
-                            nbt: '{Fluid:{Amount:1000,FluidName:"kubejs:tanning_fluid"}}',
-                            title: 'Putrid Potion',
-                            description: 'Brew tanning fluid from the brain',
-                          },
-                        ],
-                      },
-                      {
-                        item: 'minecraft:rotten_flesh',
-                        title: 'Undead Harvest',
-                        description: 'Gather some rotten flesh from the undead',
-
-                        children: [
-                          {
-                            item: 'kubejs:stitched_hide',
-                            title: 'Rotten Patchwork',
-                            description: 'Stitch the flesh together',
-                            children: [
-                              {
-                                item: 'kubejs:salted_hide',
-                                title: 'Salty Preservation',
-                                description: 'Salt the hide',
-                                children: [
-                                  {
-                                    item: 'kubejs:dried_hide',
-                                    title: 'Hanging to Harden',
-                                    description: 'Dry the salted hide',
-                                    children: [
-                                      {
-                                        item: 'kubejs:wet_tanned_hide',
-                                        title: 'Questionable Tanning',
-                                        description:
-                                          'Tan the dried hide with tanning fluid',
-                                        children: [
-                                          {
-                                            item: 'minecraft:leather',
-                                            title: 'Bound by Leather',
-                                            description:
-                                              'Dry the tanned hide and collect the finished leather',
-                                            children: [
-                                              {
-                                                item: 'paraglider:paraglider',
-                                                title: 'Wind Rider',
-                                                description:
-                                                  'Craft a paraglider',
-                                              },
-                                              {
-                                                item: 'upgrade_aquatic:bedroll',
-                                                title: "Slumber's Sanctuary",
-                                                description:
-                                                  'Craft a bedroll and regain your sanity',
-                                              },
-                                              {
-                                                icon: 'leather_helmet',
-                                                title:
-                                                  "Survivor's First Stitch",
-                                                frame: 'challenge',
-                                                description:
-                                                  'Craft your first piece of armor',
-                                                tag: 'im:armors/leather',
-                                              },
-                                              {
-                                                item: 'charcoal_pit:bellows',
-                                                title: "Bloomery's Lungs",
-                                                description:
-                                                  'Craft some bellows',
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
                   },
                   {
                     item: 'rankine:flint_pickaxe',
@@ -288,6 +206,98 @@ onEvent('server.datapack.high_priority', event => {
                     ],
                   },
                   {
+                    item: 'rankine:flint_spear',
+                    title: 'Primitive Piercer',
+                    description: 'Craft a crude flint spear',
+                    children: [
+                      {
+                        item: 'kubejs:rotten_brain',
+                        title: 'Rancid Relic',
+                        description: 'Collect a rotten brain from the undead',
+                        children: [
+                          {
+                            item: 'ceramicbucket:ceramic_bucket',
+                            nbt: '{Fluid:{Amount:1000,FluidName:"kubejs:tanning_fluid"}}',
+                            title: 'Putrid Potion',
+                            description: 'Brew tanning fluid from the brain',
+                          },
+                        ],
+                      },
+                      {
+                        item: 'minecraft:rotten_flesh',
+                        title: 'Undead Harvest',
+                        description: 'Gather some rotten flesh from the undead',
+
+                        children: [
+                          {
+                            item: 'kubejs:stitched_hide',
+                            title: 'Rotten Patchwork',
+                            description: 'Stitch the flesh together',
+                            children: [
+                              {
+                                item: 'kubejs:salted_hide',
+                                title: 'Salty Preservation',
+                                description: 'Salt the hide',
+                                children: [
+                                  {
+                                    item: 'kubejs:dried_hide',
+                                    title: 'Hanging to Harden',
+                                    description: 'Dry the salted hide',
+                                    children: [
+                                      {
+                                        item: 'kubejs:wet_tanned_hide',
+                                        title: 'Questionable Tanning',
+                                        description:
+                                          'Tan the dried hide with tanning fluid',
+                                        children: [
+                                          {
+                                            item: 'minecraft:leather',
+                                            title: 'Bound by Leather',
+                                            description:
+                                              'Dry the tanned hide and collect the finished leather',
+                                            children: [
+                                              {
+                                                item: 'paraglider:paraglider',
+                                                title: 'Wind Rider',
+                                                description:
+                                                  'Craft a paraglider',
+                                              },
+                                              {
+                                                item: 'upgrade_aquatic:bedroll',
+                                                title: "Slumber's Sanctuary",
+                                                description:
+                                                  'Craft a bedroll and regain your sanity',
+                                              },
+                                              {
+                                                icon: 'leather_helmet',
+                                                title:
+                                                  "Survivor's First Stitch",
+                                                frame: 'challenge',
+                                                description:
+                                                  'Craft your first piece of armor',
+                                                tag: 'im:armors/leather',
+                                              },
+                                              {
+                                                item: 'charcoal_pit:bellows',
+                                                title: "Bloomery's Lungs",
+                                                description:
+                                                  'Craft some bellows',
+                                              },
+                                            ],
+                                          },
+                                        ],
+                                      },
+                                    ],
+                                  },
+                                ],
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                  {
                     item: 'rankine:flint_axe',
                     title: 'Primitive Axe',
                     description: 'Craft a crude flint axe',
@@ -389,12 +399,22 @@ onEvent('server.datapack.high_priority', event => {
                                               'Craft a ceramic bucket',
                                           },
                                           {
+                                            item: 'brickhopper:brick_hopper',
+                                            title: '',
+                                            description: '',
+                                          },
+                                          {
                                             item: 'rankine:refractory_brick',
                                             title: "Kiln's Core",
                                             description:
                                               'Fire a refractory brick',
                                             frame: 'goal',
                                             children: [
+                                              {
+                                                item: 'immersiveengineering:hammer',
+                                                title: '',
+                                                description: '',
+                                              },
                                               {
                                                 item: 'rankine:beehive_oven_pit',
                                                 title: "Kiln's Foundation",
@@ -575,11 +595,6 @@ onEvent('server.datapack.high_priority', event => {
                                                   },
                                                 ],
                                               },
-                                              {
-                                                item: 'tconsturct:flint_and_brick',
-                                                title: '',
-                                                description: '',
-                                              },
                                             ],
                                           },
                                         ],
@@ -623,7 +638,7 @@ onEvent('server.datapack.high_priority', event => {
                                           'Craft a torch and light it on fire',
                                         icon: 'realistictorches:lit_torch',
                                         criteria: {
-                                          matchbox: {
+                                          lighting: {
                                             trigger:
                                               'minecraft:item_used_on_block',
                                             conditions: {
@@ -639,7 +654,22 @@ onEvent('server.datapack.high_priority', event => {
                                               },
                                             },
                                           },
+                                          crafting: {
+                                            trigger: 'inventory_changed',
+                                            conditions: {
+                                              items: [
+                                                {
+                                                  items: [
+                                                    'realistictorches:lit_torch',
+                                                  ],
+                                                },
+                                              ],
+                                            },
+                                          },
                                         },
+                                        requirements: [
+                                          ['lighting', 'crafting'],
+                                        ],
                                       },
                                     ],
                                   },

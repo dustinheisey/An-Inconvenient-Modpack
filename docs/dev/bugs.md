@@ -1,4 +1,4 @@
-# Bugs
+# Chapter 1 Bugs
 
 ## Recipes
 
@@ -24,6 +24,8 @@
 - [ ] galena block to lead block beehive oven
 - [ ] get rid of extra silver recipes
 - [ ] acanthite to silver block beehive oven
+- [ ] refractory brick recipe for engineers hammer
+- [ ] flint recipe for fire starter
 
 ## Spawning
 
@@ -31,11 +33,12 @@
 
 ## Advancements
 
-- [ ] torch advancement change
-- [ ] prospector not in advancement
-- [ ] fire starter in advancements
-- [ ] engineer's hammer in advancements
-- [ ] brick hopper in advancements
+- [x] torch advancement change
+- [x] prospector not in advancement
+- [x] fire starter in advancements
+- [x] engineer's hammer in advancements
+- [x] brick hopper in advancements
+- [x] make advancement page pretty
 
 ## Weird
 
@@ -46,22 +49,26 @@
 
 ## Staging
 
-- [ ] totems showing in chapter 1
+- [x] totems showing in chapter 1
 
 ## Client Hiding
 
-- [ ] hide farmersdelight flint knife
-- [ ] hide rankine dowsing rod
+- [x] hide farmersdelight flint knife
 
 ## Patchouli
 
-- [ ] patchouli handbook ores
+- [x] patchouli handbook ores
 
-  - [ ] kaolinite
-  - [ ] malachite
-  - [ ] cassiterite
-  - [ ] plumbago
-  - [ ] amethyst
-  - [ ] selenite
-  - [ ] galena
-  - [ ] acanthite
+  - [x] kaolinite
+  - [x] malachite
+  - [x] cassiterite
+  - [x] plumbago
+  - [x] amethyst
+  - [x] selenite
+  - [x] galena
+  - [x] acanthite
+  - [x] salt
+
+# Chapter 2 Bugs
+
+- [ ] incorporate dowsing rod into chapter 2
