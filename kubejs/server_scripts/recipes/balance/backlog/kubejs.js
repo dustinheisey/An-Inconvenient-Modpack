@@ -33,15 +33,15 @@ onEvent('recipes', event => {
   setBalanceRecipes({
     replaceInput: () => {
       event.replaceInput(
-        { output: 'botania:dodge_ring' },
+        {output: 'botania:dodge_ring'},
         'minecraft:emerald',
         'botania:terrasteel_nugget'
       );
       event.replaceInput(
-        { output: 'botania:itemfinder' },
+        {output: 'botania:itemfinder'},
         'minecraft:emerald',
         'botania:terrasteel_ingot'
-      )
+      );
       event.replaceInput(
         {output: 'naturesaura:shockwave_creator'},
         'minecraft:diamond_boots',
@@ -556,7 +556,6 @@ onEvent('recipes', event => {
           'hem:hot_air_balloon_item',
           'hem:airshipitem',
           'farmersdelight:hamburger',
-          'rankine:totem_of_enduring',
           'charcoal_pit:mechanical_bellows',
           'minecraft:sugar',
           'minecraft:gunpowder',
@@ -597,9 +596,6 @@ onEvent('recipes', event => {
           'occultism:book_of_calling_foliot_cleaner',
           'occultism:book_of_calling_djinni_manage_machine',
           'minecraft:book',
-          'rankine:totem_of_promising',
-          'rankine:totem_of_timesaving',
-          'rankine:totem_of_endurance',
           'immersiveengineering:redstone_acid_bucket',
 
           'immersiveengineering:stick_iron',

@@ -25,6 +25,7 @@ onEvent('tags.items', event => {
     'lost_pages',
     'relics',
     'spawn_eggs',
+    'totems',
     // 'ingots',
     // 'nuggets',
     // 'metal_blocks',
