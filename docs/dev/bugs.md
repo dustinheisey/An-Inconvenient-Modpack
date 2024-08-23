@@ -24,7 +24,7 @@
 
 ## Spawning
 
-- [ ] seeds dropping when they shouldn't
+- [x] seeds dropping when they shouldn't
 
 ## Advancements
 
@@ -49,6 +49,7 @@
 
 ## Patchouli
 
+- [ ] rewrite chapter 1 entries
 - [x] patchouli handbook ores
 
   - [x] kaolinite

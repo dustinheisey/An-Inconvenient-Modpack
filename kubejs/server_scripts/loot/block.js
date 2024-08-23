@@ -22,6 +22,8 @@ onEvent('lootjs', event => {
       'hem:blueleaf_grass_shorter',
       'upgrade_aquatic:beachgrass',
       'upgrade_aquatic:tall_beachgrass',
+      'minecraft:fern',
+      'minecraft:large_fern',
     ]
   );
 
