@@ -1,0 +1,46 @@
+# Bugs
+
+- [ ] plant fiber from ferns
+- [ ] seeds dropping when they shouldn't
+- [ ] torch not rendering
+- [ ] torch advancement change
+- [ ] campfire recipe
+- [ ] unification errors
+- [ ] jerky not staged correctly
+- [ ] inner bark recipe
+- [ ] prospector not in advancement
+- [ ] totems showing in chapter 1
+- [ ] acorn is gone
+- [ ] flint and steel recipe
+- [ ] flint from gravel recipe
+- [ ] hide farmersdelight flint knife
+- [ ] hide rankine dowsing rod
+- [ ] salt block recipe
+- [ ] salt from hammering instead of pickaxe
+- [ ] remove extra tin recipes
+- [ ] cassiterite block to tin block beehive oven
+- [ ] remove extra crushing recipes
+- [ ] remove limestone to quicklime
+- [ ] remove extra copper recipes
+- [ ] malachite block to copper block beehive oven
+- [ ] fire starter in advancements
+- [ ] patchouli handbook ores
+  - [ ] kaolinite
+  - [ ] malachite
+  - [ ] cassiterite
+  - [ ] plumbago
+  - [ ] amethyst
+  - [ ] selenite
+  - [ ] galena
+  - [ ] acanthite
+- [ ] ultra high refractory recipes
+- [ ] block of charcoal recipe
+- [ ] block of bone recipe
+- [ ] engineer's hammer in advancements
+- [ ] get rid of extra bronze recipes
+- [ ] get rid of extra iron recipes
+- [ ] get rid of extra lead recipes
+- [ ] galena block to lead block beehive oven
+- [ ] get rid of extra silver recipes
+- [ ] acanthite to silver block beehive oven
+- [ ] brick hopper in advancements
