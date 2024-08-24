@@ -26,7 +26,7 @@ onEvent('recipes', event => {
             min_temp: 500,
           },
         })
-        .id('inconvenient:drill_bit_platinum');
+        .id('inconvenient:thermo_plant_drill_bit_platinum');
     },
   });
 });

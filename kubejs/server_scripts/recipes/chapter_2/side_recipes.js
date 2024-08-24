@@ -16,7 +16,7 @@ onEvent('recipes', event => {
                 c: 'occultism:datura',
               })
               .stage('eye_exotic')
-              .id('inconvenient:exotic_eye');
+              .id('inconvenient:shaped_exotic_eye');
 
             event
               .shaped('endrem:guardian_eye', ['aba', 'bcb', 'aba'], {
@@ -25,7 +25,7 @@ onEvent('recipes', event => {
                 c: 'minecraft:prismarine_crystals',
               })
               .stage('eye_guardian')
-              .id('inconvenient:guardian_eye');
+              .id('inconvenient:shaped_guardian_eye');
           },
         },
         {
@@ -183,7 +183,7 @@ onEvent('recipes', event => {
                 fluidLevelsConsumed: 2000,
                 global: true,
               })
-              .id('inconvenient:totem_of_cobbling');
+              .id('inconvenient:cauldron_totem_of_cobbling');
           },
         },
       ],
@@ -655,7 +655,7 @@ onEvent('recipes', event => {
             a: 'paragon_textiles:fabric_red',
             b: '#minecraft:planks',
           })
-          .id('inconvenient:sewing_table');
+          .id('inconvenient:shaped_sewing_table');
       },
       children: [
         {
@@ -669,7 +669,7 @@ onEvent('recipes', event => {
                 'minecraft:red_dye',
                 'paragon_textiles:fabric_plain',
               ])
-              .id('inconvenient:fabric_red');
+              .id('inconvenient:shapeless_fabric_red');
           },
         },
       ],
@@ -713,7 +713,7 @@ onEvent('recipes', event => {
             },
             result: {item: 'kubejs:wet_tanned_hide'},
           })
-          .id('inconvenient:wet_tanned_hide_from_resin');
+          .id('inconvenient:mixing_barrel_wet_tanned_hide_from_resin');
       },
     },
     {
@@ -889,7 +889,7 @@ onEvent('recipes', event => {
             },
             fluidLevelsConsumed: 1000,
           })
-          .id('inconvenient:sediment_fan');
+          .id('inconvenient:cauldron_sediment_fan');
       },
     },
   ]);

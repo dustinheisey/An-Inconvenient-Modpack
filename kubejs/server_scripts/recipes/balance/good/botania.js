@@ -13,7 +13,7 @@ onEvent('recipes', event => {
           },
           mana: 500,
         })
-        .id('inconvenient:lexicon');
+        .id('inconvenient:mana_pool_lexicon');
     },
     orechid_ignem: () => {},
     orechid: () => {},

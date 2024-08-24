@@ -33,7 +33,7 @@ onEvent('recipes', event => {
         {item: 'farmersdelight:grilled_salmon'},
       ],
     })
-    .id('inconvenient:pure_daisy');
+    .id('inconvenient:petal_apothecary_pure_daisy');
 
   event
     .custom({
@@ -132,7 +132,7 @@ onEvent('recipes', event => {
       ],
       heatRequirement: 'superheated',
     })
-    .id('inconvenient:fertilizer');
+    .id('inconvenient:mixing_fertilizer');
   event.custom({
     type: 'create:mechanical_crafting',
     result: {item: 'botania:runic_altar'},

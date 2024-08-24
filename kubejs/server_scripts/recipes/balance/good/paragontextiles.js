@@ -6,7 +6,7 @@ onEvent('recipes', event => {
         .shapeless('3x paragon_textiles:silk_wisps', [
           'blue_skies:spider_webbing',
         ])
-        .id('inconvenient:silk_wisps');
+        .id('inconvenient:shapeless_silk_wisps');
 
       colors.forEach(color => {
         if (color !== 'red') {

@@ -22,13 +22,13 @@ onEvent('recipes', event => {
                 a: 'tconstruct:queens_slime_ingot',
                 b: 'rankine:sulfur_block',
               })
-              .id('inconvenient:totem_of_infusing');
+              .id('inconvenient:shaped_totem_of_infusing');
             event
               .shaped('rankine:totem_of_timesaving', ['aaa', 'aba', 'aaa'], {
                 a: 'twilightforest:ironwood_ingot',
                 b: 'tconstruct:slimesteel_block',
               })
-              .id('inconvenient:totem_of_timesaving');
+              .id('inconvenient:shaped_totem_of_timesaving');
           },
         },
         {id: 'gateways', recipe: () => {}},
@@ -51,7 +51,7 @@ onEvent('recipes', event => {
                 c: 'undergarden:forgotten_nugget',
               })
               .stage('eye_undead')
-              .id('inconvenient:undead_eye');
+              .id('inconvenient:shaped_undead_eye');
 
             event
               .shaped('endrem:corrupted_eye', ['aba', 'bcb', 'aba'], {
@@ -60,7 +60,7 @@ onEvent('recipes', event => {
                 c: 'bloodmagic:infusedslate',
               })
               .stage('eye_corrupted')
-              .id('inconvenient:corrupted_eye');
+              .id('inconvenient:shaped_corrupted_eye');
 
             event
               .shaped('endrem:evil_eye', ['aba', 'bcb', 'aba'], {
@@ -69,7 +69,7 @@ onEvent('recipes', event => {
                 c: 'charcoal_pit:nether_shard',
               })
               .stage('eye_evil')
-              .id('inconvenient:evil_eye');
+              .id('inconvenient:shaped_evil_eye');
 
             event
               .shaped('endrem:lost_eye', ['aba', 'bcb', 'aba'], {
@@ -78,7 +78,7 @@ onEvent('recipes', event => {
                 c: 'twilightforest:carminite',
               })
               .stage('eye_lost')
-              .id('inconvenient:lost_eye');
+              .id('inconvenient:shaped_lost_eye');
           },
         },
         {
@@ -384,7 +384,7 @@ onEvent('recipes', event => {
                         ],
                         grindingTime: 300,
                       })
-                      .id('inconvenient:nether_shard');
+                      .id('inconvenient:pestle_nether_shard');
                   },
                 },
               ],
@@ -839,7 +839,7 @@ onEvent('recipes', event => {
               c: 'naturescompass:naturescompass',
             },
           })
-          .id('inconvenient:explorers_compass');
+          .id('inconvenient:basic_table_explorers_compass');
       },
     },
     {
@@ -862,7 +862,7 @@ onEvent('recipes', event => {
               d: 'blue_skies:horizonite_block',
             },
           })
-          .id('inconvenient:wood_tier_crushing_head');
+          .id('inconvenient:basic_table_wood_tier_crushing_head');
       },
     },
     {
@@ -881,7 +881,7 @@ onEvent('recipes', event => {
               b: 'minecraft:furnace',
             },
           })
-          .id('inconvenient:smoker');
+          .id('inconvenient:basic_table_smoker');
       },
     },
     {
@@ -905,7 +905,7 @@ onEvent('recipes', event => {
               c: 'minecraft:smooth_stone',
             },
           })
-          .id('inconvenient:blast_furnace');
+          .id('inconvenient:basic_table_blast_furnace');
       },
     },
   ]);
@@ -923,7 +923,7 @@ onEvent('recipes', event => {
         b: 'undergarden:wigglewood_planks',
       },
     })
-    .id('inconvenient:cartography_table');
+    .id('inconvenient:basic_table_cartography_table');
 
   ['minecraft:fletching_table'].forEach(id => event.remove({id: id}));
   event
@@ -938,7 +938,7 @@ onEvent('recipes', event => {
         b: 'undergarden:wigglewood_planks',
       },
     })
-    .id('inconvenient:fletching_table');
+    .id('inconvenient:basic_table_fletching_table');
 
   ['minecraft:grindstone'].forEach(id => event.remove({id: id}));
   event
@@ -954,7 +954,7 @@ onEvent('recipes', event => {
         c: 'undergarden:wigglewood_planks',
       },
     })
-    .id('inconvenient:grindstone');
+    .id('inconvenient:basic_table_grindstone');
 
   ['minecraft:stonecutter', 'blue_skies:stonecutter_compat'].forEach(id =>
     event.remove({id: id})
@@ -968,7 +968,7 @@ onEvent('recipes', event => {
       pattern: [' a ', 'bbb'],
       key: {a: 'minecraft:iron_ingot', b: 'minecraft:smooth_stone'},
     })
-    .id('inconvenient:stonecutter');
+    .id('inconvenient:basic_table_stonecutter');
 
   ['rankine:piston_from_metals', 'minecraft:piston'].forEach(id =>
     event.remove({id: id})
@@ -987,7 +987,7 @@ onEvent('recipes', event => {
         d: 'blue_skies:horizonite_ingot',
       },
     })
-    .id('inconvenient:piston');
+    .id('inconvenient:basic_table_piston');
 
   [
     'minecraft:compass',
@@ -1005,7 +1005,7 @@ onEvent('recipes', event => {
         b: 'minecraft:redstone',
       },
     })
-    .id('inconvenient:compass');
+    .id('inconvenient:basic_table_compass');
 
   ['minecraft:brewing_stand', 'rankine:alloy_crafting/brewing_stand'].forEach(
     id => event.remove({id: id})
@@ -1022,7 +1022,7 @@ onEvent('recipes', event => {
         b: 'twilightforest:mazestone',
       },
     })
-    .id('inconvenient:brewing_stand');
+    .id('inconvenient:basic_table_brewing_stand');
 
   ['minecraft:crossbow', 'paragon_textiles:crossbow'].forEach(id =>
     event.remove({id: id})
@@ -1041,7 +1041,7 @@ onEvent('recipes', event => {
         d: 'minecraft:tripwire_hook',
       },
     })
-    .id('inconvenient:crossbow');
+    .id('inconvenient:basic_table_crossbow');
 
   ['minecraft:map'].forEach(id => event.remove({id: id}));
   event
@@ -1056,7 +1056,7 @@ onEvent('recipes', event => {
         b: 'minecraft:compass',
       },
     })
-    .id('inconvenient:map');
+    .id('inconvenient:basic_table_map');
   ['blue_skies:tool_box'].forEach(id => event.remove({id: id}));
   event
     .custom({
@@ -1070,7 +1070,7 @@ onEvent('recipes', event => {
         b: 'blue_skies:maple_planks',
       },
     })
-    .id('inconvenient:tool_box');
+    .id('inconvenient:basic_table_tool_box');
 
   [
     'charcoal_pit:mechanical_bellows',
@@ -1090,7 +1090,7 @@ onEvent('recipes', event => {
         d: 'minecraft:iron_ingot',
       },
     })
-    .id('inconvenient:mechanical_bellows');
+    .id('inconvenient:basic_table_mechanical_bellows');
 
   ['twilightforest:magic_map'].forEach(id => event.remove({id: id}));
   event
@@ -1105,7 +1105,7 @@ onEvent('recipes', event => {
         b: 'twilightforest:magic_map_focus',
       },
     })
-    .id('inconvenient:magic_map');
+    .id('inconvenient:basic_table_magic_map');
 
   ['twilightforest:maze_map'].forEach(id => event.remove({id: id}));
   event
@@ -1120,7 +1120,7 @@ onEvent('recipes', event => {
         b: 'twilightforest:maze_map_focus',
       },
     })
-    .id('inconvenient:maze_map');
+    .id('inconvenient:basic_table_maze_map');
 
   ['twilightforest:ore_map'].forEach(id => event.remove({id: id}));
   event
@@ -1135,7 +1135,7 @@ onEvent('recipes', event => {
         b: 'blue_skies:horizonite_block',
       },
     })
-    .id('inconvenient:ore_map');
+    .id('inconvenient:basic_table_ore_map');
 
   ['naturesaura:tree_ritual/token_sorrow'].forEach(id =>
     event.remove({id: id})
@@ -1161,5 +1161,5 @@ onEvent('recipes', event => {
       time: 250,
       output: {item: 'naturesaura:token_sorrow'},
     })
-    .id('inconvenient:token_sorrow');
+    .id('inconvenient:tree_ritual_token_sorrow');
 });

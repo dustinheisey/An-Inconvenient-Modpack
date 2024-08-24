@@ -13,7 +13,7 @@ onEvent('recipes', event => {
                 c: 'minecraft:iron_ingot',
               })
               .stage('eye_cold')
-              .id('inconvenient:cold_eye');
+              .id('inconvenient:shaped_cold_eye');
           },
         },
         {
@@ -194,7 +194,7 @@ onEvent('recipes', event => {
             b: 'minecraft:flint',
             c: '#minecraft:wooden_slabs',
           })
-          .id('inconvenient:matchbox');
+          .id('inconvenient:shaped_matchbox');
       },
       children: [
         {
@@ -241,7 +241,7 @@ onEvent('recipes', event => {
             b: 'endrem:undead_soul',
             c: 'farmersdelight:canvas',
           })
-          .id('inconvenient:antique_atlas');
+          .id('inconvenient:shaped_antique_atlas');
       },
     },
     {
@@ -257,7 +257,7 @@ onEvent('recipes', event => {
             a: 'farmersdelight:rope',
             b: 'minecraft:leather',
           })
-          .id('inconvenient:waterskin');
+          .id('inconvenient:shaped_waterskin');
       },
     },
     {
@@ -274,7 +274,7 @@ onEvent('recipes', event => {
             a: 'farmersdelight:straw',
             b: 'minecraft:leather',
           })
-          .id('inconvenient:bedroll');
+          .id('inconvenient:shaped_bedroll');
       },
     },
     {
@@ -288,7 +288,7 @@ onEvent('recipes', event => {
           .shaped('4x thirst:clay_bowl', ['aaa'], {
             a: '#forge:clay_balls',
           })
-          .id('inconvenient:clay_bowl');
+          .id('inconvenient:shaped_clay_bowl');
       },
     },
     {
@@ -325,7 +325,7 @@ onEvent('recipes', event => {
             },
             result: {item: 'rankine:roman_concrete'},
           })
-          .id('inconvenient:roman_concrete');
+          .id('inconvenient:mixing_barrel_roman_concrete');
       },
     },
     {

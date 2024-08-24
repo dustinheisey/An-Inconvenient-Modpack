@@ -11,7 +11,7 @@ onEvent('recipes', event => {
           b: 'occultism:iesnium_ingot',
           c: 'ironchest:gold_chest',
         })
-        .id('iconvenient:diamond_chest');
+        .id('inconvenient:shaped_diamond_chest');
       event
         .shaped(
           'ironchest:gold_to_diamond_chest_upgrade',
@@ -22,7 +22,7 @@ onEvent('recipes', event => {
             c: 'minecraft:gold_ingot',
           }
         )
-        .id('inconvenient:gold_to_diamond_chest_upgrade');
+        .id('inconvenient:shaped_gold_to_diamond_chest_upgrade');
     },
   });
 });

@@ -8,7 +8,7 @@ onEvent('recipes', event => {
           'minecraft:bee_nest',
           'botania:manasteel_helmet',
         ])
-        .id('inconvenient:bee_nest_manasteel_helmet');
+        .id('inconvenient:shapeless_bee_nest_manasteel_helmet');
     },
     bee_breeding: () => {},
     bee_fishing: () => {

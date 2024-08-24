@@ -6,7 +6,7 @@ onEvent('recipes', event => {
           '#minecraft:flowers',
           '#paraglider:statues',
         ])
-        .id('inconvenient:rito_goddess_statue');
+        .id('inconvenient:shapeless_rito_goddess_statue');
     },
   });
 });

@@ -9,7 +9,7 @@ onEvent('recipes', event => {
           b: 'realistictorches:lit_torch',
           c: '#minecraft:logs',
         })
-        .id('inconvenient:totem_torch');
+        .id('inconvenient:shaped_totem_torch');
     },
   });
 });

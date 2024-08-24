@@ -60,7 +60,7 @@ onEvent('recipes', event => {
       ingredients: [{item: 'minecraft:honeycomb'}],
       output: [{item: 'botania:pixie_dust'}],
     })
-    .id('inconvenient:pixie_dust');
+    .id('inconvenient:elven_trade_pixie_dust');
 
   event.custom({
     type: 'botania:elven_trade',

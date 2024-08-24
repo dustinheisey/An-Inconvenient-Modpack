@@ -9,7 +9,7 @@ onEvent('recipes', event => {
           '#farmersdelight:canvas_signs',
           'minecraft:yellow_dye',
         ])
-        .id('inconvenient:yellow_canvas_sign');
+        .id('inconvenient:shapeless_yellow_canvas_sign');
     },
     cooking_pot: () => {
       [
@@ -35,7 +35,7 @@ onEvent('recipes', event => {
           ],
           cookingtime: 200,
         })
-        .id('inconvenient:fermented_spider_eye');
+        .id('inconvenient:cooking_pot_fermented_spider_eye');
     },
     cutting_board: () => {
       [

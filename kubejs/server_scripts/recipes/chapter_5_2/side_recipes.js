@@ -31,7 +31,7 @@ onEvent('recipes', event => {
                 c: 'create:shadow_steel',
               })
               .stage('eye_black')
-              .id('inconvenient:black_eye');
+              .id('inconvenient:shaped_black_eye');
           },
         },
         {
@@ -114,7 +114,7 @@ onEvent('recipes', event => {
               b: 'rankine:promethium_ingot',
             },
           })
-          .id('inconvenient:hull');
+          .id('inconvenient:basic_table_hull');
         event
           .custom({
             type: 'extendedcrafting:shaped_table',
@@ -126,7 +126,7 @@ onEvent('recipes', event => {
               a: 'rankine:promethium_ingot',
             },
           })
-          .id('inconvenient:propeller');
+          .id('inconvenient:basic_table_propeller');
         event
           .custom({
             type: 'extendedcrafting:shaped_table',
@@ -139,7 +139,7 @@ onEvent('recipes', event => {
               b: 'immersiveengineering:hemp_fiber',
             },
           })
-          .id('inconvenient:sail');
+          .id('inconvenient:basic_table_sail');
 
         event
           .custom({
@@ -152,7 +152,7 @@ onEvent('recipes', event => {
               c: 'immersive_aircraft:engine',
             },
           })
-          .id('inconvenient:quadrocopter');
+          .id('inconvenient:basic_table_quadrocopter');
         event
           .custom({
             type: 'extendedcrafting:shaped_table',
@@ -165,7 +165,7 @@ onEvent('recipes', event => {
               d: 'immersive_aircraft:engine',
             },
           })
-          .id('inconvenient:biplane');
+          .id('inconvenient:advanced_table_biplane');
         event
           .custom({
             type: 'extendedcrafting:shaped_table',
@@ -178,7 +178,7 @@ onEvent('recipes', event => {
               d: 'immersive_aircraft:engine',
             },
           })
-          .id('inconvenient:gyrodyne');
+          .id('inconvenient:advanced_table_gyrodyne');
         event
           .custom({
             type: 'extendedcrafting:shaped_table',
@@ -193,7 +193,7 @@ onEvent('recipes', event => {
               f: 'immersive_aircraft:propeller',
             },
           })
-          .id('inconvenient:airship');
+          .id('inconvenient:advanced_table_airship');
 
         ['immersive_aircraft:engine'].forEach(id => event.remove({id: id}));
         event
@@ -211,7 +211,7 @@ onEvent('recipes', event => {
               g: 'create:electron_tube',
             },
           })
-          .id('inconvenient:engine');
+          .id('inconvenient:advanced_table_engine');
       },
       children: [],
     },
@@ -232,7 +232,7 @@ onEvent('recipes', event => {
         b: 'rankine:steel_ingot',
       },
     })
-    .id('inconvenient:windmill');
+    .id('inconvenient:basic_table_windmill');
 
   ['immersiveengineering:crafting/watermill'].forEach(id =>
     event.remove({id: id})
@@ -249,7 +249,7 @@ onEvent('recipes', event => {
         b: 'rankine:steel_ingot',
       },
     })
-    .id('inconvenient:watermill');
+    .id('inconvenient:basic_table_watermill');
 
   event.shaped('rankine:simple_magnet', ['a a', 'aaa'], {
     a: 'rankine:nickel_ingot',

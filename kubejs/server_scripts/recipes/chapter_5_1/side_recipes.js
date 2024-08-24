@@ -45,7 +45,7 @@ onEvent('recipes', event => {
                 c: 'farmersdelight:hamburger',
               })
               .stage('eye_cursed')
-              .id('inconvenient:cursed_eye');
+              .id('inconvenient:shaped_cursed_eye');
           },
         },
         {
@@ -133,7 +133,7 @@ onEvent('recipes', event => {
               {item: 'botania:rune_lust'},
             ],
           })
-          .id('inconvenient:kekimurus');
+          .id('inconvenient:petal_apothecary_kekimurus');
         event
           .custom({
             type: 'botania:petal_apothecary',
@@ -149,7 +149,7 @@ onEvent('recipes', event => {
               {item: 'botania:rune_wrath'},
             ],
           })
-          .id('inconvenient:gourmaryllis');
+          .id('inconvenient:petal_apothecary_gourmaryllis');
         event
           .custom({
             type: 'botania:petal_apothecary',
@@ -168,7 +168,7 @@ onEvent('recipes', event => {
               {item: 'botania:rune_sloth'},
             ],
           })
-          .id('inconvenient:spectrolus');
+          .id('inconvenient:petal_apothecary_spectrolus');
         event
           .custom({
             type: 'botania:petal_apothecary',
@@ -182,7 +182,7 @@ onEvent('recipes', event => {
               {item: 'botania:rune_pride'},
             ],
           })
-          .id('inconvenient:marimorphosis');
+          .id('inconvenient:petal_apothecary_marimorphosis');
       },
     },
   ]);

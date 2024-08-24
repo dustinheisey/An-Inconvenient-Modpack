@@ -52,7 +52,7 @@ onEvent('recipes', event => {
           },
           fluidLevelsConsumed: 2000,
         })
-        .id('inconvenient:broom_waterproof_tip');
+        .id('inconvenient:cauldron_broom_waterproof_tip');
       event
         .custom({
           type: 'hexerei:mixingcauldron',
@@ -94,7 +94,7 @@ onEvent('recipes', event => {
           },
           fluidLevelsConsumed: 1000,
         })
-        .id('inconvenient:willow_broom');
+        .id('inconvenient:cauldron_willow_broom');
 
       event
         .custom({
@@ -137,7 +137,7 @@ onEvent('recipes', event => {
           },
           fluidLevelsConsumed: 1500,
         })
-        .id('inconvenient:sage_burning_plate');
+        .id('inconvenient:cauldron_sage_burning_plate');
       event
         .custom({
           type: 'hexerei:mixingcauldron',
@@ -179,7 +179,7 @@ onEvent('recipes', event => {
           },
           fluidLevelsConsumed: 1500,
         })
-        .id('inconvenient:warhammer');
+        .id('inconvenient:cauldron_warhammer');
 
       event
         .custom({
@@ -222,7 +222,7 @@ onEvent('recipes', event => {
           },
           fluidLevelsConsumed: 500,
         })
-        .id('inconvenient:infused_fabric');
+        .id('inconvenient:cauldron_infused_fabric');
 
       event
         .custom({
@@ -265,7 +265,7 @@ onEvent('recipes', event => {
           },
           fluidLevelsConsumed: 2000,
         })
-        .id('inconvenient:candelabra');
+        .id('inconvenient:cauldron_candelabra');
       event
         .custom({
           type: 'hexerei:mixingcauldron',
@@ -307,7 +307,7 @@ onEvent('recipes', event => {
           },
           fluidLevelsConsumed: 333,
         })
-        .id('inconvenient:reading_glasses');
+        .id('inconvenient:cauldron_reading_glasses');
     },
     dipper: () => {},
     drying: () => {},
@@ -332,7 +332,7 @@ onEvent('recipes', event => {
           ],
           grindingTime: 300,
         })
-        .id('inconvenient:bone_meal');
+        .id('inconvenient:pestle_bone_meal');
     },
   });
 });

@@ -14,7 +14,7 @@ onEvent('recipes', event => {
           d: 'rankine:high_refractory_bricks',
         })
         .stage('chapter_1')
-        .id('inconvenient:hearth');
+        .id('inconvenient:shaped_hearth');
 
       event
         .shaped('cold_sweat:hearth', ['  a', 'bcb', 'aba'], {
@@ -23,7 +23,7 @@ onEvent('recipes', event => {
           c: 'minecraft:furnace',
         })
         .stage('chapter_2')
-        .id('inconvenient:hearth_2');
+        .id('inconvenient:shaped_hearth_2');
     },
     children: [
       {
@@ -42,7 +42,7 @@ onEvent('recipes', event => {
           ].forEach(id => event.remove({id: id}));
           event
             .smelting('minecraft:iron_ingot', 'rankine:hematite')
-            .id('inconvenient:iron_ingot_from_hematite');
+            .id('inconvenient:smelting_iron_ingot_from_hematite');
         },
         children: [
           {
@@ -71,7 +71,7 @@ onEvent('recipes', event => {
                   experience: 0.7,
                   cookingtime: 200,
                 })
-                .id('inconvenient:iron_nugget_from_smelted_iron_can');
+                .id('inconvenient:blooming_iron_nugget');
             },
             children: [
               {
@@ -86,7 +86,7 @@ onEvent('recipes', event => {
                       b: 'minecraft:furnace',
                       c: 'rankine:bronze_ingot',
                     })
-                    .id('inconvenient:bloomery');
+                    .id('inconvenient:shaped_bloomery');
                 },
                 children: [
                   {
@@ -268,7 +268,7 @@ onEvent('recipes', event => {
                               },
                               result: {item: 'rankine:mortar'},
                             })
-                            .id('inconvenient:mortar');
+                            .id('inconvenient:mixing_barrel_mortar');
                         },
                         children: [
                           // mix mortar with brick items to get 4 bricks. make bricks collection in each chapter supplementary recipes. make calcite come from limestone crushed with a diamond hammer. head calcite or calcite block to make quicklime or quicklime block.
@@ -284,7 +284,7 @@ onEvent('recipes', event => {
                               ].forEach(id => event.remove({id: id}));
                               event
                                 .smelting('rankine:quicklime', 'rankine:chalk')
-                                .id('inconvenient:quicklime');
+                                .id('inconvenient:smelting_quicklime');
 
                               event.custom({
                                 type: 'rankine:beehive_oven',
@@ -404,13 +404,13 @@ onEvent('recipes', event => {
                               'minecraft:brick',
                               'kubejs:dry_unfired_brick'
                             )
-                            .id('inconvenient:brick');
+                            .id('inconvenient:campfire_cooking_brick');
                           event
                             .smelting(
                               'minecraft:brick',
                               'kubejs:dry_unfired_brick'
                             )
-                            .id('inconvenient:brick_2');
+                            .id('inconvenient:smelting_brick');
                         },
                         children: [
                           {
@@ -429,7 +429,7 @@ onEvent('recipes', event => {
                                   },
                                   dryingTimeInTicks: 3000,
                                 })
-                                .id('inconvenient:dry_unfired_brick');
+                                .id('inconvenient:drying_dry_unfired_brick');
                             },
                           },
                           {
@@ -485,7 +485,7 @@ onEvent('recipes', event => {
                                                     a: 'paragon_textiles:plant_fibers',
                                                   }
                                                 )
-                                                .id('inconvenient:rope');
+                                                .id('inconvenient:shaped_rope');
 
                                               event.replaceInput(
                                                 'rankine:rope',
@@ -633,7 +633,7 @@ onEvent('recipes', event => {
                                     c: '#forge:rods/wooden',
                                   }
                                 )
-                                .id('inconvenient:engineers_hammer');
+                                .id('inconvenient:shaped_engineers_hammer');
                             },
                           },
                           {
@@ -654,7 +654,7 @@ onEvent('recipes', event => {
                                     b: 'rankine:mortar',
                                   }
                                 )
-                                .id('inconvenient:kiln_brick');
+                                .id('inconvenient:shaped_kiln_brick');
                             },
                           },
                         ],
@@ -711,7 +711,7 @@ onEvent('recipes', event => {
                                     },
                                   ],
                                 })
-                                .id('inconvenient:cassiterite');
+                                .id('inconvenient:crushing_cassiterite');
                             },
                             children: [
                               {
@@ -727,7 +727,7 @@ onEvent('recipes', event => {
                                         b: '#forge:rods/wooden',
                                       }
                                     )
-                                    .id('inconvenient:stone_hammer');
+                                    .id('inconvenient:shaped_stone_hammer');
                                 },
                                 children: [
                                   {
@@ -815,7 +815,7 @@ onEvent('recipes', event => {
                                     },
                                   ],
                                 })
-                                .id('inconvenient:malachite');
+                                .id('inconvenient:crushing_malachite');
                             },
                             children: [
                               {
@@ -834,7 +834,9 @@ onEvent('recipes', event => {
                                         c: 'farmersdelight:rope',
                                       }
                                     )
-                                    .id('inconvenient:prospecting_stick');
+                                    .id(
+                                      'inconvenient:shaped_prospecting_stick'
+                                    );
                                 },
                                 children: [
                                   {
@@ -870,7 +872,7 @@ onEvent('recipes', event => {
                                         b: 'ecofriendly:smelted_iron_can_ym',
                                       }
                                     )
-                                    .id('inconvenient:altimeter');
+                                    .id('inconvenient:shaped_altimeter');
                                 },
                               },
                             ],
@@ -890,7 +892,7 @@ onEvent('recipes', event => {
                       'ecofriendly:smelted_iron_can_ym',
                       'ecofriendly:iron_can_ym'
                     )
-                    .id('inconvenient:smelted_iron_can');
+                    .id('inconvenient:smelting_smelted_iron_can');
                 },
                 children: [
                   {
@@ -925,7 +927,7 @@ onEvent('recipes', event => {
               output: {item: 'minecraft:leather'},
               dryingTimeInTicks: 1800,
             })
-            .id('inconvenient:leather');
+            .id('inconvenient:drying_leather');
         },
         children: [
           {
@@ -946,7 +948,7 @@ onEvent('recipes', event => {
                   },
                   result: {item: 'kubejs:wet_tanned_hide'},
                 })
-                .id('inconvenient:wet_tanned_hide');
+                .id('inconvenient:mixing_barrel_wet_tanned_hide');
             },
             children: [
               {
@@ -959,7 +961,7 @@ onEvent('recipes', event => {
                       output: {item: 'kubejs:dried_hide'},
                       dryingTimeInTicks: 1800,
                     })
-                    .id('inconvenient:dried_hide');
+                    .id('inconvenient:drying_dried_hide');
                 },
                 children: [
                   {
@@ -976,7 +978,7 @@ onEvent('recipes', event => {
                           'salt:salt',
                           'salt:salt',
                         ])
-                        .id('inconvenient:salted_hide');
+                        .id('inconvenient:shapeless_salted_hide');
                     },
                     children: [
                       {
@@ -988,13 +990,13 @@ onEvent('recipes', event => {
                               [' a ', 'aaa', ' a '],
                               {a: 'minecraft:rotten_flesh'}
                             )
-                            .id('inconvenient:stitched_hide');
+                            .id('inconvenient:shaped_stitched_hide');
                           event
                             .shapeless('kubejs:stitched_hide', [
                               'biomancy:living_flesh',
                               'biomancy:living_flesh',
                             ])
-                            .id('inconvenient:stitched_hide_2');
+                            .id('inconvenient:shapeless_stitched_hide');
                         },
                         children: [
                           {
@@ -1033,7 +1035,7 @@ onEvent('recipes', event => {
                       fluid_out: {fluid: 'kubejs:tanning_fluid', amount: 1000},
                       time: 24000,
                     })
-                    .id('inconvenient:tanning_fluid');
+                    .id('inconvenient:barrel_tanning_fluid');
                 },
                 children: [
                   {
@@ -1048,7 +1050,7 @@ onEvent('recipes', event => {
                           b: '#forge:rods/wooden',
                           c: '#minecraft:wooden_slabs',
                         })
-                        .id('inconvenient:barrel');
+                        .id('inconvenient:shaped_barrel');
                     },
                     children: [
                       {
@@ -1074,7 +1076,7 @@ onEvent('recipes', event => {
                       b: 'charcoal_pit:barrel',
                       c: '#minecraft:slabs',
                     })
-                    .id('inconvenient:mixing_barrel');
+                    .id('inconvenient:shaped_mixing_barrel');
                 },
               },
             ],
@@ -1091,7 +1093,7 @@ onEvent('recipes', event => {
                   b: '#forge:rods/wooden',
                   c: '#minecraft:wooden_slabs',
                 })
-                .id('inconvenient:drying_rack');
+                .id('inconvenient:shaped_drying_rack');
             },
           },
         ],
@@ -1117,7 +1119,7 @@ onEvent('recipes', event => {
                     c: 'minecraft:copper_ingot',
                   }
                 )
-                .id('inconvenient:naturescompass');
+                .id('inconvenient:shaped_naturescompass');
             },
             children: [
               {
@@ -1130,7 +1132,7 @@ onEvent('recipes', event => {
                       b: 'minecraft:flint',
                       c: 'farmersdelight:rope',
                     })
-                    .id('inconvenient:dowsing_rod');
+                    .id('inconvenient:shaped_dowsing_rod');
                 },
               },
               {
@@ -1202,7 +1204,9 @@ onEvent('recipes', event => {
                       },
                       dryingTimeInTicks: 3000,
                     })
-                    .id('inconvenient:dry_unfired_high_refractory_brick');
+                    .id(
+                      'inconvenient:drying_dry_unfired_high_refractory_brick'
+                    );
                 },
                 children: [
                   {
@@ -1257,7 +1261,7 @@ onEvent('recipes', event => {
                                   input: {item: 'rankine:porcelain'},
                                   guaranteed: [{item: 'kubejs:grog'}],
                                 })
-                                .id('inconvenient:grog');
+                                .id('inconvenient:crushing_grog');
                             },
                             children: [
                               {

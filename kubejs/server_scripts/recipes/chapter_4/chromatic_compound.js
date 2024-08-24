@@ -1036,5 +1036,5 @@ onEvent('recipes', event => {
         e: 'extendedcrafting:black_iron_slate',
       },
     })
-    .id('inconvenient:advanced_table');
+    .id('inconvenient:basic_table_advanced_table');
 });

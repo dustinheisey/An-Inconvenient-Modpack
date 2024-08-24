@@ -160,5 +160,5 @@ onEvent('recipes', event => {
       time: 250,
       output: {item: 'naturesaura:eye_improved'},
     })
-    .id('inconvenient:environmental_ocular');
+    .id('inconvenient:tree_ritual_environmental_ocular');
 });

@@ -52,7 +52,7 @@ onEvent('recipes', event => {
         min_temp: 573,
       },
     })
-    .id('inconvenient:lpg');
+    .id('inconvenient:thermo_plant_lpg');
 
   ['pneumaticcraft:pressure_chamber/empty_pcb'].forEach(id =>
     event.remove({id: id})
@@ -84,7 +84,7 @@ onEvent('recipes', event => {
       ],
       pressure: 1.5,
     })
-    .id('inconvenient:empty_pcb');
+    .id('inconvenient:pressure_chamber_empty_pcb');
   event
     .custom({
       type: 'pneumaticcraft:pressure_chamber',
@@ -108,7 +108,7 @@ onEvent('recipes', event => {
       ],
       pressure: 3,
     })
-    .id('inconvenient:pcb_blueprint');
+    .id('inconvenient:pressure_chamber_pcb_blueprint');
   ['pneumaticcraft:pressure_chamber/etching_acid'].forEach(id =>
     event.remove({id: id})
   );
@@ -126,7 +126,7 @@ onEvent('recipes', event => {
       ],
       pressure: 1,
     })
-    .id('inconvenient:etching_acid');
+    .id('inconvenient:pressure_chamber_etching_acid');
 
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
@@ -177,7 +177,7 @@ onEvent('recipes', event => {
         },
       ],
     })
-    .id('inconvenient:capacitor');
+    .id('inconvenient:pressure_chamber_capacitor');
 
   [
     'pneumaticcraft:pressure_chamber/compressed_iron_ingot',
@@ -210,7 +210,7 @@ onEvent('recipes', event => {
       pressure: 2,
       results: [{item: 'pneumaticcraft:ingot_iron_compressed'}],
     })
-    .id('inconvenient:compressed_iron');
+    .id('inconvenient:pressure_chamber_compressed_iron');
 
   event
     .custom({
@@ -221,7 +221,7 @@ onEvent('recipes', event => {
       pressure: 2,
       results: [{item: 'pneumaticcraft:compressed_iron_block'}],
     })
-    .id('inconvenient:compressed_iron_block');
+    .id('inconvenient:pressure_chamber_compressed_iron_block');
   event.blasting(
     'immersiveengineering:dust_hop_graphite',
     'immersiveengineering:ingot_hop_graphite'
@@ -413,7 +413,7 @@ onEvent('recipes', event => {
         d: 'tconstruct:blazing_blood_bucket',
       },
     })
-    .id('inconvenient:boiler');
+    .id('inconvenient:mechanical_boiler');
 
   event.custom({
     type: 'create:mechanical_crafting',

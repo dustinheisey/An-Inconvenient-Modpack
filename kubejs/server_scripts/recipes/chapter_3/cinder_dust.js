@@ -178,7 +178,7 @@ onEvent('recipes', event => {
                     d: 'occultism:afrit_essence',
                   },
                 })
-                .id('inconvenient:millstone');
+                .id('inconvenient:millstone_millstone');
             },
             children: [
               {
@@ -198,7 +198,7 @@ onEvent('recipes', event => {
                         d: 'extendedcrafting:black_iron_slate',
                       }
                     )
-                    .id('inconvenient:basic_table');
+                    .id('inconvenient:shaped_basic_table');
                 },
                 children: [
                   {
@@ -523,7 +523,7 @@ onEvent('recipes', event => {
                             b: 'ecofriendly:garbage_item_ym',
                           },
                         })
-                        .id('inconvenient:andesite_alloy');
+                        .id('inconvenient:basic_table_andesite_alloy');
                     },
                     children: [],
                   },
@@ -544,7 +544,7 @@ onEvent('recipes', event => {
                         b: 'undergarden:wigglewood_planks',
                       },
                     })
-                    .id('inconvenient:cogwheel');
+                    .id('inconvenient:basic_table_cogwheel');
                   event
                     .custom({
                       type: 'extendedcrafting:shaped_table',
@@ -557,7 +557,7 @@ onEvent('recipes', event => {
                         b: 'undergarden:wigglewood_planks',
                       },
                     })
-                    .id('inconvenient:large_cogwheel');
+                    .id('inconvenient:basic_table_large_cogwheel');
                 },
                 children: [
                   {
@@ -572,7 +572,7 @@ onEvent('recipes', event => {
                           pattern: ['a', 'a'],
                           key: {a: 'create:andesite_alloy'},
                         })
-                        .id('inconvenient:shaft');
+                        .id('inconvenient:basic_table_shaft');
                     },
                     children: [],
                   },
@@ -596,7 +596,7 @@ onEvent('recipes', event => {
                     b: 'create:andesite_alloy',
                   },
                 })
-                .id('inconvenient:hand_crank');
+                .id('inconvenient:basic_table_hand_crank');
             },
           },
         ],

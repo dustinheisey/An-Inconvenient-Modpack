@@ -147,7 +147,7 @@ onEvent('recipes', event => {
                       time: 250,
                       output: {item: 'naturesaura:nature_altar'},
                     })
-                    .id('inconvenient:nature_altar');
+                    .id('inconvenient:tree_ritual_nature_altar');
                 },
                 children: [
                   {
@@ -172,7 +172,7 @@ onEvent('recipes', event => {
                           time: 250,
                           output: {item: 'naturesaura:token_joy'},
                         })
-                        .id('inconvenient:token_joy');
+                        .id('inconvenient:tree_ritual_token_joy');
                     },
                     children: [],
                   },

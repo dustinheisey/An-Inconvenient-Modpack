@@ -21,7 +21,7 @@ onEvent('recipes', event => {
                 c: 'bloodmagic:strong_tau',
               })
               .stage('eye_nether')
-              .id('inconvenient:nether_eye');
+              .id('inconvenient:shaped_nether_eye');
 
             event
               .shaped('endrem:wither_eye', ['aba', 'bcb', 'aba'], {
@@ -30,7 +30,7 @@ onEvent('recipes', event => {
                 c: 'kubejs:inert_compound',
               })
               .stage('eye_wither')
-              .id('inconvenient:wither_eye');
+              .id('inconvenient:shaped_wither_eye');
           },
         },
         {
@@ -116,26 +116,26 @@ onEvent('recipes', event => {
                 a: 'cataclysm:ignitium_ingot',
                 b: 'botania:blaze_block',
               })
-              .id('inconvenient:totem_of_blazing');
+              .id('inconvenient:shaped_totem_of_blazing');
             event
               .shaped('rankine:totem_of_enduring', ['aaa', 'aba', 'aaa'], {
                 a: 'undergarden:froststeel_ingot',
                 b: 'undergarden:utherium_block',
               })
-              .id('inconvenient:totem_of_enduring');
+              .id('inconvenient:shaped_totem_of_enduring');
             event
               .shaped('rankine:totem_of_promising', ['aaa', 'aba', 'aaa'], {
                 a: 'twilightforest:knightmetal_ingot',
                 b: 'minecraft:lapis_block',
               })
-              .id('inconvenient:totem_of_promising');
+              .id('inconvenient:shaped_totem_of_promising');
 
             event
               .shaped('rankine:totem_of_softening', ['aaa', 'aba', 'aaa'], {
                 a: 'tconstruct:manyullyn_ingot',
                 b: 'minecraft:quartz_block',
               })
-              .id('inconvenient:totem_of_softening');
+              .id('inconvenient:shaped_totem_of_softening');
           },
         },
       ],
@@ -1403,7 +1403,7 @@ onEvent('recipes', event => {
               d: 'minecraft:chain',
             },
           })
-          .id('inconvenient:soulspring_lamp');
+          .id('inconvenient:basic_table_soulspring_lamp');
       },
       children: [],
     },
@@ -1424,7 +1424,7 @@ onEvent('recipes', event => {
               d: 'extendedcrafting:basic_table',
             },
           })
-          .id('inconvenient:basic_auto_table');
+          .id('inconvenient:basic_table_basic_auto_table');
       },
     },
   ]);

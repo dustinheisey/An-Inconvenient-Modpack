@@ -21,7 +21,7 @@ onEvent('recipes', event => {
           time: 250,
           output: {item: 'naturesaura:eye'},
         })
-        .id('inconvenient:environmental_eye');
+        .id('inconvenient:tree_ritual_environmental_eye');
     },
 
     // get heart of the sea from gateway. gateway is filled with ocean mobs and can only be summoned in the water. iridescent scales from elder guardian boss. scales are part of dream. ocean monument spawns in everbright. everbright is the country that was flooded. maybe get rid of the underwater palace and make guardians spawn in everbright waters naturally.
@@ -614,7 +614,7 @@ onEvent('recipes', event => {
                   ],
                   grindingTime: 300,
                 })
-                .id('inconvenient:gold_powder');
+                .id('inconvenient:pestle_gold_powder');
             },
             children: [
               {
@@ -647,7 +647,7 @@ onEvent('recipes', event => {
                           ],
                           grindingTime: 300,
                         })
-                        .id('inconvenient:brilliant_fiber');
+                        .id('inconvenient:pestle_brilliant_fiber');
                     },
                     children: [],
                   },
