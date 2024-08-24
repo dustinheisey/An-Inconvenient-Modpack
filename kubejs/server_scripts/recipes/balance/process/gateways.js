@@ -1,422 +1,438 @@
 onEvent('recipes', event => {
   setBalanceRecipes({
     craft: () => {
-      event.custom({
-        type: 'occultism:ritual',
-        ritual_type: 'occultism:craft',
-        duration: 60,
-        ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
-        },
-        activation_item: {item: 'kubejs:iridescent_scales'},
-        pentacle_id: 'occultism:summon_foliot',
-        ingredients: [
-          {
-            item: 'blue_skies:aquite',
-          },
-          {
-            item: 'blue_skies:aquite',
-          },
-          {
-            item: 'blue_skies:soul_fragment',
-          },
-          {
-            item: 'blue_skies:cryo_root',
-          },
-          {
-            item: 'blue_skies:winter_leaves',
-          },
-          {
-            item: 'blue_skies:municipal_monkfish',
-          },
-          {
-            item: 'blue_skies:grittle_flatfish',
-          },
-          {
-            item: 'rankine:white_marble',
-          },
-          {
-            item: 'rankine:white_marble',
-          },
-          {
-            item: 'blue_skies:starlit_sapling',
-          },
-          {
-            item: 'blue_skies:chilled_lily_pad',
-          },
-          {
-            item: 'blue_skies:azulfo_horn',
-          },
-        ],
-        result: {
-          item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_everbright_gateway"}',
-        },
-      });
-      event.custom({
-        type: 'occultism:ritual',
-        ritual_type: 'occultism:craft',
-        duration: 60,
-        ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
-        },
-        activation_item: {item: 'undergarden:masticator_scales'},
-        pentacle_id: 'occultism:craft_foliot',
-        ingredients: [
-          {
-            item: 'undergarden:bloody_stew',
-          },
-          {
-            item: 'undergarden:inky_stew',
-          },
-          {
-            item: 'undergarden:indigo_stew',
-          },
-          {
-            item: 'undergarden:veiled_stew',
-          },
-          {
-            item: 'undergarden:utherium_crystal',
-          },
-          {
-            item: 'undergarden:forgotten_nugget',
-          },
-          {
-            item: 'undergarden:twistytwig',
-          },
-          {
-            item: 'undergarden:utherium_crystal',
-          },
-          {
-            item: 'undergarden:forgotten_nugget',
-          },
-          {
-            item: 'undergarden:twistytwig',
-          },
-          {
-            item: 'undergarden:rotten_blisterberry',
-          },
-          {
-            item: 'undergarden:brute_tusk',
-          },
-        ],
-        result: {
-          item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_undergarden_gateway"}',
-        },
-      });
-      event.custom({
-        type: 'occultism:ritual',
-        ritual_type: 'occultism:craft',
-        duration: 60,
-        ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
-        },
-        activation_item: {item: 'blue_skies:soul_fragment'},
-        pentacle_id: 'occultism:craft_djinni',
-        ingredients: [
-          {
-            item: 'blue_skies:crescent_fruit',
-          },
-          {
-            item: 'blue_skies:monitor_tail',
-          },
-          {
-            item: 'blue_skies:charscale_moki',
-          },
-          {
-            item: 'blue_skies:horizofin_tunid',
-          },
-          {
-            item: 'blue_skies:fox_pelt',
-          },
-          {
-            item: 'blue_skies:bug_guts',
-          },
-          {
-            item: 'blue_skies:horizonite_ingot',
-          },
-          {
-            item: 'blue_skies:bug_guts',
-          },
-          {
-            item: 'blue_skies:horizonite_ingot',
-          },
-          {
-            item: 'blue_skies:venom_sac',
-          },
-          {
-            item: 'blue_skies:blaze_bud',
-          },
-          {
-            item: 'blue_skies:moonlit_water_lily',
-          },
-        ],
-        result: {
-          item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_everdawn_gateway"}',
-        },
-      });
-      event.custom({
-        type: 'occultism:ritual',
-        ritual_type: 'occultism:craft',
-        duration: 60,
-        ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
-        },
-        activation_item: {item: 'blue_skies:soul_fragment'},
-        pentacle_id: 'occultism:summon_wild_greater_spirit',
-        ingredients: [
-          {
-            item: 'twilightforest:charm_of_keeping_2',
-          },
-          {
-            item: 'twilightforest:charm_of_keeping_2',
-          },
-          {
-            item: 'twilightforest:raw_ironwood',
-          },
-          {
-            item: 'twilightforest:experiment_115',
-          },
-          {
-            item: 'twilightforest:huge_water_lily',
-          },
-          {
-            item: 'twilightforest:transformation_powder',
-          },
-          {
-            item: 'twilightforest:transformation_powder',
-          },
-          {
-            item: 'twilightforest:carminite',
-          },
-          {
-            item: 'twilightforest:fiery_tears',
-          },
-          {
-            item: 'twilightforest:fiery_blood',
-          },
-          {
-            item: 'twilightforest:fiery_blood',
-          },
-          {
-            item: 'twilightforest:thorn_rose',
-          },
-        ],
-        result: {
-          item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_twilight_gateway"}',
-        },
-      });
-      event.custom({
-        type: 'occultism:ritual',
-        ritual_type: 'occultism:craft',
-        duration: 60,
-        ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
-        },
-        activation_item: {item: 'blue_skies:soul_fragment'},
-        pentacle_id: 'occultism:summon_marid',
-        ingredients: [
-          {
-            item: 'minecraft:wither_rose',
-          },
-          {
-            item: 'minecraft:crimson_fungus',
-          },
-          {
-            item: 'minecraft:warped_fungus',
-          },
-          {
-            item: 'minecraft:quartz',
-          },
-          {
-            item: 'minecraft:porkchop',
-          },
-          {
-            item: 'cataclysm:witherite_ingot',
-          },
-          {
-            item: 'rankine:carbon_dioxide_gas_bottle',
-          },
-          {
-            item: 'minecraft:porkchop',
-          },
-          {
-            item: 'cataclysm:witherite_ingot',
-          },
-          {
-            item: 'rankine:carbon_dioxide_gas_bottle',
-          },
-          {
-            item: 'occultism:iesnium_ingot',
-          },
-          {
-            item: 'minecraft:blaze_powder',
-          },
-        ],
-        result: {
-          item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_nether_gateway"}',
-        },
-      });
-      event.custom({
-        type: 'occultism:ritual',
-        ritual_type: 'occultism:craft',
-        duration: 60,
-        ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
-        },
-        activation_item: {item: 'blue_skies:soul_fragment'},
-        pentacle_id: 'occultism:craft_marid',
-        ingredients: [
-          {
-            item: 'hem:copparite',
-          },
-          {
-            item: 'rankine:vulcanized_rubber',
-          },
-          {
-            item: 'hem:lush_flower_1',
-          },
-          {
-            item: 'hem:shotgun_shell',
-          },
-          {
-            item: 'create:chromatic_compound',
-          },
-          {
-            item: 'hem:copparite',
-          },
-          {
-            item: 'rankine:vulcanized_rubber',
-          },
-          {
-            item: 'hem:lush_flower_1',
-          },
-          {
-            item: 'hem:shotgun_shell',
-          },
-          {
-            item: 'create:chromatic_compound',
-          },
-          {
-            item: 'rankine:steel_ingot',
-          },
-          {
-            item: 'rankine:steel_ingot',
-          },
-        ],
-        result: {
-          item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_blueleaf_gateway"}',
-        },
-      });
-      event.custom({
-        type: 'occultism:ritual',
-        ritual_type: 'occultism:craft',
-        duration: 60,
-        ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
-        },
-        activation_item: {item: 'blue_skies:soul_fragment'},
-        pentacle_id: 'occultism:craft_marid',
-        ingredients: [
-          {
-            item: 'hem:copparite',
-          },
-          {
-            item: 'rankine:vulcanized_rubber',
-          },
-          {
-            item: 'hem:lush_flower_1',
-          },
-          {
-            item: 'hem:shotgun_shell',
-          },
-          {
-            item: 'create:chromatic_compound',
-          },
-          {
-            item: 'hem:copparite',
-          },
-          {
-            item: 'rankine:vulcanized_rubber',
-          },
-          {
-            item: 'hem:lush_flower_1',
-          },
-          {
-            item: 'hem:shotgun_shell',
-          },
-          {
-            item: 'create:chromatic_compound',
-          },
-          {
-            item: 'rankine:steel_ingot',
-          },
-          {
-            item: 'rankine:steel_ingot',
-          },
-        ],
-        result: {
-          item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_bumblezone_gateway"}',
-        },
-      });
-      event.custom({
-        type: 'occultism:ritual',
-        ritual_type: 'occultism:craft',
-        duration: 60,
-        ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
-        },
-        activation_item: {item: 'blue_skies:soul_fragment'},
-        pentacle_id: 'occultism:craft_marid',
-        ingredients: [
-          {
-            item: 'hem:copparite',
-          },
-          {
-            item: 'rankine:vulcanized_rubber',
-          },
-          {
-            item: 'hem:lush_flower_1',
-          },
-          {
-            item: 'hem:shotgun_shell',
-          },
-          {
-            item: 'create:chromatic_compound',
-          },
-          {
-            item: 'hem:copparite',
-          },
-          {
-            item: 'rankine:vulcanized_rubber',
-          },
-          {
-            item: 'hem:lush_flower_1',
-          },
-          {
-            item: 'hem:shotgun_shell',
-          },
-          {
-            item: 'create:chromatic_compound',
-          },
-          {
-            item: 'rankine:steel_ingot',
-          },
-          {
-            item: 'rankine:steel_ingot',
-          },
-        ],
-        result: {
-          item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_end_gateway"}',
-        },
-      });
+      event
+        .custom({
+          type: 'occultism:ritual',
+          ritual_type: 'occultism:craft',
+          duration: 60,
+          ritual_dummy: {
+            item: 'occultism:ritual_dummy/custom_ritual',
+          },
+          activation_item: {item: 'kubejs:iridescent_scales'},
+          pentacle_id: 'occultism:summon_foliot',
+          ingredients: [
+            {
+              item: 'blue_skies:aquite',
+            },
+            {
+              item: 'blue_skies:aquite',
+            },
+            {
+              item: 'blue_skies:soul_fragment',
+            },
+            {
+              item: 'blue_skies:cryo_root',
+            },
+            {
+              item: 'blue_skies:winter_leaves',
+            },
+            {
+              item: 'blue_skies:municipal_monkfish',
+            },
+            {
+              item: 'blue_skies:grittle_flatfish',
+            },
+            {
+              item: 'rankine:white_marble',
+            },
+            {
+              item: 'rankine:white_marble',
+            },
+            {
+              item: 'blue_skies:starlit_sapling',
+            },
+            {
+              item: 'blue_skies:chilled_lily_pad',
+            },
+            {
+              item: 'blue_skies:azulfo_horn',
+            },
+          ],
+          result: {
+            item: 'gateways:gate_pearl',
+            nbt: '{gateway:"gateways:small_everbright_gateway"}',
+          },
+        })
+        .id('inconvenient:ritual_aquatic_gateway');
+      event
+        .custom({
+          type: 'occultism:ritual',
+          ritual_type: 'occultism:craft',
+          duration: 60,
+          ritual_dummy: {
+            item: 'occultism:ritual_dummy/custom_ritual',
+          },
+          activation_item: {item: 'undergarden:masticator_scales'},
+          pentacle_id: 'occultism:craft_foliot',
+          ingredients: [
+            {
+              item: 'undergarden:bloody_stew',
+            },
+            {
+              item: 'undergarden:inky_stew',
+            },
+            {
+              item: 'undergarden:indigo_stew',
+            },
+            {
+              item: 'undergarden:veiled_stew',
+            },
+            {
+              item: 'undergarden:utherium_crystal',
+            },
+            {
+              item: 'undergarden:forgotten_nugget',
+            },
+            {
+              item: 'undergarden:twistytwig',
+            },
+            {
+              item: 'undergarden:utherium_crystal',
+            },
+            {
+              item: 'undergarden:forgotten_nugget',
+            },
+            {
+              item: 'undergarden:twistytwig',
+            },
+            {
+              item: 'undergarden:rotten_blisterberry',
+            },
+            {
+              item: 'undergarden:brute_tusk',
+            },
+          ],
+          result: {
+            item: 'gateways:gate_pearl',
+            nbt: '{gateway:"gateways:small_undergarden_gateway"}',
+          },
+        })
+        .id('inconvenient:ritual_undergarden_gateway');
+      event
+        .custom({
+          type: 'occultism:ritual',
+          ritual_type: 'occultism:craft',
+          duration: 60,
+          ritual_dummy: {
+            item: 'occultism:ritual_dummy/custom_ritual',
+          },
+          activation_item: {item: 'blue_skies:soul_fragment'},
+          pentacle_id: 'occultism:craft_djinni',
+          ingredients: [
+            {
+              item: 'blue_skies:crescent_fruit',
+            },
+            {
+              item: 'blue_skies:monitor_tail',
+            },
+            {
+              item: 'blue_skies:charscale_moki',
+            },
+            {
+              item: 'blue_skies:horizofin_tunid',
+            },
+            {
+              item: 'blue_skies:fox_pelt',
+            },
+            {
+              item: 'blue_skies:bug_guts',
+            },
+            {
+              item: 'blue_skies:horizonite_ingot',
+            },
+            {
+              item: 'blue_skies:bug_guts',
+            },
+            {
+              item: 'blue_skies:horizonite_ingot',
+            },
+            {
+              item: 'blue_skies:venom_sac',
+            },
+            {
+              item: 'blue_skies:blaze_bud',
+            },
+            {
+              item: 'blue_skies:moonlit_water_lily',
+            },
+          ],
+          result: {
+            item: 'gateways:gate_pearl',
+            nbt: '{gateway:"gateways:small_everdawn_gateway"}',
+          },
+        })
+        .id('inconvenient:ritual_everdawn_gateway');
+      event
+        .custom({
+          type: 'occultism:ritual',
+          ritual_type: 'occultism:craft',
+          duration: 60,
+          ritual_dummy: {
+            item: 'occultism:ritual_dummy/custom_ritual',
+          },
+          activation_item: {item: 'blue_skies:soul_fragment'},
+          pentacle_id: 'occultism:summon_wild_greater_spirit',
+          ingredients: [
+            {
+              item: 'twilightforest:charm_of_keeping_2',
+            },
+            {
+              item: 'twilightforest:charm_of_keeping_2',
+            },
+            {
+              item: 'twilightforest:raw_ironwood',
+            },
+            {
+              item: 'twilightforest:experiment_115',
+            },
+            {
+              item: 'twilightforest:huge_water_lily',
+            },
+            {
+              item: 'twilightforest:transformation_powder',
+            },
+            {
+              item: 'twilightforest:transformation_powder',
+            },
+            {
+              item: 'twilightforest:carminite',
+            },
+            {
+              item: 'twilightforest:fiery_tears',
+            },
+            {
+              item: 'twilightforest:fiery_blood',
+            },
+            {
+              item: 'twilightforest:fiery_blood',
+            },
+            {
+              item: 'twilightforest:thorn_rose',
+            },
+          ],
+          result: {
+            item: 'gateways:gate_pearl',
+            nbt: '{gateway:"gateways:small_twilight_gateway"}',
+          },
+        })
+        .id('inconvenient:ritual_twilight_gateway');
+      event
+        .custom({
+          type: 'occultism:ritual',
+          ritual_type: 'occultism:craft',
+          duration: 60,
+          ritual_dummy: {
+            item: 'occultism:ritual_dummy/custom_ritual',
+          },
+          activation_item: {item: 'blue_skies:soul_fragment'},
+          pentacle_id: 'occultism:summon_marid',
+          ingredients: [
+            {
+              item: 'minecraft:wither_rose',
+            },
+            {
+              item: 'minecraft:crimson_fungus',
+            },
+            {
+              item: 'minecraft:warped_fungus',
+            },
+            {
+              item: 'minecraft:quartz',
+            },
+            {
+              item: 'minecraft:porkchop',
+            },
+            {
+              item: 'cataclysm:witherite_ingot',
+            },
+            {
+              item: 'rankine:carbon_dioxide_gas_bottle',
+            },
+            {
+              item: 'minecraft:porkchop',
+            },
+            {
+              item: 'cataclysm:witherite_ingot',
+            },
+            {
+              item: 'rankine:carbon_dioxide_gas_bottle',
+            },
+            {
+              item: 'occultism:iesnium_ingot',
+            },
+            {
+              item: 'minecraft:blaze_powder',
+            },
+          ],
+          result: {
+            item: 'gateways:gate_pearl',
+            nbt: '{gateway:"gateways:small_nether_gateway"}',
+          },
+        })
+        .id('inconvenient:ritual_nether_gateway');
+      event
+        .custom({
+          type: 'occultism:ritual',
+          ritual_type: 'occultism:craft',
+          duration: 60,
+          ritual_dummy: {
+            item: 'occultism:ritual_dummy/custom_ritual',
+          },
+          activation_item: {item: 'blue_skies:soul_fragment'},
+          pentacle_id: 'occultism:craft_marid',
+          ingredients: [
+            {
+              item: 'hem:copparite',
+            },
+            {
+              item: 'rankine:vulcanized_rubber',
+            },
+            {
+              item: 'hem:lush_flower_1',
+            },
+            {
+              item: 'hem:shotgun_shell',
+            },
+            {
+              item: 'create:chromatic_compound',
+            },
+            {
+              item: 'hem:copparite',
+            },
+            {
+              item: 'rankine:vulcanized_rubber',
+            },
+            {
+              item: 'hem:lush_flower_1',
+            },
+            {
+              item: 'hem:shotgun_shell',
+            },
+            {
+              item: 'create:chromatic_compound',
+            },
+            {
+              item: 'rankine:steel_ingot',
+            },
+            {
+              item: 'rankine:steel_ingot',
+            },
+          ],
+          result: {
+            item: 'gateways:gate_pearl',
+            nbt: '{gateway:"gateways:small_blueleaf_gateway"}',
+          },
+        })
+        .id('inconvenient:ritual_blueleaf_gateway');
+      event
+        .custom({
+          type: 'occultism:ritual',
+          ritual_type: 'occultism:craft',
+          duration: 60,
+          ritual_dummy: {
+            item: 'occultism:ritual_dummy/custom_ritual',
+          },
+          activation_item: {item: 'blue_skies:soul_fragment'},
+          pentacle_id: 'occultism:craft_marid',
+          ingredients: [
+            {
+              item: 'hem:copparite',
+            },
+            {
+              item: 'rankine:vulcanized_rubber',
+            },
+            {
+              item: 'hem:lush_flower_1',
+            },
+            {
+              item: 'hem:shotgun_shell',
+            },
+            {
+              item: 'create:chromatic_compound',
+            },
+            {
+              item: 'hem:copparite',
+            },
+            {
+              item: 'rankine:vulcanized_rubber',
+            },
+            {
+              item: 'hem:lush_flower_1',
+            },
+            {
+              item: 'hem:shotgun_shell',
+            },
+            {
+              item: 'create:chromatic_compound',
+            },
+            {
+              item: 'rankine:steel_ingot',
+            },
+            {
+              item: 'rankine:steel_ingot',
+            },
+          ],
+          result: {
+            item: 'gateways:gate_pearl',
+            nbt: '{gateway:"gateways:small_bumblezone_gateway"}',
+          },
+        })
+        .id('inconvenient:ritual_bumblezone_gateway');
+      event
+        .custom({
+          type: 'occultism:ritual',
+          ritual_type: 'occultism:craft',
+          duration: 60,
+          ritual_dummy: {
+            item: 'occultism:ritual_dummy/custom_ritual',
+          },
+          activation_item: {item: 'blue_skies:soul_fragment'},
+          pentacle_id: 'occultism:craft_marid',
+          ingredients: [
+            {
+              item: 'hem:copparite',
+            },
+            {
+              item: 'rankine:vulcanized_rubber',
+            },
+            {
+              item: 'hem:lush_flower_1',
+            },
+            {
+              item: 'hem:shotgun_shell',
+            },
+            {
+              item: 'create:chromatic_compound',
+            },
+            {
+              item: 'hem:copparite',
+            },
+            {
+              item: 'rankine:vulcanized_rubber',
+            },
+            {
+              item: 'hem:lush_flower_1',
+            },
+            {
+              item: 'hem:shotgun_shell',
+            },
+            {
+              item: 'create:chromatic_compound',
+            },
+            {
+              item: 'rankine:steel_ingot',
+            },
+            {
+              item: 'rankine:steel_ingot',
+            },
+          ],
+          result: {
+            item: 'gateways:gate_pearl',
+            nbt: '{gateway:"gateways:small_end_gateway"}',
+          },
+        })
+        .id('inconvenient:ritual_end_gateway');
     },
   });
 });
