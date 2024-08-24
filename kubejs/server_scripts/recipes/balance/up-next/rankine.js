@@ -1102,44 +1102,7 @@ onEvent('recipes', event => {
         tool: {item: 'rankine:steel_gold_pan'},
       });
     },
-    stripping: () => {
-      event.remove({
-        input: [
-          'rankine:balsam_fir_log',
-          'rankine:eastern_hemlock_log',
-          'rankine:western_hemlock_log',
-          'minecraft:spruce_log',
-          'minecraft:birch_log',
-          'rankine:black_birch_log',
-          'rankine:red_birch_log',
-          'rankine:yellow_birch_log',
-        ],
-        type: 'rankine:stripping',
-      });
-
-      [
-        'rankine:balsam_fir_log',
-        'rankine:eastern_hemlock_log',
-        'rankine:western_hemlock_log',
-        'minecraft:spruce_log',
-        'minecraft:birch_log',
-        'rankine:black_birch_log',
-        'rankine:red_birch_log',
-        'rankine:yellow_birch_log',
-      ].forEach(log => {
-        event.custom({
-          type: 'rankine:stripping',
-          chance: 0.9,
-          input: {
-            item: log,
-          },
-          result: {
-            item: 'farmersdelight:tree_bark',
-            count: 1,
-          },
-        });
-      });
-    },
+    stripping: () => {},
     tree_tapping: () => {},
     volcanic_generator: () => {
       event.remove({

@@ -141,47 +141,49 @@ onEvent('recipes', event => {
           recipe: () => {
             ['rankine:totem_of_cobbling'].forEach(id => event.remove({id: id}));
 
-            event.custom({
-              type: 'hexerei:mixingcauldron',
-              liquid: {
-                fluid: 'minecraft:lava',
-              },
-              liquidOutput: {
-                fluid: 'minecraft:lava',
-              },
-              ingredients: [
-                {
-                  item: 'rankine:pewter_hammer',
+            event
+              .custom({
+                type: 'hexerei:mixingcauldron',
+                liquid: {
+                  fluid: 'minecraft:lava',
                 },
-                {
-                  item: 'minecraft:cobblestone',
+                liquidOutput: {
+                  fluid: 'minecraft:lava',
                 },
-                {
-                  item: 'tconstruct:amethyst_bronze_ingot',
+                ingredients: [
+                  {
+                    item: 'rankine:pewter_hammer',
+                  },
+                  {
+                    item: 'minecraft:cobblestone',
+                  },
+                  {
+                    item: 'tconstruct:amethyst_bronze_ingot',
+                  },
+                  {
+                    item: 'tconstruct:amethyst_bronze_ingot',
+                  },
+                  {
+                    item: 'tconstruct:amethyst_bronze_ingot',
+                  },
+                  {
+                    item: 'tconstruct:amethyst_bronze_ingot',
+                  },
+                  {
+                    item: 'tconstruct:amethyst_bronze_ingot',
+                  },
+                  {
+                    item: 'minecraft:cobblestone',
+                  },
+                ],
+                output: {
+                  item: 'rankine:totem_of_cobbling',
+                  count: 1,
                 },
-                {
-                  item: 'tconstruct:amethyst_bronze_ingot',
-                },
-                {
-                  item: 'tconstruct:amethyst_bronze_ingot',
-                },
-                {
-                  item: 'tconstruct:amethyst_bronze_ingot',
-                },
-                {
-                  item: 'tconstruct:amethyst_bronze_ingot',
-                },
-                {
-                  item: 'minecraft:cobblestone',
-                },
-              ],
-              output: {
-                item: 'rankine:totem_of_cobbling',
-                count: 1,
-              },
-              fluidLevelsConsumed: 2000,
-              global: true,
-            });
+                fluidLevelsConsumed: 2000,
+                global: true,
+              })
+              .id('inconvenient:totem_of_cobbling');
           },
         },
       ],
@@ -366,15 +368,6 @@ onEvent('recipes', event => {
           c: 'minecraft:copper_ingot',
           d: 'minecraft:bucket',
           e: 'rankine:pewter_ingot',
-        });
-      },
-    },
-    {
-      id: 'rankine_totems',
-      recipe: () => {
-        event.shaped('rankine:totem_of_hastening', ['aaa', 'aba', 'aaa'], {
-          a: 'tconstruct:amethyst_bronze_ingot',
-          b: 'blue_skies:diopside_block',
         });
       },
     },

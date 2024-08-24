@@ -6,7 +6,29 @@ onEvent('recipes', event => {
         {
           id: 'totems',
           recipe: () => {
-            ['rankine:totem_of_cobbling'].forEach(id => event.remove({id: id}));
+            [
+              'rankine:totem_of_hastening',
+              'rankine:totem_of_infusing',
+              'rankine:totem_of_timesaving',
+            ].forEach(id => event.remove({id: id}));
+
+            event.shaped('rankine:totem_of_hastening', ['aaa', 'aba', 'aaa'], {
+              a: 'tconstruct:amethyst_bronze_ingot',
+              b: 'blue_skies:diopside_block',
+            });
+
+            event
+              .shaped('rankine:totem_of_infusing', ['aaa', 'aba', 'aaa'], {
+                a: 'tconstruct:queens_slime_ingot',
+                b: 'rankine:sulfur_block',
+              })
+              .id('inconvenient:totem_of_infusing');
+            event
+              .shaped('rankine:totem_of_timesaving', ['aaa', 'aba', 'aaa'], {
+                a: 'twilightforest:ironwood_ingot',
+                b: 'tconstruct:slimesteel_block',
+              })
+              .id('inconvenient:totem_of_timesaving');
           },
         },
         {id: 'gateways', recipe: () => {}},
@@ -200,24 +222,6 @@ onEvent('recipes', event => {
           },
         },
       ],
-    },
-
-    {
-      id: 'rankine_totems',
-      recipe: () => {
-        event.shaped('rankine:totem_of_timesaving', ['aaa', 'aba', 'aaa'], {
-          a: 'twilightforest:ironwood_ingot',
-          b: 'tconstruct:slimesteel_block',
-        });
-        event.shaped('rankine:totem_of_enduring', ['aaa', 'aba', 'aaa'], {
-          a: 'undergarden:froststeel_ingot',
-          b: 'undergarden:utherium_block',
-        });
-        event.shaped('rankine:totem_of_promising', ['aaa', 'aba', 'aaa'], {
-          a: 'twilightforest:knightmetal_ingot',
-          b: 'minecraft:lapis_block',
-        });
-      },
     },
 
     {id: 'chests', recipe: () => {}},
