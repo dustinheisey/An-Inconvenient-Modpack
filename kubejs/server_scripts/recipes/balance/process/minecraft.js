@@ -19,7 +19,9 @@ onEvent('recipes', event => {
       );
     },
     shapeless: () => {
-      event.shapeless('minecraft:glass', ['tconstruct:clear_glass']);
+      event
+        .shapeless('minecraft:glass', ['tconstruct:clear_glass'])
+        .id('inconvenient:shapeless_glass');
       event.forEachRecipe(
         {
           type: 'minecraft:crafting_shapeless',
@@ -62,32 +64,84 @@ onEvent('recipes', event => {
         type: 'minecraft:blasting',
       });
 
-      event.blasting('#forge:sand', 'minecraft:glass');
-      event.blasting('chemlib:aluminum_dust', 'rankine:aluminum_ingot');
-      event.blasting('chemlib:titanium_dust', 'rankine:titanium_ingot');
-      event.blasting('chemlib:iron_dust', 'minecraft:iron_ingot');
-      event.blasting('chemlib:nickel_dust', 'rankine:nickel_ingot');
-      event.blasting('chemlib:copper_dust', 'minecraft:copper_ingot');
-      event.blasting('chemlib:tin_dust', 'rankine:tin_ingot');
-      event.blasting('chemlib:silver_dust', 'rankine:silver_ingot');
-      event.blasting('chemlib:gold_dust', 'minecraft:gold_ingot');
-      event.blasting('chemlib:platinum_dust', 'rankine:platinum_ingot');
-      event.blasting('chemlib:tungsten_dust', 'rankine:tungsten_ingot');
-      event.blasting('chemlib:lead_dust', 'rankine:lead_ingot');
-      event.blasting('chemlib:bismuth_dust', 'rankine:bismuth_ingot');
-      event.blasting('chemlib:uranium_dust', 'rankine:uranium_ingot');
-      event.blasting('create:crushed_raw_iron', 'minecraft:iron_ingot');
-      event.blasting('create:crushed_raw_gold', 'minecraft:gold_ingot');
-      event.blasting('create:crushed_raw_copper', 'minecraft:copper_ingot');
-      event.blasting('create:crushed_raw_zinc', 'rankine:zinc_ingot');
-      event.blasting('create:crushed_raw_osmium', 'rankine:osmium_ingot');
-      event.blasting('create:crushed_raw_platinum', 'rankine:platinum_ingot');
-      event.blasting('create:crushed_raw_silver', 'rankine:silver_ingot');
-      event.blasting('create:crushed_raw_tin', 'rankine:tin_ingot');
-      event.blasting('create:crushed_raw_lead', 'rankine:lead_ingot');
-      event.blasting('create:crushed_raw_aluminum', 'rankine:aluminum_ingot');
-      event.blasting('chemlib:uranium_dust', 'rankine:uranium_ingot');
-      event.blasting('chemlib:nickel_dust', 'rankine:nickel_ingot');
+      event
+        .blasting('#forge:sand', 'minecraft:glass')
+        .id('inconvenient:blasting_glass');
+      event
+        .blasting('chemlib:aluminum_dust', 'rankine:aluminum_ingot')
+        .id('inconvenient:blasting_aluminum_ingot');
+      event
+        .blasting('chemlib:titanium_dust', 'rankine:titanium_ingot')
+        .id('inconvenient:blasting_titanium_ingot');
+      event
+        .blasting('chemlib:iron_dust', 'minecraft:iron_ingot')
+        .id('inconvenient:blasting_iron_ingot');
+      event
+        .blasting('chemlib:nickel_dust', 'rankine:nickel_ingot')
+        .id('inconvenient:blasting_nickel_ingot');
+      event
+        .blasting('chemlib:copper_dust', 'minecraft:copper_ingot')
+        .id('inconvenient:blasting_copper_ingot');
+      event
+        .blasting('chemlib:tin_dust', 'rankine:tin_ingot')
+        .id('inconvenient:blasting_tin_ingot');
+      event
+        .blasting('chemlib:silver_dust', 'rankine:silver_ingot')
+        .id('inconvenient:blasting_silver_ingot');
+      event
+        .blasting('chemlib:gold_dust', 'minecraft:gold_ingot')
+        .id('inconvenient:blasting_gold_ingot');
+      event
+        .blasting('chemlib:platinum_dust', 'rankine:platinum_ingot')
+        .id('inconvenient:blasting_platinum_ingot');
+      event
+        .blasting('chemlib:tungsten_dust', 'rankine:tungsten_ingot')
+        .id('inconvenient:blasting_tungsten_ingot');
+      event
+        .blasting('chemlib:lead_dust', 'rankine:lead_ingot')
+        .id('inconvenient:blasting_lead_ingot');
+      event
+        .blasting('chemlib:bismuth_dust', 'rankine:bismuth_ingot')
+        .id('inconvenient:blasting_bismuth_ingot');
+      event
+        .blasting('chemlib:uranium_dust', 'rankine:uranium_ingot')
+        .id('inconvenient:blasting_uranium_ingot');
+      event
+        .blasting('create:crushed_raw_iron', 'minecraft:iron_ingot')
+        .id('inconvenient:blasting_iron_ingot_2');
+      event
+        .blasting('create:crushed_raw_gold', 'minecraft:gold_ingot')
+        .id('inconvenient:blasting_gold_ingot_2');
+      event
+        .blasting('create:crushed_raw_copper', 'minecraft:copper_ingot')
+        .id('inconvenient:blasting_copper_ingot_2');
+      event
+        .blasting('create:crushed_raw_zinc', 'rankine:zinc_ingot')
+        .id('inconvenient:blasting_zinc_ingot');
+      event
+        .blasting('create:crushed_raw_osmium', 'rankine:osmium_ingot')
+        .id('inconvenient:blasting_osmium_ingot');
+      event
+        .blasting('create:crushed_raw_platinum', 'rankine:platinum_ingot')
+        .id('inconvenient:blasting_platinum_ingot_2');
+      event
+        .blasting('create:crushed_raw_silver', 'rankine:silver_ingot')
+        .id('inconvenient:blasting_silver_ingot_2');
+      event
+        .blasting('create:crushed_raw_tin', 'rankine:tin_ingot')
+        .id('inconvenient:blasting_tin_ingot_2');
+      event
+        .blasting('create:crushed_raw_lead', 'rankine:lead_ingot')
+        .id('inconvenient:blasting_lead_ingot_2');
+      event
+        .blasting('create:crushed_raw_aluminum', 'rankine:aluminum_ingot')
+        .id('inconvenient:blasting_aluminum_ingot_2');
+      event
+        .blasting('chemlib:uranium_dust', 'rankine:uranium_ingot')
+        .id('inconvenient:blasting_uranium_ingot_2');
+      event
+        .blasting('chemlib:nickel_dust', 'rankine:nickel_ingot')
+        .id('inconvenient:blasting_nickel_ingot_2');
     },
     campfire_cooking: () => {
       event.remove({
@@ -123,14 +177,18 @@ onEvent('recipes', event => {
         type: 'minecraft:campfire_cooking',
       });
 
-      event.campfireCooking(
-        'farmersrespite:green_tea_leaves',
-        'farmersrespite:yellow_tea_leaves'
-      );
-      event.campfireCooking(
-        'farmersrespite:yellow_tea_leaves',
-        'farmersrespite:black_tea_leaves'
-      );
+      event
+        .campfireCooking(
+          'farmersrespite:yellow_tea_leaves',
+          'farmersrespite:green_tea_leaves'
+        )
+        .id('inconvenient:campfire_yellow_tea_leaves');
+      event
+        .campfireCooking(
+          'farmersrespite:black_tea_leaves',
+          'farmersrespite:yellow_tea_leaves'
+        )
+        .id('inconvenient:campfire_black_tea_leaves');
     },
     smelting: () => {
       event.remove({
@@ -217,7 +275,9 @@ onEvent('recipes', event => {
         type: 'minecraft:smelting',
       });
 
-      event.smelting('malum:crushed_soulstone', 'malum:processed_soulstone');
+      event
+        .smelting('malum:crushed_soulstone', 'malum:processed_soulstone')
+        .id('inconvenient:smelting_processed_soulstone');
     },
     smithing: () => {
       event.remove({
@@ -233,37 +293,48 @@ onEvent('recipes', event => {
         type: 'minecraft:smithing',
       });
 
-      event.smithing(
-        'minecraft:netherite_axe',
-        'minecraft:netherite_ingot',
-        'malum:soul_stained_steel_axe'
-      );
-      event.smithing(
-        'minecraft:netherite_sword',
-        'minecraft:netherite_ingot',
-        'twilightforest:fiery_sword'
-      );
-      event.smithing(
-        'farmersdelight:netherite_knife',
-        'minecraft:netherite_ingot',
-        'malum:soul_stained_steel_knife'
-      );
-      event.smithing(
-        'minecraft:netherite_shovel',
-
-        'minecraft:netherite_ingot',
-        'malum:soul_stained_steel_shovel'
-      );
-      event.smithing(
-        'minecraft:netherite_pickaxe',
-        'minecraft:netherite_ingot',
-        'twilightforest:fiery_pickaxe'
-      );
-      event.smithing(
-        'minecraft:netherite_hoe',
-        'minecraft:netherite_ingot',
-        'malum:soul_stained_steel_hoe'
-      );
+      event
+        .smithing(
+          'minecraft:netherite_axe',
+          'minecraft:netherite_ingot',
+          'malum:soul_stained_steel_axe'
+        )
+        .id('inconvenient:smithing_netherite_axe');
+      event
+        .smithing(
+          'minecraft:netherite_sword',
+          'minecraft:netherite_ingot',
+          'twilightforest:fiery_sword'
+        )
+        .id('inconvenient:smithing_netherite_sword');
+      event
+        .smithing(
+          'farmersdelight:netherite_knife',
+          'minecraft:netherite_ingot',
+          'malum:soul_stained_steel_knife'
+        )
+        .id('inconvenient:smithing_netherite_knife');
+      event
+        .smithing(
+          'minecraft:netherite_shovel',
+          'minecraft:netherite_ingot',
+          'malum:soul_stained_steel_shovel'
+        )
+        .id('inconvenient:smithing_netherite_shovel');
+      event
+        .smithing(
+          'minecraft:netherite_pickaxe',
+          'minecraft:netherite_ingot',
+          'twilightforest:fiery_pickaxe'
+        )
+        .id('inconvenient:smithing_netherite_pickaxe');
+      event
+        .smithing(
+          'minecraft:netherite_hoe',
+          'minecraft:netherite_ingot',
+          'malum:soul_stained_steel_hoe'
+        )
+        .id('inconvenient:smithing_netherite_hoe');
     },
     smoking: () => {
       event.remove({
@@ -278,22 +349,29 @@ onEvent('recipes', event => {
         type: 'minecraft:smoking',
       });
 
-      event.smoking('minecraft:bread', 'create:dough');
-      event.smoking(
-        'pneumaticcraft:sourdough_bread',
-        'pneumaticcraft:sourdough'
-      );
-      event.smoking('minecraft:popped_chorus_fruit', 'minecraft:chorus_fruit');
+      event
+        .smoking('minecraft:bread', 'create:dough')
+        .id('inconvenient:smoking_bread');
+      event
+        .smoking('pneumaticcraft:sourdough_bread', 'pneumaticcraft:sourdough')
+        .id('inconvenient:smoking_sourdough_bread');
+      event
+        .smoking('minecraft:popped_chorus_fruit', 'minecraft:chorus_fruit')
+        .id('inconvenient:smoking_popped_chorus_fruit');
 
-      event.smoking(
-        'farmersrespite:yellow_tea_leaves',
-        'farmersrespite:green_tea_leaves'
-      );
+      event
+        .smoking(
+          'farmersrespite:yellow_tea_leaves',
+          'farmersrespite:green_tea_leaves'
+        )
+        .id('inconvenient:smoking_yellow_tea_leaves');
 
-      event.smoking(
-        'farmersrespite:black_tea_leaves',
-        'farmersrespite:yellow_tea_leaves'
-      );
+      event
+        .smoking(
+          'farmersrespite:black_tea_leaves',
+          'farmersrespite:yellow_tea_leaves'
+        )
+        .id('inconvenient:smoking_black_tea_leaves');
     },
   });
 });
