@@ -102,6 +102,42 @@ onEvent('recipes', event => {
             );
           },
         },
+        {
+          id: 'totems',
+          recipe: () => {
+            [
+              'rankine:totem_of_blazing',
+              'rankine:totem_of_enduring',
+              'rankine:totem_of_promising',
+              'rankine:totem_of_softening',
+            ].forEach(id => event.remove({id: id}));
+            event
+              .shaped('rankine:totem_of_blazing', ['aaa', 'aba', 'aaa'], {
+                a: 'cataclysm:ignitium_ingot',
+                b: 'botania:blaze_block',
+              })
+              .id('inconvenient:totem_of_blazing');
+            event
+              .shaped('rankine:totem_of_enduring', ['aaa', 'aba', 'aaa'], {
+                a: 'undergarden:froststeel_ingot',
+                b: 'undergarden:utherium_block',
+              })
+              .id('inconvenient:totem_of_enduring');
+            event
+              .shaped('rankine:totem_of_promising', ['aaa', 'aba', 'aaa'], {
+                a: 'twilightforest:knightmetal_ingot',
+                b: 'minecraft:lapis_block',
+              })
+              .id('inconvenient:totem_of_promising');
+
+            event
+              .shaped('rankine:totem_of_softening', ['aaa', 'aba', 'aaa'], {
+                a: 'tconstruct:manyullyn_ingot',
+                b: 'minecraft:quartz_block',
+              })
+              .id('inconvenient:totem_of_softening');
+          },
+        },
       ],
     },
 
@@ -519,23 +555,6 @@ onEvent('recipes', event => {
           altarSyphon: 100000,
           consumptionRate: 1000,
           drainRate: 1000,
-        });
-      },
-    },
-    {
-      id: 'rankine_totems',
-      recipe: () => {
-        event.shaped('rankine:totem_of_blazing', ['aaa', 'aba', 'aaa'], {
-          a: 'cataclysm:ignitium_ingot',
-          b: 'botania:blaze_block',
-        });
-        event.shaped('rankine:totem_of_infusing', ['aaa', 'aba', 'aaa'], {
-          a: 'tconstruct:queens_slime_ingot',
-          b: 'rankine:sulfur_block',
-        });
-        event.shaped('rankine:totem_of_softening', ['aaa', 'aba', 'aaa'], {
-          a: 'tconstruct:manyullyn_ingot',
-          b: 'minecraft:quartz_block',
         });
       },
     },

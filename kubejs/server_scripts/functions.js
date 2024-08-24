@@ -226,6 +226,10 @@ function addJSON(event, stage, config, id, parent_id) {
 
   if (config.criteria) {
     json.criteria = config.criteria;
+
+    if (config.requirements) {
+      json.requirements = config.requirements;
+    }
   } else {
     json.criteria = {
       collect: {

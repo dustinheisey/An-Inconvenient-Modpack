@@ -128,13 +128,11 @@ onEvent('recipes', event => {
                               {
                                 id: 'unfired_refractory_brick',
                                 recipe: () => {
-                                  event
-                                    .shaped(
-                                      '2x kubejs:unfired_refractory_brick',
-                                      ['aa'],
-                                      {a: 'rankine:fire_clay_ball'}
-                                    )
-                                    .stage('chapter_1');
+                                  event.shaped(
+                                    '2x kubejs:unfired_refractory_brick',
+                                    ['aa'],
+                                    {a: 'rankine:fire_clay_ball'}
+                                  );
                                 },
                                 children: [
                                   {
@@ -282,6 +280,7 @@ onEvent('recipes', event => {
                               [
                                 'rankine:compat/create/scoria_crushing',
                                 'rankine:crushing/scoria_crushing',
+                                'rankine:beehive_oven/quicklime_from_limestone_beehive_oven_cooking',
                               ].forEach(id => event.remove({id: id}));
                               event
                                 .smelting('rankine:quicklime', 'rankine:chalk')
@@ -444,15 +443,23 @@ onEvent('recipes', event => {
                                     'architects_palette:charcoal_from_charcoal_blocks',
                                     'mekanism:charcoal',
                                     'mekanism:storage_blocks/charcoal',
+                                    'charcoal_pit:fire_starter',
                                   ].forEach(id => event.remove({id: id}));
 
-                                  event
-                                    .shaped(
-                                      'charcoal_pit:charcoal_block',
-                                      ['aaa', 'aaa', 'aaa'],
-                                      {a: 'minecraft:charcoal'}
-                                    )
-                                    .stage('chapter_1');
+                                  event.shaped(
+                                    'charcoal_pit:charcoal_block',
+                                    ['aaa', 'aaa', 'aaa'],
+                                    {a: 'minecraft:charcoal'}
+                                  );
+
+                                  event.shaped(
+                                    'charcoal_pit:fire_starter',
+                                    [' a', 'b '],
+                                    {
+                                      a: '#forge:rods/wooden',
+                                      b: 'minecraft:flint',
+                                    }
+                                  );
                                 },
                                 children: [
                                   {
@@ -494,17 +501,15 @@ onEvent('recipes', event => {
                                                     id: 'paragon_textiles:plant_fibers',
                                                   });
 
-                                                  event
-                                                    .shapeless(
-                                                      'paragon_textiles:plant_fibers',
-                                                      [
-                                                        '#forge:grass',
-                                                        '#forge:grass',
-                                                        '#forge:grass',
-                                                        '#forge:grass',
-                                                      ]
-                                                    )
-                                                    .stage('chapter_1');
+                                                  event.shapeless(
+                                                    'paragon_textiles:plant_fibers',
+                                                    [
+                                                      '#createaddition:plants',
+                                                      '#createaddition:plants',
+                                                      '#createaddition:plants',
+                                                      '#createaddition:plants',
+                                                    ]
+                                                  );
                                                 },
                                                 children: [
                                                   {
@@ -623,7 +628,7 @@ onEvent('recipes', event => {
                                   'immersiveengineering:hammer',
                                   [' ab', ' ca', 'c  '],
                                   {
-                                    a: '#forge:stone',
+                                    a: 'rankine:refractory_brick',
                                     b: 'farmersdelight:rope',
                                     c: '#forge:rods/wooden',
                                   }
@@ -667,6 +672,14 @@ onEvent('recipes', event => {
                             ingredients: [{item: 'rankine:cassiterite'}],
                             result: {item: 'rankine:tin_ingot'},
                             amount: 1,
+                          });
+
+                          event.custom({
+                            type: 'rankine:beehive_oven',
+                            input: {item: 'rankine:cassiterite_block'},
+                            result: 'rankine:tin_block',
+                            minCookTime: 2400,
+                            maxCookTime: 4800,
                           });
                         },
                         children: [
@@ -763,6 +776,14 @@ onEvent('recipes', event => {
                             ingredients: [{item: 'rankine:malachite'}],
                             result: {item: 'minecraft:copper_ingot'},
                             amount: 1,
+                          });
+
+                          event.custom({
+                            type: 'rankine:beehive_oven',
+                            input: {item: 'rankine:malachite_block'},
+                            result: 'minecraft:copper_block',
+                            minCookTime: 2400,
+                            maxCookTime: 4800,
                           });
                         },
                         children: [
@@ -1116,16 +1137,10 @@ onEvent('recipes', event => {
                 id: 'tree_bark',
                 recipe: () => {
                   [
-                    'rankine:stripping/balsam_fir_log_stripping',
-                    'rankine:stripping/eastern_hemlock_log_stripping',
-                    'rankine:stripping/spruce_log_stripping',
-                    'rankine:stripping/western_hemlock_log_stripping',
                     'rankine:stripping/birch_log_stripping',
                     'rankine:stripping/black_birch_log_stripping',
                     'rankine:stripping/red_birch_log_stripping',
                     'rankine:stripping/yellow_birch_log_stripping',
-                    'farmersdelight:organic_compost_from_tree_bark',
-                    'farmersdelight:paper_from_tree_bark',
                   ].forEach(id => event.remove({id: id}));
 
                   event.custom({
@@ -1136,24 +1151,10 @@ onEvent('recipes', event => {
                   });
 
                   [
-                    'rankine:cedar_log',
-                    'rankine:balsam_fir_log',
-                    'rankine:eastern_hemlock_log',
-                    'rankine:western_hemlock_log',
-                    'rankine:pinyon_pine_log',
+                    'minecraft:birch_log',
                     'rankine:black_birch_log',
+                    'rankine:red_birch',
                     'rankine:yellow_birch_log',
-                    'rankine:red_birch_log',
-                    'rankine:maple_log',
-                    'rankine:magnolia_log',
-                    'rankine:black_walnut_log',
-                    'rankine:coconut_palm_log',
-                    'rankine:sharinga_log',
-                    'rankine:honey_locust_log',
-                    'rankine:weeping_willow_log',
-                    'rankine:erythrina_log',
-                    'upgrade_aquatic:driftwood_log',
-                    'upgrade_aquatic:river_log',
                   ].forEach(wood => {
                     event.custom({
                       type: 'rankine:stripping',
@@ -1389,12 +1390,10 @@ onEvent('recipes', event => {
                                   event.remove({
                                     id: 'tconstruct:tools/building/flint_and_brick',
                                   });
-                                  event
-                                    .shapeless('tconstruct:flint_and_brick', [
-                                      'minecraft:flint',
-                                      'minecraft:brick',
-                                    ])
-                                    .stage('chapter_1');
+                                  event.shapeless(
+                                    'tconstruct:flint_and_brick',
+                                    ['minecraft:flint', 'minecraft:brick']
+                                  );
                                 },
                               },
                               {
@@ -1405,15 +1404,13 @@ onEvent('recipes', event => {
                                     'minecraft:bone_block',
                                   ].forEach(id => event.remove({id: id}));
 
-                                  event
-                                    .shaped(
-                                      'minecraft:bone_block',
-                                      ['aaa', 'aaa', 'aaa'],
-                                      {
-                                        a: 'minecraft:bone',
-                                      }
-                                    )
-                                    .stage('chapter_1');
+                                  event.shaped(
+                                    'minecraft:bone_block',
+                                    ['aaa', 'aaa', 'aaa'],
+                                    {
+                                      a: 'minecraft:bone',
+                                    }
+                                  );
                                 },
                                 children: [
                                   {

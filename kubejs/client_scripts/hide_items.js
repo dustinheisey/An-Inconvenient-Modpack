@@ -1218,6 +1218,7 @@ onEvent('jei.hide.items', event => {
     ],
     farmersrespite: ['farmersrespite:wild_tea_bush'],
     farmersdelight: [
+      'farmersdelight:flint_knife',
       'farmersdelight:rice_panicle',
       'farmersdelight:wild_potatoes',
       'farmersdelight:wheat_dough',
