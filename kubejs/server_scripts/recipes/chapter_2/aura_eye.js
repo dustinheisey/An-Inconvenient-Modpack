@@ -98,29 +98,35 @@ onEvent('recipes', event => {
                             id => event.remove({id: id})
                           );
 
-                          event.shaped(
-                            'occultism:chalk_white_impure',
-                            ['abc', 'abc', 'abc'],
-                            {
-                              a: 'occultism:burnt_otherstone',
-                              b: 'occultism:otherworld_ashes',
-                              c: 'rankine:chalk',
-                            }
-                          );
+                          event
+                            .shaped(
+                              'occultism:chalk_white_impure',
+                              ['abc', 'abc', 'abc'],
+                              {
+                                a: 'occultism:burnt_otherstone',
+                                b: 'occultism:otherworld_ashes',
+                                c: 'rankine:chalk',
+                              }
+                            )
+                            .id('inconvenient:shaped_chalk_white_impure');
                         },
                         children: [
                           {
                             id: 'otherworld_ashes',
                             recipe: () => {
-                              event.custom({
-                                type: 'occultism:spirit_fire',
-                                ingredient: {
-                                  item: 'malum:block_of_arcane_charcoal',
-                                },
-                                result: {
-                                  item: 'occultism:otherworld_ashes',
-                                },
-                              });
+                              event
+                                .custom({
+                                  type: 'occultism:spirit_fire',
+                                  ingredient: {
+                                    item: 'malum:block_of_arcane_charcoal',
+                                  },
+                                  result: {
+                                    item: 'occultism:otherworld_ashes',
+                                  },
+                                })
+                                .id(
+                                  'inconvenient:spirit_fire_otherworld_ashes'
+                                );
                             },
                             children: [
                               {
@@ -140,24 +146,26 @@ onEvent('recipes', event => {
                       ['hexerei:candle_from_dipper'].forEach(id =>
                         event.remove({id: id})
                       );
-                      event.custom({
-                        type: 'hexerei:dipper',
-                        output: {
-                          item: 'hexerei:candle',
-                        },
-                        ingredients: [
-                          {
-                            item: 'paragon_textiles:silk',
+                      event
+                        .custom({
+                          type: 'hexerei:dipper',
+                          output: {
+                            item: 'hexerei:candle',
                           },
-                        ],
-                        liquid: {
-                          fluid: 'hexerei:tallow_fluid',
-                        },
-                        fluidLevelsConsumed: 250,
-                        dippingTimeInTicks: 200,
-                        dryingTimeInTicks: 200,
-                        numberOfDips: 3,
-                      });
+                          ingredients: [
+                            {
+                              item: 'paragon_textiles:silk',
+                            },
+                          ],
+                          liquid: {
+                            fluid: 'hexerei:tallow_fluid',
+                          },
+                          fluidLevelsConsumed: 250,
+                          dippingTimeInTicks: 200,
+                          dryingTimeInTicks: 200,
+                          numberOfDips: 3,
+                        })
+                        .id('inconvenient:dipping_candle');
                     },
                     children: [
                       {
@@ -166,46 +174,48 @@ onEvent('recipes', event => {
                           ['hexerei:tallow_from_mixing_cauldron'].forEach(id =>
                             event.remove({id: id})
                           );
-                          event.custom({
-                            type: 'hexerei:mixingcauldron',
-                            ingredients: [
-                              {
-                                item: 'hexerei:animal_fat',
+                          event
+                            .custom({
+                              type: 'hexerei:mixingcauldron',
+                              ingredients: [
+                                {
+                                  item: 'hexerei:animal_fat',
+                                },
+                                {
+                                  item: 'hexerei:animal_fat',
+                                },
+                                {
+                                  item: 'blue_skies:cryo_root',
+                                },
+                                {
+                                  item: 'hexerei:animal_fat',
+                                },
+                                {
+                                  item: 'hexerei:animal_fat',
+                                },
+                                {
+                                  item: 'hexerei:animal_fat',
+                                },
+                                {
+                                  item: 'blue_skies:cryo_root',
+                                },
+                                {
+                                  item: 'hexerei:animal_fat',
+                                },
+                              ],
+                              liquid: {
+                                fluid: 'minecraft:water',
                               },
-                              {
-                                item: 'hexerei:animal_fat',
+                              liquidOutput: {
+                                fluid: 'hexerei:tallow_fluid',
                               },
-                              {
-                                item: 'blue_skies:cryo_root',
+                              output: {
+                                item: 'hexerei:tallow_impurity',
+                                count: 1,
                               },
-                              {
-                                item: 'hexerei:animal_fat',
-                              },
-                              {
-                                item: 'hexerei:animal_fat',
-                              },
-                              {
-                                item: 'hexerei:animal_fat',
-                              },
-                              {
-                                item: 'blue_skies:cryo_root',
-                              },
-                              {
-                                item: 'hexerei:animal_fat',
-                              },
-                            ],
-                            liquid: {
-                              fluid: 'minecraft:water',
-                            },
-                            liquidOutput: {
-                              fluid: 'hexerei:tallow_fluid',
-                            },
-                            output: {
-                              item: 'hexerei:tallow_impurity',
-                              count: 1,
-                            },
-                            fluidLevelsConsumed: 0,
-                          });
+                              fluidLevelsConsumed: 0,
+                            })
+                            .id('inconvenient:cauldron_tallow');
                         },
                         children: [
                           {
@@ -267,14 +277,16 @@ onEvent('recipes', event => {
       {
         id: 'white_marble',
         recipe: () => {
-          event.custom({
-            type: 'rankine:rock_generator',
-            genType: 'metamorphic',
-            input1: {item: 'blue_skies:moonstone_block'},
-            result: {
-              block: 'rankine:white_marble',
-            },
-          });
+          event
+            .custom({
+              type: 'rankine:rock_generator',
+              genType: 'metamorphic',
+              input1: {item: 'blue_skies:moonstone_block'},
+              result: {
+                block: 'rankine:white_marble',
+              },
+            })
+            .id('inconvenient:metamorphic_white_marble');
         },
         children: [
           {
@@ -287,22 +299,24 @@ onEvent('recipes', event => {
                 'blue_skies:moonstone_from_smelting_everbright_moonstone_ore',
                 'blue_skies:moonstone_block_from_moonstone_crystal',
               ].forEach(id => event.remove({id: id}));
-              event.custom({
-                input: {item: 'blue_skies:everbright_moonstone_ore'},
-                type: 'rankine:crushing',
-                guaranteed: [
-                  {
-                    item: 'blue_skies:moonstone_shard',
-                    count: 1,
-                    tier: 'minecraft:iron',
-                  },
-                  {
-                    item: 'blue_skies:moonstone_shard',
-                    tier: 'minecraft:diamond',
-                    count: 3,
-                  },
-                ],
-              });
+              event
+                .custom({
+                  input: {item: 'blue_skies:everbright_moonstone_ore'},
+                  type: 'rankine:crushing',
+                  guaranteed: [
+                    {
+                      item: 'blue_skies:moonstone_shard',
+                      count: 1,
+                      tier: 'minecraft:iron',
+                    },
+                    {
+                      item: 'blue_skies:moonstone_shard',
+                      tier: 'minecraft:diamond',
+                      count: 3,
+                    },
+                  ],
+                })
+                .id('inconvenient:crushing_everbright_moonstone_ore');
             },
           },
         ],
@@ -316,10 +330,12 @@ onEvent('recipes', event => {
           {
             id: 'wood_stand',
             recipe: () => {
-              event.shaped('naturesaura:wood_stand', ['a', 'b'], {
-                a: `naturesaura:gold_leaf`,
-                b: 'totemic:cedar_log',
-              });
+              event
+                .shaped('naturesaura:wood_stand', ['a', 'b'], {
+                  a: `naturesaura:gold_leaf`,
+                  b: 'totemic:cedar_log',
+                })
+                .id('inconvenient:shaped_wood_stand');
             },
             children: [
               {
@@ -346,85 +362,98 @@ onEvent('recipes', event => {
                   {
                     id: 'drum',
                     recipe: () => {
-                      event.shaped('totemic:drum', ['aaa', 'bcb', 'cbc'], {
-                        a: 'minecraft:leather',
-                        b: '#minecraft:planks',
-                        c: 'rankine:gun_cotton',
-                      });
+                      event
+                        .shaped('totemic:drum', ['aaa', 'bcb', 'cbc'], {
+                          a: 'minecraft:leather',
+                          b: '#minecraft:planks',
+                          c: 'rankine:gun_cotton',
+                        })
+                        .id('inconvenient:shaped_drum');
                     },
                     children: [
                       {
                         id: 'gun_cotton',
                         recipe: () => {
-                          event.shaped(
-                            `rankine:gun_cotton`,
-                            ['aaa', 'aaa', 'aaa'],
-                            {
-                              a: 'rankine:cotton',
-                            }
-                          );
+                          event
+                            .shaped(
+                              `rankine:gun_cotton`,
+                              ['aaa', 'aaa', 'aaa'],
+                              {
+                                a: 'rankine:cotton',
+                              }
+                            )
+                            .id('inconvenient:shaped_gun_cotton');
                         },
                         children: [
                           {
                             id: 'cotton',
                             recipe: () => {
-                              event.custom({
-                                type: 'rankine:sluicing',
-                                input: {
-                                  item: 'blue_skies:turquoise_grass_block',
-                                },
-                                outputs: [
-                                  {
-                                    item: `blue_skies:turquoise_dirt`,
-                                    weight: 100,
+                              event
+                                .custom({
+                                  type: 'rankine:sluicing',
+                                  input: {
+                                    item: 'blue_skies:turquoise_grass_block',
                                   },
-                                  {
-                                    item: 'blue_skies:winter_leaf_seeds',
-                                    weight: 1,
-                                  },
-                                  {
-                                    item: 'blue_skies:scalefruit_seeds',
-                                    weight: 1,
-                                  },
-                                  {
-                                    item: 'blue_skies:pine_fruit_seeds',
-                                    weight: 1,
-                                  },
-                                  {item: 'rankine:cranberries', weight: 1},
-                                  {item: 'rankine:pokeberries', weight: 1},
-                                  {item: 'rankine:strawberries', weight: 1},
-                                  {item: 'rankine:pineapple', weight: 1},
-                                  {item: 'rankine:elderberries', weight: 1},
-                                  {item: 'rankine:snowberries', weight: 1},
-                                  {item: 'rankine:blueberries', weight: 1},
-                                  {item: 'rankine:raspberries', weight: 1},
-                                  {item: 'rankine:blackberries', weight: 1},
-                                  {item: 'rankine:banana_yucca', weight: 1},
-                                  {item: 'rankine:juniper_berries', weight: 1},
-                                  {item: 'minecraft:dandelion', weight: 1},
-                                  {item: 'minecraft:rose_bush', weight: 1},
-                                  {item: 'rankine:cotton_seeds', weight: 1},
-                                ],
-                                tool: {item: 'rankine:steel_gold_pan'},
-                              });
+                                  outputs: [
+                                    {
+                                      item: `blue_skies:turquoise_dirt`,
+                                      weight: 100,
+                                    },
+                                    {
+                                      item: 'blue_skies:winter_leaf_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'blue_skies:scalefruit_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'blue_skies:pine_fruit_seeds',
+                                      weight: 1,
+                                    },
+                                    {item: 'rankine:cranberries', weight: 1},
+                                    {item: 'rankine:pokeberries', weight: 1},
+                                    {item: 'rankine:strawberries', weight: 1},
+                                    {item: 'rankine:pineapple', weight: 1},
+                                    {item: 'rankine:elderberries', weight: 1},
+                                    {item: 'rankine:snowberries', weight: 1},
+                                    {item: 'rankine:blueberries', weight: 1},
+                                    {item: 'rankine:raspberries', weight: 1},
+                                    {item: 'rankine:blackberries', weight: 1},
+                                    {item: 'rankine:banana_yucca', weight: 1},
+                                    {
+                                      item: 'rankine:juniper_berries',
+                                      weight: 1,
+                                    },
+                                    {item: 'minecraft:dandelion', weight: 1},
+                                    {item: 'minecraft:rose_bush', weight: 1},
+                                    {item: 'rankine:cotton_seeds', weight: 1},
+                                  ],
+                                  tool: {item: 'rankine:steel_gold_pan'},
+                                })
+                                .id('inconvenient:slucing_steel_gold_pan');
                             },
                             children: [
                               {
                                 id: 'falsite_sifter',
                                 recipe: () => {
-                                  event.custom({
-                                    type: 'tconstruct:casting_table',
-                                    fluid: {
-                                      name: 'kubejs:molten_falsite',
-                                      amount: 810,
-                                    },
-                                    cast: {
-                                      item: 'rankine:pewter_gold_pan',
-                                      cast_consumed: true,
-                                    },
-                                    result: 'rankine:steel_gold_pan',
-                                    cooling_time: 100,
-                                  });
+                                  event
+                                    .custom({
+                                      type: 'tconstruct:casting_table',
+                                      fluid: {
+                                        name: 'kubejs:molten_falsite',
+                                        amount: 810,
+                                      },
+                                      cast: {
+                                        item: 'rankine:pewter_gold_pan',
+                                        cast_consumed: true,
+                                      },
+                                      result: 'rankine:steel_gold_pan',
+                                      cooling_time: 100,
+                                    })
+                                    .id(
+                                      'inconvenient:casting_table_steel_gold_pan'
+                                    );
                                 },
                                 children: [
                                   {
@@ -436,129 +465,165 @@ onEvent('recipes', event => {
                                         'blue_skies:falsite_ingot_from_smelting_falsite_ore',
                                         'blue_skies:falsite_ingot_from_smelting_raw_falsite',
                                       ].forEach(id => event.remove({id: id}));
-                                      event.custom({
-                                        type: 'tconstruct:casting_table',
-                                        result: 'blue_skies:falsite_ingot',
-                                        fluid: {
-                                          name: 'kubejs:molten_falsite',
-                                          amount: 90,
-                                        },
-                                        cast: {
-                                          item: 'tconstruct:ingot_cast',
-                                          cast_consumed: false,
-                                        },
-                                        cooling_time: 100,
-                                      });
-                                      event.custom({
-                                        type: 'tconstruct:casting_table',
-                                        result: 'blue_skies:falsite_nugget',
-                                        fluid: {
-                                          name: 'kubejs:molten_falsite',
-                                          amount: 10,
-                                        },
-                                        cast: {
-                                          item: 'tconstruct:nugget_cast',
-                                          cast_consumed: false,
-                                        },
-                                        cooling_time: 100,
-                                      });
+                                      event
+                                        .custom({
+                                          type: 'tconstruct:casting_table',
+                                          result: 'blue_skies:falsite_ingot',
+                                          fluid: {
+                                            name: 'kubejs:molten_falsite',
+                                            amount: 90,
+                                          },
+                                          cast: {
+                                            item: 'tconstruct:ingot_cast',
+                                            cast_consumed: false,
+                                          },
+                                          cooling_time: 100,
+                                        })
+                                        .id(
+                                          'inconvenient:casting_table_falsite_ingot'
+                                        );
+                                      event
+                                        .custom({
+                                          type: 'tconstruct:casting_table',
+                                          result: 'blue_skies:falsite_nugget',
+                                          fluid: {
+                                            name: 'kubejs:molten_falsite',
+                                            amount: 10,
+                                          },
+                                          cast: {
+                                            item: 'tconstruct:nugget_cast',
+                                            cast_consumed: false,
+                                          },
+                                          cooling_time: 100,
+                                        })
+                                        .id(
+                                          'inconvenient:casting_table_falsite_nugget'
+                                        );
+                                      event
+                                        .custom({
+                                          type: 'tconstruct:casting_basin',
+                                          result: 'blue_skies:falsite_block',
+                                          fluid: {
+                                            name: 'kubejs:molten_falsite',
+                                            amount: 810,
+                                          },
+                                          cooling_time: 100,
+                                        })
+                                        .id(
+                                          'inconvenient:casting_basin_falsite_block'
+                                        );
                                     },
                                     children: [
                                       {
                                         id: 'molten_falsite',
                                         recipe: () => {
-                                          event.custom({
-                                            type: 'tconstruct:casting_basin',
-                                            result: 'blue_skies:falsite_block',
-                                            fluid: {
-                                              name: 'kubejs:molten_falsite',
-                                              amount: 810,
-                                            },
-                                            cooling_time: 100,
-                                          });
-                                          event.custom({
-                                            type: 'tconstruct:melting',
-                                            ingredient: {
-                                              item: 'blue_skies:raw_falsite',
-                                            },
-                                            result: {
-                                              fluid: 'kubejs:molten_falsite',
-                                              amount: 90,
-                                            },
-                                            temperature: 605,
-                                            time: 54,
-                                          });
-                                          event.custom({
-                                            type: 'tconstruct:melting',
-                                            ingredient: {
-                                              item: 'blue_skies:falsite_ingot',
-                                            },
-                                            result: {
-                                              fluid: 'kubejs:molten_falsite',
-                                              amount: 90,
-                                            },
-                                            temperature: 605,
-                                            time: 54,
-                                          });
-                                          event.custom({
-                                            type: 'tconstruct:melting',
-                                            ingredient: {
-                                              item: 'blue_skies:falsite_nugget',
-                                            },
-                                            result: {
-                                              fluid: 'kubejs:molten_falsite',
-                                              amount: 10,
-                                            },
-                                            temperature: 605,
-                                            time: 54,
-                                          });
-                                          event.custom({
-                                            type: 'tconstruct:melting',
-                                            ingredient: {
-                                              item: 'blue_skies:falsite_block',
-                                            },
-                                            result: {
-                                              fluid: 'kubejs:molten_falsite',
-                                              amount: 810,
-                                            },
-                                            temperature: 605,
-                                            time: 54,
-                                          });
-                                          event.custom({
-                                            type: 'tconstruct:melting',
-                                            ingredient: {
-                                              item: 'blue_skies:raw_falsite_block',
-                                            },
-                                            result: {
-                                              fluid: 'kubejs:molten_falsite',
-                                              amount: 810,
-                                            },
-                                            temperature: 605,
-                                            time: 54,
-                                          });
+                                          event
+                                            .custom({
+                                              type: 'tconstruct:melting',
+                                              ingredient: {
+                                                item: 'blue_skies:raw_falsite',
+                                              },
+                                              result: {
+                                                fluid: 'kubejs:molten_falsite',
+                                                amount: 90,
+                                              },
+                                              temperature: 605,
+                                              time: 54,
+                                            })
+                                            .id(
+                                              'inconvenient:melting_raw_falsite'
+                                            );
+                                          event
+                                            .custom({
+                                              type: 'tconstruct:melting',
+                                              ingredient: {
+                                                item: 'blue_skies:falsite_ingot',
+                                              },
+                                              result: {
+                                                fluid: 'kubejs:molten_falsite',
+                                                amount: 90,
+                                              },
+                                              temperature: 605,
+                                              time: 54,
+                                            })
+                                            .id(
+                                              'inconvenient:melting_falsite_ingot'
+                                            );
+                                          event
+                                            .custom({
+                                              type: 'tconstruct:melting',
+                                              ingredient: {
+                                                item: 'blue_skies:falsite_nugget',
+                                              },
+                                              result: {
+                                                fluid: 'kubejs:molten_falsite',
+                                                amount: 10,
+                                              },
+                                              temperature: 605,
+                                              time: 54,
+                                            })
+                                            .id(
+                                              'inconvenient:melting_falsite_nugget'
+                                            );
+                                          event
+                                            .custom({
+                                              type: 'tconstruct:melting',
+                                              ingredient: {
+                                                item: 'blue_skies:falsite_block',
+                                              },
+                                              result: {
+                                                fluid: 'kubejs:molten_falsite',
+                                                amount: 810,
+                                              },
+                                              temperature: 605,
+                                              time: 54,
+                                            })
+                                            .id(
+                                              'inconvenient:melting_falsite_block'
+                                            );
+                                          event
+                                            .custom({
+                                              type: 'tconstruct:melting',
+                                              ingredient: {
+                                                item: 'blue_skies:raw_falsite_block',
+                                              },
+                                              result: {
+                                                fluid: 'kubejs:molten_falsite',
+                                                amount: 810,
+                                              },
+                                              temperature: 605,
+                                              time: 54,
+                                            })
+                                            .id(
+                                              'inconvenient:melting_raw_falsite_block'
+                                            );
                                         },
                                         children: [
                                           {
                                             id: 'raw_falsite',
                                             recipe: () => {
-                                              event.custom({
-                                                input: {
-                                                  item: 'blue_skies:falsite_ore',
-                                                },
-                                                type: 'rankine:crushing',
-                                                guaranteed: [
-                                                  {
-                                                    item: 'blue_skies:raw_falsite',
-                                                    count: 1,
-                                                    tier: 'minecraft:iron',
+                                              event
+                                                .custom({
+                                                  input: {
+                                                    item: 'blue_skies:falsite_ore',
                                                   },
-                                                  {
-                                                    item: 'blue_skies:raw_falsite',
-                                                    count: 1,
-                                                    tier: 'minecraft:netherite',
-                                                  },
-                                                ],
-                                              });
+                                                  type: 'rankine:crushing',
+                                                  guaranteed: [
+                                                    {
+                                                      item: 'blue_skies:raw_falsite',
+                                                      count: 1,
+                                                      tier: 'minecraft:iron',
+                                                    },
+                                                    {
+                                                      item: 'blue_skies:raw_falsite',
+                                                      count: 1,
+                                                      tier: 'minecraft:netherite',
+                                                    },
+                                                  ],
+                                                })
+                                                .id(
+                                                  'inconvenient:crushing_falsite_ore'
+                                                );
                                             },
                                             children: [
                                               {

@@ -73,7 +73,7 @@ onEvent('recipes', event => {
                 ['ab'],
                 {a: 'farmersdelight:canvas', b: 'minecraft:flint'}
               )
-              .stage('chapter_1');
+              .id('inconvenient:shaped_rankine_journal');
             event
               .shaped(
                 Item.of(
@@ -83,7 +83,7 @@ onEvent('recipes', event => {
                 ['a'],
                 {a: 'farmersdelight:canvas'}
               )
-              .stage('chapter_1');
+              .id('inconvenient:shaped_journal');
           },
         },
       ],
@@ -109,38 +109,38 @@ onEvent('recipes', event => {
             a: 'charcoal_pit:sandy_brick_item',
             b: 'rankine:mortar',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_sandy_brick');
         event
           .shaped('4x architects_palette:iron_ore_bricks', ['ab', 'bc'], {
             a: 'minecraft:iron_ingot',
             b: 'rankine:mortar',
             c: 'minecraft:stone_bricks',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_iron_ore_bricks');
         event
           .shaped('2x minecraft:polished_blackstone_bricks', ['ab', 'ba'], {
             a: 'minecraft:polished_blackstone',
             b: 'rankine:mortar',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_polished_blackstone_bricks');
         event
           .shaped('2x architects_palette:heavy_stone_bricks', ['ab', 'ba'], {
             a: 'minecraft:stone_bricks',
             b: 'rankine:mortar',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_heavy_stone_bricks');
         event
           .shaped('2x architects_palette:myonite_bricks', ['ab', 'ba'], {
             a: 'architects_palette:myonite',
             b: 'rankine:mortar',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_myonite_bricks');
         event
           .shaped('2x architects_palette:dripstone_bricks', ['ab', 'ba'], {
             a: 'minecraft:dripstone_block',
             b: 'rankine:mortar',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_dripstone_bricks');
         event
           .shaped(
             '2x architects_palette:heavy_dripstone_bricks',
@@ -150,25 +150,25 @@ onEvent('recipes', event => {
               b: 'rankine:mortar',
             }
           )
-          .stage('chapter_1');
+          .id('inconvenient:shaped_heavy_dripstone_bricks');
         event
           .shaped('2x architects_palette:heavy_calcite_bricks', ['ab', 'ba'], {
             a: 'architects_palette:calcite_bricks',
             b: 'rankine:mortar',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_heavy_calcite_bricks');
         event
           .shaped('2x architects_palette:calcite_bricks', ['ab', 'ba'], {
             a: 'minecraft:calcite',
             b: 'rankine:mortar',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_calcite_bricks');
         event
           .shaped('2x minecraft:deepslate_bricks', ['ab', 'ba'], {
             a: 'minecraft:polished_deepslate',
             b: 'rankine:mortar',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_deepslate_bricks');
       },
     },
     {
@@ -180,7 +180,7 @@ onEvent('recipes', event => {
             a: '#forge:ingots/brick',
             b: 'thirst:terracotta_bowl',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_brick_hopper');
       },
     },
     {
@@ -194,7 +194,7 @@ onEvent('recipes', event => {
             b: 'minecraft:flint',
             c: '#minecraft:wooden_slabs',
           })
-          .id('inconvenient:shaped_matchbox');
+          .id('inconvenient:shaped_shaped_matchbox');
       },
       children: [
         {
@@ -209,18 +209,20 @@ onEvent('recipes', event => {
                   'rankine:compat/farmersdelight/plant_fiber_smelting',
                 ].forEach(id => event.remove({id: id}));
 
-                event.custom({
-                  type: 'hexerei:drying_rack',
-                  ingredients: [
-                    {
-                      item: 'paragon_textiles:plant_fibers',
+                event
+                  .custom({
+                    type: 'hexerei:drying_rack',
+                    ingredients: [
+                      {
+                        item: 'paragon_textiles:plant_fibers',
+                      },
+                    ],
+                    output: {
+                      item: 'farmersdelight:straw',
                     },
-                  ],
-                  output: {
-                    item: 'farmersdelight:straw',
-                  },
-                  dryingTimeInTicks: 1000,
-                });
+                    dryingTimeInTicks: 1000,
+                  })
+                  .id('inconvenient:drying_straw');
               },
               children: [],
             },
@@ -366,7 +368,7 @@ onEvent('recipes', event => {
               h: 'minecraft:pumpkin',
             }
           )
-          .stage('chapter_1');
+          .id('inconvenient:shaped_stuffed_pumpkin_block');
       },
     },
     {
@@ -379,7 +381,7 @@ onEvent('recipes', event => {
             c: 'rankine:porcelain',
             d: 'kubejs:goddess_heart',
           })
-          .stage('chapter_1');
+          .id('inconvenient:shaped_goddess_statue');
       },
       children: [
         {
@@ -392,7 +394,7 @@ onEvent('recipes', event => {
                 c: 'rankine:silver_ingot',
                 d: 'paraglider:spirit_orb',
               })
-              .stage('chapter_1');
+              .id('inconvenient:shaped_goddess_heart');
           },
           children: [
             {
@@ -405,20 +407,24 @@ onEvent('recipes', event => {
                   'occultism:blasting/silver_ingot_from_raw',
                   'occultism:smelting/silver_ingot_from_raw',
                 ].forEach(id => event.remove({id: id}));
-                event.custom({
-                  type: 'charcoal_pit:orekiln',
-                  ingredients: [{item: 'rankine:acanthite'}],
-                  result: {item: 'rankine:silver_ingot'},
-                  amount: 1,
-                });
+                event
+                  .custom({
+                    type: 'charcoal_pit:orekiln',
+                    ingredients: [{item: 'rankine:acanthite'}],
+                    result: {item: 'rankine:silver_ingot'},
+                    amount: 1,
+                  })
+                  .id('inconvenient:orekiln_silver_ingot');
 
-                event.custom({
-                  type: 'rankine:beehive_oven',
-                  input: {item: 'rankine:acanthite_block'},
-                  result: 'rankine:silver_block',
-                  minCookTime: 2400,
-                  maxCookTime: 4800,
-                });
+                event
+                  .custom({
+                    type: 'rankine:beehive_oven',
+                    input: {item: 'rankine:acanthite_block'},
+                    result: 'rankine:silver_block',
+                    minCookTime: 2400,
+                    maxCookTime: 4800,
+                  })
+                  .id('inconvenient:beehive_oven_silver_block');
               },
               children: [
                 {
@@ -450,20 +456,24 @@ onEvent('recipes', event => {
                   'mekanism:processing/lead/ingot/from_raw_blasting',
                   'mekanism:processing/lead/ingot/from_raw_smelting',
                 ].forEach(id => event.remove({id: id}));
-                event.custom({
-                  type: 'charcoal_pit:orekiln',
-                  ingredients: [{item: 'rankine:galena'}],
-                  result: {item: 'rankine:lead_ingot'},
-                  amount: 1,
-                });
+                event
+                  .custom({
+                    type: 'charcoal_pit:orekiln',
+                    ingredients: [{item: 'rankine:galena'}],
+                    result: {item: 'rankine:lead_ingot'},
+                    amount: 1,
+                  })
+                  .id('inconvenient:orekiln_lead_ingot');
 
-                event.custom({
-                  type: 'rankine:beehive_oven',
-                  input: {item: 'rankine:galena_block'},
-                  result: 'rankine:lead_block',
-                  minCookTime: 2400,
-                  maxCookTime: 4800,
-                });
+                event
+                  .custom({
+                    type: 'rankine:beehive_oven',
+                    input: {item: 'rankine:galena_block'},
+                    result: 'rankine:lead_block',
+                    minCookTime: 2400,
+                    maxCookTime: 4800,
+                  })
+                  .id('inconvenient:beehive_oven_lead_block');
               },
               children: [
                 {
@@ -479,24 +489,26 @@ onEvent('recipes', event => {
                       'immersiveengineering:crafting/raw_lead_to_raw_block_lead',
                     ].forEach(id => event.remove({id: id}));
 
-                    event.custom({
-                      input: {
-                        item: 'rankine:galena_ore',
-                      },
-                      type: 'rankine:crushing',
-                      guaranteed: [
-                        {
-                          item: 'rankine:galena',
-                          count: 1,
-                          tier: 'minecraft:iron',
+                    event
+                      .custom({
+                        input: {
+                          item: 'rankine:galena_ore',
                         },
-                        {
-                          item: 'rankine:galena',
-                          count: 1,
-                          tier: 'minecraft:netherite',
-                        },
-                      ],
-                    });
+                        type: 'rankine:crushing',
+                        guaranteed: [
+                          {
+                            item: 'rankine:galena',
+                            count: 1,
+                            tier: 'minecraft:iron',
+                          },
+                          {
+                            item: 'rankine:galena',
+                            count: 1,
+                            tier: 'minecraft:netherite',
+                          },
+                        ],
+                      })
+                      .id('inconvenient:crushing_galena_ore');
                   },
                   children: [
                     {
@@ -536,12 +548,14 @@ onEvent('recipes', event => {
               'rankine:crushing/plumbago_ore_crushing',
               'rankine:beehive_oven/silicon_carbide_block_beehive_oven_cooking',
             ].forEach(id => event.remove({id: id}));
-            event.custom({
-              type: 'rankine:crushing',
-              input: {item: 'rankine:plumbago_ore'},
-              guaranteed: [{item: 'rankine:graphite'}],
-              outputs: [{weight: 100, remove: false}],
-            });
+            event
+              .custom({
+                type: 'rankine:crushing',
+                input: {item: 'rankine:plumbago_ore'},
+                guaranteed: [{item: 'rankine:graphite'}],
+                outputs: [{weight: 100, remove: false}],
+              })
+              .id('inconvenient:crushing_plumbago_ore');
           },
           children: [
             {

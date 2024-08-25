@@ -2,69 +2,75 @@ onEvent('recipes', event => {
   setMilestoneRecipes({
     id: 'cinder_dust',
     recipe: () => {
-      event.custom({
-        type: 'hexerei:mixingcauldron',
-        ingredients: [
-          {
-            item: 'ecofriendly:garbage_item_ym',
+      event
+        .custom({
+          type: 'hexerei:mixingcauldron',
+          ingredients: [
+            {
+              item: 'ecofriendly:garbage_item_ym',
+            },
+            {
+              item: 'create:powdered_obsidian',
+            },
+            {
+              item: 'kubejs:fiery_dust',
+            },
+            {
+              item: 'create:powdered_obsidian',
+            },
+            {
+              item: 'kubejs:fiery_dust',
+            },
+            {
+              item: 'create:powdered_obsidian',
+            },
+            {
+              item: 'ecofriendly:garbage_item_ym',
+            },
+            {
+              item: 'create:powdered_obsidian',
+            },
+          ],
+          output: {
+            item: 'kubejs:cinder_dust',
+            count: 1,
           },
-          {
-            item: 'create:powdered_obsidian',
+          liquid: {
+            fluid: 'minecraft:lava',
           },
-          {
-            item: 'kubejs:fiery_dust',
+          liquidOutput: {
+            fluid: 'minecraft:lava',
           },
-          {
-            item: 'create:powdered_obsidian',
-          },
-          {
-            item: 'kubejs:fiery_dust',
-          },
-          {
-            item: 'create:powdered_obsidian',
-          },
-          {
-            item: 'ecofriendly:garbage_item_ym',
-          },
-          {
-            item: 'create:powdered_obsidian',
-          },
-        ],
-        output: {
-          item: 'kubejs:cinder_dust',
-          count: 1,
-        },
-        liquid: {
-          fluid: 'minecraft:lava',
-        },
-        liquidOutput: {
-          fluid: 'minecraft:lava',
-        },
-        fluidLevelsConsumed: 1000,
-      });
+          fluidLevelsConsumed: 1000,
+        })
+        .id('inconvenient:cauldron_cinder_dust');
     },
     children: [
       {id: 'garbage', recipe: () => {}, children: []},
       {
         id: 'fiery_dust',
         recipe: () => {
-          event.custom({
-            type: 'tconstruct:alloy',
-            result: {fluid: 'twilightforest:molten_fiery', amount: 180},
+          event
+            .custom({
+              type: 'tconstruct:alloy',
+              result: {fluid: 'twilightforest:molten_fiery', amount: 180},
 
-            inputs: [
-              {name: 'kubejs:fiery_blood', amount: 90},
-              {name: 'kubejs:fiery_tears', amount: 90},
-            ],
-            temperature: 605,
-          });
+              inputs: [
+                {name: 'kubejs:fiery_blood', amount: 90},
+                {name: 'kubejs:fiery_tears', amount: 90},
+              ],
+              temperature: 605,
+            })
+            .id('inconvenient:alloy_molten_fiery');
 
-          event.custom({
-            type: 'create:milling',
-            ingredients: [{item: 'twilightforest:fiery_ingot'}],
-            results: [{item: 'kubejs:fiery_dust'}],
-            processingTime: 50,
-          });
+          event
+            .custom({
+              type: 'create:milling',
+              ingredients: [{item: 'twilightforest:fiery_ingot'}],
+              results: [{item: 'kubejs:fiery_dust'}],
+              processingTime: 50,
+            })
+            .id('inconvenient:milling_fiery_ingot');
         },
         children: [
           {
@@ -78,80 +84,88 @@ onEvent('recipes', event => {
                   {
                     id: 'fiery_tears',
                     recipe: () => {
-                      event.custom({
-                        type: 'tconstruct:melting',
-                        ingredient: {item: 'twilightforest:fiery_tears'},
-                        result: {fluid: 'kubejs:fiery_tears', amount: 90},
-                        temperature: 605,
-                        time: 54,
-                      });
+                      event
+                        .custom({
+                          type: 'tconstruct:melting',
+                          ingredient: {item: 'twilightforest:fiery_tears'},
+                          result: {fluid: 'kubejs:fiery_tears', amount: 90},
+                          temperature: 605,
+                          time: 54,
+                        })
+                        .id('inconvenient:melting_fiery_tears');
                     },
                     children: [],
                   },
                   {
                     id: 'fiery_blood',
                     recipe: () => {
-                      event.custom({
-                        type: 'tconstruct:melting',
-                        ingredient: {item: 'twilightforest:fiery_blood'},
-                        result: {fluid: 'kubejs:fiery_blood', amount: 90},
-                        temperature: 605,
-                        time: 54,
-                      });
+                      event
+                        .custom({
+                          type: 'tconstruct:melting',
+                          ingredient: {item: 'twilightforest:fiery_blood'},
+                          result: {fluid: 'kubejs:fiery_blood', amount: 90},
+                          temperature: 605,
+                          time: 54,
+                        })
+                        .id('inconvenient:melting_fiery_blood');
                     },
                     children: [],
                   },
                   {
                     id: 'fiery_essence',
                     recipe: () => {
-                      event.custom({
-                        type: 'tconstruct:melting',
-                        ingredient: {item: 'occultism:afrit_essence'},
-                        result: {fluid: 'kubejs:fiery_essence', amount: 90},
-                        temperature: 605,
-                        time: 54,
-                      });
+                      event
+                        .custom({
+                          type: 'tconstruct:melting',
+                          ingredient: {item: 'occultism:afrit_essence'},
+                          result: {fluid: 'kubejs:fiery_essence', amount: 90},
+                          temperature: 605,
+                          time: 54,
+                        })
+                        .id('inconvenient:melting_afrit_essence');
                     },
                     children: [
                       {
                         id: 'afrit_essence',
                         recipe: () => {
-                          event.custom({
-                            type: 'occultism:ritual',
-                            ritual_type: 'occultism:summon',
-                            activation_item: {
-                              item: 'occultism:book_of_binding_bound_afrit',
-                            },
-                            pentacle_id: 'occultism:summon_wild_afrit',
-                            duration: 60,
-                            entity_to_summon: 'occultism:afrit_wild',
-                            ritual_dummy: {
-                              item: 'occultism:ritual_dummy/summon_wild_afrit',
-                            },
-                            ingredients: [
-                              {
-                                item: 'blue_skies:horizonite_ingot',
+                          event
+                            .custom({
+                              type: 'occultism:ritual',
+                              ritual_type: 'occultism:summon',
+                              activation_item: {
+                                item: 'occultism:book_of_binding_bound_afrit',
                               },
-                              {
-                                item: 'bloodmagic:infusedslate',
+                              pentacle_id: 'occultism:summon_wild_afrit',
+                              duration: 60,
+                              entity_to_summon: 'occultism:afrit_wild',
+                              ritual_dummy: {
+                                item: 'occultism:ritual_dummy/summon_wild_afrit',
                               },
-                              {
-                                item: 'blue_skies:dusk_arc',
+                              ingredients: [
+                                {
+                                  item: 'blue_skies:horizonite_ingot',
+                                },
+                                {
+                                  item: 'bloodmagic:infusedslate',
+                                },
+                                {
+                                  item: 'blue_skies:dusk_arc',
+                                },
+                                {
+                                  item: 'extendedcrafting:black_iron_block',
+                                },
+                                {
+                                  type: 'forge:nbt',
+                                  item: 'naturesaura:aura_bottle',
+                                  count: 1,
+                                  nbt: '{stored_type:"naturesaura:nether"}',
+                                },
+                              ],
+                              result: {
+                                item: 'occultism:jei_dummy/none',
                               },
-                              {
-                                item: 'extendedcrafting:black_iron_block',
-                              },
-                              {
-                                type: 'forge:nbt',
-                                item: 'naturesaura:aura_bottle',
-                                count: 1,
-                                nbt: '{stored_type:"naturesaura:nether"}',
-                              },
-                            ],
-                            result: {
-                              item: 'occultism:jei_dummy/none',
-                            },
-                          });
+                            })
+                            .id('inconvenient:ritual_summon_afrit');
                         },
                         children: [],
                       },
@@ -178,7 +192,7 @@ onEvent('recipes', event => {
                     d: 'occultism:afrit_essence',
                   },
                 })
-                .id('inconvenient:millstone_millstone');
+                .id('inconvenient:basic_table_millstone');
             },
             children: [
               {
@@ -208,138 +222,164 @@ onEvent('recipes', event => {
                       {
                         id: 'horizonite_ingot',
                         recipe: () => {
-                          event.custom({
-                            type: 'tconstruct:casting_table',
-                            fluid: {
-                              name: 'tconstruct:molten_obsidian',
-                              amount: 250,
-                            },
-                            cast: {
-                              item: 'blue_skies:horizonite_ingot',
-                              cast_consumed: true,
-                            },
-                            result: 'extendedcrafting:black_iron_ingot',
-                            cooling_time: 100,
-                          });
-                          event.custom({
-                            type: 'tconstruct:casting_table',
-                            result: 'blue_skies:horizonite_nugget',
-                            fluid: {
-                              name: 'kubejs:molten_horizonite',
-                              amount: 10,
-                            },
-                            cast: {
-                              item: 'tconstruct:nugget_cast',
-                              cast_consumed: false,
-                            },
-                            cooling_time: 100,
-                          });
-                          event.custom({
-                            type: 'tconstruct:casting_table',
-                            result: 'blue_skies:horizonite_ingot',
-                            fluid: {
-                              name: 'kubejs:molten_horizonite',
-                              amount: 90,
-                            },
-                            cast: {
-                              item: 'tconstruct:ingot_cast',
-                              cast_consumed: false,
-                            },
-                            cooling_time: 100,
-                          });
-                          event.custom({
-                            type: 'tconstruct:casting_basin',
-                            result: 'blue_skies:horizonite_block',
-                            cooling_time: 100,
-                            fluid: {
-                              name: 'kubejs:molten_horizonite',
-                              amount: 810,
-                            },
-                          });
+                          event
+                            .custom({
+                              type: 'tconstruct:casting_table',
+                              fluid: {
+                                name: 'tconstruct:molten_obsidian',
+                                amount: 250,
+                              },
+                              cast: {
+                                item: 'blue_skies:horizonite_ingot',
+                                cast_consumed: true,
+                              },
+                              result: 'extendedcrafting:black_iron_ingot',
+                              cooling_time: 100,
+                            })
+                            .id('inconvenient:casting_table_black_iron_ingot');
+                          event
+                            .custom({
+                              type: 'tconstruct:casting_table',
+                              result: 'blue_skies:horizonite_nugget',
+                              fluid: {
+                                name: 'kubejs:molten_horizonite',
+                                amount: 10,
+                              },
+                              cast: {
+                                item: 'tconstruct:nugget_cast',
+                                cast_consumed: false,
+                              },
+                              cooling_time: 100,
+                            })
+                            .id('inconvenient:casting_table_horizonite_nugget');
+                          event
+                            .custom({
+                              type: 'tconstruct:casting_table',
+                              result: 'blue_skies:horizonite_ingot',
+                              fluid: {
+                                name: 'kubejs:molten_horizonite',
+                                amount: 90,
+                              },
+                              cast: {
+                                item: 'tconstruct:ingot_cast',
+                                cast_consumed: false,
+                              },
+                              cooling_time: 100,
+                            })
+                            .id('inconvenient:casting_table_horizonite_ingot');
+                          event
+                            .custom({
+                              type: 'tconstruct:casting_basin',
+                              result: 'blue_skies:horizonite_block',
+                              cooling_time: 100,
+                              fluid: {
+                                name: 'kubejs:molten_horizonite',
+                                amount: 810,
+                              },
+                            })
+                            .id('inconvenient:casting_table_horizonite_block');
                         },
                         children: [
                           {
                             id: 'molten_horizonite',
                             recipe: () => {
-                              event.custom({
-                                type: 'tconstruct:melting',
-                                ingredient: {item: 'blue_skies:raw_horizonite'},
-                                result: {
-                                  fluid: 'kubejs:molten_horizonite',
-                                  amount: 90,
-                                },
-                                temperature: 605,
-                                time: 54,
-                              });
-                              event.custom({
-                                type: 'tconstruct:melting',
-                                ingredient: {
-                                  item: 'blue_skies:horizonite_nugget',
-                                },
-                                result: {
-                                  fluid: 'kubejs:molten_horizonite',
-                                  amount: 10,
-                                },
-                                temperature: 605,
-                                time: 54,
-                              });
-                              event.custom({
-                                type: 'tconstruct:melting',
-                                ingredient: {
-                                  item: 'blue_skies:horizonite_ingot',
-                                },
-                                result: {
-                                  fluid: 'kubejs:molten_horizonite',
-                                  amount: 90,
-                                },
-                                temperature: 605,
-                                time: 54,
-                              });
-                              event.custom({
-                                type: 'tconstruct:melting',
-                                ingredient: {
-                                  item: 'blue_skies:horizonite_block',
-                                },
-                                result: {
-                                  fluid: 'kubejs:molten_horizonite',
-                                  amount: 810,
-                                },
-                                temperature: 605,
-                                time: 54,
-                              });
-                              event.custom({
-                                type: 'tconstruct:melting',
-                                ingredient: {
-                                  item: 'blue_skies:raw_horizonite_block',
-                                },
-                                result: {
-                                  fluid: 'kubejs:molten_horizonite',
-                                  amount: 810,
-                                },
-                                temperature: 605,
-                                time: 54,
-                              });
+                              event
+                                .custom({
+                                  type: 'tconstruct:melting',
+                                  ingredient: {
+                                    item: 'blue_skies:raw_horizonite',
+                                  },
+                                  result: {
+                                    fluid: 'kubejs:molten_horizonite',
+                                    amount: 90,
+                                  },
+                                  temperature: 605,
+                                  time: 54,
+                                })
+                                .id('inconvenient:melting_raw_horizonite');
+                              event
+                                .custom({
+                                  type: 'tconstruct:melting',
+                                  ingredient: {
+                                    item: 'blue_skies:horizonite_nugget',
+                                  },
+                                  result: {
+                                    fluid: 'kubejs:molten_horizonite',
+                                    amount: 10,
+                                  },
+                                  temperature: 605,
+                                  time: 54,
+                                })
+                                .id('inconvenient:melting_horizonite_nugget');
+                              event
+                                .custom({
+                                  type: 'tconstruct:melting',
+                                  ingredient: {
+                                    item: 'blue_skies:horizonite_ingot',
+                                  },
+                                  result: {
+                                    fluid: 'kubejs:molten_horizonite',
+                                    amount: 90,
+                                  },
+                                  temperature: 605,
+                                  time: 54,
+                                })
+                                .id('inconvenient:melting_horizonite_ingot');
+                              event
+                                .custom({
+                                  type: 'tconstruct:melting',
+                                  ingredient: {
+                                    item: 'blue_skies:horizonite_block',
+                                  },
+                                  result: {
+                                    fluid: 'kubejs:molten_horizonite',
+                                    amount: 810,
+                                  },
+                                  temperature: 605,
+                                  time: 54,
+                                })
+                                .id('inconvenient:melting_horizonite_block');
+                              event
+                                .custom({
+                                  type: 'tconstruct:melting',
+                                  ingredient: {
+                                    item: 'blue_skies:raw_horizonite_block',
+                                  },
+                                  result: {
+                                    fluid: 'kubejs:molten_horizonite',
+                                    amount: 810,
+                                  },
+                                  temperature: 605,
+                                  time: 54,
+                                })
+                                .id(
+                                  'inconvenient:melting_raw_horizonite_block'
+                                );
                             },
                             children: [
                               {
                                 id: 'raw_horizonite',
                                 recipe: () => {
-                                  event.custom({
-                                    input: {item: 'blue_skies:horizonite_ore'},
-                                    type: 'rankine:crushing',
-                                    guaranteed: [
-                                      {
-                                        item: 'blue_skies:raw_horizonite',
-                                        count: 1,
-                                        tier: 'minecraft:diamond',
+                                  event
+                                    .custom({
+                                      input: {
+                                        item: 'blue_skies:horizonite_ore',
                                       },
-                                      {
-                                        item: 'blue_skies:raw_horizonite',
-                                        count: 1,
-                                        tier: 'minecraft:netherite',
-                                      },
-                                    ],
-                                  });
+                                      type: 'rankine:crushing',
+                                      guaranteed: [
+                                        {
+                                          item: 'blue_skies:raw_horizonite',
+                                          count: 1,
+                                          tier: 'minecraft:diamond',
+                                        },
+                                        {
+                                          item: 'blue_skies:raw_horizonite',
+                                          count: 1,
+                                          tier: 'minecraft:netherite',
+                                        },
+                                      ],
+                                    })
+                                    .id('inconvenient:crushing_horizonite_ore');
                                 },
                                 children: [],
                               },
@@ -353,83 +393,95 @@ onEvent('recipes', event => {
                   {
                     id: 'basic_component',
                     recipe: () => {
-                      event.shaped(
-                        'extendedcrafting:basic_component',
-                        ['ab', 'cc'],
-                        {
-                          a: 'extendedcrafting:black_iron_slate',
-                          b: 'twilightforest:carminite',
-                          c: 'twilightforest:ironwood_ingot',
-                        }
-                      );
+                      event
+                        .shaped(
+                          'extendedcrafting:basic_component',
+                          ['ab', 'cc'],
+                          {
+                            a: 'extendedcrafting:black_iron_slate',
+                            b: 'twilightforest:carminite',
+                            c: 'twilightforest:ironwood_ingot',
+                          }
+                        )
+                        .id('inconvenient:shaped_basic_component');
                     },
                     children: [
                       {
                         id: 'ironwood',
                         recipe: () => {
-                          event.custom({
-                            type: 'tconstruct:casting_table',
-                            result: 'twilightforest:ironwood_ingot',
-                            fluid: {
-                              name: 'kubejs:molten_ironwood',
-                              amount: 90,
-                            },
-                            cast: {
-                              item: 'tconstruct:ingot_cast',
-                              cast_consumed: false,
-                            },
-                            cooling_time: 100,
-                          });
-                          event.custom({
-                            type: 'tconstruct:casting_basin',
-                            result: 'twilightforest:ironwood_block',
-                            cooling_time: 100,
-                            fluid: {
-                              name: 'kubejs:molten_ironwood',
-                              amount: 810,
-                            },
-                          });
+                          event
+                            .custom({
+                              type: 'tconstruct:casting_table',
+                              result: 'twilightforest:ironwood_ingot',
+                              fluid: {
+                                name: 'kubejs:molten_ironwood',
+                                amount: 90,
+                              },
+                              cast: {
+                                item: 'tconstruct:ingot_cast',
+                                cast_consumed: false,
+                              },
+                              cooling_time: 100,
+                            })
+                            .id('inconvenient:casting_table_ironwood_ingot');
+                          event
+                            .custom({
+                              type: 'tconstruct:casting_basin',
+                              result: 'twilightforest:ironwood_block',
+                              cooling_time: 100,
+                              fluid: {
+                                name: 'kubejs:molten_ironwood',
+                                amount: 810,
+                              },
+                            })
+                            .id('inconvenient:casting_basin_ironwood_block');
                         },
                         children: [
                           {
                             id: 'molten_ironwood',
                             recipe: () => {
-                              event.custom({
-                                type: 'tconstruct:melting',
-                                ingredient: {
-                                  item: 'twilightforest:raw_ironwood',
-                                },
-                                result: {
-                                  fluid: 'kubejs:molten_ironwood',
-                                  amount: 90,
-                                },
-                                temperature: 605,
-                                time: 54,
-                              });
-                              event.custom({
-                                type: 'tconstruct:melting',
-                                ingredient: {
-                                  item: 'twilightforest:ironwood_ingot',
-                                },
-                                result: {
-                                  fluid: 'kubejs:molten_ironwood',
-                                  amount: 90,
-                                },
-                                temperature: 605,
-                                time: 54,
-                              });
-                              event.custom({
-                                type: 'tconstruct:melting',
-                                ingredient: {
-                                  item: 'twilightforest:ironwood_block',
-                                },
-                                result: {
-                                  fluid: 'kubejs:molten_ironwood',
-                                  amount: 810,
-                                },
-                                temperature: 605,
-                                time: 54,
-                              });
+                              event
+                                .custom({
+                                  type: 'tconstruct:melting',
+                                  ingredient: {
+                                    item: 'twilightforest:raw_ironwood',
+                                  },
+                                  result: {
+                                    fluid: 'kubejs:molten_ironwood',
+                                    amount: 90,
+                                  },
+                                  temperature: 605,
+                                  time: 54,
+                                })
+                                .id('inconvenient:melting_raw_ironwood');
+                              event
+                                .custom({
+                                  type: 'tconstruct:melting',
+                                  ingredient: {
+                                    item: 'twilightforest:ironwood_ingot',
+                                  },
+                                  result: {
+                                    fluid: 'kubejs:molten_ironwood',
+                                    amount: 90,
+                                  },
+                                  temperature: 605,
+                                  time: 54,
+                                })
+                                .id('inconvenient:melting_ironwood_ingot');
+                              event
+                                .custom({
+                                  type: 'tconstruct:melting',
+                                  ingredient: {
+                                    item: 'twilightforest:ironwood_block',
+                                  },
+                                  result: {
+                                    fluid: 'kubejs:molten_ironwood',
+                                    amount: 810,
+                                  },
+                                  temperature: 605,
+                                  time: 54,
+                                })
+                                .id('inconvenient:melting_ironwood_block');
                             },
                             children: [
                               {
@@ -438,14 +490,16 @@ onEvent('recipes', event => {
                                   [
                                     'twilightforest:material/raw_ironwood',
                                   ].forEach(id => event.remove({id: id}));
-                                  event.shapeless(
-                                    '2x twilightforest:raw_ironwood',
-                                    [
-                                      'twilightforest:liveroot',
-                                      'rankine:hematite',
-                                      'blue_skies:horizonite_ingot',
-                                    ]
-                                  );
+                                  event
+                                    .shapeless(
+                                      '2x twilightforest:raw_ironwood',
+                                      [
+                                        'twilightforest:liveroot',
+                                        'rankine:hematite',
+                                        'blue_skies:horizonite_ingot',
+                                      ]
+                                    )
+                                    .id('inconvenient:shapeless_raw_ironwood');
                                 },
                                 children: [
                                   {
@@ -485,14 +539,16 @@ onEvent('recipes', event => {
                   {
                     id: 'black_marble',
                     recipe: () => {
-                      event.custom({
-                        type: 'rankine:rock_generator',
-                        genType: 'metamorphic',
-                        input1: {item: 'twilightforest:carminite_block'},
-                        result: {
-                          block: 'rankine:black_marble',
-                        },
-                      });
+                      event
+                        .custom({
+                          type: 'rankine:rock_generator',
+                          genType: 'metamorphic',
+                          input1: {item: 'twilightforest:carminite_block'},
+                          result: {
+                            block: 'rankine:black_marble',
+                          },
+                        })
+                        .id('inconvenient:metamorphic_black_marble');
                     },
                     children: [
                       {id: 'carminite', recipe: () => {}, children: []},
