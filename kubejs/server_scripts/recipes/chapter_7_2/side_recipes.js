@@ -34,7 +34,8 @@ onEvent('recipes', event => {
                   c: 'charcoal_pit:orichalcum_helmet',
                 }
               )
-              .stage('chapter_7_2');
+              .stage('chapter_7_2')
+              .id('inconvenient:shaped_pneumatic_helmet');
 
             event
               .shaped(
@@ -46,7 +47,8 @@ onEvent('recipes', event => {
                   c: 'charcoal_pit:orichalcum_chestplate',
                 }
               )
-              .stage('chapter_7_2');
+              .stage('chapter_7_2')
+              .id('inconvenient:shaped_pneumatic_chestplate');
 
             event
               .shaped(
@@ -58,7 +60,8 @@ onEvent('recipes', event => {
                   c: 'charcoal_pit:orichalcum_leggings',
                 }
               )
-              .stage('chapter_7_2');
+              .stage('chapter_7_2')
+              .id('inconvenient:shaped_pneumatic_leggings');
 
             event
               .shaped('pneumaticcraft:pneumatic_boots', ['aba', 'aca', 'aaa'], {
@@ -66,7 +69,8 @@ onEvent('recipes', event => {
                 b: 'pneumaticcraft:printed_circuit_board',
                 c: 'charcoal_pit:orichalcum_boots',
               })
-              .stage('chapter_7_2');
+              .stage('chapter_7_2')
+              .id('inconvenient:shaped_pneumatic_boots');
           },
         },
       ],

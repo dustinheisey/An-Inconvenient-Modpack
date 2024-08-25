@@ -18,7 +18,7 @@ onEvent('recipes', event => {
                 'minecraft:book',
                 'immersiveengineering:plate_steel',
               ])
-              .stage('chapter_5_2');
+              .id('inconvenient:shapeless_immersiveengineering_manual');
           },
         },
         {
@@ -43,7 +43,7 @@ onEvent('recipes', event => {
                 b: 'minecraft:leather',
                 c: `kubejs:blueleaf_lost_page`,
               })
-              .stage('chapter_5_2');
+              .id('inconvenient:shaped_blueleaf_lost_story');
           },
         },
         {
@@ -251,247 +251,269 @@ onEvent('recipes', event => {
     })
     .id('inconvenient:basic_table_watermill');
 
-  event.shaped('rankine:simple_magnet', ['a a', 'aaa'], {
-    a: 'rankine:nickel_ingot',
-  });
+  event
+    .shaped('rankine:simple_magnet', ['a a', 'aaa'], {
+      a: 'rankine:nickel_ingot',
+    })
+    .id('inconvenient:shaped_simple_magnet');
 
   // guns
-  event.shaped(
-    Item.of('immersiveengineering:blueprint', '{blueprint:"electrode"}'),
-    [' a ', 'bbb', 'ccc'],
-    {
-      a: 'immersiveengineering:graphite_electrode',
-      b: 'minecraft:black_dye',
-      c: 'minecraft:paper',
-    }
-  );
+  event
+    .shaped(
+      Item.of('immersiveengineering:blueprint', '{blueprint:"electrode"}'),
+      [' a ', 'bbb', 'ccc'],
+      {
+        a: 'immersiveengineering:graphite_electrode',
+        b: 'minecraft:black_dye',
+        c: 'minecraft:paper',
+      }
+    )
+    .id('inconvenient:shaped_blueprint_electrode');
 
-  event.shaped(
-    Item.of('immersiveengineering:blueprint', '{blueprint:"specialBullet"}'),
-    [' a ', 'bbb', 'ccc'],
-    {
-      a: 'immersiveengineering:empty_casing',
-      b: 'minecraft:orange_dye',
-      c: 'minecraft:paper',
-    }
-  );
+  event
+    .shaped(
+      Item.of('immersiveengineering:blueprint', '{blueprint:"specialBullet"}'),
+      [' a ', 'bbb', 'ccc'],
+      {
+        a: 'immersiveengineering:empty_casing',
+        b: 'minecraft:orange_dye',
+        c: 'minecraft:paper',
+      }
+    )
+    .id('inconvenient:shaped_blueprint_special_bullet');
 
-  event.shaped(`rankine:magnetometer`, [' a ', 'bcb', ' a '], {
-    a: 'rankine:cupronickel_ingot',
-    b: 'extendedcrafting:redstone_ingot',
-    c: 'extendedcrafting:ender_ingot',
-  });
-  event.shaped(`pneumaticcraft:turbine_blade`, [' ab', 'ab ', 'a  '], {
-    a: 'pneumaticcraft:ingot_iron_compressed',
-    b: 'chemlib:copper_plate',
-  });
+  event
+    .shaped(`rankine:magnetometer`, [' a ', 'bcb', ' a '], {
+      a: 'rankine:cupronickel_ingot',
+      b: 'extendedcrafting:redstone_ingot',
+      c: 'extendedcrafting:ender_ingot',
+    })
+    .id('inconvenient:shaped_magnetometer');
+  event
+    .shaped(`pneumaticcraft:turbine_blade`, [' ab', 'ab ', 'a  '], {
+      a: 'pneumaticcraft:ingot_iron_compressed',
+      b: 'chemlib:copper_plate',
+    })
+    .id('inconvenient:shaped_turbine_blade');
 
-  event.custom({
-    type: 'create:mechanical_crafting',
-    result: {item: 'hem:shotgun'},
-    pattern: ['ab ', 'cda', 'e  '],
-    key: {
-      a: 'hem:rose_copper_ingot',
-      b: 'tconstruct:blazing_blood_bucket',
-      c: 'minecraft:gunpowder',
-      d: 'hem:copparite',
-      e: 'hem:bluleaf_planks',
-    },
-  });
+  event
+    .custom({
+      type: 'create:mechanical_crafting',
+      result: {item: 'hem:shotgun'},
+      pattern: ['ab ', 'cda', 'e  '],
+      key: {
+        a: 'hem:rose_copper_ingot',
+        b: 'tconstruct:blazing_blood_bucket',
+        c: 'minecraft:gunpowder',
+        d: 'hem:copparite',
+        e: 'hem:bluleaf_planks',
+      },
+    })
+    .id('inconvenient:mechanical_shotgun');
 
-  event.custom({
-    type: 'rankine:mixing',
-    mixTime: 100,
-    matScale: 1,
-    ingredientTotal: 3,
-    fluidInput: {
-      fluid: 'minecraft:water',
-      amount: 50,
-    },
-    inputs: [
-      {
-        tag: 'forge:gravel',
-        min: 0.4,
-        max: 0.6,
+  event
+    .custom({
+      type: 'rankine:mixing',
+      mixTime: 100,
+      matScale: 1,
+      ingredientTotal: 3,
+      fluidInput: {
+        fluid: 'minecraft:water',
+        amount: 50,
       },
-      {
-        tag: 'forge:sand',
-        min: 0.2,
-        max: 0.3,
+      inputs: [
+        {
+          tag: 'forge:gravel',
+          min: 0.4,
+          max: 0.6,
+        },
+        {
+          tag: 'forge:sand',
+          min: 0.2,
+          max: 0.3,
+        },
+        {
+          tag: 'forge:bitumen',
+          min: 0.1,
+          max: 0.2,
+        },
+      ],
+      result: {item: 'rankine:asphalt'},
+    })
+    .id('inconvenient:mixing_barrel_asphalt');
+  event
+    .custom({
+      type: 'rankine:mixing',
+      mixTime: 100,
+      matScale: 1,
+      ingredientTotal: 4,
+      fluidInput: {
+        fluid: 'minecraft:water',
+        amount: 50,
       },
-      {
-        tag: 'forge:bitumen',
-        min: 0.1,
-        max: 0.2,
+      inputs: [
+        {
+          tag: 'forge:gravel',
+          min: 0.4,
+          max: 0.6,
+        },
+        {
+          tag: 'forge:sand',
+          min: 0.2,
+          max: 0.3,
+        },
+        {
+          tag: 'forge:bitumen',
+          min: 0.1,
+          max: 0.2,
+        },
+        {
+          id: 'rankine:black_dacite',
+          min: 0.1,
+          max: 0.2,
+        },
+      ],
+      result: {item: 'rankine:blue_asphalt'},
+    })
+    .id('inconvenient:mixing_barrel_blue_asphalt');
+  event
+    .custom({
+      type: 'rankine:mixing',
+      mixTime: 100,
+      matScale: 1,
+      ingredientTotal: 4,
+      fluidInput: {
+        fluid: 'minecraft:water',
+        amount: 50,
       },
-    ],
-    result: {item: 'rankine:asphalt'},
-  });
-  event.custom({
-    type: 'rankine:mixing',
-    mixTime: 100,
-    matScale: 1,
-    ingredientTotal: 4,
-    fluidInput: {
-      fluid: 'minecraft:water',
-      amount: 50,
-    },
-    inputs: [
-      {
-        tag: 'forge:gravel',
-        min: 0.4,
-        max: 0.6,
+      inputs: [
+        {
+          tag: 'forge:gravel',
+          min: 0.4,
+          max: 0.6,
+        },
+        {
+          tag: 'forge:sand',
+          min: 0.2,
+          max: 0.3,
+        },
+        {
+          tag: 'forge:bitumen',
+          min: 0.1,
+          max: 0.2,
+        },
+        {
+          id: 'rankine:black_marble',
+          min: 0.1,
+          max: 0.2,
+        },
+      ],
+      result: {item: 'rankine:dark_gray_asphalt'},
+    })
+    .id('inconvenient:mixing_barrel_dark_gray_asphalt');
+  event
+    .custom({
+      type: 'rankine:mixing',
+      mixTime: 100,
+      matScale: 1,
+      ingredientTotal: 4,
+      fluidInput: {
+        fluid: 'minecraft:water',
+        amount: 50,
       },
-      {
-        tag: 'forge:sand',
-        min: 0.2,
-        max: 0.3,
+      inputs: [
+        {
+          tag: 'forge:gravel',
+          min: 0.4,
+          max: 0.6,
+        },
+        {
+          tag: 'forge:sand',
+          min: 0.2,
+          max: 0.3,
+        },
+        {
+          tag: 'forge:bitumen',
+          min: 0.1,
+          max: 0.2,
+        },
+        {
+          tag: 'forge:stones/andesite',
+          min: 0.1,
+          max: 0.2,
+        },
+      ],
+      result: {item: 'rankine:gray_asphalt'},
+    })
+    .id('inconvenient:mixing_barrel_gray_asphalt');
+  event
+    .custom({
+      type: 'rankine:mixing',
+      mixTime: 100,
+      matScale: 1,
+      ingredientTotal: 4,
+      fluidInput: {
+        fluid: 'minecraft:water',
+        amount: 50,
       },
-      {
-        tag: 'forge:bitumen',
-        min: 0.1,
-        max: 0.2,
+      inputs: [
+        {
+          tag: 'forge:gravel',
+          min: 0.4,
+          max: 0.6,
+        },
+        {
+          tag: 'forge:sand',
+          min: 0.2,
+          max: 0.3,
+        },
+        {
+          tag: 'forge:bitumen',
+          min: 0.1,
+          max: 0.2,
+        },
+        {
+          tag: 'forge:stones/peridotite',
+          min: 0.1,
+          max: 0.2,
+        },
+      ],
+      result: {item: 'rankine:green_asphalt'},
+    })
+    .id('inconvenient:mixing_barrel_green_asphalt');
+  event
+    .custom({
+      type: 'rankine:mixing',
+      mixTime: 100,
+      matScale: 1,
+      ingredientTotal: 4,
+      fluidInput: {
+        fluid: 'minecraft:water',
+        amount: 50,
       },
-      {
-        id: 'rankine:black_dacite',
-        min: 0.1,
-        max: 0.2,
-      },
-    ],
-    result: {item: 'rankine:blue_asphalt'},
-  });
-  event.custom({
-    type: 'rankine:mixing',
-    mixTime: 100,
-    matScale: 1,
-    ingredientTotal: 4,
-    fluidInput: {
-      fluid: 'minecraft:water',
-      amount: 50,
-    },
-    inputs: [
-      {
-        tag: 'forge:gravel',
-        min: 0.4,
-        max: 0.6,
-      },
-      {
-        tag: 'forge:sand',
-        min: 0.2,
-        max: 0.3,
-      },
-      {
-        tag: 'forge:bitumen',
-        min: 0.1,
-        max: 0.2,
-      },
-      {
-        id: 'rankine:black_marble',
-        min: 0.1,
-        max: 0.2,
-      },
-    ],
-    result: {item: 'rankine:dark_gray_asphalt'},
-  });
-  event.custom({
-    type: 'rankine:mixing',
-    mixTime: 100,
-    matScale: 1,
-    ingredientTotal: 4,
-    fluidInput: {
-      fluid: 'minecraft:water',
-      amount: 50,
-    },
-    inputs: [
-      {
-        tag: 'forge:gravel',
-        min: 0.4,
-        max: 0.6,
-      },
-      {
-        tag: 'forge:sand',
-        min: 0.2,
-        max: 0.3,
-      },
-      {
-        tag: 'forge:bitumen',
-        min: 0.1,
-        max: 0.2,
-      },
-      {
-        tag: 'forge:stones/andesite',
-        min: 0.1,
-        max: 0.2,
-      },
-    ],
-    result: {item: 'rankine:gray_asphalt'},
-  });
-  event.custom({
-    type: 'rankine:mixing',
-    mixTime: 100,
-    matScale: 1,
-    ingredientTotal: 4,
-    fluidInput: {
-      fluid: 'minecraft:water',
-      amount: 50,
-    },
-    inputs: [
-      {
-        tag: 'forge:gravel',
-        min: 0.4,
-        max: 0.6,
-      },
-      {
-        tag: 'forge:sand',
-        min: 0.2,
-        max: 0.3,
-      },
-      {
-        tag: 'forge:bitumen',
-        min: 0.1,
-        max: 0.2,
-      },
-      {
-        tag: 'forge:stones/peridotite',
-        min: 0.1,
-        max: 0.2,
-      },
-    ],
-    result: {item: 'rankine:green_asphalt'},
-  });
-  event.custom({
-    type: 'rankine:mixing',
-    mixTime: 100,
-    matScale: 1,
-    ingredientTotal: 4,
-    fluidInput: {
-      fluid: 'minecraft:water',
-      amount: 50,
-    },
-    inputs: [
-      {
-        tag: 'forge:gravel',
-        min: 0.4,
-        max: 0.6,
-      },
-      {
-        tag: 'forge:sand',
-        min: 0.2,
-        max: 0.3,
-      },
-      {
-        tag: 'forge:bitumen',
-        min: 0.1,
-        max: 0.2,
-      },
-      {
-        tag: 'forge:stones/granite',
-        min: 0.1,
-        max: 0.2,
-      },
-    ],
-    result: {item: 'rankine:red_asphalt'},
-  });
-
-  setSideRecipes('chapter_5_2', []);
+      inputs: [
+        {
+          tag: 'forge:gravel',
+          min: 0.4,
+          max: 0.6,
+        },
+        {
+          tag: 'forge:sand',
+          min: 0.2,
+          max: 0.3,
+        },
+        {
+          tag: 'forge:bitumen',
+          min: 0.1,
+          max: 0.2,
+        },
+        {
+          tag: 'forge:stones/granite',
+          min: 0.1,
+          max: 0.2,
+        },
+      ],
+      result: {item: 'rankine:red_asphalt'},
+    })
+    .id('inconvenient:mixing_barrel_red_asphalt');
 });

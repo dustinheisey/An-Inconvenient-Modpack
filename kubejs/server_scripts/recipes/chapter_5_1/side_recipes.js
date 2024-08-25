@@ -17,7 +17,7 @@ onEvent('recipes', event => {
                 'minecraft:book',
                 'croptopia:knife',
               ])
-              .stage('chapter_5_1');
+              .id('inconvenient:shapeless_croptopia_guide');
 
             // industrial foregoing manual
             event
@@ -28,7 +28,7 @@ onEvent('recipes', event => {
                 ),
                 ['minecraft:book', 'industrialforegoing:dryrubber']
               )
-              .stage('chapter_5_1');
+              .id('inconvenient:shapeless_industrial_foregoing');
 
             // big book of bees
 
@@ -57,7 +57,7 @@ onEvent('recipes', event => {
                 b: 'minecraft:leather',
                 c: `kubejs:bumblezone_lost_page`,
               })
-              .stage('chapter_5_1');
+              .id('inconvenient:shaped_bumblezone_lost_story');
           },
         },
         {
@@ -187,17 +187,19 @@ onEvent('recipes', event => {
     },
   ]);
 
-  event.custom({
-    type: 'bloodmagic:altar',
-    output: {
-      item: 'bloodmagic:archmagebloodorb',
-    },
-    input: {
-      item: 'bloodmagic:dungeon_metal',
-    },
-    altarSyphon: 10000000,
-    upgradeLevel: 4,
-    consumptionRate: 1500,
-    drainRate: 1500,
-  });
+  event
+    .custom({
+      type: 'bloodmagic:altar',
+      output: {
+        item: 'bloodmagic:archmagebloodorb',
+      },
+      input: {
+        item: 'bloodmagic:dungeon_metal',
+      },
+      altarSyphon: 10000000,
+      upgradeLevel: 4,
+      consumptionRate: 1500,
+      drainRate: 1500,
+    })
+    .id('inconvenient:altar_archmagebloodorb');
 });

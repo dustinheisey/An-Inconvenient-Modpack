@@ -2,29 +2,31 @@ onEvent('recipes', event => {
   setMilestoneRecipes({
     id: 'corrupted_resonance',
     recipe: () => {
-      event.custom({
-        type: 'malum:spirit_infusion',
-        input: {item: 'minecraft:nether_star'},
-        output: {item: 'malum:corrupted_resonance'},
-        extra_items: [
-          {item: 'malum:chunk_of_brilliance', count: 32},
-          {item: 'undergarden:regalium_crystal', count: 32},
-          {item: 'create:powdered_obsidian', count: 32},
-          {item: 'malum:processed_soulstone', count: 32},
-          {item: 'malum:hex_ash', count: 32},
-        ],
-        spirits: [
-          {
-            type: 'arcane',
-            count: 32,
-          },
-          {type: 'wicked', count: 32},
-          {type: 'infernal', count: 32},
-          {type: 'aerial', count: 32},
-          {type: 'earthen', count: 32},
-          {type: 'aqueous', count: 32},
-        ],
-      });
+      event
+        .custom({
+          type: 'malum:spirit_infusion',
+          input: {item: 'minecraft:nether_star'},
+          output: {item: 'malum:corrupted_resonance'},
+          extra_items: [
+            {item: 'malum:chunk_of_brilliance', count: 32},
+            {item: 'undergarden:regalium_crystal', count: 32},
+            {item: 'create:powdered_obsidian', count: 32},
+            {item: 'malum:processed_soulstone', count: 32},
+            {item: 'malum:hex_ash', count: 32},
+          ],
+          spirits: [
+            {
+              type: 'arcane',
+              count: 32,
+            },
+            {type: 'wicked', count: 32},
+            {type: 'infernal', count: 32},
+            {type: 'aerial', count: 32},
+            {type: 'earthen', count: 32},
+            {type: 'aqueous', count: 32},
+          ],
+        })
+        .id('inconvenient:spirit_infusion_corrupted_resonance');
     },
     children: [
       {id: 'nether_star', recipe: () => {}, children: []},
@@ -45,7 +47,9 @@ onEvent('recipes', event => {
       {
         id: 'processed_soulstone',
         recipe: () => {
-          event.smelting('malum:raw_soulstone', 'malum:processed_soulstone');
+          event
+            .smelting('malum:raw_soulstone', 'malum:processed_soulstone')
+            .id('inconvenient:smelting_processed_soulstone');
         },
         children: [
           {
