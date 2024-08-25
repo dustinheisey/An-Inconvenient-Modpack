@@ -3,26 +3,32 @@ onEvent('recipes', event => {
     output: ['naturesaura:sky_ingot'],
     type: 'naturesaura:offering',
   });
-  event.custom({
-    type: 'naturesaura:offering',
-    input: {item: 'botania:manasteel_ingot'},
-    start_item: {item: 'naturesaura:calling_spirit'},
-    output: {item: 'naturesaura:sky_ingot'},
-  });
+  event
+    .custom({
+      type: 'naturesaura:offering',
+      input: {item: 'botania:manasteel_ingot'},
+      start_item: {item: 'naturesaura:calling_spirit'},
+      output: {item: 'naturesaura:sky_ingot'},
+    })
+    .id('inconvenient:offering_sky_ingot');
 
-  event.custom({
-    type: 'botania:orechid',
-    input: 'rankine:asphalt',
-    output: {type: 'block', block: 'minecraft:tuff'},
-    weight: 67415,
-  });
+  event
+    .custom({
+      type: 'botania:orechid',
+      input: 'rankine:asphalt',
+      output: {type: 'block', block: 'minecraft:tuff'},
+      weight: 67415,
+    })
+    .id('inconvenient:orechid_tuff');
 
-  event.custom({
-    type: 'botania:orechid_ignem',
-    input: 'rankine:red_asphalt',
-    output: {type: 'block', block: 'rankine:komatiitic_tuff'},
-    weight: 3635,
-  });
+  event
+    .custom({
+      type: 'botania:orechid_ignem',
+      input: 'rankine:red_asphalt',
+      output: {type: 'block', block: 'rankine:komatiitic_tuff'},
+      weight: 3635,
+    })
+    .id('inconvenient:orechid_ignem_komatiitic_tuff');
   // event.custom({
   //   type: 'bloodmagic:altar',
   //   input: {
@@ -35,110 +41,126 @@ onEvent('recipes', event => {
   //   output: {
   //     item: 'bloodsmeltery:bloodbrass_ingot',
   //   },
-  // });
+  // }).id('inconvenient:altar_bloodbrass_ingot');
 
-  event.custom({
-    type: 'immersiveengineering:fermenter',
-    fluid: {
-      fluid: 'kubejs:antibiotics',
-      amount: 250,
-    },
-    input: {
-      tag: 'forge:mushrooms',
-    },
-    energy: 6400,
-  });
+  event
+    .custom({
+      type: 'immersiveengineering:fermenter',
+      fluid: {
+        fluid: 'kubejs:antibiotics',
+        amount: 250,
+      },
+      input: {
+        tag: 'forge:mushrooms',
+      },
+      energy: 6400,
+    })
+    .id('inconvenient:fermenter_antibiotics');
 
-  event.shaped('naturesaura:calling_spirit', ['aba', 'cde', 'afa'], {
-    a: 'bloodmagic:infusedslate',
-    b: Item.of(
-      'naturesaura:aura_bottle',
-      '{stored_type:"naturesaura:overworld"}'
-    ),
-    c: Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'),
-    d: '#botania:runes',
-    e: Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:nether"}'),
-    f: Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:other"}'),
-  });
+  event
+    .shaped('naturesaura:calling_spirit', ['aba', 'cde', 'afa'], {
+      a: 'bloodmagic:infusedslate',
+      b: Item.of(
+        'naturesaura:aura_bottle',
+        '{stored_type:"naturesaura:overworld"}'
+      ),
+      c: Item.of('naturesaura:aura_bottle', '{stored_type:"naturesaura:end"}'),
+      d: '#botania:runes',
+      e: Item.of(
+        'naturesaura:aura_bottle',
+        '{stored_type:"naturesaura:nether"}'
+      ),
+      f: Item.of(
+        'naturesaura:aura_bottle',
+        '{stored_type:"naturesaura:other"}'
+      ),
+    })
+    .id('inconvenient:shaped_calling_spirit');
 
-  event.custom({
-    type: 'create:mechanical_crafting',
-    result: {item: 'naturesaura:offering_table'},
-    pattern: ['aa aa', ' aaa ', ' bcd ', ' efe ', 'eegee'],
-    key: {
-      a: 'naturesaura:infused_stone',
-      b: 'naturesaura:token_joy',
-      c: 'naturesaura:token_sorrow',
-      d: 'naturesaura:token_fear',
-      e: 'naturesaura:tainted_gold',
-      f: 'naturesaura:token_anger',
-      g: 'botania:rune_earth',
-    },
-  });
+  event
+    .custom({
+      type: 'create:mechanical_crafting',
+      result: {item: 'naturesaura:offering_table'},
+      pattern: ['aa aa', ' aaa ', ' bcd ', ' efe ', 'eegee'],
+      key: {
+        a: 'naturesaura:infused_stone',
+        b: 'naturesaura:token_joy',
+        c: 'naturesaura:token_sorrow',
+        d: 'naturesaura:token_fear',
+        e: 'naturesaura:tainted_gold',
+        f: 'naturesaura:token_anger',
+        g: 'botania:rune_earth',
+      },
+    })
+    .id('inconvenient:mechanical_offering_table');
 
-  event.custom({
-    type: 'rankine:crushing',
-    input: {
-      item: 'minecraft:tuff',
-    },
-    type: 'rankine:crushing',
-    guaranteed: [
-      {
-        weight: 20,
-        remove: false,
+  event
+    .custom({
+      type: 'rankine:crushing',
+      input: {
+        item: 'minecraft:tuff',
       },
-      {
-        item: 'minecraft:cobblestone',
-        weight: 80,
-      },
-      {
-        item: 'minecraft:cobbled_deepslate',
-        weight: 80,
-      },
-      {
-        item: 'rankine:calcium_chloride',
-        weight: 10,
-        remove: false,
-      },
-      {
-        item: 'rankine:calcite',
-        weight: 8,
-        remove: false,
-      },
-      {
-        item: 'minecraft:quartz',
-        weight: 2,
-        remove: false,
-      },
-    ],
-  });
+      type: 'rankine:crushing',
+      guaranteed: [
+        {
+          weight: 20,
+          remove: false,
+        },
+        {
+          item: 'minecraft:cobblestone',
+          weight: 80,
+        },
+        {
+          item: 'minecraft:cobbled_deepslate',
+          weight: 80,
+        },
+        {
+          item: 'rankine:calcium_chloride',
+          weight: 10,
+          remove: false,
+        },
+        {
+          item: 'rankine:calcite',
+          weight: 8,
+          remove: false,
+        },
+        {
+          item: 'minecraft:quartz',
+          weight: 2,
+          remove: false,
+        },
+      ],
+    })
+    .id('inconvenient:crushing_tuff');
 
-  event.custom({
-    type: 'rankine:crushing',
-    input: {
-      item: 'rankine:komatiitic_tuff',
-    },
-    type: 'rankine:crushing',
-    guaranteed: [
-      {
-        weight: 20,
-        remove: false,
+  event
+    .custom({
+      type: 'rankine:crushing',
+      input: {
+        item: 'rankine:komatiitic_tuff',
       },
-      {
-        item: 'rankine:komatiite',
-        weight: 80,
-      },
-      {
-        item: 'rankine:greenschist',
-        weight: 80,
-      },
-      {
-        item: 'rankine:phosphorus',
-        weight: 10,
-        remove: false,
-      },
-    ],
-  });
+      type: 'rankine:crushing',
+      guaranteed: [
+        {
+          weight: 20,
+          remove: false,
+        },
+        {
+          item: 'rankine:komatiite',
+          weight: 80,
+        },
+        {
+          item: 'rankine:greenschist',
+          weight: 80,
+        },
+        {
+          item: 'rankine:phosphorus',
+          weight: 10,
+          remove: false,
+        },
+      ],
+    })
+    .id('inconvenient:crushing_komatiitic_tuff');
 
   // {
   //     input: "rankine:dark_gray_asphalt",
@@ -156,15 +178,17 @@ onEvent('recipes', event => {
   setMilestoneRecipes({
     id: 'nutrient_paste',
     recipe: () => {
-      event.recipes.create.mixing('biomancy:nutrient_paste', [
-        'kubejs:ground_miracle_meat',
-        'kubejs:probiotics',
-        'kubejs:miracle_thickeners',
-        'kubejs:miracle_carbohydrates',
-        Fluid.of('kubejs:miracle_oil', 1000),
-        'kubejs:fiber',
-        'kubejs:miracle_spice_mix',
-      ]);
+      event.recipes.create
+        .mixing('biomancy:nutrient_paste', [
+          'kubejs:ground_miracle_meat',
+          'kubejs:probiotics',
+          'kubejs:miracle_thickeners',
+          'kubejs:miracle_carbohydrates',
+          Fluid.of('kubejs:miracle_oil', 1000),
+          'kubejs:fiber',
+          'kubejs:miracle_spice_mix',
+        ])
+        .id('inconvenient:mixing_nutrient_paste');
     },
     children: [
       // protein - miracle ground meat
@@ -183,114 +207,144 @@ onEvent('recipes', event => {
           {
             id: 'ground_miracle_beef',
             recipe: () => {
-              event.recipes.create.crushing(
-                'kubejs:ground_miracle_beef',
-                'kubejs:cubed_miracle_beef'
-              );
+              event.recipes.create
+                .crushing(
+                  'kubejs:ground_miracle_beef',
+                  'kubejs:cubed_miracle_beef'
+                )
+                .id('inconvenient:crushing_wheel_ground_miracle_beef');
             },
             children: [
               {
                 id: 'cubed_miracle_beef',
                 recipe: () => {
-                  event.recipes.create.crushing(
-                    'kubejs:cubed_miracle_beef',
-                    'kubejs:trimmed_miracle_beef'
-                  );
+                  event.recipes.create
+                    .crushing(
+                      'kubejs:cubed_miracle_beef',
+                      'kubejs:trimmed_miracle_beef'
+                    )
+                    .id('inconvenient:crushing_wheel_cubed_miracle_beef');
                 },
                 children: [
                   {
                     id: 'trimmed_miracle_beef',
                     recipe: () => {
-                      event.custom({
-                        type: 'farmersdelight:cutting',
-                        ingredients: [{item: 'kubejs:prime_miracle_beef'}],
-                        tool: {tag: 'forge:tools/knives'},
-                        result: [{item: 'kubejs:trimmed_miracle_beef'}],
-                      });
+                      event
+                        .custom({
+                          type: 'farmersdelight:cutting',
+                          ingredients: [{item: 'kubejs:prime_miracle_beef'}],
+                          tool: {tag: 'forge:tools/knives'},
+                          result: [{item: 'kubejs:trimmed_miracle_beef'}],
+                        })
+                        .id('inconvenient:cutting_trimmed_miracle_beef');
                     },
                     children: [
                       {
                         id: 'prime_miracle_beef',
                         recipe: () => {
-                          event.recipes.create.crushing(
-                            [
-                              Item.of('kubejs:prime_miracle_beef').withChance(
-                                0.01
-                              ),
-                              Item.of(
-                                'kubejs:subprime_miracle_beef'
-                              ).withChance(0.2),
-                              Item.of('kubejs:secondary_miracle_beef'),
-                            ],
-                            'kubejs:aged_miracle_cow_carcass'
-                          );
+                          event.recipes.create
+                            .crushing(
+                              [
+                                Item.of('kubejs:prime_miracle_beef').withChance(
+                                  0.01
+                                ),
+                                Item.of(
+                                  'kubejs:subprime_miracle_beef'
+                                ).withChance(0.2),
+                                Item.of('kubejs:secondary_miracle_beef'),
+                              ],
+                              'kubejs:aged_miracle_cow_carcass'
+                            )
+                            .id(
+                              'inconvenient:crushing_wheel_prime_miracle_beef'
+                            );
                         },
                         children: [
                           {
                             id: 'aged_miracle_cow_carcass',
                             recipe: () => {
-                              event.custom({
-                                type: 'biomancy:decomposing',
-                                ingredient: {
-                                  item: 'kubejs:washed_miracle_cow_carcass',
-                                },
-                                results: [
-                                  {
-                                    item: 'kubejs:aged_miracle_cow_carcass',
-                                    countRange: {
-                                      type: 'constant',
-                                      value: 1,
-                                    },
+                              event
+                                .custom({
+                                  type: 'biomancy:decomposing',
+                                  ingredient: {
+                                    item: 'kubejs:washed_miracle_cow_carcass',
                                   },
-                                ],
-                                processingTime: 6000,
-                                nutrientsCost: 32,
-                              });
+                                  results: [
+                                    {
+                                      item: 'kubejs:aged_miracle_cow_carcass',
+                                      countRange: {
+                                        type: 'constant',
+                                        value: 1,
+                                      },
+                                    },
+                                  ],
+                                  processingTime: 6000,
+                                  nutrientsCost: 32,
+                                })
+                                .id(
+                                  'inconvenient:decomposing_aged_miracle_cow_carcass'
+                                );
                             },
                             children: [
                               {
                                 id: 'washed_miracle_cow_carcass',
                                 recipe: () => {
-                                  event.recipes.createSplashing(
-                                    'kubejs:washed_miracle_cow_carcass',
-                                    'kubejs:gutted_miracle_cow_carcass'
-                                  );
+                                  event.recipes
+                                    .createSplashing(
+                                      'kubejs:washed_miracle_cow_carcass',
+                                      'kubejs:gutted_miracle_cow_carcass'
+                                    )
+                                    .id(
+                                      'inconvenient:spalshing_washed_miracle_cow_carcass'
+                                    );
                                 },
                                 children: [
                                   {
                                     id: 'gutted_miracle_cow_carcass',
                                     recipe: () => {
-                                      event.recipes.create.deploying(
-                                        'kubejs:gutted_miracle_cow_carcass',
-                                        [
-                                          'kubejs:skinned_miracle_cow_carcass',
-                                          'kubejs:gut_knife',
-                                        ]
-                                      );
+                                      event.recipes.create
+                                        .deploying(
+                                          'kubejs:gutted_miracle_cow_carcass',
+                                          [
+                                            'kubejs:skinned_miracle_cow_carcass',
+                                            'kubejs:gut_knife',
+                                          ]
+                                        )
+                                        .id(
+                                          'inconvenient:deploying_gutted_miracle_cow_carcass'
+                                        );
                                     },
                                     children: [
                                       {
                                         id: 'skinned_miracle_cow_carcass',
                                         recipe: () => {
-                                          event.recipes.create.deploying(
-                                            'kubejs:skinned_miracle_cow_carcass',
-                                            [
-                                              'kubejs:drained_miracle_cow_carcass',
-                                              'kubejs:skinning_knife',
-                                            ]
-                                          );
+                                          event.recipes.create
+                                            .deploying(
+                                              'kubejs:skinned_miracle_cow_carcass',
+                                              [
+                                                'kubejs:drained_miracle_cow_carcass',
+                                                'kubejs:skinning_knife',
+                                              ]
+                                            )
+                                            .id(
+                                              'inconvenient:deploying_skinned_miracle_cow_carcass'
+                                            );
                                         },
                                         children: [
                                           {
                                             id: 'drained_miracle_cow_carcass',
                                             recipe: () => {
-                                              event.recipes.create.deploying(
-                                                'kubejs:drained_miracle_cow_carcass',
-                                                [
-                                                  'kubejs:miracle_cow_carcass',
-                                                  'kubejs:butcher_knife',
-                                                ]
-                                              );
+                                              event.recipes.create
+                                                .deploying(
+                                                  'kubejs:drained_miracle_cow_carcass',
+                                                  [
+                                                    'kubejs:miracle_cow_carcass',
+                                                    'kubejs:butcher_knife',
+                                                  ]
+                                                )
+                                                .id(
+                                                  'inconvenient:deploying_drained_miracle_cow_carcass'
+                                                );
                                             },
                                             children: [
                                               {
@@ -302,36 +356,40 @@ onEvent('recipes', event => {
                                                   {
                                                     id: 'miracle_cow',
                                                     recipe: () => {
-                                                      event.custom({
-                                                        type: 'naturesaura:animal_spawner',
-                                                        ingredients: [
-                                                          {
-                                                            item: 'naturesaura:birth_spirit',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:monachopsis_token',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:seasons_rune',
-                                                          },
-                                                          {
-                                                            item: 'bloodmagic:demonslate',
-                                                          },
-                                                          {
-                                                            item: 'bloodmagic:defaultcrystal',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:malignant_dna',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:miracle_feed',
-                                                          },
-                                                        ],
-                                                        entity:
-                                                          'apple_cows:enchanted_golden_apple_cow',
-                                                        aura: 50000,
-                                                        time: 1000,
-                                                      });
+                                                      event
+                                                        .custom({
+                                                          type: 'naturesaura:animal_spawner',
+                                                          ingredients: [
+                                                            {
+                                                              item: 'naturesaura:birth_spirit',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:monachopsis_token',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:seasons_rune',
+                                                            },
+                                                            {
+                                                              item: 'bloodmagic:demonslate',
+                                                            },
+                                                            {
+                                                              item: 'bloodmagic:defaultcrystal',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:malignant_dna',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:miracle_feed',
+                                                            },
+                                                          ],
+                                                          entity:
+                                                            'apple_cows:enchanted_golden_apple_cow',
+                                                          aura: 50000,
+                                                          time: 1000,
+                                                        })
+                                                        .id(
+                                                          'inconvenient:animal_spawner_enchanted_golden_apple_cow'
+                                                        );
                                                     },
                                                     children: [
                                                       {
@@ -369,114 +427,144 @@ onEvent('recipes', event => {
           {
             id: 'ground_high_grade_beef',
             recipe: () => {
-              event.recipes.create.crushing(
-                'kubejs:ground_high_grade_beef',
-                'kubejs:cubed_high_grade_beef'
-              );
+              event.recipes.create
+                .crushing(
+                  'kubejs:ground_high_grade_beef',
+                  'kubejs:cubed_high_grade_beef'
+                )
+                .id('inconvenient:crushing_wheel_ground_high_grade_beef');
             },
             children: [
               {
                 id: 'cubed_high_grade_beef',
                 recipe: () => {
-                  event.recipes.create.crushing(
-                    'kubejs:cubed_high_grade_beef',
-                    'kubejs:trimmed_high_grade_beef'
-                  );
+                  event.recipes.create
+                    .crushing(
+                      'kubejs:cubed_high_grade_beef',
+                      'kubejs:trimmed_high_grade_beef'
+                    )
+                    .id('inconvenient:crushing_wheel_cubed_high_grade_beef');
                 },
                 children: [
                   {
                     id: 'trimmed_high_grade_beef',
                     recipe: () => {
-                      event.custom({
-                        type: 'farmersdelight:cutting',
-                        ingredients: [{item: 'kubejs:prime_high_grade_beef'}],
-                        tool: {tag: 'forge:tools/knives'},
-                        result: [{item: 'kubejs:trimmed_high_grade_beef'}],
-                      });
+                      event
+                        .custom({
+                          type: 'farmersdelight:cutting',
+                          ingredients: [{item: 'kubejs:prime_high_grade_beef'}],
+                          tool: {tag: 'forge:tools/knives'},
+                          result: [{item: 'kubejs:trimmed_high_grade_beef'}],
+                        })
+                        .id('inconvenient:cutting_trimmed_high_grade_beef');
                     },
                     children: [
                       {
                         id: 'prime_high_grade_beef',
                         recipe: () => {
-                          event.recipes.create.crushing(
-                            [
-                              Item.of(
-                                'kubejs:prime_high_grade_beef'
-                              ).withChance(0.01),
-                              Item.of(
-                                'kubejs:subprime_high_grade_beef'
-                              ).withChance(0.2),
-                              Item.of('kubejs:secondary_high_grade_beef'),
-                            ],
-                            'kubejs:aged_high_grade_cow_carcass'
-                          );
+                          event.recipes.create
+                            .crushing(
+                              [
+                                Item.of(
+                                  'kubejs:prime_high_grade_beef'
+                                ).withChance(0.01),
+                                Item.of(
+                                  'kubejs:subprime_high_grade_beef'
+                                ).withChance(0.2),
+                                Item.of('kubejs:secondary_high_grade_beef'),
+                              ],
+                              'kubejs:aged_high_grade_cow_carcass'
+                            )
+                            .id(
+                              'inconvenient:crushing_wheel_prime_high_grade_beef'
+                            );
                         },
                         children: [
                           {
                             id: 'aged_high_grade_cow_carcass',
                             recipe: () => {
-                              event.custom({
-                                type: 'biomancy:decomposing',
-                                ingredient: {
-                                  item: 'kubejs:washed_high_grade_cow_carcass',
-                                },
-                                results: [
-                                  {
-                                    item: 'kubejs:aged_high_grade_cow_carcass',
-                                    countRange: {
-                                      type: 'constant',
-                                      value: 1,
-                                    },
+                              event
+                                .custom({
+                                  type: 'biomancy:decomposing',
+                                  ingredient: {
+                                    item: 'kubejs:washed_high_grade_cow_carcass',
                                   },
-                                ],
-                                processingTime: 6000,
-                                nutrientsCost: 32,
-                              });
+                                  results: [
+                                    {
+                                      item: 'kubejs:aged_high_grade_cow_carcass',
+                                      countRange: {
+                                        type: 'constant',
+                                        value: 1,
+                                      },
+                                    },
+                                  ],
+                                  processingTime: 6000,
+                                  nutrientsCost: 32,
+                                })
+                                .id(
+                                  'inconvenient:decomposing_aged_high_grade_cow_carcass'
+                                );
                             },
                             children: [
                               {
                                 id: 'washed_high_grade_cow_carcass',
                                 recipe: () => {
-                                  event.recipes.createSplashing(
-                                    'kubejs:washed_high_grade_cow_carcass',
-                                    'kubejs:gutted_high_grade_cow_carcass'
-                                  );
+                                  event.recipes
+                                    .createSplashing(
+                                      'kubejs:washed_high_grade_cow_carcass',
+                                      'kubejs:gutted_high_grade_cow_carcass'
+                                    )
+                                    .id(
+                                      'inconvenient:spashing_washed_high_grade_cow_carcass'
+                                    );
                                 },
                                 children: [
                                   {
                                     id: 'gutted_high_grade_cow_carcass',
                                     recipe: () => {
-                                      event.recipes.create.deploying(
-                                        'kubejs:gutted_high_grade_cow_carcass',
-                                        [
-                                          'kubejs:skinned_high_grade_cow_carcass',
-                                          'kubejs:gut_knife',
-                                        ]
-                                      );
+                                      event.recipes.create
+                                        .deploying(
+                                          'kubejs:gutted_high_grade_cow_carcass',
+                                          [
+                                            'kubejs:skinned_high_grade_cow_carcass',
+                                            'kubejs:gut_knife',
+                                          ]
+                                        )
+                                        .id(
+                                          'inconvenient:deploying_gutted_high_grade_cow_carcass'
+                                        );
                                     },
                                     children: [
                                       {
                                         id: 'skinned_high_grade_cow_carcass',
                                         recipe: () => {
-                                          event.recipes.create.deploying(
-                                            'kubejs:skinned_high_grade_cow_carcass',
-                                            [
-                                              'kubejs:drained_high_grade_cow_carcass',
-                                              'kubejs:skinning_knife',
-                                            ]
-                                          );
+                                          event.recipes.create
+                                            .deploying(
+                                              'kubejs:skinned_high_grade_cow_carcass',
+                                              [
+                                                'kubejs:drained_high_grade_cow_carcass',
+                                                'kubejs:skinning_knife',
+                                              ]
+                                            )
+                                            .id(
+                                              'inconvenient:deploying_skinned_high_grade_cow_carcass'
+                                            );
                                         },
                                         children: [
                                           {
                                             id: 'drained_high_grade_cow_carcass',
                                             recipe: () => {
-                                              event.recipes.create.deploying(
-                                                'kubejs:drained_high_grade_cow_carcass',
-                                                [
-                                                  'kubejs:high_grade_cow_carcass',
-                                                  'kubejs:butcher_knife',
-                                                ]
-                                              );
+                                              event.recipes.create
+                                                .deploying(
+                                                  'kubejs:drained_high_grade_cow_carcass',
+                                                  [
+                                                    'kubejs:high_grade_cow_carcass',
+                                                    'kubejs:butcher_knife',
+                                                  ]
+                                                )
+                                                .id(
+                                                  'inconvenient:deploying_drained_high_grade_cow_carcass'
+                                                );
                                             },
                                             children: [
                                               {
@@ -488,36 +576,40 @@ onEvent('recipes', event => {
                                                   {
                                                     id: 'high_grade_cow',
                                                     recipe: () => {
-                                                      event.custom({
-                                                        type: 'naturesaura:animal_spawner',
-                                                        ingredients: [
-                                                          {
-                                                            item: 'naturesaura:birth_spirit',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:monachopsis_token',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:seasons_rune',
-                                                          },
-                                                          {
-                                                            item: 'bloodmagic:demonslate',
-                                                          },
-                                                          {
-                                                            item: 'bloodmagic:defaultcrystal',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:primal_dna',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:high_grade_feed',
-                                                          },
-                                                        ],
-                                                        entity:
-                                                          'apple_cows:golden_apple_cow',
-                                                        aura: 50000,
-                                                        time: 1000,
-                                                      });
+                                                      event
+                                                        .custom({
+                                                          type: 'naturesaura:animal_spawner',
+                                                          ingredients: [
+                                                            {
+                                                              item: 'naturesaura:birth_spirit',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:monachopsis_token',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:seasons_rune',
+                                                            },
+                                                            {
+                                                              item: 'bloodmagic:demonslate',
+                                                            },
+                                                            {
+                                                              item: 'bloodmagic:defaultcrystal',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:primal_dna',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:high_grade_feed',
+                                                            },
+                                                          ],
+                                                          entity:
+                                                            'apple_cows:golden_apple_cow',
+                                                          aura: 50000,
+                                                          time: 1000,
+                                                        })
+                                                        .id(
+                                                          'inconvenient:animal_spawner_high_grade_cow'
+                                                        );
                                                     },
                                                     children: [
                                                       {
@@ -555,114 +647,146 @@ onEvent('recipes', event => {
           {
             id: 'ground_medium_grade_beef',
             recipe: () => {
-              event.recipes.create.crushing(
-                'kubejs:ground_medium_grade_beef',
-                'kubejs:cubed_medium_grade_beef'
-              );
+              event.recipes.create
+                .crushing(
+                  'kubejs:ground_medium_grade_beef',
+                  'kubejs:cubed_medium_grade_beef'
+                )
+                .id('inconvenient:crushing_wheel_ground_medium_grade_beef');
             },
             children: [
               {
                 id: 'cubed_medium_grade_beef',
                 recipe: () => {
-                  event.recipes.create.crushing(
-                    'kubejs:cubed_medium_grade_beef',
-                    'kubejs:trimmed_medium_grade_beef'
-                  );
+                  event.recipes.create
+                    .crushing(
+                      'kubejs:cubed_medium_grade_beef',
+                      'kubejs:trimmed_medium_grade_beef'
+                    )
+                    .id('inconvenient:crushing_wheel_cubed_medium_grade_beef');
                 },
                 children: [
                   {
                     id: 'trimmed_medium_grade_beef',
                     recipe: () => {
-                      event.custom({
-                        type: 'farmersdelight:cutting',
-                        ingredients: [{item: 'kubejs:prime_medium_grade_beef'}],
-                        tool: {tag: 'forge:tools/knives'},
-                        result: [{item: 'kubejs:trimmed_medium_grade_beef'}],
-                      });
+                      event
+                        .custom({
+                          type: 'farmersdelight:cutting',
+                          ingredients: [
+                            {item: 'kubejs:prime_medium_grade_beef'},
+                          ],
+                          tool: {tag: 'forge:tools/knives'},
+                          result: [{item: 'kubejs:trimmed_medium_grade_beef'}],
+                        })
+                        .id('inconvenient:cutting_trimmed_medium_grade_beef');
                     },
                     children: [
                       {
                         id: 'prime_medium_grade_beef',
                         recipe: () => {
-                          event.recipes.create.crushing(
-                            [
-                              Item.of(
-                                'kubejs:prime_medium_grade_beef'
-                              ).withChance(0.01),
-                              Item.of(
-                                'kubejs:subprime_medium_grade_beef'
-                              ).withChance(0.2),
-                              Item.of('kubejs:secondary_medium_grade_beef'),
-                            ],
-                            'kubejs:aged_medium_grade_cow_carcass'
-                          );
+                          event.recipes.create
+                            .crushing(
+                              [
+                                Item.of(
+                                  'kubejs:prime_medium_grade_beef'
+                                ).withChance(0.01),
+                                Item.of(
+                                  'kubejs:subprime_medium_grade_beef'
+                                ).withChance(0.2),
+                                Item.of('kubejs:secondary_medium_grade_beef'),
+                              ],
+                              'kubejs:aged_medium_grade_cow_carcass'
+                            )
+                            .id(
+                              'inconvenient:crushing_wheel_prime_medium_grade_beef'
+                            );
                         },
                         children: [
                           {
                             id: 'aged_medium_grade_cow_carcass',
                             recipe: () => {
-                              event.custom({
-                                type: 'biomancy:decomposing',
-                                ingredient: {
-                                  item: 'kubejs:washed_medium_grade_cow_carcass',
-                                },
-                                results: [
-                                  {
-                                    item: 'kubejs:aged_medium_grade_cow_carcass',
-                                    countRange: {
-                                      type: 'constant',
-                                      value: 1,
-                                    },
+                              event
+                                .custom({
+                                  type: 'biomancy:decomposing',
+                                  ingredient: {
+                                    item: 'kubejs:washed_medium_grade_cow_carcass',
                                   },
-                                ],
-                                processingTime: 6000,
-                                nutrientsCost: 32,
-                              });
+                                  results: [
+                                    {
+                                      item: 'kubejs:aged_medium_grade_cow_carcass',
+                                      countRange: {
+                                        type: 'constant',
+                                        value: 1,
+                                      },
+                                    },
+                                  ],
+                                  processingTime: 6000,
+                                  nutrientsCost: 32,
+                                })
+                                .id(
+                                  'inconvenient:decomposing_aged_medium_grade_cow_carcass'
+                                );
                             },
                             children: [
                               {
                                 id: 'washed_medium_grade_cow_carcass',
                                 recipe: () => {
-                                  event.recipes.createSplashing(
-                                    'kubejs:washed_medium_grade_cow_carcass',
-                                    'kubejs:gutted_medium_grade_cow_carcass'
-                                  );
+                                  event.recipes
+                                    .createSplashing(
+                                      'kubejs:washed_medium_grade_cow_carcass',
+                                      'kubejs:gutted_medium_grade_cow_carcass'
+                                    )
+                                    .id(
+                                      'inconvenient:splashing_washed_medium_grade_cow_carcass'
+                                    );
                                 },
                                 children: [
                                   {
                                     id: 'gutted_medium_grade_cow_carcass',
                                     recipe: () => {
-                                      event.recipes.create.deploying(
-                                        'kubejs:gutted_medium_grade_cow_carcass',
-                                        [
-                                          'kubejs:skinned_medium_grade_cow_carcass',
-                                          'kubejs:gut_knife',
-                                        ]
-                                      );
+                                      event.recipes.create
+                                        .deploying(
+                                          'kubejs:gutted_medium_grade_cow_carcass',
+                                          [
+                                            'kubejs:skinned_medium_grade_cow_carcass',
+                                            'kubejs:gut_knife',
+                                          ]
+                                        )
+                                        .id(
+                                          'inconvenient:deploying_gutted_medium_grade_cow_carcass'
+                                        );
                                     },
                                     children: [
                                       {
                                         id: 'skinned_medium_grade_cow_carcass',
                                         recipe: () => {
-                                          event.recipes.create.deploying(
-                                            'kubejs:skinned_medium_grade_cow_carcass',
-                                            [
-                                              'kubejs:drained_medium_grade_cow_carcass',
-                                              'kubejs:skinning_knife',
-                                            ]
-                                          );
+                                          event.recipes.create
+                                            .deploying(
+                                              'kubejs:skinned_medium_grade_cow_carcass',
+                                              [
+                                                'kubejs:drained_medium_grade_cow_carcass',
+                                                'kubejs:skinning_knife',
+                                              ]
+                                            )
+                                            .id(
+                                              'inconvenient:deploying_skinned_medium_grade_cow_carcass'
+                                            );
                                         },
                                         children: [
                                           {
                                             id: 'drained_medium_grade_cow_carcass',
                                             recipe: () => {
-                                              event.recipes.create.deploying(
-                                                'kubejs:drained_medium_grade_cow_carcass',
-                                                [
-                                                  'kubejs:medium_grade_cow_carcass',
-                                                  'kubejs:butcher_knife',
-                                                ]
-                                              );
+                                              event.recipes.create
+                                                .deploying(
+                                                  'kubejs:drained_medium_grade_cow_carcass',
+                                                  [
+                                                    'kubejs:medium_grade_cow_carcass',
+                                                    'kubejs:butcher_knife',
+                                                  ]
+                                                )
+                                                .id(
+                                                  'inconvenient:deploying_drained_medium_grade_cow_carcass'
+                                                );
                                             },
                                             children: [
                                               {
@@ -674,36 +798,40 @@ onEvent('recipes', event => {
                                                   {
                                                     id: 'medium_grade_cow',
                                                     recipe: () => {
-                                                      event.custom({
-                                                        type: 'naturesaura:animal_spawner',
-                                                        ingredients: [
-                                                          {
-                                                            item: 'naturesaura:birth_spirit',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:monachopsis_token',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:seasons_rune',
-                                                          },
-                                                          {
-                                                            item: 'bloodmagic:demonslate',
-                                                          },
-                                                          {
-                                                            item: 'bloodmagic:defaultcrystal',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:hungry_dna',
-                                                          },
-                                                          {
-                                                            item: 'kubejs:medium_grade_feed',
-                                                          },
-                                                        ],
-                                                        entity:
-                                                          'apple_cows:apple_cow',
-                                                        aura: 50000,
-                                                        time: 1000,
-                                                      });
+                                                      event
+                                                        .custom({
+                                                          type: 'naturesaura:animal_spawner',
+                                                          ingredients: [
+                                                            {
+                                                              item: 'naturesaura:birth_spirit',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:monachopsis_token',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:seasons_rune',
+                                                            },
+                                                            {
+                                                              item: 'bloodmagic:demonslate',
+                                                            },
+                                                            {
+                                                              item: 'bloodmagic:defaultcrystal',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:hungry_dna',
+                                                            },
+                                                            {
+                                                              item: 'kubejs:medium_grade_feed',
+                                                            },
+                                                          ],
+                                                          entity:
+                                                            'apple_cows:apple_cow',
+                                                          aura: 50000,
+                                                          time: 1000,
+                                                        })
+                                                        .id(
+                                                          'inconvenient:animal_spawner_medium_grade_cow'
+                                                        );
                                                     },
                                                     children: [
                                                       {

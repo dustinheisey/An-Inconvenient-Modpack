@@ -37,7 +37,7 @@ onEvent('recipes', event => {
                 b: 'minecraft:leather',
                 c: `kubejs:everbright_lost_page`,
               })
-              .stage('chapter_2');
+              .id('inconvenient:shaped_everbright_lost_story');
           },
         },
         {
@@ -74,27 +74,29 @@ onEvent('recipes', event => {
               'tconstruct:common/materials_and_you',
             ].forEach(id => event.remove({id: id}));
 
-            event.custom({
-              type: 'tconstruct:casting_table',
-              fluid: {name: 'tconstruct:seared_stone', amount: 250},
-              cast: {item: 'farmersdelight:canvas', cast_consumed: true},
-              result: 'tconstruct:mighty_smelting',
-              cooling_time: 100,
-            });
+            event
+              .custom({
+                type: 'tconstruct:casting_table',
+                fluid: {name: 'tconstruct:seared_stone', amount: 250},
+                cast: {item: 'farmersdelight:canvas', cast_consumed: true},
+                result: 'tconstruct:mighty_smelting',
+                cooling_time: 100,
+              })
+              .id('inconvenient:casting_table_mighty_smelting');
 
             event
               .shapeless('tconstruct:puny_smelting', [
                 'farmersdelight:canvas',
                 'kubejs:grout_ball',
               ])
-              .stage('chapter_2');
+              .id('inconvenient:shapeless_puny_smelting');
 
             event
               .shapeless('tconstruct:materials_and_you', [
                 'farmersdelight:canvas',
                 'tconstruct:pattern',
               ])
-              .stage('chapter_2');
+              .id('inconvenient:shapeless_materials_and_you');
 
             event
               .shaped(
@@ -105,7 +107,7 @@ onEvent('recipes', event => {
                 ['ab'],
                 {a: 'farmersdelight:canvas', b: 'naturesaura:gold_leaf'}
               )
-              .stage('chapter_2');
+              .id('inconvenient:shaped_naturesaura_book');
             event
               .shaped(
                 Item.of(
@@ -115,25 +117,25 @@ onEvent('recipes', event => {
                 ['ab'],
                 {a: 'farmersdelight:canvas', b: 'blue_skies:winter_leaves'}
               )
-              .stage('chapter_2');
+              .id('inconvenient:shaped_totempedia');
             event
               .shaped('malum:encyclopedia_arcana', ['ab'], {
                 a: 'farmersdelight:canvas',
                 b: 'malum:holy_sap',
               })
-              .stage('chapter_2');
+              .id('inconvenient:shaped_encyclopedia_arcana');
             event
               .shaped('blue_skies:blue_journal', ['ab'], {
                 a: 'farmersdelight:canvas',
                 b: 'blue_skies:turquoise_stone',
               })
-              .stage('chapter_2');
+              .id('inconvenient:shaped_blue_journal');
             event
               .shaped('occultism:dictionary_of_spirits', ['ab'], {
                 a: 'farmersdelight:canvas',
                 b: 'occultism:datura',
               })
-              .stage('chapter_2');
+              .id('inconvenient:shaped_dictionary_of_spirits');
           },
         },
         {
@@ -204,55 +206,71 @@ onEvent('recipes', event => {
           'architects_palette:calcite_bricks',
           'architects_palette:heavy_stone_bricks',
         ].forEach(id => event.remove({id: id}));
-        event.shaped('2x charcoal_pit:sandy_brick', ['ab', 'ba'], {
-          a: 'charcoal_pit:sandy_brick_item',
-          b: 'rankine:mortar',
-        });
-        event.shaped('4x architects_palette:iron_ore_bricks', ['ab', 'bc'], {
-          a: 'minecraft:iron_ingot',
-          b: 'rankine:mortar',
-          c: 'minecraft:stone_bricks',
-        });
-        event.shaped('2x minecraft:polished_blackstone_bricks', ['ab', 'ba'], {
-          a: 'minecraft:polished_blackstone',
-          b: 'rankine:mortar',
-        });
-        event.shaped('2x architects_palette:heavy_stone_bricks', ['ab', 'ba'], {
-          a: 'minecraft:stone_bricks',
-          b: 'rankine:mortar',
-        });
-        event.shaped('2x architects_palette:myonite_bricks', ['ab', 'ba'], {
-          a: 'architects_palette:myonite',
-          b: 'rankine:mortar',
-        });
-        event.shaped('2x architects_palette:dripstone_bricks', ['ab', 'ba'], {
-          a: 'minecraft:dripstone_block',
-          b: 'rankine:mortar',
-        });
-        event.shaped(
-          '2x architects_palette:heavy_dripstone_bricks',
-          ['ab', 'ba'],
-          {
-            a: 'architects_palette:dripstone_bricks',
+        event
+          .shaped('2x charcoal_pit:sandy_brick', ['ab', 'ba'], {
+            a: 'charcoal_pit:sandy_brick_item',
             b: 'rankine:mortar',
-          }
-        );
-        event.shaped(
-          '2x architects_palette:heavy_calcite_bricks',
-          ['ab', 'ba'],
-          {
+          })
+          .id('inconvenient:shaped_sandy_brick');
+        event
+          .shaped('4x architects_palette:iron_ore_bricks', ['ab', 'bc'], {
+            a: 'minecraft:iron_ingot',
+            b: 'rankine:mortar',
+            c: 'minecraft:stone_bricks',
+          })
+          .id('inconvenient:shaped_iron_ore_bricks');
+        event
+          .shaped('2x minecraft:polished_blackstone_bricks', ['ab', 'ba'], {
+            a: 'minecraft:polished_blackstone',
+            b: 'rankine:mortar',
+          })
+          .id('inconvenient:shaped_polished_blackstone_bricks');
+        event
+          .shaped('2x architects_palette:heavy_stone_bricks', ['ab', 'ba'], {
+            a: 'minecraft:stone_bricks',
+            b: 'rankine:mortar',
+          })
+          .id('inconvenient:shaped_heavy_stone_bricks');
+        event
+          .shaped('2x architects_palette:myonite_bricks', ['ab', 'ba'], {
+            a: 'architects_palette:myonite',
+            b: 'rankine:mortar',
+          })
+          .id('inconvenient:shaped_myonite_bricks');
+        event
+          .shaped('2x architects_palette:dripstone_bricks', ['ab', 'ba'], {
+            a: 'minecraft:dripstone_block',
+            b: 'rankine:mortar',
+          })
+          .id('inconvenient:shaped_dripstone_bricks');
+        event
+          .shaped(
+            '2x architects_palette:heavy_dripstone_bricks',
+            ['ab', 'ba'],
+            {
+              a: 'architects_palette:dripstone_bricks',
+              b: 'rankine:mortar',
+            }
+          )
+          .id('inconvenient:shaped_heavy_dripstone_bricks');
+        event
+          .shaped('2x architects_palette:heavy_calcite_bricks', ['ab', 'ba'], {
             a: 'architects_palette:calcite_bricks',
             b: 'rankine:mortar',
-          }
-        );
-        event.shaped('2x architects_palette:calcite_bricks', ['ab', 'ba'], {
-          a: 'minecraft:calcite',
-          b: 'rankine:mortar',
-        });
-        event.shaped('2x minecraft:deepslate_bricks', ['ab', 'ba'], {
-          a: 'minecraft:polished_deepslate',
-          b: 'rankine:mortar',
-        });
+          })
+          .id('inconvenient:shaped_heavy_calcite_bricks');
+        event
+          .shaped('2x architects_palette:calcite_bricks', ['ab', 'ba'], {
+            a: 'minecraft:calcite',
+            b: 'rankine:mortar',
+          })
+          .id('inconvenient:shaped_calcite_bricks');
+        event
+          .shaped('2x minecraft:deepslate_bricks', ['ab', 'ba'], {
+            a: 'minecraft:polished_deepslate',
+            b: 'rankine:mortar',
+          })
+          .id('inconvenient:shaped_deepslate_bricks');
       },
     },
 
@@ -263,9 +281,11 @@ onEvent('recipes', event => {
         {
           id: 'metal_pipe',
           recipe: () => {
-            event.shaped(`3x rankine:metal_pipe`, ['aaa'], {
-              a: 'tconstruct:amethyst_bronze_ingot',
-            });
+            event
+              .shaped(`3x rankine:metal_pipe`, ['aaa'], {
+                a: 'tconstruct:amethyst_bronze_ingot',
+              })
+              .id('inconvenient:shaped_metal_pipe');
           },
         },
       ],
@@ -276,9 +296,11 @@ onEvent('recipes', event => {
       recipe: () => {
         ['strawgolem:straw_hat'].forEach(id => event.remove({id: id}));
 
-        event.shaped('strawgolem:straw_hat', [' a ', 'aaa'], {
-          a: 'minecraft:hay_block',
-        });
+        event
+          .shaped('strawgolem:straw_hat', [' a ', 'aaa'], {
+            a: 'minecraft:hay_block',
+          })
+          .id('inconvenient:shaped_straw_hat');
       },
       children: [
         {
@@ -287,9 +309,11 @@ onEvent('recipes', event => {
             {
               id: 'shears',
               recipe: () => {
-                event.shaped(`minecraft:shears`, [' a', 'a '], {
-                  a: `rankine:pewter_ingot`,
-                });
+                event
+                  .shaped(`minecraft:shears`, [' a', 'a '], {
+                    a: `rankine:pewter_ingot`,
+                  })
+                  .id('inconvenient:shaped_shears');
               },
             },
           ],
@@ -318,18 +342,22 @@ onEvent('recipes', event => {
                   'immersiveengineering:cloche/wheat',
                 ].forEach(id => event.remove({id: id}));
 
-                event.custom({
-                  type: 'immersiveengineering:cloche',
-                  results: [
-                    {item: 'kubejs:wheat', count: 2},
-                    {item: 'minecraft:wheat_seeds'},
-                  ],
-                  input: {item: 'minecraft:wheat_seeds'},
-                  soil: {tag: 'forge:dirt'},
-                  time: 560,
-                  render: {type: 'stacking', block: 'minecraft:wheat'},
-                });
-                event.shapeless('9x kubejs:wheat', ['minecraft:hay_block']);
+                event
+                  .custom({
+                    type: 'immersiveengineering:cloche',
+                    results: [
+                      {item: 'kubejs:wheat', count: 2},
+                      {item: 'minecraft:wheat_seeds'},
+                    ],
+                    input: {item: 'minecraft:wheat_seeds'},
+                    soil: {tag: 'forge:dirt'},
+                    time: 560,
+                    render: {type: 'stacking', block: 'minecraft:wheat'},
+                  })
+                  .id('inconvenient:cloche_wheat');
+                event
+                  .shapeless('9x kubejs:wheat', ['minecraft:hay_block'])
+                  .id('inconvenient:shapeless_wheat');
               },
             },
           ],
@@ -339,12 +367,14 @@ onEvent('recipes', event => {
     {
       id: 'cooking',
       recipe: () => {
-        event.shaped('farmersdelight:cooking_pot', ['aba', 'cdc', 'ccc'], {
-          a: 'minecraft:brick',
-          b: 'rankine:pewter_shovel',
-          c: 'rankine:pewter_ingot',
-          d: 'minecraft:water_bucket',
-        });
+        event
+          .shaped('farmersdelight:cooking_pot', ['aba', 'cdc', 'ccc'], {
+            a: 'minecraft:brick',
+            b: 'rankine:pewter_shovel',
+            c: 'rankine:pewter_ingot',
+            d: 'minecraft:water_bucket',
+          })
+          .id('inconvenient:shaped_cooking_pot');
 
         event.replaceInput(
           {output: 'farmersdelight:stove'},
@@ -362,13 +392,15 @@ onEvent('recipes', event => {
     {
       id: 'tea_kettle',
       recipe: () => {
-        event.shaped('farmersrespite:kettle', ['aba', 'cdc', 'cec'], {
-          a: `#forge:rods/wooden`,
-          b: 'minecraft:leather',
-          c: 'minecraft:copper_ingot',
-          d: 'minecraft:bucket',
-          e: 'rankine:pewter_ingot',
-        });
+        event
+          .shaped('farmersrespite:kettle', ['aba', 'cdc', 'cec'], {
+            a: `#forge:rods/wooden`,
+            b: 'minecraft:leather',
+            c: 'minecraft:copper_ingot',
+            d: 'minecraft:bucket',
+            e: 'rankine:pewter_ingot',
+          })
+          .id('inconvenient:shaped_kettle');
       },
     },
     {
@@ -386,10 +418,12 @@ onEvent('recipes', event => {
         {
           id: 'pattern',
           recipe: () => {
-            event.shaped('tconstruct:pattern', ['ab', 'ba'], {
-              a: 'rankine:jute',
-              b: '#forge:rods/wooden',
-            });
+            event
+              .shaped('tconstruct:pattern', ['ab', 'ba'], {
+                a: 'rankine:jute',
+                b: '#forge:rods/wooden',
+              })
+              .id('inconvenient:shaped_pattern');
           },
         },
       ],
@@ -404,27 +438,35 @@ onEvent('recipes', event => {
           'astikorcarts:wheel',
         ].forEach(id => event.remove({id: id}));
 
-        event.shaped('astikorcarts:plow', ['aaa', 'bcb', 'dbd'], {
-          a: 'minecraft:iron_hoe',
-          b: '#forge:rods/wooden',
-          c: '#minecraft:planks',
-          d: 'astikorcarts:wheel',
-        });
-        event.shaped('astikorcarts:wheel', ['aba', 'bcb', 'aba'], {
-          a: '#forge:rods/wooden',
-          b: 'minecraft:iron_ingot',
-          c: '#minecraft:planks',
-        });
-        event.shaped('astikorcarts:animal_cart', ['aaa', 'aba', 'cac'], {
-          a: '#minecraft:planks',
-          b: 'minecraft:iron_ingot',
-          c: 'astikorcarts:wheel',
-        });
-        event.shaped('astikorcarts:supply_cart', ['aba', 'aba', 'cac'], {
-          a: '#minecraft:planks',
-          b: 'paragon_textiles:basket',
-          c: 'astikorcarts:wheel',
-        });
+        event
+          .shaped('astikorcarts:plow', ['aaa', 'bcb', 'dbd'], {
+            a: 'minecraft:iron_hoe',
+            b: '#forge:rods/wooden',
+            c: '#minecraft:planks',
+            d: 'astikorcarts:wheel',
+          })
+          .id('inconvenient:shaped_plow');
+        event
+          .shaped('astikorcarts:wheel', ['aba', 'bcb', 'aba'], {
+            a: '#forge:rods/wooden',
+            b: 'minecraft:iron_ingot',
+            c: '#minecraft:planks',
+          })
+          .id('inconvenient:shaped_wheel');
+        event
+          .shaped('astikorcarts:animal_cart', ['aaa', 'aba', 'cac'], {
+            a: '#minecraft:planks',
+            b: 'minecraft:iron_ingot',
+            c: 'astikorcarts:wheel',
+          })
+          .id('inconvenient:shaped_animal_cart');
+        event
+          .shaped('astikorcarts:supply_cart', ['aba', 'aba', 'cac'], {
+            a: '#minecraft:planks',
+            b: 'paragon_textiles:basket',
+            c: 'astikorcarts:wheel',
+          })
+          .id('inconvenient:shaped_supply_cart');
       },
     },
     {
@@ -434,56 +476,64 @@ onEvent('recipes', event => {
           event.remove({id: id})
         );
 
-        event.shapeless('farmersdelight:organic_compost', [
-          'rankine:compost',
-          'rankine:compost',
-          'rankine:compost',
-          'rankine:compost',
-          'rankine:compost',
-          'rankine:compost',
-          'rankine:compost',
-          'rankine:compost',
-          'rankine:compost',
-        ]);
+        event
+          .shapeless('farmersdelight:organic_compost', [
+            'rankine:compost',
+            'rankine:compost',
+            'rankine:compost',
+            'rankine:compost',
+            'rankine:compost',
+            'rankine:compost',
+            'rankine:compost',
+            'rankine:compost',
+            'rankine:compost',
+          ])
+          .id('inconvenient:shapeless_organic_compost');
       },
       children: [],
     },
     {
       id: 'thermometer',
       recipe: () => {
-        event.custom({
-          type: 'tconstruct:casting_table',
-          cast: {item: 'kubejs:glass_tube'},
-          cast_consumed: true,
-          fluid: {name: 'rankine:liquid_mercury', amount: 810},
-          result: 'cold_sweat:thermometer',
-          cooling_time: 100,
-        });
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast: {item: 'kubejs:glass_tube'},
+            cast_consumed: true,
+            fluid: {name: 'rankine:liquid_mercury', amount: 810},
+            result: 'cold_sweat:thermometer',
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_thermometer');
       },
       children: [
         {
           id: 'glass_tube',
           recipe: () => {
-            event.custom({
-              type: 'tconstruct:casting_table',
-              cast: {item: 'tconstruct:ingot_cast'},
-              cast_consumed: false,
-              fluid: {name: 'tconstruct:molten_glass', amount: 90},
-              result: 'kubejs:glass_tube',
-              cooling_time: 100,
-            });
+            event
+              .custom({
+                type: 'tconstruct:casting_table',
+                cast: {item: 'tconstruct:ingot_cast'},
+                cast_consumed: false,
+                fluid: {name: 'tconstruct:molten_glass', amount: 90},
+                result: 'kubejs:glass_tube',
+                cooling_time: 100,
+              })
+              .id('inconvenient:casting_table_glass_tube');
           },
           children: [
             {
               id: 'molten_glass',
               recipe: () => {
-                event.custom({
-                  type: 'tconstruct:melting',
-                  ingredient: {item: 'ecofriendly:sea_glass_ym'},
-                  result: {fluid: 'tconstruct:molten_glass', amount: 1000},
-                  temperature: 605,
-                  time: 54,
-                });
+                event
+                  .custom({
+                    type: 'tconstruct:melting',
+                    ingredient: {item: 'ecofriendly:sea_glass_ym'},
+                    result: {fluid: 'tconstruct:molten_glass', amount: 1000},
+                    temperature: 605,
+                    time: 54,
+                  })
+                  .id('inconvenient:melting_sea_glass_ym');
               },
             },
           ],
@@ -491,52 +541,64 @@ onEvent('recipes', event => {
         {
           id: 'mercury_smelting',
           recipe: () => {
-            event.custom({
-              type: 'tconstruct:melting',
-              ingredient: {item: 'rankine:mercury'},
-              result: {fluid: 'rankine:liquid_mercury', amount: 90},
-              temperature: 1450,
-              time: 158,
-            });
-            event.custom({
-              type: 'tconstruct:melting',
-              ingredient: {item: 'rankine:mercury_nugget'},
-              result: {fluid: 'rankine:liquid_mercury', amount: 10},
-              temperature: 1450,
-              time: 158,
-            });
-            event.custom({
-              type: 'tconstruct:melting',
-              ingredient: {item: 'rankine:mercury_block'},
-              result: {fluid: 'rankine:liquid_mercury', amount: 810},
-              temperature: 1450,
-              time: 158,
-            });
+            event
+              .custom({
+                type: 'tconstruct:melting',
+                ingredient: {item: 'rankine:mercury'},
+                result: {fluid: 'rankine:liquid_mercury', amount: 90},
+                temperature: 1450,
+                time: 158,
+              })
+              .id('inconvenient:melting_mercury');
+            event
+              .custom({
+                type: 'tconstruct:melting',
+                ingredient: {item: 'rankine:mercury_nugget'},
+                result: {fluid: 'rankine:liquid_mercury', amount: 10},
+                temperature: 1450,
+                time: 158,
+              })
+              .id('inconvenient:melting_mercury_nugget');
+            event
+              .custom({
+                type: 'tconstruct:melting',
+                ingredient: {item: 'rankine:mercury_block'},
+                result: {fluid: 'rankine:liquid_mercury', amount: 810},
+                temperature: 1450,
+                time: 158,
+              })
+              .id('inconvenient:melting_mercury_block');
 
-            event.custom({
-              type: 'tconstruct:casting_table',
-              cast: {item: 'tconstruct:ingot_cast'},
-              cast_consumed: false,
-              fluid: {name: 'rankine:mercury', amount: 90},
-              result: 'rankine:mercury',
-              cooling_time: 100,
-            });
+            event
+              .custom({
+                type: 'tconstruct:casting_table',
+                cast: {item: 'tconstruct:ingot_cast'},
+                cast_consumed: false,
+                fluid: {name: 'rankine:mercury', amount: 90},
+                result: 'rankine:mercury',
+                cooling_time: 100,
+              })
+              .id('inconvenient:casting_table_mercury');
 
-            event.custom({
-              type: 'tconstruct:casting_table',
-              cast: {item: 'tconstruct:ingot_cast'},
-              cast_consumed: false,
-              fluid: {name: 'rankine:mercury', amount: 10},
-              result: 'rankine:mercury_nugget',
-              cooling_time: 100,
-            });
+            event
+              .custom({
+                type: 'tconstruct:casting_table',
+                cast: {item: 'tconstruct:ingot_cast'},
+                cast_consumed: false,
+                fluid: {name: 'rankine:mercury', amount: 10},
+                result: 'rankine:mercury_nugget',
+                cooling_time: 100,
+              })
+              .id('inconvenient:casting_table_mercury_nugget');
 
-            event.custom({
-              type: 'tconstruct:casting_basin',
-              fluid: {name: 'rankine:liquid_mercury', amount: 810},
-              result: 'rankine:mercury_block',
-              cooling_time: 203,
-            });
+            event
+              .custom({
+                type: 'tconstruct:casting_basin',
+                fluid: {name: 'rankine:liquid_mercury', amount: 810},
+                result: 'rankine:mercury_block',
+                cooling_time: 203,
+              })
+              .id('inconvenient:casting_basin_mercury_block');
           },
           children: [
             {
@@ -548,55 +610,59 @@ onEvent('recipes', event => {
                   'blue_skies:pyrope_gem_from_smelting_everbright_pyrope_ore',
                   'blue_skies:pyrope_gem_from_smelting_everdawn_pyrope_ore',
                 ].forEach(id => event.remove({id: id}));
-                event.custom({
-                  type: 'rankine:crushing',
-                  input: {item: 'blue_skies:everbright_pyrope_ore'},
-                  guaranteed: [{item: 'minecraft:cobblestone'}],
-                  outputs: [
-                    {weight: 80, remove: false},
-                    {
-                      item: 'blue_skies:pyrope_gem',
-                      weight: 40,
-                      remove: false,
-                    },
-                    {
-                      item: 'blue_skies:pyrope_gem',
-                      weight: 20,
-                      remove: false,
-                    },
-                    {
-                      item: 'rankine:mercury',
-                      weight: 5,
-                      remove: false,
-                      tier: 'minecraft:diamond',
-                    },
-                  ],
-                });
+                event
+                  .custom({
+                    type: 'rankine:crushing',
+                    input: {item: 'blue_skies:everbright_pyrope_ore'},
+                    guaranteed: [{item: 'minecraft:cobblestone'}],
+                    outputs: [
+                      {weight: 80, remove: false},
+                      {
+                        item: 'blue_skies:pyrope_gem',
+                        weight: 40,
+                        remove: false,
+                      },
+                      {
+                        item: 'blue_skies:pyrope_gem',
+                        weight: 20,
+                        remove: false,
+                      },
+                      {
+                        item: 'rankine:mercury',
+                        weight: 5,
+                        remove: false,
+                        tier: 'minecraft:diamond',
+                      },
+                    ],
+                  })
+                  .id('inconvenient:crushing_everbright_pyrope_ore');
 
-                event.custom({
-                  type: 'rankine:crushing',
-                  input: {item: 'blue_skies:everdawn_pyrope_ore'},
-                  guaranteed: [{item: 'minecraft:cobblestone'}],
-                  outputs: [
-                    {weight: 80, remove: false},
-                    {
-                      item: 'blue_skies:pyrope_gem',
-                      weight: 40,
-                      remove: false,
-                    },
-                    {
-                      item: 'blue_skies:pyrope_gem',
-                      weight: 20,
-                      remove: false,
-                    },
-                    {
-                      item: 'rankine:mercury',
-                      weight: 5,
-                      remove: false,
-                      tier: 'minecraft:diamond',
-                    },
-                  ],
-                });
+                event
+                  .custom({
+                    type: 'rankine:crushing',
+                    input: {item: 'blue_skies:everdawn_pyrope_ore'},
+                    guaranteed: [{item: 'minecraft:cobblestone'}],
+                    outputs: [
+                      {weight: 80, remove: false},
+                      {
+                        item: 'blue_skies:pyrope_gem',
+                        weight: 40,
+                        remove: false,
+                      },
+                      {
+                        item: 'blue_skies:pyrope_gem',
+                        weight: 20,
+                        remove: false,
+                      },
+                      {
+                        item: 'rankine:mercury',
+                        weight: 5,
+                        remove: false,
+                        tier: 'minecraft:diamond',
+                      },
+                    ],
+                  })
+                  .id('inconvenient:crushing_everdawn_pyrope_ore');
               },
               children: [{id: 'pyrope_ore', recipe: () => {}, children: []}],
             },
@@ -611,16 +677,18 @@ onEvent('recipes', event => {
           event.remove({id: id})
         );
 
-        event.shaped(
-          `ecofriendly:recycled_carrier_bag_ym`,
-          ['abc', 'bda', 'caa'],
-          {
-            a: 'farmersdelight:canvas',
-            b: 'paragon_textiles:silk',
-            c: 'paragon_textiles:fabric_plain',
-            d: 'ecofriendly:plastic_bag_ym',
-          }
-        );
+        event
+          .shaped(
+            `ecofriendly:recycled_carrier_bag_ym`,
+            ['abc', 'bda', 'caa'],
+            {
+              a: 'farmersdelight:canvas',
+              b: 'paragon_textiles:silk',
+              c: 'paragon_textiles:fabric_plain',
+              d: 'ecofriendly:plastic_bag_ym',
+            }
+          )
+          .id('inconvenient:shaped_recycled_carrier_bag_ym');
       },
     },
     {
@@ -631,19 +699,25 @@ onEvent('recipes', event => {
           'rankine:speedometer',
           'rankine:biometer',
         ].forEach(id => event.remove({id: id}));
-        event.shaped(`rankine:photometer`, [' a ', 'aba', ' a '], {
-          a: 'rankine:sterling_silver_ingot',
-          b: 'blue_skies:charoite',
-        });
-        event.shaped(`rankine:speedometer`, [' a ', 'bcb', ' a '], {
-          a: 'blue_skies:ventium_ingot',
-          b: 'blue_skies:falsite_ingot',
-          c: 'blue_skies:aquite',
-        });
-        event.shaped(`rankine:biometer`, [' a ', 'aba', ' a '], {
-          a: 'tconstruct:amethyst_bronze_ingot',
-          b: 'blue_skies:diopside_gem',
-        });
+        event
+          .shaped(`rankine:photometer`, [' a ', 'aba', ' a '], {
+            a: 'rankine:sterling_silver_ingot',
+            b: 'blue_skies:charoite',
+          })
+          .id('inconvenient:shaped_photometer');
+        event
+          .shaped(`rankine:speedometer`, [' a ', 'bcb', ' a '], {
+            a: 'blue_skies:ventium_ingot',
+            b: 'blue_skies:falsite_ingot',
+            c: 'blue_skies:aquite',
+          })
+          .id('inconvenient:shaped_speedometer');
+        event
+          .shaped(`rankine:biometer`, [' a ', 'aba', ' a '], {
+            a: 'tconstruct:amethyst_bronze_ingot',
+            b: 'blue_skies:diopside_gem',
+          })
+          .id('inconvenient:shaped_biometer');
       },
     },
     {
@@ -685,14 +759,16 @@ onEvent('recipes', event => {
           'rankine:bucket_from_brass',
           'minecraft:bucket',
         ].forEach(id => event.remove({id: id}));
-        event.custom({
-          type: 'tconstruct:casting_table',
-          cast: {item: 'ceramicbucket:ceramic_bucket'},
-          cast_consumed: true,
-          fluid: {name: 'tconstruct:molten_iron', amount: 270},
-          result: 'minecraft:bucket',
-          cooling_time: 100,
-        });
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast: {item: 'ceramicbucket:ceramic_bucket'},
+            cast_consumed: true,
+            fluid: {name: 'tconstruct:molten_iron', amount: 270},
+            result: 'minecraft:bucket',
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_bucket');
       },
     },
     {
@@ -723,11 +799,13 @@ onEvent('recipes', event => {
         ['totemic:tipi_from_hide', 'totemic:tipi_from_wool'].forEach(id =>
           event.remove({id: id})
         );
-        event.shaped('totemic:tipi', ['aba', 'bcb', 'b b'], {
-          a: '#forge:rods/wooden',
-          b: 'rankine:gun_cotton',
-          c: 'minecraft:leather',
-        });
+        event
+          .shaped('totemic:tipi', ['aba', 'bcb', 'b b'], {
+            a: '#forge:rods/wooden',
+            b: 'rankine:gun_cotton',
+            c: 'minecraft:leather',
+          })
+          .id('inconvenient:shaped_tipi');
       },
     },
     {
@@ -737,10 +815,12 @@ onEvent('recipes', event => {
           event.remove({id: id})
         );
 
-        event.shaped(`minecraft:fishing_rod`, ['  a', ' ab', 'a b'], {
-          a: `#forge:rods/wooden`,
-          b: 'paragon_textiles:silk',
-        });
+        event
+          .shaped(`minecraft:fishing_rod`, ['  a', ' ab', 'a b'], {
+            a: `#forge:rods/wooden`,
+            b: 'paragon_textiles:silk',
+          })
+          .id('inconvenient:shaped_fishing_rod');
       },
     },
     {
@@ -748,13 +828,15 @@ onEvent('recipes', event => {
       recipe: () => {
         overworldWoods.forEach(wood => {
           event.remove({id: `smallships:${wood}_drakkar`});
-          event.shaped(`smallships:${wood}_drakkar`, ['aba', 'cdc', 'eee'], {
-            a: 'paragon_textiles:silk',
-            b: 'smallships:sail',
-            c: 'paragon_textiles:basket_sturdy',
-            d: 'minecraft:lead',
-            e: `smallships:${wood}_cog`,
-          });
+          event
+            .shaped(`smallships:${wood}_drakkar`, ['aba', 'cdc', 'eee'], {
+              a: 'paragon_textiles:silk',
+              b: 'smallships:sail',
+              c: 'paragon_textiles:basket_sturdy',
+              d: 'minecraft:lead',
+              e: `smallships:${wood}_cog`,
+            })
+            .id(`inconvenient:shaped_${wood}_drakkar`);
         });
       },
       children: [
@@ -763,40 +845,48 @@ onEvent('recipes', event => {
           recipe: () => {
             overworldWoods.forEach(wood => {
               event.remove({id: `smallships:${wood}_cog`});
-              event.shaped(`smallships:${wood}_cog`, ['aaa', 'bcb', 'ddd'], {
-                a: 'paragon_textiles:silk',
-                b: 'paragon_textiles:basket',
-                c: 'smallships:sail',
-                d: `justaraftmod:${wood}_raft`,
-              });
+              event
+                .shaped(`smallships:${wood}_cog`, ['aaa', 'bcb', 'ddd'], {
+                  a: 'paragon_textiles:silk',
+                  b: 'paragon_textiles:basket',
+                  c: 'smallships:sail',
+                  d: `justaraftmod:${wood}_raft`,
+                })
+                .id(`inconvenient:shaped_${wood}_cog`);
             });
           },
           children: [
             {
               id: 'silk',
               recipe: () => {
-                event.shaped('paragon_textiles:silk', ['aaa', 'aba', 'aaa'], {
-                  a: 'rankine:cotton',
-                  b: '#forge:rods/wooden',
-                });
+                event
+                  .shaped('paragon_textiles:silk', ['aaa', 'aba', 'aaa'], {
+                    a: 'rankine:cotton',
+                    b: '#forge:rods/wooden',
+                  })
+                  .id('inconvenient:shaped_silk');
               },
             },
             {
               id: 'sail',
               recipe: () => {
-                event.shaped('smallships:sail', ['aaa', 'aba', 'cbc'], {
-                  a: 'rankine:gun_cotton',
-                  b: '#minecraft:logs',
-                  c: 'minecraft:lead',
-                });
+                event
+                  .shaped('smallships:sail', ['aaa', 'aba', 'cbc'], {
+                    a: 'rankine:gun_cotton',
+                    b: '#minecraft:logs',
+                    c: 'minecraft:lead',
+                  })
+                  .id('inconvenient:shaped_sail');
               },
               children: [
                 {
                   id: 'lead',
                   recipe: () => {
-                    event.shaped('minecraft:lead', [' aa', ' aa', 'a  '], {
-                      a: 'paragon_textiles:silk',
-                    });
+                    event
+                      .shaped('minecraft:lead', [' aa', ' aa', 'a  '], {
+                        a: 'paragon_textiles:silk',
+                      })
+                      .id('inconvenient:shaped_lead');
                   },
                 },
               ],
@@ -808,10 +898,12 @@ onEvent('recipes', event => {
     {
       id: 'cutting_board',
       recipe: () => {
-        event.shaped('farmersdelight:cutting_board', ['abb', 'abb'], {
-          a: '#forge:rods/wooden',
-          b: 'malum:runewood_planks',
-        });
+        event
+          .shaped('farmersdelight:cutting_board', ['abb', 'abb'], {
+            a: '#forge:rods/wooden',
+            b: 'malum:runewood_planks',
+          })
+          .id('inconvenient:shaped_cutting_board');
       },
       children: [],
     },
@@ -822,12 +914,14 @@ onEvent('recipes', event => {
           output: [`relics:researching_table`],
           type: 'minecraft:shaped',
         });
-        event.shaped(`relics:researching_table`, ['aba', 'bcb', 'cdc'], {
-          a: `naturesaura:gold_powder`,
-          b: 'paragon_textiles:fabric_red',
-          c: 'malum:runewood_log',
-          d: 'malum:sacred_spirit',
-        });
+        event
+          .shaped(`relics:researching_table`, ['aba', 'bcb', 'cdc'], {
+            a: `naturesaura:gold_powder`,
+            b: 'paragon_textiles:fabric_red',
+            c: 'malum:runewood_log',
+            d: 'malum:sacred_spirit',
+          })
+          .id('inconvenient:shaped_researching_table');
       },
     },
     {
@@ -835,10 +929,12 @@ onEvent('recipes', event => {
       recipe: () => {
         ['minecraft:hopper'].forEach(id => event.remove({id: id}));
 
-        event.shaped('minecraft:hopper', ['a a', 'aba', ' a '], {
-          a: 'minecraft:iron_ingot',
-          b: 'thirst:terracotta_bowl',
-        });
+        event
+          .shaped('minecraft:hopper', ['a a', 'aba', ' a '], {
+            a: 'minecraft:iron_ingot',
+            b: 'thirst:terracotta_bowl',
+          })
+          .id('inconvenient:shaped_hopper');
       },
     },
     {

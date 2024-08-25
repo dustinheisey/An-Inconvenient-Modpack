@@ -42,7 +42,7 @@ onEvent('recipes', event => {
                 b: 'minecraft:leather',
                 c: `kubejs:nether_lost_page`,
               })
-              .stage('chapter_4');
+              .id('inconvenient:shaped_nether_lost_story');
           },
         },
         {
@@ -79,27 +79,34 @@ onEvent('recipes', event => {
               },
             ]);
 
-            event.smithing(
-              'minecraft:netherite_helmet',
-              'minecraft:netherite_ingot',
-              'twilightforest:fiery_helmet'
-            );
-            event.smithing(
-              'minecraft:netherite_chestplate',
-
-              'minecraft:netherite_ingot',
-              'twilightforest:fiery_chestplate'
-            );
-            event.smithing(
-              'minecraft:netherite_leggings',
-              'minecraft:netherite_ingot',
-              'twilightforest:fiery_leggings'
-            );
-            event.smithing(
-              'minecraft:netherite_boots',
-              'minecraft:netherite_ingot',
-              'twilightforest:fiery_boots'
-            );
+            event
+              .smithing(
+                'minecraft:netherite_helmet',
+                'minecraft:netherite_ingot',
+                'twilightforest:fiery_helmet'
+              )
+              .id('inconvenient:smithing_netherite_helmet');
+            event
+              .smithing(
+                'minecraft:netherite_chestplate',
+                'minecraft:netherite_ingot',
+                'twilightforest:fiery_chestplate'
+              )
+              .id('inconvenient:smithing_netherite_chestplate');
+            event
+              .smithing(
+                'minecraft:netherite_leggings',
+                'minecraft:netherite_ingot',
+                'twilightforest:fiery_leggings'
+              )
+              .id('inconvenient:smithing_netherite_leggings');
+            event
+              .smithing(
+                'minecraft:netherite_boots',
+                'minecraft:netherite_ingot',
+                'twilightforest:fiery_boots'
+              )
+              .id('inconvenient:smithing_netherite_boots');
           },
         },
         {
@@ -144,70 +151,82 @@ onEvent('recipes', event => {
     {
       id: 'cobaltite',
       recipe: () => {
-        event.custom({
-          input: {item: 'rankine:cobaltite_ore'},
-          type: 'rankine:crushing',
-          guaranteed: [
-            {
-              item: 'rankine:cobaltite',
-              count: 1,
-              tier: 'minecraft:netherite',
-            },
-          ],
-        });
+        event
+          .custom({
+            input: {item: 'rankine:cobaltite_ore'},
+            type: 'rankine:crushing',
+            guaranteed: [
+              {
+                item: 'rankine:cobaltite',
+                count: 1,
+                tier: 'minecraft:netherite',
+              },
+            ],
+          })
+          .id('inconvenient:crushing_cobaltite_ore');
       },
     },
     {
       id: 'iesnium',
       recipe: () => {
-        event.custom({
-          type: 'tconstruct:casting_table',
-          result: 'occultism:iesnium_nugget',
-          fluid: {name: 'kubejs:molten_iesnium', amount: 10},
-          cast: {item: 'tconstruct:nugget_cast', cast_consumed: false},
-          cooling_time: 100,
-        });
-        event.custom({
-          type: 'tconstruct:casting_table',
-          result: 'occultism:iesnium_ingot',
-          fluid: {name: 'kubejs:molten_iesnium', amount: 90},
-          cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
-          cooling_time: 100,
-        });
-        event.custom({
-          type: 'tconstruct:casting_basin',
-          result: 'occultism:iesnium_block',
-          cooling_time: 900,
-          fluid: {name: 'kubejs:molten_iesnium', amount: 810},
-        });
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'occultism:iesnium_nugget',
+            fluid: {name: 'kubejs:molten_iesnium', amount: 10},
+            cast: {item: 'tconstruct:nugget_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_iesnium_nugget');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'occultism:iesnium_ingot',
+            fluid: {name: 'kubejs:molten_iesnium', amount: 90},
+            cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_iesnium_ingot');
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            result: 'occultism:iesnium_block',
+            cooling_time: 900,
+            fluid: {name: 'kubejs:molten_iesnium', amount: 810},
+          })
+          .id('inconvenient:casting_basin_iesnium_block');
       },
       children: [
         {
           id: 'molten_iesnium',
           recipe: () => {
-            event.custom({
-              type: 'tconstruct:melting',
-              ingredient: {item: 'occultism:raw_iesnium'},
-              result: {fluid: 'kubejs:molten_iesnium', amount: 90},
-              temperature: 605,
-              time: 54,
-            });
+            event
+              .custom({
+                type: 'tconstruct:melting',
+                ingredient: {item: 'occultism:raw_iesnium'},
+                result: {fluid: 'kubejs:molten_iesnium', amount: 90},
+                temperature: 605,
+                time: 54,
+              })
+              .id('inconvenient:melting_raw_iesnium');
           },
           children: [
             {
               id: 'raw_iesnium',
               recipe: () => {
-                event.custom({
-                  input: {item: 'occultism:iesnium_ore'},
-                  type: 'rankine:crushing',
-                  guaranteed: [
-                    {
-                      item: 'occultism:raw_iesnium',
-                      count: 1,
-                      tier: 'minecraft:netherite',
-                    },
-                  ],
-                });
+                event
+                  .custom({
+                    input: {item: 'occultism:iesnium_ore'},
+                    type: 'rankine:crushing',
+                    guaranteed: [
+                      {
+                        item: 'occultism:raw_iesnium',
+                        count: 1,
+                        tier: 'minecraft:netherite',
+                      },
+                    ],
+                  })
+                  .id('inconvenient:crushing_iesnium_ore');
               },
             },
           ],
@@ -215,38 +234,40 @@ onEvent('recipes', event => {
         {
           id: 'infused_pickaxe',
           recipe: () => {
-            event.custom({
-              type: 'occultism:ritual',
-              ritual_type: 'occultism:craft_with_spirit_name',
-              activation_item: {
-                item: 'occultism:book_of_binding_bound_djinni',
-              },
-              pentacle_id: 'occultism:summon_marid',
-              duration: 60,
-              ritual_dummy: {
-                item: 'occultism:ritual_dummy/craft_infused_pickaxe',
-              },
-              ingredients: [
-                {
-                  tag: 'forge:rods/wooden',
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft_with_spirit_name',
+                activation_item: {
+                  item: 'occultism:book_of_binding_bound_djinni',
                 },
-                {
-                  tag: 'forge:rods/wooden',
+                pentacle_id: 'occultism:summon_marid',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/craft_infused_pickaxe',
                 },
-                {
-                  item: 'occultism:spirit_attuned_pickaxe_head',
+                ingredients: [
+                  {
+                    tag: 'forge:rods/wooden',
+                  },
+                  {
+                    tag: 'forge:rods/wooden',
+                  },
+                  {
+                    item: 'occultism:spirit_attuned_pickaxe_head',
+                  },
+                  {
+                    item: 'minecraft:netherite_ingot',
+                  },
+                  {
+                    item: 'minecraft:gold_ingot',
+                  },
+                ],
+                result: {
+                  item: 'occultism:infused_pickaxe',
                 },
-                {
-                  item: 'minecraft:netherite_ingot',
-                },
-                {
-                  item: 'minecraft:gold_ingot',
-                },
-              ],
-              result: {
-                item: 'occultism:infused_pickaxe',
-              },
-            });
+              })
+              .id('inconvenient:ritual_infused_pickaxe');
           },
         },
       ],
@@ -257,210 +278,220 @@ onEvent('recipes', event => {
         {
           id: 'dimensional_matrix',
           recipe: () => {
-            event.custom({
-              type: 'occultism:ritual',
-              ritual_type: 'occultism:craft_with_spirit_name',
-              activation_item: {
-                item: 'occultism:book_of_binding_bound_djinni',
-              },
-              pentacle_id: 'occultism:craft_djinni',
-              duration: 240,
-              ritual_dummy: {
-                item: 'occultism:ritual_dummy/craft_dimensional_matrix',
-              },
-              ingredients: [
-                {
-                  item: 'occultism:iesnium_block',
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft_with_spirit_name',
+                activation_item: {
+                  item: 'occultism:book_of_binding_bound_djinni',
                 },
-                {
-                  tag: 'forge:storage_blocks/quartz',
+                pentacle_id: 'occultism:craft_djinni',
+                duration: 240,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/craft_dimensional_matrix',
                 },
-                {
-                  tag: 'forge:storage_blocks/quartz',
+                ingredients: [
+                  {
+                    item: 'occultism:iesnium_block',
+                  },
+                  {
+                    tag: 'forge:storage_blocks/quartz',
+                  },
+                  {
+                    tag: 'forge:storage_blocks/quartz',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                ],
+                result: {
+                  item: 'occultism:dimensional_matrix',
                 },
-                {
-                  item: 'create:chromatic_compound',
-                },
-              ],
-              result: {
-                item: 'occultism:dimensional_matrix',
-              },
-            });
+              })
+              .id('inconvenient:ritual_dimensional_matrix');
           },
         },
         {
           id: 'storage_stabilizer_4',
           recipe: () => {
-            event.custom({
-              type: 'occultism:ritual',
-              ritual_type: 'occultism:craft',
-              activation_item: {
-                item: 'occultism:book_of_binding_bound_marid',
-              },
-              pentacle_id: 'occultism:craft_marid',
-              duration: 240,
-              ritual_dummy: {
-                item: 'occultism:ritual_dummy/craft_stabilizer_tier4',
-              },
-              ingredients: [
-                {
-                  item: 'occultism:storage_stabilizer_tier3',
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                activation_item: {
+                  item: 'occultism:book_of_binding_bound_marid',
                 },
-                {
-                  item: 'occultism:iesnium_block',
+                pentacle_id: 'occultism:craft_marid',
+                duration: 240,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/craft_stabilizer_tier4',
                 },
-                {
-                  item: 'occultism:iesnium_block',
+                ingredients: [
+                  {
+                    item: 'occultism:storage_stabilizer_tier3',
+                  },
+                  {
+                    item: 'occultism:iesnium_block',
+                  },
+                  {
+                    item: 'occultism:iesnium_block',
+                  },
+                  {
+                    item: 'occultism:iesnium_block',
+                  },
+                  {
+                    item: 'occultism:iesnium_block',
+                  },
+                  {
+                    item: 'rankine:carbon_block',
+                  },
+                  {
+                    item: 'create:refined_radiance',
+                  },
+                  {
+                    item: 'create:shadow_steel',
+                  },
+                  {
+                    item: 'bloodmagic:demonslate',
+                  },
+                ],
+                result: {
+                  item: 'occultism:storage_stabilizer_tier4',
                 },
-                {
-                  item: 'occultism:iesnium_block',
-                },
-                {
-                  item: 'occultism:iesnium_block',
-                },
-                {
-                  item: 'rankine:carbon_block',
-                },
-                {
-                  item: 'create:refined_radiance',
-                },
-                {
-                  item: 'create:shadow_steel',
-                },
-                {
-                  item: 'bloodmagic:demonslate',
-                },
-              ],
-              result: {
-                item: 'occultism:storage_stabilizer_tier4',
-              },
-            });
+              })
+              .id('inconvenient:ritual_storage_stabilizer_4');
           },
           children: [
             {
               id: 'storage_stabilizer_3',
               recipe: () => {
-                event.custom({
-                  type: 'occultism:ritual',
-                  ritual_type: 'occultism:craft',
-                  activation_item: {
-                    item: 'occultism:book_of_binding_bound_afrit',
-                  },
-                  pentacle_id: 'occultism:craft_afrit',
-                  duration: 240,
-                  ritual_dummy: {
-                    item: 'occultism:ritual_dummy/craft_stabilizer_tier3',
-                  },
-                  ingredients: [
-                    {
-                      item: 'occultism:storage_stabilizer_tier2',
+                event
+                  .custom({
+                    type: 'occultism:ritual',
+                    ritual_type: 'occultism:craft',
+                    activation_item: {
+                      item: 'occultism:book_of_binding_bound_afrit',
                     },
-                    {
-                      item: 'cataclysm:witherite_block',
+                    pentacle_id: 'occultism:craft_afrit',
+                    duration: 240,
+                    ritual_dummy: {
+                      item: 'occultism:ritual_dummy/craft_stabilizer_tier3',
                     },
-                    {
-                      item: 'occultism:iesnium_block',
+                    ingredients: [
+                      {
+                        item: 'occultism:storage_stabilizer_tier2',
+                      },
+                      {
+                        item: 'cataclysm:witherite_block',
+                      },
+                      {
+                        item: 'occultism:iesnium_block',
+                      },
+                      {
+                        item: 'occultism:iesnium_block',
+                      },
+                      {
+                        item: 'occultism:iesnium_block',
+                      },
+                      {
+                        item: 'minecraft:nether_star',
+                      },
+                      {
+                        item: 'minecraft:gunpowder',
+                      },
+                      {
+                        item: 'create:chromatic_compound',
+                      },
+                    ],
+                    result: {
+                      item: 'occultism:storage_stabilizer_tier3',
                     },
-                    {
-                      item: 'occultism:iesnium_block',
-                    },
-                    {
-                      item: 'occultism:iesnium_block',
-                    },
-                    {
-                      item: 'minecraft:nether_star',
-                    },
-                    {
-                      item: 'minecraft:gunpowder',
-                    },
-                    {
-                      item: 'create:chromatic_compound',
-                    },
-                  ],
-                  result: {
-                    item: 'occultism:storage_stabilizer_tier3',
-                  },
-                });
+                  })
+                  .id('inconvenient:ritual_storage_stabilizer_3');
               },
               children: [
                 {
                   id: 'storage_stabilizer_2',
                   recipe: () => {
-                    event.custom({
-                      type: 'occultism:ritual',
-                      ritual_type: 'occultism:craft',
-                      activation_item: {
-                        item: 'occultism:book_of_binding_bound_djinni',
-                      },
-                      pentacle_id: 'occultism:craft_djinni',
-                      duration: 240,
-                      ritual_dummy: {
-                        item: 'occultism:ritual_dummy/craft_stabilizer_tier2',
-                      },
-                      ingredients: [
-                        {
-                          item: 'occultism:storage_stabilizer_tier1',
+                    event
+                      .custom({
+                        type: 'occultism:ritual',
+                        ritual_type: 'occultism:craft',
+                        activation_item: {
+                          item: 'occultism:book_of_binding_bound_djinni',
                         },
-                        {
-                          item: 'cataclysm:ignitium_block',
+                        pentacle_id: 'occultism:craft_djinni',
+                        duration: 240,
+                        ritual_dummy: {
+                          item: 'occultism:ritual_dummy/craft_stabilizer_tier2',
                         },
-                        {
-                          item: 'occultism:iesnium_block',
+                        ingredients: [
+                          {
+                            item: 'occultism:storage_stabilizer_tier1',
+                          },
+                          {
+                            item: 'cataclysm:ignitium_block',
+                          },
+                          {
+                            item: 'occultism:iesnium_block',
+                          },
+                          {
+                            item: 'occultism:iesnium_block',
+                          },
+                          {
+                            item: 'minecraft:ghast_tear',
+                          },
+                          {
+                            item: 'rankine:vulcanized_rubber',
+                          },
+                          {
+                            item: 'occultism:spirit_attuned_gem',
+                          },
+                        ],
+                        result: {
+                          item: 'occultism:storage_stabilizer_tier2',
                         },
-                        {
-                          item: 'occultism:iesnium_block',
-                        },
-                        {
-                          item: 'minecraft:ghast_tear',
-                        },
-                        {
-                          item: 'rankine:vulcanized_rubber',
-                        },
-                        {
-                          item: 'occultism:spirit_attuned_gem',
-                        },
-                      ],
-                      result: {
-                        item: 'occultism:storage_stabilizer_tier2',
-                      },
-                    });
+                      })
+                      .id('inconvenient:ritual_storage_stabilizer_2');
                   },
                   children: [
                     {
                       id: 'storage_stabilizer_1',
                       recipe: () => {
-                        event.custom({
-                          type: 'occultism:ritual',
-                          ritual_type: 'occultism:craft',
-                          activation_item: {
-                            item: 'occultism:book_of_binding_bound_foliot',
-                          },
-                          pentacle_id: 'occultism:craft_foliot',
-                          duration: 120,
-                          ritual_dummy: {
-                            item: 'occultism:ritual_dummy/craft_stabilizer_tier1',
-                          },
-                          ingredients: [
-                            {
-                              item: 'occultism:otherstone_pedestal',
+                        event
+                          .custom({
+                            type: 'occultism:ritual',
+                            ritual_type: 'occultism:craft',
+                            activation_item: {
+                              item: 'occultism:book_of_binding_bound_foliot',
                             },
-                            {
-                              item: 'tconstruct:pig_iron_block',
+                            pentacle_id: 'occultism:craft_foliot',
+                            duration: 120,
+                            ritual_dummy: {
+                              item: 'occultism:ritual_dummy/craft_stabilizer_tier1',
                             },
-                            {
-                              item: 'occultism:iesnium_block',
+                            ingredients: [
+                              {
+                                item: 'occultism:otherstone_pedestal',
+                              },
+                              {
+                                item: 'tconstruct:pig_iron_block',
+                              },
+                              {
+                                item: 'occultism:iesnium_block',
+                              },
+                              {
+                                item: 'minecraft:blaze_powder',
+                              },
+                              {
+                                item: 'occultism:spirit_attuned_gem',
+                              },
+                            ],
+                            result: {
+                              item: 'occultism:storage_stabilizer_tier1',
                             },
-                            {
-                              item: 'minecraft:blaze_powder',
-                            },
-                            {
-                              item: 'occultism:spirit_attuned_gem',
-                            },
-                          ],
-                          result: {
-                            item: 'occultism:storage_stabilizer_tier1',
-                          },
-                        });
+                          })
+                          .id('inconvenient:ritual_storage_stabilizer_1');
                       },
                       children: [],
                     },
@@ -473,69 +504,73 @@ onEvent('recipes', event => {
         {
           id: 'storage_remote',
           recipe: () => {
-            event.custom({
-              type: 'occultism:ritual',
-              ritual_type: 'occultism:craft',
-              activation_item: {
-                item: 'occultism:book_of_binding_bound_djinni',
-              },
-              pentacle_id: 'occultism:craft_djinni',
-              duration: 120,
-              ritual_dummy: {
-                item: 'occultism:ritual_dummy/craft_storage_remote',
-              },
-              ingredients: [
-                {
-                  item: 'occultism:storage_remote_inert',
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                activation_item: {
+                  item: 'occultism:book_of_binding_bound_djinni',
                 },
-                {
-                  item: 'create:chromatic_compound',
+                pentacle_id: 'occultism:craft_djinni',
+                duration: 120,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/craft_storage_remote',
                 },
-                {
-                  item: 'create:chromatic_compound',
+                ingredients: [
+                  {
+                    item: 'occultism:storage_remote_inert',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    tag: 'forge:gems/quartz',
+                  },
+                ],
+                result: {
+                  item: 'occultism:storage_remote',
                 },
-                {
-                  tag: 'forge:gems/quartz',
-                },
-              ],
-              result: {
-                item: 'occultism:storage_remote',
-              },
-            });
+              })
+              .id('inconvenient:ritual_storage_remote');
           },
         },
         {
           id: 'stable_wormhole',
           recipe: () => {
-            event.custom({
-              type: 'occultism:ritual',
-              ritual_type: 'occultism:craft',
-              activation_item: {
-                item: 'occultism:book_of_binding_bound_foliot',
-              },
-              pentacle_id: 'occultism:craft_foliot',
-              duration: 120,
-              ritual_dummy: {
-                item: 'occultism:ritual_dummy/craft_stable_wormhole',
-              },
-              ingredients: [
-                {
-                  item: 'occultism:wormhole_frame',
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                activation_item: {
+                  item: 'occultism:book_of_binding_bound_foliot',
                 },
-                {
-                  item: 'create:chromatic_compound',
+                pentacle_id: 'occultism:craft_foliot',
+                duration: 120,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/craft_stable_wormhole',
                 },
-                {
-                  tag: 'forge:gems/quartz',
+                ingredients: [
+                  {
+                    item: 'occultism:wormhole_frame',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    tag: 'forge:gems/quartz',
+                  },
+                  {
+                    tag: 'forge:gems/quartz',
+                  },
+                ],
+                result: {
+                  item: 'occultism:stable_wormhole',
                 },
-                {
-                  tag: 'forge:gems/quartz',
-                },
-              ],
-              result: {
-                item: 'occultism:stable_wormhole',
-              },
-            });
+              })
+              .id('inconvenient:ritual_stable_wormhole');
           },
         },
       ],
@@ -543,31 +578,35 @@ onEvent('recipes', event => {
     {
       id: 'slates',
       recipe: () => {
-        event.custom({
-          type: 'bloodmagic:altar',
-          input: {
-            item: 'bloodmagic:demonslate',
-          },
-          output: {
-            item: 'bloodmagic:etherealslate',
-          },
-          upgradeLevel: 4,
-          altarSyphon: 100000,
-          consumptionRate: 1000,
-          drainRate: 1000,
-        });
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            input: {
+              item: 'bloodmagic:demonslate',
+            },
+            output: {
+              item: 'bloodmagic:etherealslate',
+            },
+            upgradeLevel: 4,
+            altarSyphon: 100000,
+            consumptionRate: 1000,
+            drainRate: 1000,
+          })
+          .id('inconvenient:altar_etherealslate');
       },
     },
     {
       id: 'chipped_tables',
       recipe: () => {
-        event.shaped(`chipped:carpenters_table`, ['  a', 'bcb', 'deb'], {
-          a: `minecraft:iron_ingot`,
-          b: '#minecraft:logs',
-          c: 'minecraft:crafting_table',
-          d: 'rankine:sawdust',
-          e: '#minecraft:planks',
-        });
+        event
+          .shaped(`chipped:carpenters_table`, ['  a', 'bcb', 'deb'], {
+            a: `minecraft:iron_ingot`,
+            b: '#minecraft:logs',
+            c: 'minecraft:crafting_table',
+            d: 'rankine:sawdust',
+            e: '#minecraft:planks',
+          })
+          .id('inconvenient:shaped_carpenters_table');
       },
     },
     {
@@ -593,60 +632,64 @@ onEvent('recipes', event => {
     {
       id: 'teleportation',
       recipe: () => {
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:craft',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_marid',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 30,
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/custom_ritual',
-          },
-          ingredients: [
-            {
-              item: 'tconstruct:manyullyn_ingot',
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:craft',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_marid',
             },
-            {
-              item: 'tconstruct:manyullyn_ingot',
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 30,
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/custom_ritual',
             },
-            {
-              item: 'tconstruct:manyullyn_ingot',
+            ingredients: [
+              {
+                item: 'tconstruct:manyullyn_ingot',
+              },
+              {
+                item: 'tconstruct:manyullyn_ingot',
+              },
+              {
+                item: 'tconstruct:manyullyn_ingot',
+              },
+              {
+                item: 'tconstruct:manyullyn_ingot',
+              },
+              {
+                item: 'waystones:warp_dust',
+              },
+              {
+                item: 'waystones:warp_dust',
+              },
+              {
+                item: 'waystones:warp_dust',
+              },
+              {
+                item: 'waystones:warp_dust',
+              },
+              {
+                item: 'create:chromatic_compound',
+              },
+              {
+                item: 'create:chromatic_compound',
+              },
+            ],
+            result: {
+              item: 'waystones:warp_stone',
             },
-            {
-              item: 'tconstruct:manyullyn_ingot',
-            },
-            {
-              item: 'waystones:warp_dust',
-            },
-            {
-              item: 'waystones:warp_dust',
-            },
-            {
-              item: 'waystones:warp_dust',
-            },
-            {
-              item: 'waystones:warp_dust',
-            },
-            {
-              item: 'create:chromatic_compound',
-            },
-            {
-              item: 'create:chromatic_compound',
-            },
-          ],
-          result: {
-            item: 'waystones:warp_stone',
-          },
-        });
+          })
+          .id('inconvenient:ritual_warp_stone');
 
-        event.custom({
-          results: [{count: 4, item: 'waystones:warp_dust'}],
-          type: 'create:crushing',
-          processingTime: 250,
-          ingredients: [{item: 'create:chromatic_compound'}],
-        });
+        event
+          .custom({
+            results: [{count: 4, item: 'waystones:warp_dust'}],
+            type: 'create:crushing',
+            processingTime: 250,
+            ingredients: [{item: 'create:chromatic_compound'}],
+          })
+          .id('inconvenient:crushing_wheel_warp_dust');
 
         event.replaceInput(
           {
@@ -661,728 +704,764 @@ onEvent('recipes', event => {
     {
       id: 'chunkloaders',
       recipe: () => {
-        event.custom({
-          type: 'bloodmagic:altar',
-          input: {
-            item: 'bloodmagic:strong_tau',
-          },
-          output: {
-            item: 'chunkloaders:single_chunk_loader',
-          },
-          upgradeLevel: 3,
-          altarSyphon: 10000,
-          consumptionRate: 10,
-          drainRate: 10,
-        });
-        event.custom({
-          type: 'bloodmagic:altar',
-          input: {
-            item: 'chunkloaders:advanced_chunk_loader',
-          },
-          output: {
-            item: 'chunkloaders:ultimate_chunk_loader',
-          },
-          upgradeLevel: 4,
-          altarSyphon: 200000,
-          consumptionRate: 200,
-          drainRate: 200,
-        });
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            input: {
+              item: 'bloodmagic:strong_tau',
+            },
+            output: {
+              item: 'chunkloaders:single_chunk_loader',
+            },
+            upgradeLevel: 3,
+            altarSyphon: 10000,
+            consumptionRate: 10,
+            drainRate: 10,
+          })
+          .id('inconvenient:altar_single_chunk_loader');
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            input: {
+              item: 'chunkloaders:advanced_chunk_loader',
+            },
+            output: {
+              item: 'chunkloaders:ultimate_chunk_loader',
+            },
+            upgradeLevel: 4,
+            altarSyphon: 200000,
+            consumptionRate: 200,
+            drainRate: 200,
+          })
+          .id('inconvenient:altar_ultimate_chunk_loader');
       },
     },
 
     {
       id: 'xp_crystal',
       recipe: () => {
-        event.custom({
-          type: 'occultism:ritual',
-          activation_item: {item: 'minecraft:amethyst_shard'},
-          pentacle_id: 'occultism:craft_marid',
-          ritual_type: 'occultism:craft',
-          ingredients: [
-            {
-              item: 'minecraft:enchanted_book',
+        event
+          .custom({
+            type: 'occultism:ritual',
+            activation_item: {item: 'minecraft:amethyst_shard'},
+            pentacle_id: 'occultism:craft_marid',
+            ritual_type: 'occultism:craft',
+            ingredients: [
+              {
+                item: 'minecraft:enchanted_book',
+              },
+              {
+                item: 'minecraft:enchanted_book',
+              },
+              {
+                item: 'minecraft:enchanted_book',
+              },
+              {
+                item: 'minecraft:enchanted_book',
+              },
+              {
+                item: 'minecraft:enchanted_book',
+              },
+              {
+                item: 'minecraft:enchanted_book',
+              },
+              {
+                item: 'minecraft:enchanted_book',
+              },
+              {
+                item: 'minecraft:enchanted_book',
+              },
+              {
+                item: 'charcoal_pit:prismarine_dust',
+              },
+              {
+                item: 'charcoal_pit:prismarine_dust',
+              },
+            ],
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/custom_ritual',
             },
-            {
-              item: 'minecraft:enchanted_book',
+            result: {
+              item: 'charcoal_pit:xp_crystal',
             },
-            {
-              item: 'minecraft:enchanted_book',
-            },
-            {
-              item: 'minecraft:enchanted_book',
-            },
-            {
-              item: 'minecraft:enchanted_book',
-            },
-            {
-              item: 'minecraft:enchanted_book',
-            },
-            {
-              item: 'minecraft:enchanted_book',
-            },
-            {
-              item: 'minecraft:enchanted_book',
-            },
-            {
-              item: 'charcoal_pit:prismarine_dust',
-            },
-            {
-              item: 'charcoal_pit:prismarine_dust',
-            },
-          ],
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/custom_ritual',
-          },
-          result: {
-            item: 'charcoal_pit:xp_crystal',
-          },
-        });
+          })
+          .id('inconvenient:ritual_xp_crystal');
       },
     },
     {
       id: 'familiars',
       recipe: () => {
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 60,
-          entity_to_sacrifice: {
-            tag: 'forge:bats',
-            display_name: 'ritual.occultism.sacrifice.bats',
-          },
-          entity_to_summon: 'occultism:bat_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_bat',
-          },
-          ingredients: [
-            {
-              item: 'minecraft:golden_carrot',
-            },
-            {
-              item: 'minecraft:spider_eye',
-            },
-            {
-              item: 'minecraft:glowstone',
-            },
-            {
-              item: 'rankine:sulfur',
-            },
-            {
-              item: 'minecraft:lava_bucket',
-            },
-            {
-              item: 'minecraft:torch',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_foliot',
-          },
-          pentacle_id: 'occultism:possess_foliot',
-          duration: 30,
-          entity_to_summon: 'occultism:beaver_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_beaver',
-          },
-          ingredients: [
-            {
-              tag: 'minecraft:saplings',
-            },
-            {
-              tag: 'minecraft:saplings',
-            },
-            {
-              tag: 'minecraft:saplings',
-            },
-            {
-              tag: 'minecraft:saplings',
-            },
-            {
-              item: 'minecraft:crimson_fungus',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 30,
-          entity_to_sacrifice: {
-            tag: 'forge:spiders',
-            display_name: 'ritual.occultism.sacrifice.spiders',
-          },
-          entity_to_summon: 'occultism:beholder_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_beholder',
-          },
-          ingredients: [
-            {
-              item: 'minecraft:spider_eye',
-            },
-            {
-              item: 'minecraft:spider_eye',
-            },
-            {
-              item: 'minecraft:spider_eye',
-            },
-            {
-              item: 'minecraft:spider_eye',
-            },
-            {
-              tag: 'forge:dusts/glowstone',
-            },
-            {
-              tag: 'forge:dusts/glowstone',
-            },
-            {
-              tag: 'forge:dusts/glowstone',
-            },
-            {
-              tag: 'forge:dusts/glowstone',
-            },
-            {
-              item: 'rankine:sulfur',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_foliot',
-          },
-          pentacle_id: 'occultism:possess_foliot',
-          duration: 30,
-          entity_to_sacrifice: {
-            tag: 'forge:zombies',
-            display_name: 'ritual.occultism.sacrifice.zombies',
-          },
-          entity_to_summon: 'occultism:blacksmith_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_blacksmith',
-          },
-          ingredients: [
-            {
-              item: 'minecraft:golden_shovel',
-            },
-            {
-              item: 'minecraft:golden_pickaxe',
-            },
-            {
-              item: 'minecraft:golden_axe',
-            },
-            {
-              item: 'minecraft:anvil',
-            },
-            {
-              tag: 'forge:stone',
-            },
-            {
-              tag: 'forge:stone',
-            },
-            {
-              tag: 'forge:stone',
-            },
-            {
-              tag: 'forge:stone',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 60,
-          entity_to_sacrifice: {
-            tag: 'forge:pigs',
-            display_name: 'ritual.occultism.sacrifice.pigs',
-          },
-          entity_to_summon: 'occultism:chimera_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_chimera',
-          },
-          ingredients: [
-            {
-              tag: 'forge:leather',
-            },
-            {
-              tag: 'forge:string',
-            },
-            {
-              tag: 'forge:feathers',
-            },
-            {
-              tag: 'forge:bones',
-            },
-            {
-              item: 'farmersdelight:ham',
-            },
-            {
-              item: 'minecraft:porkchop',
-            },
-            {
-              item: 'minecraft:chicken',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 60,
-          entity_to_sacrifice: {
-            tag: 'forge:squid',
-            display_name: 'ritual.occultism.sacrifice.squid',
-          },
-          entity_to_summon: 'occultism:cthulhu_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_cthulhu',
-          },
-          ingredients: [
-            {
-              tag: 'minecraft:fishes',
-            },
-            {
-              tag: 'minecraft:fishes',
-            },
-            {
-              tag: 'minecraft:fishes',
-            },
-            {
-              tag: 'minecraft:fishes',
-            },
-            {
-              tag: 'minecraft:fishes',
-            },
-            {
-              tag: 'minecraft:fishes',
-            },
-            {
-              tag: 'minecraft:fishes',
-            },
-            {
-              item: 'farmersrespite:purulent_tea',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_foliot',
-          },
-          pentacle_id: 'occultism:possess_foliot',
-          duration: 15,
-          entity_to_sacrifice: {
-            tag: 'forge:pigs',
-            display_name: 'ritual.occultism.sacrifice.pigs',
-          },
-          entity_to_summon: 'occultism:deer_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_deer',
-          },
-          ingredients: [
-            {
-              tag: 'forge:rods/wooden',
-            },
-            {
-              tag: 'forge:rods/wooden',
-            },
-            {
-              tag: 'forge:rods/wooden',
-            },
-            {
-              tag: 'forge:rods/wooden',
-            },
-            {
-              tag: 'forge:string',
-            },
-            {
-              tag: 'forge:string',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 60,
-          entity_to_sacrifice: {
-            tag: 'forge:pigs',
-            display_name: 'ritual.occultism.sacrifice.pigs',
-          },
-          entity_to_summon: 'occultism:devil_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_devil',
-          },
-          ingredients: [
-            {
-              item: 'minecraft:lava_bucket',
-            },
-            {
-              item: 'minecraft:lava_bucket',
-            },
-            {
-              item: 'minecraft:lava_bucket',
-            },
-            {
-              item: 'minecraft:lava_bucket',
-            },
-            {
-              tag: 'forge:bones',
-            },
-            {
-              tag: 'forge:bones',
-            },
-            {
-              tag: 'forge:bones',
-            },
-            {
-              tag: 'forge:bones',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 60,
-          entity_to_sacrifice: {
-            tag: 'forge:pigs',
-            display_name: 'ritual.occultism.sacrifice.pigs',
-          },
-          entity_to_summon: 'occultism:dragon_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_dragon',
-          },
-          ingredients: [
-            {
-              item: 'minecraft:lava_bucket',
-            },
-            {
-              item: 'minecraft:flint_and_steel',
-            },
-            {
-              tag: 'forge:storage_blocks/coal',
-            },
-            {
-              tag: 'forge:storage_blocks/quartz',
-            },
-            {
-              tag: 'forge:storage_blocks/gold',
-            },
-            {
-              tag: 'forge:gunpowder',
-            },
-            {
-              tag: 'forge:obsidian',
-            },
-            {
-              tag: 'forge:obsidian',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 30,
-          entity_to_sacrifice: {
-            tag: 'forge:horses',
-            display_name: 'ritual.occultism.sacrifice.horses',
-          },
-          entity_to_summon: 'occultism:fairy_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_fairy',
-          },
-          ingredients: [
-            {
-              item: 'minecraft:golden_apple',
-            },
-            {
-              item: 'minecraft:golden_apple',
-            },
-            {
-              item: 'minecraft:ghast_tear',
-            },
-            {
-              item: 'minecraft:gunpowder',
-            },
-            {
-              item: 'minecraft:gunpowder',
-            },
-            {
-              item: 'minecraft:gunpowder',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_foliot',
-          },
-          pentacle_id: 'occultism:possess_foliot',
-          duration: 30,
-          entity_to_sacrifice: {
-            tag: 'forge:zombies',
-            display_name: 'ritual.occultism.sacrifice.zombies',
-          },
-          entity_to_summon: 'occultism:greedy_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_greedy',
-          },
-          ingredients: [
-            {
-              tag: 'forge:chests',
-            },
-            {
-              tag: 'forge:storage_blocks/gold',
-            },
-            {
-              item: 'minecraft:dispenser',
-            },
-            {
-              item: 'minecraft:hopper',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_afrit',
-          },
-          pentacle_id: 'occultism:possess_afrit',
-          duration: 60,
-          entity_to_sacrifice: {
-            tag: 'occultism:humans',
-            display_name: 'ritual.occultism.sacrifice.humans',
-          },
-          entity_to_summon: 'occultism:guardian_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_guardian',
-          },
-          ingredients: [
-            {
-              item: 'create:chromatic_compound',
-            },
-            {
-              item: 'create:chromatic_compound',
-            },
-            {
-              item: 'create:chromatic_compound',
-            },
-            {
-              item: 'create:chromatic_compound',
-            },
-            {
-              item: 'minecraft:golden_apple',
-            },
-            {
-              item: 'minecraft:golden_apple',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 60,
-          entity_to_sacrifice: {
-            tag: 'forge:golems/snow',
-            display_name: 'ritual.occultism.sacrifice.snow_golem',
-          },
-          entity_to_summon: 'occultism:headless_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_headless',
-          },
-          ingredients: [
-            {
-              item: 'kubejs:wheat',
-            },
-            {
-              item: 'kubejs:wheat',
-            },
-            {
-              item: 'minecraft:hay_block',
-            },
-            {
-              tag: 'forge:rods/wooden',
-            },
-            {
-              tag: 'forge:rods/wooden',
-            },
-            {
-              item: 'minecraft:carved_pumpkin',
-            },
-            {
-              item: 'minecraft:warped_fungus',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:familiar',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:possess_djinni',
-          duration: 30,
-          entity_to_sacrifice: {
-            tag: 'forge:pigs',
-            display_name: 'ritual.occultism.sacrifice.pigs',
-          },
-          entity_to_summon: 'occultism:mummy_familiar',
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/familiar_mummy',
-          },
-          ingredients: [
-            {
-              tag: 'forge:slimeballs',
-            },
-            {
-              tag: 'forge:slimeballs',
-            },
-            {
-              item: 'minecraft:paper',
-            },
-            {
-              item: 'minecraft:paper',
-            },
-            {
-              item: 'rankine:gun_cotton',
-            },
-            {
-              item: 'rankine:gun_cotton',
-            },
-            {
-              item: 'rankine:gun_cotton',
-            },
-            {
-              item: 'rankine:gun_cotton',
-            },
-          ],
-          result: {
-            item: 'occultism:jei_dummy/none',
-          },
-        });
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 60,
+            entity_to_sacrifice: {
+              tag: 'forge:bats',
+              display_name: 'ritual.occultism.sacrifice.bats',
+            },
+            entity_to_summon: 'occultism:bat_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_bat',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:golden_carrot',
+              },
+              {
+                item: 'minecraft:spider_eye',
+              },
+              {
+                item: 'minecraft:glowstone',
+              },
+              {
+                item: 'rankine:sulfur',
+              },
+              {
+                item: 'minecraft:lava_bucket',
+              },
+              {
+                item: 'minecraft:torch',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_bat_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:possess_foliot',
+            duration: 30,
+            entity_to_summon: 'occultism:beaver_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_beaver',
+            },
+            ingredients: [
+              {
+                tag: 'minecraft:saplings',
+              },
+              {
+                tag: 'minecraft:saplings',
+              },
+              {
+                tag: 'minecraft:saplings',
+              },
+              {
+                tag: 'minecraft:saplings',
+              },
+              {
+                item: 'minecraft:crimson_fungus',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_beaver_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:spiders',
+              display_name: 'ritual.occultism.sacrifice.spiders',
+            },
+            entity_to_summon: 'occultism:beholder_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_beholder',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:spider_eye',
+              },
+              {
+                item: 'minecraft:spider_eye',
+              },
+              {
+                item: 'minecraft:spider_eye',
+              },
+              {
+                item: 'minecraft:spider_eye',
+              },
+              {
+                tag: 'forge:dusts/glowstone',
+              },
+              {
+                tag: 'forge:dusts/glowstone',
+              },
+              {
+                tag: 'forge:dusts/glowstone',
+              },
+              {
+                tag: 'forge:dusts/glowstone',
+              },
+              {
+                item: 'rankine:sulfur',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_beholder_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:possess_foliot',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:zombies',
+              display_name: 'ritual.occultism.sacrifice.zombies',
+            },
+            entity_to_summon: 'occultism:blacksmith_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_blacksmith',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:golden_shovel',
+              },
+              {
+                item: 'minecraft:golden_pickaxe',
+              },
+              {
+                item: 'minecraft:golden_axe',
+              },
+              {
+                item: 'minecraft:anvil',
+              },
+              {
+                tag: 'forge:stone',
+              },
+              {
+                tag: 'forge:stone',
+              },
+              {
+                tag: 'forge:stone',
+              },
+              {
+                tag: 'forge:stone',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_blacksmith_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 60,
+            entity_to_sacrifice: {
+              tag: 'forge:pigs',
+              display_name: 'ritual.occultism.sacrifice.pigs',
+            },
+            entity_to_summon: 'occultism:chimera_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_chimera',
+            },
+            ingredients: [
+              {
+                tag: 'forge:leather',
+              },
+              {
+                tag: 'forge:string',
+              },
+              {
+                tag: 'forge:feathers',
+              },
+              {
+                tag: 'forge:bones',
+              },
+              {
+                item: 'farmersdelight:ham',
+              },
+              {
+                item: 'minecraft:porkchop',
+              },
+              {
+                item: 'minecraft:chicken',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_chimera_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 60,
+            entity_to_sacrifice: {
+              tag: 'forge:squid',
+              display_name: 'ritual.occultism.sacrifice.squid',
+            },
+            entity_to_summon: 'occultism:cthulhu_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_cthulhu',
+            },
+            ingredients: [
+              {
+                tag: 'minecraft:fishes',
+              },
+              {
+                tag: 'minecraft:fishes',
+              },
+              {
+                tag: 'minecraft:fishes',
+              },
+              {
+                tag: 'minecraft:fishes',
+              },
+              {
+                tag: 'minecraft:fishes',
+              },
+              {
+                tag: 'minecraft:fishes',
+              },
+              {
+                tag: 'minecraft:fishes',
+              },
+              {
+                item: 'farmersrespite:purulent_tea',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_cthulhu_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:possess_foliot',
+            duration: 15,
+            entity_to_sacrifice: {
+              tag: 'forge:pigs',
+              display_name: 'ritual.occultism.sacrifice.pigs',
+            },
+            entity_to_summon: 'occultism:deer_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_deer',
+            },
+            ingredients: [
+              {
+                tag: 'forge:rods/wooden',
+              },
+              {
+                tag: 'forge:rods/wooden',
+              },
+              {
+                tag: 'forge:rods/wooden',
+              },
+              {
+                tag: 'forge:rods/wooden',
+              },
+              {
+                tag: 'forge:string',
+              },
+              {
+                tag: 'forge:string',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_deer_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 60,
+            entity_to_sacrifice: {
+              tag: 'forge:pigs',
+              display_name: 'ritual.occultism.sacrifice.pigs',
+            },
+            entity_to_summon: 'occultism:devil_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_devil',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:lava_bucket',
+              },
+              {
+                item: 'minecraft:lava_bucket',
+              },
+              {
+                item: 'minecraft:lava_bucket',
+              },
+              {
+                item: 'minecraft:lava_bucket',
+              },
+              {
+                tag: 'forge:bones',
+              },
+              {
+                tag: 'forge:bones',
+              },
+              {
+                tag: 'forge:bones',
+              },
+              {
+                tag: 'forge:bones',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_devil_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 60,
+            entity_to_sacrifice: {
+              tag: 'forge:pigs',
+              display_name: 'ritual.occultism.sacrifice.pigs',
+            },
+            entity_to_summon: 'occultism:dragon_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_dragon',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:lava_bucket',
+              },
+              {
+                item: 'minecraft:flint_and_steel',
+              },
+              {
+                tag: 'forge:storage_blocks/coal',
+              },
+              {
+                tag: 'forge:storage_blocks/quartz',
+              },
+              {
+                tag: 'forge:storage_blocks/gold',
+              },
+              {
+                tag: 'forge:gunpowder',
+              },
+              {
+                tag: 'forge:obsidian',
+              },
+              {
+                tag: 'forge:obsidian',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_dragon_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:horses',
+              display_name: 'ritual.occultism.sacrifice.horses',
+            },
+            entity_to_summon: 'occultism:fairy_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_fairy',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:golden_apple',
+              },
+              {
+                item: 'minecraft:golden_apple',
+              },
+              {
+                item: 'minecraft:ghast_tear',
+              },
+              {
+                item: 'minecraft:gunpowder',
+              },
+              {
+                item: 'minecraft:gunpowder',
+              },
+              {
+                item: 'minecraft:gunpowder',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_fairy_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:possess_foliot',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:zombies',
+              display_name: 'ritual.occultism.sacrifice.zombies',
+            },
+            entity_to_summon: 'occultism:greedy_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_greedy',
+            },
+            ingredients: [
+              {
+                tag: 'forge:chests',
+              },
+              {
+                tag: 'forge:storage_blocks/gold',
+              },
+              {
+                item: 'minecraft:dispenser',
+              },
+              {
+                item: 'minecraft:hopper',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_greedy_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_afrit',
+            },
+            pentacle_id: 'occultism:possess_afrit',
+            duration: 60,
+            entity_to_sacrifice: {
+              tag: 'occultism:humans',
+              display_name: 'ritual.occultism.sacrifice.humans',
+            },
+            entity_to_summon: 'occultism:guardian_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_guardian',
+            },
+            ingredients: [
+              {
+                item: 'create:chromatic_compound',
+              },
+              {
+                item: 'create:chromatic_compound',
+              },
+              {
+                item: 'create:chromatic_compound',
+              },
+              {
+                item: 'create:chromatic_compound',
+              },
+              {
+                item: 'minecraft:golden_apple',
+              },
+              {
+                item: 'minecraft:golden_apple',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_guardian_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 60,
+            entity_to_sacrifice: {
+              tag: 'forge:golems/snow',
+              display_name: 'ritual.occultism.sacrifice.snow_golem',
+            },
+            entity_to_summon: 'occultism:headless_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_headless',
+            },
+            ingredients: [
+              {
+                item: 'kubejs:wheat',
+              },
+              {
+                item: 'kubejs:wheat',
+              },
+              {
+                item: 'minecraft:hay_block',
+              },
+              {
+                tag: 'forge:rods/wooden',
+              },
+              {
+                tag: 'forge:rods/wooden',
+              },
+              {
+                item: 'minecraft:carved_pumpkin',
+              },
+              {
+                item: 'minecraft:warped_fungus',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_headless_familiar');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:familiar',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:pigs',
+              display_name: 'ritual.occultism.sacrifice.pigs',
+            },
+            entity_to_summon: 'occultism:mummy_familiar',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_mummy',
+            },
+            ingredients: [
+              {
+                tag: 'forge:slimeballs',
+              },
+              {
+                tag: 'forge:slimeballs',
+              },
+              {
+                item: 'minecraft:paper',
+              },
+              {
+                item: 'minecraft:paper',
+              },
+              {
+                item: 'rankine:gun_cotton',
+              },
+              {
+                item: 'rankine:gun_cotton',
+              },
+              {
+                item: 'rankine:gun_cotton',
+              },
+              {
+                item: 'rankine:gun_cotton',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_mummy_familiar');
       },
     },
     {
       id: 'soul_gem',
       recipe: () => {
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:craft',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_djinni',
-          },
-          pentacle_id: 'occultism:craft_djinni',
-          duration: 60,
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/craft_soul_gem',
-          },
-          ingredients: [
-            {
-              item: 'create:chromatic_compound',
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:craft',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
             },
-            {
-              tag: 'forge:ingots/copper',
+            pentacle_id: 'occultism:craft_djinni',
+            duration: 60,
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/craft_soul_gem',
             },
-            {
-              tag: 'forge:ingots/silver',
+            ingredients: [
+              {
+                item: 'create:chromatic_compound',
+              },
+              {
+                tag: 'forge:ingots/copper',
+              },
+              {
+                tag: 'forge:ingots/silver',
+              },
+              {
+                tag: 'forge:ingots/gold',
+              },
+              {
+                tag: 'forge:ingots/iesnium',
+              },
+              {
+                item: 'minecraft:soul_sand',
+              },
+              {
+                item: 'minecraft:soul_sand',
+              },
+              {
+                item: 'minecraft:soul_sand',
+              },
+              {
+                item: 'minecraft:soul_sand',
+              },
+            ],
+            result: {
+              item: 'occultism:soul_gem',
             },
-            {
-              tag: 'forge:ingots/gold',
-            },
-            {
-              tag: 'forge:ingots/iesnium',
-            },
-            {
-              item: 'minecraft:soul_sand',
-            },
-            {
-              item: 'minecraft:soul_sand',
-            },
-            {
-              item: 'minecraft:soul_sand',
-            },
-            {
-              item: 'minecraft:soul_sand',
-            },
-          ],
-          result: {
-            item: 'occultism:soul_gem',
-          },
-        });
+          })
+          .id('inconvenient:ritual_soul_gem');
       },
     },
     {

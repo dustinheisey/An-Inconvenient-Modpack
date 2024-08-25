@@ -12,10 +12,12 @@ onEvent('recipes', event => {
               'rankine:totem_of_timesaving',
             ].forEach(id => event.remove({id: id}));
 
-            event.shaped('rankine:totem_of_hastening', ['aaa', 'aba', 'aaa'], {
-              a: 'tconstruct:amethyst_bronze_ingot',
-              b: 'blue_skies:diopside_block',
-            });
+            event
+              .shaped('rankine:totem_of_hastening', ['aaa', 'aba', 'aaa'], {
+                a: 'tconstruct:amethyst_bronze_ingot',
+                b: 'blue_skies:diopside_block',
+              })
+              .id('inconvenient:shaped_totem_of_hastening');
 
             event
               .shaped('rankine:totem_of_infusing', ['aaa', 'aba', 'aaa'], {
@@ -95,7 +97,7 @@ onEvent('recipes', event => {
                     c: `kubejs:${dimension}_lost_page`,
                   }
                 )
-                .stage('chapter_3');
+                .id(`inconvenient:shaped_${dimension}_lost_story`);
             });
           },
         },
@@ -145,80 +147,92 @@ onEvent('recipes', event => {
             ]);
 
             ['helmet', 'chestplate', 'leggings', 'boots'].forEach(armor => {
-              event.custom({
-                type: 'malum:spirit_infusion',
-                input: {item: `blue_skies:horizonite_${armor}`},
-                output: {item: `malum:soul_stained_steel_${armor}`},
-                extra_items: [
-                  {
-                    item: 'malum:soul_stained_steel_ingot',
-                    count: 4,
-                  },
-                  {
-                    item: 'malum:hex_ash',
-                    count: 1,
-                  },
-                  {
-                    item: 'malum:processed_soulstone',
-                    count: 2,
-                  },
-                  {
-                    item: 'malum:twisted_rock',
-                    count: 8,
-                  },
-                ],
-                spirits: [
-                  {
-                    type: 'earthen',
-                    count: 8,
-                  },
-                  {
-                    type: 'wicked',
-                    count: 4,
-                  },
-                  {
-                    type: 'arcane',
-                    count: 2,
-                  },
-                ],
-              });
+              event
+                .custom({
+                  type: 'malum:spirit_infusion',
+                  input: {item: `blue_skies:horizonite_${armor}`},
+                  output: {item: `malum:soul_stained_steel_${armor}`},
+                  extra_items: [
+                    {
+                      item: 'malum:soul_stained_steel_ingot',
+                      count: 4,
+                    },
+                    {
+                      item: 'malum:hex_ash',
+                      count: 1,
+                    },
+                    {
+                      item: 'malum:processed_soulstone',
+                      count: 2,
+                    },
+                    {
+                      item: 'malum:twisted_rock',
+                      count: 8,
+                    },
+                  ],
+                  spirits: [
+                    {
+                      type: 'earthen',
+                      count: 8,
+                    },
+                    {
+                      type: 'wicked',
+                      count: 4,
+                    },
+                    {
+                      type: 'arcane',
+                      count: 2,
+                    },
+                  ],
+                })
+                .id(`inconvenient:spirit_infusion_soul_stained_steel_${armor}`);
             });
 
-            event.custom({
-              type: 'bloodmagic:array',
-              texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
-              baseinput: {item: 'bloodmagic:reagentbinding'},
-              addedinput: {item: 'cataclysm:ignitium_helmet'},
-              output: {item: 'bloodmagic:livinghelmet'},
-            });
-            event.custom({
-              type: 'bloodmagic:array',
-              texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
-              baseinput: {item: 'bloodmagic:reagentbinding'},
-              addedinput: {item: 'cataclysm:ignitium_chestplate'},
-              output: {item: 'bloodmagic:livingplate'},
-            });
-            event.custom({
-              type: 'bloodmagic:array',
-              texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
-              baseinput: {item: 'bloodmagic:reagentbinding'},
-              addedinput: {item: 'cataclysm:ignitium_leggings'},
-              output: {item: 'bloodmagic:livingleggings'},
-            });
-            event.custom({
-              type: 'bloodmagic:array',
-              texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
-              baseinput: {item: 'bloodmagic:reagentbinding'},
-              addedinput: {item: 'cataclysm:ignitium_boots'},
-              output: {item: 'bloodmagic:livingboots'},
-            });
-            event.custom({
-              type: 'bloodmagic:array',
-              texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
-              baseinput: {item: 'bloodmagic:reagentbinding'},
-              addedinput: {item: 'cataclysm:ignitium_ingot'},
-              output: {item: 'bloodmagic:upgradetrainer'},
-            });
+            event
+              .custom({
+                type: 'bloodmagic:array',
+                texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
+                baseinput: {item: 'bloodmagic:reagentbinding'},
+                addedinput: {item: 'cataclysm:ignitium_helmet'},
+                output: {item: 'bloodmagic:livinghelmet'},
+              })
+              .id('inconvenient:array_livinghelmet');
+            event
+              .custom({
+                type: 'bloodmagic:array',
+                texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
+                baseinput: {item: 'bloodmagic:reagentbinding'},
+                addedinput: {item: 'cataclysm:ignitium_chestplate'},
+                output: {item: 'bloodmagic:livingplate'},
+              })
+              .id('inconvenient:array_livingplate');
+            event
+              .custom({
+                type: 'bloodmagic:array',
+                texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
+                baseinput: {item: 'bloodmagic:reagentbinding'},
+                addedinput: {item: 'cataclysm:ignitium_leggings'},
+                output: {item: 'bloodmagic:livingleggings'},
+              })
+              .id('inconvenient:array_livingleggings');
+            event
+              .custom({
+                type: 'bloodmagic:array',
+                texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
+                baseinput: {item: 'bloodmagic:reagentbinding'},
+                addedinput: {item: 'cataclysm:ignitium_boots'},
+                output: {item: 'bloodmagic:livingboots'},
+              })
+              .id('inconvenient:array_livingboots');
+            event
+              .custom({
+                type: 'bloodmagic:array',
+                texture: `bloodmagic:textures/models/alchemyarrays/bindingarray.png`,
+                baseinput: {item: 'bloodmagic:reagentbinding'},
+                addedinput: {item: 'cataclysm:ignitium_ingot'},
+                output: {item: 'bloodmagic:upgradetrainer'},
+              })
+              .id('inconvenient:array_upgradetrainer');
           },
         },
       ],
@@ -229,72 +243,80 @@ onEvent('recipes', event => {
       id: 'briggs',
       recipe: () => {
         overworldWoods.forEach(wood => {
-          event.custom({
-            type: 'extendedcrafting:shaped_table',
-            pattern: ['aba', 'cbc', 'ddd'],
-            key: {
-              a: {item: 'minecraft:lead'},
-              b: {item: 'ironchest:copper_chest'},
-              c: {item: 'smallships:sail'},
-              d: {item: `smallships:${wood}_cog`},
-            },
-            result: {item: `smallships:${wood}_brigg`},
-          });
+          event
+            .custom({
+              type: 'extendedcrafting:shaped_table',
+              pattern: ['aba', 'cbc', 'ddd'],
+              key: {
+                a: {item: 'minecraft:lead'},
+                b: {item: 'ironchest:copper_chest'},
+                c: {item: 'smallships:sail'},
+                d: {item: `smallships:${wood}_cog`},
+              },
+              result: {item: `smallships:${wood}_brigg`},
+            })
+            .id(`inconvenient:basic_table_${wood}_brigg`);
         });
       },
     },
     {
       id: 'magician_blood_orb',
       recipe: () => {
-        event.custom({
-          type: 'bloodmagic:altar',
-          output: {
-            item: 'bloodmagic:magicianbloodorb',
-          },
-          input: {
-            item: 'twilightforest:fiery_block',
-          },
-          altarSyphon: 100000,
-          upgradeLevel: 2,
-          consumptionRate: 20,
-          drainRate: 20,
-        });
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            output: {
+              item: 'bloodmagic:magicianbloodorb',
+            },
+            input: {
+              item: 'twilightforest:fiery_block',
+            },
+            altarSyphon: 100000,
+            upgradeLevel: 2,
+            consumptionRate: 20,
+            drainRate: 20,
+          })
+          .id('inconvenient:altar_fiery_block');
       },
       children: [
         {
           id: 'apprentice_blood_orb',
           recipe: () => {
-            event.custom({
-              type: 'bloodmagic:altar',
-              output: {
-                item: 'bloodmagic:apprenticebloodorb',
-              },
-              input: {
-                item: 'tconstruct:slimesteel_block',
-              },
-              altarSyphon: 50000,
-              upgradeLevel: 1,
-              consumptionRate: 50,
-              drainRate: 50,
-            });
+            event
+              .custom({
+                type: 'bloodmagic:altar',
+                output: {
+                  item: 'bloodmagic:apprenticebloodorb',
+                },
+                input: {
+                  item: 'tconstruct:slimesteel_block',
+                },
+                altarSyphon: 50000,
+                upgradeLevel: 1,
+                consumptionRate: 50,
+                drainRate: 50,
+              })
+              .id('inconvenient:altar_slimesteel_block');
           },
           children: [
             {
               id: 'weak_blood_orb',
               recipe: () => {
-                event.custom({
-                  type: 'bloodmagic:altar',
-                  output: {
-                    item: 'bloodmagic:weakbloodorb',
-                  },
-                  input: {
-                    item: 'undergarden:utherium_crystal',
-                  },
-                  altarSyphon: 5000,
-                  upgradeLevel: 0,
-                  consumptionRate: 5,
-                  drainRate: 5,
-                });
+                event
+                  .custom({
+                    type: 'bloodmagic:altar',
+                    output: {
+                      item: 'bloodmagic:weakbloodorb',
+                    },
+                    input: {
+                      item: 'undergarden:utherium_crystal',
+                    },
+                    altarSyphon: 5000,
+                    upgradeLevel: 0,
+                    consumptionRate: 5,
+                    drainRate: 5,
+                  })
+                  .id('inconvenient:altar_weakbloodorb');
               },
             },
           ],
@@ -316,55 +338,61 @@ onEvent('recipes', event => {
     {
       id: 'advanced_chunk_loader',
       recipe: () => {
-        event.custom({
-          type: 'bloodmagic:altar',
-          input: {
-            item: 'chunkloaders:basic_chunk_loader',
-          },
-          output: {
-            item: 'chunkloaders:advanced_chunk_loader',
-          },
-          upgradeLevel: 3,
-          altarSyphon: 100000,
-          consumptionRate: 100,
-          drainRate: 100,
-        });
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            input: {
+              item: 'chunkloaders:basic_chunk_loader',
+            },
+            output: {
+              item: 'chunkloaders:advanced_chunk_loader',
+            },
+            upgradeLevel: 3,
+            altarSyphon: 100000,
+            consumptionRate: 100,
+            drainRate: 100,
+          })
+          .id('inconvenient:altar_advanced_chunk_loader');
       },
       children: [
         {
           id: 'basic_chunk_loader',
           recipe: () => {
-            event.custom({
-              type: 'bloodmagic:altar',
-              input: {
-                item: 'chunkloaders:single_chunk_loader',
-              },
-              output: {
-                item: 'chunkloaders:basic_chunk_loader',
-              },
-              upgradeLevel: 3,
-              altarSyphon: 30000,
-              consumptionRate: 30,
-              drainRate: 30,
-            });
+            event
+              .custom({
+                type: 'bloodmagic:altar',
+                input: {
+                  item: 'chunkloaders:single_chunk_loader',
+                },
+                output: {
+                  item: 'chunkloaders:basic_chunk_loader',
+                },
+                upgradeLevel: 3,
+                altarSyphon: 30000,
+                consumptionRate: 30,
+                drainRate: 30,
+              })
+              .id('inconvenient:altar_basic_chunk_loader');
           },
           children: [
             {
               id: 'single_chunkloader',
               recipe: () => {
-                event.custom({
-                  type: 'bloodmagic:altar',
-                  input: {
-                    item: 'charcoal_pit:nether_shard',
-                  },
-                  output: {
-                    item: 'chunkloaders:single_chunk_loader',
-                  },
-                  upgradeLevel: 2,
-                  altarSyphon: 15000,
-                  consumptionRate: 5,
-                  drainRate: 5,
-                });
+                event
+                  .custom({
+                    type: 'bloodmagic:altar',
+                    input: {
+                      item: 'charcoal_pit:nether_shard',
+                    },
+                    output: {
+                      item: 'chunkloaders:single_chunk_loader',
+                    },
+                    upgradeLevel: 2,
+                    altarSyphon: 15000,
+                    consumptionRate: 5,
+                    drainRate: 5,
+                  })
+                  .id('inconvenient:altar_single_chunk_loader');
               },
               children: [
                 {
@@ -396,44 +424,46 @@ onEvent('recipes', event => {
     {
       id: 'surprisingly_substantial_satchel',
       recipe: () => {
-        event.custom({
-          type: 'occultism:ritual',
-          ritual_type: 'occultism:craft_with_spirit_name',
-          activation_item: {
-            item: 'occultism:book_of_binding_bound_foliot',
-          },
-          pentacle_id: 'occultism:craft_foliot',
-          duration: 240,
-          ritual_dummy: {
-            item: 'occultism:ritual_dummy/craft_satchel',
-          },
-          ingredients: [
-            {
-              item: 'ecofriendly:recycled_carrier_bag_ym',
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:craft_with_spirit_name',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
             },
-            {
-              tag: 'forge:leather',
+            pentacle_id: 'occultism:craft_foliot',
+            duration: 240,
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/craft_satchel',
             },
-            {
-              tag: 'forge:leather',
+            ingredients: [
+              {
+                item: 'ecofriendly:recycled_carrier_bag_ym',
+              },
+              {
+                tag: 'forge:leather',
+              },
+              {
+                tag: 'forge:leather',
+              },
+              {
+                tag: 'forge:string',
+              },
+              {
+                tag: 'forge:ingots/silver',
+              },
+              {
+                item: 'create:powdered_obsidian',
+              },
+              {
+                item: 'create:powdered_obsidian',
+              },
+            ],
+            result: {
+              item: 'occultism:satchel',
             },
-            {
-              tag: 'forge:string',
-            },
-            {
-              tag: 'forge:ingots/silver',
-            },
-            {
-              item: 'create:powdered_obsidian',
-            },
-            {
-              item: 'create:powdered_obsidian',
-            },
-          ],
-          result: {
-            item: 'occultism:satchel',
-          },
-        });
+          })
+          .id('inconvenient:ritual_surprisingly_substantial_satchel');
       },
     },
     {
@@ -458,85 +488,117 @@ onEvent('recipes', event => {
           'malum:bi_prideweave',
         ].forEach(id => event.remove({id: id}));
 
-        event.shapeless('malum:pride_prideweave', [
-          'malum:esoteric_spool',
-          'undergarden:regalium_crystal',
-        ]);
+        event
+          .shapeless('malum:pride_prideweave', [
+            'malum:esoteric_spool',
+            'undergarden:regalium_crystal',
+          ])
+          .id('inconvenient:shapeless_pride_prideweave');
 
-        event.shapeless('malum:genderfluid_prideweave', [
-          'malum:esoteric_spool',
-          'minecraft:lapis_lazuli',
-        ]);
+        event
+          .shapeless('malum:genderfluid_prideweave', [
+            'malum:esoteric_spool',
+            'minecraft:lapis_lazuli',
+          ])
+          .id('inconvenient:shapeless_genderfluid_prideweave');
 
-        event.shapeless('malum:demiboy_prideweave', [
-          'malum:esoteric_spool',
-          'blue_skies:moonstone',
-        ]);
+        event
+          .shapeless('malum:demiboy_prideweave', [
+            'malum:esoteric_spool',
+            'blue_skies:moonstone',
+          ])
+          .id('inconvenient:shapeless_demiboy_prideweave');
 
-        event.shapeless('malum:ace_prideweave', [
-          'malum:esoteric_spool',
-          'rankine:galena',
-        ]);
+        event
+          .shapeless('malum:ace_prideweave', [
+            'malum:esoteric_spool',
+            'rankine:galena',
+          ])
+          .id('inconvenient:shapeless_ace_prideweave');
 
-        event.shapeless('malum:plural_prideweave', [
-          'malum:esoteric_spool',
-          'rankine:malachite',
-        ]);
+        event
+          .shapeless('malum:plural_prideweave', [
+            'malum:esoteric_spool',
+            'rankine:malachite',
+          ])
+          .id('inconvenient:shapeless_plural_prideweave');
 
-        event.shapeless('malum:lesbian_prideweave', [
-          'malum:esoteric_spool',
-          'undergarden:utherium_crystal',
-        ]);
+        event
+          .shapeless('malum:lesbian_prideweave', [
+            'malum:esoteric_spool',
+            'undergarden:utherium_crystal',
+          ])
+          .id('inconvenient:shapeless_lesbian_prideweave');
 
-        event.shapeless('malum:demigirl_prideweave', [
-          'malum:esoteric_spool',
-          'blue_skies:pyrope_gem',
-        ]);
+        event
+          .shapeless('malum:demigirl_prideweave', [
+            'malum:esoteric_spool',
+            'blue_skies:pyrope_gem',
+          ])
+          .id('inconvenient:shapeless_demigirl_prideweave');
 
-        event.shapeless('malum:intersex_prideweave', [
-          'malum:esoteric_spool',
-          'blue_skies:raw_horizonite',
-        ]);
+        event
+          .shapeless('malum:intersex_prideweave', [
+            'malum:esoteric_spool',
+            'blue_skies:raw_horizonite',
+          ])
+          .id('inconvenient:shapeless_intersex_prideweave');
 
-        event.shapeless('malum:poly_prideweave', [
-          'malum:esoteric_spool',
-          'blue_skies:diopside_gem',
-        ]);
+        event
+          .shapeless('malum:poly_prideweave', [
+            'malum:esoteric_spool',
+            'blue_skies:diopside_gem',
+          ])
+          .id('inconvenient:shapeless_poly_prideweave');
 
-        event.shapeless('malum:pan_prideweave', [
-          'malum:esoteric_spool',
-          'blue_skies:raw_ventium',
-        ]);
+        event
+          .shapeless('malum:pan_prideweave', [
+            'malum:esoteric_spool',
+            'blue_skies:raw_ventium',
+          ])
+          .id('inconvenient:shapeless_pan_prideweave');
 
-        event.shapeless('malum:enby_prideweave', [
-          'malum:esoteric_spool',
-          'blue_skies:raw_charoite',
-        ]);
+        event
+          .shapeless('malum:enby_prideweave', [
+            'malum:esoteric_spool',
+            'blue_skies:raw_charoite',
+          ])
+          .id('inconvenient:shapeless_enby_prideweave');
 
-        event.shapeless('malum:aroace_prideweave', [
-          'malum:esoteric_spool',
-          'rankine:acanthite',
-        ]);
+        event
+          .shapeless('malum:aroace_prideweave', [
+            'malum:esoteric_spool',
+            'rankine:acanthite',
+          ])
+          .id('inconvenient:shapeless_aroace_prideweave');
 
-        event.shapeless('malum:trans_prideweave', [
-          'malum:esoteric_spool',
-          'undergarden:raw_froststeel',
-        ]);
+        event
+          .shapeless('malum:trans_prideweave', [
+            'malum:esoteric_spool',
+            'undergarden:raw_froststeel',
+          ])
+          .id('inconvenient:shapeless_trans_prideweave');
 
-        event.shapeless('malum:genderqueer_prideweave', [
-          'malum:esoteric_spool',
-          'minecraft:amethyst_cluster',
-        ]);
+        event
+          .shapeless('malum:genderqueer_prideweave', [
+            'malum:esoteric_spool',
+            'minecraft:amethyst_cluster',
+          ])
+          .id('inconvenient:shapeless_genderqueer_prideweave');
 
-        event.shapeless('malum:gay_prideweave', [
-          'malum:esoteric_spool',
-          'blue_skies:raw_aquite',
-        ]);
+        event
+          .shapeless('malum:gay_prideweave', [
+            'malum:esoteric_spool',
+            'blue_skies:raw_aquite',
+          ])
+          .id('inconvenient:shapeless_gay_prideweave');
 
-        event.shapeless('malum:bi_prideweave', [
-          'malum:esoteric_spool',
-          'blue_skies:raw_falsite',
-        ]);
+        event
+          .shapeless('malum:bi_prideweave', [
+            'malum:esoteric_spool',
+            'blue_skies:raw_falsite',
+          ])
+          .id('inconvenient:shapeless_bi_prideweave');
       },
       children: [
         {
@@ -556,94 +618,102 @@ onEvent('recipes', event => {
     {
       id: 'depthrock_bed',
       recipe: () => {
-        event.shaped('undergarden:depthrock_bed', ['aaa', 'bbb'], {
-          a: 'undergarden:mogmoss',
-          b: '#minecraft:planks',
-        });
+        event
+          .shaped('undergarden:depthrock_bed', ['aaa', 'bbb'], {
+            a: 'undergarden:mogmoss',
+            b: '#minecraft:planks',
+          })
+          .id('inconvenient:shaped_depthrock_bed');
       },
     },
     {
       id: 'paper',
       recipe: () => {
         event.remove({output: 'minecraft:paper'});
-        event.custom({
-          type: 'hexerei:drying_rack',
-          ingredients: [
-            {
-              item: 'rankine:pulp',
+        event
+          .custom({
+            type: 'hexerei:drying_rack',
+            ingredients: [
+              {
+                item: 'rankine:pulp',
+              },
+            ],
+            output: {
+              item: 'minecraft:paper',
             },
-          ],
-          output: {
-            item: 'minecraft:paper',
-          },
-          dryingTimeInTicks: 1800,
-        });
+            dryingTimeInTicks: 1800,
+          })
+          .id('inconvenient:drying_paper');
       },
       children: [
         {
           id: 'pulp',
           recipe: () => {
-            event.custom({
-              type: 'hexerei:mixingcauldron',
-              ingredients: [
-                {
-                  item: 'rankine:fire_clay_ball',
+            event
+              .custom({
+                type: 'hexerei:mixingcauldron',
+                ingredients: [
+                  {
+                    item: 'rankine:fire_clay_ball',
+                  },
+                  {
+                    item: 'rankine:sawdust',
+                  },
+                  {
+                    item: 'rankine:sawdust',
+                  },
+                  {
+                    item: 'rankine:sawdust',
+                  },
+                  {
+                    item: 'rankine:sawdust',
+                  },
+                  {
+                    item: 'rankine:sawdust',
+                  },
+                  {
+                    item: 'rankine:sawdust',
+                  },
+                  {
+                    item: 'rankine:sawdust',
+                  },
+                ],
+                liquid: {
+                  fluid: 'minecraft:water',
                 },
-                {
-                  item: 'rankine:sawdust',
+                liquidOutput: {
+                  fluid: 'minecraft:water',
                 },
-                {
-                  item: 'rankine:sawdust',
+                output: {
+                  item: 'rankine:pulp',
+                  output_count: 2,
                 },
-                {
-                  item: 'rankine:sawdust',
-                },
-                {
-                  item: 'rankine:sawdust',
-                },
-                {
-                  item: 'rankine:sawdust',
-                },
-                {
-                  item: 'rankine:sawdust',
-                },
-                {
-                  item: 'rankine:sawdust',
-                },
-              ],
-              liquid: {
-                fluid: 'minecraft:water',
-              },
-              liquidOutput: {
-                fluid: 'minecraft:water',
-              },
-              output: {
-                item: 'rankine:pulp',
-                output_count: 2,
-              },
-              fluidLevelsConsumed: 2000,
-            });
+                fluidLevelsConsumed: 2000,
+              })
+              .id('inconvenient:cauldron_pulp');
           },
           children: [
             {
               id: 'sawdust',
               recipe: () => {
-                event.custom({
-                  input: {item: 'undergarden:grongle_log'},
-                  type: 'rankine:crushing',
-                  guaranteed: [
-                    {
-                      item: 'rankine:sawdust',
-                      tier: 'minecraft:diamond',
-                      count: 1,
-                    },
-                    {
-                      item: 'rankine:sawdust',
-                      tier: 'minecraft:netherite',
-                      count: 7,
-                    },
-                  ],
-                });
+                event
+                  .custom({
+                    input: {item: 'undergarden:grongle_log'},
+                    type: 'rankine:crushing',
+                    guaranteed: [
+                      {
+                        item: 'rankine:sawdust',
+                        tier: 'minecraft:diamond',
+                        count: 1,
+                      },
+                      {
+                        item: 'rankine:sawdust',
+                        tier: 'minecraft:netherite',
+                        count: 7,
+                      },
+                    ],
+                  })
+                  .id('inconvenient:crushing_grongle_log');
               },
             },
           ],
@@ -663,55 +733,61 @@ onEvent('recipes', event => {
     {
       id: 'infused_slate',
       recipe: () => {
-        event.custom({
-          type: 'bloodmagic:altar',
-          input: {
-            item: 'bloodmagic:reinforcedslate',
-          },
-          output: {
-            item: 'bloodmagic:infusedslate',
-          },
-          upgradeLevel: 2,
-          altarSyphon: 10000,
-          consumptionRate: 10,
-          drainRate: 10,
-        });
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            input: {
+              item: 'bloodmagic:reinforcedslate',
+            },
+            output: {
+              item: 'bloodmagic:infusedslate',
+            },
+            upgradeLevel: 2,
+            altarSyphon: 10000,
+            consumptionRate: 10,
+            drainRate: 10,
+          })
+          .id('inconvenient:altar_infusedslate');
       },
       children: [
         {
           id: 'reinforced_slate',
           recipe: () => {
-            event.custom({
-              type: 'bloodmagic:altar',
-              input: {
-                item: 'bloodmagic:blankslate',
-              },
-              output: {
-                item: 'bloodmagic:reinforcedslate',
-              },
-              upgradeLevel: 1,
-              altarSyphon: 5000,
-              consumptionRate: 5,
-              drainRate: 5,
-            });
+            event
+              .custom({
+                type: 'bloodmagic:altar',
+                input: {
+                  item: 'bloodmagic:blankslate',
+                },
+                output: {
+                  item: 'bloodmagic:reinforcedslate',
+                },
+                upgradeLevel: 1,
+                altarSyphon: 5000,
+                consumptionRate: 5,
+                drainRate: 5,
+              })
+              .id('inconvenient:altar_reinforcedslate');
           },
           children: [
             {
               id: 'blank_slate',
               recipe: () => {
-                event.custom({
-                  type: 'bloodmagic:altar',
-                  input: {
-                    item: 'rankine:slate',
-                  },
-                  output: {
-                    item: 'bloodmagic:blankslate',
-                  },
-                  altarSyphon: 1000,
-                  upgradeLevel: 0,
-                  consumptionRate: 1,
-                  drainRate: 1,
-                });
+                event
+                  .custom({
+                    type: 'bloodmagic:altar',
+                    input: {
+                      item: 'rankine:slate',
+                    },
+                    output: {
+                      item: 'bloodmagic:blankslate',
+                    },
+                    altarSyphon: 1000,
+                    upgradeLevel: 0,
+                    consumptionRate: 1,
+                    drainRate: 1,
+                  })
+                  .id('inconvenient:altar_blankslate');
               },
             },
           ],
@@ -721,31 +797,35 @@ onEvent('recipes', event => {
     {
       id: 'soulgem_common',
       recipe: () => {
-        event.custom({
-          type: 'bloodmagic:soulforge',
-          output: {item: 'bloodmagic:soulgemcommon'},
-          input0: {item: 'bloodmagic:soulgemlesser'},
-          input1: {item: 'create:rose_quartz'},
-          input2: {item: 'bloodmagic:infusedslate'},
-          input3: {item: 'rankine:rose_gold_block'},
-          minimumDrain: 240,
-          drain: 50,
-        });
+        event
+          .custom({
+            type: 'bloodmagic:soulforge',
+            output: {item: 'bloodmagic:soulgemcommon'},
+            input0: {item: 'bloodmagic:soulgemlesser'},
+            input1: {item: 'create:rose_quartz'},
+            input2: {item: 'bloodmagic:infusedslate'},
+            input3: {item: 'rankine:rose_gold_block'},
+            minimumDrain: 240,
+            drain: 50,
+          })
+          .id('inconvenient:soulforge_soulgemcommon');
       },
       children: [
         {
           id: 'soulgem_lesser',
           recipe: () => {
-            event.custom({
-              type: 'bloodmagic:soulforge',
-              output: {item: 'bloodmagic:soulgemlesser'},
-              input0: {item: 'bloodmagic:soulgempetty'},
-              input1: {item: 'create:rose_quartz'},
-              input2: {item: 'minecraft:redstone_block'},
-              input3: {item: 'minecraft:lapis_block'},
-              minimumDrain: 60,
-              drain: 20,
-            });
+            event
+              .custom({
+                type: 'bloodmagic:soulforge',
+                output: {item: 'bloodmagic:soulgemlesser'},
+                input0: {item: 'bloodmagic:soulgempetty'},
+                input1: {item: 'create:rose_quartz'},
+                input2: {item: 'minecraft:redstone_block'},
+                input3: {item: 'minecraft:lapis_block'},
+                minimumDrain: 60,
+                drain: 20,
+              })
+              .id('inconvenient:soulforge_soulgemlesser');
           },
           children: [
             {
@@ -754,19 +834,21 @@ onEvent('recipes', event => {
                 {
                   id: 'soulsnare',
                   recipe: () => {
-                    event.custom({
-                      type: 'bloodmagic:altar',
-                      input: {
-                        item: 'blue_skies:spider_webbing',
-                      },
-                      output: {
-                        item: 'bloodmagic:soulsnare',
-                      },
-                      upgradeLevel: 0,
-                      altarSyphon: 500,
-                      consumptionRate: 5,
-                      drainRate: 5,
-                    });
+                    event
+                      .custom({
+                        type: 'bloodmagic:altar',
+                        input: {
+                          item: 'blue_skies:spider_webbing',
+                        },
+                        output: {
+                          item: 'bloodmagic:soulsnare',
+                        },
+                        upgradeLevel: 0,
+                        altarSyphon: 500,
+                        consumptionRate: 5,
+                        drainRate: 5,
+                      })
+                      .id('inconvenient:altar_soulsnare');
                   },
                 },
               ],
@@ -778,37 +860,41 @@ onEvent('recipes', event => {
     {
       id: 'arcane_ashes',
       recipe: () => {
-        event.custom({
-          type: 'bloodmagic:altar',
-          input: {
-            item: 'undergarden:mogmoss',
-          },
-          altarSyphon: 2000,
-          upgradeLevel: 0,
-          consumptionRate: 2,
-          drainRate: 2,
-          output: {
-            item: 'bloodmagic:arcaneashes',
-          },
-        });
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            input: {
+              item: 'undergarden:mogmoss',
+            },
+            altarSyphon: 2000,
+            upgradeLevel: 0,
+            consumptionRate: 2,
+            drainRate: 2,
+            output: {
+              item: 'bloodmagic:arcaneashes',
+            },
+          })
+          .id('inconvenient:altar_arcaneashes');
       },
     },
     {
       id: 'daggar_of_sacrifice',
       recipe: () => {
-        event.custom({
-          type: 'bloodmagic:altar',
-          input: {
-            item: 'blue_skies:venom_sac',
-          },
-          altarSyphon: 5000,
-          upgradeLevel: 1,
-          consumptionRate: 5,
-          drainRate: 5,
-          output: {
-            item: 'bloodmagic:daggerofsacrifice',
-          },
-        });
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            input: {
+              item: 'blue_skies:venom_sac',
+            },
+            altarSyphon: 5000,
+            upgradeLevel: 1,
+            consumptionRate: 5,
+            drainRate: 5,
+            output: {
+              item: 'bloodmagic:daggerofsacrifice',
+            },
+          })
+          .id('inconvenient:altar_daggerofsacrifice');
       },
     },
     {id: 'soulwood_totem', recipe: () => {}},
@@ -816,10 +902,12 @@ onEvent('recipes', event => {
     {
       id: 'torch',
       recipe: () => {
-        event.shaped('16x minecraft:torch', ['a', 'b'], {
-          a: 'realistictorches:glowstone_crystal',
-          b: '#forge:rods/wooden',
-        });
+        event
+          .shaped('16x minecraft:torch', ['a', 'b'], {
+            a: 'realistictorches:glowstone_crystal',
+            b: '#forge:rods/wooden',
+          })
+          .id('inconvenient:shaped_torch');
       },
     },
     {id: 'brilliant_obelisk', recipe: () => {}},
