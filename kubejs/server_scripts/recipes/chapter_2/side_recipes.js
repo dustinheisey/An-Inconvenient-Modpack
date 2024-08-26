@@ -995,6 +995,83 @@ onEvent('recipes', event => {
     },
   ]);
 
+  event
+    .shaped('totemic:wind_chime', ['aaa', ' bb', '  b'], {
+      a: 'minecraft:iron_ingot',
+      b: 'totemic:cedar_planks',
+    })
+    .id('inconvenient:shaped_wind_chime');
+
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'minecraft:ink_sac',
+      },
+      result: {
+        item: 'occultism:purified_ink',
+      },
+    })
+    .id('inconvenient:spirit_fire_purified_ink');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'blue_skies:charoite',
+      },
+      result: {
+        item: 'occultism:spirit_attuned_gem',
+      },
+    })
+    .id('inconvenient:spirit_fire_spirit_attuned_gem');
+  ['occultism:ritual/craft_infused_lenses'].forEach(id =>
+    event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'occultism:ritual',
+      ritual_type: 'occultism:craft',
+      activation_item: {
+        item: 'occultism:book_of_binding_bound_foliot',
+      },
+      pentacle_id: 'occultism:craft_foliot',
+      duration: 60,
+      ritual_dummy: {
+        item: 'occultism:ritual_dummy/craft_infused_lenses',
+      },
+      ingredients: [
+        {
+          item: 'occultism:lenses',
+        },
+        {
+          tag: 'forge:ingots/silver',
+        },
+        {
+          tag: 'forge:ingots/silver',
+        },
+        {
+          item: 'naturesaura:infused_iron',
+        },
+      ],
+      result: {
+        item: 'occultism:infused_lenses',
+      },
+    })
+    .id('inconvenient:ritual_infused_lenses');
+  event
+    .shaped('occultism:book_of_binding_foliot', ['ab ', 'bcb', ' b '], {
+      a: 'occultism:purified_ink',
+      b: 'minecraft:red_dye',
+      c: 'minecraft:book',
+    })
+    .id('inconvenient:shaped_book_of_binding_foliot');
+
+  event.replaceInput(
+    {output: 'occultism:butcher_knife'},
+    'minecraft:iron_ingot',
+    'rankine:pewter_ingot'
+  );
+
   // event.remove({
   //   output: [
   //     'totemic:wind_chime',

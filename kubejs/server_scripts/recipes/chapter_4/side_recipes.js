@@ -1918,6 +1918,259 @@ onEvent('recipes', event => {
     },
   ]);
 
+  event
+    .custom({
+      type: 'create:mixing',
+      results: [{item: 'minecraft:netherite_ingot'}],
+      ingredients: [
+        {item: 'minecraft:gold_ingot'},
+        {item: 'minecraft:netherite_scrap'},
+      ],
+    })
+    .id('inconvenient:mixing_netherite_ingot');
+  event
+    .custom({
+      type: 'create:mixing',
+      results: [{item: 'tconstruct:pig_iron_ingot'}],
+      ingredients: [
+        {item: 'minecraft:iron_ingot'},
+        {item: 'farmersdelight:ham'},
+        {item: 'minecraft:clay_ball'},
+      ],
+      heatRequirement: 'heated',
+    })
+    .id('inconvenient:mixing_pig_iron_ingot');
+
+  event
+    .custom({
+      type: 'create:mechanical_crafting',
+      result: {item: 'createaddition:alternator'},
+      pattern: ['  a  ', ' bcb ', 'bcdcb', ' beb '],
+      key: {
+        a: 'create:andesite_alloy',
+        b: 'chemlib:iron_plate',
+        c: 'hem:circuit_board',
+        d: 'immersive_aircraft:engine',
+        e: 'create:electron_tube',
+      },
+    })
+    .id('inconvenient:mechanical_alternator');
+
+  event
+    .custom({
+      input: {item: 'rankine:native_sulfur_ore'},
+      type: 'rankine:crushing',
+      guaranteed: [
+        {
+          item: 'rankine:sulfur_nugget',
+          tier: 'minecraft:iron',
+          count: 3,
+        },
+      ],
+    })
+    .id('inconvenient:crushing_sulfur_nugget');
+
+  event
+    .custom({
+      type: 'tconstruct:alloy',
+      result: {fluid: 'tconstruct:molten_brass', amount: 180},
+      inputs: [
+        {name: 'tconstruct:molten_copper', amount: 90},
+        {name: 'tconstruct:molten_zinc', amount: 90},
+      ],
+      temperature: 605,
+    })
+    .id('inconvenient:alloy_molten_brass');
+
+  ['rankine:air_distillation_packing'].forEach(id => event.remove({id: id}));
+
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'rankine:air_distillation_packing',
+      },
+      pattern: ['aba', 'bab', 'aba'],
+      key: {
+        a: 'rankine:aluminum_sheetmetal',
+        b: 'architects_palette:warpstone',
+      },
+    })
+    .id('inconvenient:basic_table_air_distillation_packing');
+
+  ['rankine:gas_bottler'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'rankine:gas_bottler',
+      },
+      pattern: ['aba', 'bab', 'aba'],
+      key: {
+        a: 'rankine:purple_gold_sheetmetal',
+        b: 'rankine:brass_ingot',
+      },
+    })
+    .id('inconvenient:basic_table_gas_bottler');
+
+  ['rankine:gas_vent'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'rankine:gas_vent',
+      },
+      pattern: ['aba', 'bcb', 'aba'],
+      key: {
+        a: 'rankine:copper_sheetmetal',
+        b: 'tconstruct:scorched_glass',
+        c: 'minecraft:glass_bottle',
+      },
+    })
+    .id('inconvenient:basic_table_gas_vent');
+
+  ['rankine:distillation_tower'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'extendedcrafting:shaped_table',
+      result: {
+        item: 'rankine:distillation_tower',
+      },
+      pattern: ['aba', 'aca', 'ada'],
+      key: {
+        a: 'rankine:aluminum_sheetmetal',
+        b: 'occultism:iesnium_block',
+        c: 'rankine:rose_gold_block',
+        d: 'cataclysm:ignitium_block',
+      },
+    })
+    .id('inconvenient:basic_table_distillation_tower');
+
+  event
+    .shaped(`rankine:alloy_furnace`, ['aba', 'aba', 'aca'], {
+      a: `rankine:ultra_high_refractory_bricks`,
+      b: 'rankine:brass_block',
+      c: 'minecraft:soul_campfire',
+    })
+    .id('inconvenient:shaped_alloy_furnace');
+
+  ['malum:spirit_infusion/tainted_rock'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'malum:spirit_infusion',
+      input: {item: 'rankine:rose_marble', count: 16},
+      output: {item: 'malum:tainted_rock', count: 16},
+      extra_items: [{item: 'malum:processed_soulstone', count: 4}],
+      spirits: [
+        {
+          type: 'sacred',
+          count: 1,
+        },
+        {
+          type: 'arcane',
+          count: 1,
+        },
+      ],
+    })
+    .id('inconvenient:spirit_infusion_tainted_rock');
+
+  ['naturesaura:tree_ritual/token_anger'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'naturesaura:tree_ritual',
+      sapling: {item: 'architects_palette:twisted_sapling'},
+      ingredients: [
+        {item: 'minecraft:gunpowder'},
+        {item: 'minecraft:magma_block'},
+        {item: 'minecraft:netherite_scrap'},
+        {item: 'minecraft:blaze_rod'},
+        {item: 'naturesaura:gold_leaf'},
+        {
+          type: 'forge:nbt',
+          item: 'naturesaura:aura_bottle',
+          count: 1,
+          nbt: '{stored_type:"naturesaura:nether"}',
+        },
+      ],
+      time: 250,
+      output: {item: 'naturesaura:token_anger'},
+    })
+    .id('inconvenient:tree_ritual_token_anger');
+
+  ['naturesaura:tree_ritual/token_fear'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'naturesaura:tree_ritual',
+      sapling: {item: 'architects_palette:twisted_sapling'},
+      ingredients: [
+        {item: 'minecraft:bone'},
+        {item: 'minecraft:rotten_flesh'},
+        {item: 'minecraft:netherite_scrap'},
+        {item: 'minecraft:soul_sand'},
+        {item: 'naturesaura:gold_leaf'},
+        {
+          type: 'forge:nbt',
+          item: 'naturesaura:aura_bottle',
+          count: 1,
+          nbt: '{stored_type:"naturesaura:nether"}',
+        },
+      ],
+      time: 250,
+      output: {item: 'naturesaura:token_fear'},
+    })
+    .id('inconvenient:tree_ritual_token_fear');
+
+  event
+    .custom({
+      type: 'create:mixing',
+      results: [{count: 3, item: 'rankine:vulcanized_rubber'}],
+      ingredients: [
+        {item: 'rankine:dry_rubber'},
+        {item: 'rankine:dry_rubber'},
+        {item: 'rankine:dry_rubber'},
+        {fluid: 'immersivepetroleum:crudeoil', amount: 1000},
+      ],
+      heatRequirement: 'superheated',
+    })
+    .id('inconvenient:mixing_vulcanized_rubber');
+
+  event.replaceInput(
+    {output: 'architects_palette:nether_brass_blend'},
+    'minecraft:iron_nugget',
+    'rankine:brass_nugget'
+  );
+  event
+    .custom({
+      type: 'create:compacting',
+      ingredients: [
+        {item: 'paragon_textiles:flax_seeds', count: 4},
+        {item: 'minecraft:bucket'},
+      ],
+      results: [{item: 'paragon_textiles:flaxseed_oil_bucket'}],
+    })
+    .id('inconvenient:compacting_flaxseed_oil_bucket');
+  ['bloodmagic:altar/masterbloodorb'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'bloodmagic:altar',
+      output: {
+        item: 'bloodmagic:masterbloodorb',
+      },
+      input: {
+        item: 'bloodmagic:weakbloodshard',
+      },
+      altarSyphon: 250000,
+      upgradeLevel: 3,
+      consumptionRate: 500,
+      drainRate: 500,
+    })
+    .id('inconvenient:altar_masterbloodorb');
+  event.replaceInput(
+    {output: ['malum:stained_spirit_resonator']},
+    'minecraft:quartz',
+    'undergarden:regalium_crystal'
+  );
+
   // event.remove({
   //   output: [
   //     'hexerei:book_of_shadows',

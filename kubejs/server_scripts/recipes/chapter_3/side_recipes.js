@@ -1912,6 +1912,166 @@ onEvent('recipes', event => {
     },
   ]);
 
+  event
+    .custom({
+      type: 'create:milling',
+      ingredients: [{item: 'undergarden:regalium_crystal'}],
+      results: [{item: 'extendedcrafting:luminessence'}],
+      processingTime: 50,
+    })
+    .id('inconvenient:milling_luminessence');
+  event
+    .custom({
+      type: 'tconstruct:casting_table',
+      result: 'twilightforest:steeleaf_ingot',
+      fluid: {name: 'kubejs:molten_steeleaf', amount: 90},
+      cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+      cooling_time: 100,
+    })
+    .id('inconvenient:casting_table_steeleaf_ingot');
+
+  event
+    .custom({
+      type: 'tconstruct:casting_basin',
+      result: 'twilightforest:steeleaf_block',
+      fluid: {name: 'kubejs:molten_steeleaf', amount: 810},
+      cooling_time: 100,
+    })
+    .id('inconvenient:casting_basin_steeleaf_block');
+  event
+    .custom({
+      type: 'tconstruct:melting',
+      ingredient: {item: 'twilightforest:steeleaf_ingot'},
+      result: {fluid: 'kubejs:molten_steeleaf', amount: 90},
+      temperature: 605,
+      time: 54,
+    })
+    .id('inconvenient:melting_molten_steeleaf');
+  event
+    .custom({
+      type: 'tconstruct:melting',
+      ingredient: {item: 'twilightforest:steeleaf_block'},
+      result: {
+        fluid: 'kubejs:molten_steeleaf',
+        amount: 810,
+      },
+      temperature: 605,
+      time: 54,
+    })
+    .id('inconvenient:melting_molten_steeleaf');
+  ['malum:spirit_infusion/soul_stained_steel_ingot'].forEach(id =>
+    event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'malum:spirit_infusion',
+      input: {item: 'blue_skies:horizonite_ingot'},
+      output: {item: 'malum:soul_stained_steel_ingot'},
+      extra_items: [{item: 'malum:processed_soulstone', count: 4}],
+      spirits: [
+        {
+          type: 'arcane',
+          count: 1,
+        },
+        {
+          type: 'wicked',
+          count: 3,
+        },
+        {type: 'earthen', count: 1},
+      ],
+    })
+    .id('inconvenient:spirit_infusion_soul_stained_steel_ingot');
+  event.remove({
+    output: ['occultism:chalk_red_impure'],
+    type: 'minecraft:crafting_shapeless',
+  });
+  event.replaceInput(
+    {output: 'bloodmagic:lavacrystal'},
+    'minecraft:diamond',
+    'occultism:afrit_essence'
+  );
+  event
+    .custom({
+      type: 'occultism:ritual',
+      ritual_type: 'occultism:summon_wild_hunt',
+      activation_item: {
+        item: 'minecraft:skeleton_skull',
+      },
+      pentacle_id: 'occultism:summon_wild_greater_spirit',
+      duration: 30,
+      entity_to_summon: 'occultism:wild_hunt_wither_skeleton',
+      ritual_dummy: {
+        item: 'occultism:ritual_dummy/summon_wild_hunt',
+      },
+      ingredients: [
+        {
+          tag: 'forge:storage_blocks/copper',
+        },
+        {
+          tag: 'forge:storage_blocks/silver',
+        },
+        {
+          tag: 'forge:storage_blocks/lead',
+        },
+        {
+          tag: 'forge:storage_blocks/tin',
+        },
+        {
+          item: 'naturesaura:infused_iron_block',
+        },
+        {
+          type: 'forge:nbt',
+          item: 'naturesaura:aura_bottle',
+          count: 1,
+          nbt: '{stored_type:"naturesaura:overworld"}',
+        },
+        {
+          item: 'hexerei:blood_bottle',
+        },
+      ],
+      result: {
+        item: 'occultism:jei_dummy/none',
+      },
+    })
+    .id('inconvenient:ritual_summon_wild_hunt');
+  event
+    .custom({
+      type: 'bloodmagic:altar',
+      input: {
+        item: 'occultism:book_of_binding_djinni',
+      },
+      output: {
+        item: 'occultism:book_of_binding_afrit',
+      },
+      upgradeLevel: 1,
+      altarSyphon: 20000,
+      consumptionRate: 20,
+      drainRate: 20,
+    })
+    .id('inconvenient:altar_book_of_binding_afrit');
+  event
+    .shaped('occultism:chalk_purple_impure', ['ab', 'cc'], {
+      a: 'occultism:chalk_gold_impure',
+      b: 'malum:chunk_of_brilliance',
+      c: 'create:powdered_obsidian',
+    })
+    .id('inconvenient:shaped_chalk_purple_impure');
+
+  event
+    .custom({
+      type: 'rankine:rock_generator',
+      genType: 'intrusive_igneous',
+      result: {block: 'minecraft:andesite'},
+      input1: {item: 'occultism:otherstone'},
+      input2: {item: 'twilightforest:knightmetal_block'},
+    })
+    .id('inconvenient:intrusive_igneous_andesite');
+  event.replaceInput(
+    {output: 'occultism:book_of_binding_afrit'},
+    'minecraft:purple_dye',
+    'minecraft:orange_dye'
+  );
+
   ['malum:spirit_infusion/poppet'].forEach(id => event.remove({id: id}));
   event
     .custom({
