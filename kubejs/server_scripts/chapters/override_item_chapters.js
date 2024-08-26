@@ -1481,6 +1481,7 @@ onEvent('tags.items', event => {
       'rankine:photometer',
       'rankine:tree_tap',
       'rankine:tap_line',
+      // testing
       'rankine:fruit_jam',
       'rankine:lead_glass',
       'rankine:barley_seeds',
