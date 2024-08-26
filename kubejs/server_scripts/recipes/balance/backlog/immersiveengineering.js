@@ -30,15 +30,6 @@ onEvent('recipes', event => {
       event
         .custom({
           type: 'immersiveengineering:arc_furnace',
-          results: [{item: 'minecraft:netherite_scrap', count: 3}],
-          input: {item: 'minecraft:ancient_debris'},
-          time: 100,
-          energy: 51200,
-        })
-        .id('inconvenient:arc_netherite_scrap');
-      event
-        .custom({
-          type: 'immersiveengineering:arc_furnace',
           results: [{item: 'minecraft:iron_ingot', count: 3}],
           input: {item: 'rankine:hematite_ore'},
           time: 100,

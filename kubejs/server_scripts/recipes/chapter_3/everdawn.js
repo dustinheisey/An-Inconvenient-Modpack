@@ -274,6 +274,9 @@ onEvent('recipes', event => {
               {
                 id: 'blood_obsidian',
                 recipe: () => {
+                  [
+                    'rankine:stonegen_volcanic/blood_obsidian_generator',
+                  ].forEach(id => event.remove({id: id}));
                   event
                     .custom({
                       type: 'bloodmagic:altar',

@@ -1,6 +1,6 @@
 # Tech Debt
 
-- [ ] cleanup balance folder
+- [-] cleanup balance folder
 - [ ] finish marketing docs folder
 - [ ] finish wiki docs fold
 - [ ] finish dev docs folder
@@ -16,6 +16,7 @@
 - [ ] update the end eye tooltip text
 - [ ] integrate immersive aircraft updates into modpack
 - [ ] add all crushing head tiers correctly
+- [ ] fix unification
 
 ## Bugs
 

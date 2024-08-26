@@ -358,6 +358,14 @@ onEvent('recipes', event => {
                 .id(`inconvenient:spirit_infusion_soul_stained_steel_${armor}`);
             });
 
+            [
+              'bloodmagic:array/living_trainer',
+              'bloodmagic:array/living_boots',
+              'bloodmagic:array/living_leggings',
+              'bloodmagic:array/living_plate',
+              'bloodmagic:array/living_helmet',
+            ].forEach(id => event.remove({id: id}));
+
             event
               .custom({
                 type: 'bloodmagic:array',
@@ -455,6 +463,9 @@ onEvent('recipes', event => {
     {
       id: 'magician_blood_orb',
       recipe: () => {
+        ['bloodmagic:altar/magicianbloodorb'].forEach(id =>
+          event.remove({id: id})
+        );
         event
           .custom({
             type: 'bloodmagic:altar',
@@ -469,12 +480,15 @@ onEvent('recipes', event => {
             consumptionRate: 20,
             drainRate: 20,
           })
-          .id('inconvenient:altar_fiery_block');
+          .id('inconvenient:altar_magicianbloodorb');
       },
       children: [
         {
           id: 'apprentice_blood_orb',
           recipe: () => {
+            ['bloodmagic:altar/apprenticebloodorb'].forEach(id =>
+              event.remove({id: id})
+            );
             event
               .custom({
                 type: 'bloodmagic:altar',
@@ -489,12 +503,15 @@ onEvent('recipes', event => {
                 consumptionRate: 50,
                 drainRate: 50,
               })
-              .id('inconvenient:altar_slimesteel_block');
+              .id('inconvenient:altar_apprenticebloodorb');
           },
           children: [
             {
               id: 'weak_blood_orb',
               recipe: () => {
+                ['bloodmagic:altar/weakbloodorb'].forEach(id =>
+                  event.remove({id: id})
+                );
                 event
                   .custom({
                     type: 'bloodmagic:altar',
@@ -531,6 +548,9 @@ onEvent('recipes', event => {
     {
       id: 'advanced_chunk_loader',
       recipe: () => {
+        ['chunkloaders:advanced_chunk_loader'].forEach(id =>
+          event.remove({id: id})
+        );
         event
           .custom({
             type: 'bloodmagic:altar',
@@ -551,6 +571,10 @@ onEvent('recipes', event => {
         {
           id: 'basic_chunk_loader',
           recipe: () => {
+            [
+              'chunkloaders:basic_chunk_loader',
+              'chunkloaders:single_to_basic_chunk_loader',
+            ].forEach(id => event.remove({id: id}));
             event
               .custom({
                 type: 'bloodmagic:altar',
@@ -571,6 +595,9 @@ onEvent('recipes', event => {
             {
               id: 'single_chunkloader',
               recipe: () => {
+                ['chunkloaders:single_chunk_loader'].forEach(id =>
+                  event.remove({id: id})
+                );
                 event
                   .custom({
                     type: 'bloodmagic:altar',
@@ -926,6 +953,7 @@ onEvent('recipes', event => {
     {
       id: 'infused_slate',
       recipe: () => {
+        ['bloodmagic:altar/imbuedslate'].forEach(id => event.remove({id: id}));
         event
           .custom({
             type: 'bloodmagic:altar',
@@ -946,6 +974,9 @@ onEvent('recipes', event => {
         {
           id: 'reinforced_slate',
           recipe: () => {
+            ['bloodmagic:altar/reinforcedslate'].forEach(id =>
+              event.remove({id: id})
+            );
             event
               .custom({
                 type: 'bloodmagic:altar',
@@ -966,6 +997,9 @@ onEvent('recipes', event => {
             {
               id: 'blank_slate',
               recipe: () => {
+                ['bloodmagic:altar/slate'].forEach(id =>
+                  event.remove({id: id})
+                );
                 event
                   .custom({
                     type: 'bloodmagic:altar',
@@ -990,6 +1024,9 @@ onEvent('recipes', event => {
     {
       id: 'soulgem_common',
       recipe: () => {
+        ['bloodmagic:soulforge/commontartaricgem'].forEach(id =>
+          event.remove({id: id})
+        );
         event
           .custom({
             type: 'bloodmagic:soulforge',
@@ -1007,6 +1044,9 @@ onEvent('recipes', event => {
         {
           id: 'soulgem_lesser',
           recipe: () => {
+            ['bloodmagic:soulforge/lessertartaricgem'].forEach(id =>
+              event.remove({id: id})
+            );
             event
               .custom({
                 type: 'bloodmagic:soulforge',
@@ -1053,6 +1093,9 @@ onEvent('recipes', event => {
     {
       id: 'arcane_ashes',
       recipe: () => {
+        ['bloodmagic:alchemytable/arcane_ash'].forEach(id =>
+          event.remove({id: id})
+        );
         event
           .custom({
             type: 'bloodmagic:altar',
@@ -1073,6 +1116,9 @@ onEvent('recipes', event => {
     {
       id: 'daggar_of_sacrifice',
       recipe: () => {
+        ['bloodmagic:altar/daggerofsacrifice'].forEach(id =>
+          event.remove({id: id})
+        );
         event
           .custom({
             type: 'bloodmagic:altar',
@@ -1187,6 +1233,127 @@ onEvent('recipes', event => {
             },
           })
           .id('inconvenient:basic_table_blast_furnace');
+      },
+    },
+    {
+      id: 'reverter',
+      recipe: () => {
+        event
+          .custom({
+            type: 'bloodmagic:arc',
+            input: {
+              item: 'bloodmagic:weakbloodorb',
+            },
+            tool: {
+              tag: 'bloodmagic:arc/reverter',
+            },
+            output: {
+              item: 'undergarden:utherium_crystal',
+            },
+            mainoutputchance: 0.0,
+            inputsize: 1,
+            consumeingredient: false,
+          })
+          .id('inconvenient:arc_utherium_crystal');
+        event
+          .custom({
+            type: 'bloodmagic:arc',
+            input: {
+              item: 'bloodmagic:apprenticebloodorb',
+            },
+            tool: {
+              tag: 'bloodmagic:arc/reverter',
+            },
+            output: {
+              item: 'tconstruct:slimesteel_block',
+            },
+            mainoutputchance: 0.0,
+            inputsize: 1,
+            consumeingredient: false,
+          })
+          .id('inconvenient:arc_slimesteel_block');
+        event
+          .custom({
+            type: 'bloodmagic:arc',
+            input: {
+              item: 'bloodmagic:magicianbloodorb',
+            },
+            tool: {
+              tag: 'bloodmagic:arc/reverter',
+            },
+            output: {
+              item: 'twilightforest:fiery_block',
+            },
+            mainoutputchance: 0.0,
+            inputsize: 1,
+            consumeingredient: false,
+          })
+          .id('inconvenient:arc_fiery_block');
+      },
+    },
+    {
+      id: 'arc_explosive',
+      recipe: () => {
+        [
+          'bloodmagic:arc/fragmentscopper',
+          'bloodmagic:arc/fragmentsfrom_ore_copper',
+          'bloodmagic:arc/fragmentsfrom_ore_gold',
+          'bloodmagic:arc/fragmentsgold',
+          'inconvenient:arc_goldfragment',
+          'bloodmagic:arc/fragmentsfrom_ore_iron',
+          'bloodmagic:arc/fragmentsiron',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'bloodmagic:arc',
+            input: {
+              item: 'minecraft:raw_gold',
+            },
+            tool: {
+              tag: 'bloodmagic:arc/explosive',
+            },
+            output: {
+              item: '2x bloodmagic:goldfragment',
+            },
+            mainoutputchance: 0.0,
+            inputsize: 1,
+            consumeingredient: false,
+          })
+          .id('inconvenient:arc_goldfragment');
+        event
+          .custom({
+            type: 'bloodmagic:arc',
+            input: {
+              item: 'rankine:malachite',
+            },
+            tool: {
+              tag: 'bloodmagic:arc/explosive',
+            },
+            output: {
+              item: '2x bloodmagic:copperfragment',
+            },
+            mainoutputchance: 0.0,
+            inputsize: 1,
+            consumeingredient: false,
+          })
+          .id('inconvenient:arc_copperfragment');
+        event
+          .custom({
+            type: 'bloodmagic:arc',
+            input: {
+              item: 'rankine:hematite',
+            },
+            tool: {
+              tag: 'bloodmagic:arc/explosive',
+            },
+            output: {
+              item: '2x bloodmagic:ironfragment',
+            },
+            mainoutputchance: 0.0,
+            inputsize: 1,
+            consumeingredient: false,
+          })
+          .id('inconvenient:arc_ironfragment');
       },
     },
   ]);

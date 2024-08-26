@@ -40,20 +40,6 @@ onEvent('recipes', event => {
 
   event
     .custom({
-      input: {item: 'minecraft:ancient_debris'},
-      type: 'rankine:crushing',
-      guaranteed: [
-        {
-          item: 'minecraft:netherite_scrap',
-          count: 1,
-          tier: 'minecraft:diamond',
-        },
-      ],
-    })
-    .id('inconvenient:crushing_netherite_scrap');
-
-  event
-    .custom({
       input: {item: 'rankine:native_sulfur_ore'},
       type: 'rankine:crushing',
       guaranteed: [
@@ -245,6 +231,7 @@ onEvent('recipes', event => {
       results: [{item: 'paragon_textiles:flaxseed_oil_bucket'}],
     })
     .id('inconvenient:compacting_flaxseed_oil_bucket');
+  ['bloodmagic:altar/masterbloodorb'].forEach(id => event.remove({id: id}));
   event
     .custom({
       type: 'bloodmagic:altar',

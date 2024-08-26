@@ -701,6 +701,9 @@ onEvent('recipes', event => {
     {
       id: 'slates',
       recipe: () => {
+        ['bloodmagic:altar/etherealslate'].forEach(id =>
+          event.remove({id: id})
+        );
         event
           .custom({
             type: 'bloodmagic:altar',
@@ -842,6 +845,9 @@ onEvent('recipes', event => {
             drainRate: 10,
           })
           .id('inconvenient:altar_single_chunk_loader');
+        ['chunkloaders:ultimate_chunk_loader'].forEach(id =>
+          event.remove({id: id})
+        );
         event
           .custom({
             type: 'bloodmagic:altar',
@@ -1627,6 +1633,25 @@ onEvent('recipes', event => {
             },
           })
           .id('inconvenient:basic_table_basic_auto_table');
+      },
+    },
+    {
+      id: 'routing',
+      recipe: () => {
+        ['bloodmagic:soulforge/master_routing_node'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .custom({
+            type: 'bloodmagic:soulforge',
+            output: {item: 'bloodmagic:masterroutingnode'},
+            input0: {item: 'minecraft:iron_block'},
+            input1: {item: 'create:rose_quartz'},
+            input2: {item: 'bloodmagic:infusedslate'},
+            minimumDrain: 400,
+            drain: 200,
+          })
+          .id('inconvenient:soul_forge_masterroutingnode');
       },
     },
   ]);

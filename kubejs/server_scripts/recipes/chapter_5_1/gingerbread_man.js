@@ -51,6 +51,7 @@ onEvent('recipes', event => {
     })
     .id('inconveient:petal_apothecary_fertilizer');
 
+  ['botania:mana_pool'].forEach(id => event.remove({id: id}));
   event
     .custom({
       type: 'bloodmagic:altar',
@@ -66,12 +67,6 @@ onEvent('recipes', event => {
       drainRate: 200,
     })
     .id('inconvenient:altar_mana_pool');
-
-  event
-    .shaped('botania:diluted_pool', ['a a', 'aaa'], {
-      a: 'botania:livingrock_slab',
-    })
-    .id('inconvenient:shaped_diluted_pool');
 
   event
     .shaped('botania:mana_spreader', ['aaa', 'bc ', 'aaa'], {

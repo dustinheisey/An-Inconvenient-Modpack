@@ -574,6 +574,9 @@ onEvent('recipes', event => {
                       {
                         id: 'activation_crystal',
                         recipe: () => {
+                          ['bloodmagic:weak_activation_crystal'].forEach(id =>
+                            event.remove({id: id})
+                          );
                           event
                             .custom({
                               type: 'bloodmagic:altar',
@@ -628,6 +631,9 @@ onEvent('recipes', event => {
                           {
                             id: 'air_scribe_tool',
                             recipe: () => {
+                              ['bloodmagic:altar/air_tool'].forEach(id =>
+                                event.remove({id: id})
+                              );
                               event
                                 .custom({
                                   type: 'bloodmagic:altar',
@@ -663,11 +669,38 @@ onEvent('recipes', event => {
                                     .id('inconvenient:shaped_alchemytable');
                                 },
                               },
+                              {
+                                id: 'bow_velocity',
+                                recipe: () => {
+                                  event
+                                    .custom({
+                                      type: 'bloodmagic:alchemytable',
+                                      input: [
+                                        {item: 'bloodmagic:slate_vial'},
+                                        {item: 'hexerei:yellow_dock_flowers'},
+                                        {item: 'minecraft:bow'},
+                                        {item: 'extendedcrafting:luminessence'},
+                                      ],
+                                      output: {
+                                        item: 'bloodmagic:bow_velocity_anointment',
+                                      },
+                                      syphon: 500,
+                                      ticks: 100,
+                                      upgradeLevel: 1,
+                                    })
+                                    .id(
+                                      'inconvenient:alchemy_bow_velocity_anointment'
+                                    );
+                                },
+                              },
                             ],
                           },
                           {
                             id: 'earth_scribe_tool',
                             recipe: () => {
+                              ['bloodmagic:altar/earth_tool'].forEach(id =>
+                                event.remove({id: id})
+                              );
                               event
                                 .custom({
                                   type: 'bloodmagic:altar',
@@ -684,11 +717,41 @@ onEvent('recipes', event => {
                                 })
                                 .id('inconvenient:altar_earth_scribe_tool');
                             },
-                            children: [],
+                            children: [
+                              {
+                                id: 'fortuna_extract',
+                                recipe: () => {
+                                  event
+                                    .custom({
+                                      type: 'bloodmagic:alchemytable',
+                                      input: [
+                                        {item: 'bloodmagic:slate_vial'},
+                                        {
+                                          item: 'hexerei:dried_mandrake_flowers',
+                                        },
+                                        {item: 'minecraft:redstone'},
+                                        {item: 'create:powdered_obsidian'},
+                                      ],
+                                      output: {
+                                        item: 'bloodmagic:fortune_anointment',
+                                      },
+                                      syphon: 500,
+                                      ticks: 100,
+                                      upgradeLevel: 1,
+                                    })
+                                    .id(
+                                      'inconvenient:alchemy_fortune_anointment'
+                                    );
+                                },
+                              },
+                            ],
                           },
                           {
                             id: 'fire_scribe_tool',
                             recipe: () => {
+                              ['bloodmagic:altar/fire_tool'].forEach(id =>
+                                event.remove({id: id})
+                              );
                               event
                                 .custom({
                                   type: 'bloodmagic:altar',
@@ -705,11 +768,39 @@ onEvent('recipes', event => {
                                 })
                                 .id('inconvenient:altar_fire_scribe_tool');
                             },
-                            children: [],
+                            children: [
+                              {
+                                id: 'smelting_anointment',
+                                recipe: () => {
+                                  event
+                                    .custom({
+                                      type: 'bloodmagic:alchemytable',
+                                      input: [
+                                        {item: 'bloodmagic:slate_vial'},
+                                        {item: 'blue_skies:blaze_bud'},
+                                        {item: 'minecraft:furnace'},
+                                        {item: 'create:cinder_flour'},
+                                      ],
+                                      output: {
+                                        item: 'bloodmagic:smelting_anointment',
+                                      },
+                                      syphon: 500,
+                                      ticks: 100,
+                                      upgradeLevel: 1,
+                                    })
+                                    .id(
+                                      'inconvenient:alchemy_smelting_anointment'
+                                    );
+                                },
+                              },
+                            ],
                           },
                           {
                             id: 'water_scribe_tool',
                             recipe: () => {
+                              ['bloodmagic:altar/water_tool'].forEach(id =>
+                                event.remove({id: id})
+                              );
                               event
                                 .custom({
                                   type: 'bloodmagic:altar',
@@ -726,7 +817,34 @@ onEvent('recipes', event => {
                                 })
                                 .id('inconvenient:altar_water_scribe_tool');
                             },
-                            children: [],
+                            children: [
+                              {
+                                id: 'holy_water',
+                                recipe: () => {
+                                  event
+                                    .custom({
+                                      type: 'bloodmagic:alchemytable',
+                                      input: [
+                                        {item: 'bloodmagic:slate_vial'},
+                                        {
+                                          item: 'hexerei:dried_belladonna_flowers',
+                                        },
+                                        {item: 'minecraft:redstone'},
+                                        {item: 'minecraft:sugar'},
+                                      ],
+                                      output: {
+                                        item: 'bloodmagic:holy_water_anointment',
+                                      },
+                                      syphon: 500,
+                                      ticks: 100,
+                                      upgradeLevel: 1,
+                                    })
+                                    .id(
+                                      'inconvenient:alchemy_holy_water_anointment'
+                                    );
+                                },
+                              },
+                            ],
                           },
                         ],
                       },

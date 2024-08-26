@@ -339,6 +339,9 @@ onEvent('recipes', event => {
                           {
                             id: 'saltpeter',
                             recipe: () => {
+                              ['bloodmagic:alchemytable/saltpeter'].forEach(
+                                id => event.remove({id: id})
+                              );
                               event.recipes.create
                                 .crushing(
                                   ['bloodmagic:saltpeter'],

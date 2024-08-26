@@ -75,5 +75,28 @@ onEvent('recipes', event => {
         },
       ],
     },
+    {
+      id: 'cd',
+      recipe: () => {
+        ['bloodmagic:altar/bleeding_edge_music'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .custom({
+            type: 'bloodmagic:altar',
+            input: {
+              item: 'bloodmagic:rawdemoniteblock',
+            },
+            altarSyphon: 1000000,
+            consumptionRate: 1000,
+            drainRate: 1000,
+            upgradeLevel: 5,
+            output: {
+              item: 'bloodmagic:bleedingedge',
+            },
+          })
+          .id('inconvenient:altar_bleedingedge');
+      },
+    },
   ]);
 });
