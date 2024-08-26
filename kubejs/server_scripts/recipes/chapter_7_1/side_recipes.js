@@ -4,7 +4,66 @@ onEvent('recipes', event => {
       id: 'collections',
       recipe: () => {},
       children: [
-        {id: 'gateways', recipe: () => {}, children: []},
+        {
+          id: 'gateways',
+          recipe: () => {
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/custom_ritual',
+                },
+                activation_item: {item: 'blue_skies:soul_fragment'},
+                pentacle_id: 'occultism:craft_marid',
+                ingredients: [
+                  {
+                    item: 'hem:copparite',
+                  },
+                  {
+                    item: 'rankine:vulcanized_rubber',
+                  },
+                  {
+                    item: 'hem:lush_flower_1',
+                  },
+                  {
+                    item: 'hem:shotgun_shell',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    item: 'hem:copparite',
+                  },
+                  {
+                    item: 'rankine:vulcanized_rubber',
+                  },
+                  {
+                    item: 'hem:lush_flower_1',
+                  },
+                  {
+                    item: 'hem:shotgun_shell',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    item: 'rankine:steel_ingot',
+                  },
+                  {
+                    item: 'rankine:steel_ingot',
+                  },
+                ],
+                result: {
+                  item: 'gateways:gate_pearl',
+                  nbt: '{gateway:"gateways:small_end_gateway"}',
+                },
+              })
+              .id('inconvenient:ritual_end_gateway');
+          },
+          children: [],
+        },
         {
           id: 'guidebooks',
           recipe: () => {
@@ -175,4 +234,31 @@ onEvent('recipes', event => {
       output: {item: 'naturesaura:eye_improved'},
     })
     .id('inconvenient:tree_ritual_environmental_ocular');
+});
+
+onEvent('server.datapack.high_priority', event => {
+  // End
+  registerGateways(event, {
+    id: 'end',
+    color: '#218c74',
+    dimension: 'the End',
+    waves: [
+      {
+        type: 'mob',
+        entities: ['minecraft:bee'],
+      },
+    ],
+    restorations: [{id: 'minecraft:bee', name: 'Bee'}],
+    relics: [
+      'relics:shadow_glaive',
+      'relics:elytra_booster',
+      'relics:enders_hand',
+      'relics:chorus_inhibitor',
+      'relics:midnight_robe',
+      'relics:reflection_necklace',
+      'relics:spatial_sign',
+      'artifacts:shock_pendant',
+    ],
+    rewards: [{id: 'kubejs:end_token', count: 1}],
+  });
 });

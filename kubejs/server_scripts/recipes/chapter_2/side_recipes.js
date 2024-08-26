@@ -4,7 +4,66 @@ onEvent('recipes', event => {
       id: 'collections',
       recipe: () => {},
       children: [
-        {id: 'gateways', recipe: () => {}, children: []},
+        {
+          id: 'gateways',
+          recipe: () => {
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/custom_ritual',
+                },
+                activation_item: {item: 'kubejs:iridescent_scales'},
+                pentacle_id: 'occultism:summon_foliot',
+                ingredients: [
+                  {
+                    item: 'blue_skies:aquite',
+                  },
+                  {
+                    item: 'blue_skies:aquite',
+                  },
+                  {
+                    item: 'blue_skies:soul_fragment',
+                  },
+                  {
+                    item: 'blue_skies:cryo_root',
+                  },
+                  {
+                    item: 'blue_skies:winter_leaves',
+                  },
+                  {
+                    item: 'blue_skies:municipal_monkfish',
+                  },
+                  {
+                    item: 'blue_skies:grittle_flatfish',
+                  },
+                  {
+                    item: 'rankine:white_marble',
+                  },
+                  {
+                    item: 'rankine:white_marble',
+                  },
+                  {
+                    item: 'blue_skies:starlit_sapling',
+                  },
+                  {
+                    item: 'blue_skies:chilled_lily_pad',
+                  },
+                  {
+                    item: 'blue_skies:azulfo_horn',
+                  },
+                ],
+                result: {
+                  item: 'gateways:gate_pearl',
+                  nbt: '{gateway:"gateways:small_everbright_gateway"}',
+                },
+              })
+              .id('inconvenient:ritual_aquatic_gateway');
+          },
+          children: [],
+        },
         {
           id: 'end_eyes',
           recipe: () => {
@@ -1041,4 +1100,82 @@ onEvent('recipes', event => {
       b: '#forge:glass',
     })
     .id('inconvenient:shaped_lead_glass');
+});
+
+onEvent('server.datapack.high_priority', event => {
+  // Everbright
+  registerGateways(event, {
+    id: 'everbright',
+    dimension: 'Everbright',
+    color: '#4FA7FF',
+    waves: [
+      {
+        type: 'mob',
+        entities: ['blue_skies:artificial_golem'],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:armored_frost_spirit'],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:diophyde_prowler'],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:polargeist'],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:crynocerous'],
+      },
+      {
+        type: 'boss',
+        entities: ['blue_skies:summoner'],
+        rewards: [{id: 'blue_skies:loot_bag_summoner', count: 2}],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:stonelet'],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:spewter'],
+      },
+      {
+        type: 'boss',
+        entities: ['blue_skies:starlit_crusher'],
+        rewards: [
+          {
+            id: 'blue_skies:loot_bag_starlit_crusher',
+            count: 2,
+          },
+        ],
+      },
+    ],
+    restorations: [
+      {id: 'blue_skies:seclam', name: 'seclam'},
+      {id: 'blue_skies:whistleshell_crab', name: 'whistleshell crab'},
+      {id: 'minecraft:turtle', name: 'turtle'},
+      {id: 'minecraft:skeleton', name: 'skeleton'},
+    ],
+    relics: [
+      'relics:amphibian_boot',
+      'relics:drowned_belt',
+      'relics:aqua_walker',
+      'relics:jellyfish_necklace',
+      'artifacts:flippers',
+      'artifacts:snorkel',
+    ],
+    rewards: [
+      {id: 'minecraft:cod', count: 15},
+      {id: 'minecraft:salmon', count: 15},
+      {id: 'minecraft:tropical_fish', count: 15},
+      {id: 'minecraft:pufferfish', count: 15},
+      {id: 'blue_skies:municipal_monkfish', count: 15},
+      {id: 'rankine:tuna', count: 15},
+      {id: 'kubejs:everbright_token', count: 1},
+      {id: 'minecraft:heart_of_the_sea', count: 1},
+    ],
+  });
 });

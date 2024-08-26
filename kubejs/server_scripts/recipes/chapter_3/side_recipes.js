@@ -33,7 +33,173 @@ onEvent('recipes', event => {
               .id('inconvenient:shaped_totem_of_timesaving');
           },
         },
-        {id: 'gateways', recipe: () => {}},
+        {
+          id: 'gateways',
+          recipe: () => {
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/custom_ritual',
+                },
+                activation_item: {item: 'undergarden:masticator_scales'},
+                pentacle_id: 'occultism:craft_foliot',
+                ingredients: [
+                  {
+                    item: 'undergarden:bloody_stew',
+                  },
+                  {
+                    item: 'undergarden:inky_stew',
+                  },
+                  {
+                    item: 'undergarden:indigo_stew',
+                  },
+                  {
+                    item: 'undergarden:veiled_stew',
+                  },
+                  {
+                    item: 'undergarden:utherium_crystal',
+                  },
+                  {
+                    item: 'undergarden:forgotten_nugget',
+                  },
+                  {
+                    item: 'undergarden:twistytwig',
+                  },
+                  {
+                    item: 'undergarden:utherium_crystal',
+                  },
+                  {
+                    item: 'undergarden:forgotten_nugget',
+                  },
+                  {
+                    item: 'undergarden:twistytwig',
+                  },
+                  {
+                    item: 'undergarden:rotten_blisterberry',
+                  },
+                  {
+                    item: 'undergarden:brute_tusk',
+                  },
+                ],
+                result: {
+                  item: 'gateways:gate_pearl',
+                  nbt: '{gateway:"gateways:small_undergarden_gateway"}',
+                },
+              })
+              .id('inconvenient:ritual_undergarden_gateway');
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/custom_ritual',
+                },
+                activation_item: {item: 'blue_skies:soul_fragment'},
+                pentacle_id: 'occultism:craft_djinni',
+                ingredients: [
+                  {
+                    item: 'blue_skies:crescent_fruit',
+                  },
+                  {
+                    item: 'blue_skies:monitor_tail',
+                  },
+                  {
+                    item: 'blue_skies:charscale_moki',
+                  },
+                  {
+                    item: 'blue_skies:horizofin_tunid',
+                  },
+                  {
+                    item: 'blue_skies:fox_pelt',
+                  },
+                  {
+                    item: 'blue_skies:bug_guts',
+                  },
+                  {
+                    item: 'blue_skies:horizonite_ingot',
+                  },
+                  {
+                    item: 'blue_skies:bug_guts',
+                  },
+                  {
+                    item: 'blue_skies:horizonite_ingot',
+                  },
+                  {
+                    item: 'blue_skies:venom_sac',
+                  },
+                  {
+                    item: 'blue_skies:blaze_bud',
+                  },
+                  {
+                    item: 'blue_skies:moonlit_water_lily',
+                  },
+                ],
+                result: {
+                  item: 'gateways:gate_pearl',
+                  nbt: '{gateway:"gateways:small_everdawn_gateway"}',
+                },
+              })
+              .id('inconvenient:ritual_everdawn_gateway');
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/custom_ritual',
+                },
+                activation_item: {item: 'blue_skies:soul_fragment'},
+                pentacle_id: 'occultism:summon_wild_greater_spirit',
+                ingredients: [
+                  {
+                    item: 'twilightforest:charm_of_keeping_2',
+                  },
+                  {
+                    item: 'twilightforest:charm_of_keeping_2',
+                  },
+                  {
+                    item: 'twilightforest:raw_ironwood',
+                  },
+                  {
+                    item: 'twilightforest:experiment_115',
+                  },
+                  {
+                    item: 'twilightforest:huge_water_lily',
+                  },
+                  {
+                    item: 'twilightforest:transformation_powder',
+                  },
+                  {
+                    item: 'twilightforest:transformation_powder',
+                  },
+                  {
+                    item: 'twilightforest:carminite',
+                  },
+                  {
+                    item: 'twilightforest:fiery_tears',
+                  },
+                  {
+                    item: 'twilightforest:fiery_blood',
+                  },
+                  {
+                    item: 'twilightforest:fiery_blood',
+                  },
+                  {
+                    item: 'twilightforest:thorn_rose',
+                  },
+                ],
+                result: {
+                  item: 'gateways:gate_pearl',
+                  nbt: '{gateway:"gateways:small_twilight_gateway"}',
+                },
+              })
+              .id('inconvenient:ritual_twilight_gateway');
+          },
+        },
         {
           id: 'guidebooks',
           recipe: () => {
@@ -1527,4 +1693,233 @@ onEvent('recipes', event => {
       a: `twilightforest:dark_planks`,
     })
     .id('inconvenient:shaped_darkwood_chest');
+});
+
+onEvent('server.datapack.high_priority', event => {
+  // Undergarden
+  registerGateways(event, {
+    id: 'undergarden',
+    color: '#00D7A2',
+    dimension: 'the Undergarden',
+    waves: [
+      {
+        type: 'mob',
+        entities: ['undergarden:rotling'],
+      },
+      {
+        type: 'mob',
+        entities: ['undergarden:muncher'],
+      },
+      {
+        type: 'mob',
+        entities: ['undergarden:nargoyle'],
+        rewards: [{id: 'undergarden:raw_cloggrum', count: 15}],
+      },
+      {
+        type: 'mob',
+        entities: ['undergarden:rotwalker'],
+      },
+      {
+        type: 'mob',
+        entities: ['undergarden:rotbeast'],
+      },
+      {
+        type: 'mob',
+        entities: ['undergarden:forgotten_guardian'],
+      },
+      {
+        type: 'boss',
+        entities: ['undergarden:masticator'],
+        rewards: [{id: 'undergarden:masticator_scales', count: 10}],
+      },
+    ],
+    restorations: [
+      {id: 'minecraft:slime', name: 'slime'},
+      {id: 'minecraft:creeper', name: 'creeper'},
+      {id: 'undergarden:mog', name: 'mog'},
+      {id: 'undergarden:gloomper', name: 'gloomper'},
+    ],
+    relics: [
+      'relics:spore_sack',
+      'artifacts:antidote_vessel',
+      'artifacts:lucky_scarf',
+      'artifacts:digging_claws',
+      'artifacts:night_vision_goggles',
+      'artifacts:kitty_slippers',
+    ],
+    rewards: [{id: 'kubejs:undergarden_token', count: 1}],
+  });
+
+  // Everdawn
+  registerGateways(event, {
+    id: 'everdawn',
+    color: '#FF6C55',
+    dimension: 'Everdawn',
+    waves: [
+      {
+        type: 'mob',
+        entities: ['blue_skies:emberback'],
+      },
+      {
+        type: 'boss',
+        entities: ['blue_skies:alchemist'],
+        rewards: [{id: 'blue_skies:loot_bag_alchemist', count: 2}],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:nested_spider'],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:venom_spider'],
+      },
+      {
+        type: 'mob',
+        entities: ['blue_skies:infested_swarmer'],
+      },
+      {
+        type: 'boss',
+        entities: ['blue_skies:arachnarch'],
+        rewards: [{id: 'blue_skies:loot_bag_arachnarch', count: 2}],
+      },
+    ],
+    restorations: [
+      {id: 'minecraft:spider', name: 'spider'},
+      {id: 'minecraft:cave_spider', name: 'cave spider'},
+      {id: 'minecraft:fox', name: 'fox'},
+      {id: 'blue_skies:cosmic_fox', name: 'cosmic fox'},
+    ],
+    relics: [
+      'relics:rage_glove',
+      'artifacts:superstitious_hat',
+      'artifacts:scarf_of_invisibility',
+      'artifacts:feral_claws',
+      'artifacts:panic_necklace',
+      'artifacts:power_glove',
+    ],
+    rewards: [{id: 'kubejs:everdawn_token', count: 1}],
+  });
+
+  // Twilight
+  registerGateways(event, {
+    id: 'twilight',
+    color: '#D888FF',
+    dimension: 'the Twilight Forest',
+    waves: [
+      {
+        type: 'group',
+        entities: [
+          'twilightforest:wraith',
+          'twilightforest:skeleton_druid',
+          'twilightforest:swarm_spider',
+          'twilightforest:king_spider',
+          'twilightforest:hedge_spider',
+        ],
+      },
+      {
+        type: 'boss',
+        entities: ['twilightforest:naga'],
+      },
+      {
+        type: 'group',
+        entities: [
+          'twilightforest:redcap',
+          'twilightforest:redcap_sapper',
+          'twilightforest:kobold',
+        ],
+      },
+      {
+        type: 'boss',
+        entities: ['twilightforest:lich'],
+      },
+      {
+        type: 'group',
+        entities: [
+          'twilightforest:fire_beetle',
+          'twilightforest:pinch_beetle',
+          'twilightforest:slime_beetle',
+          'twilightforest:maze_slime',
+        ],
+      },
+      {
+        type: 'boss',
+        entities: ['twilightforest:minoshroom'],
+      },
+      {
+        type: 'boss',
+        entities: ['twilightforest:hydra'],
+      },
+      {
+        type: 'group',
+        entities: [
+          'twilightforest:helmet_crab',
+          'twilightforest:blockchain_goblin',
+          'twilightforest:lower_goblin_knight',
+          'twilightforest:upper_goblin_knight',
+        ],
+      },
+      {
+        type: 'boss',
+        entities: ['twilightforest:knight_phantom'],
+      },
+      {
+        type: 'group',
+        entities: [
+          'twilightforest:carminite_broodling',
+          'twilightforest:carminite_ghastguard',
+          'twilightforest:carminite_ghastling',
+          'twilightforest:carminite_golem',
+        ],
+      },
+      {
+        type: 'boss',
+        entities: ['twilightforest:ur_ghast'],
+      },
+      {
+        type: 'boss',
+        entities: ['twilightforest:alpha_yeti'],
+      },
+      {
+        type: 'group',
+        entities: [
+          'twilightforest:stable_ice_core',
+          'twilightforest:unstable_ice_core',
+          'twilightforest:ice_crystal',
+          'twilightforest:snow_guardian',
+        ],
+      },
+      {
+        type: 'boss',
+        entities: ['twilightforest:snow_queen'],
+      },
+      {
+        type: 'group',
+        entities: [
+          'twilightforest:giant_miner',
+          'twilightforest:armored_giant',
+          'twilightforest:troll',
+        ],
+      },
+      {
+        type: 'boss',
+        entities: ['ecofriendly:pollutor_king_ym'],
+      },
+    ],
+    restorations: [
+      {id: 'minecraft:rabbit', name: 'rabbit'},
+      {id: 'minecraft:chicken', name: 'chicken'},
+      {id: 'minecraft:wolf', name: 'wolf'},
+      {id: 'totemic:bald_eagle', name: 'bald eagle'},
+    ],
+    relics: [
+      'relics:magic_mirror',
+      'artifacts:thorn_pendant',
+      'artifacts:universal_attractor',
+      'artifacts:steadfast_spikes',
+      'artifacts:pocket_piston',
+      'artifacts:crystal_heart',
+    ],
+
+    rewards: [{id: 'kubejs:twilight_token', count: 1}],
+  });
 });

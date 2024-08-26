@@ -449,3 +449,218 @@ function overrideBricksRecipes(chapter, event, configs) {
       .stage(chapter);
   });
 }
+
+// ? Gateways Functions
+function computeMaxWaveTime(config, size) {
+  if (size === 'small') return config.type === 'boss' ? 4800 : 2400;
+  else if (size === 'medium') return config.type === 'boss' ? 6400 : 3200;
+  else if (size === 'large') return config.type === 'boss' ? 12800 : 6400;
+}
+
+function computeSetupTime(config, size) {
+  if (size === 'small') return config.type === 'boss' ? 600 : 300;
+  else if (size === 'medium') return config.type === 'boss' ? 800 : 400;
+  else if (size === 'large') return config.type === 'boss' ? 1200 : 600;
+}
+
+function computeEntities(config, size) {
+  let json = [];
+
+  config.entities.forEach(id => {
+    let x = 0;
+    if (size === 'small')
+      x = config.type === 'mob' ? 5 : config.type === 'group' ? 3 : 1;
+    else if (size === 'medium')
+      x = config.type === 'mob' ? 10 : config.type === 'group' ? 5 : 1;
+    else if (size === 'large')
+      x = config.type === 'mob' ? 20 : config.type === 'group' ? 7 : 1;
+    for (let i = 0; i < x; i++) {
+      json.push({
+        entity: id,
+      });
+    }
+  });
+
+  return json;
+}
+
+function computeModifiers(size) {
+  if (size === 'small') return [];
+  else if (size === 'medium')
+    return [
+      {
+        attribute: 'generic.max_health',
+        operation: 'MULTIPLY_TOTAL',
+        value: 2.0,
+      },
+      {
+        attribute: 'generic.movement_speed',
+        operation: 'MULTIPLY_TOTAL',
+        value: 0.05,
+      },
+      {
+        attribute: 'generic.armor',
+        operation: 'ADDITION',
+        value: 4,
+      },
+    ];
+  else if (size === 'large')
+    return [
+      {
+        attribute: 'generic.max_health',
+        operation: 'MULTIPLY_TOTAL',
+        value: 4.0,
+      },
+      {
+        attribute: 'generic.movement_speed',
+        operation: 'MULTIPLY_TOTAL',
+        value: 0.05,
+      },
+      {
+        attribute: 'generic.armor',
+        operation: 'ADDITION',
+        value: 4,
+      },
+    ];
+}
+
+function computeWaveRewards(config, size) {
+  let json = [];
+
+  config.entities.forEach(id => {
+    json.push({
+      type: 'entity_loot',
+      entity: id,
+      rolls: size === 'small' ? 10 : size === 'medium' ? 20 : 40,
+    });
+  });
+
+  if (config.rewards) {
+    config.rewards.forEach(reward => {
+      json.push({
+        type: 'stack',
+        stack: {
+          item: reward.id,
+          count: reward.count,
+        },
+      });
+    });
+  }
+
+  return json;
+}
+
+function computeCompletionRewards(config, size) {
+  let json = [];
+
+  if (size === 'small') {
+    json.push({
+      type: 'command',
+      command: `gamestage add <summoner> restoration_${config.id}_gateway`,
+      desc: `Restore life to the Overworld from ${config.dimension}`,
+    });
+
+    json.push({
+      type: 'stack',
+      stack: {
+        item: 'gateways:gate_pearl',
+        nbt: `{gateway:"gateways:medium_${config.id}_gateway"}`,
+        count: 1,
+      },
+    });
+    config.restorations.forEach(config => {
+      json.push({
+        type: 'command',
+        command: `summon ${config.id}`,
+        desc: `Find a ${config.name}`,
+      });
+    });
+  } else if (size === 'medium') {
+    json.push({
+      type: 'stack',
+      stack: {
+        item: 'gateways:gate_pearl',
+        nbt: `{gateway:"gateways:large_${config.id}_gateway"}`,
+        count: 1,
+      },
+    });
+  } else if (size === 'large') {
+    config.rewards.forEach(item => {
+      json.push({
+        type: 'stack',
+        stack: {
+          item: item.id,
+          nbt: item.nbt,
+          count: item.count,
+        },
+      });
+    });
+  }
+
+  config.relics.forEach(id => {
+    json.push({
+      type: 'chanced',
+      chance: size === 'small' ? 0.1 : size === 'medium' ? 0.3 : 0.75,
+      reward: {
+        type: 'stack',
+        stack: {
+          item: id,
+          count: 1,
+        },
+      },
+    });
+  });
+
+  return json;
+}
+
+function computeJSON(config, size) {
+  let json = {
+    size: size,
+    color: config.color,
+    completion_xp: size === 'small' ? 500 : size === 'medium' ? 5000 : 50000,
+    spawn_range: size === 'small' ? 10 : size === 'medium' ? 20 : 40,
+    leash_range: size === 'small' ? 40 : size === 'medium' ? 80 : 160,
+    spawn_algorithm: 'gateways:inward_spiral',
+    waves: [],
+    failures: [
+      {
+        type: 'explosion',
+        strength: 3.0,
+        fire: false,
+        block_damage: true,
+      },
+    ],
+  };
+
+  json.rewards = computeCompletionRewards(config, size);
+
+  config.waves.forEach(wave => {
+    let config = {
+      entities: computeEntities(wave, size),
+      modifiers: computeModifiers(size),
+      rewards: computeWaveRewards(wave, size),
+      max_wave_time: computeMaxWaveTime(wave, size),
+      setup_time: computeSetupTime(wave, size),
+    };
+
+    json.waves.push(config);
+  });
+
+  return json;
+}
+
+function registerGateways(event, config) {
+  event.addJson(
+    `gateways:gateways/small_${config.id}_gateway.json`,
+    computeJSON(config, 'small')
+  );
+  event.addJson(
+    `gateways:gateways/medium_${config.id}_gateway.json`,
+    computeJSON(config, 'medium')
+  );
+  event.addJson(
+    `gateways:gateways/large_${config.id}_gateway.json`,
+    computeJSON(config, 'large')
+  );
+}

@@ -4,7 +4,66 @@ onEvent('recipes', event => {
       id: 'collections',
       recipe: () => {},
       children: [
-        {id: 'gateways', recipe: () => {}, children: []},
+        {
+          id: 'gateways',
+          recipe: () => {
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/custom_ritual',
+                },
+                activation_item: {item: 'blue_skies:soul_fragment'},
+                pentacle_id: 'occultism:craft_marid',
+                ingredients: [
+                  {
+                    item: 'hem:copparite',
+                  },
+                  {
+                    item: 'rankine:vulcanized_rubber',
+                  },
+                  {
+                    item: 'hem:lush_flower_1',
+                  },
+                  {
+                    item: 'hem:shotgun_shell',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    item: 'hem:copparite',
+                  },
+                  {
+                    item: 'rankine:vulcanized_rubber',
+                  },
+                  {
+                    item: 'hem:lush_flower_1',
+                  },
+                  {
+                    item: 'hem:shotgun_shell',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    item: 'rankine:steel_ingot',
+                  },
+                  {
+                    item: 'rankine:steel_ingot',
+                  },
+                ],
+                result: {
+                  item: 'gateways:gate_pearl',
+                  nbt: '{gateway:"gateways:small_blueleaf_gateway"}',
+                },
+              })
+              .id('inconvenient:ritual_blueleaf_gateway');
+          },
+          children: [],
+        },
         {
           id: 'guidebooks',
           recipe: () => {
@@ -574,4 +633,69 @@ onEvent('recipes', event => {
   //   ],
   //   type: 'minecraft:crafting_shaped',
   // });
+});
+
+onEvent('server.datapack.high_priority', event => {
+  // Blueleaf
+  registerGateways(event, {
+    id: 'blueleaf',
+    color: '#555e5f',
+    dimension: 'Blueleaf',
+    waves: [
+      {
+        type: 'mob',
+        entities: ['minecraft:skeleton_horse'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:zombie_villager'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:zombie_horse'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:vex'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:vindicator'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:ravager'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:evoker'],
+      },
+      {
+        type: 'mob',
+        entities: ['hem:militarybot'],
+      },
+      {
+        type: 'boss',
+        entities: ['hem:enemy_air_airship'],
+      },
+      {
+        type: 'boss',
+        entities: ['hem:ancient_one'],
+      },
+    ],
+    restorations: [
+      {id: 'minecraft:mule', name: 'mule'},
+      {id: 'minecraft:donkey', name: 'donkey'},
+      {id: 'minecraft:horse', name: 'horse'},
+    ],
+    relics: [
+      'relics:hunter_belt',
+      'relics:arrow_quiver',
+      'relics:horse_flute',
+      'artifacts:plastic_drinking_hat',
+      'artifacts:villager_hat',
+      'artifacts:novelty_drinking_hat',
+    ],
+    rewards: [{id: 'kubejs:blueleaf_token', count: 1}],
+  });
 });

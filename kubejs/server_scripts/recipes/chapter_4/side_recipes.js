@@ -4,7 +4,66 @@ onEvent('recipes', event => {
       id: 'collections',
       recipe: () => {},
       children: [
-        {id: 'gateways', recipe: () => {}, children: []},
+        {
+          id: 'gateways',
+          recipe: () => {
+            event
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/custom_ritual',
+                },
+                activation_item: {item: 'blue_skies:soul_fragment'},
+                pentacle_id: 'occultism:summon_marid',
+                ingredients: [
+                  {
+                    item: 'minecraft:wither_rose',
+                  },
+                  {
+                    item: 'minecraft:crimson_fungus',
+                  },
+                  {
+                    item: 'minecraft:warped_fungus',
+                  },
+                  {
+                    item: 'minecraft:quartz',
+                  },
+                  {
+                    item: 'minecraft:porkchop',
+                  },
+                  {
+                    item: 'cataclysm:witherite_ingot',
+                  },
+                  {
+                    item: 'rankine:carbon_dioxide_gas_bottle',
+                  },
+                  {
+                    item: 'minecraft:porkchop',
+                  },
+                  {
+                    item: 'cataclysm:witherite_ingot',
+                  },
+                  {
+                    item: 'rankine:carbon_dioxide_gas_bottle',
+                  },
+                  {
+                    item: 'occultism:iesnium_ingot',
+                  },
+                  {
+                    item: 'minecraft:blaze_powder',
+                  },
+                ],
+                result: {
+                  item: 'gateways:gate_pearl',
+                  nbt: '{gateway:"gateways:small_nether_gateway"}',
+                },
+              })
+              .id('inconvenient:ritual_nether_gateway');
+          },
+          children: [],
+        },
         {
           id: 'guidebooks',
           recipe: () => {
@@ -1616,4 +1675,69 @@ onEvent('recipes', event => {
       b: 'rankine:black_gold_ingot',
     })
     .id('inconvenient:shaped_glass_cutter');
+});
+
+onEvent('server.datapack.high_priority', event => {
+  // Nether
+  registerGateways(event, {
+    id: 'nether',
+    color: '#D92C32',
+    dimension: 'the Nether',
+    waves: [
+      {
+        type: 'mob',
+        entities: ['minecraft:magma_cube'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:wither_skeleton'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:ghast'],
+      },
+      {
+        type: 'boss',
+        entities: ['minecraft:wither'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:blaze'],
+      },
+      {
+        type: 'boss',
+        entities: ['cataclysm:ignited_revenant'],
+      },
+      {
+        type: 'boss',
+        entities: ['cataclysm:ignis'],
+      },
+      {
+        type: 'group',
+        entities: ['minecraft:hoglin', 'minecraft:zoglin'],
+      },
+      {
+        type: 'mob',
+        entities: ['minecraft:zombified_piglin'],
+      },
+      {
+        type: 'group',
+        entities: ['minecraft:piglin', 'minecraft:piglin_brute'],
+      },
+      {
+        type: 'boss',
+        entities: ['cataclysm:netherite_monstrosity'],
+      },
+    ],
+    restorations: [{id: 'minecraft:pig', name: 'pig'}],
+    relics: [
+      'relics:magma_walker',
+      'relics:bastion_ring',
+      'relics:blazing_flask',
+      'artifacts:fire_gauntlet',
+      'artifacts:flame_pendant',
+      'artifacts:obsidian_skull',
+    ],
+    rewards: [{id: 'kubejs:nether_token', count: 1}],
+  });
 });

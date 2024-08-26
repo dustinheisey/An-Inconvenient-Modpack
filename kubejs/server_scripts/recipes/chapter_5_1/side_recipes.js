@@ -4,7 +4,66 @@ onEvent('recipes', event => {
       id: 'collections',
       recipe: () => {},
       children: [
-        {id: 'gateways', recipe: () => {}, children: []},
+        {
+          id: 'gateways',
+          recipe: () => {
+            vent
+              .custom({
+                type: 'occultism:ritual',
+                ritual_type: 'occultism:craft',
+                duration: 60,
+                ritual_dummy: {
+                  item: 'occultism:ritual_dummy/custom_ritual',
+                },
+                activation_item: {item: 'blue_skies:soul_fragment'},
+                pentacle_id: 'occultism:craft_marid',
+                ingredients: [
+                  {
+                    item: 'hem:copparite',
+                  },
+                  {
+                    item: 'rankine:vulcanized_rubber',
+                  },
+                  {
+                    item: 'hem:lush_flower_1',
+                  },
+                  {
+                    item: 'hem:shotgun_shell',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    item: 'hem:copparite',
+                  },
+                  {
+                    item: 'rankine:vulcanized_rubber',
+                  },
+                  {
+                    item: 'hem:lush_flower_1',
+                  },
+                  {
+                    item: 'hem:shotgun_shell',
+                  },
+                  {
+                    item: 'create:chromatic_compound',
+                  },
+                  {
+                    item: 'rankine:steel_ingot',
+                  },
+                  {
+                    item: 'rankine:steel_ingot',
+                  },
+                ],
+                result: {
+                  item: 'gateways:gate_pearl',
+                  nbt: '{gateway:"gateways:small_bumblezone_gateway"}',
+                },
+              })
+              .id('inconvenient:ritual_bumblezone_gateway');
+          },
+          children: [],
+        },
         {
           id: 'guidebooks',
           recipe: () => {
@@ -299,4 +358,29 @@ onEvent('recipes', event => {
       drainRate: 1500,
     })
     .id('inconvenient:altar_archmagebloodorb');
+});
+
+onEvent('server.datapack.high_priority', event => {
+  // Bumblezone
+  registerGateways(event, {
+    id: 'bumblezone',
+    color: '#d1a054',
+    dimension: 'the Bumblezone',
+    waves: [
+      {
+        type: 'mob',
+        entities: ['minecraft:bee'],
+      },
+    ],
+    restorations: [{id: 'minecraft:bee', name: 'Bee'}],
+    relics: [
+      'relics:leather_belt',
+      'relics:wool_mitten',
+      'relics:infinity_ham',
+      'artifacts:vampiric_glove',
+      'artifacts:bunny_hoppers',
+      'artifacts:whoopee_cushion',
+    ],
+    rewards: [{id: 'kubejs:bumblezone_token', count: 1}],
+  });
 });
