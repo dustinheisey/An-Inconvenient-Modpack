@@ -2,6 +2,9 @@ onEvent('recipes', event => {
   setMilestoneRecipes({
     id: 'corrupted_resonance',
     recipe: () => {
+      ['malum:spirit_infusion/corrupted_resonance'].forEach(id =>
+        event.remove({id: id})
+      );
       event
         .custom({
           type: 'malum:spirit_infusion',
@@ -63,7 +66,25 @@ onEvent('recipes', event => {
       },
       {
         id: 'hex_ash',
-        recipe: () => {},
+        recipe: () => {
+          ['malum:spirit_infusion/hex_ash'].forEach(id =>
+            event.remove({id: id})
+          );
+          event
+            .custom({
+              type: 'malum:spirit_infusion',
+              input: {item: 'malum:rotting_essence'},
+              output: {item: 'malum:hex_ash'},
+              extra_items: [],
+              spirits: [
+                {
+                  type: 'arcane',
+                  count: 1,
+                },
+              ],
+            })
+            .id('inconvenient:spirit_infusion_hex_ash');
+        },
         children: [{id: 'rotting_essence', recipe: () => {}, children: []}],
       },
     ],

@@ -331,8 +331,7 @@ function stageArmors(event, configs) {
             `${config.previousTier}_${config.previousPieces[0]}`
           ).ignoreNBT(),
         })
-        .stage(config.stage)
-        .id(`inconvenient:shaped_${config.tier}_${config.pieces[0]}`);
+        .stage(config.stage);
 
       event
         .shaped(`${config.tier}_${config.pieces[1]}`, ['aba', 'aaa', 'aaa'], {
@@ -341,8 +340,7 @@ function stageArmors(event, configs) {
             `${config.previousTier}_${config.previousPieces[1]}`
           ).ignoreNBT(),
         })
-        .stage(config.stage)
-        .id(`inconvenient:shaped_${config.tier}_${config.pieces[1]}`);
+        .stage(config.stage);
       event
         .shaped(`${config.tier}_${config.pieces[2]}`, ['aaa', 'aba', 'a a'], {
           a: config.input,
@@ -350,8 +348,7 @@ function stageArmors(event, configs) {
             `${config.previousTier}_${config.previousPieces[2]}`
           ).ignoreNBT(),
         })
-        .stage(config.stage)
-        .id(`inconvenient:shaped_${config.tier}_${config.pieces[2]}`);
+        .stage(config.stage);
 
       event
         .shaped(`${config.tier}_${pieces[3]}`, ['aba', 'a a'], {
@@ -360,75 +357,64 @@ function stageArmors(event, configs) {
             `${config.previousTier}_${config.previousPieces[3]}`
           ).ignoreNBT(),
         })
-        .stage(config.stage)
-        .id(`inconvenient:shaped_${config.tier}_${config.pieces[3]}`);
+        .stage(config.stage);
 
       event
         .shaped(`${config.tier}_${pieces[0]}`, ['aaa', 'a a'], {
           a: config.input,
         })
-        .stage(`armor_${config.master}_helmet`)
-        .id(`inconvenient:shaped_master_${config.tier}_${config.pieces[0]}`);
+        .stage(`armor_${config.master}_helmet`);
       event
         .shaped(`${config.tier}_${pieces[1]}`, ['a a', 'aaa', 'aaa'], {
           a: config.input,
         })
-        .stage(`armor_${config.master}_chestplate`)
-        .id(`inconvenient:shaped_master_${config.tier}_${config.pieces[1]}`);
+        .stage(`armor_${config.master}_chestplate`);
       event
         .shaped(`${config.tier}_${pieces[2]}`, ['aaa', 'a a', 'a a'], {
           a: config.input,
         })
-        .stage(`armor_${config.master}_leggings`)
-        .id(`inconvenient:shaped_master_${config.tier}_${config.pieces[2]}`);
+        .stage(`armor_${config.master}_leggings`);
       event
         .shaped(`${config.tier}_${pieces[3]}`, ['a a', 'a a'], {
           a: config.input,
         })
-        .stage(`armor_${config.master}_boots`)
-        .id(`inconvenient:shaped_master_${config.tier}_${config.pieces[3]}`);
+        .stage(`armor_${config.master}_boots`);
     } else {
       event
         .shaped(`${config.tier}_helmet`, ['aaa', 'aba'], {
           a: config.input,
           b: Item.of(`${config.previousTier}_helmet`).ignoreNBT(),
         })
-        .stage(config.stage)
-        .id(`inconvenient:shaped_${config.tier}_helmet`);
+        .stage(config.stage);
       event
         .shaped(`${config.tier}_chestplate`, ['aba', 'aaa', 'aaa'], {
           a: config.input,
           b: Item.of(`${config.previousTier}_chestplate`).ignoreNBT(),
         })
-        .stage(config.stage)
-        .id(`inconvenient:shaped_${config.tier}_helmet`);
+        .stage(config.stage);
       event
         .shaped(`${config.tier}_leggings`, ['aaa', 'aba', 'a a'], {
           a: config.input,
           b: Item.of(`${config.previousTier}_leggings`).ignoreNBT(),
         })
-        .stage(config.stage)
-        .id(`inconvenient:shaped_${config.tier}_leggings`);
+        .stage(config.stage);
       event
         .shaped(`${config.tier}_boots`, ['aba', 'a a'], {
           a: config.input,
           b: Item.of(`${config.previousTier}_boots`).ignoreNBT(),
         })
-        .stage(config.stage)
-        .id(`inconvenient:shaped_${config.tier}_boots`);
+        .stage(config.stage);
 
       event
         .shaped(`${config.tier}_helmet`, ['aaa', 'a a'], {
           a: config.input,
         })
-        .stage(`armor_${config.master}_helmet`)
-        .id(`inconvenient:shaped_master_${config.tier}_helmet`);
+        .stage(`armor_${config.master}_helmet`);
       event
         .shaped(`${config.tier}_chestplate`, ['a a', 'aaa', 'aaa'], {
           a: config.input,
         })
-        .stage(`armor_${config.master}_chestplate`)
-        .id(`inconvenient:shaped_master_${config.tier}_helmet`);
+        .stage(`armor_${config.master}_chestplate`);
       event
         .shaped(`${config.tier}_leggings`, ['aaa', 'a a', 'a a'], {
           a: config.input,

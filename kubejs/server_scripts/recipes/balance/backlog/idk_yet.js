@@ -149,6 +149,8 @@ onEvent('recipes', event => {
       c: 'minecraft:soul_campfire',
     })
     .id('iconvenient:shaped_alloy_furnace');
+
+  ['malum:spirit_infusion/tainted_rock'].forEach(id => event.remove({id: id}));
   event
     .custom({
       type: 'malum:spirit_infusion',
@@ -322,6 +324,9 @@ onEvent('recipes', event => {
       time: 54,
     })
     .id('iconvenient:melting_molten_steeleaf');
+  ['malum:spirit_infusion/soul_stained_steel_ingot'].forEach(id =>
+    event.remove({id: id})
+  );
   event
     .custom({
       type: 'malum:spirit_infusion',

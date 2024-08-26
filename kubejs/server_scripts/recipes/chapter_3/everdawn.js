@@ -61,6 +61,9 @@ onEvent('recipes', event => {
           {
             id: 'twisted_rock',
             recipe: () => {
+              ['malum:spirit_infusion/twisted_rock'].forEach(id =>
+                event.remove({id: id})
+              );
               event
                 .custom({
                   type: 'malum:spirit_infusion',
@@ -306,6 +309,9 @@ onEvent('recipes', event => {
                           {
                             id: 'blood_sigil',
                             recipe: () => {
+                              [
+                                'hexerei:blood_sigil_from_mixing_cauldron',
+                              ].forEach(id => event.remove({id: id}));
                               event
                                 .custom({
                                   type: 'malum:spirit_infusion',
@@ -387,4 +393,21 @@ onEvent('recipes', event => {
       },
     ],
   });
+  ['occultism:crafting/book_of_binding_djinni'].forEach(id =>
+    event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'malum:spirit_infusion',
+      input: {item: 'occultism:book_of_binding_foliot'},
+      output: {item: 'occultism:book_of_binding_djinni'},
+      extra_items: [],
+      spirits: [
+        {
+          type: 'wicked',
+          count: 4,
+        },
+      ],
+    })
+    .id('inconvenient:spirit_infusion_book_of_binding_djinni');
 });

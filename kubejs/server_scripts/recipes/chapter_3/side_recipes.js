@@ -121,6 +121,10 @@ onEvent('recipes', event => {
               'undergarden:utherium_chestplate',
               'undergarden:utherium_leggings',
               'undergarden:utherium_boots',
+              'malum:spirit_infusion/soul_stained_steel_helmet',
+              'malum:spirit_infusion/soul_stained_steel_chestplate',
+              'malum:spirit_infusion/soul_stained_steel_leggings',
+              'malum:spirit_infusion/soul_stained_steel_boots',
             ].forEach(id => event.remove({id: id}));
             stageArmors(event, [
               {
@@ -997,6 +1001,90 @@ onEvent('recipes', event => {
       },
     },
   ]);
+
+  ['malum:spirit_infusion/poppet'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'malum:spirit_infusion',
+      input: {item: 'minecraft:hay_block'},
+      output: {item: 'malum:poppet', count: 2},
+      extra_items: [{item: 'kubejs:wheat', count: 2}, {item: 'malum:hex_ash'}],
+      spirits: [
+        {
+          type: 'wicked',
+          count: 4,
+        },
+        {
+          type: 'earthen',
+          count: 4,
+        },
+      ],
+    })
+    .id('inconvenient:spirit_infusion_poppet');
+
+  ['malum:spirit_infusion/alchemical_impetus'].forEach(id =>
+    event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'malum:spirit_infusion',
+      input: {item: 'malum:alchemical_calx', count: 8},
+      output: {item: 'malum:alchemical_impetus'},
+      extra_items: [
+        {item: 'malum:processed_soulstone', count: 3},
+        {item: 'minecraft:gunpowder', count: 2},
+        {item: 'malum:hex_ash', count: 1},
+      ],
+      spirits: [
+        {
+          type: 'arcane',
+          count: 4,
+        },
+        {type: 'earthen', count: 4},
+      ],
+    })
+    .id('inconvenient:spirit_infusion_alchemical_impetus');
+
+  ['malum:spirit_infusion/ether'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'malum:spirit_infusion',
+      input: {item: 'minecraft:glowstone_dust', count: 4},
+      output: {item: 'malum:ether', count: 4},
+      extra_items: [
+        {item: 'realistictorches:glowstone_crystal', count: 1},
+        {item: 'minecraft:blaze_powder', count: 1},
+      ],
+      spirits: [
+        {
+          type: 'arcane',
+          count: 1,
+        },
+        {type: 'infernal', count: 2},
+      ],
+    })
+    .id('inconvenient:spirit_infusion_ether');
+
+  ['malum:spirit_infusion/spirit_fabric'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'malum:spirit_infusion',
+      input: {item: 'rankine:gun_cotton', count: 2},
+      output: {item: 'malum:spirit_fabric', count: 4},
+      extra_items: [
+        {item: 'blue_skies:spider_webbing', count: 2},
+        {item: 'malum:hex_ash', count: 1},
+      ],
+      spirits: [
+        {
+          type: 'wicked',
+          count: 2,
+        },
+        {type: 'earthen', count: 1},
+        {type: 'aerial', count: 1},
+      ],
+    })
+    .id('inconvenient:spirit_infusion_spirit_fabric');
 
   ['minecraft:cartography_table'].forEach(id => event.remove({id: id}));
   event
