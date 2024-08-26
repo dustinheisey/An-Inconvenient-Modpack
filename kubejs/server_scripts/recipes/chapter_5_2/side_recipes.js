@@ -88,7 +88,56 @@ onEvent('recipes', event => {
             ]);
           },
         },
+        {
+          id: 'bricks',
+          recipe: () => {
+            [
+              'pneumaticcraft:compressed_bricks',
+              'pneumaticcraft:reinforced_bricks',
+            ].forEach(id => event.remove({id: id}));
+
+            overrideBricksRecipes('chapter_5_2', event, [
+              {
+                output: 'pneumaticcraft:compressed_bricks',
+                input: 'pneumaticcraft:compressed_stone',
+              },
+              {
+                output: 'pneumaticcraft:reinforced_bricks',
+                input: 'pneumaticcraft:reinforced_stone',
+              },
+            ]);
+          },
+        },
       ],
+    },
+    {
+      id: 'batteries',
+      recipe: () => {
+        [
+          'rankine:lead_acid_battery',
+          'rankine:rubber_lead_acid_battery',
+          'rankine:silver_zinc_battery',
+          'rankine:rubber_silver_zinc_battery',
+        ].forEach(id => event.remove({id: id}));
+
+        event
+          .shaped('rankine:silver_zinc_battery', ['aba', 'cdc', 'aea'], {
+            a: `rankine:vulcanized_rubber`,
+            b: `rankine:silver_ingot`,
+            c: 'minecraft:redstone',
+            d: 'rankine:graphite_electrode',
+            e: 'rankine:zinc_ingot',
+          })
+          .id('inconvenient:shaped_silver_zinc_battery');
+        event
+          .shaped('rankine:lead_acid_battery', ['aba', 'cdc', 'aba'], {
+            a: `rankine:vulcanized_rubber`,
+            b: `rankine:lead_ingot`,
+            c: 'minecraft:redstone',
+            d: 'immersiveengineering:redstone_acid_bucket',
+          })
+          .id('inconvenient:shaped_lead_acid_battery');
+      },
     },
     {
       id: 'aircraft',
@@ -516,4 +565,13 @@ onEvent('recipes', event => {
       result: {item: 'rankine:red_asphalt'},
     })
     .id('inconvenient:mixing_barrel_red_asphalt');
+
+  // event.remove({
+  //   output: [
+  //     'rankine:simple_magnet',
+  //     `pneumaticcraft:turbine_blade`,
+  //     `rankine:magnetometer`,
+  //   ],
+  //   type: 'minecraft:crafting_shaped',
+  // });
 });

@@ -59,12 +59,12 @@ onEvent('recipes', event => {
             event.remove({id: id})
           );
 
-          event
-            .shaped('4x blue_skies:turquoise_stonebrick', ['ab', 'ba'], {
-              a: 'blue_skies:turquoise_stone',
-              b: 'kubejs:grout_ball',
-            })
-            .id('inconvenient:shaped_turquoise_stonebrick');
+          overrideBricksRecipes('chapter_2', event, [
+            {
+              output: 'blue_skies:turquoise_stonebrick',
+              input: 'blue_skies:turquoise_stone',
+            },
+          ]);
         },
         children: [
           {

@@ -17,7 +17,7 @@ onEvent('recipes', event => {
             count: 2,
           },
         })
-        .id('iconvenient:wire_copper');
+        .id('inconvenient:wire_copper');
 
       event
         .custom({
@@ -30,7 +30,7 @@ onEvent('recipes', event => {
             count: 2,
           },
         })
-        .id('iconvenient:stick_iron');
+        .id('inconvenient:stick_iron');
     },
   });
 });

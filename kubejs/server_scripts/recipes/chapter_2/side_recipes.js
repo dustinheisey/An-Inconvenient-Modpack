@@ -193,84 +193,24 @@ onEvent('recipes', event => {
     {
       id: 'bricks',
       recipe: () => {
-        console.log('bricks recipe loaded');
-        [
-          'minecraft:deepslate_bricks',
-          'minecraft:polished_blackstone_bricks',
-          'architects_palette:myonite_bricks',
-          'architects_palette:iron_ore_bricks',
-          'architects_palette:heavy_dripstone_bricks',
-          'architects_palette:dripstone_bricks',
-          'architects_palette:heavy_calcite_bricks',
-          'charcoal_pit:sandy_bricks',
-          'architects_palette:calcite_bricks',
-          'architects_palette:heavy_stone_bricks',
-        ].forEach(id => event.remove({id: id}));
-        event
-          .shaped('2x charcoal_pit:sandy_brick', ['ab', 'ba'], {
-            a: 'charcoal_pit:sandy_brick_item',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_sandy_brick');
-        event
-          .shaped('4x architects_palette:iron_ore_bricks', ['ab', 'bc'], {
-            a: 'minecraft:iron_ingot',
-            b: 'rankine:mortar',
-            c: 'minecraft:stone_bricks',
-          })
-          .id('inconvenient:shaped_iron_ore_bricks');
-        event
-          .shaped('2x minecraft:polished_blackstone_bricks', ['ab', 'ba'], {
-            a: 'minecraft:polished_blackstone',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_polished_blackstone_bricks');
-        event
-          .shaped('2x architects_palette:heavy_stone_bricks', ['ab', 'ba'], {
-            a: 'minecraft:stone_bricks',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_heavy_stone_bricks');
-        event
-          .shaped('2x architects_palette:myonite_bricks', ['ab', 'ba'], {
-            a: 'architects_palette:myonite',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_myonite_bricks');
-        event
-          .shaped('2x architects_palette:dripstone_bricks', ['ab', 'ba'], {
-            a: 'minecraft:dripstone_block',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_dripstone_bricks');
-        event
-          .shaped(
-            '2x architects_palette:heavy_dripstone_bricks',
-            ['ab', 'ba'],
-            {
-              a: 'architects_palette:dripstone_bricks',
-              b: 'rankine:mortar',
-            }
-          )
-          .id('inconvenient:shaped_heavy_dripstone_bricks');
-        event
-          .shaped('2x architects_palette:heavy_calcite_bricks', ['ab', 'ba'], {
-            a: 'architects_palette:calcite_bricks',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_heavy_calcite_bricks');
-        event
-          .shaped('2x architects_palette:calcite_bricks', ['ab', 'ba'], {
-            a: 'minecraft:calcite',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_calcite_bricks');
-        event
-          .shaped('2x minecraft:deepslate_bricks', ['ab', 'ba'], {
-            a: 'minecraft:polished_deepslate',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_deepslate_bricks');
+        overrideBricksRecipes('chapter_2', event, [
+          {
+            input: 'minecraft:obsidian',
+            output: 'cataclysm:obsidian_bricks',
+          },
+          {
+            input: 'blue_skies:nature_stone',
+            output: 'blue_skies:nature_stonebrick',
+          },
+          {
+            input: 'blue_skies:polished_brumble',
+            output: 'blue_skies:polished_brumble_bricks',
+          },
+          {
+            input: 'architects_palette:abyssaline',
+            output: 'architects_palette:abyssaline_bricks',
+          },
+        ]);
       },
     },
 
@@ -989,4 +929,116 @@ onEvent('recipes', event => {
       },
     },
   ]);
+
+  // event.remove({
+  //   output: [
+  //     'totemic:wind_chime',
+  //     'cold_sweat:minecart_insulation',
+  //     'tconstruct:pattern',
+  //     'farmersrespite:kettle',
+  //     'naturesaura:wood_stand',
+  //     `rankine:pearl_block`,
+  //     `3x rankine:metal_pipe`,
+  //     `2x blue_skies:cherry_stick`,
+  //     `2x blue_skies:frostbright_stick`,
+  //     `2x blue_skies:starlit_stick`,
+  //     `2x blue_skies:bluebright_stick`,
+  //     `3x rankine:bamboo_culms_sign`,
+  //     `8x rankine:tap_line`,
+  //     `rankine:tree_tap`,
+  //     `rankine:fins`,
+  //     `rankine:ice_skates`,
+  //     'hexerei:mixing_cauldron',
+  //     'totemic:drum',
+  //     'paragon_textiles:cushion_plain',
+  //     'paragon_textiles:cushion_red',
+  //     'occultism:brush',
+  //     `create:red_seat`,
+  //     `minecraft:shears`,
+  //     `minecraft:scaffolding`,
+  //     'farmersdelight:cooking_pot',
+  //     'minecraft:lead',
+  //     'smallships:sail',
+  //     'rankine:gun_cotton',
+  //   ],
+  //   type: 'minecraft:crafting_shaped',
+  // });
+
+  [
+    'blue_skies:bluebright_stick',
+    'blue_skies:starlit_stick',
+    'blue_skies:frostbright_stick',
+    'blue_skies:cherry_stick',
+    'rankine:fins',
+    'rankine:ice_skates',
+    'paragon_textiles:cushion_plain',
+    'paragon_textiles:cushion_red',
+    'occultism:crafting/brush',
+    'create:crafting/kinetics/red_seat_from_other_seat',
+  ].forEach(id => event.remove({id: id}));
+  event
+    .shaped(`2x blue_skies:cherry_stick`, ['a', 'a'], {
+      a: 'blue_skies:cherry_planks',
+    })
+    .id('inconvenient:shaped_cherry_stick');
+  event
+    .shaped(`2x blue_skies:frostbright_stick`, ['a', 'a'], {
+      a: 'blue_skies:frostbright_planks',
+    })
+    .id('inconvenient:shaped_frostbright_stick');
+  event
+    .shaped(`2x blue_skies:starlit_stick`, ['a', 'a'], {
+      a: 'blue_skies:starlit_planks',
+    })
+    .id('inconvenient:shaped_starlit_stick');
+  event
+    .shaped(`2x blue_skies:bluebright_stick`, ['a', 'a'], {
+      a: 'blue_skies:bluebright_planks',
+    })
+    .id('inconvenient:shaped_bluebright_stick');
+
+  event
+    .shaped(`rankine:fins`, ['a  ', 'aaa'], {
+      a: 'minecraft:leather',
+    })
+    .id('inconvenient:shaped_fins');
+  event
+    .shaped(`rankine:ice_skates`, ['a  ', 'bba', 'ccc'], {
+      a: 'minecraft:leather',
+      b: 'farmersdelight:rope',
+      c: 'rankine:pewter_nugget',
+    })
+    .id('inconvenient:shaped_ice_skates');
+
+  event
+    .shaped('paragon_textiles:cushion_plain', ['a', 'b'], {
+      a: `paragon_textiles:fabric_plain`,
+      b: '#minecraft:wooden_slabs',
+    })
+    .id('inconvenient:shaped_cushion_plain');
+  event
+    .shaped('paragon_textiles:cushion_red', ['a', 'b'], {
+      a: `paragon_textiles:fabric_red`,
+      b: '#minecraft:wooden_slabs',
+    })
+    .id('inconvenient:shaped_cushion_red');
+  event
+    .shaped('occultism:brush', ['aaa', 'bbb'], {
+      a: '#minecraft:planks',
+      b: 'paragon_textiles:silk',
+    })
+    .id('inconvenient:shaped_brush');
+  event
+    .shaped(`create:red_seat`, ['a', 'b'], {
+      a: `paragon_textiles:cushion_red`,
+      b: '#minecraft:wooden_slabs',
+    })
+    .id('inconvenient:shaped_red_seat');
+
+  event
+    .shaped(`rankine:lead_glass`, [' a ', 'aba', ' a '], {
+      a: `rankine:lead_ingot`,
+      b: '#forge:glass',
+    })
+    .id('inconvenient:shaped_lead_glass');
 });

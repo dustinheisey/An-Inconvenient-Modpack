@@ -428,3 +428,24 @@ function stageArmors(event, configs) {
     }
   });
 }
+
+function overrideBricksRecipes(chapter, event, configs) {
+  configs.forEach(config => {
+    event
+      .shaped(`2x ${config.output}`, ['ab', 'ba'], {
+        a: config.input,
+        b: 'rankine:mortar',
+      })
+      .stage(chapter);
+
+    if (chapter === 'chapter_1') {
+      chapter = 'chapter_2';
+    }
+    event
+      .shaped(`4x ${config.output}`, ['ab', 'ba'], {
+        a: config.input,
+        b: 'rankine:cement_mix',
+      })
+      .stage(chapter);
+  });
+}

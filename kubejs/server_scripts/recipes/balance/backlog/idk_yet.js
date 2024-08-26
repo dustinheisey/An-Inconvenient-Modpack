@@ -8,7 +8,7 @@ onEvent('recipes', event => {
         {item: 'minecraft:netherite_scrap'},
       ],
     })
-    .id('iconvenient:mixing_netherite_ingot');
+    .id('inconvenient:mixing_netherite_ingot');
 
   event
     .custom({
@@ -21,7 +21,7 @@ onEvent('recipes', event => {
       ],
       heatRequirement: 'heated',
     })
-    .id('iconvenient:mixing_pig_iron_ingot');
+    .id('inconvenient:mixing_pig_iron_ingot');
 
   event
     .custom({
@@ -36,7 +36,7 @@ onEvent('recipes', event => {
         e: 'create:electron_tube',
       },
     })
-    .id('iconvenient:mechanical_alternator');
+    .id('inconvenient:mechanical_alternator');
 
   event
     .custom({
@@ -50,7 +50,7 @@ onEvent('recipes', event => {
         },
       ],
     })
-    .id('iconvenient:crushing_netherite_scrap');
+    .id('inconvenient:crushing_netherite_scrap');
 
   event
     .custom({
@@ -64,7 +64,7 @@ onEvent('recipes', event => {
         },
       ],
     })
-    .id('iconvenient:crushing_sulfur_nugget');
+    .id('inconvenient:crushing_sulfur_nugget');
 
   event
     .custom({
@@ -76,7 +76,7 @@ onEvent('recipes', event => {
       ],
       temperature: 605,
     })
-    .id('iconvenient:alloy_molten_brass');
+    .id('inconvenient:alloy_molten_brass');
 
   ['rankine:air_distillation_packing'].forEach(id => event.remove({id: id}));
 
@@ -148,7 +148,7 @@ onEvent('recipes', event => {
       b: 'rankine:brass_block',
       c: 'minecraft:soul_campfire',
     })
-    .id('iconvenient:shaped_alloy_furnace');
+    .id('inconvenient:shaped_alloy_furnace');
 
   ['malum:spirit_infusion/tainted_rock'].forEach(id => event.remove({id: id}));
   event
@@ -168,7 +168,7 @@ onEvent('recipes', event => {
         },
       ],
     })
-    .id('iconvenient:spirit_infusion_tainted_rock');
+    .id('inconvenient:spirit_infusion_tainted_rock');
 
   ['naturesaura:tree_ritual/token_anger'].forEach(id => event.remove({id: id}));
   event
@@ -228,7 +228,7 @@ onEvent('recipes', event => {
       ],
       heatRequirement: 'superheated',
     })
-    .id('iconvenient:mixing_vulcanized_rubber');
+    .id('inconvenient:mixing_vulcanized_rubber');
 
   event.replaceInput(
     {output: 'architects_palette:nether_brass_blend'},
@@ -244,7 +244,7 @@ onEvent('recipes', event => {
       ],
       results: [{item: 'paragon_textiles:flaxseed_oil_bucket'}],
     })
-    .id('iconvenient:compacting_flaxseed_oil_bucket');
+    .id('inconvenient:compacting_flaxseed_oil_bucket');
   event
     .custom({
       type: 'bloodmagic:altar',
@@ -259,13 +259,7 @@ onEvent('recipes', event => {
       consumptionRate: 500,
       drainRate: 500,
     })
-    .id('iconvenient:altar_masterbloodorb');
-  event
-    .shaped('2x bloodmagic:bloodstonebrick', ['ab', 'ba'], {
-      a: 'rankine:mortar',
-      b: 'bloodmagic:largebloodstonebrick',
-    })
-    .id('iconvenient:shaped_bloodstonebrick');
+    .id('inconvenient:altar_masterbloodorb');
   event.replaceInput(
     {output: ['malum:stained_spirit_resonator']},
     'minecraft:quartz',
@@ -276,7 +270,7 @@ onEvent('recipes', event => {
       a: 'minecraft:iron_ingot',
       b: 'totemic:cedar_planks',
     })
-    .id('iconvenient:shaped_wind_chime');
+    .id('inconvenient:shaped_wind_chime');
   event
     .custom({
       type: 'create:milling',
@@ -284,7 +278,7 @@ onEvent('recipes', event => {
       results: [{item: 'extendedcrafting:luminessence'}],
       processingTime: 50,
     })
-    .id('iconvenient:milling_luminessence');
+    .id('inconvenient:milling_luminessence');
   event
     .custom({
       type: 'tconstruct:casting_table',
@@ -293,7 +287,7 @@ onEvent('recipes', event => {
       cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
       cooling_time: 100,
     })
-    .id('iconvenient:casting_table_steeleaf_ingot');
+    .id('inconvenient:casting_table_steeleaf_ingot');
 
   event
     .custom({
@@ -302,7 +296,7 @@ onEvent('recipes', event => {
       fluid: {name: 'kubejs:molten_steeleaf', amount: 810},
       cooling_time: 100,
     })
-    .id('iconvenient:casting_basin_steeleaf_block');
+    .id('inconvenient:casting_basin_steeleaf_block');
   event
     .custom({
       type: 'tconstruct:melting',
@@ -311,7 +305,7 @@ onEvent('recipes', event => {
       temperature: 605,
       time: 54,
     })
-    .id('iconvenient:melting_molten_steeleaf');
+    .id('inconvenient:melting_molten_steeleaf');
   event
     .custom({
       type: 'tconstruct:melting',
@@ -323,7 +317,7 @@ onEvent('recipes', event => {
       temperature: 605,
       time: 54,
     })
-    .id('iconvenient:melting_molten_steeleaf');
+    .id('inconvenient:melting_molten_steeleaf');
   ['malum:spirit_infusion/soul_stained_steel_ingot'].forEach(id =>
     event.remove({id: id})
   );
@@ -345,7 +339,7 @@ onEvent('recipes', event => {
         {type: 'earthen', count: 1},
       ],
     })
-    .id('iconvenient:spirit_infusion_soul_stained_steel_ingot');
+    .id('inconvenient:spirit_infusion_soul_stained_steel_ingot');
   event.remove({
     output: ['occultism:chalk_red_impure'],
     type: 'minecraft:crafting_shapeless',
@@ -398,7 +392,7 @@ onEvent('recipes', event => {
         item: 'occultism:jei_dummy/none',
       },
     })
-    .id('iconvenient:ritual_summon_wild_hunt');
+    .id('inconvenient:ritual_summon_wild_hunt');
   event
     .custom({
       type: 'bloodmagic:altar',
@@ -413,14 +407,14 @@ onEvent('recipes', event => {
       consumptionRate: 20,
       drainRate: 20,
     })
-    .id('iconvenient:altar_book_of_binding_afrit');
+    .id('inconvenient:altar_book_of_binding_afrit');
   event
     .shaped('occultism:chalk_purple_impure', ['ab', 'cc'], {
       a: 'occultism:chalk_gold_impure',
       b: 'malum:chunk_of_brilliance',
       c: 'create:powdered_obsidian',
     })
-    .id('iconvenient:shaped_chalk_purple_impure');
+    .id('inconvenient:shaped_chalk_purple_impure');
   event
     .custom({
       type: 'rankine:rock_generator',
@@ -429,7 +423,7 @@ onEvent('recipes', event => {
       input1: {item: 'occultism:otherstone'},
       input2: {item: 'twilightforest:knightmetal_block'},
     })
-    .id('iconvenient:intrusive_igneous_andesite');
+    .id('inconvenient:intrusive_igneous_andesite');
   event.replaceInput(
     {output: 'occultism:book_of_binding_afrit'},
     'minecraft:purple_dye',
@@ -445,7 +439,7 @@ onEvent('recipes', event => {
         item: 'occultism:purified_ink',
       },
     })
-    .id('iconvenient:spirit_fire_purified_ink');
+    .id('inconvenient:spirit_fire_purified_ink');
   event
     .custom({
       type: 'occultism:spirit_fire',
@@ -456,7 +450,7 @@ onEvent('recipes', event => {
         item: 'occultism:spirit_attuned_gem',
       },
     })
-    .id('iconvenient:spirit_fire_spirit_attuned_gem');
+    .id('inconvenient:spirit_fire_spirit_attuned_gem');
   event
     .custom({
       type: 'occultism:ritual',
@@ -487,14 +481,14 @@ onEvent('recipes', event => {
         item: 'occultism:infused_lenses',
       },
     })
-    .id('iconvenient:ritual_infused_lenses');
+    .id('inconvenient:ritual_infused_lenses');
   event
     .shaped('occultism:book_of_binding_foliot', ['ab ', 'bcb', ' b '], {
       a: 'occultism:purified_ink',
       b: 'minecraft:red_dye',
       c: 'minecraft:book',
     })
-    .id('iconvenient:shaped_book_of_binding_foliot');
+    .id('inconvenient:shaped_book_of_binding_foliot');
 
   event.replaceInput(
     {output: 'occultism:butcher_knife'},

@@ -102,6 +102,60 @@ onEvent('recipes', event => {
             ]);
           },
         },
+        {
+          id: 'bricks',
+          recipe: () => {
+            [
+              'architects_palette:tuff_bricks',
+              'botania:metamorphic_forest_bricks',
+              'botania:metamorphic_plains_bricks',
+              'botania:metamorphic_mountain_bricks',
+              'botania:metamorphic_fungal_bricks',
+              'botania:metamorphic_swamp_bricks',
+              'botania:metamorphic_desert_bricks',
+              'botania:metamorphic_taiga_bricks',
+              'botania:metamorphic_mesa_bricks',
+            ].forEach(id => event.remove({id: id}));
+            overrideBricksRecipes('chapter_5_1', event, [
+              {
+                output: 'architects_palette:tuff_bricks',
+                input: 'minecraft:tuff',
+              },
+              {
+                output: 'botania:metamorphic_forest_bricks',
+                input: 'botania:metamorphic_forest_stone',
+              },
+              {
+                output: 'botania:metamorphic_plains_bricks',
+                input: 'botania:metamorphic_plains_stone',
+              },
+              {
+                output: 'botania:metamorphic_mountain_bricks',
+                input: 'botania:metamorphic_mountain_stone',
+              },
+              {
+                output: 'botania:metamorphic_fungal_bricks',
+                input: 'botania:metamorphic_fungal_stone',
+              },
+              {
+                output: 'botania:metamorphic_swamp_bricks',
+                input: 'botania:metamorphic_swamp_stone',
+              },
+              {
+                output: 'botania:metamorphic_desert_bricks',
+                input: 'botania:metamorphic_desert_stone',
+              },
+              {
+                output: 'botania:metamorphic_taiga_bricks',
+                input: 'botania:metamorphic_taiga_stone',
+              },
+              {
+                output: 'botania:metamorphic_mesa_bricks',
+                input: 'botania:metamorphic_mesa_stone',
+              },
+            ]);
+          },
+        },
       ],
     },
     {
@@ -186,6 +240,49 @@ onEvent('recipes', event => {
       },
     },
   ]);
+
+  // event.remove({
+  //   output: [
+  //     'naturesaura:calling_spirit',
+  //     'botania:diluted_pool',
+  //     'botania:mana_pylon',
+  //     'tconstruct:earth_cake',
+  //     'tconstruct:sky_cake',
+  //     'tconstruct:blood_cake',
+  //   ],
+  //   type: 'minecraft:crafting_shaped',
+  // });
+
+  event
+    .shaped('tconstruct:earth_cake', ['aaa', 'bcb', 'ddd'], {
+      a: 'tconstruct:earth_slime_bucket',
+      b: 'minecraft:glowstone_dust',
+      c: 'minecraft:egg',
+      d: 'minecraft:grass',
+    })
+    .id('inconvenient:shaped_earth_cake');
+  event
+    .shaped('tconstruct:sky_cake', ['aaa', 'bcb', 'ddd'], {
+      a: 'tconstruct:sky_slime_bucket',
+      b: 'minecraft:glowstone_dust',
+      c: 'minecraft:egg',
+      d: 'hem:blueleaf_grass',
+    })
+    .id('inconvenient:shaped_sky_cake');
+  event
+    .shaped('tconstruct:blood_cake', ['aaa', 'bcb', 'ddd'], {
+      a: 'tconstruct:blood_bucket',
+      b: 'tconstruct:blood_slime_ball',
+      c: 'minecraft:egg',
+      d: 'blue_skies:cherry_grass',
+    })
+    .id('inconvenient:shaped_blood_cake');
+
+  event
+    .shaped('naturesaura:tainted_gold_block', ['aaa', 'aaa', 'aaa'], {
+      a: 'naturesaura:tainted_gold',
+    })
+    .id('inconvenient:shaped_tainted_gold_block');
 
   event
     .custom({

@@ -104,71 +104,49 @@ onEvent('recipes', event => {
           'architects_palette:calcite_bricks',
           'architects_palette:heavy_stone_bricks',
         ].forEach(id => event.remove({id: id}));
-        event
-          .shaped('2x charcoal_pit:sandy_brick', ['ab', 'ba'], {
-            a: 'charcoal_pit:sandy_brick_item',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_sandy_brick');
-        event
-          .shaped('4x architects_palette:iron_ore_bricks', ['ab', 'bc'], {
-            a: 'minecraft:iron_ingot',
-            b: 'rankine:mortar',
-            c: 'minecraft:stone_bricks',
-          })
-          .id('inconvenient:shaped_iron_ore_bricks');
-        event
-          .shaped('2x minecraft:polished_blackstone_bricks', ['ab', 'ba'], {
-            a: 'minecraft:polished_blackstone',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_polished_blackstone_bricks');
-        event
-          .shaped('2x architects_palette:heavy_stone_bricks', ['ab', 'ba'], {
-            a: 'minecraft:stone_bricks',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_heavy_stone_bricks');
-        event
-          .shaped('2x architects_palette:myonite_bricks', ['ab', 'ba'], {
-            a: 'architects_palette:myonite',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_myonite_bricks');
-        event
-          .shaped('2x architects_palette:dripstone_bricks', ['ab', 'ba'], {
-            a: 'minecraft:dripstone_block',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_dripstone_bricks');
-        event
-          .shaped(
-            '2x architects_palette:heavy_dripstone_bricks',
-            ['ab', 'ba'],
-            {
-              a: 'architects_palette:dripstone_bricks',
-              b: 'rankine:mortar',
-            }
-          )
-          .id('inconvenient:shaped_heavy_dripstone_bricks');
-        event
-          .shaped('2x architects_palette:heavy_calcite_bricks', ['ab', 'ba'], {
-            a: 'architects_palette:calcite_bricks',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_heavy_calcite_bricks');
-        event
-          .shaped('2x architects_palette:calcite_bricks', ['ab', 'ba'], {
-            a: 'minecraft:calcite',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_calcite_bricks');
-        event
-          .shaped('2x minecraft:deepslate_bricks', ['ab', 'ba'], {
-            a: 'minecraft:polished_deepslate',
-            b: 'rankine:mortar',
-          })
-          .id('inconvenient:shaped_deepslate_bricks');
+
+        overrideBricksRecipes('chapter_1', event, [
+          {
+            output: 'charcoal_pit:sandy_brick',
+            input: 'charcoal_pit:sandy_brick_item',
+          },
+          {
+            output: 'architects_palette:iron_ore_bricks',
+            input: 'minecraft:iron_ingot',
+          },
+          {
+            output: 'minecraft:polished_blackstone_bricks',
+            input: 'minecraft:polished_blackstone',
+          },
+          {
+            output: 'architects_palette:heavy_stone_bricks',
+            input: 'minecraft:stone_bricks',
+          },
+          {
+            output: 'architects_palette:myonite_bricks',
+            input: 'architects_palette:myonite',
+          },
+          {
+            output: 'architects_palette:dripstone_bricks',
+            input: 'minecraft:dripstone_block',
+          },
+          {
+            output: 'architects_palette:heavy_dripstone_bricks',
+            input: 'architects_palette:dripstone_bricks',
+          },
+          {
+            output: 'architects_palette:heavy_calcite_bricks',
+            input: 'architects_palette:calcite_bricks',
+          },
+          {
+            output: 'architects_palette:calcite_bricks',
+            input: 'minecraft:calcite',
+          },
+          {
+            output: 'minecraft:deepslate_bricks',
+            input: 'minecraft:polished_deepslate',
+          },
+        ]);
       },
     },
     {

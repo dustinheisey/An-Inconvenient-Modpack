@@ -399,13 +399,13 @@ onEvent('recipes', event => {
                         .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
                           a: 'minecraft:brick',
                         })
-                        .id('iconvenient:shaped_furnace');
+                        .id('inconvenient:shaped_furnace');
 
                       event
                         .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
                           a: '#forge:cobblestone',
                         })
-                        .id('iconvenient:shaped_furnace_2')
+                        .id('inconvenient:shaped_furnace_2')
                         .stage('chapter_2');
                     },
                     children: [

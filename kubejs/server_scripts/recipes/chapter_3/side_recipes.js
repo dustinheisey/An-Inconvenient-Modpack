@@ -239,6 +239,29 @@ onEvent('recipes', event => {
               .id('inconvenient:array_upgradetrainer');
           },
         },
+        {
+          id: 'bricks',
+          recipe: () => {
+            overrideBricksRecipes('chapter_3', event, [
+              {
+                output: 'architects_palette:withered_osseous_bricks',
+                input: `architects_palette:withered_bone_block`,
+              },
+              {
+                output: 'architects_palette:osseous_bricks',
+                input: `minecraft:bone_block`,
+              },
+              {
+                output: 'bloodmagic:bloodstonebrick',
+                input: 'bloodmagic:largebloodstonebrick',
+              },
+              {
+                output: 'naturesaura:infused_brick',
+                input: 'naturesaura:infused_stone',
+              },
+            ]);
+          },
+        },
       ],
     },
 
@@ -1338,4 +1361,170 @@ onEvent('recipes', event => {
       output: {item: 'naturesaura:token_sorrow'},
     })
     .id('inconvenient:tree_ritual_token_sorrow');
+
+  // event.remove({
+  //   output: [
+  //     'occultism:book_of_binding_foliot',
+  //     'undergarden:catalyst',
+  //     'malum:spirit_pouch',
+  //     'extendedcrafting:basic_component',
+  //     'malum:spirit_altar',
+  //     'minecraft:torch',
+  //     'undergarden:depthrock_bed',
+  //     `twilightforest:twilight_oak_chest`,
+  //     `twilightforest:canopy_chest`,
+  //     `twilightforest:mangrove_chest`,
+  //     `twilightforest:time_chest`,
+  //     `twilightforest:transformation_chest`,
+  //     `twilightforest:mining_chest`,
+  //     `twilightforest:sorting_chest`,
+  //     'occultism:chalk_gold_impure',
+  //     'occultism:chalk_purple_impure',
+  //     'minecraft:book',
+  //     'bloodmagic:sacrificerune',
+  //     'naturesaura:bottle_two_the_rebottling',
+  //     'rankine:rock_drill',
+  //     'bloodmagic:selfsacrificerune',
+  //     'minecraft:bow',
+  //     'bloodmagic:altar',
+  //     'minecraft:sticky_piston',
+  //     'minecraft:lectern',
+  //     'minecraft:book',
+  //     'undergarden:twistytwig',
+  //     'blue_skies:maple_stick',
+  //     'blue_skies:dusk_stick',
+  //     'blue_skies:lunar_stick',
+  //     `twilightforest:darkwood_chest`,
+  //   ],
+  //   type: 'minecraft:crafting_shaped',
+  // });
+
+  colors.forEach(color => {
+    if (color !== 'red') {
+      event
+        .shaped(`paragon_textiles:cushion_${color}`, ['a', 'b'], {
+          a: `paragon_textiles:fabric_${color}`,
+          b: '#minecraft:wooden_slabs',
+        })
+        .id(`inconvenient:cushion_${color}`);
+    }
+  });
+
+  event
+    .shaped('malum:spirit_pouch', [' a ', 'b b', ' b '], {
+      a: 'minecraft:string',
+      b: 'malum:spirit_fabric',
+    })
+    .id('inconvenient:shaped_spirit_pouch');
+
+  event
+    .shaped(`twilightforest:twilight_oak_chest`, ['aaa', 'a a', 'aaa'], {
+      a: `twilightforest:twilight_oak_planks`,
+    })
+    .id('inconvenient:shaped_twilight_oak_chest');
+  event
+    .shaped(`twilightforest:canopy_chest`, ['aaa', 'a a', 'aaa'], {
+      a: `twilightforest:canopy_planks`,
+    })
+    .id('inconvenient:shaped_canopy_chest');
+  event
+    .shaped(`twilightforest:mangrove_chest`, ['aaa', 'a a', 'aaa'], {
+      a: `twilightforest:mangrove_planks`,
+    })
+    .id('inconvenient:shaped_mangrove_chest');
+  event
+    .shaped(`twilightforest:time_chest`, ['aaa', 'a a', 'aaa'], {
+      a: `twilightforest:time_planks`,
+    })
+    .id('inconvenient:shaped_time_chest');
+  event
+    .shaped(`twilightforest:transformation_chest`, ['aaa', 'a a', 'aaa'], {
+      a: `twilightforest:transformation_planks`,
+    })
+    .id('inconvenient:shaped_minecart_insulation');
+  event
+    .shaped(`twilightforest:mining_chest`, ['aaa', 'a a', 'aaa'], {
+      a: `twilightforest:mining_planks`,
+    })
+    .id('inconvenient:shaped_mining_chest');
+  event
+    .shaped(`twilightforest:sorting_chest`, ['aaa', 'a a', 'aaa'], {
+      a: `twilightforest:sorting_planks`,
+    })
+    .id('inconvenient:shaped_sorting_chest');
+
+  event
+    .shaped('bloodmagic:sacrificerune', ['aba', 'cdc', 'aba'], {
+      a: 'rankine:black_marble',
+      b: 'bloodmagic:reinforcedslate',
+      c: 'minecraft:glowstone_dust',
+      d: 'bloodmagic:blankrune',
+    })
+    .id('inconvenient:shaped_sacrificerune');
+
+  event
+    .shaped('rankine:rock_drill', [' a ', 'bcb', ' b '], {
+      a: 'create:shaft',
+      b: 'rankine:bronze_ingot',
+      c: 'create:powdered_obsidian',
+    })
+    .id('inconvenient:shaped_rock_drill');
+  event
+    .shaped('bloodmagic:selfsacrificerune', ['aba', 'cdc', 'aba'], {
+      a: 'rankine:gray_marble',
+      b: 'bloodmagic:reinforcedslate',
+      c: 'minecraft:redstone',
+      d: 'bloodmagic:blankrune',
+    })
+    .id('inconvenient:shaped_selfsacrificerune');
+  event
+    .shaped('minecraft:bow', [' ab', 'a b', ' ab'], {
+      a: '#forge:rods/wooden',
+      b: 'minecraft:string',
+    })
+    .id('inconvenient:shaped_bow');
+
+  event
+    .shaped('minecraft:sticky_piston', ['a', 'b'], {
+      a: 'tconstruct:sky_slime_ball',
+      b: 'minecraft:piston',
+    })
+    .id('inconvenient:shaped_sticky_piston');
+  event
+    .shaped('minecraft:lectern', ['aaa', ' b ', ' a '], {
+      a: '#minecraft:wooden_slabs',
+      b: '#forge:bookshelves',
+    })
+    .id('inconvenient:shaped_lectern');
+  event
+    .shaped('minecraft:book', ['aa', 'ab'], {
+      a: 'minecraft:paper',
+      b: 'minecraft:leather',
+    })
+    .id('inconvenient:shaped_book');
+  event
+    .shaped('2x undergarden:twistytwig', [' a', 'a '], {
+      a: 'undergarden:wigglewood_planks',
+    })
+    .id('inconvenient:shaped_twistytwig');
+  event
+    .shaped('2x blue_skies:maple_stick', ['a', 'a'], {
+      a: 'blue_skies:maple_planks',
+    })
+    .id('inconvenient:shaped_maple_stick');
+  event
+    .shaped('2x blue_skies:dusk_stick', ['a', 'a'], {
+      a: 'blue_skies:dusk_planks',
+    })
+    .id('inconvenient:shaped_dusk_stick');
+  event
+    .shaped('2x blue_skies:lunar_stick', ['a', 'a'], {
+      a: 'blue_skies:lunar_planks',
+    })
+    .id('inconvenient:shaped_lunar_stick');
+  event
+    .shaped(`twilightforest:darkwood_chest`, ['aaa', 'a a', 'aaa'], {
+      a: `twilightforest:dark_planks`,
+    })
+    .id('inconvenient:shaped_darkwood_chest');
 });

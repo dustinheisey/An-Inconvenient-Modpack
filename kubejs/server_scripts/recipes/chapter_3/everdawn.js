@@ -2,12 +2,13 @@ onEvent('recipes', event => {
   setMilestoneRecipes({
     id: 'lunar_stone_brick',
     recipe: () => {
-      event
-        .shaped(`2x blue_skies:lunar_stonebrick`, ['ab', 'ba'], {
-          a: `blue_skies:lunar_stone`,
-          b: 'rankine:mortar',
-        })
-        .id('inconvenient:shaped_lunar_stonebrick');
+      ['blue_skies:lunar_stonebrick'].forEach(id => event.remove({id: id}));
+      overrideBricksRecipes('chapter_3', event, [
+        {
+          output: 'blue_skies:lunar_stonebrick',
+          input: 'blue_skies:lunar_stone',
+        },
+      ]);
     },
     children: [
       {

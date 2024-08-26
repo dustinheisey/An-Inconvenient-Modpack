@@ -145,6 +145,70 @@ onEvent('recipes', event => {
               .id('inconvenient:shaped_totem_of_softening');
           },
         },
+        {
+          id: 'bricks',
+          recipe: () => {
+            [
+              'tconstruct:smeltery/scorched/scorched_bricks_crafting',
+              'tconstruct:smeltery/scorched/scorched_bricks_from_brick',
+              'botania:livingrock_bricks',
+            ].forEach(id => event.remove({id: id}));
+            overrideBricksRecipes('chapter_4', event, [
+              {
+                output: 'tconstruct:scorched_bricks',
+                input: 'tconstruct:scorched_brick',
+              },
+              {
+                output: 'botania:livingrock_bricks',
+                input: 'botania:livingrock',
+              },
+              {
+                output: 'minecraft:nether_bricks',
+                input: 'minecraft:nether_brick',
+              },
+              {
+                output: 'minecraft:quartz_bricks',
+                input: 'minecraft:quartz_block',
+              },
+              {
+                output: 'architectspalette:hadaline_bricks',
+                input: 'architectspalette:hadaline',
+              },
+              {
+                output: 'architectspalette:esoterrack_bricks',
+                input: 'architectspalette:esoterrack',
+              },
+              {
+                output: 'architectspalette:onxy_bricks',
+                input: 'architectspalette:onxy',
+              },
+              {
+                output: 'malum:tainted_rock_bricks',
+                input: 'malum:polished_tainted_rock',
+              },
+              {
+                output: 'minecraft:basalt_bricks',
+                input: 'minecraft:basalt',
+              },
+              {
+                output: 'rankine:red_porphyry_bricks',
+                input: 'rankine:red_porphyry',
+              },
+              {
+                output: 'rankine:purple_porphyry_bricks',
+                input: 'rankine:purple_porphyry',
+              },
+              {
+                output: 'rankine:komatiite_bricks',
+                input: 'rankine:komatiite',
+              },
+              {
+                output: 'rankine:rose_marble_bricks',
+                input: 'rankine:rose_marble',
+              },
+            ]);
+          },
+        },
       ],
     },
 
@@ -1507,4 +1571,49 @@ onEvent('recipes', event => {
       },
     },
   ]);
+
+  // event.remove({
+  //   output: [
+  //     'hexerei:book_of_shadows',
+  //     `create:controls`,
+  //     'bloodmagic:alchemytable',
+  //     `chipped:carpenters_table`,
+  //     `create:electron_tube`,
+  //     'bloodmagic:bloodstonebrick',
+  //     `cataclysm:witherite_block`,
+  //     `rankine:alloy_furnace`,
+  //     'rankine:glass_cutter',
+  //   ],
+  //   type: 'minecraft:crafting_shaped',
+  // });
+
+  event
+    .shaped('hexerei:book_of_shadows', ['aba', 'cde', 'aaa'], {
+      a: `minecraft:leather`,
+      b: 'architects_palette:twisted_sapling',
+      c: 'hexerei:animal_fat',
+      d: 'minecraft:book',
+      e: 'hexerei:sage_seed',
+    })
+    .id('inconvenient:shaped_book_of_shadows');
+  event
+    .shaped(`create:controls`, ['a', 'b', 'c'], {
+      a: `minecraft:lever`,
+      b: 'create:railway_casing',
+      c: 'create:electron_tube',
+    })
+    .id('inconvenient:shaped_controls');
+
+  event
+    .shaped(`cataclysm:witherite_block`, ['aaa', 'aaa', 'aaa'], {
+      a: `cataclysm:witherite_ingot`,
+    })
+    .id('inconvenient:shaped_witherite_block');
+
+  event
+    .shaped('rankine:glass_cutter', [' aa', ' ba', 'b  '], {
+      a: 'minecraft:quartz',
+      b: 'rankine:black_gold_ingot',
+    })
+    .id('inconvenient:shaped_glass_cutter');
 });
