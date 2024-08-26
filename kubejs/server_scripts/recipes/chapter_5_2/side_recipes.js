@@ -170,6 +170,28 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'demon_crusher',
+      recipe: () => {
+        // 5.2
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/uranium'},
+            result: {item: 'rankine:uraninite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_uraninite');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/nickel'},
+            result: {item: 'rankine:pentlandite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_pentlandite');
+      },
+    },
+    {
       id: 'batteries',
       recipe: () => {
         [

@@ -439,6 +439,557 @@ onEvent('recipes', event => {
       ],
     },
 
+    {
+      id: 'demon_crusher',
+      recipe: () => {
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/lead'},
+            result: {item: 'rankine:galena', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_galena');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/silver'},
+            result: {item: 'rankine:acanthite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_acanthite');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/tin'},
+            result: {item: 'rankine:cassiterite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_cassiterite');
+
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'blue_skies:ores/horizonite'},
+            result: {item: 'blue_skies:raw_horizonite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_raw_horizonite');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/iron'},
+            result: {item: 'rankine:hematite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_hematite');
+
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/froststeel'},
+            result: {item: 'undergarden:raw_froststeel', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_raw_froststeel');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/cloggrum'},
+            result: {item: 'undergarden:raw_cloggrum', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_raw_cloggrum');
+
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'blue_skies:ores/ventium'},
+            result: {item: 'blue_skies:raw_ventium', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_raw_ventium');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'blue_skies:ores/falsite'},
+            result: {item: 'blue_skies:raw_falsite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_raw_falsite');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'blue_skies:ores/charoite'},
+            result: {item: 'blue_skies:raw_charoite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_raw_charoite');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'blue_skies:ores/aquite'},
+            result: {item: 'blue_skies:raw_aquite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_raw_aquite');
+      },
+    },
+    {
+      id: 'rituals',
+      recipe: () => {
+        ['occultism:ritual/summon_foliot_lumberjack'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:summon_foliot',
+            duration: 60,
+            spirit_max_age: -1,
+            spirit_job_type: 'occultism:lumberjack',
+            entity_to_summon: 'occultism:foliot',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_foliot_lumberjack',
+            },
+            ingredients: [
+              {
+                tag: 'occultism:saplings/otherworld',
+              },
+              {
+                item: 'minecraft:oak_sapling',
+              },
+              {
+                item: 'minecraft:birch_sapling',
+              },
+              {
+                item: 'minecraft:spruce_sapling',
+              },
+              {
+                tag: 'forge:tools/metal/axes',
+              },
+            ],
+            result: {
+              item: 'occultism:book_of_calling_foliot_lumberjack',
+            },
+          })
+          .id('inconvenient:ritual_lumberjack');
+
+        ['occultism:ritual/summon_wild_otherworld_bird'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:parrots',
+              display_name: 'ritual.occultism.sacrifice.parrots',
+            },
+            entity_to_summon: 'occultism:otherworld_bird',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_wild_otherworld_bird',
+            },
+            ingredients: [
+              {
+                tag: 'forge:feathers',
+              },
+              {
+                tag: 'forge:feathers',
+              },
+              {
+                item: 'minecraft:cobweb',
+              },
+              {
+                tag: 'minecraft:leaves',
+              },
+              {
+                tag: 'forge:eggs',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_wild_otherworld_bird');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:summon_djinni',
+            duration: 60,
+            spirit_max_age: 60,
+            spirit_job_type: 'occultism:clear_weather',
+            entity_to_summon: 'occultism:djinni',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_djinni_clear_weather',
+            },
+            ingredients: [
+              {
+                tag: 'forge:crops/beetroot',
+              },
+              {
+                tag: 'forge:crops/carrot',
+              },
+              {
+                tag: 'forge:crops/potato',
+              },
+              {
+                item: 'kubejs:wheat',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_clear_weather');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:summon_djinni',
+            duration: 60,
+            spirit_max_age: 60,
+            spirit_job_type: 'occultism:day_time',
+            entity_to_summon: 'occultism:djinni',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_djinni_day_time',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:blaze_powder',
+              },
+              {
+                tag: 'minecraft:saplings',
+              },
+              {
+                item: 'kubejs:wheat',
+              },
+              {
+                tag: 'forge:dyes/yellow',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_day_time');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:summon_djinni',
+            duration: 60,
+            spirit_max_age: 60,
+            spirit_job_type: 'occultism:night_time',
+            entity_to_summon: 'occultism:djinni',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_djinni_night_time',
+            },
+            ingredients: [
+              {
+                tag: 'minecraft:beds',
+              },
+              {
+                item: 'minecraft:rotten_flesh',
+              },
+              {
+                tag: 'forge:bones',
+              },
+              {
+                tag: 'forge:dyes/black',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_night_time');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:summon_foliot',
+            duration: 30,
+            spirit_max_age: 3600,
+            spirit_job_type: 'occultism:trade_otherstone_t1',
+            entity_to_summon: 'occultism:foliot',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_foliot_otherstone_trader',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:stone',
+              },
+              {
+                item: 'minecraft:granite',
+              },
+              {
+                item: 'minecraft:diorite',
+              },
+              {
+                item: 'minecraft:andesite',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_trade_otherstone_t1');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:summon_foliot',
+            duration: 30,
+            spirit_max_age: 3600,
+            spirit_job_type: 'occultism:trade_otherworld_saplings_t1',
+            entity_to_summon: 'occultism:foliot',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_foliot_sapling_trader',
+            },
+            ingredients: [
+              {
+                item: 'minecraft:oak_sapling',
+              },
+              {
+                item: 'minecraft:birch_sapling',
+              },
+              {
+                item: 'minecraft:spruce_sapling',
+              },
+              {
+                item: 'minecraft:jungle_sapling',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_trade_otherworld_saplings_t1');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_tamed',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:parrots',
+              display_name: 'ritual.occultism.sacrifice.parrots',
+            },
+            entity_to_summon: 'occultism:otherworld_bird',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_otherworld_bird',
+            },
+            ingredients: [
+              {
+                tag: 'forge:feathers',
+              },
+              {
+                tag: 'forge:feathers',
+              },
+              {
+                item: 'minecraft:cobweb',
+              },
+              {
+                tag: 'minecraft:leaves',
+              },
+              {
+                tag: 'forge:string',
+              },
+              {
+                item: 'create:sturdy_sheet',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_otherworld_bird');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_with_chance_of_chicken_tamed',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:possess_foliot',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:chicken',
+              display_name: 'ritual.occultism.sacrifice.chicken',
+            },
+            entity_to_summon: 'minecraft:parrot',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/familiar_parrot',
+            },
+            ingredients: [
+              {
+                tag: 'forge:feathers',
+              },
+              {
+                tag: 'forge:dyes/green',
+              },
+              {
+                tag: 'forge:dyes/yellow',
+              },
+              {
+                tag: 'forge:dyes/red',
+              },
+              {
+                tag: 'forge:dyes/blue',
+              },
+              {
+                tag: 'forge:string',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_parrot');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:summon_djinni',
+            duration: 90,
+            spirit_max_age: -1,
+            spirit_job_type: 'occultism:crush_tier2',
+            entity_to_summon: 'occultism:djinni',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_djinni_crusher',
+            },
+            ingredients: [
+              {
+                item: 'undergarden:cloggrum_ingot',
+              },
+              {
+                item: 'undergarden:regalium_crystal',
+              },
+              {
+                item: 'undergarden:utherium_crystal',
+              },
+              {
+                item: 'undergarden:froststeel_ingot',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_crush_tier2');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:summon_foliot',
+            duration: 60,
+            spirit_max_age: 32400,
+            spirit_job_type: 'occultism:crush_tier1',
+            entity_to_summon: 'occultism:foliot',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_foliot_crusher',
+            },
+            ingredients: [
+              {
+                item: 'rankine:graphite',
+              },
+              {
+                tag: 'forge:raw_materials/lead',
+              },
+              {
+                tag: 'forge:raw_materials/copper',
+              },
+              {
+                tag: 'forge:raw_materials/silver',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_crush_tier1');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_foliot',
+            },
+            pentacle_id: 'occultism:possess_foliot',
+            duration: 30,
+            entity_to_sacrifice: {
+              tag: 'forge:chicken',
+              display_name: 'ritual.occultism.sacrifice.chicken',
+            },
+            entity_to_summon: 'occultism:possessed_skeleton',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/possess_skeleton',
+            },
+            ingredients: [
+              {
+                tag: 'forge:bones',
+              },
+              {
+                tag: 'forge:bones',
+              },
+              {
+                tag: 'forge:bones',
+              },
+              {
+                tag: 'forge:bones',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_possessed_skeleton');
+      },
+    },
     {id: 'chests', recipe: () => {}},
     {
       id: 'briggs',
@@ -644,6 +1195,9 @@ onEvent('recipes', event => {
     {
       id: 'surprisingly_substantial_satchel',
       recipe: () => {
+        ['occultism:ritual/craft_satchel'].forEach(id =>
+          event.remove({id: id})
+        );
         event
           .custom({
             type: 'occultism:ritual',
@@ -1559,6 +2113,111 @@ onEvent('recipes', event => {
   ['minecraft:crossbow', 'paragon_textiles:crossbow'].forEach(id =>
     event.remove({id: id})
   );
+
+  [
+    'occultism:spirit_fire/otherworld_ashes',
+    'occultism:spirit_fire/purified_ink',
+  ].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'blue_skies:crescent_fruit_sapling',
+      },
+      result: {
+        item: 'hexerei:willow_sapling',
+      },
+    })
+    .id('inconvenient:spirit_fire_willow_sapling');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'minecraft:crimson_fungus',
+      },
+      result: {
+        item: 'hexerei:mahogany_sapling',
+      },
+    })
+    .id('inconvenient:spirit_fire_mahogany_sapling');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'twilightforest:torchberries',
+      },
+      result: {
+        item: 'hexerei:yellow_dock_leaves',
+      },
+    })
+    .id('inconvenient:spirit_fire_yellow_dock_leaves');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'hexerei:yellow_dock_leaves',
+      },
+      result: {
+        item: 'hexerei:yellow_dock_flowers',
+      },
+    })
+    .id('inconvenient:spirit_fire_yellow_dock_flowers');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'hexerei:mandrake_root',
+      },
+      result: {
+        item: 'hexerei:mandrake_flowers',
+      },
+    })
+    .id('inconvenient:spirit_fire_mandrake_flowers');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'minecraft:cocoa_beans',
+      },
+      result: {
+        item: 'hexerei:mugwort_leaves',
+      },
+    })
+    .id('inconvenient:spirit_fire_mugwort_leaves');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'hexerei:mugwort_leaves',
+      },
+      result: {
+        item: 'hexerei:mugwort_flowers',
+      },
+    })
+    .id('inconvenient:spirit_fire_mugwort_flowers');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'undergarden:gloomgourd_seeds',
+      },
+      result: {
+        item: 'hexerei:belladonna_flowers',
+      },
+    })
+    .id('inconvenient:spirit_fire_belladonna_flowers');
+  event
+    .custom({
+      type: 'occultism:spirit_fire',
+      ingredient: {
+        item: 'hexerei:belladonna_flowers',
+      },
+      result: {
+        item: 'hexerei:belladonna_berries',
+      },
+    })
+    .id('inconvenient:spirit_fire_belladonna_berries');
+
   event
     .custom({
       type: 'extendedcrafting:shaped_table',

@@ -525,6 +525,12 @@ onEvent('recipes', event => {
               id: 'molten_glass',
               recipe: () => {
                 event
+                  .blasting('#forge:sand', 'minecraft:glass')
+                  .id('inconvenient:blasting_glass');
+                event
+                  .shapeless('minecraft:glass', ['tconstruct:clear_glass'])
+                  .id('inconvenient:shapeless_glass');
+                event
                   .custom({
                     type: 'tconstruct:melting',
                     ingredient: {item: 'ecofriendly:sea_glass_ym'},

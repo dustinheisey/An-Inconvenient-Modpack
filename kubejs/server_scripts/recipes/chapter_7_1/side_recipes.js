@@ -211,6 +211,32 @@ onEvent('recipes', event => {
         },
       ],
     },
+    {
+      id: 'rituals',
+      recipe: () => {
+        [
+          'occultism:ritual/craft_miner_foliot_unspecialized',
+          'occultism:ritual/craft_dimensional_mineshaft',
+          'occultism:ritual/craft_miner_djinni_ores',
+          'occultism:ritual/craft_miner_afrit_deeps',
+          'occultism:ritual/craft_miner_foliot_unspecialized',
+        ].forEach(id => event.remove({id: id}));
+      },
+    },
+    {
+      id: 'demon_crusher',
+      recipe: () => {
+        // 7.1
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {item: 'mythicbotany:gold_ore'},
+            result: {item: 'minecraft:raw_gold', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_raw_gold');
+      },
+    },
   ]);
 
   ['naturesaura:tree_ritual/eye_improved'].forEach(id =>

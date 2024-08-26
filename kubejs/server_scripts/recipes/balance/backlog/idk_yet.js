@@ -438,6 +438,9 @@ onEvent('recipes', event => {
       },
     })
     .id('inconvenient:spirit_fire_spirit_attuned_gem');
+  ['occultism:ritual/craft_infused_lenses'].forEach(id =>
+    event.remove({id: id})
+  );
   event
     .custom({
       type: 'occultism:ritual',

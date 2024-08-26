@@ -699,6 +699,250 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'rituals',
+      recipe: () => {
+        [
+          'occultism:ritual/craft_dimensional_matrix',
+          'occultism:ritual/craft_infused_pickaxe',
+          'occultism:ritual/craft_soul_gem',
+          'occultism:ritual/craft_stabilizer_tier1',
+          'occultism:ritual/craft_stabilizer_tier2',
+          'occultism:ritual/craft_stabilizer_tier3',
+          'occultism:ritual/craft_stabilizer_tier4',
+          'occultism:ritual/craft_stable_wormhole',
+          'occultism:ritual/craft_storage_remote',
+          'occultism:ritual/possess_ghast',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_djinni',
+            },
+            pentacle_id: 'occultism:possess_djinni',
+            duration: 60,
+            entity_to_sacrifice: {
+              tag: 'forge:pigs',
+              display_name: 'ritual.occultism.sacrifice.pigs',
+            },
+            entity_to_summon: 'occultism:possessed_ghast',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/possess_ghast',
+            },
+            ingredients: [
+              {
+                tag: 'forge:netherrack',
+              },
+              {
+                tag: 'forge:netherrack',
+              },
+              {
+                tag: 'forge:netherrack',
+              },
+              {
+                tag: 'forge:magma',
+              },
+              {
+                tag: 'forge:magma',
+              },
+              {
+                tag: 'forge:magma',
+              },
+              {
+                item: 'minecraft:lava_bucket',
+              },
+              {
+                item: 'minecraft:lava_bucket',
+              },
+              {
+                item: 'minecraft:lava_bucket',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_possessed_ghast');
+
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_afrit',
+            },
+            pentacle_id: 'occultism:summon_afrit',
+            duration: 120,
+            spirit_max_age: -1,
+            spirit_job_type: 'occultism:crush_tier3',
+            entity_to_summon: 'occultism:afrit',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_afrit_crusher',
+            },
+            ingredients: [
+              {
+                item: 'create:chromatic_compound',
+              },
+              {
+                tag: 'forge:dusts/iesnium',
+              },
+              {
+                tag: 'forge:dusts/iesnium',
+              },
+              {
+                item: 'rankine:rose_gold_ingot',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_crush_tier3');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_afrit',
+            },
+            pentacle_id: 'occultism:summon_afrit',
+            duration: 60,
+            spirit_max_age: 120,
+            spirit_job_type: 'occultism:rain_weather',
+            entity_to_sacrifice: {
+              tag: 'forge:pigs',
+              display_name: 'ritual.occultism.sacrifice.pigs',
+            },
+            entity_to_summon: 'occultism:afrit',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_afrit_rain_weather',
+            },
+            ingredients: [
+              {
+                tag: 'forge:sand',
+              },
+              {
+                item: 'create:chromatic_compound',
+              },
+              {
+                item: 'minecraft:cactus',
+              },
+              {
+                item: 'minecraft:dead_bush',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_rain_weather');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_afrit',
+            },
+            pentacle_id: 'occultism:summon_afrit',
+            duration: 60,
+            spirit_max_age: 240,
+            spirit_job_type: 'occultism:thunder_weather',
+            entity_to_sacrifice: {
+              tag: 'forge:pigs',
+              display_name: 'ritual.occultism.sacrifice.pigs',
+            },
+            entity_to_summon: 'occultism:afrit',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_afrit_thunder_weather',
+            },
+            ingredients: [
+              {
+                tag: 'forge:bones',
+              },
+              {
+                tag: 'forge:gunpowder',
+              },
+              {
+                tag: 'forge:gunpowder',
+              },
+              {
+                item: 'minecraft:ghast_tear',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_thunder_weather');
+        event
+          .custom({
+            type: 'occultism:ritual',
+            ritual_type: 'occultism:summon_spirit_with_job',
+            activation_item: {
+              item: 'occultism:book_of_binding_bound_marid',
+            },
+            pentacle_id: 'occultism:summon_marid',
+            duration: 150,
+            spirit_max_age: -1,
+            spirit_job_type: 'occultism:crush_tier4',
+            entity_to_summon: 'occultism:marid',
+            ritual_dummy: {
+              item: 'occultism:ritual_dummy/summon_marid_crusher',
+            },
+            ingredients: [
+              {
+                item: 'rankine:rose_gold_block',
+              },
+              {
+                item: 'minecraft:ghast_tear',
+              },
+              {
+                tag: 'forge:storage_blocks/iesnium',
+              },
+              {
+                item: 'cataclysm:witherite_block',
+              },
+            ],
+            result: {
+              item: 'occultism:jei_dummy/none',
+            },
+          })
+          .id('inconvenient:ritual_crush_tier4');
+      },
+    },
+    {
+      id: 'demon_crusher',
+      recipe: () => {
+        // 4
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/zinc'},
+            result: {item: 'rankine:sphalerite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_sphalerite');
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/aluminum'},
+            result: {item: 'rankine:bauxite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_bauxite');
+
+        event
+          .custom({
+            type: 'occultism:crushing',
+            ingredient: {tag: 'forge:ores/cobalt'},
+            result: {item: 'rankine:cobaltite', count: 2},
+            crushing_time: 200,
+          })
+          .id('inconvenient:demon_crushing_cobaltite');
+      },
+    },
+    {
       id: 'slates',
       recipe: () => {
         ['bloodmagic:altar/etherealslate'].forEach(id =>
@@ -920,6 +1164,24 @@ onEvent('recipes', event => {
     {
       id: 'familiars',
       recipe: () => {
+        [
+          'occultism:ritual/familiar_otherworld_bird',
+          'occultism:ritual/familiar_parrot',
+          'occultism:ritual/familiar_bat',
+          'occultism:ritual/familiar_beaver',
+          'occultism:ritual/familiar_beholder',
+          'occultism:ritual/familiar_blacksmith',
+          'occultism:ritual/familiar_chimera',
+          'occultism:ritual/familiar_cthulhu',
+          'occultism:ritual/familiar_deer',
+          'occultism:ritual/familiar_devil',
+          'occultism:ritual/familiar_dragon',
+          'occultism:ritual/familiar_fairy',
+          'occultism:ritual/familiar_greedy',
+          'occultism:ritual/familiar_guardian',
+          'occultism:ritual/familiar_headless',
+          'occultism:ritual/familiar_mummy',
+        ].forEach(id => event.remove({id: id}));
         event
           .custom({
             type: 'occultism:ritual',

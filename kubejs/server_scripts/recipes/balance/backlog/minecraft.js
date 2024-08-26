@@ -19,9 +19,6 @@ onEvent('recipes', event => {
       );
     },
     shapeless: () => {
-      event
-        .shapeless('minecraft:glass', ['tconstruct:clear_glass'])
-        .id('inconvenient:shapeless_glass');
       event.forEachRecipe(
         {
           type: 'minecraft:crafting_shapeless',
@@ -64,9 +61,6 @@ onEvent('recipes', event => {
         type: 'minecraft:blasting',
       });
 
-      event
-        .blasting('#forge:sand', 'minecraft:glass')
-        .id('inconvenient:blasting_glass');
       event
         .blasting('chemlib:aluminum_dust', 'rankine:aluminum_ingot')
         .id('inconvenient:blasting_aluminum_ingot');
