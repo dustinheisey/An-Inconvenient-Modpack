@@ -308,7 +308,25 @@ onEvent('recipes', event => {
                     children: [
                       {
                         id: 'bottle_of_blood',
-                        recipe: () => {},
+                        recipe: () => {
+                          [
+                            'tconstruct:__default', // TODO: Fix entity melting to get blood
+                            'tconstruct:smeltery/melting/slime/blood/flesh',
+                            'tconstruct:smeltery/entity_melting/zombie',
+                          ].forEach(id => event.remove({id: id}));
+                          event
+                            .custom({
+                              type: 'tconstruct:melting',
+                              ingredient: {item: 'hexerei:blood_bottle'},
+                              result: {
+                                fluid: 'tconstruct:blood',
+                                amount: 250,
+                              },
+                              temperature: 605,
+                              time: 54,
+                            })
+                            .id('inconvenient:melting_blood');
+                        },
                         children: [
                           {
                             id: 'blood_sigil',

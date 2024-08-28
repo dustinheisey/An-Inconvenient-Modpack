@@ -237,6 +237,37 @@ onEvent('recipes', event => {
           .id('inconvenient:demon_crushing_raw_gold');
       },
     },
+    {
+      id: 'plates',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/casting/metal/osmium/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/osmium/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/tungsten/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/tungsten/plate_sand_cast',
+        ].forEach(id => event.remove({id: id}));
+      },
+    },
+    {
+      id: 'metals',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/melting/diamond/ore_singular',
+          'tconstruct:smeltery/melting/metal/tungsten/ore_singular',
+          'tconstruct:smeltery/melting/metal/osmium/ore_singular',
+          'tconstruct:smeltery/alloys/molten_refined_obsidian',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'create:crushed_raw_osmium'},
+            result: {fluid: 'tconstruct:molten_osmium', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_crushed_raw_osmium');
+      },
+    },
   ]);
 
   ['naturesaura:tree_ritual/eye_improved'].forEach(id =>

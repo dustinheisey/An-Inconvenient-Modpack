@@ -98,5 +98,15 @@ onEvent('recipes', event => {
           .id('inconvenient:altar_bleedingedge');
       },
     },
+    {
+      id: 'metals',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/melting/emerald/ore_singular',
+          'tconstruct:smeltery/entity_melting/illager',
+          'tconstruct:smeltery/entity_melting/villager',
+        ].forEach(id => event.remove({id: id}));
+      },
+    },
   ]);
 });

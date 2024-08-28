@@ -192,6 +192,90 @@ onEvent('recipes', event => {
       },
     },
     {
+      id: 'rods',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/casting/metal/electrum/rod_gold_cast',
+          'tconstruct:smeltery/casting/metal/electrum/rod_sand_cast',
+          'tconstruct:smeltery/casting/metal/aluminum/rod_gold_cast',
+          'tconstruct:smeltery/casting/metal/aluminum/rod_sand_cast',
+          'tconstruct:smeltery/casting/metal/steel/rod_gold_cast',
+          'tconstruct:smeltery/casting/metal/steel/rod_sand_cast',
+          'tconstruct:smeltery/casting/metal/iron/rod_gold_cast',
+          'tconstruct:smeltery/casting/metal/iron/rod_sand_cast',
+        ].forEach(id => event.remove({id: id}));
+      },
+    },
+    {
+      id: 'plates',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/casting/metal/constantan/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/constantan/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/electrum/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/electrum/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/steel/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/steel/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/nickel/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/nickel/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/uranium/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/uranium/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/platinum/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/platinum/plate_sand_cast',
+        ].forEach(id => event.remove({id: id}));
+      },
+    },
+    {
+      id: 'wires',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/casting/metal/copper/wire_gold_cast',
+          'tconstruct:smeltery/casting/metal/copper/wire_sand_cast',
+          'tconstruct:smeltery/casting/metal/electrum/wire_gold_cast',
+          'tconstruct:smeltery/casting/metal/electrum/wire_sand_cast',
+          'tconstruct:smeltery/casting/metal/aluminum/wire_gold_cast',
+          'tconstruct:smeltery/casting/metal/aluminum/wire_sand_cast',
+          'tconstruct:smeltery/casting/metal/steel/wire_gold_cast',
+          'tconstruct:smeltery/casting/metal/steel/wire_sand_cast',
+          'tconstruct:smeltery/casting/metal/lead/wire_gold_cast',
+          'tconstruct:smeltery/casting/metal/lead/wire_sand_cast',
+          'tconstruct:smeltery/casting/metal/brass/wire_gold_cast',
+          'tconstruct:smeltery/casting/metal/brass/wire_sand_cast',
+        ].forEach(id => event.remove({id: id}));
+      },
+    },
+    {
+      id: 'metals',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/alloys/molten_invar',
+          'tconstruct:smeltery/alloys/molten_electrum',
+          'tconstruct:smeltery/alloys/molten_constantan',
+          'tconstruct:smeltery/melting/metal/nickel/ore_singular',
+          'tconstruct:smeltery/melting/metal/uranium/ore_singular',
+        ].forEach(id => event.remove({id: id}));
+
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'chemlib:nickel_dust'},
+            result: {fluid: 'tconstruct:molten_nickel', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_nickel_dust');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'chemlib:uranium_dust'},
+            result: {fluid: 'tconstruct:molten_uranium', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_uranium_dust');
+      },
+    },
+    {
       id: 'batteries',
       recipe: () => {
         [

@@ -35,6 +35,7 @@ onEvent('recipes', event => {
             'tconstruct:smeltery/casting/seared/cobble/stairs',
             'tconstruct:smeltery/casting/seared/cobble/wall',
             'tconstruct:smeltery/casting/seared/paver',
+            'tconstruct:smeltery/casting/seared/stone/block_from_clay',
           ].forEach(id => event.remove({id: id}));
 
           event
@@ -153,6 +154,7 @@ onEvent('recipes', event => {
                       [
                         'tconstruct:smeltery/seared/seared_brick_kiln',
                         'tconstruct:smeltery/seared/seared_brick',
+                        'tconstruct:smeltery/casting/seared/brick_composite',
                       ].forEach(id => event.remove({id: id}));
                       event
                         .smelting(

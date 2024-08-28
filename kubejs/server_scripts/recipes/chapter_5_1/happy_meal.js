@@ -2505,6 +2505,14 @@ onEvent('recipes', event => {
                                                               {
                                                                 id: 'cow',
                                                                 recipe: () => {
+                                                                  [
+                                                                    'tconstruct:smeltery/entity_melting/skeletons',
+                                                                  ].forEach(
+                                                                    id =>
+                                                                      event.remove(
+                                                                        {id: id}
+                                                                      )
+                                                                  );
                                                                   event
                                                                     .custom({
                                                                       type: 'naturesaura:animal_spawner',

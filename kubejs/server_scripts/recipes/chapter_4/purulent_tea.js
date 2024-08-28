@@ -946,10 +946,12 @@ onEvent('recipes', event => {
           {
             id: 'magma_cream',
             recipe: () => {
-              event.remove({
-                output: `minecraft:magma_cream`,
-                type: 'minecraft:crafting_shapeless',
-              });
+              [
+                'tconstruct:smeltery/casting/blaze/cream',
+                'minecraft:magma_cream',
+                'malum:magma_cream_from_sapballs',
+                'tconstruct:common/slime/magma_cream',
+              ].forEach(id => event.remove({id: id}));
               event.recipes.create
                 .haunting('minecraft:magma_cream', 'malum:unholy_sapball')
                 .id('inconvenient:haunting_magma_cream');

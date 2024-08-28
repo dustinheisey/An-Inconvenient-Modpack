@@ -536,6 +536,333 @@ onEvent('recipes', event => {
       },
     },
     {
+      id: 'metals',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/alloys/molten_obsidian',
+          'tconstruct:smeltery/alloys/molten_obsidian_from_soup',
+          'twilightforest:smeltery/melting/metal/knightmetal/nugget',
+        ].forEach(id => event.remove({id: id}));
+
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:raw_froststeel'},
+            result: {fluid: 'kubejs:molten_froststeel', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_froststeel');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:froststeel_nugget'},
+            result: {fluid: 'kubejs:molten_froststeel', amount: 10},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_froststeel_nugget');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:froststeel_ingot'},
+            result: {fluid: 'kubejs:molten_froststeel', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_froststeel_ingot');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:froststeel_block'},
+            result: {fluid: 'kubejs:molten_froststeel', amount: 810},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_froststeel_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:raw_froststeel_block'},
+            result: {
+              fluid: 'kubejs:molten_froststeel',
+              amount: 810,
+            },
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_molten_raw_froststeel_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:raw_cloggrum'},
+            result: {fluid: 'kubejs:molten_cloggrum', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_cloggrum');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:cloggrum_nugget'},
+            result: {fluid: 'kubejs:molten_cloggrum', amount: 10},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_cloggrum_nugget');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:cloggrum_ingot'},
+            result: {fluid: 'kubejs:molten_cloggrum', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_cloggrum_ingot');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:cloggrum_block'},
+            result: {fluid: 'kubejs:molten_cloggrum', amount: 810},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_cloggrum_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:raw_cloggrum_block'},
+            result: {
+              fluid: 'kubejs:molten_cloggrum',
+              amount: 810,
+            },
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_cloggrum_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:regalium_crystal'},
+            result: {fluid: 'kubejs:molten_regalium', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_regalium_crystal');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:regalium_block'},
+            result: {
+              fluid: 'kubejs:molten_regalium',
+              amount: 810,
+            },
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_regalium_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:utherium_crystal'},
+            result: {fluid: 'kubejs:molten_utherium', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_utherium_crystal');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:utheric_shard'},
+            result: {fluid: 'kubejs:molten_utherium', amount: 10},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_utheric_shard');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'undergarden:utherium_block'},
+            result: {
+              fluid: 'kubejs:molten_utherium',
+              amount: 810,
+            },
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_utherium_block');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'undergarden:froststeel_nugget',
+            fluid: {name: 'kubejs:molten_froststeel', amount: 10},
+            cast: {item: 'tconstruct:nugget_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_froststeel_nugget');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'undergarden:froststeel_ingot',
+            fluid: {name: 'kubejs:molten_froststeel', amount: 90},
+            cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_froststeel_ingot');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'undergarden:cloggrum_nugget',
+            fluid: {name: 'kubejs:molten_cloggrum', amount: 10},
+            cast: {item: 'tconstruct:nugget_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_cloggrum_nugget');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'undergarden:cloggrum_ingot',
+            fluid: {name: 'kubejs:molten_cloggrum', amount: 90},
+            cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_cloggrum_ingot');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'undergarden:regalium_crystal',
+            fluid: {name: 'kubejs:molten_regalium', amount: 90},
+            cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_regalium_crystal');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'undergarden:utherium_crystal',
+            fluid: {name: 'kubejs:molten_utherium', amount: 90},
+            cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_utherium_crystal');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'undergarden:utheric_shard',
+            fluid: {name: 'kubejs:molten_utherium', amount: 10},
+            cast: {item: 'tconstruct:nugget_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_utheric_shard');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            result: 'undergarden:froststeel_block',
+            fluid: {name: 'kubejs:molten_froststeel', amount: 810},
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_froststeel_block');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            result: 'undergarden:cloggrum_block',
+            fluid: {name: 'kubejs:molten_cloggrum', amount: 810},
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_cloggrum_block');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            result: 'undergarden:regalium_block',
+            fluid: {name: 'kubejs:molten_regalium', amount: 810},
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_regalium_block');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            result: 'undergarden:utherium_block',
+            fluid: {name: 'kubejs:molten_utherium', amount: 810},
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_utherium_block');
+      },
+    },
+    {
+      id: 'fiery_tools',
+      recipe: () => {
+        [
+          'twilightforest:equipment/fiery_sword',
+          'twilightforest:equipment/fiery_iron_sword',
+          'twilightforest:equipment/fiery_iron_pickaxe',
+          'twilightforest:equipment/fiery_pickaxe',
+          'twilightdelight:fiery_knife',
+          'twilightdelight:fiery_knife',
+          'twilightforest:smeltery/melting/metal/fiery/nugget',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            fluid: {name: 'twilightforest:molten_fiery', amount: 90},
+            cast: {
+              item: 'farmersdelight:iron_knife',
+              cast_consumed: true,
+            },
+            result: 'twilightforest:fiery_pickaxe',
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_fiery_pickaxe');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            fluid: {name: 'twilightforest:molten_fiery', amount: 270},
+            cast: {
+              item: 'twilightforest:knightmetal_pickaxe',
+              cast_consumed: true,
+            },
+            result: 'twilightforest:fiery_pickaxe',
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_fiery_pickaxe');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            fluid: {name: 'twilightforest:molten_fiery', amount: 180},
+            cast: {
+              item: 'twilightforest:knightmetal_sword',
+              cast_consumed: true,
+            },
+            result: 'twilightforest:fiery_sword',
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_fiery_sword');
+      },
+    },
+    {
+      id: 'glowstone_crystal',
+      recipe: () => {
+        ['realistictorches:glowstone_crystal'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            fluid: {name: 'tconstruct:blazing_blood', amount: 10},
+            cast: {item: 'minecraft:coal', cast_consumed: true},
+            result: 'realistictorches:glowstone_crystal',
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_glowstone_crystal');
+      },
+    },
+    {
       id: 'rituals',
       recipe: () => {
         ['occultism:ritual/summon_foliot_lumberjack'].forEach(id =>

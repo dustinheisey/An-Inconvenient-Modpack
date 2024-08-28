@@ -128,6 +128,10 @@ onEvent('recipes', event => {
                       {
                         id: 'afrit_essence',
                         recipe: () => {
+                          // ritual spawns blaze before you should be allowed to get blaze rods
+                          ['tconstruct:tools/severing/blaze_rod'].forEach(id =>
+                            event.remove({id: id})
+                          );
                           event
                             .custom({
                               type: 'occultism:ritual',
@@ -387,7 +391,17 @@ onEvent('recipes', event => {
                           },
                         ],
                       },
-                      {id: 'molten_obsidian', recipe: () => {}, children: []},
+                      {
+                        id: 'molten_obsidian',
+                        recipe: () => {
+                          [
+                            'tconstruct:smeltery/melting/obsidian/block',
+                            'tconstruct:smeltery/melting/obsidian/block',
+                            'tconstruct:smeltery/melting/obsidian/block',
+                          ].forEach(id => event.remove({id: id}));
+                        },
+                        children: [],
+                      },
                     ],
                   },
                   {
@@ -566,6 +580,8 @@ onEvent('recipes', event => {
                       [
                         'create:crafting/materials/andesite_alloy_from_zinc',
                         'create:mixing/andesite_alloy_from_zinc',
+                        'tconstruct:compat/create/andesite_alloy_iron',
+                        'tconstruct:compat/create/andesite_alloy_zinc',
                       ].forEach(id => event.remove({id: id}));
                       event
                         .custom({

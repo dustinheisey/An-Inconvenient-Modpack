@@ -120,7 +120,12 @@ onEvent('recipes', event => {
               'hem:steampunkcoat',
               'hem:steampunkleggings',
               'hem:steampunkshoes',
+              'tconstruct:armor/building/plate_helmet',
+              'tconstruct:armor/building/plate_chestplate',
+              'tconstruct:armor/building/plate_leggings',
+              'tconstruct:armor/building/plate_boots',
             ].forEach(id => event.remove({id: id}));
+
             stageArmors(event, [
               {
                 tier: 'cataclysm:ignitium',
@@ -166,6 +171,33 @@ onEvent('recipes', event => {
                 'twilightforest:fiery_boots'
               )
               .id('inconvenient:smithing_netherite_boots');
+
+            event
+              .shaped('tconstruct:plate_helmet', ['aaa', 'bbb'], {
+                a: 'tconstruct:manyullyn_ingot',
+                b: 'minecraft:chain',
+              })
+              .id('inconvenient:shaped_plate_helmet');
+
+            event
+              .shaped('tconstruct:plate_chestplate', ['a a', 'aaa', 'bab'], {
+                a: 'tconstruct:manyullyn_ingot',
+                b: 'minecraft:chain',
+              })
+              .id('inconvenient:shaped_plate_chestplate');
+
+            event
+              .shaped('tconstruct:plate_leggings', ['aaa', 'a a', 'b b'], {
+                a: 'tconstruct:manyullyn_ingot',
+                b: 'minecraft:chain',
+              })
+              .id('inconvenient:shaped_plate_leggings');
+
+            event
+              .shaped('tconstruct:plate_boots', ['a a', 'a a'], {
+                a: 'tconstruct:manyullyn_ingot',
+              })
+              .id('inconvenient:shaped_plate_boots');
           },
         },
         {
@@ -211,6 +243,7 @@ onEvent('recipes', event => {
               'tconstruct:smeltery/scorched/scorched_bricks_crafting',
               'tconstruct:smeltery/scorched/scorched_bricks_from_brick',
               'botania:livingrock_bricks',
+              'architects_palette:onyx_bricks',
             ].forEach(id => event.remove({id: id}));
             overrideBricksRecipes('chapter_4', event, [
               {
@@ -230,23 +263,23 @@ onEvent('recipes', event => {
                 input: 'minecraft:quartz_block',
               },
               {
-                output: 'architectspalette:hadaline_bricks',
-                input: 'architectspalette:hadaline',
+                output: 'architects_palette:hadaline_bricks',
+                input: 'architects_palette:hadaline',
               },
               {
-                output: 'architectspalette:esoterrack_bricks',
-                input: 'architectspalette:esoterrack',
+                output: 'architects_palette:esoterrack_bricks',
+                input: 'architects_palette:esoterrack',
               },
               {
-                output: 'architectspalette:onxy_bricks',
-                input: 'architectspalette:onxy',
+                output: 'architects_palette:onyx_bricks',
+                input: 'architects_palette:onyx',
               },
               {
                 output: 'malum:tainted_rock_bricks',
                 input: 'malum:polished_tainted_rock',
               },
               {
-                output: 'minecraft:basalt_bricks',
+                output: 'rankine:basalt_bricks',
                 input: 'minecraft:basalt',
               },
               {
@@ -270,7 +303,136 @@ onEvent('recipes', event => {
         },
       ],
     },
+    {
+      id: 'plates',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/casting/metal/copper/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/copper/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/brass/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/brass/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/iron/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/iron/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/gold/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/gold/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/zinc/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/zinc/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/aluminum/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/aluminum/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/lead/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/lead/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/silver/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/silver/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/cobalt/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/cobalt/plate_sand_cast',
+          'tconstruct:smeltery/casting/metal/tin/plate_gold_cast',
+          'tconstruct:smeltery/casting/metal/tin/plate_sand_cast',
+        ].forEach(id => event.remove({id: id}));
+      },
+    },
+    {
+      id: 'metals',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/alloys/molten_rose_gold',
+          'tconstruct:smeltery/alloys/molten_brass',
+          'tconstruct:smeltery/melting/quartz/ore_singular',
+          'tconstruct:smeltery/melting/metal/molten_debris/ore',
+          'tconstruct:smeltery/melting/metal/gold/gilded_blackstone',
+          'tconstruct:smeltery/melting/metal/gold/ore_singular',
+          'tconstruct:smeltery/melting/metal/gold/ore_sparse',
+          'tconstruct:smeltery/melting/metal/cobalt/ore_singular',
+          'tconstruct:smeltery/melting/metal/aluminum/ore_singular',
+          'tconstruct:smeltery/melting/metal/zinc/ore_singular',
+        ].forEach(id => event.remove({id: id}));
 
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'create:crushed_raw_iron'},
+            result: {fluid: 'tconstruct:molten_iron', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_crushed_raw_iron');
+
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'create:crushed_raw_copper'},
+            result: {fluid: 'tconstruct:molten_copper', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_crushed_raw_copper');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'create:crushed_raw_tin'},
+            result: {fluid: 'tconstruct:molten_tin', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_crushed_raw_tin');
+
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'occultism:iesnium_dust'},
+            result: {fluid: 'kubejs:molten_iesnium', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_iesnium_dust');
+
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'create:crushed_raw_aluminum'},
+            result: {fluid: 'tconstruct:molten_aluminum', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_crushed_raw_aluminum');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'create:crushed_raw_zinc'},
+            result: {fluid: 'tconstruct:molten_zinc', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_crushed_raw_zinc');
+
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'create:crushed_raw_gold'},
+            result: {fluid: 'tconstruct:molten_gold', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_crushed_raw_gold');
+      },
+    },
+    {
+      id: 'foundry',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/casting/scorched/foundry_controller',
+          'tconstruct:smeltery/casting/scorched/polished_from_magma',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            fluid: {name: 'tconstruct:blazing_blood', amount: 40},
+            cast: 'tconstruct:scorched_bricks',
+            result: 'tconstruct:foundry_controller',
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_foundry_controller');
+      },
+    },
     {
       id: 'cobaltite',
       recipe: () => {
@@ -1928,6 +2090,11 @@ onEvent('recipes', event => {
       ],
     })
     .id('inconvenient:mixing_netherite_ingot');
+  [
+    'createaddition:compat/tconstruct/pig_iron',
+    'createaddition:compat/tconstruct/pig_iron_2',
+    'tconstruct:smeltery/alloys/molten_pig_iron',
+  ].forEach(id => event.remove({id: id}));
   event
     .custom({
       type: 'create:mixing',

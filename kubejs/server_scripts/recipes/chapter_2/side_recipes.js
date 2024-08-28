@@ -107,6 +107,10 @@ onEvent('recipes', event => {
               'blue_skies:charoite_chestplate',
               'blue_skies:charoite_leggings',
               'blue_skies:charoite_boots',
+              'tconstruct:armor/building/travelers_goggles',
+              'tconstruct:armor/building/travelers_chestplate',
+              'tconstruct:armor/building/travelers_pants',
+              'tconstruct:armor/building/travelers_boots',
             ].forEach(id => event.remove({id: id}));
 
             stageArmors(event, [
@@ -118,6 +122,39 @@ onEvent('recipes', event => {
                 master: 'charoite',
               },
             ]);
+
+            event
+              .shaped('tconstruct:travelers_helmet', ['a a', 'bab', 'c c'], {
+                a: 'minecraft:leather',
+                b: 'minecraft:glass_pane',
+                c: 'tconstruct:amethyst_bronze_ingot',
+              })
+              .id('inconvenient:shaped_travelers_helmet');
+
+            event
+              .shaped(
+                'tconstruct:travelers_chestplate',
+                ['a a', 'aba', 'aba'],
+                {
+                  a: 'minecraft:leather',
+                  b: 'tconstruct:amethyst_bronze_ingot',
+                }
+              )
+              .id('inconvenient:shaped_travelers_chestplate');
+
+            event
+              .shaped('tconstruct:travelers_leggings', ['aaa', 'b b', 'a a'], {
+                a: 'minecraft:leather',
+                b: 'tconstruct:amethyst_bronze_ingot',
+              })
+              .id('inconvenient:shaped_travelers_leggings');
+
+            event
+              .shaped('tconstruct:travelers_boots', ['a a', 'b b'], {
+                a: 'tconstruct:amethyst_bronze_ingot',
+                b: 'minecraft:leather',
+              })
+              .id('inconvenient:shaped_travelers_boots');
           },
         },
         {
@@ -273,6 +310,53 @@ onEvent('recipes', event => {
       },
     },
 
+    {
+      id: 'glass',
+      recipe: () => {
+        event
+          .shaped(`rankine:lead_glass`, [' a ', 'aba', ' a '], {
+            a: `rankine:lead_ingot`,
+            b: '#forge:glass',
+          })
+          .id('inconvenient:shaped_lead_glass');
+
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:midnight_sand'},
+            result: {fluid: 'kubejs:molten_midnight_glass', amount: 1000},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_molten_midnight_glass');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:crystal_sand'},
+            result: {fluid: 'kubejs:molten_crystal_glass', amount: 1000},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_molten_crystal_glass');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            fluid: {name: 'kubejs:molten_crystal_glass', amount: 1000},
+            result: 'blue_skies:crystal_glass',
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_crystal_glass');
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            fluid: {name: 'kubejs:molten_midnight_glass', amount: 1000},
+            result: 'blue_skies:midnight_glass',
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_midnight_glass');
+      },
+    },
     {
       id: 'ground_tap',
       recipe: () => {},
@@ -993,6 +1077,445 @@ onEvent('recipes', event => {
           .id('inconvenient:cauldron_sediment_fan');
       },
     },
+    {
+      id: 'casts',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/casts/gold_casts/rods',
+          'tconstruct:smeltery/casts/gold_casts/gears',
+          'tconstruct:smeltery/casts/gold_casts/wires',
+          'tconstruct:smeltery/casts/gold_casts/gems',
+          'tconstruct:smeltery/casts/gold_casts/ingots',
+          'tconstruct:smeltery/casts/gold_casts/nuggets',
+          'tconstruct:smeltery/casts/gold_casts/pick_heads',
+          'tconstruct:smeltery/casts/gold_casts/repair_kit',
+          'tconstruct:smeltery/casts/gold_casts/small_axe_head',
+          'tconstruct:smeltery/casts/gold_casts/small_blade',
+          'tconstruct:smeltery/casts/gold_casts/tool_binding',
+          'tconstruct:smeltery/casts/gold_casts/tool_handle',
+          'tconstruct:smeltery/casts/gold_casts/hammer_head',
+          'tconstruct:smeltery/casts/gold_casts/round_plate',
+          'tconstruct:smeltery/casts/gold_casts/broad_blade',
+          'tconstruct:smeltery/casts/gold_casts/broad_axe_head',
+          'tconstruct:smeltery/casts/gold_casts/large_plate',
+          'tconstruct:smeltery/casts/gold_casts/tough_handle',
+          'tconstruct:smeltery/melting/metal/gold/cast',
+        ].forEach(id => event.remove({id: id}));
+
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {tag: 'forge:gems'},
+            result: 'tconstruct:gem_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_gem_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {tag: 'forge:ingots'},
+            result: 'tconstruct:ingot_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_ingot_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {tag: 'forge:nuggets'},
+            result: 'tconstruct:nugget_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_nugget_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:pick_head'},
+            result: 'tconstruct:pick_head_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_pick_head_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:repair_kit'},
+            result: 'tconstruct:repair_kit_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_repair_kit_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:small_axe_head'},
+            result: 'tconstruct:small_axe_head_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_small_axe_head_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:small_blade'},
+            result: 'tconstruct:small_blade_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_small_blade_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:tool_binding'},
+            result: 'tconstruct:tool_binding_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_tool_binding_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:tool_handle'},
+            result: 'tconstruct:tool_handle_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_tool_handle_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:hammer_head'},
+            result: 'tconstruct:hammer_head_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_hammer_head_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:round_plate'},
+            result: 'tconstruct:round_plate_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_round_plate_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:broad_blade'},
+            result: 'tconstruct:broad_blade_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_broad_blade_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:broad_axe_head'},
+            result: 'tconstruct:broad_axe_head_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_broad_axe_head_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:large_plate'},
+            result: 'tconstruct:large_plate_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_large_plate_cast');
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            cast_consumed: true,
+            switch_slots: true,
+            cooling_time: 57,
+            cast: {item: 'tconstruct:tough_handle'},
+            result: 'tconstruct:tough_handle_cast',
+            fluid: {name: 'tconstruct:molten_bronze', amount: 180},
+          })
+          .id('inconvenient:casting_table_tough_handle_cast');
+      },
+    },
+    {
+      id: 'recycling_bunker',
+      recipe: () => {
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'architects_palette:plating_block'},
+            result: {fluid: 'tconstruct:molten_iron', amount: 30},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_plating_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'architects_palette:plating_slab'},
+            result: {fluid: 'tconstruct:molten_iron', amount: 15},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_plating_slab');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'architects_palette:plating_stairs'},
+            result: {fluid: 'tconstruct:molten_iron', amount: 45},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_plating_stairs');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'architects_palette:plating_wall'},
+            result: {fluid: 'tconstruct:molten_iron', amount: 5},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_plating_wall');
+      },
+    },
+    {
+      id: 'metals',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/melting/metal/copper/ore_dense',
+          'tconstruct:smeltery/melting/metal/copper/ore_singular',
+          'tconstruct:smeltery/melting/metal/iron/ore_singular',
+          'tconstruct:smeltery/melting/metal/tin/ore_singular',
+          'tconstruct:smeltery/melting/metal/lead/ore_singular',
+          'tconstruct:smeltery/melting/metal/silver/ore_singular',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:raw_aquite'},
+            result: {fluid: 'kubejs:molten_aquite', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_aquite');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:aquite'},
+            result: {fluid: 'kubejs:molten_aquite', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_aquite');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:aquite_block'},
+            result: {fluid: 'kubejs:molten_aquite', amount: 810},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_aquite_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:raw_aquite_block'},
+            result: {
+              fluid: 'kubejs:molten_aquite',
+              amount: 810,
+            },
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_aquite_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:raw_charoite'},
+            result: {fluid: 'kubejs:molten_charoite', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_charoite');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:charoite'},
+            result: {fluid: 'kubejs:molten_charoite', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_charoite');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:charoite_block'},
+            result: {fluid: 'kubejs:molten_charoite', amount: 810},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_charoite_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:raw_charoite_block'},
+            result: {
+              fluid: 'kubejs:molten_charoite',
+              amount: 810,
+            },
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_charoite_block');
+
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:raw_ventium'},
+            result: {fluid: 'kubejs:molten_ventium', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_ventium');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:ventium_ingot'},
+            result: {fluid: 'kubejs:molten_ventium', amount: 90},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_ventium_ingot');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:ventium_nugget'},
+            result: {fluid: 'kubejs:molten_ventium', amount: 10},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_ventium_nugget');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:ventium_block'},
+            result: {fluid: 'kubejs:molten_ventium', amount: 810},
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_ventium_block');
+        event
+          .custom({
+            type: 'tconstruct:melting',
+            ingredient: {item: 'blue_skies:raw_ventium_block'},
+            result: {
+              fluid: 'kubejs:molten_ventium',
+              amount: 810,
+            },
+            temperature: 605,
+            time: 54,
+          })
+          .id('inconvenient:melting_raw_ventium_block');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'blue_skies:aquite',
+            fluid: {name: 'kubejs:molten_aquite', amount: 90},
+            cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_aquite');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'blue_skies:charoite',
+            fluid: {name: 'kubejs:molten_charoite', amount: 90},
+            cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_charoite');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'blue_skies:ventium_ingot',
+            fluid: {name: 'kubejs:molten_ventium', amount: 90},
+            cast: {item: 'tconstruct:ingot_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_ventium_ingot');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_table',
+            result: 'blue_skies:ventium_nugget',
+            fluid: {name: 'kubejs:molten_ventium', amount: 10},
+            cast: {item: 'tconstruct:nugget_cast', cast_consumed: false},
+            cooling_time: 100,
+          })
+          .id('inconvenient:casting_table_ventium_nugget');
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            result: 'blue_skies:aquite_block',
+            fluid: {name: 'kubejs:molten_aquite', amount: 810},
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_aquite_block');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            result: 'blue_skies:charoite_block',
+            fluid: {name: 'kubejs:molten_charoite', amount: 810},
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_charoite_block');
+
+        event
+          .custom({
+            type: 'tconstruct:casting_basin',
+            result: 'blue_skies:ventium_block',
+            fluid: {name: 'kubejs:molten_ventium', amount: 810},
+            cooling_time: 900,
+          })
+          .id('inconvenient:casting_basin_ventium_block');
+      },
+    },
   ]);
 
   event
@@ -1176,13 +1699,6 @@ onEvent('recipes', event => {
       b: '#minecraft:wooden_slabs',
     })
     .id('inconvenient:shaped_red_seat');
-
-  event
-    .shaped(`rankine:lead_glass`, [' a ', 'aba', ' a '], {
-      a: `rankine:lead_ingot`,
-      b: '#forge:glass',
-    })
-    .id('inconvenient:shaped_lead_glass');
 });
 
 onEvent('server.datapack.high_priority', event => {
