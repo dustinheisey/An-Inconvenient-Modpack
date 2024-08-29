@@ -266,6 +266,19 @@ onEvent('recipes', event => {
             time: 54,
           })
           .id('inconvenient:melting_crushed_raw_osmium');
+
+        event
+          .blasting('chemlib:titanium_dust', 'rankine:titanium_ingot')
+          .id('inconvenient:blasting_titanium_dust');
+        event
+          .blasting('chemlib:tungsten_dust', 'rankine:tungsten_ingot')
+          .id('inconvenient:blasting_tungsten_dust');
+        event
+          .blasting('chemlib:bismuth_dust', 'rankine:bismuth_ingot')
+          .id('inconvenient:blasting_bismuth_dust');
+        event
+          .blasting('create:crushed_raw_osmium', 'rankine:osmium_ingot')
+          .id('inconvenient:blasting_crushed_raw_osmium');
       },
     },
   ]);

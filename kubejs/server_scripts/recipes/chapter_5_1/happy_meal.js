@@ -81,6 +81,9 @@ onEvent('recipes', event => {
     .id('inconvenient:elven_trade_hemp_seed');
 
   event
+    .smoking('minecraft:popped_chorus_fruit', 'minecraft:chorus_fruit')
+    .id('inconvenient:smoking_popped_chorus_fruit');
+  event
     .custom({
       type: 'bloodmagic:altar',
       input: {
@@ -2329,14 +2332,7 @@ onEvent('recipes', event => {
               {
                 // animal agriculture
                 id: 'patty',
-                recipe: () => {
-                  event
-                    .smoking(
-                      'farmersdelight:beef_patty',
-                      'farmersdelight:minced_beef'
-                    )
-                    .id('inconvenient:smoking_beef_patty');
-                },
+                recipe: () => {},
                 children: [
                   {
                     id: 'minced_beef',

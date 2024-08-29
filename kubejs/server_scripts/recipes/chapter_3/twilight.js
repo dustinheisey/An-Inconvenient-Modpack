@@ -49,11 +49,7 @@ onEvent('recipes', event => {
       {id: 'regalium', recipe: () => {}, children: []},
       {
         id: 'processed_soulstone',
-        recipe: () => {
-          event
-            .smelting('malum:raw_soulstone', 'malum:processed_soulstone')
-            .id('inconvenient:smelting_processed_soulstone');
-        },
+        recipe: () => {},
         children: [
           {
             id: 'raw_soulstone',

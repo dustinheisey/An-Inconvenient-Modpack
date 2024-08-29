@@ -4,6 +4,7 @@
 /lightspeed-cache
 /XaeroWaypoints
 /XaeroWorldMap
+/xaero
 .DS_Store
 lightspeed-chache/**/*
 options.txt

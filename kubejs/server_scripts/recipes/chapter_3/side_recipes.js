@@ -440,6 +440,36 @@ onEvent('recipes', event => {
     },
 
     {
+      id: 'bread',
+      recipe: () => {
+        [
+          'rankine:bread_from_millet',
+          'rankine:bread_from_rye',
+          'rankine:bread_from_rice',
+          'rankine:bread_from_oats',
+          'rankine:bread_from_barley',
+          'rankine:bread_from_sorghum',
+          'rankine:bread_from_rice',
+          'rankine:bread_campfire_cooking',
+          'charcoal_pit:cooking_recipes/corn_bread_smoking',
+          'charcoal_pit:cooking_recipes/bread_smoking',
+          'bloodmagic:alchemytable/bread',
+          'charcoal_pit:cooking_recipes/corn_bread',
+          'charcoal_pit:cooking_recipes/bread',
+          'farmersdelight:bread_from_smelting',
+          'create:campfire_cooking/bread',
+          'charcoal_pit:cooking_recipes/corn_bread_campfire',
+          'create:smelting/bread',
+          'charcoal_pit:cooking_recipes/corn_bread',
+          'charcoal_pit:cooking_recipes/bread',
+          'farmersdelight:bread_from_smelting',
+          'farmersdelight:bread_from_smoking',
+          'minecraft:bread',
+          'charcoal_pit:cooking_recipes/bread_campfire',
+        ].forEach(id => event.remove({id: id}));
+      },
+    },
+    {
       id: 'demon_crusher',
       recipe: () => {
         event

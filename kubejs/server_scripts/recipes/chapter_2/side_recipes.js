@@ -1078,6 +1078,37 @@ onEvent('recipes', event => {
       },
     },
     {
+      id: 'tea',
+      recipe: () => {
+        event
+          .campfireCooking(
+            'farmersrespite:yellow_tea_leaves',
+            'farmersrespite:green_tea_leaves'
+          )
+          .id('inconvenient:campfire_yellow_tea_leaves');
+        event
+          .campfireCooking(
+            'farmersrespite:black_tea_leaves',
+            'farmersrespite:yellow_tea_leaves'
+          )
+          .id('inconvenient:campfire_black_tea_leaves');
+
+        event
+          .smoking(
+            'farmersrespite:yellow_tea_leaves',
+            'farmersrespite:green_tea_leaves'
+          )
+          .id('inconvenient:smoking_yellow_tea_leaves');
+
+        event
+          .smoking(
+            'farmersrespite:black_tea_leaves',
+            'farmersrespite:yellow_tea_leaves'
+          )
+          .id('inconvenient:smoking_black_tea_leaves');
+      },
+    },
+    {
       id: 'casts',
       recipe: () => {
         [

@@ -241,6 +241,50 @@ onEvent('recipes', event => {
       },
     },
     {
+      id: 'wood_changes',
+      recipe: () => {
+        [
+          'blue_skies:lunar_stick',
+          'blue_skies:dusk_stick',
+          'blue_skies:maple_stick',
+        ].forEach(id => event.remove({id: id}));
+        event.forEachRecipe(
+          {
+            type: 'minecraft:crafting_shapeless',
+            output: '#minecraft:planks',
+            input: '#minecraft:logs',
+          },
+          recipe => {
+            event.remove({
+              type: 'minecraft:crafting_shapeless',
+              output: recipe.outputItems[0].id,
+            });
+
+            event.shapeless(`2x ${recipe.outputItems[0].id}`, [
+              recipe.inputItems[0],
+            ]);
+          }
+        );
+
+        event.forEachRecipe(
+          {
+            output: 'minecraft:stick',
+            input: '#minecraft:planks',
+          },
+          recipe => {
+            event.remove({
+              input: '#minecraft:planks',
+              output: recipe.outputItems[0].id,
+            });
+
+            event.shaped(`2x ${recipe.outputItems[0].id}`, ['a', 'a'], {
+              a: recipe.inputItems[0],
+            });
+          }
+        );
+      },
+    },
+    {
       // ? float around using stamina
       id: 'paraglider',
     },

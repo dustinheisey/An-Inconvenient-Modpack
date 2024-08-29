@@ -273,6 +273,25 @@ onEvent('recipes', event => {
             time: 54,
           })
           .id('inconvenient:melting_uranium_dust');
+
+        event
+          .blasting('chemlib:nickel_dust', 'rankine:nickel_ingot')
+          .id('inconvenient:blasting_nickel_dust');
+        event
+          .blasting('chemlib:platinum_dust', 'rankine:platinum_ingot')
+          .id('inconvenient:blasting_platinum_dust');
+        event
+          .blasting('chemlib:uranium_dust', 'rankine:uranium_ingot')
+          .id('inconvenient:blasting_uranium_uranium');
+        event
+          .blasting('create:crushed_raw_platinum', 'rankine:platinum_ingot')
+          .id('inconvenient:blasting_crushed_raw_platinum');
+        event
+          .blasting('chemlib:uranium_dust', 'rankine:uranium_ingot')
+          .id('inconvenient:blasting_uranium_dust');
+        event
+          .blasting('chemlib:nickel_dust', 'rankine:nickel_ingot')
+          .id('inconvenient:blasting_nickel_dust');
       },
     },
     {

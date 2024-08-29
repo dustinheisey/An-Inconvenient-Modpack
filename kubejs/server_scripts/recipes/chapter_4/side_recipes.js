@@ -237,6 +237,60 @@ onEvent('recipes', event => {
           },
         },
         {
+          id: 'netherite_tools',
+          recipe: () => {
+            [
+              'minecraft:netherite_sword_smithing',
+              'minecraft:netherite_shovel_smithing',
+              'minecraft:netherite_pickaxe_smithing',
+              'minecraft:netherite_axe_smithing',
+              'minecraft:netherite_hoe_smithing',
+            ].forEach(id => event.remove({id: id}));
+            event
+              .smithing(
+                'minecraft:netherite_axe',
+                'minecraft:netherite_ingot',
+                'malum:soul_stained_steel_axe'
+              )
+              .id('inconvenient:smithing_netherite_axe');
+            event
+              .smithing(
+                'minecraft:netherite_sword',
+                'minecraft:netherite_ingot',
+                'malum:soul_stained_steel_sword'
+              )
+              .id('inconvenient:smithing_netherite_sword');
+            event
+              .smithing(
+                'farmersdelight:netherite_knife',
+                'minecraft:netherite_ingot',
+                'malum:soul_stained_steel_knife'
+              )
+              .id('inconvenient:smithing_netherite_knife');
+            event
+              .smithing(
+                'minecraft:netherite_shovel',
+                'minecraft:netherite_ingot',
+                'malum:soul_stained_steel_shovel'
+              )
+              .id('inconvenient:smithing_netherite_shovel');
+            event
+              .smithing(
+                'minecraft:netherite_pickaxe',
+                'minecraft:netherite_ingot',
+                'twilightforest:fiery_pickaxe'
+              )
+              .id('inconvenient:smithing_netherite_pickaxe');
+            event
+              .smithing(
+                'minecraft:netherite_hoe',
+                'minecraft:netherite_ingot',
+                'malum:soul_stained_steel_hoe'
+              )
+              .id('inconvenient:smithing_netherite_hoe');
+          },
+        },
+        {
           id: 'bricks',
           recipe: () => {
             [
@@ -413,6 +467,55 @@ onEvent('recipes', event => {
             time: 54,
           })
           .id('inconvenient:melting_crushed_raw_gold');
+
+        // chapter 1,2,3 ores
+        event
+          .blasting('chemlib:iron_dust', 'minecraft:iron_ingot')
+          .id('inconvenient:blasting_iron_dust');
+        event
+          .blasting('chemlib:copper_dust', 'minecraft:copper_ingot')
+          .id('inconvenient:blasting_copper_dust');
+        event
+          .blasting('chemlib:tin_dust', 'rankine:tin_ingot')
+          .id('inconvenient:blasting_tin_dust');
+        event
+          .blasting('chemlib:silver_dust', 'rankine:silver_ingot')
+          .id('inconvenient:blasting_silver_dust');
+        event
+          .blasting('chemlib:lead_dust', 'rankine:lead_ingot')
+          .id('inconvenient:blasting_lead_lead');
+        event
+          .blasting('create:crushed_raw_iron', 'minecraft:iron_ingot')
+          .id('inconvenient:blasting_crushed_raw_iron');
+        event
+          .blasting('create:crushed_raw_copper', 'minecraft:copper_ingot')
+          .id('inconvenient:blasting_crushed_raw_copper');
+        event
+          .blasting('create:crushed_raw_silver', 'rankine:silver_ingot')
+          .id('inconvenient:blasting_crushed_raw_silver');
+        event
+          .blasting('create:crushed_raw_tin', 'rankine:tin_ingot')
+          .id('inconvenient:blasting_crushed_raw_tin');
+        event
+          .blasting('create:crushed_raw_lead', 'rankine:lead_ingot')
+          .id('inconvenient:blasting_crushed_raw_lead');
+
+        // chapter 4 ores
+        event
+          .blasting('chemlib:aluminum_dust', 'rankine:aluminum_ingot')
+          .id('inconvenient:blasting_aluminum_dust');
+        event
+          .blasting('chemlib:gold_dust', 'minecraft:gold_ingot')
+          .id('inconvenient:blasting_gold_dust');
+        event
+          .blasting('create:crushed_raw_gold', 'minecraft:gold_ingot')
+          .id('inconvenient:blasting_crushed_raw_gold');
+        event
+          .blasting('create:crushed_raw_zinc', 'rankine:zinc_ingot')
+          .id('inconvenient:blasting_crushed_raw_zinc');
+        event
+          .blasting('create:crushed_raw_aluminum', 'rankine:aluminum_ingot')
+          .id('inconvenient:blasting_crushed_raw_aluminum');
       },
     },
     {
