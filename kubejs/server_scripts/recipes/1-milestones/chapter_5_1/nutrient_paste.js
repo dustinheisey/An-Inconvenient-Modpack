@@ -1087,3 +1087,22 @@ onEvent('recipes', event => {
     ],
   });
 });
+
+onEvent('server.datapack.high_priority', event => {
+  [
+    'apple',
+    'beetroot',
+    'glow_berries',
+    'melon_slice',
+    'potato',
+    'sugar_cane',
+    'sweet_berries',
+  ].forEach(id =>
+    event.addJson(`immersiveengineering:recipes/fermenter/${id}.json`, {})
+  );
+
+  event.addJson(
+    'farmersdelight:recipes/integration/immersiveengineering/fermenter/tomato',
+    {}
+  );
+});
