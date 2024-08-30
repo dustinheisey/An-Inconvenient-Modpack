@@ -129,6 +129,7 @@ onEvent('recipes', event => {
     })
     .id('inconvenient:block_conversion_livingrock');
 
+  ['hem:coppariterecipe'].forEach(id => event.remove({id: id}));
   event
     .custom({
       type: 'create:mixing',

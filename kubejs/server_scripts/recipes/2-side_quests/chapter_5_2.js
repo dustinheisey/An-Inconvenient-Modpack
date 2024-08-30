@@ -170,6 +170,101 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'coins',
+      recipe: () => {
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'kubejs:tin_coin'},
+            pattern: [
+              '  aaaaa  ',
+              ' aaaaaaa ',
+              'aaaaaaaaa',
+              'aaaaaaaaa',
+              'aaaaaaaaa',
+              'aaaaaaaaa',
+              'aaaaaaaaa',
+              ' aaaaaaa ',
+              '  aaaaa  ',
+            ],
+            key: {
+              a: `kubejs:copper_coin`,
+            },
+          })
+          .id('inconvenient:mechanical_tin_coin');
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'kubejs:iron_coin'},
+            pattern: [
+              '  aaaaa  ',
+              ' aaaaaaa ',
+              'aaaaaaaaa',
+              'aaaaaaaaa',
+              'aaaaaaaaa',
+              'aaaaaaaaa',
+              'aaaaaaaaa',
+              ' aaaaaaa ',
+              '  aaaaa  ',
+            ],
+            key: {
+              a: `kubejs:tin_coin`,
+            },
+          })
+          .id('inconvenient:mechanical_iron_coin');
+      },
+    },
+    {
+      id: 'crushing_heads',
+      recipe: () => {
+        [
+          'rankine:iron_tier_crushing_head',
+          'rankine:diamond_tier_crushing_head',
+          'rankine:netherite_tier_crushing_head',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'rankine:diamond_tier_crushing_head'},
+            pattern: [' a ', 'aba', 'cdc'],
+            key: {
+              a: 'rankine:titanium_alloy_ingot',
+              b: 'create:precision_mechanism',
+              c: 'minecraft:piston',
+              d: 'rankine:titanium_alloy_block',
+            },
+          })
+          .id('inconvenient:mechanical_diamond_tier_crushing_head');
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'rankine:netherite_tier_crushing_head'},
+            pattern: [' a ', 'aba', 'cdc'],
+            key: {
+              a: 'rankine:nitinol_ingot',
+              b: 'create:precision_mechanism',
+              c: 'minecraft:piston',
+              d: 'rankine:nitinol_block',
+            },
+          })
+          .id('inconvenient:mechanical_netherite_tier_crushing_head');
+
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'rankine:iron_tier_crushing_head'},
+            pattern: [' a ', 'aba', 'cdc'],
+            key: {
+              a: 'rankine:steel_ingot',
+              b: 'create:precision_mechanism',
+              c: 'minecraft:piston',
+              d: 'rankine:steel_block',
+            },
+          })
+          .id('inconvenient:mechanical_iron_tier_crushing_head');
+      },
+    },
+    {
       id: 'demon_crusher',
       recipe: () => {
         // 5.2
@@ -223,6 +318,14 @@ onEvent('recipes', event => {
           'tconstruct:smeltery/casting/metal/platinum/plate_gold_cast',
           'tconstruct:smeltery/casting/metal/platinum/plate_sand_cast',
         ].forEach(id => event.remove({id: id}));
+
+        event
+          .custom({
+            type: 'create:pressing',
+            results: [{item: 'chemlib:titanium_plate'}],
+            ingredients: [{item: 'rankine:titanium_ingot'}],
+          })
+          .id('inconvenient:pressing_titanium_plate');
       },
     },
     {
@@ -281,6 +384,9 @@ onEvent('recipes', event => {
         {
           id: 'blast_furnace',
           recipe: () => {
+            ['hem:rosecopper', 'hem:rosesmelt_2'].forEach(id =>
+              event.remove({id: id})
+            );
             event
               .blasting('chemlib:nickel_dust', 'rankine:nickel_ingot')
               .id('inconvenient:blasting_nickel_dust');
@@ -1243,6 +1349,53 @@ onEvent('recipes', event => {
                 energy: 51200,
               })
               .id('inconvenient:arc_cloggrum_ingot');
+          },
+        },
+        {
+          id: 'crushing_wheel',
+          recipe: () => {
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:pentlandite'}],
+                results: [
+                  {count: 2, item: 'chemlib:nickel_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_pentlandite');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:uraninite'}],
+                results: [
+                  {count: 2, item: 'chemlib:uranium_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_uraninite');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:ilmenite'}],
+                results: [
+                  {count: 2, item: 'chemlib:titanium_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_ilmenite');
+
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:silicon'}],
+                results: [{item: 'chemlib:silicon_dust'}],
+              })
+              .id('inconvenient:crushing_wheel_silicon');
           },
         },
       ],

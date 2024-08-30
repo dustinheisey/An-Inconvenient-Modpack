@@ -11,6 +11,9 @@ onEvent('recipes', event => {
         ])
         .id('inconvenient:shapeless_yellow_canvas_sign');
     },
+    shaped: () => {
+      ['farmersdelight:pie_crust'].forEach(id => event.remove({id: id}));
+    },
     cooking_pot: () => {
       [
         'undergarden:veiled_stew',

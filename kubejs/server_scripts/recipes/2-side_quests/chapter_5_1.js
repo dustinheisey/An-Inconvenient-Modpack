@@ -7,7 +7,7 @@ onEvent('recipes', event => {
         {
           id: 'gateways',
           recipe: () => {
-            vent
+            event
               .custom({
                 type: 'occultism:ritual',
                 ritual_type: 'occultism:craft',
@@ -77,7 +77,6 @@ onEvent('recipes', event => {
                 'croptopia:knife',
               ])
               .id('inconvenient:shapeless_croptopia_guide');
-
             // industrial foregoing manual
             event
               .shapeless(
@@ -88,9 +87,7 @@ onEvent('recipes', event => {
                 ['minecraft:book', 'industrialforegoing:dryrubber']
               )
               .id('inconvenient:shapeless_industrial_foregoing');
-
             // big book of bees
-
             // lexica botanica
           },
         },
@@ -218,6 +215,166 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'bakery',
+      recipe: () => {
+        [
+          'createaddition:compacting/cake_base',
+          'rankine:mixing/pancake_batter_mixing',
+          'create_central_kitchen:compacting/cookie',
+          'minecraft:cookie',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'create:sequenced_assembly',
+            ingredient: {item: 'rankine:pancake'},
+            transitionalItem: {item: 'rankine:pancake'},
+            sequence: [
+              {
+                type: 'create:deploying',
+                ingredients: [
+                  {item: 'rankine:pancake'},
+                  {item: 'rankine:pancake'},
+                ],
+                results: [{item: 'rankine:pancake'}],
+              },
+              {
+                type: 'create:deploying',
+                ingredients: [
+                  {item: 'rankine:pancake'},
+                  {item: 'rankine:pancake'},
+                ],
+                results: [{item: 'rankine:pancake'}],
+              },
+              {
+                type: 'create:deploying',
+                ingredients: [
+                  {item: 'rankine:pancake'},
+                  {item: 'rankine:pancake'},
+                ],
+                results: [{item: 'rankine:pancake'}],
+              },
+              {
+                type: 'create:deploying',
+                ingredients: [
+                  {item: 'rankine:pancake'},
+                  {item: 'rankine:pancake'},
+                ],
+                results: [{item: 'rankine:pancake'}],
+              },
+            ],
+            results: [{item: 'rankine:pancake_breakfast'}],
+            loops: 1,
+          })
+          .id('inconvenient:sequenced_assembly_pancake_breakfast');
+        [
+          'bucketlib:create/dough',
+          'create:crafting/appliances/dough',
+          'create_central_kitchen:crafting/dough_4',
+          'create_central_kitchen:crafting/dough_3',
+          'create_central_kitchen:crafting/dough_2',
+          'create_central_kitchen:crafting/dough_1',
+          'create:splashing/wheat_flour',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'create:mixing',
+            results: [{count: 8, item: 'minecraft:cookie'}],
+            ingredients: [
+              {item: 'create:dough'},
+              {item: 'minecraft:cocoa_beans'},
+            ],
+            heatRequirement: 'heated',
+          })
+          .id('inconvenient:mixing_cookie');
+        event
+          .custom({
+            type: 'create:mixing',
+            results: [{item: 'rankine:maple_syrup'}],
+            ingredients: [
+              {fluid: 'rankine:maple_sap', amount: 1000},
+              {item: 'minecraft:glass_bottle'},
+            ],
+            heatRequirement: 'heated',
+          })
+          .id('inconvenient:mixing_maple_syrup');
+        event
+          .custom({
+            type: 'create:mixing',
+            results: [{item: 'rankine:pancake_batter'}],
+            ingredients: [
+              {fluid: 'minecraft:milk', amount: 1000},
+              {item: 'minecraft:sugar'},
+              {tag: 'forge:flour'},
+              {item: 'minecraft:egg'},
+              {tag: 'forge:salt'},
+            ],
+          })
+          .id('inconvenient:mixing_pancake_batter');
+        event
+          .custom({
+            type: 'create:compacting',
+            ingredients: [
+              {tag: 'forge:eggs'},
+              {item: 'minecraft:sugar', count: 2},
+              {item: 'create:dough'},
+              {fluid: 'minecraft:milk', amount: 1000},
+            ],
+            results: [{item: 'createaddition:cake_base'}],
+          })
+          .id('inconvenient:compacting_cake_base');
+      },
+    },
+    {
+      id: 'mechanical_farming',
+      recipe: () => {
+        [
+          'create:crafting/kinetics/mechanical_harvester',
+          'create:crafting/kinetics/mechanical_plough',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'create:mechanical_plough'},
+            pattern: ['aaa', 'bbb', ' c '],
+            key: {
+              a: 'naturesaura:sky_ingot',
+              b: 'create:andesite_alloy',
+              c: 'create:andesite_casing',
+            },
+          })
+          .id('inconvenient:mechanical_mechanical_plough');
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'create:mechanical_harvester'},
+            pattern: ['bab', 'bab', ' c '],
+            key: {
+              a: 'naturesaura:sky_ingot',
+              b: 'create:andesite_alloy',
+              c: 'create:andesite_casing',
+            },
+          })
+          .id('inconvenient:mechanical_mechanical_harvester');
+      },
+    },
+    {
+      id: 'mana_tablet',
+      recipe: () => {
+        ['botania:mana_tablet'].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'botania:mana_tablet'},
+            pattern: ['aaa', 'aba', 'aaa'],
+            key: {
+              a: 'botania:livingrock',
+              b: 'botania:mana_pearl',
+            },
+          })
+          .id('inconvenient:mechanical_mana_tablet');
+      },
+    },
+    {
       id: 'petals',
       recipe: () => {
         [
@@ -229,7 +386,6 @@ onEvent('recipes', event => {
           'botania:petal_apothecary/spectrolus',
           'botania:elven_trade/pixie_dust',
         ].forEach(id => event.remove({id: id}));
-
         event
           .custom({
             type: 'botania:petal_apothecary',
@@ -299,65 +455,6 @@ onEvent('recipes', event => {
       },
     },
   ]);
-
-  // event.remove({
-  //   output: [
-  //     'naturesaura:calling_spirit',
-  //     'botania:diluted_pool',
-  //     'botania:mana_pylon',
-  //     'tconstruct:earth_cake',
-  //     'tconstruct:sky_cake',
-  //     'tconstruct:blood_cake',
-  //   ],
-  //   type: 'minecraft:crafting_shaped',
-  // });
-
-  event
-    .shaped('tconstruct:earth_cake', ['aaa', 'bcb', 'ddd'], {
-      a: 'tconstruct:earth_slime_bucket',
-      b: 'minecraft:glowstone_dust',
-      c: 'minecraft:egg',
-      d: 'minecraft:grass',
-    })
-    .id('inconvenient:shaped_earth_cake');
-  event
-    .shaped('tconstruct:sky_cake', ['aaa', 'bcb', 'ddd'], {
-      a: 'tconstruct:sky_slime_bucket',
-      b: 'minecraft:glowstone_dust',
-      c: 'minecraft:egg',
-      d: 'hem:blueleaf_grass',
-    })
-    .id('inconvenient:shaped_sky_cake');
-  event
-    .shaped('tconstruct:blood_cake', ['aaa', 'bcb', 'ddd'], {
-      a: 'tconstruct:blood_bucket',
-      b: 'tconstruct:blood_slime_ball',
-      c: 'minecraft:egg',
-      d: 'blue_skies:cherry_grass',
-    })
-    .id('inconvenient:shaped_blood_cake');
-
-  event
-    .shaped('naturesaura:tainted_gold_block', ['aaa', 'aaa', 'aaa'], {
-      a: 'naturesaura:tainted_gold',
-    })
-    .id('inconvenient:shaped_tainted_gold_block');
-
-  event
-    .custom({
-      type: 'bloodmagic:altar',
-      output: {
-        item: 'bloodmagic:archmagebloodorb',
-      },
-      input: {
-        item: 'bloodmagic:dungeon_metal',
-      },
-      altarSyphon: 10000000,
-      upgradeLevel: 4,
-      consumptionRate: 1500,
-      drainRate: 1500,
-    })
-    .id('inconvenient:altar_archmagebloodorb');
 });
 
 onEvent('server.datapack.high_priority', event => {

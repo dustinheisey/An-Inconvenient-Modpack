@@ -80,6 +80,20 @@ onEvent('recipes', event => {
     })
     .id('inconvenient:elven_trade_hemp_seed');
 
+  ['botania:alchemy_catalyst'].forEach(id => event.remove({id: id}));
+  event
+    .custom({
+      type: 'create:mechanical_crafting',
+      result: {item: 'botania:alchemy_catalyst'},
+      pattern: ['aba', 'cdc', 'aba'],
+      key: {
+        a: 'botania:livingrock',
+        b: 'rankine:rose_gold_ingot',
+        c: 'minecraft:brewing_stand',
+        d: 'minecraft:honeycomb',
+      },
+    })
+    .id('inconvenient:mechanical_alchemy_catalyst');
   event
     .smoking('minecraft:popped_chorus_fruit', 'minecraft:chorus_fruit')
     .id('inconvenient:smoking_popped_chorus_fruit');

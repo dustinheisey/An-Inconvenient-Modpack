@@ -305,6 +305,9 @@ onEvent('recipes', event => {
     })
     .id('inconvenient:application_shadow_steel_casing');
 
+  ['hem:bronzesmelt', 'hem:bronzesmelt_2'].forEach(id =>
+    event.remove({id: id})
+  );
   event
     .custom({
       type: 'create:mixing',

@@ -42,7 +42,6 @@ onEvent('recipes', event => {
             count: 1,
           },
           fluidLevelsConsumed: 1000,
-          global: true,
         })
         .id('inconvenient:cauldron_zeal_lighter');
     },

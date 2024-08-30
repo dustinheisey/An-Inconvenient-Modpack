@@ -358,6 +358,63 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'crushing_head',
+      recipe: () => {
+        ['rankine:stone_tier_crushing_head'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'rankine:stone_tier_crushing_head'},
+            pattern: [' a ', 'aba', 'cdc'],
+            key: {
+              a: 'rankine:brass_block',
+              b: 'create:electron_tube',
+              c: 'minecraft:piston',
+              d: 'rankine:brass_block',
+            },
+          })
+          .id('inconvenient:mechanical_stone_tier_crushing_head');
+      },
+    },
+    {
+      id: 'mechanical_drill',
+      recipe: () => {
+        ['create:crafting/kinetics/mechanical_drill'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .custom({
+            type: 'create:mechanical_crafting',
+            result: {item: 'create:mechanical_drill'},
+            pattern: [' b ', 'bab', ' c '],
+            key: {
+              a: 'cataclysm:ignitium_ingot',
+              b: 'create:andesite_alloy',
+              c: 'create:andesite_casing',
+            },
+          })
+          .id('inconvenient:mechanical_mechanical_drill');
+      },
+    },
+    {
+      id: 'blaze_rod',
+      recipe: () => {
+        [
+          'tconstruct:smeltery/casting/blaze/rod_sand_cast',
+          'tconstruct:smeltery/casting/blaze/rod_gold_cast',
+        ].forEach(id => event.remove({id: id}));
+        event
+          .custom({
+            type: 'create:compacting',
+            ingredients: [{item: 'minecraft:blaze_powder', count: 3}],
+            results: [{item: 'minecraft:blaze_rod'}],
+          })
+          .id('inconvenient:compacting_blaze_rod');
+      },
+    },
+    {
       id: 'plates',
       recipe: () => {
         [
@@ -382,6 +439,57 @@ onEvent('recipes', event => {
           'tconstruct:smeltery/casting/metal/tin/plate_gold_cast',
           'tconstruct:smeltery/casting/metal/tin/plate_sand_cast',
         ].forEach(id => event.remove({id: id}));
+
+        event
+          .custom({
+            type: 'create:pressing',
+            results: [{item: 'chemlib:sodium_plate'}],
+            ingredients: [{item: 'salt:salt'}],
+          })
+          .id('inconvenient:pressing_sodium_plate');
+        event
+          .custom({
+            type: 'create:pressing',
+            results: [{item: 'chemlib:silver_plate'}],
+            ingredients: [{item: 'rankine:silver_ingot'}],
+          })
+          .id('inconvenient:pressing_silver_plate');
+        event
+          .custom({
+            type: 'create:pressing',
+            results: [{item: 'chemlib:lead_plate'}],
+            ingredients: [{item: 'rankine:lead_ingot'}],
+          })
+          .id('inconvenient:pressing_lead_plate');
+        event
+          .custom({
+            type: 'create:pressing',
+            results: [{item: 'chemlib:aluminum_plate'}],
+            ingredients: [{item: 'rankine:aluminum_ingot'}],
+          })
+          .id('inconvenient:pressing_aluminum_plate');
+
+        event
+          .custom({
+            type: 'create:pressing',
+            results: [{item: 'chemlib:gold_plate'}],
+            ingredients: [{item: 'minecraft:gold_ingot'}],
+          })
+          .id('inconvenient:pressing_gold_plate');
+        event
+          .custom({
+            type: 'create:pressing',
+            results: [{item: 'chemlib:cobalt_plate'}],
+            ingredients: [{item: 'rankine:cobalt_ingot'}],
+          })
+          .id('inconvenient:pressing_cobalt_plate');
+        event
+          .custom({
+            type: 'create:pressing',
+            results: [{item: 'chemlib:tin_plate'}],
+            ingredients: [{item: 'rankine:tin_ingot'}],
+          })
+          .id('inconvenient:pressing_tin_plate');
       },
     },
     {
@@ -517,6 +625,449 @@ onEvent('recipes', event => {
           .blasting('create:crushed_raw_aluminum', 'rankine:aluminum_ingot')
           .id('inconvenient:blasting_crushed_raw_aluminum');
       },
+      children: [
+        {
+          id: 'splashing',
+          recipe: () => {
+            event
+              .custom({
+                type: 'create:splashing',
+                ingredients: [{item: 'create:crushed_raw_zinc'}],
+                results: [{item: 'rankine:zinc_nugget', count: 9}],
+              })
+              .id('inconvenient:splashing_zinc_nugget');
+          },
+        },
+        {
+          id: 'crushing_wheel',
+          recipe: () => {
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:galena'}],
+                results: [
+                  {count: 2, item: 'chemlib:lead_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_galena');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:cassiterite'}],
+                results: [
+                  {count: 2, item: 'chemlib:tin_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_cassiterite');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:acanthite'}],
+                results: [
+                  {count: 2, item: 'chemlib:silver_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_acanthite');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:malachite'}],
+                results: [
+                  {count: 2, item: 'chemlib:copper_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_malachite');
+
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'minecraft:ancient_debris'}],
+                results: [
+                  {count: 2, item: 'minecraft:netherite_scrap'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_ancient_debris');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:bauxite'}],
+                results: [
+                  {count: 2, item: 'chemlib:aluminum_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_bauxite');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:hematite'}],
+                results: [
+                  {count: 2, item: 'chemlib:iron_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_hematite');
+
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:horizonite_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:raw_horizonite'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_horizonite_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everdawn_moonstone_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:moonstone_shard'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everdawn_moonstone_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everdawn_charoite_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:raw_charoite'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everdawn_charoite_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everdawn_aquite_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:raw_aquite'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everdawn_aquite_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everdawn_pyrope_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:pyrope_gem'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everdawn_pyrope_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everdawn_diopside_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:diopside_gem'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everdawn_diopside_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:ventium_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:raw_ventium'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_ventium_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:falsite_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:raw_falsite'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_falsite_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everbright_moonstone_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:moonstone_shard'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everbright_moonstone_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everbright_charoite_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:raw_charoite'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everbright_charoite_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everbright_aquite_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:raw_aquite'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everbright_aquite_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everbright_pyrope_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:pyrope_gem'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everbright_pyrope_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'blue_skies:everbright_diopside_ore'}],
+                results: [
+                  {count: 2, item: 'blue_skies:diopside_gem'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_everbright_diopside_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'occultism:iesnium_ore'}],
+                results: [
+                  {count: 2, item: 'occultism:iesnium_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_iesnium_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:nether_quartz_ore'}],
+                results: [
+                  {count: 2, item: 'minecraft:quartz'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_nether_quartz_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:plumbago_ore'}],
+                results: [
+                  {count: 2, item: 'rankine:graphite'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_plumbago_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:native_sulfur_ore'}],
+                results: [
+                  {count: 6, item: 'rankine:sulfur_nugget'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_native_sulfur_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:cinnabar_ore'}],
+                results: [
+                  {item: 'minecraft:redstone', count: 12},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_cinnabar_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:shiverstone_regalium_ore'}],
+                results: [
+                  {count: 2, item: 'undergarden:regalium_crystal'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_shiverstone_regalium_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:depthrock_regalium_ore'}],
+                results: [
+                  {count: 2, item: 'undergarden:regalium_crystal'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_depthrock_regalium_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:depthrock_utherium_ore'}],
+                results: [
+                  {count: 2, item: 'undergarden:utherium_crystal'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_depthrock_utherium_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:tremblecrust_utherium_ore'}],
+                results: [
+                  {count: 2, item: 'undergarden:utherium_crystal'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_tremblecrust_utherium_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:shiverstone_utherium_ore'}],
+                results: [
+                  {count: 2, item: 'undergarden:utherium_crystal'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_shiverstone_utherium_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:shiverstone_froststeel_ore'}],
+                results: [
+                  {count: 2, item: 'undergarden:raw_froststeel'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_shiverstone_froststeel_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:shiverstone_cloggrum_ore'}],
+                results: [
+                  {count: 2, item: 'undergarden:raw_cloggrum'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_shiverstone_cloggrum_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:depthrock_cloggrum_ore'}],
+                results: [
+                  {count: 2, item: 'undergarden:raw_cloggrum'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_depthrock_cloggrum_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:shiverstone_coal_ore'}],
+                results: [
+                  {count: 3, item: 'minecraft:coal'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_shiverstone_coal_ore');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'undergarden:depthrock_coal_ore'}],
+                results: [
+                  {count: 3, item: 'minecraft:coal'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_depthrock_coal_ore');
+
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:cobaltite'}],
+                results: [
+                  {count: 2, item: 'chemlib:cobalt_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_cobaltite');
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'rankine:sulfur'}],
+                results: [{item: 'chemlib:sulfur_dust'}],
+              })
+              .id('inconvenient:crushing_wheel_sulfur');
+            event
+              .custom({
+                results: [{item: 'bloodmagic:coalsand'}],
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'minecraft:coal'}],
+              })
+              .id('inconvenient:crushing_wheel_coal');
+
+            event
+              .custom({
+                results: [{count: 9, item: 'bloodmagic:coalsand'}],
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'minecraft:coal_block'}],
+              })
+              .id('inconvenient:crushing_wheel_coal_block');
+          },
+        },
+      ],
     },
     {
       id: 'foundry',
@@ -1317,6 +1868,7 @@ onEvent('recipes', event => {
           })
           .id('inconvenient:ritual_warp_stone');
 
+        ['waystones:warp_dust'].forEach(id => event.remove({id: id}));
         event
           .custom({
             results: [{count: 4, item: 'waystones:warp_dust'}],
@@ -2390,6 +2942,12 @@ onEvent('recipes', event => {
     })
     .id('inconvenient:tree_ritual_token_fear');
 
+  [
+    'rankine:vulcanized_rubber_from_tellurium',
+    'rankine:vulcanized_rubber_from_sodium_sulfide',
+    'rankine:vulcanized_rubber_from_sodium_sulfide',
+    'rankine:vulcanized_rubber_from_sulfur',
+  ].forEach(id => event.remove({id: id}));
   event
     .custom({
       type: 'create:mixing',

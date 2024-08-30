@@ -438,7 +438,78 @@ onEvent('recipes', event => {
         },
       ],
     },
+    {
+      id: 'seats',
+      recipe: () => {
+        ['create:crafting/kinetics/yellow_seat_from_other_seat'].forEach(id =>
+          event.remove({id: id})
+        );
+        event
+          .shapeless('create:yellow_seat', [
+            '#create:seats',
+            'minecraft:yellow_dye',
+          ])
+          .id('inconvenient:shapeless_yellow_seat');
+      },
+    },
+    {
+      id: 'millstone',
+      recipe: () => {
+        event
+          .custom({
+            type: 'create:milling',
+            ingredients: [{item: 'minecraft:bone'}],
+            results: [{item: '3x minecraft:bone_meal'}],
+            processingTime: 50,
+          })
+          .id('inconvenient:milling_bone_meal');
+        event
+          .custom({
+            type: 'create:milling',
+            ingredients: [{item: 'undergarden:ditchbulb'}],
+            results: [
+              {
+                item: 'undergarden:ditchbulb_paste',
+              },
+            ],
+            processingTime: 50,
+          })
+          .id('inconvenient:milling_ditchbulb_paste');
+        event
+          .custom({
+            type: 'create:milling',
+            ingredients: [{item: 'minecraft:blaze_rod'}],
+            results: [
+              {
+                item: 'minecraft:blaze_powder',
+              },
+            ],
+            processingTime: 50,
+          })
+          .id('inconvenient:milling_blaze_powder');
+        event
+          .custom({
+            type: 'create:milling',
+            ingredients: [{item: 'minecraft:prismarine'}],
+            results: [
+              {
+                item: 'charcoal_pit:prismarine_dust',
+              },
+            ],
+            processingTime: 50,
+          })
+          .id('inconvenient:milling_prismarine_dust');
 
+        event
+          .custom({
+            type: 'create:milling',
+            ingredients: [{item: 'blue_skies:spider_webbing'}],
+            results: [{item: '3x minecraft:string'}],
+            processingTime: 50,
+          })
+          .id('inconvenient:milling_string');
+      },
+    },
     {
       id: 'bread',
       recipe: () => {
@@ -824,6 +895,7 @@ onEvent('recipes', event => {
           })
           .id('inconvenient:casting_basin_utherium_block');
       },
+      children: [],
     },
     {
       id: 'fiery_tools',

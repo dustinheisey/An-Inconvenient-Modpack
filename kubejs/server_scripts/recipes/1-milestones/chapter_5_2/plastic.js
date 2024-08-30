@@ -2,6 +2,22 @@ onEvent('recipes', event => {
   ['extendedcrafting:ender_ingot', 'inconvenient:arc_ender_ingot'].forEach(id =>
     event.remove({id: id})
   );
+  ['immersiveengineering:crafting/sample_drill'].forEach(id =>
+    event.remove({id: id})
+  );
+  event
+    .custom({
+      type: 'create:mechanical_crafting',
+      result: {item: 'immersiveengineering:sample_drill'},
+      pattern: ['aba', 'aba', 'cdc'],
+      key: {
+        a: 'immersiveengineering:steel_scaffolding_standard',
+        b: 'immersiveengineering:steel_fence',
+        c: 'immersiveengineering:light_engineering',
+        d: 'create:precision_mechanism',
+      },
+    })
+    .id('inconvenient:mechanical_sample_drill');
   event
     .custom({
       type: 'tconstruct:casting_table',

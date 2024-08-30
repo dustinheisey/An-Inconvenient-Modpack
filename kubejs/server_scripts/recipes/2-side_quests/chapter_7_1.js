@@ -280,6 +280,24 @@ onEvent('recipes', event => {
           .blasting('create:crushed_raw_osmium', 'rankine:osmium_ingot')
           .id('inconvenient:blasting_crushed_raw_osmium');
       },
+      children: [
+        {
+          id: 'crushing_wheel',
+          recipe: () => {
+            event
+              .custom({
+                type: 'create:crushing',
+                processingTime: 250,
+                ingredients: [{item: 'minecraft:raw_gold'}],
+                results: [
+                  {count: 2, item: 'chemlib:gold_dust'},
+                  {item: 'create:experience_nugget', chance: 0.5},
+                ],
+              })
+              .id('inconvenient:crushing_wheel_raw_gold');
+          },
+        },
+      ],
     },
   ]);
 
