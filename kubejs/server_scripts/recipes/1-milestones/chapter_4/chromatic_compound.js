@@ -452,7 +452,7 @@ onEvent('recipes', event => {
                           event
                             .custom({
                               type: 'rankine:air_distillation',
-                              dimensions: ['nether'],
+                              dimensions: ['minecraft:the_nether'],
                               outputs: [
                                 {
                                   item: 'rankine:carbon_dioxide_gas_block',

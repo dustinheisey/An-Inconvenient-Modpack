@@ -51,15 +51,6 @@ onEvent('recipes', event => {
               [
                 'rankine:foraging/black_sand_foraging',
                 'rankine:compat/create/crimsite_crushing',
-                'rankine:crushing/antitaenite_ore_crushing',
-                'rankine:crushing/banded_iron_formation_crushing',
-                'rankine:crushing/black_sandstone_crushing',
-                'rankine:crushing/chalcopyrite_block_crushing',
-                'rankine:crushing/ferric_dripstone_block_crushing',
-                'rankine:crushing/interspinifex_ore_crushing',
-                'rankine:crushing/kamacite_ore_crushing',
-                'rankine:crushing/taenite_ore_crushing',
-                'rankine:crushing/tetrataenite_ore_crushing',
                 'charcoal_pit:blooming_recipes/iron_ore',
                 'charcoal_pit:blooming_recipes/iron_raw',
               ].forEach(id => event.remove({id: id}));
@@ -189,15 +180,6 @@ onEvent('recipes', event => {
                                         id: 'kaolinite',
                                         recipe: () => {
                                           [
-                                            'rankine:crushing/gray_granite_crushing',
-                                            'rankine:crushing/kaolin_crushing',
-                                            'rankine:crushing/mudstone_crushing',
-                                            'rankine:crushing/phosphorite_crushing',
-                                            'rankine:crushing/rose_marble_crushing',
-                                            'rankine:crushing/shale_crushing',
-                                            'rankine:crushing/sylvinite_crushing',
-                                            'rankine:crushing/bauxite_ore_crushing',
-                                            'rankine:crushing/granite_crushing',
                                             'rankine:sluicing/laterite_sluicing',
                                           ].forEach(id =>
                                             event.remove({id: id})
@@ -232,14 +214,6 @@ onEvent('recipes', event => {
                                       },
                                       {
                                         id: 'sand',
-                                        recipe: () => {
-                                          [
-                                            'rankine:crushing/end_stone_crushing',
-                                            'rankine:crushing/white_sandstone_crushing',
-                                          ].forEach(id =>
-                                            event.remove({id: id})
-                                          );
-                                        },
                                       },
                                     ],
                                   },
@@ -291,7 +265,6 @@ onEvent('recipes', event => {
                             recipe: () => {
                               [
                                 'rankine:compat/create/scoria_crushing',
-                                'rankine:crushing/scoria_crushing',
                                 'rankine:beehive_oven/quicklime_from_limestone_beehive_oven_cooking',
                               ].forEach(id => event.remove({id: id}));
                               event
@@ -370,12 +343,6 @@ onEvent('recipes', event => {
                                       [
                                         'biomancy:clay_ball_from_stone_powder',
                                         'rankine:compat/create/limestone_crushing',
-                                        'rankine:crushing/chalk_crushing',
-                                        'rankine:crushing/limestone_crushing',
-                                        'rankine:crushing/marlstone_crushing',
-                                        'rankine:crushing/siltstone_crushing',
-                                        'rankine:crushing/slate_crushing',
-                                        'rankine:crushing/white_marble_crushing',
                                         'tconstruct:tools/severing/terracube_clay',
                                       ].forEach(id => event.remove({id: id}));
                                     },
@@ -535,6 +502,11 @@ onEvent('recipes', event => {
                                                     .id(
                                                       'inconvenient:shapeless_plant_fibers'
                                                     );
+
+                                                  event.replaceInput(
+                                                    'rankine:plant_fiber',
+                                                    'paragon_textiles:plant_fibers'
+                                                  );
                                                 },
                                                 children: [
                                                   {
@@ -577,19 +549,7 @@ onEvent('recipes', event => {
                                                               'inconvenient:shapeless_flint'
                                                             );
                                                         },
-                                                        recipe: () => {
-                                                          [
-                                                            'rankine:crushing/black_marble_crushing',
-                                                            'rankine:crushing/blackstone_crushing',
-                                                            'rankine:crushing/cobblestone_crushing',
-                                                            'rankine:crushing/gilded_blackstone_crushing',
-                                                            'rankine:crushing/graywacke_crushing',
-                                                          ].forEach(id =>
-                                                            event.remove({
-                                                              id: id,
-                                                            })
-                                                          );
-                                                        },
+                                                        recipe: () => {},
                                                         children: [
                                                           {
                                                             id: 'flint_shovel',
@@ -704,26 +664,12 @@ onEvent('recipes', event => {
                               amount: 1,
                             })
                             .id('inconvenient:orekiln_tin_ingot');
-
-                          event
-                            .custom({
-                              type: 'rankine:beehive_oven',
-                              input: {item: 'rankine:cassiterite_block'},
-                              result: 'rankine:tin_block',
-                              minCookTime: 2400,
-                              maxCookTime: 4800,
-                            })
-                            .id('inconvenient:beehive_oven_tin_block');
                         },
                         children: [
                           {
                             id: 'cassiterite',
                             recipe: () => {
                               [
-                                'rankine:crushing/cassiterite_ore_crushing',
-                                'rankine:crushing/bismuthinite_ore_crushing',
-                                'rankine:crushing/petalite_ore_crushing',
-                                'rankine:crushing/wolframite_ore_crushing',
                                 'mekanism:processing/tin/raw_storage_blocks/from_raw',
                                 'mekanism:processing/tin/ingot/from_raw_blasting',
                               ].forEach(id => event.remove({id: id}));
@@ -827,13 +773,9 @@ onEvent('recipes', event => {
                           {
                             id: 'malachite',
                             recipe: () => {
-                              [
-                                'rankine:crushing/malachite_ore_crushing',
-                                'rankine:crushing/chalcocite_ore_crushing',
-                                'rankine:crushing/rankine_copper_ore_crushing',
-                                'rankine:crushing/rankine_gold_ore_crushing',
-                                'rankine:green_dye_from_malachite',
-                              ].forEach(id => event.remove({id: id}));
+                              ['rankine:green_dye_from_malachite'].forEach(id =>
+                                event.remove({id: id})
+                              );
 
                               event
                                 .custom({
@@ -880,8 +822,6 @@ onEvent('recipes', event => {
                                     id: 'stick',
                                     recipe: () => {
                                       [
-                                        'rankine:crushing/leaves_crushing',
-                                        'rankine:crushing/sapling_crushing',
                                         'rankine:foraging/badlands_foraging',
                                         'rankine:foraging/desert_foraging',
                                         'rankine:foraging/podzol_foraging',
@@ -1372,36 +1312,6 @@ onEvent('recipes', event => {
                                       {
                                         id: 'plagioclase_feldspar',
                                         recipe: () => {
-                                          [
-                                            'rankine:crushing/stone_crushing',
-                                            'rankine:crushing/anorthosite_crushing',
-                                            'rankine:crushing/baddeleyite_ore_crushing',
-                                            'rankine:crushing/basaltic_tuff_crushing',
-                                            'rankine:crushing/coltan_ore_crushing',
-                                            'rankine:crushing/comendite_crushing',
-                                            'rankine:crushing/crying_obsidian_crushing',
-                                            'rankine:crushing/desert_sandstone_crushing',
-                                            'rankine:crushing/diorite_crushing',
-                                            'rankine:crushing/episyenite_crushing',
-                                            'rankine:crushing/gabbro_crushing',
-                                            'rankine:crushing/gneiss_crushing',
-                                            'rankine:crushing/granodiorite_crushing',
-                                            'rankine:crushing/hornblende_andesite_crushing',
-                                            'rankine:crushing/ilmenite_ore_crushing',
-                                            'rankine:crushing/komatiite_crushing',
-                                            'rankine:crushing/phyllite_crushing',
-                                            'rankine:crushing/rhyolite_crushing',
-                                            'rankine:crushing/ringwoodine_crushing',
-                                            'rankine:crushing/sandstone_crushing',
-                                            'rankine:crushing/snowflake_obsidian_crushing',
-                                            'rankine:crushing/tholeiitic_basalt_crushing',
-                                            'rankine:crushing/troctolite_crushing',
-                                            'rankine:crushing/tuff_crushing',
-                                            'rankine:crushing/wadsleyone_crushing',
-                                          ].forEach(id =>
-                                            event.remove({id: id})
-                                          );
-
                                           event
                                             .custom({
                                               type: 'rankine:crushing',
@@ -1412,10 +1322,16 @@ onEvent('recipes', event => {
                                                 {item: 'minecraft:cobblestone'},
                                               ],
                                               outputs: [
-                                                {weight: 80, remove: false},
+                                                {weight: 50, remove: false},
                                                 {
                                                   item: 'rankine:plagioclase_feldspar',
                                                   weight: 40,
+                                                  remove: false,
+                                                  tier: 'minecraft:iron',
+                                                },
+                                                {
+                                                  item: 'rankine:orthoclase_feldspar',
+                                                  weight: 10,
                                                   remove: false,
                                                   tier: 'minecraft:iron',
                                                 },
@@ -1483,14 +1399,6 @@ onEvent('recipes', event => {
                                 children: [
                                   {
                                     id: 'bone',
-                                    recipe: () => {
-                                      [
-                                        'rankine:crushing/netherrack_crushing',
-                                        'rankine:crushing/soul_sandstone_crushing',
-                                        'rankine:foraging/soul_sand_foraging',
-                                        'rankine:foraging/soul_soil_foraging',
-                                      ].forEach(id => event.remove({id: id}));
-                                    },
                                   },
                                 ],
                               },

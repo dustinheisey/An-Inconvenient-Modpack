@@ -215,6 +215,14 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'bumblezone_crushing',
+      recipe: () => {
+        event.remove({type: 'rankine:crushing'});
+
+        setCrushingRecipes(event, {});
+      },
+    },
+    {
       id: 'bakery',
       recipe: () => {
         [

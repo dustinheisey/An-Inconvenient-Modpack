@@ -286,6 +286,53 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'everbright_crushing',
+      recipe: () => {
+        event.remove({type: 'rankine:crushing'});
+        setCrushingRecipes(event, {
+          'blue_skies:turquoise_cobblestone': [
+            'blue_skies:turquoise_stone',
+            'blue_skies:taratite',
+            'blue_skies:rimestone',
+          ],
+          'rankine:light_gravel': ['blue_skies:turquoise_cobblestone'],
+          'blue_skies:midnight_sand': ['blue_skies:midnight_sandstone'],
+          'blue_skies:crystal_sand': ['blue_skies:crystal_sandstone'],
+        });
+      },
+    },
+    {
+      id: 'crying_obsidian',
+      recipe: () => {
+        event
+          .custom({
+            type: 'rankine:rock_generator',
+            genType: 'volcanic',
+            input1: {item: 'minecraft:obsidian'},
+            result: {
+              block: 'minecraft:crying_obsidian',
+            },
+          })
+          .id('inconvenient:volcanic_crying_obsidian');
+      },
+    },
+    {
+      id: 'cactus',
+      recipe: () => {
+        event
+          .custom({
+            type: 'rankine:sluicing',
+            input: {item: 'rankine:desert_sand'},
+            outputs: [
+              {item: `minecraft:sand`, weight: 99},
+              {item: 'minecraft:cactus', weight: 1},
+            ],
+            tool: {item: 'rankine:wooden_gold_pan'},
+          })
+          .id('inconvenient:sluicing_desert_sand');
+      },
+    },
+    {
       id: 'bricks',
       recipe: () => {
         overrideBricksRecipes('chapter_2', event, [
@@ -1545,6 +1592,85 @@ onEvent('recipes', event => {
           })
           .id('inconvenient:casting_basin_ventium_block');
       },
+      children: [
+        {
+          id: 'crushing',
+          recipe: () => {
+            event
+              .custom({
+                input: {item: 'blue_skies:everbright_diopside_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'blue_skies:diopside_gem',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'blue_skies:diopside_gem',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_everbright_diopside_ore');
+            event
+              .custom({
+                input: {item: 'blue_skies:everbright_aquite_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'blue_skies:raw_aquite',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'blue_skies:raw_aquite',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_everbright_aquite_ore');
+            event
+              .custom({
+                input: {item: 'blue_skies:everbright_charoite_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'blue_skies:raw_charoite',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'blue_skies:raw_charoite',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_everbright_charoite_ore');
+            event
+              .custom({
+                input: {item: 'blue_skies:ventium_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'blue_skies:raw_ventium',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'blue_skies:raw_ventium',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_ventium_ore');
+          },
+        },
+      ],
     },
   ]);
 

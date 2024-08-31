@@ -1,16 +1,6 @@
 onEvent('recipes', event => {
   setBalanceRecipes({
-    shapeless: () => {
-      ['farmersdelight:yellow_canvas_sign'].forEach(id =>
-        event.remove({id: id})
-      );
-      event
-        .shapeless('farmersdelight:yellow_canvas_sign', [
-          '#farmersdelight:canvas_signs',
-          'minecraft:yellow_dye',
-        ])
-        .id('inconvenient:shapeless_yellow_canvas_sign');
-    },
+    shapeless: () => {},
     shaped: () => {
       ['farmersdelight:pie_crust'].forEach(id => event.remove({id: id}));
     },

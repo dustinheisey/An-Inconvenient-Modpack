@@ -90,6 +90,210 @@ onEvent('recipes', event => {
     },
 
     {
+      id: 'overworld_crushing',
+      recipe: () => {
+        event.remove({type: 'rankine:crushing'});
+
+        setCrushingRecipes(event, {
+          'minecraft:gravel': ['minecraft:cobblestone'],
+          'minecraft:sand': [
+            'rankine:limestone',
+            'minecraft:sandstone',
+            'rankine:breccia',
+            'rankine:siltstone',
+            'minecraft:gravel',
+          ],
+          'minecraft:red_sand': [
+            'minecraft:red_sandstone',
+            'rankine:mudstone',
+            'rankine:arkose',
+          ],
+          'rankine:black_sand': [
+            'rankine:black_sandstone',
+            'rankine:shale',
+            'rankine:graywacke',
+            'rankine:dark_gravel',
+          ],
+          'rankine:white_sand': [
+            'rankine:dolostone',
+            'rankine:white_sandstone',
+            'rankine:chalk',
+            'rankine:marlstone',
+            'rankine:light_gravel',
+          ],
+          'rankine:desert_sand': [
+            'rankine:desert_sandstone',
+            'rankine:itacolumite',
+          ],
+          'minecraft:clay_ball': ['rankine:silt'],
+          'rankine:silt': [
+            'minecraft:sand',
+            'minecraft:red_sand',
+            'minecraft:soul_sand',
+            'rankine:black_sand',
+            'rankine:white_sand',
+            'rankine:desert_sand',
+            'blue_skies:midnight_sand',
+            'blue_skies:crystal_sand',
+          ],
+          'rankine:skarn': [
+            'rankine:black_marble',
+            'rankine:gray_marble',
+            'rankine:white_marble',
+            'rankine:rose_marble',
+            'rankine:slate',
+            'rankine:phyllite',
+            'rankine:mica_schist',
+            'rankine:blueschist',
+            'rankine:greenschist',
+            'rankine:gneiss',
+            'rankine:quartzite',
+            'rankine:soapstone',
+            'rankine:serpentinite',
+            'rankine:mariposite',
+            'rankine:eclogite',
+          ],
+          'minecraft:obsidian': [
+            'minecraft:crying_obsidian',
+            'rankine:snowflake_obsidian',
+            'rankine:blood_obsidian',
+            'rankine:pumice',
+            'rankine:scoria',
+            'minecraft:tuff',
+            'rankine:andesitic_tuff',
+            'rankine:basaltic_tuff',
+            'rankine:rhyolitic_tuff',
+            'rankine:kimberlitic_tuff',
+            'rankine:komatiitic_tuff',
+          ],
+          'minecraft:cobblestone': [
+            'minecraft:blackstone',
+            'minecraft:stone',
+            'minecraft:granite',
+            'minecraft:diorite',
+            'rankine:pegmatite',
+            'rankine:gray_granite',
+            'rankine:granodiorite',
+            'rankine:shonkinite',
+            'rankine:norite',
+            'rankine:red_porphyry',
+            'rankine:diabase',
+            'rankine:kimberlite',
+            'rankine:sommanite',
+          ],
+          'minecraft:cobbled_deepslate': ['minecraft:deepslate'],
+          'minecraft:basalt': [
+            'minecraft:andesite',
+            'minecraft:netherrack',
+            'rankine:rhyolite',
+            'rankine:comendite',
+            'rankine:black_dacite',
+            'rankine:red_dacite',
+            'rankine:pyrocenite',
+            'rankine:dunite',
+            'rankine:harzburgite',
+            'rankine:lherzolite',
+            'rankine:wehrlite',
+            'rankine:hornblende_andesite',
+            'rankine:anorthosite',
+            'rankine:troctolite',
+            'rankine:grabbro',
+            'rankine:tholeiitic_basalt',
+            'rankine:komatiite',
+            'rankine:purple_porphyry',
+          ],
+        });
+      },
+    },
+
+    {
+      id: 'cob',
+      recipe: () => {
+        event
+          .custom({
+            type: 'rankine:mixing',
+            mixTime: 100,
+            matScale: 1,
+            ingredientTotal: 3,
+            fluidInput: {
+              fluid: 'minecraft:water',
+              amount: 50,
+            },
+            inputs: [
+              {
+                tag: 'minecraft:dirt',
+                min: 0.4,
+                max: 0.6,
+              },
+              {
+                tag: 'minecraft:sand',
+                min: 0.4,
+                max: 0.6,
+              },
+              {
+                id: 'paragon_textiles:plant_fibers',
+                min: 0.05,
+                max: 0.25,
+              },
+            ],
+            result: {item: 'rankine:cob'},
+          })
+          .id('inconvenient:mixing_barrel_cob');
+        event
+          .custom({
+            type: 'rankine:mixing',
+            mixTime: 100,
+            matScale: 1,
+            ingredientTotal: 3,
+            fluidInput: {
+              fluid: 'minecraft:water',
+              amount: 50,
+            },
+            inputs: [
+              {
+                tag: 'minecraft:sand',
+                min: 0.6,
+                max: 0.75,
+              },
+              {
+                id: 'rankine:fire_clay_ball',
+                min: 0.05,
+                max: 0.2,
+              },
+              {
+                id: 'paragon_textiles:plant_fibers',
+                min: 0.2,
+                max: 0.5,
+              },
+            ],
+            result: {item: 'rankine:refined_cob'},
+          })
+          .id('inconvenient:mixing_barrel_refined_cob');
+      },
+    },
+    {
+      id: 'stick_block',
+      recipe: () => {
+        event
+          .shaped('rankine:stick_block', ['aaa', 'aaa', 'aaa'], {
+            a: '#forge:rods/wooden',
+          })
+          .id('inconvenient:shaped_stick_block');
+      },
+    },
+    {
+      id: 'hardness_tester',
+      recipe: () => {
+        event
+          .shaped('rankine:hardness_tester', ['  a', ' b ', 'c  '], {
+            a: '#forge:stone',
+            b: '#forge:rods/wooden',
+            c: 'minecraft:flint',
+          })
+          .id('inconvenient:shaped_hardness_tester');
+      },
+    },
+    {
       id: 'bricks',
       recipe: () => {
         [
@@ -424,8 +628,6 @@ onEvent('recipes', event => {
               recipe: () => {
                 [
                   'rankine:silver_ingot_from_native_ore_smelting',
-                  'rankine:crushing/native_arsenic_ore_crushing',
-                  'rankine:crushing/native_silver_ore_crushing',
                   'occultism:blasting/silver_ingot_from_raw',
                   'occultism:smelting/silver_ingot_from_raw',
                 ].forEach(id => event.remove({id: id}));
@@ -437,23 +639,12 @@ onEvent('recipes', event => {
                     amount: 1,
                   })
                   .id('inconvenient:orekiln_silver_ingot');
-
-                event
-                  .custom({
-                    type: 'rankine:beehive_oven',
-                    input: {item: 'rankine:acanthite_block'},
-                    result: 'rankine:silver_block',
-                    minCookTime: 2400,
-                    maxCookTime: 4800,
-                  })
-                  .id('inconvenient:beehive_oven_silver_block');
               },
               children: [
                 {
                   id: 'acanthite',
                   recipe: () => {
                     [
-                      'rankine:crushing/acanthite_ore_crushing',
                       'immersiveengineering:crafting/raw_silver_to_raw_block_silver',
                     ].forEach(id => event.remove({id: id}));
                   },
@@ -486,27 +677,12 @@ onEvent('recipes', event => {
                     amount: 1,
                   })
                   .id('inconvenient:orekiln_lead_ingot');
-
-                event
-                  .custom({
-                    type: 'rankine:beehive_oven',
-                    input: {item: 'rankine:galena_block'},
-                    result: 'rankine:lead_block',
-                    minCookTime: 2400,
-                    maxCookTime: 4800,
-                  })
-                  .id('inconvenient:beehive_oven_lead_block');
               },
               children: [
                 {
                   id: 'galena',
                   recipe: () => {
                     [
-                      'rankine:crushing/galena_ore_crushing',
-                      'rankine:crushing/cobaltite_ore_crushing',
-                      'rankine:crushing/cryolite_ore_crushing',
-                      'rankine:crushing/greenockite_ore_crushing',
-                      'rankine:crushing/stibnite_ore_crushing',
                       'mekanism:processing/lead/raw_storage_blocks/from_raw',
                       'immersiveengineering:crafting/raw_lead_to_raw_block_lead',
                     ].forEach(id => event.remove({id: id}));
@@ -547,12 +723,6 @@ onEvent('recipes', event => {
         },
         {
           id: 'amethyst_shard',
-          recipe: () => {
-            [
-              'rankine:crushing/hematite_ore_crushing',
-              'rankine:crushing/pyrite_ore_crushing',
-            ].forEach(id => event.remove({id: id}));
-          },
         },
         {
           id: 'graphite',
@@ -560,14 +730,6 @@ onEvent('recipes', event => {
             [
               'rankine:carbon_from_graphite',
               'rankine:graphite_electrode',
-              'rankine:crushing/deepslate_crushing',
-              'rankine:crushing/enstatite_chondrite_crushing',
-              'rankine:crushing/frozen_meteorite_crushing',
-              'rankine:crushing/gray_marble_crushing',
-              'rankine:crushing/greenschist_crushing',
-              'rankine:crushing/meteorite_crushing',
-              'rankine:crushing/mica_schist_crushing',
-              'rankine:crushing/plumbago_ore_crushing',
               'rankine:beehive_oven/silicon_carbide_block_beehive_oven_cooking',
             ].forEach(id => event.remove({id: id}));
             event

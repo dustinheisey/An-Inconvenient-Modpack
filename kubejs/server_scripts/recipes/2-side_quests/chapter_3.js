@@ -439,17 +439,84 @@ onEvent('recipes', event => {
       ],
     },
     {
-      id: 'seats',
+      id: 'undergarden_crushing',
       recipe: () => {
-        ['create:crafting/kinetics/yellow_seat_from_other_seat'].forEach(id =>
-          event.remove({id: id})
-        );
+        event.remove({type: 'rankine:crushing'});
+
+        setCrushingRecipes(event, {
+          'undergarden:sediment': [
+            'undergarden:depthrock',
+            'undergarden:shiverstone',
+            'undergarden:tremblecrust',
+          ],
+          'rankine:silt': ['undergarden:sediment'],
+        });
+      },
+    },
+    {
+      id: 'everdawn_crushing',
+      recipe: () => {
+        event.remove({type: 'rankine:crushing'});
+        setCrushingRecipes(event, {
+          'blue_skies:lunar_cobblestone': [
+            'blue_skies:lunar_stone',
+            'blue_skies:umber',
+            'blue_skies:cinderstone',
+          ],
+          'rankine:dark_gravel': ['blue_skies:lunar_cobblestone'],
+        });
+      },
+    },
+    {
+      id: 'twilight_crushing',
+      recipe: () => {
+        event.remove({type: 'rankine:crushing'});
+        setCrushingRecipes(event, {
+          'minecraft:cobblestone': [
+            'twilightforest:mazestone',
+
+            'twilightforest:deadrock',
+          ],
+          'rankine:blue_ice': ['twilightforest:aurora_block'],
+        });
+      },
+    },
+    {
+      id: 'everdawn_seeds',
+      recipe: () => {
         event
-          .shapeless('create:yellow_seat', [
-            '#create:seats',
-            'minecraft:yellow_dye',
-          ])
-          .id('inconvenient:shapeless_yellow_seat');
+          .custom({
+            type: 'rankine:sluicing',
+            input: {item: 'blue_skies:lunar_grass_block'},
+            outputs: [
+              {item: `blue_skies:lunar_dirt`, weight: 95},
+              {item: 'hexerei:sage_seed', weight: 1},
+              {item: 'blue_skies:fiery_bean_seeds', weight: 1},
+              {item: 'blue_skies:scalefruit_seeds', weight: 1},
+              {item: 'hexerei:mandrake_root', weight: 1},
+              {item: 'minecraft:cocoa_beans', weight: 1},
+            ],
+            tool: {item: 'rankine:steel_gold_pan'},
+          })
+          .id('inconvenient:sluicing_lunar_grass_block');
+      },
+    },
+    {
+      id: 'undergarden_seeds',
+      recipe: () => {
+        event
+          .custom({
+            type: 'rankine:sluicing',
+            input: {item: 'undergarden:deepturf_block'},
+            outputs: [
+              {item: `undergarden:deepsoil`, weight: 97},
+              {item: 'undergarden:gloomgourd_seeds', weight: 1},
+              {item: 'undergarden:underbeans', weight: 1},
+              {item: 'minecraft:sugar_cane', weight: 1},
+            ],
+            tool: {item: 'rankine:steel_gold_pan'},
+          })
+          .id('inconvenient:sluicing_deepturf_block');
       },
     },
     {
@@ -895,7 +962,301 @@ onEvent('recipes', event => {
           })
           .id('inconvenient:casting_basin_utherium_block');
       },
-      children: [],
+      children: [
+        {
+          id: 'crushing',
+          recipe: () => {
+            event
+              .custom({
+                input: {item: 'rankine:hematite_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'rankine:hematite',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'rankine:hematite',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_hematite_ore');
+            event
+              .custom({
+                input: {item: 'rankine:lazurite_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'minecraft:lapis_lazuli',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                  {
+                    item: 'minecraft:lapis_lazuli',
+                    count: 2,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_lazurite_ore');
+            event
+              .custom({
+                input: {item: 'rankine:cinnabar_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'minecraft:redstone',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'minecraft:redstone',
+                    tier: 'minecraft:netherite',
+                    count: 3,
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_cinnabar_ore');
+            event
+              .custom({
+                input: {item: 'blue_skies:everdawn_moonstone_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'blue_skies:moonstone_shard',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'blue_skies:moonstone_shard',
+                    count: 2,
+                    tier: 'minecraft:diamond',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_everdawn_moonstone_ore');
+            event
+              .custom({
+                input: {item: 'blue_skies:everdawn_diopside_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'blue_skies:diopside_gem',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'blue_skies:diopside_gem',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_everdawn_diopside_ore');
+            event
+              .custom({
+                input: {item: 'blue_skies:everdawn_aquite_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'blue_skies:raw_aquite',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'blue_skies:raw_aquite',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_everdawn_aquite_ore');
+            event
+              .custom({
+                input: {item: 'blue_skies:everdawn_charoite_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'blue_skies:raw_charoite',
+                    count: 1,
+                    tier: 'minecraft:iron',
+                  },
+                  {
+                    item: 'blue_skies:raw_charoite',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_everdawn_charoite_ore');
+            event
+              .custom({
+                input: {item: 'undergarden:shiverstone_utherium_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'undergarden:utheric_shard',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                  {
+                    item: 'undergarden:utherium_crystal',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_shiverstone_utherium_ore');
+            event
+              .custom({
+                input: {item: 'undergarden:tremblecrust_utherium_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'undergarden:utheric_shard',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                  {
+                    item: 'undergarden:utherium_crystal',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_tremblecrust_utherium_ore');
+            event
+              .custom({
+                input: {item: 'undergarden:depthrock_coal_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'minecraft:coal',
+                    tier: 'minecraft:stone',
+                    count: 1,
+                  },
+                  {
+                    item: 'minecraft:coal',
+                    count: 3,
+                    tier: 'minecraft:diamond',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_depthrock_coal_ore');
+            event
+              .custom({
+                input: {item: 'undergarden:shiverstone_coal_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'minecraft:coal',
+                    tier: 'minecraft:stone',
+                    count: 1,
+                  },
+                  {
+                    item: 'minecraft:coal',
+                    count: 3,
+                    tier: 'minecraft:diamond',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_shiverstone_coal_ore');
+            event
+              .custom({
+                input: {item: 'undergarden:depthrock_cloggrum_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'undergarden:raw_cloggrum',
+                    tier: 'minecraft:iron',
+                    count: 1,
+                  },
+                  {
+                    item: 'undergarden:raw_cloggrum',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_depthrock_cloggrum_ore');
+            event
+              .custom({
+                input: {item: 'undergarden:shiverstone_cloggrum_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'undergarden:raw_cloggrum',
+                    tier: 'minecraft:iron',
+                    count: 1,
+                  },
+                  {
+                    item: 'undergarden:raw_cloggrum',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_shiverstone_cloggrum_ore');
+            event
+              .custom({
+                input: {item: 'undergarden:shiverstone_froststeel_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'undergarden:raw_froststeel',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                  {
+                    item: 'undergarden:raw_froststeel',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_shiverstone_froststeel_ore');
+            event
+              .custom({
+                input: {item: 'undergarden:depthrock_utherium_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'undergarden:utheric_shard',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                  {
+                    item: 'undergarden:utherium_crystal',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_depthrock_utherium_ore');
+            event
+              .custom({
+                input: {item: 'rankine:lazurite_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'minecraft:lapis_lazuli',
+                    count: 1,
+                    tier: 'minecraft:diamond',
+                  },
+                  {
+                    item: 'minecraft:lapis_lazuli',
+                    tier: 'minecraft:netherite',
+                    count: 2,
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_lazurite_ore');
+          },
+        },
+      ],
     },
     {
       id: 'fiery_tools',

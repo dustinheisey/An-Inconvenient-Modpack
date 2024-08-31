@@ -346,16 +346,6 @@ onEvent('recipes', event => {
                                       {
                                         id: 'gypsum',
                                         recipe: () => {
-                                          [
-                                            'rankine:crushing/dolostone_crushing',
-                                            'rankine:crushing/gypsic_dripstone_block_crushing',
-                                            'rankine:crushing/honeystone_crushing',
-                                            'rankine:crushing/nitric_dripstone_block_crushing',
-                                            'rankine:crushing/red_sandstone_crushing',
-                                          ].forEach(id =>
-                                            event.remove({id: id})
-                                          );
-
                                           event
                                             .custom({
                                               type: 'hexerei:pestle_and_mortar',
@@ -385,22 +375,6 @@ onEvent('recipes', event => {
                                         children: [
                                           {
                                             id: 'dolostone',
-                                            recipe: () => {
-                                              event
-                                                .custom({
-                                                  type: 'rankine:rock_generator',
-                                                  genType: 'sedimentary',
-                                                  input1: {
-                                                    item: 'rankine:dolomite_block',
-                                                  },
-                                                  result: {
-                                                    block: 'rankine:dolostone',
-                                                  },
-                                                })
-                                                .id(
-                                                  'inconvenient:sedimentary_dolostone'
-                                                );
-                                            },
                                             children: [
                                               {
                                                 id: 'dolomite_block',
@@ -408,22 +382,6 @@ onEvent('recipes', event => {
                                                   {
                                                     id: 'dolomite',
                                                     recipe: () => {
-                                                      [
-                                                        'rankine:crushing/boracitic_dripstone_block_crushing',
-                                                        'rankine:crushing/breccia_crushing',
-                                                        'rankine:crushing/cinnabar_ore_crushing',
-                                                        'rankine:crushing/dripstone_block_crushing',
-                                                        'rankine:crushing/eclogite_crushing',
-                                                        'rankine:crushing/halitic_dripstone_block_crushing',
-                                                        'rankine:crushing/magnesitic_dripstone_block_crushing',
-                                                        'rankine:crushing/mariposite_crushing',
-                                                        'rankine:crushing/rankine_quartz_ore_crushing',
-                                                        'rankine:crushing/skarn_crushing',
-                                                        'rankine:crushing/zirconic_dripstone_block_crushing',
-                                                      ].forEach(id =>
-                                                        event.remove({id: id})
-                                                      );
-
                                                       event
                                                         .custom({
                                                           type: 'rankine:crushing',
@@ -634,51 +592,51 @@ onEvent('recipes', event => {
                                         children: [
                                           {
                                             id: 'datura',
-                                            recipe: () => {
-                                              grasses.forEach(id => {
-                                                event
-                                                  .custom({
-                                                    type: 'rankine:sluicing',
-                                                    input: {item: id},
-                                                    outputs: [
-                                                      {
-                                                        item: 'minecraft:dirt',
-                                                        weight: 100,
-                                                      },
-                                                      {
-                                                        item: 'minecraft:sand',
-                                                        weight: 16.5,
-                                                      },
-                                                      {
-                                                        item: 'rankine:silt',
-                                                        weight: 1,
-                                                      },
-                                                      {
-                                                        item: 'rankine:compost',
-                                                        weight: 25,
-                                                      },
-                                                      {
-                                                        item: 'rankine:jute_seeds',
-                                                        weight: 1,
-                                                      },
-                                                      {
-                                                        item: 'occultism:datura_seeds',
-                                                        weight: 1,
-                                                      },
-                                                    ],
-                                                    tool: {
-                                                      item: 'rankine:wooden_gold_pan',
-                                                    },
-                                                  })
-                                                  .id(
-                                                    'inconvenient:sluicing_wooden_gold_pan'
-                                                  );
-                                              });
-                                            },
+                                            recipe: () => {},
                                             children: [
                                               {
                                                 id: 'wooden_sifter',
-                                                recipe: () => {},
+                                                recipe: () => {
+                                                  event
+                                                    .custom({
+                                                      type: 'rankine:sluicing',
+                                                      input: {
+                                                        tag: 'forge:grass_blocks',
+                                                      },
+                                                      outputs: [
+                                                        {
+                                                          item: 'minecraft:dirt',
+                                                          weight: 52,
+                                                        },
+                                                        {
+                                                          item: 'minecraft:sand',
+                                                          weight: 16,
+                                                        },
+                                                        {
+                                                          item: 'rankine:silt',
+                                                          weight: 5,
+                                                        },
+                                                        {
+                                                          item: 'rankine:compost',
+                                                          weight: 25,
+                                                        },
+                                                        {
+                                                          item: 'rankine:jute_seeds',
+                                                          weight: 1,
+                                                        },
+                                                        {
+                                                          item: 'occultism:datura_seeds',
+                                                          weight: 1,
+                                                        },
+                                                      ],
+                                                      tool: {
+                                                        item: 'rankine:wooden_gold_pan',
+                                                      },
+                                                    })
+                                                    .id(
+                                                      'inconvenient:sluicing_wooden_gold_pan'
+                                                    );
+                                                },
                                                 children: [],
                                               },
                                             ],

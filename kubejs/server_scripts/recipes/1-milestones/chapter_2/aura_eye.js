@@ -397,7 +397,7 @@ onEvent('recipes', event => {
                                   outputs: [
                                     {
                                       item: `blue_skies:turquoise_dirt`,
-                                      weight: 100,
+                                      weight: 83,
                                     },
                                     {
                                       item: 'blue_skies:winter_leaf_seeds',

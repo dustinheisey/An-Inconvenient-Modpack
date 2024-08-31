@@ -786,6 +786,8 @@ onEvent('tags.items', event => {
   });
   overrideChapters('rankine', {
     chapter_1: [
+      'rankine:orthoclase_feldspar_block',
+      'rankine:orthoclase_feldspar',
       'rankine:inner_bark',
       'rankine:chalk_bricks',
       'rankine:mossy_chalk_bricks',
@@ -2286,8 +2288,6 @@ onEvent('tags.items', event => {
       'rankine:sulfur_dioxide_gas_bottle',
     ],
     chapter_5_1: [
-      'rankine:orthoclase_feldspar_block',
-      'rankine:orthoclase_feldspar',
       'rankine:cheese',
       'rankine:aged_cheese',
       'rankine:unaged_cheese',

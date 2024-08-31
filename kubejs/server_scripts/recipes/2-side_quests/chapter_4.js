@@ -358,6 +358,19 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'nether_crushing',
+      recipe: () => {
+        event.remove({type: 'rankine:crushing'});
+
+        setCrushingRecipes(event, {
+          'minecraft:soul_sand': [
+            'rankine:soul_sandstone',
+            'rankine:honestone',
+          ],
+        });
+      },
+    },
+    {
       id: 'crushing_head',
       recipe: () => {
         ['rankine:stone_tier_crushing_head'].forEach(id =>
@@ -1887,6 +1900,22 @@ onEvent('recipes', event => {
         );
       },
       children: [],
+    },
+    {
+      id: 'nether_wart',
+      recipe: () => {
+        event
+          .custom({
+            type: 'rankine:sluicing',
+            input: {item: 'minecraft:soul_soil'},
+            outputs: [
+              {item: `minecraft:soul_sand`, weight: 99},
+              {item: 'minecraft:nether_wart', weight: 1},
+            ],
+            tool: {item: 'rankine:steel_gold_pan'},
+          })
+          .id('inconvenient:sluicing_soul_soil');
+      },
     },
     {
       id: 'chunkloaders',

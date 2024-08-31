@@ -212,6 +212,23 @@ onEvent('recipes', event => {
       ],
     },
     {
+      id: 'end_crushing',
+      recipe: () => {
+        event.remove({type: 'rankine:crushing'});
+
+        setCrushingRecipes(event, {
+          'minecraft:end_stone': [
+            'rankine:whiteschist',
+            'rankine:sommanite',
+            'rankine:ringwoodine',
+            'rankine:wadsleyone',
+            'rankine:bridgmanham',
+            'rankine:post_perovskite',
+          ],
+        });
+      },
+    },
+    {
       id: 'rituals',
       recipe: () => {
         [
@@ -295,6 +312,24 @@ onEvent('recipes', event => {
                 ],
               })
               .id('inconvenient:crushing_wheel_raw_gold');
+          },
+        },
+        {
+          id: 'crushing',
+          recipe: () => {
+            event
+              .custom({
+                input: {item: 'minecraft:gold_ore'},
+                type: 'rankine:crushing',
+                guaranteed: [
+                  {
+                    item: 'minecraft:raw_gold',
+                    count: 1,
+                    tier: 'minecraft:netherite',
+                  },
+                ],
+              })
+              .id('inconvenient:crushing_gold_ore');
           },
         },
       ],

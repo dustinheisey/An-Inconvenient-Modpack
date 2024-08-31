@@ -268,157 +268,122 @@ onEvent('recipes', event => {
                           {
                             id: 'madder_root',
                             recipe: () => {
-                              grasses.forEach(id => {
-                                event
-                                  .custom({
-                                    type: 'rankine:sluicing',
-                                    input: {item: id},
-                                    outputs: [
-                                      {
-                                        item: 'minecraft:dirt',
-                                        weight: 100,
-                                      },
-                                      {
-                                        item: 'minecraft:sand',
-                                        weight: 16.5,
-                                      },
-                                      {item: 'rankine:silt', weight: 1},
-                                      {
-                                        item: 'rankine:compost',
-                                        weight: 25,
-                                      },
-                                      {
-                                        item: 'rankine:jute_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'occultism:datura_seeds',
-                                        weight: 1,
-                                      },
-                                    ],
-                                    tool: {
-                                      item: 'rankine:wooden_gold_pan',
+                              event
+                                .custom({
+                                  type: 'rankine:sluicing',
+                                  input: {tag: 'forge:grass_blocks'},
+                                  outputs: [
+                                    {
+                                      item: 'minecraft:dirt',
+                                      weight: 50,
                                     },
-                                  })
-                                  .id('inconvenient:sluicing_wooden_gold_pan');
-
-                                event
-                                  .custom({
-                                    type: 'rankine:sluicing',
-                                    input: {item: id},
-                                    outputs: [
-                                      {
-                                        item: 'minecraft:dirt',
-                                        weight: 100,
-                                      },
-                                      {
-                                        item: 'minecraft:sand',
-                                        weight: 16.5,
-                                      },
-                                      {item: 'rankine:silt', weight: 1},
-                                      {
-                                        item: 'minecraft:beetroot_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'minecraft:potato',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'minecraft:carrot',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'minecraft:melon_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'minecraft:pumpkin_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'minecraft:wheat_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:asparagus_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:barley_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:camphor_basil_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:corn_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:jute_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:millet_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:oat_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:rice_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:rye_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'rankine:sorghum_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'paragon_textiles:flax_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'farmersdelight:cabbage_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'farmersdelight:tomato_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'farmersdelight:onion',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'occultism:datura_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'farmersrespite:coffee_berries',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'farmersrespite:tea_seeds',
-                                        weight: 1,
-                                      },
-                                      {
-                                        item: 'kubejs:madder_root',
-                                        weight: 1,
-                                      },
-                                    ],
-                                    tool: {
-                                      item: 'rankine:pewter_gold_pan',
+                                    {
+                                      item: 'minecraft:sand',
+                                      weight: 25,
                                     },
-                                  })
-                                  .id('inconvenient:sluicing_pewter_gold_pan');
-                              });
+                                    {item: 'rankine:silt', weight: 1},
+                                    {
+                                      item: 'minecraft:beetroot_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'minecraft:potato',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'minecraft:carrot',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'minecraft:melon_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'minecraft:pumpkin_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'minecraft:wheat_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:asparagus_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:barley_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:camphor_basil_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:corn_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:jute_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:millet_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:oat_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:rice_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:rye_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'rankine:sorghum_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'paragon_textiles:flax_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'farmersdelight:cabbage_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'farmersdelight:tomato_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'farmersdelight:onion',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'occultism:datura_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'farmersrespite:coffee_berries',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'farmersrespite:tea_seeds',
+                                      weight: 1,
+                                    },
+                                    {
+                                      item: 'kubejs:madder_root',
+                                      weight: 1,
+                                    },
+                                  ],
+                                  tool: {
+                                    item: 'rankine:pewter_gold_pan',
+                                  },
+                                })
+                                .id('inconvenient:sluicing_pewter_gold_pan');
                             },
                             children: [
                               {

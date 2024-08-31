@@ -681,7 +681,7 @@ onEvent('recipes', event => {
                               event
                                 .custom({
                                   type: 'rankine:air_distillation',
-                                  dimensions: ['the_bumblezone:bumblezone'],
+                                  dimensions: ['the_bumblezone:the_bumblezone'],
                                   outputs: [
                                     {
                                       item: 'rankine:carbon_dioxide_gas_block',

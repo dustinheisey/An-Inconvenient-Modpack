@@ -450,6 +450,28 @@ function overrideBricksRecipes(chapter, event, configs) {
   });
 }
 
+function setCrushingRecipes(event, stones) {
+  Object.keys(stones).forEach(output => {
+    stones[output].forEach(input => {
+      event
+        .custom({
+          type: 'rankine:crushing',
+          input: {item: input},
+          guaranteed: [
+            {
+              item: output,
+              count: 1,
+            },
+          ],
+          outputs: [{weight: 100, remove: false}],
+        })
+        .id(
+          `inconvenient:crushing_${output.split(':')[1]}_from_${input.split(':')[1]}`
+        );
+    });
+  });
+}
+
 // ? Gateways Functions
 function computeMaxWaveTime(config, size) {
   if (size === 'small') return config.type === 'boss' ? 4800 : 2400;
