@@ -6759,24 +6759,6 @@ onEvent('tags.items', event => {
   overrideChapters('thirst', {
     chapter_4: ['thirst:sand_filter'],
   });
-  // overrideChapters('za', {
-  //   chapter_1: [
-  //     'za:banana',
-  //     'za:peeled_banana',
-  //     'za:pineapple_slice',
-  //     'za:prickly_pear_food',
-  //     'za:dried_sea_lettuce',
-  //     'za:pineapple',
-  //     'za:prickly_pear',
-  //     'za:cattail',
-  //     'za:wet_sand',
-  //     'za:sand_path',
-  //     'za:stone_path',
-  //     'za:gravel_path',
-  //     'za:sea_lettuce',
-  //   ],
-  //   chapter_2: ['za:melon_on_a_stick'],
-  // });
   overrideChapters('cnb', {
     chapter_1: ['cnb:apple_slice'],
     chapter_4: [

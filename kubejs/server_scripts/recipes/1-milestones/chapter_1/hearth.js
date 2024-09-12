@@ -885,7 +885,7 @@ onEvent('recipes', event => {
       {
         id: 'leather',
         recipe: () => {
-          // TODO figure out ['minecraft:rabbit_hide', 'rankine:synthetic_leather', 'cold_sweat:hoglin_hide', 'rankine:beaver_pelt', 'totemic:buffalo_hide', 'ecofriendly:mush_skin_leather_ym', 'za:fox_hide'] leather?
+          // TODO figure out ['minecraft:rabbit_hide', 'rankine:synthetic_leather', 'cold_sweat:hoglin_hide', 'rankine:beaver_pelt', 'totemic:buffalo_hide', 'ecofriendly:mush_skin_leather_ym',] leather?
           [
             'rankine:leather_from_beaver_pelt',
             'cold_sweat:hoglin_leather',
