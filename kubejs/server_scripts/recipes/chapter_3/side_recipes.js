@@ -554,7 +554,7 @@ onEvent('recipes', event => {
           output: {
             item: 'minecraft:paper',
           },
-          dryingTimeInTicks: 1800,
+          dryingTimeInTicks: 3000,
         });
       },
       children: [

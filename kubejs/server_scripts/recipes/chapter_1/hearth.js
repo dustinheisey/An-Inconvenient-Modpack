@@ -923,7 +923,7 @@ onEvent('recipes', event => {
               type: 'hexerei:drying_rack',
               ingredients: [{item: 'kubejs:wet_tanned_hide'}],
               output: {item: 'minecraft:leather'},
-              dryingTimeInTicks: 1800,
+              dryingTimeInTicks: 3000,
             })
             .id('inconvenient:leather');
         },
@@ -957,7 +957,7 @@ onEvent('recipes', event => {
                       type: 'hexerei:drying_rack',
                       ingredients: [{item: 'kubejs:salted_hide'}],
                       output: {item: 'kubejs:dried_hide'},
-                      dryingTimeInTicks: 1800,
+                      dryingTimeInTicks: 3000,
                     })
                     .id('inconvenient:dried_hide');
                 },

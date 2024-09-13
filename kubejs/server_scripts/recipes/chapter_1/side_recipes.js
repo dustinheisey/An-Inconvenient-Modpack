@@ -184,6 +184,17 @@ onEvent('recipes', event => {
       },
     },
     {
+      id: 'jerky',
+      recipe: () => {
+        event.custom({
+          type: 'hexerei:drying_rack',
+          ingredients: [{item: 'minecraft:rotten_flesh'}],
+          output: {item: 'kubejs:rotten_jerky'},
+          dryingTimeInTicks: 5000,
+        });
+      },
+    },
+    {
       id: 'torches',
       recipe: () => {
         // ? torches don't last forever until chapter 3/4
