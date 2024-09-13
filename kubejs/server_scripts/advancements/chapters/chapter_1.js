@@ -57,8 +57,8 @@ onEvent('server.datapack.high_priority', event => {
         children: [
           {
             item: 'charcoal_pit:fire_starter',
-            title: '',
-            description: '',
+            title: 'Flicker of Hope',
+            description: 'Craft a fire starter',
           },
           {
             item: 'rankine:flint_knife',
@@ -74,8 +74,8 @@ onEvent('server.datapack.high_priority', event => {
                 children: [
                   {
                     item: 'rankine:prospecting_stick',
-                    title: '',
-                    description: '',
+                    title: 'Seek and You Shall Find',
+                    description: 'Craft a prospecting stick to find ores',
                   },
                   {
                     item: 'hexerei:dowsing_rod',
@@ -92,7 +92,7 @@ onEvent('server.datapack.high_priority', event => {
                         item: 'salt:raw_rock_salt',
                         title: 'Veins of the Earth',
                         description:
-                          'Find some rock salt underground in a dripstone cave, ocean or beach',
+                          'Find some rock salt underground in a dripstone cave, ocean, or beach',
                         children: [
                           {
                             item: 'salt:salt',
@@ -122,15 +122,15 @@ onEvent('server.datapack.high_priority', event => {
                                 children: [
                                   {
                                     item: 'minecraft:flint_and_steel',
-                                    title: '',
-                                    description: '',
+                                    title: 'Strike of Fire',
+                                    description:
+                                      'Craft flint and steel to ignite your forge',
                                   },
                                   {
                                     item: 'naturescompass:naturescompass',
                                     title: 'Biome Seeker',
                                     description:
                                       "Craft a nature's compass & use it to find a badlands",
-
                                     children: [
                                       {
                                         id: 'city',
@@ -138,7 +138,6 @@ onEvent('server.datapack.high_priority', event => {
                                         title: "Cities' Echo",
                                         description:
                                           'Collect a soul from a flesh blob in the lost city',
-
                                         children: [
                                           {
                                             parent: 'city',
@@ -151,13 +150,15 @@ onEvent('server.datapack.high_priority', event => {
                                       },
                                       {
                                         item: 'biomancy:living_flesh',
-                                        title: '',
-                                        description: '',
+                                        title: 'Pulsing Life',
+                                        description:
+                                          'Harvest living flesh from twisted creatures',
                                         children: [
                                           {
                                             item: 'farmersdelight:stuffed_pumpkin_block',
-                                            title: '',
-                                            description: '',
+                                            title: 'Hearty Harvest',
+                                            description:
+                                              'Craft a stuffed pumpkin for sustenance',
                                           },
                                         ],
                                       },
@@ -169,13 +170,14 @@ onEvent('server.datapack.high_priority', event => {
                           },
                           {
                             item: 'rankine:chalk',
-                            title: '',
-                            description: '',
+                            title: 'Nature’s Canvas',
+                            description:
+                              'Collect some chalk by crushing dead corals',
                             children: [
                               {
                                 item: 'rankine:quicklime',
-                                title: '',
-                                description: '',
+                                title: 'Lime in Time',
+                                description: 'Smelt chalk and create quicklime',
                                 children: [],
                               },
                             ],
@@ -227,7 +229,6 @@ onEvent('server.datapack.high_priority', event => {
                         item: 'minecraft:rotten_flesh',
                         title: 'Undead Harvest',
                         description: 'Gather some rotten flesh from the undead',
-
                         children: [
                           {
                             item: 'kubejs:stitched_hide',
@@ -321,13 +322,15 @@ onEvent('server.datapack.high_priority', event => {
                                 children: [
                                   {
                                     item: 'rankine:fire_clay_ball',
-                                    title: '',
-                                    description: '',
+                                    title: 'Molding Potential',
+                                    description:
+                                      'Collect fire clay for advanced crafting',
                                     children: [
                                       {
                                         item: 'kubejs:high_fire_clay_ball',
-                                        title: '',
-                                        description: '',
+                                        title: 'High Heat Potential',
+                                        description:
+                                          'Refine fire clay for high-temperature uses',
                                         children: [],
                                       },
                                     ],
@@ -400,8 +403,9 @@ onEvent('server.datapack.high_priority', event => {
                                           },
                                           {
                                             item: 'brickhopper:brick_hopper',
-                                            title: '',
-                                            description: '',
+                                            title: 'Brick Hopper',
+                                            description:
+                                              'Craft a brick hopper for item transport',
                                           },
                                           {
                                             item: 'rankine:refractory_brick',
@@ -412,8 +416,9 @@ onEvent('server.datapack.high_priority', event => {
                                             children: [
                                               {
                                                 item: 'immersiveengineering:hammer',
-                                                title: '',
-                                                description: '',
+                                                title: 'Engineer’s Tool',
+                                                description:
+                                                  'Craft a hammer to help you fire bronze ingots',
                                               },
                                               {
                                                 item: 'rankine:beehive_oven_pit',
@@ -429,8 +434,9 @@ onEvent('server.datapack.high_priority', event => {
                                                   },
                                                   {
                                                     item: 'kubejs:grog',
-                                                    title: '',
-                                                    description: '',
+                                                    title: 'Clay Concoction',
+                                                    description:
+                                                      'Crush some grog from fired porcelain',
                                                     children: [],
                                                   },
                                                 ],
@@ -439,8 +445,9 @@ onEvent('server.datapack.high_priority', event => {
                                                 icon: 'immersiveengineering:alloy_smelter',
                                                 item: 'immersiveengineering:alloybrick',
                                                 frame: 'goal',
-                                                title: '',
-                                                description: '',
+                                                title: 'Alloy Mastery',
+                                                description:
+                                                  "Craft allow kiln bricks and create an allow kiln with your engineer's hammer",
                                                 children: [
                                                   {
                                                     item: 'rankine:bronze_ingot',
@@ -466,10 +473,10 @@ onEvent('server.datapack.high_priority', event => {
                                                             children: [
                                                               {
                                                                 item: 'minecraft:cauldron',
-                                                                title: '',
-
+                                                                title:
+                                                                  'Iron Caldron',
                                                                 description:
-                                                                  'Construct a hearth and stabilize your temperature',
+                                                                  'Craft a cauldron to collect salt more easily',
                                                               },
                                                               {
                                                                 item: 'cold_sweat:hearth',
@@ -518,8 +525,10 @@ onEvent('server.datapack.high_priority', event => {
                                                             children: [
                                                               {
                                                                 item: 'kubejs:goddess_heart',
-                                                                title: '',
-                                                                description: '',
+                                                                title:
+                                                                  'Heart of the Goddess',
+                                                                description:
+                                                                  'Craft a goddess heart to awaken ancient power',
                                                                 children: [
                                                                   {
                                                                     item: 'paraglider:goddess_statue',
@@ -585,8 +594,10 @@ onEvent('server.datapack.high_priority', event => {
                                                           },
                                                           {
                                                             item: 'rankine:plagioclase_feldspar',
-                                                            title: '',
-                                                            description: '',
+                                                            title:
+                                                              'Feldspar Find',
+                                                            description:
+                                                              'Collect some plagioclase feldspar from stone',
                                                             children: [],
                                                           },
                                                         ],
