@@ -20,6 +20,7 @@ onEvent('item.registry', event => {
         'salted_hide',
         'dried_hide',
         'wet_tanned_hide',
+        'rotten_jerky',
       ],
       bricks: [
         'dry_unfired_brick',
@@ -493,5 +494,22 @@ onEvent('item.registry', event => {
       platinum_coin: ['steel_coin', 'nickel_coin', 'platinum_coin'],
       misc: ['hell_token'],
     },
+  });
+});
+
+onEvent('item.modification', event => {
+  event.modify('minecraft:ender_pearl', item => {
+    item.maxStackSize = 64;
+    item.fireResistant = true;
+  });
+
+  event.modify('kubejs:rotten_jerky', item => {
+    item.foodProperties = food => {
+      food.hunger(3);
+      food.saturation(1);
+      food.meat(true);
+      food.alwaysEdible(false);
+      food.fastToEat(false);
+    };
   });
 });

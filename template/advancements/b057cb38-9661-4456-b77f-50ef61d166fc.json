@@ -1,7 +1,43 @@
 {
+  "astikorcarts:recipes/plow": {
+    "criteria": {
+      "has_wheel": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/fill_level_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/quantify_key": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
   "modonomicon:modonomicon/root": {
     "criteria": {
       "modonomicon_present": "2024-08-15 19:37:04 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/birch_trim": {
+    "criteria": {
+      "has_planks": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/max_redstone_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "explorerscompass:explorers_compass_cracked_stone_bricks": {
+    "criteria": {
+      "has_cracked_stone_bricks": "2024-09-13 09:56:50 +0200"
     },
     "done": true
   },
@@ -11,9 +47,82 @@
     },
     "done": true
   },
-  "occultism:occultism/root": {
+  "storagedrawers:recipes/storagedrawers/illumination_upgrade": {
     "criteria": {
-      "occultism_present": "2024-08-15 19:37:04 +0200"
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "compactcrafting:recipes/compactcrafting/rescan_proxy": {
+    "criteria": {
+      "got_crafting_table": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "naturescompass:natures_compass": {
+    "criteria": {
+      "has_compass": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "compactcrafting:recipes/compactcrafting/match_proxy": {
+    "criteria": {
+      "got_redstone": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "twilightforest:alt/compat/ie_shaders": {
+    "criteria": {
+      "ie_masterwork": "2024-09-13 09:56:50 +0200",
+      "ie_uncommon": "2024-09-13 09:56:50 +0200",
+      "tf_masterwork": "2024-09-13 09:56:50 +0200",
+      "tf_uncommon": "2024-09-13 09:56:50 +0200",
+      "tf_common": "2024-09-13 09:56:50 +0200",
+      "ie_rare": "2024-09-13 09:56:50 +0200",
+      "ie_shader": "2024-09-13 09:56:50 +0200",
+      "ie_common": "2024-09-13 09:56:50 +0200",
+      "ie_twilight": "2024-09-13 09:56:50 +0200",
+      "tf_epic": "2024-09-13 09:56:50 +0200",
+      "ie_epic": "2024-09-13 09:56:50 +0200",
+      "tf_twilight": "2024-09-13 09:56:50 +0200",
+      "tf_shader": "2024-09-13 09:56:50 +0200",
+      "tf_rare": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "compactcrafting:recipes/compactcrafting/field_projector": {
+    "criteria": {
+      "got_ender_eye": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "compactcrafting:recipes/compactcrafting/projector_dish": {
+    "criteria": {
+      "got_ender_eye": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/acacia_trim": {
+    "criteria": {
+      "has_planks": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "astikorcarts:recipes/animal_cart": {
+    "criteria": {
+      "has_wheel": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/emerald_storage_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "industrialforegoing:recipes/industrialforegoing_core/dryrubber": {
+    "criteria": {
+      "has_item": "2024-09-13 09:56:50 +0200"
     },
     "done": true
   },
@@ -22,6 +131,150 @@
       "minecraft:sparse_jungle": "2024-08-15 19:35:30 +0200"
     },
     "done": false
+  },
+  "storagedrawers:recipes/storagedrawers/redstone_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "industrialforegoing:recipes/industrialforegoing_core/plastic": {
+    "criteria": {
+      "has_plastic": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/one_stack_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/crimson_trim": {
+    "criteria": {
+      "has_planks": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/oak_trim": {
+    "criteria": {
+      "has_planks": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/obsidian_storage_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "antiqueatlas:recipes/atlas": {
+    "criteria": {
+      "has_compass": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "compactcrafting:recipes/compactcrafting/base": {
+    "criteria": {
+      "got_ender_eye": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/gold_storage_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/diamond_storage_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/dark_oak_trim": {
+    "criteria": {
+      "has_planks": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/spruce_trim": {
+    "criteria": {
+      "has_planks": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/concealment_key": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/iron_storage_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/min_redstone_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/jungle_trim": {
+    "criteria": {
+      "has_planks": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/void_upgrade": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "explorerscompass:explorers_compass_cobweb": {
+    "criteria": {
+      "has_cobweb": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "astikorcarts:recipes/supply_cart": {
+    "criteria": {
+      "has_wheel": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "explorerscompass:explorers_compass": {
+    "criteria": {
+      "has_compass": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "occultism:occultism/root": {
+    "criteria": {
+      "occultism_present": "2024-08-15 19:37:04 +0200"
+    },
+    "done": true
+  },
+  "antiqueatlas:recipes/atlas_new": {
+    "criteria": {
+      "has_compass": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/drawer_key": {
+    "criteria": {
+      "has_template": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
+  },
+  "storagedrawers:recipes/storagedrawers/warped_trim": {
+    "criteria": {
+      "has_planks": "2024-09-13 09:56:50 +0200"
+    },
+    "done": true
   },
   "DataVersion": 2975
 }

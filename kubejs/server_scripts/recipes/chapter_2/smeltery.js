@@ -167,7 +167,7 @@ onEvent('recipes', event => {
                               {item: 'kubejs:unfired_seared_brick'},
                             ],
                             output: {item: 'kubejs:dry_unfired_seared_brick'},
-                            dryingTimeInTicks: 1000,
+                            dryingTimeInTicks: 3000,
                           });
                         },
                         children: [
