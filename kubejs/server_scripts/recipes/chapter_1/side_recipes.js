@@ -219,7 +219,7 @@ onEvent('recipes', event => {
                   output: {
                     item: 'farmersdelight:straw',
                   },
-                  dryingTimeInTicks: 1000,
+                  dryingTimeInTicks: 3000,
                 });
               },
               children: [],
