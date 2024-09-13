@@ -15,6 +15,7 @@
 	#What time of day does the horde event start? eg 18000 is midnight with default day length.
 	hordeStartTime = 18000
 	#Amount of days between horde spawns.
+	#Range: > 1
 	hordeSpawnDays = 10
 	#Amount of days a horde event can be randomly delayed by
 	hordeSpawnVariation = 0
@@ -32,30 +33,22 @@
 	hordeMultiplayerScaling = 0.8
 	#Do the daylight cycle (and active horde events get paused while there are no players online.).
 	pauseEventServer = true
-	#How fast do horde mobs move towards their tracked player?
-	hordeEntitySpeed = 1.0
-	#Are horde events tracked by player play time instead of world time.
-	hordeEventByPlayerTime = true
-	#How many ticks after a hordes scheduled time can it start?
-	hordeStartBuffer = 1200
-	#How many attempts should horde events make to avoid spawning mobs in light areas or outside their spawn type.
-	hordeSpawnChecks = 25
 
 [Infection]
 	#Set to false to completely disable mob infection and anything related to it.
 	enableMobInfection = false
 	#Can villagers be infected.
 	infectVillagers = false
-	#Chance for a villager to get infected, a value of 1 or higher makes it guaranteed
-	villagerInfectChance = 0.85
+	#Chance out of 100 for a villager to get infected
+	villagerInfectChance = 85
 	#Can players be infected.
 	infectPlayers = false
 	#Whether later levels of infected should slightly slow movement speed? 
 	infectSlowness = false
-	#Whether later levels of infected should deplete hunger quicker? 
+	#Whether later levels of infected should depleet hunger quicker? 
 	infectHunger = false
-	#Chance for a player to get infected, a value of 1 or higher makes it guaranteed
-	playerInfectChance = 0.75
+	#Chance out of 100 for a player to get infected
+	playerInfectChance = 75
 	#How long do each of the 4 effect phases last for before the next phase is activated?
 	ticksForEffectStage = 6000
 	#Do players who die to infection spawn a zombie?
@@ -64,9 +57,11 @@
 	infectionEntitiesAggroConversions = true
 	#What factor should the infection potion effect timer be multiplied by for each cured infection? (Resets on death, set to 1 to disable scaling)
 	effectStageTickReduction = 0.95
+	#A list of entities that can be infected, followed by the chance out of 100 to infect, then the entity to convert them to, entities can have nbt attached to them.(e.g. minecraft:villager-85-minecraft:zombie_villager{ActiveEffects:[{Id:12,Amplifier:0,Duration:10000}]}), note: players and villagers have special code accociated with them, and should not be in this list
+	customConversionList = ["minecraft:horse-65-minecraft:zombie_horse", "minecraft:piglin-75-minecraft:zombified_piglin", "minecraft:piglin_brute-35-minecraft:zombified_piglin", "minecraft:hoglin-35-minecraft:zoglin"]
 
 [Misc]
-	#Whether zombies and drowned burn in sunlight.
+	#Whether zombies and drowneds burn in sunlight.
 	zombiesBurn = true
 	#Whether skeletons and strays burn in sunlight.
 	skeletonsBurn = true
@@ -90,26 +85,16 @@
 	piglinsCureThemself = true
 	#Whether zoglins are agressive towards other undead mobs
 	zoglinsAttackUndead = false
-	#Whether illagers kill zombie mobs
-	illagersHuntZombies = true
-	#Whether zoglins are agressive towards non-undead monsters
-	zoglinsAttackMobs = true
-
-	[Misc."Zombie Players"]
-		#Whether to use zombie players as graves all the time. (Even if infection is disabled)
-		zombieGraves = false
-		#Whether to spawn drowned players when a player dies underwater instead of a zombie player. (Whether the zombie is spawned from infection or zombieGraves being true)
-		drownedPlayers = true
-		#Whether to spawn husk players when a player dies in a desert biome instead of a zombie player. (Whether the zombie is spawned from infection or zombieGraves being true)
-		huskPlayers = true
-		#Whether zombie players, drowned players and husk players should be immune to fire damage
-		zombiePlayersFireImmune = false
-		#Whether zombie players and drowned players burn in sunlight.
-		zombiePlayersBurn = false
-		#Whether zombie players, drowned players and husk players are immune to all damage from non player sources.
-		zombiePlayersOnlyHurtByPlayers = false
-		#Whether zombie players, drowned players and husk players store items dropped by the player that spawned them.
-		zombiePlayersStoreItems = true
-		#Do zombie players despawn in peaceful mode?
-		zombiePlayersDespawnPeaceful = false
+	#Whether to use zombie players as graves all the time. (Even if infection is disabled)
+	zombieGraves = false
+	#Whether to always spawn a drowned if a player dies underwater. (Even if infection or zombieGraves are disabled)
+	drownedGraves = false
+	#Whether to spawn drowned players when a player dies underwater instead of a zombie player. (Whether the zombie is spawned from infection or zombieGraves being true)
+	drownedPlayers = true
+	#Whether zombie players and drowned players should be immune to fire damage
+	zombiePlayersFireImmune = false
+	#Whether zombie players and drowned players burn in sunlight.
+	zombiePlayersBurn = false
+	#Whether zombie players and drowned players are immune to all damage from non player sources.
+	zombiePlayersOnlyHurtByPlayers = false
 
