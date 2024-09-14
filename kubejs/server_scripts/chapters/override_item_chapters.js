@@ -1378,6 +1378,7 @@ onEvent('tags.items', event => {
       'rankine:mossy_dolostone_bricks_wall',
     ],
     chapter_2: [
+      'rankine:white_marble_cobble',
       'rankine:gypsum',
       'rankine:gypsum_block',
       'rankine:compost',
@@ -1521,6 +1522,10 @@ onEvent('tags.items', event => {
       'rankine:cement_mix',
     ],
     chapter_3: [
+      'rankine:shale_cobble',
+      'rankine:slate_cobble',
+      'rankine:gray_marble_cobble',
+      'rankine:black_marble_cobble',
       'rankine:hematite_ore',
       'rankine:yellow_glazed_porcelain',
       'rankine:lime_glazed_porcelain',
@@ -1877,6 +1882,7 @@ onEvent('tags.items', event => {
       'rankine:soul_sandstone_wall',
     ],
     chapter_4: [
+      'rankine:rose_marble_cobble',
       'rankine:ultra_high_refractory_brick',
       'rankine:ultra_high_refractory_bricks',
       'rankine:ultra_high_refractory_bricks_wall',

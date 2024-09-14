@@ -15,21 +15,26 @@
 
 ## v0.6.5
 
-- [ ] set default options but don't override other people's options
-- [ ] do not override peoples shaders
-- [ ] shaders not loading or showing up correctly
+- [x] update mods
+- [x] speed buff from path is too great
+- [x] give pebbles a use
+- [x] clay mold recipe broken
+- [x] croptopia crops shouldn't be spawning
+
 - [ ] unification errors
-- [ ] speed buff from path is too great
-- [ ] fire doesn't go away when you die visually
 - [ ] prismarine shards spawning in chapter 1
-- [ ] dowsing rod doesn't work sometimes
-- [ ] give pebbles a use
-- [ ] croptopia crops shouldn't be spawning
-- [ ] clay mold recipe broken
+
+- [ ] fix template world creation menu
+- [ ] setup modpack uploader and remove mods from github repo safely
+- [ ] apply for curseforge api
+- [ ] setup server files auto creation
+- [ ] figure out what files to package in modpack
+- [ ] set default options but don't override other people's options
+- [ ] do not override peoples shaders or resourcepacks
 
 ## Backlog
 
 - [ ] gingerbread man showing in jei too early
 - [ ] forgotten knife showing in jei too early
 - [ ] bees showing in jei too early
-- [ ] new day entry
+- [ ] fire doesn't go away when you die visually
