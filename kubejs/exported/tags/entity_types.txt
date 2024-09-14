@@ -1,4 +1,4 @@
-To refresh this file, delete it and run /reload command again! Last updated: Apr 7, 2024, 5:19:57 PM
+To refresh this file, delete it and run /reload command again! Last updated: Sep 14, 2024, 9:03:55 AM
 
 #the_bumblezone:allowed_resourceful_bees_entities
 
@@ -101,17 +101,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:turtle
 - minecraft:goat
 - quark:frog?
-
-#hordes:infection_entities
-- minecraft:zombie
-- minecraft:zombie_villager
-- minecraft:husk
-- minecraft:drowned
-- minecraft:zombie_horse
-- minecraft:zombified_piglin
-- minecraft:zoglin
-- hordes:zombie_player
-- hordes:drowned_player
 
 #industrialforegoing:mob_imprisonment_tool_blacklist
 - artifacts:mimic
@@ -925,7 +914,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:vindicator
 - minecraft:illusioner
 - minecraft:witch
-- ppr:illager_hunter
 - blue_skies:summoner
 - blue_skies:alchemist
 - cataclysm:nameless_sorcerer
@@ -1054,14 +1042,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:bats
 - minecraft:bat
-
-#expandedstorage:wooden_chest_minecarts
-- minecraft:chest_minecart
-- expandedstorage:wood_chest_minecart
-- expandedstorage:pumpkin_chest_minecart
-- expandedstorage:present_minecart
-- expandedstorage:bamboo_chest_minecart
-- expandedstorage:moss_chest_minecart
 
 #undergardendelight:rotspawn
 - #undergarden:rotspawn?

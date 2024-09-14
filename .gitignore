@@ -6,7 +6,6 @@
 /XaeroWorldMap
 .DS_Store
 lightspeed-chache/**/*
-options.txt
 usercache.json
 minecraftinstance.json
 xaerominimap_entities.json
@@ -19,3 +18,12 @@ package-lock.json
 kubejs/probe
 usernamecache.json
 patchouli_data.json
+/resourcepacks
+/shaderpacks
+xaero/minimap
+xaero/world-map
+config/itlt-client.toml.bak
+config/oculus.properties
+config/xaeroworldmap-common.txt
+.curseclient
+rhino.local.properties

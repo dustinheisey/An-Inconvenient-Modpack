@@ -1,5 +1,7 @@
 # Bugs
 
+## v0.6.4
+
 - [x] put journal on spawn item
 - [x] fire starter advancement text
 - [x] jade showcase thing
@@ -11,7 +13,27 @@
 - [x] advancement text low contrast
 - [x] torch render bug
 
+## v0.6.5
+
+- [x] update mods
+- [x] speed buff from path is too great
+- [x] give pebbles a use
+- [x] clay mold recipe broken
+- [x] croptopia crops shouldn't be spawning
+- [x] stage prismarine stuff mostly to chapter 1
+- [x] fix template world creation menu
+- [x] set default options but don't override other people's options
+- [x] remove resourcepacks and shaders from export
+
+## Backlog
+
 - [ ] gingerbread man showing in jei too early
 - [ ] forgotten knife showing in jei too early
 - [ ] bees showing in jei too early
-- [ ] new day entry
+- [ ] fire doesn't go away when you die visually
+- [ ] unification errors
+
+### CI
+
+- [ ] setup modpack uploader and remove mods from github repo safely
+  - [ ] setup server files auto creation

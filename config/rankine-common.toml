@@ -123,7 +123,7 @@
 		#Set to false to disable movement speed modifiers.
 		movementModifiersEnabled = true
 		#When set to true, attempts to disable the FOV changes of walking slower on movement modifier blocks. The FOV effects setting can also be used to disable this (at 0%), and if used this variable should be set to false.
-		movementModifiersFOVReset = false
+		movementModifiersFOVReset = true
 		#Movement speed modifier for walking on Sand blocks.
 		#Range: -1.0 ~ 1.0
 		movementSand = -0.02
@@ -132,7 +132,7 @@
 		movementBricks = 0.07
 		#Movement speed modifier for walking on Grass Paths.
 		#Range: -1.0 ~ 1.0
-		movementGrassPath = 0.05
+		movementGrassPath = 0.03
 		#Movement speed modifier for walking on Roman Cooncrete.
 		#Range: -1.0 ~ 1.0
 		movementRomanConcrete = 0.15

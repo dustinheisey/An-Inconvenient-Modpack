@@ -1,4 +1,4 @@
-To refresh this file, delete it and run /reload command again! Last updated: Apr 7, 2024, 5:20:03 PM
+To refresh this file, delete it and run /reload command again! Last updated: Sep 14, 2024, 9:03:56 AM
 
 #forge:crops/tea_leaves
 - croptopia:tea_leaves
@@ -792,9 +792,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - undergarden:music_disc_relict
 - undergarden:music_disc_gloomper_anthem
 - undergarden:music_disc_gloomper_secret
-- bloodmagic:bleedingedge
-- create_connected:music_disc_elevator
-- create_connected:music_disc_interlude
 
 #forge:nuggets/tellurium
 - rankine:tellurium_nugget
@@ -1122,9 +1119,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #bloodmagic:gravels/gold
 - bloodmagic:goldgravel
-
-#forge:bamboo
-- minecraft:bamboo
 
 #forge:nuggets/netherite
 - rankine:netherite_nugget
@@ -1624,9 +1618,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:firmtofu
 - rankine:tofu
-
-#forge:storage_blocks/raw_hellforged
-- bloodmagic:rawdemoniteblock
 
 #forge:storage_blocks/silicon
 - rankine:silicon_block
@@ -2479,13 +2470,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:crops/grapefruit
 - croptopia:grapefruit
-
-#bloodmagic:slate
-- bloodmagic:blankslate
-- bloodmagic:reinforcedslate
-- bloodmagic:infusedslate
-- bloodmagic:demonslate
-- bloodmagic:etherealslate
 
 #balm:light_blue_dyes
 - #forge:dyes/light_blue?
@@ -5009,9 +4993,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:nuggets/iron?
 - minecraft:iron_nugget
 
-#copycats:copycat_board
-- create_connected:copycat_board
-
 #forge:dusts/vanadium
 - chemlib:vanadium_dust
 
@@ -5876,10 +5857,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:gears/iron
 - industrialforegoing:iron_gear?
-
-#hordes:infection_cures
-- minecraft:golden_apple
-- minecraft:enchanted_golden_apple
 
 #minecraft:lapis_ores
 - minecraft:lapis_ore
@@ -8830,18 +8807,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - rankine:iridium_ingot
 - chemlib:iridium_ingot
 
-#bloodmagic:rune
-- bloodmagic:blankrune
-- bloodmagic:speedrune
-- bloodmagic:sacrificerune
-- bloodmagic:selfsacrificerune
-- bloodmagic:dislocationrune
-- bloodmagic:altarcapacityrune
-- bloodmagic:bettercapacityrune
-- bloodmagic:orbcapacityrune
-- bloodmagic:accelerationrune
-- bloodmagic:chargingrune
-
 #smallships:cogs
 - smallships:oak_cog
 - smallships:spruce_cog
@@ -8960,15 +8925,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - rankine:lherzolite
 - rankine:wehrlite
 - rankine:harzburgite
-
-#bloodmagic:ritual_stone
-- bloodmagic:ritualstone
-- bloodmagic:airritualstone
-- bloodmagic:waterritualstone
-- bloodmagic:fireritualstone
-- bloodmagic:earthritualstone
-- bloodmagic:duskritualstone
-- bloodmagic:lightritualstone
 
 #forge:ingots/terrasteel
 - #botania:terrasteel_ingots
@@ -9751,6 +9707,56 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #tconstruct:casts/multi_use/large_plate
 - tconstruct:large_plate_cast
+
+#storagedrawers:drawers
+- storagedrawers:oak_full_drawers_1
+- storagedrawers:oak_full_drawers_2
+- storagedrawers:oak_full_drawers_4
+- storagedrawers:oak_half_drawers_1
+- storagedrawers:oak_half_drawers_2
+- storagedrawers:oak_half_drawers_4
+- storagedrawers:spruce_full_drawers_1
+- storagedrawers:spruce_full_drawers_2
+- storagedrawers:spruce_full_drawers_4
+- storagedrawers:spruce_half_drawers_1
+- storagedrawers:spruce_half_drawers_2
+- storagedrawers:spruce_half_drawers_4
+- storagedrawers:birch_full_drawers_1
+- storagedrawers:birch_full_drawers_2
+- storagedrawers:birch_full_drawers_4
+- storagedrawers:birch_half_drawers_1
+- storagedrawers:birch_half_drawers_2
+- storagedrawers:birch_half_drawers_4
+- storagedrawers:jungle_full_drawers_1
+- storagedrawers:jungle_full_drawers_2
+- storagedrawers:jungle_full_drawers_4
+- storagedrawers:jungle_half_drawers_1
+- storagedrawers:jungle_half_drawers_2
+- storagedrawers:jungle_half_drawers_4
+- storagedrawers:acacia_full_drawers_1
+- storagedrawers:acacia_full_drawers_2
+- storagedrawers:acacia_full_drawers_4
+- storagedrawers:acacia_half_drawers_1
+- storagedrawers:acacia_half_drawers_2
+- storagedrawers:acacia_half_drawers_4
+- storagedrawers:dark_oak_full_drawers_1
+- storagedrawers:dark_oak_full_drawers_2
+- storagedrawers:dark_oak_full_drawers_4
+- storagedrawers:dark_oak_half_drawers_1
+- storagedrawers:dark_oak_half_drawers_2
+- storagedrawers:dark_oak_half_drawers_4
+- storagedrawers:crimson_full_drawers_1
+- storagedrawers:crimson_full_drawers_2
+- storagedrawers:crimson_full_drawers_4
+- storagedrawers:crimson_half_drawers_1
+- storagedrawers:crimson_half_drawers_2
+- storagedrawers:crimson_half_drawers_4
+- storagedrawers:warped_full_drawers_1
+- storagedrawers:warped_full_drawers_2
+- storagedrawers:warped_full_drawers_4
+- storagedrawers:warped_half_drawers_1
+- storagedrawers:warped_half_drawers_2
+- storagedrawers:warped_half_drawers_4
 
 #minecraft:dark_oak_logs
 - minecraft:dark_oak_log
@@ -13291,8 +13297,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:soul_campfire
 - minecraft:dispenser
 - minecraft:dropper
-- minecraft:jukebox
-- minecraft:note_block
 
 #forge:dusts/calcium
 - chemlib:calcium_dust
@@ -13611,7 +13615,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - naturesaura:shockwave_creator
 - relics:reflection_necklace
 - relics:jellyfish_necklace
-- relics:spider_necklace
 - relics:holy_locket
 - artifacts:cross_necklace
 - artifacts:flame_pendant
@@ -13631,6 +13634,7 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - malum:necklace_of_the_narrow_edge
 - malum:necklace_of_the_hidden_blade
 - malum:necklace_of_blissful_harmony
+- experienceobelisk:enlightened_amulet
 
 #forge:doughnuts
 - croptopia:doughnut
@@ -13735,9 +13739,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:ores/hellforged
 - bloodmagic:dungeon_ore
-
-#copycats:copycat_block
-- create_connected:copycat_block
 
 #bookshelf:fishing_rods
 - #forge:fishing_rods
@@ -13868,18 +13869,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #tconstruct:casts/gold
 - vintageimprovements:golden_spring
 - vintageimprovements:small_golden_spring
-- expandedstorage:wood_to_gold_conversion_kit
-- expandedstorage:copper_to_gold_conversion_kit
-- expandedstorage:iron_to_gold_conversion_kit
-- expandedstorage:gold_to_diamond_conversion_kit
-- expandedstorage:gold_to_obsidian_conversion_kit
-- expandedstorage:gold_to_netherite_conversion_kit
-- expandedstorage:gold_barrel
-- expandedstorage:gold_chest
-- expandedstorage:gold_chest_minecart
-- expandedstorage:old_gold_chest
-- expandedstorage:gold_mini_chest
-- expandedstorage:gold_mini_barrel
 - nethersdelight:raw_stuffed_hoglin
 - nethersdelight:stuffed_hoglin
 
@@ -14182,8 +14171,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:music_disc_ward
 - minecraft:music_disc_11
 - minecraft:music_disc_wait
-- create_connected:music_disc_elevator
-- create_connected:music_disc_interlude
 
 #forge:tools/metal/axes
 - minecraft:iron_axe
@@ -15214,9 +15201,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - create:brass_sheet
 - create:iron_sheet
 - create:golden_sheet
-- #forge:ingots/bloodbrass
-- #bloodmagic:slate
-- #bloodmagic:sigil
 - createaddition:zinc_sheet
 - createaddition:electrum_sheet
 
@@ -16256,7 +16240,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - upgrade_aquatic:driftwood_trapped_chest
 - upgrade_aquatic:river_chest
 - upgrade_aquatic:river_trapped_chest
-- expandedstorage:wood_chest
 
 #forge:storage_blocks/aluminum
 - rankine:aluminum_block
@@ -18015,7 +17998,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:saplings/lime
 
 #curios:feet
-- relics:old_boot
 - relics:magma_walker
 - relics:aqua_walker
 - relics:ice_skates
@@ -18515,9 +18497,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - mythicbotany:niflheim_rune
 - mythicbotany:nidavellir_rune
 - mythicbotany:helheim_rune
-
-#forge:storage_blocks/bloodbrass
-- bloodsmeltery:bloodbrass_block
 
 #sereneseasons:spring_crops
 - farmersdelight:onion
@@ -19051,7 +19030,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:nuggets/hepatizon
 - #forge:nuggets/soulsteel
 - #forge:nuggets/knightslime
-- #forge:nuggets/bloodbrass
 - malum:copper_nugget
 - malum:hallowed_gold_nugget
 - malum:soul_stained_steel_nugget
@@ -19708,9 +19686,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - croptopia:cucumber
 - #forge:crops/cucumber
 
-#copycats:copycat_fence_gate
-- create_connected:copycat_fence_gate
-
 #botania:terrasteel_blocks
 - botania:terrasteel_block
 
@@ -19999,9 +19974,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:nether_quartz_ore
 - malum:natural_quartz_ore
 - malum:deepslate_quartz_ore
-
-#copycats:copycat_wall
-- create_connected:copycat_wall
 
 #minecraft:coal_ores
 - minecraft:coal_ore
@@ -20515,8 +20487,7 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - mythicbotany:cursed_andwari_ring
 - mythicbotany:andwari_ring
 - occultism:familiar_ring
-- relics:camouflage_ring
-- relics:delay_ring
+- relics:chorus_inhibitor
 - relics:bastion_ring
 - malum:gilded_ring
 - malum:ornate_ring
@@ -20926,7 +20897,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:storage_blocks/clay
 - minecraft:clay
-- minecraft:clay
 
 #blue_skies:storage_blocks/aquite
 - blue_skies:aquite_block
@@ -21105,9 +21075,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:glass_panes/cyan
 - minecraft:cyan_stained_glass_pane
 - tconstruct:cyan_clear_stained_glass_pane
-
-#copycats:copycat_stairs
-- create_connected:copycat_stairs
 
 #tconstruct:modifiable/two_handed
 
@@ -21521,7 +21488,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:storage_blocks/signalum?
 - #forge:storage_blocks/refined_glowstone?
 - #forge:storage_blocks/refined_obsidian?
-- #forge:storage_blocks/bloodbrass
 
 #forge:onion_rings
 - croptopia:onion_rings
@@ -21832,9 +21798,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - rankine:greenschist
 - rankine:blueschist
 - rankine:whiteschist
-
-#forge:ingots/bloodbrass
-- bloodsmeltery:bloodbrass_ingot
 
 #forge:crops/celery
 - croptopia:celery
@@ -22227,9 +22190,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - rankine:stripped_cork_oak_log
 - rankine:cork_oak_wood
 - rankine:stripped_cork_oak_wood
-
-#copycats:copycat_beam
-- create_connected:copycat_beam
 
 #tconstruct:slimy_saplings
 - tconstruct:earth_slime_sapling
@@ -22904,12 +22864,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - mekanism:block_uranium
 - chemlib:uranium_metal_block
 
-#bloodmagic:tartaric_gem
-- bloodmagic:soulgempetty
-- bloodmagic:soulgemlesser
-- bloodmagic:soulgemcommon
-- bloodmagic:soulgemgreater
-
 #forge:salad_ingredients
 - #forge:salad_ingredients/cabbage
 
@@ -23151,7 +23105,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:ingots/hepatizon
 - #forge:ingots/soulsteel
 - #forge:ingots/knightslime
-- #forge:ingots/bloodbrass
 - createaddition:electrum_ingot
 
 #forge:storage_blocks/technetium
@@ -23162,27 +23115,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:crops/oat
 - croptopia:oat
-
-#forge:dodo_foods
-- minecraft:pumpkin_seeds
-- minecraft:golden_apple
-- minecraft:baked_potato
-- minecraft:carrot
-- minecraft:glistering_melon_slice
-- minecraft:apple
-- minecraft:melon_seeds
-- minecraft:cocoa_beans
-- minecraft:golden_carrot
-- minecraft:pumpkin
-- minecraft:beetroot_seeds
-- minecraft:melon_slice
-- minecraft:wheat_seeds
-- minecraft:melon
-- minecraft:potato
-- minecraft:carved_pumpkin
-- minecraft:enchanted_golden_apple
-- minecraft:pumpkin_pie
-- minecraft:beetroot
 
 #forge:storage_blocks/copper
 - minecraft:copper_block
@@ -23870,14 +23802,7 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - rankine:sodium_potassium_alloy_nugget
 
 #curios:talisman
-- relics:stellar_catalyst
-- relics:lucky_horseshoe
-- relics:soul_devourer
-- relics:scarab_talisman
 - relics:spore_sack
-- relics:slime_heart
-- relics:chorus_inhibitor
-- relics:ghost_skin_talisman
 
 #forge:stones/granite
 - rankine:gray_granite
@@ -24894,9 +24819,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:ingots/meitnerium
 - rankine:meitnerium_ingot
 
-#forge:nuggets/bloodbrass
-- bloodsmeltery:bloodbrass_nugget
-
 #bookshelf:leggings
 - #forge:leggings
 
@@ -25410,9 +25332,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:fruits/fig
 - croptopia:fig
 
-#copycats:copycat_slab
-- create_connected:copycat_slab
-
 #tconstruct:casts/single_use/tool_handle
 - tconstruct:tool_handle_sand_cast
 - tconstruct:tool_handle_red_sand_cast
@@ -25447,9 +25366,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - chipped:torch_7
 - chipped:torch_8
 - chipped:torch_9
-
-#forge:storage_blocks/hellforged
-- bloodmagic:dungeon_metal
 
 #forge:sheetmetals/cobalt_superalloy
 - rankine:cobalt_superalloy_sheetmetal
@@ -25532,9 +25448,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:stone/dolomite?
 - #forge:stone/limestone?
 - #forge:stone/chalk?
-
-#copycats:copycat_fence
-- create_connected:copycat_fence
 
 #createaddition:plant_foods
 - farmersdelight:pumpkin_slice
@@ -25694,7 +25607,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - botania:itemfinder
 - immersiveengineering:earmuffs
 - occultism:otherworld_goggles
-- relics:fragrant_flower
 - twilightforest:naga_trophy
 - twilightforest:lich_trophy
 - twilightforest:minoshroom_trophy
@@ -25731,22 +25643,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:storage_blocks/manganese
 - rankine:manganese_block
 - chemlib:manganese_metal_block
-
-#bloodmagic:sigil
-- bloodmagic:growthsigil
-- bloodmagic:miningsigil
-- bloodmagic:sigilofmagnetism
-- bloodmagic:icesigil
-- bloodmagic:sigilofsuppression
-- bloodmagic:divinationsigil
-- bloodmagic:seersigil
-- bloodmagic:watersigil
-- bloodmagic:voidsigil
-- bloodmagic:lavasigil
-- bloodmagic:airsigil
-- bloodmagic:bloodlightsigil
-- bloodmagic:divinationsigil
-- bloodmagic:sigilofholding
 
 #nourish:fruit
 - croptopia:blackberry
@@ -27023,9 +26919,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:dusts/copper_nitrate
 - chemlib:copper_nitrate_dust
 
-#copycats:copycat_vertical_step
-- create_connected:copycat_vertical_step
-
 #nourish:sweets
 - croptopia:chocolate
 - croptopia:grape_juice
@@ -27472,13 +27365,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:crops/blackberry
 - croptopia:blackberry
 
-#expandedstorage:wooden_chests
-- expandedstorage:pumpkin_chest
-- expandedstorage:present
-- expandedstorage:bamboo_chest
-- expandedstorage:moss_chest
-- #forge:chests/wooden
-
 #forge:nuggets/xenon
 - rankine:xenon_nugget
 
@@ -27830,7 +27716,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:storage_blocks/soulsteel
 - #forge:storage_blocks/knightslime
 - #forge:storage_blocks/raw_cobalt
-- #forge:storage_blocks/bloodbrass
 - vintageimprovements:vanadium_block
 - vintageimprovements:sulfur_block
 - #forge:storage_blocks/chocolate

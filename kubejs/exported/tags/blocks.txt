@@ -1,4 +1,4 @@
-To refresh this file, delete it and run /reload command again! Last updated: Apr 7, 2024, 5:20:00 PM
+To refresh this file, delete it and run /reload command again! Last updated: Sep 14, 2024, 9:03:54 AM
 
 #chipped:black_stained_glass
 - minecraft:black_stained_glass
@@ -589,16 +589,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - chipped:purple_glazed_terracotta_10
 - chipped:purple_glazed_terracotta_11
 
-#expandedstorage:copper_barrels
-- expandedstorage:copper_barrel
-- expandedstorage:exposed_copper_barrel
-- expandedstorage:weathered_copper_barrel
-- expandedstorage:oxidized_copper_barrel
-- expandedstorage:waxed_copper_barrel
-- expandedstorage:waxed_exposed_copper_barrel
-- expandedstorage:waxed_weathered_copper_barrel
-- expandedstorage:waxed_oxidized_copper_barrel
-
 #chipped:raw_copper_block
 - minecraft:raw_copper_block
 - chipped:raw_copper_block_1
@@ -695,8 +685,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - twilightforest:transformation_fence_gate
 - twilightforest:mining_fence_gate
 - twilightforest:sorting_fence_gate
-- create_connected:copycat_fence_gate
-- create_connected:wrapped_copycat_fence_gate
 
 #productivebees:flowers/crystalline_flowers
 - #productivebees:flowers/crystalline
@@ -1456,11 +1444,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:campfires
 - #minecraft:fences
 - #minecraft:leaves
-- create_connected:empty_fan_catalyst
-- create_connected:fan_blasting_catalyst
-- create_connected:fan_smoking_catalyst
-- create_connected:fan_splashing_catalyst
-- create_connected:fan_haunting_catalyst
 - create_central_kitchen:blaze_stove?
 
 #forge:ores/cloggrum
@@ -2653,8 +2636,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - malum:twisted_rock_wall
 - malum:cracked_twisted_rock_bricks_wall
 - malum:cracked_twisted_rock_tiles_wall
-- create_connected:copycat_wall
-- create_connected:wrapped_copycat_wall
 - #forge:walls/chocolate
 
 #naturalist:rhino_charge_breakable
@@ -2812,7 +2793,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #create:fan_processing_catalysts/blasting
 - create:blaze_burner
-- create_connected:fan_blasting_catalyst
 
 #productivebees:flowers/kyanite
 - #forge:storage_blocks/kyanite?
@@ -3730,27 +3710,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - chemlib:protactinium_metal_block
 - chemlib:uranium_metal_block
 - vintageimprovements:sulfur_block
-- expandedstorage:copper_barrel
-- expandedstorage:exposed_copper_barrel
-- expandedstorage:weathered_copper_barrel
-- expandedstorage:oxidized_copper_barrel
-- expandedstorage:waxed_copper_barrel
-- expandedstorage:waxed_exposed_copper_barrel
-- expandedstorage:waxed_weathered_copper_barrel
-- expandedstorage:waxed_oxidized_copper_barrel
-- expandedstorage:iron_barrel
-- expandedstorage:iron_chest
-- expandedstorage:old_iron_chest
-- expandedstorage:iron_mini_chest
-- expandedstorage:copper_mini_barrel
-- expandedstorage:exposed_copper_mini_barrel
-- expandedstorage:weathered_copper_mini_barrel
-- expandedstorage:oxidized_copper_mini_barrel
-- expandedstorage:waxed_copper_mini_barrel
-- expandedstorage:waxed_exposed_copper_mini_barrel
-- expandedstorage:waxed_weathered_copper_mini_barrel
-- expandedstorage:waxed_oxidized_copper_mini_barrel
-- expandedstorage:iron_mini_barrel
 
 #productivebees:flowers/quarry
 - #minecraft:dirt
@@ -4785,7 +4744,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - upgrade_aquatic:driftwood_trapped_chest
 - upgrade_aquatic:river_chest
 - upgrade_aquatic:river_trapped_chest
-- expandedstorage:wood_chest
 
 #forge:storage_blocks/aluminum
 - rankine:aluminum_block
@@ -5952,7 +5910,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - malum:runewood_panel_slab
 - malum:twisted_rock_slab
 - malum:cracked_twisted_rock_bricks_slab
-- create_connected:copycat_slab
 - #forge:slabs/chocolate
 
 #minecraft:animals_spawnable_on
@@ -6009,63 +5966,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - tconstruct:piglin_brute_head
 - tconstruct:piglin_wall_head
 - tconstruct:piglin_brute_wall_head
-- expandedstorage:copper_barrel
-- expandedstorage:exposed_copper_barrel
-- expandedstorage:weathered_copper_barrel
-- expandedstorage:oxidized_copper_barrel
-- expandedstorage:waxed_copper_barrel
-- expandedstorage:waxed_exposed_copper_barrel
-- expandedstorage:waxed_weathered_copper_barrel
-- expandedstorage:waxed_oxidized_copper_barrel
-- expandedstorage:iron_barrel
-- expandedstorage:gold_barrel
-- expandedstorage:diamond_barrel
-- expandedstorage:obsidian_barrel
-- expandedstorage:netherite_barrel
-- expandedstorage:wood_chest
-- expandedstorage:pumpkin_chest
-- expandedstorage:present
-- expandedstorage:bamboo_chest
-- expandedstorage:moss_chest
-- expandedstorage:iron_chest
-- expandedstorage:gold_chest
-- expandedstorage:diamond_chest
-- expandedstorage:obsidian_chest
-- expandedstorage:netherite_chest
-- expandedstorage:old_wood_chest
-- expandedstorage:old_iron_chest
-- expandedstorage:old_gold_chest
-- expandedstorage:old_diamond_chest
-- expandedstorage:old_obsidian_chest
-- expandedstorage:old_netherite_chest
-- expandedstorage:vanilla_wood_mini_chest
-- expandedstorage:wood_mini_chest
-- expandedstorage:pumpkin_mini_chest
-- expandedstorage:red_mini_present
-- expandedstorage:white_mini_present
-- expandedstorage:candy_cane_mini_present
-- expandedstorage:green_mini_present
-- expandedstorage:lavender_mini_present
-- expandedstorage:pink_amethyst_mini_present
-- expandedstorage:iron_mini_chest
-- expandedstorage:gold_mini_chest
-- expandedstorage:diamond_mini_chest
-- expandedstorage:obsidian_mini_chest
-- expandedstorage:netherite_mini_chest
-- expandedstorage:mini_barrel
-- expandedstorage:copper_mini_barrel
-- expandedstorage:exposed_copper_mini_barrel
-- expandedstorage:weathered_copper_mini_barrel
-- expandedstorage:oxidized_copper_mini_barrel
-- expandedstorage:waxed_copper_mini_barrel
-- expandedstorage:waxed_exposed_copper_mini_barrel
-- expandedstorage:waxed_weathered_copper_mini_barrel
-- expandedstorage:waxed_oxidized_copper_mini_barrel
-- expandedstorage:iron_mini_barrel
-- expandedstorage:gold_mini_barrel
-- expandedstorage:diamond_mini_barrel
-- expandedstorage:obsidian_mini_barrel
-- expandedstorage:netherite_mini_barrel
 
 #forge:storage_blocks/topaz
 - rankine:topaz_block
@@ -7774,6 +7674,56 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:stones/soapstone
 - rankine:soapstone
 
+#storagedrawers:drawers
+- storagedrawers:oak_full_drawers_1
+- storagedrawers:oak_full_drawers_2
+- storagedrawers:oak_full_drawers_4
+- storagedrawers:oak_half_drawers_1
+- storagedrawers:oak_half_drawers_2
+- storagedrawers:oak_half_drawers_4
+- storagedrawers:spruce_full_drawers_1
+- storagedrawers:spruce_full_drawers_2
+- storagedrawers:spruce_full_drawers_4
+- storagedrawers:spruce_half_drawers_1
+- storagedrawers:spruce_half_drawers_2
+- storagedrawers:spruce_half_drawers_4
+- storagedrawers:birch_full_drawers_1
+- storagedrawers:birch_full_drawers_2
+- storagedrawers:birch_full_drawers_4
+- storagedrawers:birch_half_drawers_1
+- storagedrawers:birch_half_drawers_2
+- storagedrawers:birch_half_drawers_4
+- storagedrawers:jungle_full_drawers_1
+- storagedrawers:jungle_full_drawers_2
+- storagedrawers:jungle_full_drawers_4
+- storagedrawers:jungle_half_drawers_1
+- storagedrawers:jungle_half_drawers_2
+- storagedrawers:jungle_half_drawers_4
+- storagedrawers:acacia_full_drawers_1
+- storagedrawers:acacia_full_drawers_2
+- storagedrawers:acacia_full_drawers_4
+- storagedrawers:acacia_half_drawers_1
+- storagedrawers:acacia_half_drawers_2
+- storagedrawers:acacia_half_drawers_4
+- storagedrawers:dark_oak_full_drawers_1
+- storagedrawers:dark_oak_full_drawers_2
+- storagedrawers:dark_oak_full_drawers_4
+- storagedrawers:dark_oak_half_drawers_1
+- storagedrawers:dark_oak_half_drawers_2
+- storagedrawers:dark_oak_half_drawers_4
+- storagedrawers:crimson_full_drawers_1
+- storagedrawers:crimson_full_drawers_2
+- storagedrawers:crimson_full_drawers_4
+- storagedrawers:crimson_half_drawers_1
+- storagedrawers:crimson_half_drawers_2
+- storagedrawers:crimson_half_drawers_4
+- storagedrawers:warped_full_drawers_1
+- storagedrawers:warped_full_drawers_2
+- storagedrawers:warped_full_drawers_4
+- storagedrawers:warped_half_drawers_1
+- storagedrawers:warped_half_drawers_2
+- storagedrawers:warped_half_drawers_4
+
 #chipped:dark_oak_log
 - minecraft:dark_oak_log
 - chipped:dark_oak_log_1
@@ -7890,8 +7840,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:tripwire
 - minecraft:tripwire_hook
 - #minecraft:fence_gates
-- create_connected:copycat_fence_gate
-- create_connected:wrapped_copycat_fence_gate
 
 #appliedenergistics2:fluix_block
 
@@ -8259,8 +8207,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - tconstruct:nahuatl_fence
 - malum:runewood_planks_fence
 - malum:soulwood_planks_fence
-- create_connected:copycat_fence
-- create_connected:wrapped_copycat_fence
 
 #minecraft:saplings
 - minecraft:oak_sapling
@@ -8368,8 +8314,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #minecraft:unstable_bottom_center
 - #minecraft:fence_gates
-- create_connected:copycat_fence_gate
-- create_connected:wrapped_copycat_fence_gate
 
 #forge:stones/slate
 - rankine:slate
@@ -9619,7 +9563,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - croptopia:starfruit_crop
 - croptopia:walnut_crop
 - croptopia:cinnamon_leaves
-- expandedstorage:moss_chest
 
 #forge:mineral_wool
 - rankine:mineral_wool
@@ -10283,10 +10226,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - waystones:green_sharestone
 - waystones:red_sharestone
 - waystones:black_sharestone
-
-#diagonalfences:non_diagonal_fences
-- create_connected:copycat_fence
-- create_connected:wrapped_copycat_fence
 
 #forge:storage_blocks/platinum
 - rankine:platinum_block
@@ -12475,65 +12414,62 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - vintageimprovements:centrifuge
 - vintageimprovements:centrifuge_structure
 - vintageimprovements:curving_press
-- create_connected:encased_chain_cogwheel
-- create_connected:parallel_gearbox
-- create_connected:six_way_gearbox
-- create_connected:overstress_clutch
-- create_connected:inverted_clutch
-- create_connected:inverted_gearshift
-- create_connected:centrifugal_clutch
-- create_connected:freewheel_clutch
-- create_connected:brass_gearbox
-- create_connected:brake
-- create_connected:copycat_slab
-- create_connected:copycat_block
-- create_connected:copycat_beam
-- create_connected:copycat_vertical_step
-- create_connected:copycat_stairs
-- create_connected:copycat_fence
-- create_connected:copycat_wall
-- create_connected:copycat_fence_gate
-- create_connected:copycat_board
-- expandedstorage:copper_barrel
-- expandedstorage:exposed_copper_barrel
-- expandedstorage:weathered_copper_barrel
-- expandedstorage:oxidized_copper_barrel
-- expandedstorage:waxed_copper_barrel
-- expandedstorage:waxed_exposed_copper_barrel
-- expandedstorage:waxed_weathered_copper_barrel
-- expandedstorage:waxed_oxidized_copper_barrel
-- expandedstorage:iron_barrel
-- expandedstorage:gold_barrel
-- expandedstorage:diamond_barrel
-- expandedstorage:obsidian_barrel
-- expandedstorage:netherite_barrel
-- expandedstorage:wood_chest
-- expandedstorage:pumpkin_chest
-- expandedstorage:present
-- expandedstorage:old_wood_chest
-- expandedstorage:vanilla_wood_mini_chest
-- expandedstorage:wood_mini_chest
-- expandedstorage:pumpkin_mini_chest
-- expandedstorage:red_mini_present
-- expandedstorage:white_mini_present
-- expandedstorage:candy_cane_mini_present
-- expandedstorage:green_mini_present
-- expandedstorage:lavender_mini_present
-- expandedstorage:pink_amethyst_mini_present
-- expandedstorage:mini_barrel
-- expandedstorage:copper_mini_barrel
-- expandedstorage:exposed_copper_mini_barrel
-- expandedstorage:weathered_copper_mini_barrel
-- expandedstorage:oxidized_copper_mini_barrel
-- expandedstorage:waxed_copper_mini_barrel
-- expandedstorage:waxed_exposed_copper_mini_barrel
-- expandedstorage:waxed_weathered_copper_mini_barrel
-- expandedstorage:waxed_oxidized_copper_mini_barrel
-- expandedstorage:iron_mini_barrel
-- expandedstorage:gold_mini_barrel
-- expandedstorage:diamond_mini_barrel
-- expandedstorage:obsidian_mini_barrel
-- expandedstorage:netherite_mini_barrel
+- storagedrawers:oak_full_drawers_1
+- storagedrawers:oak_full_drawers_2
+- storagedrawers:oak_full_drawers_4
+- storagedrawers:oak_half_drawers_1
+- storagedrawers:oak_half_drawers_2
+- storagedrawers:oak_half_drawers_4
+- storagedrawers:oak_trim
+- storagedrawers:spruce_full_drawers_1
+- storagedrawers:spruce_full_drawers_2
+- storagedrawers:spruce_full_drawers_4
+- storagedrawers:spruce_half_drawers_1
+- storagedrawers:spruce_half_drawers_2
+- storagedrawers:spruce_half_drawers_4
+- storagedrawers:spruce_trim
+- storagedrawers:birch_full_drawers_1
+- storagedrawers:birch_full_drawers_2
+- storagedrawers:birch_full_drawers_4
+- storagedrawers:birch_half_drawers_1
+- storagedrawers:birch_half_drawers_2
+- storagedrawers:birch_half_drawers_4
+- storagedrawers:birch_trim
+- storagedrawers:jungle_full_drawers_1
+- storagedrawers:jungle_full_drawers_2
+- storagedrawers:jungle_full_drawers_4
+- storagedrawers:jungle_half_drawers_1
+- storagedrawers:jungle_half_drawers_2
+- storagedrawers:jungle_half_drawers_4
+- storagedrawers:jungle_trim
+- storagedrawers:acacia_full_drawers_1
+- storagedrawers:acacia_full_drawers_2
+- storagedrawers:acacia_full_drawers_4
+- storagedrawers:acacia_half_drawers_1
+- storagedrawers:acacia_half_drawers_2
+- storagedrawers:acacia_half_drawers_4
+- storagedrawers:acacia_trim
+- storagedrawers:dark_oak_full_drawers_1
+- storagedrawers:dark_oak_full_drawers_2
+- storagedrawers:dark_oak_full_drawers_4
+- storagedrawers:dark_oak_half_drawers_1
+- storagedrawers:dark_oak_half_drawers_2
+- storagedrawers:dark_oak_half_drawers_4
+- storagedrawers:dark_oak_trim
+- storagedrawers:crimson_full_drawers_1
+- storagedrawers:crimson_full_drawers_2
+- storagedrawers:crimson_full_drawers_4
+- storagedrawers:crimson_half_drawers_1
+- storagedrawers:crimson_half_drawers_2
+- storagedrawers:crimson_half_drawers_4
+- storagedrawers:crimson_trim
+- storagedrawers:warped_full_drawers_1
+- storagedrawers:warped_full_drawers_2
+- storagedrawers:warped_full_drawers_4
+- storagedrawers:warped_half_drawers_1
+- storagedrawers:warped_half_drawers_2
+- storagedrawers:warped_half_drawers_4
+- storagedrawers:warped_trim
 
 #chipped:brown_mushroom
 - minecraft:brown_mushroom
@@ -12606,9 +12542,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - create:red_sail
 - create:black_sail
 - #minecraft:wool
-
-#forge:storage_blocks/bloodbrass
-- bloodsmeltery:bloodbrass_block
 
 #twilightforest:hollow_logs_horizontal
 - twilightforest:hollow_oak_log_horizontal
@@ -13177,8 +13110,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - tconstruct:bloodshroom_fence_gate
 - malum:soulwood_planks_fence_gate
 - malum:runewood_planks_fence_gate
-- create_connected:copycat_fence_gate
-- create_connected:wrapped_copycat_fence_gate
 
 #chipped:basalt
 - minecraft:basalt
@@ -13920,7 +13851,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - rankine:ilmenite_ore
 
 #create:fan_processing_catalysts/splashing
-- create_connected:fan_splashing_catalyst
 
 #minecraft:dragon_immune
 - minecraft:barrier
@@ -14403,9 +14333,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - rankine:polished_arkose
 - rankine:polished_graywacke
 - rankine:polished_honeystone
-
-#minecraft:minable/pickaxe
-- bloodsmeltery:bloodbrass_block
 
 #chipped:end_stone
 - minecraft:end_stone
@@ -15731,13 +15658,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - tconstruct:blood_ender_slime_grass
 - tconstruct:ender_slime_dirt
 
-#expandedstorage:wooden_chests
-- expandedstorage:pumpkin_chest
-- expandedstorage:present
-- expandedstorage:bamboo_chest
-- expandedstorage:moss_chest
-- #forge:chests/wooden
-
 #minecraft:underwater_bonemeals
 - minecraft:seagrass
 - #minecraft:corals
@@ -16325,7 +16245,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:storage_blocks/soulsteel
 - #forge:storage_blocks/knightslime
 - #forge:storage_blocks/raw_cobalt
-- #forge:storage_blocks/bloodbrass
 - malum:block_of_grim_talc
 - malum:block_of_astral_weave
 - malum:mote_of_raw_arcana
@@ -16503,7 +16422,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - create:lit_blaze_burner
 - minecraft:fire
 - minecraft:campfire
-- create_connected:fan_smoking_catalyst
 
 #rankine:glass_cutter
 - #forge:hardened_glass
@@ -17292,8 +17210,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - malum:tainted_rock_tiles_stairs
 - malum:small_twisted_rock_bricks_stairs
 - malum:twisted_rock_stairs
-- create_connected:copycat_stairs
-- create_connected:wrapped_copycat_stairs
 - #forge:stairs/chocolate
 
 #sereneseasons:unbreakable_infertile_crops
@@ -18186,7 +18102,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:storage_blocks/manyullyn
 - #forge:storage_blocks/hepatizon
 - #forge:storage_blocks/soulsteel
-- #forge:storage_blocks/bloodbrass
 - malum:block_of_blazing_quartz
 - malum:block_of_soulstone
 - malum:block_of_soul_stained_steel
@@ -18194,6 +18109,8 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - malum:block_of_raw_soulstone
 - malum:block_of_brilliance
 - vintageimprovements:vanadium_block
+- experienceobelisk:cognitive_alloy_block
+- experienceobelisk:cognitive_crystal_block
 
 #forge:storage_blocks/neon
 - rankine:neon_block
@@ -18418,7 +18335,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - create:lit_blaze_burner
 - minecraft:soul_fire
 - minecraft:soul_campfire
-- create_connected:fan_haunting_catalyst
 
 #chipped:dark_oak_door
 - minecraft:dark_oak_door
@@ -19353,17 +19269,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - rankine:topaz_geode
 - rankine:tourmaline_geode
 
-#forge:sapplings
-- minecraft:oak_sapling
-- minecraft:dark_oak_sapling
-- minecraft:birch_sapling
-- minecraft:jungle_sapling
-- minecraft:crimson_fungus
-- minecraft:spruce_sapling
-- minecraft:bamboo_sapling
-- minecraft:warped_fungus
-- minecraft:acacia_sapling
-
 #forge:lanterns
 - rankine:lithium_lantern
 - rankine:boron_lantern
@@ -19496,7 +19401,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:raw_iron_block
 
 #forge:storage_blocks/clay
-- minecraft:clay
 - minecraft:clay
 
 #blue_skies:storage_blocks/aquite
@@ -20918,17 +20822,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - create:clipboard
 - #minecraft:banners
 - #minecraft:signs
-- create_connected:sequenced_pulse_generator
-- create_connected:linked_oak_button
-- create_connected:linked_spruce_button
-- create_connected:linked_birch_button
-- create_connected:linked_acacia_button
-- create_connected:linked_jungle_button
-- create_connected:linked_dark_oak_button
-- create_connected:linked_crimson_button
-- create_connected:linked_warped_button
-- create_connected:linked_lever
-- create_connected:linked_analog_lever
 
 #twilightforest:mining_logs
 - twilightforest:mining_log
@@ -26797,47 +26690,11 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - vintageimprovements:curving_press
 - vintageimprovements:vanadium_block
 - vintageimprovements:sulfur_block
-- create_connected:encased_chain_cogwheel
-- create_connected:parallel_gearbox
-- create_connected:six_way_gearbox
-- create_connected:overstress_clutch
-- create_connected:shear_pin
-- create_connected:inverted_clutch
-- create_connected:inverted_gearshift
-- create_connected:centrifugal_clutch
-- create_connected:freewheel_clutch
-- create_connected:brass_gearbox
-- create_connected:brake
-- create_connected:empty_fan_catalyst
-- create_connected:fan_blasting_catalyst
-- create_connected:fan_smoking_catalyst
-- create_connected:fan_splashing_catalyst
-- create_connected:fan_haunting_catalyst
-- create_connected:item_silo
-- create_connected:copycat_slab
-- create_connected:copycat_block
-- create_connected:copycat_beam
-- create_connected:copycat_vertical_step
-- create_connected:copycat_stairs
-- create_connected:copycat_fence
-- create_connected:copycat_wall
-- create_connected:copycat_fence_gate
-- create_connected:copycat_board
-- expandedstorage:iron_chest
-- expandedstorage:gold_chest
-- expandedstorage:diamond_chest
-- expandedstorage:obsidian_chest
-- expandedstorage:netherite_chest
-- expandedstorage:old_iron_chest
-- expandedstorage:old_gold_chest
-- expandedstorage:old_diamond_chest
-- expandedstorage:old_obsidian_chest
-- expandedstorage:old_netherite_chest
-- expandedstorage:iron_mini_chest
-- expandedstorage:gold_mini_chest
-- expandedstorage:diamond_mini_chest
-- expandedstorage:obsidian_mini_chest
-- expandedstorage:netherite_mini_chest
+- experienceobelisk:experience_obelisk
+- experienceobelisk:experience_fountain
+- experienceobelisk:precision_dispeller
+- experienceobelisk:cognitive_alloy_block
+- experienceobelisk:cognitive_crystal_block
 - create_confectionery:gingerbread_block
 - create_confectionery:gingerbread_stairs
 - create_confectionery:gingerbread_slab
@@ -26862,6 +26719,10 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - create_confectionery:candy_cane_block
 - create_central_kitchen:blaze_stove?
 - nethersdelight:blackstone_stove
+- storagedrawers:controller
+- storagedrawers:controller_slave
+- storagedrawers:compacting_drawers_3
+- brickhopper:brick_hopper
 - create_enchantment_industry:disenchanter
 - create_enchantment_industry:printer
 - create_enchantment_industry:blaze_enchanter
@@ -27144,7 +27005,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #forge:storage_blocks/signalum?
 - #forge:storage_blocks/refined_glowstone?
 - #forge:storage_blocks/refined_obsidian?
-- #forge:storage_blocks/bloodbrass
 
 #chipped:purple_carpet
 - minecraft:purple_carpet
@@ -27562,16 +27422,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - tconstruct:scorched_drain
 - tconstruct:scorched_chute
 - tconstruct:foundry_controller
-- expandedstorage:obsidian_barrel
-- expandedstorage:netherite_barrel
-- expandedstorage:obsidian_chest
-- expandedstorage:netherite_chest
-- expandedstorage:old_obsidian_chest
-- expandedstorage:old_netherite_chest
-- expandedstorage:obsidian_mini_chest
-- expandedstorage:netherite_mini_chest
-- expandedstorage:obsidian_mini_barrel
-- expandedstorage:netherite_mini_barrel
 
 #productivebees:flowers/jade
 - #forge:storage_blocks/jade?
@@ -28924,16 +28774,11 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - tconstruct:tinkers_anvil
 - tconstruct:scorched_anvil
 - vintageimprovements:vanadium_block
-- expandedstorage:gold_barrel
-- expandedstorage:diamond_barrel
-- expandedstorage:gold_chest
-- expandedstorage:diamond_chest
-- expandedstorage:old_gold_chest
-- expandedstorage:old_diamond_chest
-- expandedstorage:gold_mini_chest
-- expandedstorage:diamond_mini_chest
-- expandedstorage:gold_mini_barrel
-- expandedstorage:diamond_mini_barrel
+- experienceobelisk:experience_obelisk
+- experienceobelisk:experience_fountain
+- experienceobelisk:precision_dispeller
+- experienceobelisk:cognitive_alloy_block
+- experienceobelisk:cognitive_crystal_block
 
 #forge:storage_blocks/sodium
 - rankine:sodium_block
@@ -31292,8 +31137,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - twilightforest:transformation_fence
 - twilightforest:mining_fence
 - twilightforest:sorting_fence
-- create_connected:copycat_fence
-- create_connected:wrapped_copycat_fence
 
 #rankine:heating_elements
 - rankine:heating_element_1
