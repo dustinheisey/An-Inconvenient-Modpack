@@ -35,7 +35,5 @@
 
 ### CI
 
-- [ ] apply for curseforge api
 - [ ] setup modpack uploader and remove mods from github repo safely
   - [ ] setup server files auto creation
-  - [ ] figure out what files to package in modpack
