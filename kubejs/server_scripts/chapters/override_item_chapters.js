@@ -3602,6 +3602,12 @@ onEvent('tags.items', event => {
   });
   overrideChapters('minecraft', {
     chapter_1: [
+      'minecraft:prismarine_shard',
+      'minecraft:prismarine_crystals',
+      'minecraft:prismarine_brick_slab',
+      'minecraft:prismarine_bricks',
+      'minecraft:prismarine_stairs',
+      'minecraft:prismarine_brick_stairs',
       'minecraft:campfire',
       'minecraft:deepslate_brick_stairs',
       'minecraft:deepslate_brick_slab',
@@ -3668,6 +3674,9 @@ onEvent('tags.items', event => {
       'minecraft:flint_and_steel',
     ],
     chapter_2: [
+      'minecraft:dark_prismarine',
+      'minecraft:dark_prismarine_slab',
+      'minecraft:dark_prismarine_stairs',
       'minecraft:sculk_sensor',
       'minecraft:carved_pumpkin',
       'minecraft:pumpkin',
@@ -3696,10 +3705,6 @@ onEvent('tags.items', event => {
       'minecraft:powder_snow_bucket',
       'minecraft:beetroot_soup',
       'minecraft:tinted_glass',
-      'minecraft:dark_prismarine',
-      'minecraft:dark_prismarine_slab',
-      'minecraft:dark_prismarine_stairs',
-      'minecraft:prismarine_brick_slab',
       // "minecraft:mossy_stone_bricks",
       // "minecraft:cracked_stone_bricks",
       // "minecraft:chiseled_stone_bricks",
@@ -3714,9 +3719,6 @@ onEvent('tags.items', event => {
       'minecraft:glow_ink_sac',
       'minecraft:music_disc_otherside',
       'minecraft:sea_lantern',
-      'minecraft:prismarine_bricks',
-      'minecraft:prismarine_stairs',
-      'minecraft:prismarine_brick_stairs',
       'minecraft:scaffolding',
       'minecraft:anvil',
       'minecraft:chipped_anvil',
@@ -3758,8 +3760,6 @@ onEvent('tags.items', event => {
       'minecraft:wet_sponge',
       'minecraft:ink_sac',
       'minecraft:skeleton_skull',
-      'minecraft:prismarine_shard',
-      'minecraft:prismarine_crystals',
       'minecraft:cod',
       'minecraft:salmon',
       'minecraft:tropical_fish',
@@ -6796,6 +6796,8 @@ onEvent('tags.items', event => {
   });
   overrideChapters('upgrade_aquatic', {
     chapter_1: [
+      'upgrade_aquatic:prismarine_rod_bundle',
+      'upgrade_aquatic:prismarine_rod',
       'upgrade_aquatic:driftwood_planks',
       'upgrade_aquatic:river_planks',
       'upgrade_aquatic:driftwood_log',
@@ -6897,7 +6899,6 @@ onEvent('tags.items', event => {
       'upgrade_aquatic:coralstone',
       'upgrade_aquatic:coralstone_slab',
       'upgrade_aquatic:coralstone_stairs',
-      'upgrade_aquatic:prismarine_rod_bundle',
       'upgrade_aquatic:luminous_prismarine',
       'upgrade_aquatic:luminous_prismarine_stairs',
       'upgrade_aquatic:luminous_prismarine_slab',
@@ -6913,7 +6914,6 @@ onEvent('tags.items', event => {
       'upgrade_aquatic:squid_bucket',
       'upgrade_aquatic:glow_squid_bucket',
       'upgrade_aquatic:nautilus_bucket',
-      'upgrade_aquatic:prismarine_rod',
     ],
     chapter_3: [
       'upgrade_aquatic:mulberry_jam_block',
