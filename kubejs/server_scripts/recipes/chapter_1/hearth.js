@@ -745,10 +745,6 @@ onEvent('recipes', event => {
                             id: 'alloy_mold',
                             recipe: () => {
                               event.remove({type: 'charcoal_pit:orekiln'});
-                              [
-                                'charcoal_pit:cooking_recipes/ceramic_mold',
-                                'charcoal_pit:clay_mold',
-                              ].forEach(id => event.remove({id: id}));
                             },
                           },
                         ],
