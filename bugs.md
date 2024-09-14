@@ -20,17 +20,8 @@
 - [x] give pebbles a use
 - [x] clay mold recipe broken
 - [x] croptopia crops shouldn't be spawning
-
-- [ ] unification errors
-- [ ] prismarine shards spawning in chapter 1
-
+- [x] stage prismarine stuff mostly to chapter 1
 - [ ] fix template world creation menu
-- [ ] setup modpack uploader and remove mods from github repo safely
-- [ ] apply for curseforge api
-- [ ] setup server files auto creation
-- [ ] figure out what files to package in modpack
-- [ ] set default options but don't override other people's options
-- [ ] do not override peoples shaders or resourcepacks
 
 ## Backlog
 
@@ -38,3 +29,12 @@
 - [ ] forgotten knife showing in jei too early
 - [ ] bees showing in jei too early
 - [ ] fire doesn't go away when you die visually
+- [ ] unification errors
+- [ ] set default options but don't override other people's options
+
+### CI
+
+- [ ] apply for curseforge api
+- [ ] setup modpack uploader and remove mods from github repo safely
+  - [ ] setup server files auto creation
+  - [ ] figure out what files to package in modpack

@@ -6,7 +6,6 @@
 /XaeroWorldMap
 .DS_Store
 lightspeed-chache/**/*
-options.txt
 usercache.json
 minecraftinstance.json
 xaerominimap_entities.json
