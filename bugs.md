@@ -21,7 +21,9 @@
 - [x] clay mold recipe broken
 - [x] croptopia crops shouldn't be spawning
 - [x] stage prismarine stuff mostly to chapter 1
-- [ ] fix template world creation menu
+- [x] fix template world creation menu
+- [x] set default options but don't override other people's options
+- [x] remove resourcepacks and shaders from export
 
 ## Backlog
 
@@ -30,7 +32,6 @@
 - [ ] bees showing in jei too early
 - [ ] fire doesn't go away when you die visually
 - [ ] unification errors
-- [ ] set default options but don't override other people's options
 
 ### CI
 
