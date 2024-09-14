@@ -5,7 +5,7 @@
 	#Whether a template should be used instead of creating regular worlds
 	use_template = true
 	#Whether to use the world settings from the template and ignore player changes
-	use_template_world_settings = true
+	use_template_world_settings = false
 
 [world_creation_menu_settings]
 	#Toggle the game mode button
@@ -13,7 +13,7 @@
 	#Toggle the cheats button
 	disable_cheats = false
 	#Toggle the game rules button
-	disable_game_rules = true
+	disable_game_rules = false
 	#Toggle the difficulty button
 	disable_difficulty = false
 	#Toggle the data packs button
