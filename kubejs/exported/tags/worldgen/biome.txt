@@ -1,4 +1,4 @@
-To refresh this file, delete it and run /reload command again! Last updated: Apr 7, 2024, 5:19:49 PM
+To refresh this file, delete it and run /reload command again! Last updated: Sep 14, 2024, 9:03:51 AM
 
 #minecraft:has_structure/nether_fortress
 - #minecraft:is_nether
@@ -84,17 +84,12 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:is_ocean
 
 #croptopia:has_crop/coffee_beans
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
 
 #minecraft:has_structure/jungle_temple
 - minecraft:bamboo_jungle
 - minecraft:jungle
 
 #croptopia:has_crop/oat
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #dungeons_arise:has_structure/giant_mushroom_biomes
 - minecraft:plains
@@ -102,20 +97,12 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:sunflower_plains
 
 #croptopia:has_crop/kiwi
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
-- byg:araucaria_savanna?
-- byg:baobab_savanna?
 
 #bettermineshafts:has_structure/has_mineshaft_ice
 - minecraft:ice_spikes
 - minecraft:frozen_peaks
 
 #croptopia:has_crop/rice
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
 
 #minecraft:is_jungle
 - minecraft:bamboo_jungle
@@ -264,9 +251,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:lush_caves
 
 #croptopia:has_crop/basil
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
 
 #minecraft:has_structure/ocean_ruin_cold
 - minecraft:frozen_ocean
@@ -330,16 +314,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - hem:hayfever_fields
 
 #croptopia:has_crop/strawberry
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:old_growth_pine_taiga
-- minecraft:old_growth_spruce_taiga
-- minecraft:taiga
-- minecraft:snowy_taiga
-- minecraft:grove
 
 #blue_skies:everdawn
 - blue_skies:unorthodox_valley
@@ -398,25 +372,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:windswept_gravelly_hills
 
 #croptopia:has_crop/cantaloupe
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
-- byg:aspen_forest?
-- byg:borealis_grove?
-- byg:cherry_blossom_forest?
-- byg:cika_woods?
-- byg:ebony_woods?
-- byg:forgotten_forest?
-- byg:red_oak_forest?
-- byg:autumnal_forest?
-- byg:redwood_thicket?
-- byg:fragment_forest?
-- byg:twilight_meadow?
-- byg:weeping_witch_forest?
-- byg:temperate_rainforest?
 
 #forge:is_wet
 - minecraft:swamp
@@ -449,24 +404,12 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - twilightforest:spooky_forest
 
 #croptopia:has_crop/tea_leaves
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
 
 #dungeons_arise:has_structure/lighthouse_biomes
 - #minecraft:is_beach
 - minecraft:plains
 
 #croptopia:has_crop/spinach
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
 
 #twilightforest:valid_lich_tower_biomes
 - twilightforest:clearing
@@ -547,10 +490,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #the_bumblezone:pollinated
 
 #croptopia:has_crop/artichoke
-- minecraft:swamp
-- byg:bayou?
-- byg:cypress_swamplands?
-- byg:white_mangrove_marshes?
 
 #forge:is_savanna
 - minecraft:savanna
@@ -596,9 +535,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - the_bumblezone:pollinated_pillar
 
 #croptopia:has_crop/ginger
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
 
 #tconstruct:islands/enderslime
 - minecraft:end_highlands
@@ -607,22 +543,10 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:end_barrens
 
 #croptopia:has_crop/saguaro
-- minecraft:desert
-- byg:atacama_desert?
-- byg:windswept_dunes?
-- byg:windswept_desert?
-- byg:mojave_desert?
-- byg:red_rock_valley?
-- byg:firecracker_shrubland?
 
 #croptopia:has_crop/bellpepper
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #croptopia:has_crop/yam
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
 
 #minecraft:has_structure/village_desert
 - minecraft:desert
@@ -636,17 +560,11 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:grove
 
 #croptopia:has_crop/eggplant
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
 
 #twilightforest:valid_troll_cave_biomes
 - twilightforest:highlands
 
 #croptopia:has_crop/greenonion
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
 
 #betterstrongholds:has_structure/has_better_stronghold
 - #minecraft:is_mountain
@@ -674,49 +592,14 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:is_beach
 
 #croptopia:has_crop/blackberry
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:old_growth_pine_taiga
-- minecraft:old_growth_spruce_taiga
-- minecraft:taiga
-- minecraft:snowy_taiga
-- minecraft:grove
-- byg:aspen_forest?
-- byg:black_forest?
-- byg:borealis_grove?
-- byg:cherry_blossom_forest?
-- byg:cika_woods?
-- byg:coniferous_forest?
-- byg:ebony_woods?
-- byg:forgotten_forest?
-- byg:maple_taiga?
-- byg:red_oak_forest?
-- byg:autumnal_forest?
-- byg:autumnal_taiga?
-- byg:redwood_thicket?
-- byg:frosted_taiga?
-- byg:frosted_coniferous_forest?
-- byg:fragment_forest?
-- byg:twilight_meadow?
-- byg:weeping_witch_forest?
-- byg:temperate_rainforest?
-- byg:zelkova_forest?
 
 #minecraft:has_structure/village_plains
 - minecraft:plains
 - minecraft:meadow
 
 #croptopia:has_crop/honeydew
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
 
 #croptopia:has_crop/soybean
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #hexerei:has_structure/witch_hut_biomes
 - minecraft:swamp
@@ -744,13 +627,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:savanna_plateau
 
 #croptopia:has_crop/garlic
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
-- byg:crag_gardens?
-- byg:guiana_shield?
-- byg:jacaranda_forest?
-- byg:tropical_rainforest?
 
 #dungeons_arise:has_structure/aviary_biomes
 - minecraft:end_barrens
@@ -759,8 +635,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:the_end
 
 #croptopia:has_crop/mustard
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #minecraft:has_structure/swamp_hut
 - minecraft:swamp
@@ -775,12 +649,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:is_forest
 
 #croptopia:has_crop/barley
-- minecraft:plains
-- minecraft:sunflower_plains
-- minecraft:old_growth_pine_taiga
-- minecraft:old_growth_spruce_taiga
-- minecraft:taiga
-- minecraft:snowy_taiga
 
 #forge:is_water
 - #minecraft:is_ocean
@@ -790,13 +658,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:is_nether
 
 #croptopia:has_crop/squash
-- minecraft:old_growth_pine_taiga
-- minecraft:old_growth_spruce_taiga
-- minecraft:taiga
-- minecraft:snowy_taiga
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
 
 #tconstruct:islands/clay
 - #minecraft:is_deep_ocean
@@ -877,13 +738,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:swamp
 
 #croptopia:has_crop/peanut
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
-- byg:crag_gardens?
-- byg:guiana_shield?
-- byg:jacaranda_forest?
-- byg:tropical_rainforest?
 
 #minecraft:is_mountain
 - minecraft:meadow
@@ -917,25 +771,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:end_barrens
 
 #croptopia:has_crop/celery
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
-- byg:aspen_forest?
-- byg:borealis_grove?
-- byg:cherry_blossom_forest?
-- byg:cika_woods?
-- byg:ebony_woods?
-- byg:forgotten_forest?
-- byg:red_oak_forest?
-- byg:autumnal_forest?
-- byg:redwood_thicket?
-- byg:fragment_forest?
-- byg:twilight_meadow?
-- byg:weeping_witch_forest?
-- byg:temperate_rainforest?
 
 #twilightforest:valid_dark_tower_biomes
 - twilightforest:dark_forest_center
@@ -981,12 +816,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:end_midlands
 
 #croptopia:has_crop/grape
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
 
 #dungeons_arise:has_structure/illager_corsair_biomes
 - #minecraft:is_ocean
@@ -1042,80 +871,24 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:is_mountain
 
 #croptopia:has_crop/raspberry
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:old_growth_pine_taiga
-- minecraft:old_growth_spruce_taiga
-- minecraft:taiga
-- minecraft:snowy_taiga
-- minecraft:grove
-- byg:aspen_forest?
-- byg:black_forest?
-- byg:borealis_grove?
-- byg:cherry_blossom_forest?
-- byg:cika_woods?
-- byg:coniferous_forest?
-- byg:ebony_woods?
-- byg:forgotten_forest?
-- byg:maple_taiga?
-- byg:red_oak_forest?
-- byg:autumnal_forest?
-- byg:autumnal_taiga?
-- byg:redwood_thicket?
-- byg:frosted_taiga?
-- byg:frosted_coniferous_forest?
-- byg:fragment_forest?
-- byg:twilight_meadow?
-- byg:weeping_witch_forest?
-- byg:temperate_rainforest?
-- byg:zelkova_forest?
 
 #tofucraft:has_structure/tofu_castle
 - tofucraft:tofu_forest
 
 #croptopia:has_crop/chile_pepper
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #minecraft:is_river
 - minecraft:river
 - minecraft:frozen_river
 
 #croptopia:has_crop/turnip
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
-- byg:crag_gardens?
-- byg:guiana_shield?
-- byg:jacaranda_forest?
-- byg:tropical_rainforest?
 
 #croptopia:has_crop/tomato
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
 
 #twilightforest:valid_hydra_lair_biomes
 - twilightforest:fire_swamp
 
 #croptopia:has_crop/cucumber
-- minecraft:plains
-- minecraft:sunflower_plains
-- byg:allium_fields?
-- byg:amaranth_fields?
-- byg:autumnal_valley?
-- byg:temperate_grove?
-- byg:coconino_meadow?
-- byg:orchard?
-- byg:prairie?
-- byg:rose_fields?
-- byg:sierra_badlands?
 
 #undergarden:has_structure/catacombs
 - undergarden:ancient_sea
@@ -1141,17 +914,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - the_bumblezone:hive_wall
 
 #croptopia:has_crop/corn
-- minecraft:plains
-- minecraft:sunflower_plains
-- byg:allium_fields?
-- byg:amaranth_fields?
-- byg:autumnal_valley?
-- byg:temperate_grove?
-- byg:coconino_meadow?
-- byg:orchard?
-- byg:prairie?
-- byg:rose_fields?
-- byg:sierra_badlands?
 
 #twilightforest:valid_hedge_maze_biomes
 - twilightforest:clearing
@@ -1188,13 +950,8 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:is_beach
 
 #croptopia:has_crop/vanilla
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
 
 #croptopia:has_crop/sweetpotato
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #forge:without_monster_spawns
 - minecraft:mushroom_fields
@@ -1233,30 +990,8 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - blue_skies:moonlit_reservoir
 
 #croptopia:has_crop/rutabaga
-- minecraft:old_growth_pine_taiga
-- minecraft:old_growth_spruce_taiga
-- minecraft:taiga
-- minecraft:snowy_taiga
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
-- byg:araucaria_savanna?
-- byg:baobab_savanna?
-- byg:black_forest?
-- byg:coniferous_forest?
-- byg:maple_taiga?
-- byg:autumnal_taiga?
-- byg:frosted_taiga?
-- byg:frosted_coniferous_forest?
-- byg:zelkova_forest?
 
 #croptopia:has_crop/cauliflower
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
 
 #forge:is_hot
 - minecraft:desert
@@ -1313,20 +1048,8 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:windswept_savanna
 
 #croptopia:has_crop/cranberry
-- minecraft:swamp
 
 #croptopia:has_crop/greenbean
-- minecraft:plains
-- minecraft:sunflower_plains
-- byg:allium_fields?
-- byg:amaranth_fields?
-- byg:autumnal_valley?
-- byg:temperate_grove?
-- byg:coconino_meadow?
-- byg:orchard?
-- byg:prairie?
-- byg:rose_fields?
-- byg:sierra_badlands?
 
 #the_bumblezone:sugar_water
 - the_bumblezone:sugar_water_floor
@@ -1351,13 +1074,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:sunflower_plains
 
 #croptopia:has_crop/rhubarb
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
-- byg:crag_gardens?
-- byg:guiana_shield?
-- byg:jacaranda_forest?
-- byg:tropical_rainforest?
 
 #minecraft:has_structure/ocean_monument
 - #minecraft:is_deep_ocean
@@ -1379,9 +1095,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #minecraft:has_structure/ruined_portal_jungle
 - #minecraft:is_jungle
-
-#za:has_structure/oasis
-- minecraft:desert
 
 #bettermineshafts:has_structure/has_mineshaft_spruce_snowy
 - minecraft:snowy_taiga
@@ -1431,17 +1144,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:meadow
 
 #croptopia:has_crop/kale
-- minecraft:plains
-- minecraft:sunflower_plains
-- byg:allium_fields?
-- byg:amaranth_fields?
-- byg:autumnal_valley?
-- byg:temperate_grove?
-- byg:coconino_meadow?
-- byg:orchard?
-- byg:prairie?
-- byg:rose_fields?
-- byg:sierra_badlands?
 
 #forge:is_lush
 - minecraft:lush_caves
@@ -1454,17 +1156,8 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:eroded_badlands
 
 #croptopia:has_crop/hops
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
 
 #croptopia:has_crop/tomatillo
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
 
 #minecraft:has_structure/woodland_mansion
 - minecraft:dark_forest
@@ -1473,17 +1166,11 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:the_void
 
 #croptopia:has_crop/turmeric
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
-- byg:araucaria_savanna?
-- byg:baobab_savanna?
 
 #twilightforest:valid_final_castle_biomes
 - twilightforest:final_plateau
 
 #croptopia:has_crop/currant
-- minecraft:swamp
 
 #minecraft:has_structure/ocean_ruin_warm
 - minecraft:lukewarm_ocean
@@ -1495,20 +1182,14 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - graveyard_biomes:ancient_dead_coral_reef
 
 #croptopia:has_crop/blackbean
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
 
 #forge:is_icy
 - minecraft:snowy_plains
 - minecraft:ice_spikes
 
 #betteroceanmonuments:has_structure/better_ocean_monument
-- #minecraft:is_deep_ocean
-- #c:deep_ocean?
+- blue_skies:deep_peeking_ocean
+- blue_skies:peeking_ocean
 
 #tofucraft:has_structure/tofu_village
 - tofucraft:tofu_plains
@@ -1519,13 +1200,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:mushroom_fields
 
 #croptopia:has_crop/pineapple
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
-- byg:crag_gardens?
-- byg:guiana_shield?
-- byg:jacaranda_forest?
-- byg:tropical_rainforest?
 
 #blue_skies:shade_monitor/white_and_purple
 - blue_skies:crystal_roughs
@@ -1540,40 +1214,11 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - blue_skies:crystal_dunes_spikes
 
 #croptopia:has_crop/radish
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
-- byg:aspen_forest?
-- byg:borealis_grove?
-- byg:cherry_blossom_forest?
-- byg:cika_woods?
-- byg:ebony_woods?
-- byg:forgotten_forest?
-- byg:red_oak_forest?
-- byg:autumnal_forest?
-- byg:redwood_thicket?
-- byg:fragment_forest?
-- byg:twilight_meadow?
-- byg:weeping_witch_forest?
-- byg:temperate_rainforest?
 
 #minecraft:has_structure/village_savanna
 - minecraft:savanna
 
 #croptopia:has_crop/blueberry
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:old_growth_pine_taiga
-- minecraft:old_growth_spruce_taiga
-- minecraft:taiga
-- minecraft:snowy_taiga
-- minecraft:grove
 
 #minecraft:has_structure/village_taiga
 - minecraft:taiga
@@ -1582,12 +1227,8 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:is_forest
 
 #croptopia:has_crop/lettuce
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #croptopia:has_crop/pepper
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #forge:is_end
 - minecraft:the_end
@@ -1625,8 +1266,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - twilightforest:enchanted_forest
 
 #croptopia:has_crop/broccoli
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #forge:is_underground
 - minecraft:lush_caves
@@ -1664,9 +1303,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:windswept_savanna
 
 #croptopia:has_crop/olive
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
 
 #minecraft:is_taiga
 - minecraft:taiga
@@ -1684,16 +1320,8 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - twilightforest:dark_forest
 
 #croptopia:has_crop/elderberry
-- minecraft:forest
-- minecraft:flower_forest
-- minecraft:birch_forest
-- minecraft:dark_forest
-- minecraft:old_growth_birch_forest
-- minecraft:grove
 
 #croptopia:has_crop/cabbage
-- minecraft:plains
-- minecraft:sunflower_plains
 
 #minecraft:has_structure/village_snowy
 - minecraft:snowy_plains
@@ -1713,9 +1341,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - minecraft:warm_ocean
 
 #croptopia:has_crop/leek
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
 
 #dungeons_arise:has_structure/illager_galley_biomes
 - #minecraft:is_ocean
@@ -1748,17 +1373,10 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #minecraft:is_jungle
 
 #croptopia:has_crop/zucchini
-- minecraft:savanna
-- minecraft:savanna_plateau
-- minecraft:windswept_savanna
 
 #croptopia:has_crop/asparagus
-- minecraft:swamp
 
 #croptopia:has_crop/onion
-- minecraft:jungle
-- minecraft:sparse_jungle
-- minecraft:bamboo_jungle
 
 #occultism:allows_shub_niggurath_transformation
 - #minecraft:is_forest

@@ -1,4 +1,4 @@
-To refresh this file, delete it and run /reload command again! Last updated: Apr 7, 2024, 5:19:55 PM
+To refresh this file, delete it and run /reload command again! Last updated: Sep 14, 2024, 9:03:54 AM
 
 #minecraft:water
 - minecraft:water
@@ -177,7 +177,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #tconstruct:molten_quartz
 - #tconstruct:molten_emerald
 - #forge:molten_refined_glowstone
-- #forge:molten_bloodbrass
 
 #forge:molten_silver
 - #tconstruct:molten_silver
@@ -204,9 +203,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:sludge
 - industrialforegoing:sludge
-
-#forge:molten_bloodbrass
-- #bloodsmeltery:molten_bloodbrass
 
 #forge:molten_enderium
 - #tconstruct:molten_enderium
@@ -306,19 +302,11 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - mekanism:flowing_sulfuric_acid
 - vintageimprovements:sulfuric_acid
 
-#bloodsmeltery:destructive_will
-- bloodsmeltery:destructive_will
-- bloodsmeltery:flowing_destructive_will
-
 #forge:lubricant_cracked
 - immersivepetroleum:lubricant_cracked
 
 #forge:ender
 - #tconstruct:molten_ender
-
-#bloodsmeltery:default_will
-- bloodsmeltery:default_will
-- bloodsmeltery:flowing_default_will
 
 #tconstruct:rabbit_stew
 - tconstruct:rabbit_stew
@@ -342,10 +330,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - mekanismgenerators:deuterium
 - mekanismgenerators:flowing_deuterium
 
-#bloodsmeltery:steadfast_will
-- bloodsmeltery:steadfast_will
-- bloodsmeltery:flowing_steadfast_will
-
 #forge:hydrofluoric_acid
 - mekanism:hydrofluoric_acid
 - mekanism:flowing_hydrofluoric_acid
@@ -362,13 +346,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - create_enchantment_industry:experience
 - create_enchantment_industry:flowing_hyper_experience
 - create_enchantment_industry:hyper_experience
-
-#bloodsmeltery:demon_will
-- #bloodsmeltery:default_will
-- #bloodsmeltery:corrosive_will
-- #bloodsmeltery:destructive_will
-- #bloodsmeltery:vengeful_will
-- #bloodsmeltery:steadfast_will
 
 #tconstruct:molten_tin
 - tconstruct:molten_tin
@@ -394,10 +371,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #create:bottomless/deny
 
-#bloodsmeltery:corrosive_will
-- bloodsmeltery:corrosive_will
-- bloodsmeltery:flowing_corrosive_will
-
 #forge:fusion_fuel
 - mekanismgenerators:fusion_fuel
 - mekanismgenerators:flowing_fusion_fuel
@@ -407,10 +380,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 
 #forge:molten_refined_glowstone
 - #tconstruct:molten_refined_glowstone
-
-#bloodsmeltery:vengeful_will
-- bloodsmeltery:vengeful_will
-- bloodsmeltery:flowing_vengeful_will
 
 #undergarden:virulent
 - undergarden:virulent_mix_source
@@ -479,10 +448,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #tconstruct:venom
 - tconstruct:venom
 - tconstruct:flowing_venom
-
-#bloodsmeltery:molten_bloodbrass
-- bloodsmeltery:molten_bloodbrass
-- bloodsmeltery:flowing_molten_bloodbrass
 
 #forge:visual/honey
 - the_bumblezone:honey_fluid_still
@@ -800,9 +765,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:gasoline_additives
 - immersivepetroleum:gasoline_additives
 
-#forge:molten_hellforged
-- bloodsmeltery:molten_hellforged
-
 #forge:oxygen
 - mekanism:oxygen
 - mekanism:flowing_oxygen
@@ -881,6 +843,10 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #forge:experience
 - pneumaticcraft:memory_essence
 - industrialforegoing:essence
+- experienceobelisk:cognitium
+- mob_grinding_utils:fluid_xp?
+- cofh_core:experience?
+- industrial_foregoing:essence?
 
 #forge:diesel
 - pneumaticcraft:diesel
@@ -896,9 +862,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 - #tconstruct:beetroot_soup
 - #tconstruct:mushroom_stew
 - #tconstruct:rabbit_stew
-
-#forge:monster_essence
-- #bloodsmeltery:demon_will
 
 #forge:molten_gold
 - #tconstruct:molten_gold
@@ -976,9 +939,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #sliceanddice:burning
 - minecraft:lava
 
-#tconstruct:metal_like
-- #forge:molten_bloodbrass
-
 #tconstruct:molten_zinc
 - tconstruct:molten_zinc
 - tconstruct:flowing_molten_zinc
@@ -1010,9 +970,6 @@ To refresh this file, delete it and run /reload command again! Last updated: Apr
 #tconstruct:molten_hepatizon
 - tconstruct:molten_hepatizon
 - tconstruct:flowing_molten_hepatizon
-
-#forge:demon_will
-- #bloodsmeltery:demon_will
 
 #create:no_infinite_draining
 - mekanismgenerators:bioethanol
