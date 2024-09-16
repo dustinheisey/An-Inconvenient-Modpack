@@ -30,7 +30,7 @@
 - [x] add kaolinite advancement
 - [x] remove extra charcoal block recipe
 - [x] change alloy kiln advancement to trigger on completing multiblock
-- [ ] can't use alloy kiln because it's staged later
+- [x] can't use alloy kiln because it's staged later
 
 ## Backlog
 
