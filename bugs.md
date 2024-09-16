@@ -25,6 +25,14 @@
 - [x] set default options but don't override other people's options
 - [x] remove resourcepacks and shaders from export
 
+## v0.6.6
+
+- [ ] recipe stages for cooking pot, esoteric spool
+- [ ] add kaolinite advancement
+- [ ] remove extra charcoal block recipe
+- [ ] change alloy kiln advancement to trigger on completing multiblock
+- [ ] can't use alloy kiln because it's staged later
+
 ## Backlog
 
 - [ ] gingerbread man showing in jei too early
