@@ -27,3 +27,4 @@ config/oculus.properties
 config/xaeroworldmap-common.txt
 .curseclient
 rhino.local.properties
+options.txt
