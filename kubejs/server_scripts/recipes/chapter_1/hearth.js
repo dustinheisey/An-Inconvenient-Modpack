@@ -447,12 +447,6 @@ onEvent('recipes', event => {
                                   ].forEach(id => event.remove({id: id}));
 
                                   event.shaped(
-                                    'charcoal_pit:charcoal_block',
-                                    ['aaa', 'aaa', 'aaa'],
-                                    {a: 'minecraft:charcoal'}
-                                  );
-
-                                  event.shaped(
                                     'charcoal_pit:fire_starter',
                                     [' a', 'b '],
                                     {

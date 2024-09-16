@@ -29,7 +29,7 @@
 
 - [ ] recipe stages for cooking pot, esoteric spool
 - [ ] add kaolinite advancement
-- [ ] remove extra charcoal block recipe
+- [x] remove extra charcoal block recipe
 - [ ] change alloy kiln advancement to trigger on completing multiblock
 - [ ] can't use alloy kiln because it's staged later
 
