@@ -4849,6 +4849,7 @@ onEvent('tags.items', event => {
       'immersiveengineering:alloybrick',
       'immersiveengineering:slab_alloybrick',
       'immersiveengineering:hammer',
+      'immersiveengineering:alloy_smelter',
     ],
     chapter_3: [
       'immersiveengineering:shader_bag_uncommon',
