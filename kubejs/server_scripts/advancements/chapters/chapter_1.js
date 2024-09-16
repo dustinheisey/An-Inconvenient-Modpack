@@ -203,6 +203,12 @@ onEvent('server.datapack.high_priority', event => {
                               },
                             ],
                           },
+                          {
+                            item: 'rankine:kaolinite',
+                            title: "Porcelain's Potential",
+                            description:
+                              'Crush some kaolin found in the desert to collect kaolinite',
+                          },
                         ],
                       },
                     ],
