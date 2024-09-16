@@ -449,11 +449,25 @@ onEvent('server.datapack.high_priority', event => {
                                               },
                                               {
                                                 icon: 'immersiveengineering:alloy_smelter',
-                                                item: 'immersiveengineering:alloybrick',
                                                 frame: 'goal',
                                                 title: 'Alloy Mastery',
                                                 description:
                                                   "Craft allow kiln bricks and create an allow kiln with your engineer's hammer",
+                                                criteria: {
+                                                  form_multiblock: {
+                                                    trigger:
+                                                      'immersiveengineering:multiblock_formed',
+                                                    conditions: {
+                                                      multiblock:
+                                                        'immersiveengineering:multiblocks/alloy_smelter',
+                                                      item: {
+                                                        items: [
+                                                          'immersiveengineering:hammer',
+                                                        ],
+                                                      },
+                                                    },
+                                                  },
+                                                },
                                                 children: [
                                                   {
                                                     item: 'rankine:bronze_ingot',
