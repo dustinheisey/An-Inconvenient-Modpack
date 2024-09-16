@@ -27,7 +27,6 @@
 
 ## v0.6.6
 
-- [ ] recipe stages for cooking pot, esoteric spool
 - [x] add kaolinite advancement
 - [x] remove extra charcoal block recipe
 - [x] change alloy kiln advancement to trigger on completing multiblock
@@ -40,6 +39,7 @@
 - [ ] bees showing in jei too early
 - [ ] fire doesn't go away when you die visually
 - [ ] unification errors
+- [ ] set correct recipe stages for all custom recipes
 - [ ] fix chapter 1 advancement page icons so it fits in one page height
 
 ### CI
