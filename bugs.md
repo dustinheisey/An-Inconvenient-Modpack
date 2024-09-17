@@ -32,6 +32,10 @@
 - [x] change alloy kiln advancement to trigger on completing multiblock
 - [x] can't use alloy kiln because it's staged later
 
+## v0.6.7
+
+- [x] template world not loading
+
 ## Backlog
 
 - [ ] gingerbread man showing in jei too early
