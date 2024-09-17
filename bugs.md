@@ -34,7 +34,7 @@
 
 ## v0.6.7
 
-- [ ] template world not loading
+- [x] template world not loading
 
 ## Backlog
 
