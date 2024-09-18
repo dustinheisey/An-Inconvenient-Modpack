@@ -36,6 +36,18 @@
 
 - [x] template world not loading
 
+## v0.6.8
+
+Goals: _ceramic bucket, brick hopper, thirst_
+
+- [ ] redstone engineering block recipe stage
+- [ ] kettle recipe stage
+- [ ] copper sheetmetal recipe stage
+- [ ] skeleton on horse spawning chapter 1
+- [ ] labels chapter 1
+- [ ] pressure plates stage to chapter 1
+- [ ] undead soul dropping from skeleton
+
 ## Backlog
 
 - [ ] gingerbread man showing in jei too early
