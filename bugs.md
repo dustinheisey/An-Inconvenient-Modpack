@@ -38,8 +38,6 @@
 
 ## v0.6.8
 
-Goals: _ceramic bucket, brick hopper, thirst_
-
 - [ ] redstone engineering block recipe stage
 - [ ] kettle recipe stage
 - [ ] copper sheetmetal recipe stage
@@ -47,6 +45,80 @@ Goals: _ceramic bucket, brick hopper, thirst_
 - [ ] labels chapter 1
 - [ ] pressure plates stage to chapter 1
 - [ ] undead soul dropping from skeleton
+- [ ] ceramic bucket doesn't show fluid in hand
+- [ ] brick hopper doesn't input into campfire
+
+## v0.6.9
+
+- [ ] audit recipe stages
+- [ ] pumpkin feast use jack o lantern
+- [ ] carved pumpkins stage to chapter 1
+- [ ] experience bar number clipping behind temperature number
+- [ ] limestone available in world gen
+- [ ] evaluate limestone use
+- [ ] spirit orb not able to be picked up if you get an advancement when your inventory is full
+- [ ] fix mixing barrel automation
+
+## v0.6.10
+
+- [ ] icebox only uses cobblestone slab
+- [ ] crushing recipes are not working correctly
+- [ ] icebox and boiler advancements?
+- [ ] crush block of selenite into selenite shard
+- [ ] need to crush deepslate to get cobbled deepslate
+- [ ] deepslate layer is too small
+- [ ] have to have cheats enabled to do locatebiome, rtp
+- [ ] lost cities are too close to spawn
+- [ ] regenerate the template world
+- [ ] boiler recipe not working
+- [ ] fins recipe stage to chapter 2
+
+## v0.6.11
+
+- [ ] altimeter from copper recipe
+- [ ] should be able to light torch with campfire
+- [ ] farmers delight mushrooms chapter 1
+- [ ] powdered snow block staging
+- [ ] biometer chapter 1
+- [ ] find more uses for tin in chapter 1
+- [ ] find lang title for dead coral reef
+- [ ] lost cities are too common
+- [ ] rankine clays drop clay balls
+- [ ] crushing cobble to gravel to sand to silt to clay
+- [ ] uses for calcite
+- [ ] spirit orbs are stages to chapter 5.1
+- [ ] get rid of flowers from overworld
+- [ ] make more uses for cactus in chapter 1
+- [ ] maybe add traveller's titles back
+- [ ] quartzite crushing recipe
+- [ ] kaolinite spawn y=0 to y=80
+- [ ] make kaolinite easier to find
+
+## v0.6.12
+
+Goals: quicklime, mortar, fire clay, refractory brick, beehive oven
+
+## v0.6.13
+
+Goals: bone char, grog, porcelain clay, porcelain, high refractory bricks
+
+## v0.6.14
+
+Goals: alloy kiln, engineer's hammer, bronze, bronze armor, bronze hammer
+
+## v0.6.15
+
+Goals: plagioclase fledspar, graphite, amethyst shards, galena, acanthite, selenite shards, goddess heart, goddess statue, stamina and health
+
+## v0.6.16
+
+Goals: bloomery, community service, iron ingot, cauldron, salt evaporation
+
+## v0.6.17
+
+Goals: Lost city, leather farm, pumpkin feast, map, hearth, nightmare
+
+- [ ]
 
 ## Backlog
 
