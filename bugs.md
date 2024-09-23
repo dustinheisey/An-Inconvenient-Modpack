@@ -96,19 +96,34 @@
 
 ## v0.6.12
 
-Goals: quicklime, mortar, fire clay, refractory brick, beehive oven
-
-## v0.6.13
-
-Goals: bone char, grog, porcelain clay, porcelain, high refractory bricks
+- [ ] fire clay should work with all types of sand
+- [ ] crushing recipes for all types of gravel and sand
+- [ ] less fire clay in a recipe
+- [ ] make rankine book recipe shapeless
+- [ ] update rankine text to fit modpack
+- [ ] charcoal pit exploit
+- [ ] crash?
 
 ## v0.6.14
 
-Goals: alloy kiln, engineer's hammer, bronze, bronze armor, bronze hammer
+- [ ] alloy kiln out of high refractory bricks
+- [ ] make hearth out of ultra high refractory bricks
+- [ ] look into upgradable tools
+- [ ] look into method of getting plagioclase feldspar
+
+## v0.6.13
+
+- [ ] porcelain clay to porcelain clay bricks
+- [ ] bronze hammer to crush porcelain
+- [ ] high fire clay recipe 60 fire clay, 40 bone char 20 grog
+- [ ] high fire clay return on investment
 
 ## v0.6.15
 
-Goals: plagioclase fledspar, graphite, amethyst shards, galena, acanthite, selenite shards, goddess heart, goddess statue, stamina and health
+Goals: amethyst shards, galena, acanthite, selenite shards, goddess heart, goddess statue, stamina and health
+
+- [ ] tin ingot from tin block
+- [ ] wadslyestone chapter 1
 
 ## v0.6.16
 
@@ -117,8 +132,6 @@ Goals: bloomery, community service, iron ingot, cauldron, salt evaporation
 ## v0.6.17
 
 Goals: Lost city, leather farm, pumpkin feast, map, hearth, nightmare
-
-- [ ]
 
 ## Backlog
 
