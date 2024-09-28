@@ -104,14 +104,14 @@
 - [ ] charcoal pit exploit
 - [ ] crash?
 
-## v0.6.14
+## v0.6.13
 
 - [ ] alloy kiln out of high refractory bricks
 - [ ] make hearth out of ultra high refractory bricks
 - [ ] look into upgradable tools
 - [ ] look into method of getting plagioclase feldspar
 
-## v0.6.13
+## v0.6.14
 
 - [ ] porcelain clay to porcelain clay bricks
 - [ ] bronze hammer to crush porcelain
@@ -120,18 +120,33 @@
 
 ## v0.6.15
 
-Goals: amethyst shards, galena, acanthite, selenite shards, goddess heart, goddess statue, stamina and health
-
 - [ ] tin ingot from tin block
 - [ ] wadslyestone chapter 1
 
 ## v0.6.16
 
-Goals: bloomery, community service, iron ingot, cauldron, salt evaporation
+Goals: bloomery, community service, iron ingot, hearth, nightmare
 
-## v0.6.17
-
-Goals: Lost city, leather farm, pumpkin feast, map, hearth, nightmare
+- [ ] lead block to lead ingot recipe
+- [ ] maybe tin block to tin ingot recipe
+- [ ] redo lost cities
+- [ ] iron door chapter
+- [ ] glass panes chapter
+- [ ] lost city too easy
+- [ ] black screen randomly
+- [ ] metal doors don't open
+- [ ] not enough mobs in lost city
+- [ ] living flesh hard to find in lost city
+- [ ] iron bars staging
+- [ ] chicken's in chapter 1
+- [ ] cyan terracotta staging
+- [ ] look into zombie sounds
+- [ ] transparent border in antique atlas
+- [ ] pumpkins chapter 1
+- [ ] bloomery doesn't work with charcoal fragment
+- [ ] copper cauldron recipe
+- [ ] hearth doesn't work with charcoal fragment
+- [ ] spawn in a hot biome
 
 ## Backlog
 
