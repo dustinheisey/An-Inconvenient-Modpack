@@ -38,15 +38,16 @@
 
 ## v0.6.8
 
-- [ ] redstone engineering block recipe stage
-- [ ] kettle recipe stage
-- [ ] copper sheetmetal recipe stage
+- [ ] fix recipe stages
+  - [ ] redstone engineering block recipe stage
+  - [ ] kettle recipe stage
+  - [ ] copper sheetmetal recipe stage
 - [ ] skeleton on horse spawning chapter 1
 - [ ] labels chapter 1
 - [ ] pressure plates stage to chapter 1
 - [ ] undead soul dropping from skeleton
 - [ ] ceramic bucket doesn't show fluid in hand
-- [ ] brick hopper doesn't input into campfire
+- [x] brick hopper doesn't input into campfire [wont fix, intented functionality]
 - [ ] add % info to tree stripping jei
 
 ## v0.6.9
