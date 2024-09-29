@@ -3,7 +3,7 @@ name: Package Modpack
 on:
   push:
     branches:
-      - 0.6.8
+      - v0.6.8
 
 jobs:
   package_modpack:
