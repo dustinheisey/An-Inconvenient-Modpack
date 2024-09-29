@@ -38,10 +38,6 @@
 
 ## v0.6.8
 
-- [ ] fix recipe stages
-  - [ ] redstone engineering block recipe stage
-  - [ ] kettle recipe stage
-  - [ ] copper sheetmetal recipe stage
 - [x] skeleton on horse spawning chapter 1
 - [x] labels chapter 1
 - [x] pressure plates stage to chapter 1
@@ -149,6 +145,10 @@ Goals: bloomery, community service, iron ingot, hearth, nightmare
 
 ## Backlog
 
+- [ ] fix all recipe stages
+  - [ ] redstone engineering block recipe stage
+  - [ ] kettle recipe stage
+  - [ ] copper sheetmetal recipe stage
 - [ ] gingerbread man showing in jei too early
 - [ ] forgotten knife showing in jei too early
 - [ ] bees showing in jei too early
