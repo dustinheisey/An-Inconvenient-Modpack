@@ -42,10 +42,10 @@
   - [ ] redstone engineering block recipe stage
   - [ ] kettle recipe stage
   - [ ] copper sheetmetal recipe stage
-- [ ] skeleton on horse spawning chapter 1
+- [x] skeleton on horse spawning chapter 1
 - [x] labels chapter 1
 - [x] pressure plates stage to chapter 1
-- [ ] undead soul dropping from skeleton
+- [x] undead soul dropping from skeleton
 - [x] brick hopper doesn't input into campfire [wont fix, intented functionality]
 
 ## v0.6.9

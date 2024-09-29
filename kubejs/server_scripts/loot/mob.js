@@ -175,6 +175,7 @@ onEvent('lootjs', event => {
   removeLoot('minecraft:ender_pearl', 'occultism:possessed_enderman');
   removeLoot('minecraft:mutton', 'blue_skies:stardust_ram');
   removeLoot('minecraft:mutton', 'twilightforest:bighorn_sheep');
+  removeLoot('endrem:undead_soul');
 
   colors.forEach(color => {
     removeLoot(`minecraft:${color}_wool`, 'blue_skies:stardust_ram');

@@ -11,6 +11,14 @@
   },
 
   {
+    "mob": "minecraft:skeleton_horse",
+    "nbt": {
+      "SkeletonTrap": 1
+    },
+    "result": "deny"
+  },
+
+  {
     "mob": ["biomancy:flesh_blob"],
     "dimension": "minecraft:overworld",
     "incity": true,
