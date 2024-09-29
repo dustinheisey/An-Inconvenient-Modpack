@@ -47,6 +47,7 @@
 - [ ] undead soul dropping from skeleton
 - [ ] ceramic bucket doesn't show fluid in hand
 - [ ] brick hopper doesn't input into campfire
+- [ ] add % info to tree stripping jei
 
 ## v0.6.9
 
