@@ -1,6 +1,6 @@
 # Bugs
 
-## v0.6.4
+## v0.6.4 (Complete)
 
 - [x] put journal on spawn item
 - [x] fire starter advancement text
@@ -13,7 +13,7 @@
 - [x] advancement text low contrast
 - [x] torch render bug
 
-## v0.6.5
+## v0.6.5 (Complete)
 
 - [x] update mods
 - [x] speed buff from path is too great
@@ -25,14 +25,14 @@
 - [x] set default options but don't override other people's options
 - [x] remove resourcepacks and shaders from export
 
-## v0.6.6
+## v0.6.6 (Complete)
 
 - [x] add kaolinite advancement
 - [x] remove extra charcoal block recipe
 - [x] change alloy kiln advancement to trigger on completing multiblock
 - [x] can't use alloy kiln because it's staged later
 
-## v0.6.7
+## v0.6.7 (Complete)
 
 - [x] template world not loading
 
@@ -43,7 +43,7 @@
   - [ ] kettle recipe stage
   - [ ] copper sheetmetal recipe stage
 - [ ] skeleton on horse spawning chapter 1
-- [ ] labels chapter 1
+- [x] labels chapter 1
 - [x] pressure plates stage to chapter 1
 - [ ] undead soul dropping from skeleton
 - [x] brick hopper doesn't input into campfire [wont fix, intented functionality]
