@@ -44,15 +44,12 @@
   - [ ] copper sheetmetal recipe stage
 - [ ] skeleton on horse spawning chapter 1
 - [ ] labels chapter 1
-- [ ] pressure plates stage to chapter 1
+- [x] pressure plates stage to chapter 1
 - [ ] undead soul dropping from skeleton
-- [ ] ceramic bucket doesn't show fluid in hand
 - [x] brick hopper doesn't input into campfire [wont fix, intented functionality]
-- [ ] add % info to tree stripping jei
 
 ## v0.6.9
 
-- [ ] audit recipe stages
 - [ ] pumpkin feast use jack o lantern
 - [ ] carved pumpkins stage to chapter 1
 - [ ] experience bar number clipping behind temperature number
@@ -159,6 +156,9 @@ Goals: bloomery, community service, iron ingot, hearth, nightmare
 - [ ] unification errors
 - [ ] set correct recipe stages for all custom recipes
 - [ ] fix chapter 1 advancement page icons so it fits in one page height
+- [ ] add % info to tree stripping jei
+- [ ] ceramic bucket doesn't show fluid in hand
+- [ ] optimize material staging and remove all extra code
 
 ### CI
 
