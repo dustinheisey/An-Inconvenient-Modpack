@@ -18,26 +18,7 @@ on:
             - "release/*"
 
 jobs:
-    mods:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/cache@v3
-              with:
-                  path: mods
-                  key: ${{ github.run_id }}-mods
-                  restore-keys: |
-                      ${{ github.run_id }}-instancesync
-
-            - run: find . -name 'kubejs-forge-*' -delete
-            - uses: actions/download-artifact@v3
-              with:
-                  name: compiled (kubejs)
-                  path: mods
-
-            - run: ls
-              working-directory: mods
     server:
-        needs: [mods]
         runs-on: ubuntu-latest
         timeout-minutes: 20
         strategy:
