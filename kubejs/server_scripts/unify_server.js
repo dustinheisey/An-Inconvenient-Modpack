@@ -88,7 +88,7 @@ let customtags = [
 
 
 // Generator which splits equal sign comma stuff
-function esplit(str) {
+function* esplit(str) {
     let data = str.split("=")
     if (data.length == 1) {
         for (let v of data[0].split(",")) {

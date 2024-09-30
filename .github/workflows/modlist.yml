@@ -15,6 +15,9 @@ on:
             - .github/workflows/modlist.yml
             - automation/node/modlist-generate.js
 
+permissions:
+  contents: write
+
 jobs:
     job:
         runs-on: ubuntu-latest
