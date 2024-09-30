@@ -18,25 +18,8 @@ on:
             - "release/*"
 
 jobs:
-    instancesync:
-        runs-on: ubuntu-latest
-        timeout-minutes: 2
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-java@v3
-              with:
-                  distribution: "temurin"
-                  java-version: "11"
-
-            - uses: actions/cache@v3
-              with:
-                  path: mods
-                  key: ${{ github.run_id }}-instancesync
-
-            - run: java -jar InstanceSync.jar
     mods:
         runs-on: ubuntu-latest
-        needs: [instancesync]
         steps:
             - uses: actions/cache@v3
               with:
@@ -123,9 +106,8 @@ jobs:
 
             - run: tree
 
-            - run: node .github/actions/ci/log-kubejs-warnings.js
+            - run: node .github/actions/ci/node/log-kubejs-warnings.js
             - run: node .github/actions/ci/kubejs-recipes.js
-            - run: node .github/actions/ci/kubejs-list-hose-pulley-fluids.js
 
             - run: node .github/actions/ci/node/kubejs-list-global-variables.js
 
