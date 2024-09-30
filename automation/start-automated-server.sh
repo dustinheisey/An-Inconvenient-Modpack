@@ -82,11 +82,6 @@ install_server(){
 		echo "INFO: Installing Forge Server" >>serverstart.log 2>&1
 		java -jar forge-${MCVER}-${FORGEVER}-installer.jar --installServer >>serverstart.log 2>&1
 
-		if [ ! -f forge-${MCVER}-${FORGEVER}.jar ]; then
-			echo "ERROR: Forge jar not created after installation." >>serverstart.log 2>&1
-			exit 1
-		fi
-
 		echo "Deleting Forge installer (no longer needed)"
 		echo "INFO: Deleting installer.jar" >>serverstart.log 2>&1
 		rm -rf installer.jar  >>serverstart.log 2>&1
