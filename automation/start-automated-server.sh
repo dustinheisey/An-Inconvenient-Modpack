@@ -80,7 +80,7 @@ install_server(){
 		mv -f ./OpenComputersMod*lua* ./DELETEME >>serverstart.log 2>&1
 		echo "Installing Forge Server, please wait..."
 		echo "INFO: Installing Forge Server" >>serverstart.log 2>&1
-		java -jar installer.jar --installServer >>serverstart.log 2>&1
+		java -jar forge-${MCVER}-${FORGEVER}-installer.jar --installServer >>serverstart.log 2>&1
 
 		if [ ! -f forge-${MCVER}-${FORGEVER}.jar ]; then
 			echo "ERROR: Forge jar not created after installation." >>serverstart.log 2>&1
