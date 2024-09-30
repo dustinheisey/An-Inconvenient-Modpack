@@ -3,10 +3,10 @@ name: Prettier
 on:
   push:
     branches:
-      - "fix/**"
-      - "feat/**"
-      - "chore/**"
-      - "tech/**"
+      - "fix/*"
+      - "feat/*"
+      - "chore/*"
+      - "tech/*"
       - "develop"
 
 jobs:

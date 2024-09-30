@@ -1,13 +1,15 @@
+# Almost copied from https://github.com/EnigmaticaModpacks/Enigmatica6/blob/master/.github/workflows/modlist.yml
+
 name: Update Modlist
 
 on:
     push:
         branches:
             - "develop"
-            - "fix/**"
-            - "feat/**"
-            - "chore/**"
-            - "tech/**"
+            - "fix/*"
+            - "feat/*"
+            - "chore/*"
+            - "tech/*"
         paths:
             - MODLIST.md
             - minecraftinstance.json
