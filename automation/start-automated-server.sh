@@ -42,11 +42,7 @@ install_server(){
 			echo "Skipping download. Using existing installer.jar"
 		fi
 	else
-		if [ "${FORGEURL}" = "DISABLE" ]; then
-			export URL="https://maven.minecraftforge.net/net/minecraftforge/forge/${MCVER}-${FORGEVER}/forge-${MCVER}-${FORGEVER}-installer.jar"
-		else
-			export URL="${FORGEURL}"
-		fi
+		export URL="https://maven.minecraftforge.net/net/minecraftforge/forge/${MCVER}-${FORGEVER}/forge-${MCVER}-${FORGEVER}-installer.jar"
 		echo $URL
 		which wget >> /dev/null
 		if [ $? -eq 0 ]; then
@@ -80,8 +76,7 @@ install_server(){
 		mv -f ./OpenComputersMod*lua* ./DELETEME >>serverstart.log 2>&1
 		echo "Installing Forge Server, please wait..."
 		echo "INFO: Installing Forge Server" >>serverstart.log 2>&1
-		java -jar forge-${MCVER}-${FORGEVER}-installer.jar --installServer >>serverstart.log 2>&1
-
+		java -jar installer.jar --installServer >>serverstart.log 2>&1
 		echo "Deleting Forge installer (no longer needed)"
 		echo "INFO: Deleting installer.jar" >>serverstart.log 2>&1
 		rm -rf installer.jar  >>serverstart.log 2>&1
@@ -93,7 +88,8 @@ start_server() {
 	echo ""
 	echo ""
 	echo "Starting server"
-	java -Xmx${MAX_RAM} ${JAVA_ARGS} -jar forge-${MCVER}-${FORGEVER}.jar nogui
+	echo "INFO: Starting Server at " $(date -u +%Y-%m-%d_%H:%M:%S) >>serverstart.log 2>&1
+	java -Xmx${MAX_RAM} ${JAVA_ARGS} @user_jvm_args.txt @libraries/net/minecraftforge/forge/${MCVER}-${FORGEVER}/unix_args.txt nogui %*
 }
 
 # routine for basic directory checks
@@ -128,13 +124,8 @@ check_dir(){
 
 # routine to make sure necessary binaries are found
 check_binaries(){
-	if [ ! -f forge-${MCVER}-${FORGEVER}.jar ] ; then
-		echo "WARN: forge-${MCVER}-${FORGEVER}.jar not found"  >>serverstart.log 2>&1
-		echo "Required files not found, need to install Forge"
-		install_server
-	fi
-	if [ ! -f ./minecraft_server.${MCVER}.jar ] ; then
-		echo "WARN: minecraft_server.${MCVER}.jar not found" >>serverstart.log 2>&1
+	if [ ! -f ${FORGE_JAR} ] ; then
+		echo "WARN: ${FORGE_JAR} not found"  >>serverstart.log 2>&1
 		echo "Required files not found, need to install Forge"
 		install_server
 	fi
@@ -144,6 +135,7 @@ check_binaries(){
 		install_server
 	fi
 }
+
 
 read_config(){
 	while read -r line || [[ -n "$line" ]] ; do
@@ -235,8 +227,7 @@ while true ; do
 	fi
 
 	export answer="y"
-	echo "Server will restart in ~30 seconds. No input needed..."
-	sleep 30
+	echo "Server will restart in ~10 seconds. No input needed..."
 	read -t 12 -p "Restart now (y) or exit to shell (n)?  " answer
 	if [[ "$answer" =~ ^([nN][oO]|[nN])+$ ]]; then
 		echo "INFO: User cancelled restart; exiting to shell" >>serverstart.log 2>&1
