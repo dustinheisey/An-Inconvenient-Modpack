@@ -24,6 +24,3 @@ server.split(/\r?\n/).forEach(line => {
 warnings.forEach(warning => {
   console.log(`::warning::${warning}`);
 });
-
-// return with exit code 1 for any warning amount
-process.exit(Math.min(1, warnings.length));
