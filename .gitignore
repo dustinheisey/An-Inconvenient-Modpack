@@ -7,7 +7,6 @@
 .DS_Store
 lightspeed-chache/**/*
 usercache.json
-minecraftinstance.json
 xaerominimap_entities.json
 /config/jei/world/**/*
 /node_modules
