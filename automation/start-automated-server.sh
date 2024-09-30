@@ -2,24 +2,11 @@
 #### Minecraft-Forge Server install/launcher script
 #### Linux Version
 ####
-#### This script will fetch the appropriate forge installer
-#### and run it to install forge AND fetch Minecraft (from Mojang)
-#### If Forge and Minecraft are already installed it will skip
-#### download/install and launch server directly (with
-#### auto-restart-after-crash logic as well)
-####
-#### You might need to chmod +x before executing
-####
+
 #### IF THERE ARE ANY ISSUES
 #### Please make a report on the most recent Enigmatica version's github:
 #### https://github.com/NillerMedDild
 #### with the contents of [serverstart.log] and [installer.log]
-####
-#### Created by: Dijkstra
-#### Mascot: Ordinator
-#### Maintained by: NillerMedDild 
-####
-#### NO OFFICIAL AFFILIATION WITH MOJANG OR FORGE
 ####
 
 if test -f $PWD/remove-client-mods.ps1; then
@@ -94,6 +81,12 @@ install_server(){
 		echo "Installing Forge Server, please wait..."
 		echo "INFO: Installing Forge Server" >>serverstart.log 2>&1
 		java -jar installer.jar --installServer >>serverstart.log 2>&1
+
+		if [ ! -f forge-${MCVER}-${FORGEVER}.jar ]; then
+			echo "ERROR: Forge jar not created after installation." >>serverstart.log 2>&1
+			exit 1
+		fi
+
 		echo "Deleting Forge installer (no longer needed)"
 		echo "INFO: Deleting installer.jar" >>serverstart.log 2>&1
 		rm -rf installer.jar  >>serverstart.log 2>&1
@@ -106,6 +99,10 @@ start_server() {
 	echo ""
 	echo "Starting server"
 	echo "INFO: Starting Server at " $(date -u +%Y-%m-%d_%H:%M:%S) >>serverstart.log 2>&1
+	if [ ! -f forge-${MCVER}-${FORGEVER}.jar ]; then
+		echo "ERROR: Missing forge jar file. Aborting server start." >>serverstart.log 2>&1
+		exit 1
+	fi
 	java -Xmx${MAX_RAM} ${JAVA_ARGS} -jar forge-${MCVER}-${FORGEVER}.jar nogui
 }
 
@@ -133,7 +130,7 @@ check_dir(){
 		echo "RUN_FROM_BAD_FOLDER setting is off, exiting script"
 		exit 0
 		else
-		echo "WARN: Bad folder (R/W) cut continuing anyway" >>serverstart.log 2>&1
+		echo "WARN: Bad folder (R/W) continuing anyway" >>serverstart.log 2>&1
 		echo "Bypassing no R/W halt (per script settings)"
 		fi
 	fi
@@ -141,8 +138,8 @@ check_dir(){
 
 # routine to make sure necessary binaries are found
 check_binaries(){
-	if [ ! -f ${FORGE_JAR} ] ; then
-		echo "WARN: ${FORGE_JAR} not found"  >>serverstart.log 2>&1
+	if [ ! -f forge-${MCVER}-${FORGEVER}.jar ] ; then
+		echo "WARN: forge-${MCVER}-${FORGEVER}.jar not found"  >>serverstart.log 2>&1
 		echo "Required files not found, need to install Forge"
 		install_server
 	fi
@@ -187,7 +184,7 @@ eula(){
 
 read_config
 
-# Script/batch starts here...
+# Script starts here...
 
 # init log file and dump basic info
 echo "INFO: Starting script at" $(date -u +%Y-%m-%d_%H:%M:%S) >serverstart.log 2>&1
@@ -236,19 +233,20 @@ while true ; do
 		diff=$(($now-$last_crash))
 		if [ "$diff" -gt "3600" ]; then
 			a=1
-			else
+		else
 			a=$((a+1))
 		fi
 		last_crash=$((SECONDS))
 	fi
 	if [ "$a" -eq ${CRASH_COUNT} ]; then
-		echo "The server has crashed to many times"
-		echo "ERROR: Server has failed too start too many times in a row." >>serverstart.log 2>&1
+		echo "The server has crashed too many times"
+		echo "ERROR: Server has failed to start too many times in a row." >>serverstart.log 2>&1
 		exit 0
 	fi
 
 	export answer="y"
-	echo "Server will restart in ~10 seconds. No input needed..."
+	echo "Server will restart in ~30 seconds. No input needed..."
+	sleep 30
 	read -t 12 -p "Restart now (y) or exit to shell (n)?  " answer
 	if [[ "$answer" =~ ^([nN][oO]|[nN])+$ ]]; then
 		echo "INFO: User cancelled restart; exiting to shell" >>serverstart.log 2>&1
