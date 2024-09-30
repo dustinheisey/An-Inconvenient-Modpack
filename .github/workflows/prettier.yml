@@ -9,6 +9,9 @@ on:
       - 'tech/*'
       - 'develop'
 
+permissions:
+  contents: write
+
 jobs:
   job:
     runs-on: ubuntu-latest
