@@ -93,11 +93,6 @@ start_server() {
 	echo ""
 	echo ""
 	echo "Starting server"
-	echo "INFO: Starting Server at " $(date -u +%Y-%m-%d_%H:%M:%S) >>serverstart.log 2>&1
-	if [ ! -f forge-${MCVER}-${FORGEVER}.jar ]; then
-		echo "ERROR: Missing forge jar file. Aborting server start." >>serverstart.log 2>&1
-		exit 1
-	fi
 	java -Xmx${MAX_RAM} ${JAVA_ARGS} -jar forge-${MCVER}-${FORGEVER}.jar nogui
 }
 
