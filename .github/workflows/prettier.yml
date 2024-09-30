@@ -3,11 +3,11 @@ name: Prettier
 on:
   push:
     branches:
-      - "fix/*"
-      - "feat/*"
-      - "chore/*"
-      - "tech/*"
-      - "develop"
+      - 'fix/*'
+      - 'feat/*'
+      - 'chore/*'
+      - 'tech/*'
+      - 'develop'
 
 jobs:
   job:
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v3
 
       # Install Prettier
-      - run: npm install prettier
+      - run: npm install prettier/prettier
 
       # Run Prettier (it will automatically respect .prettierignore)
       - run: npx prettier --check .

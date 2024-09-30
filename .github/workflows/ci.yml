@@ -64,18 +64,27 @@ jobs:
       - name: Run actions/setup-npm@v3
         run: cd .github/actions/ci/node && npm install
 
-      - name: Download artifact
+      # Download the compressed artifact
+      - name: Download compressed artifact
         uses: actions/download-artifact@v3
         with:
           name: server
+          path: ./artifact
 
-      - run: tree
+      # Unzip the artifact (server_artifact.zip)
+      - name: Unzip artifact
+        run: unzip ./artifact/server_artifact.zip -d ./artifact
 
+      # Show the unzipped files using tree
+      - run: tree ./artifact
+
+      # Run your KubeJS scripts after the artifact is unzipped
       - run: node .github/actions/ci/node/log-kubejs-warnings.js
       - run: node .github/actions/ci/kubejs-recipes.js
 
       - run: node .github/actions/ci/node/kubejs-list-global-variables.js
 
+      # Compare against the base branch in pull requests
       - name: Compare against the base branch
         if: github.event_name == 'pull_request'
         run: |
