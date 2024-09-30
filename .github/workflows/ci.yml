@@ -2,84 +2,84 @@
 
 name: Continuous Integration
 on:
-    push:
-        branches:
-          - "main"
-          - "release/*"
-          - "develop"
-          - "fix/*"
-          - "feat/*"
-          - "chore/*"
-          - "tech/*"
-    pull_request:
-        branches:
-            - "develop"
-            - "main"
-            - "release/*"
+  push:
+    branches:
+      - 'main'
+      - 'release/*'
+      - 'develop'
+      - 'fix/*'
+      - 'feat/*'
+      - 'chore/*'
+      - 'tech/*'
+  pull_request:
+    branches:
+      - 'develop'
+      - 'main'
+      - 'release/*'
 
 jobs:
-    server:
-        runs-on: ubuntu-latest
-        timeout-minutes: 20
-        steps:
-            - uses: actions/checkout@v3
-            - uses: actions/setup-node@v3
-            - uses: actions/setup-java@v3
-              with:
-                  distribution: "temurin"
-                  java-version: "11"
+  server:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
 
-            - uses: actions/cache@v3
-              with:
-                  path: mods
-                  key: ${{ github.run_id }}-mods
+      - uses: actions/cache@v3
+        with:
+          path: mods
+          key: ${{ github.run_id }}-mods
 
-            - name: Install server
-              run: |
-                  cp ./automation/settings.cfg ./settings.cfg
-                  cp ./automation/start-automated-server.sh ./start-automated-server.sh
-                  pwsh ./automation/remove-client-mods.ps1
+      - name: Install server
+        run: |
+          cp ./automation/settings.cfg ./settings.cfg
+          cp ./automation/start-automated-server.sh ./start-automated-server.sh
+          pwsh ./automation/remove-client-mods.ps1
 
-            - name: Setting eula to true
-              run: |
-                  echo "eula=true" > eula.txt
-                  cat eula.txt
+      - name: Setting eula to true
+        run: |
+          echo "eula=true" > eula.txt
+          cat eula.txt
 
-            - run: node .github/actions/ci/node/start-server.js bash ./start-automated-server.sh
+      - run: node .github/actions/ci/node/start-server.js bash ./start-automated-server.sh
 
-            - name: Upload artifacts
-              uses: actions/upload-artifact@v3
-              if: always()
-              with:
-                  name: server
-                  path: |
-                      ./logs
-                      ./crash-reports
-                      ./kubejs/exported
-    # kubejs:
-    #     needs: [server]
-    #     runs-on: ubuntu-latest
-    #     timeout-minutes: 2
-    #     steps:
-    #         - uses: actions/checkout@v3
-    #         - uses: actions/setup-node@v3
-    #         - name: Run actions/setup-npm@v3
-    #           run: cd .github/actions/ci/node && npm install
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: server
+          path: |
+            ./logs
+            ./crash-reports
+            ./kubejs/exported
+  # kubejs:
+  #     needs: [server]
+  #     runs-on: ubuntu-latest
+  #     timeout-minutes: 2
+  #     steps:
+  #         - uses: actions/checkout@v3
+  #         - uses: actions/setup-node@v3
+  #         - name: Run actions/setup-npm@v3
+  #           run: cd .github/actions/ci/node && npm install
 
-    #         - name: Download artifact
-    #           uses: actions/download-artifact@v3
-    #           with:
-    #               name: server
+  #         - name: Download artifact
+  #           uses: actions/download-artifact@v3
+  #           with:
+  #               name: server
 
-    #         - run: tree
+  #         - run: tree
 
-    #         - run: node .github/actions/ci/node/log-kubejs-warnings.js
-    #         - run: node .github/actions/ci/kubejs-recipes.js
+  #         - run: node .github/actions/ci/node/log-kubejs-warnings.js
+  #         - run: node .github/actions/ci/kubejs-recipes.js
 
-    #         - run: node .github/actions/ci/node/kubejs-list-global-variables.js
+  #         - run: node .github/actions/ci/node/kubejs-list-global-variables.js
 
-    #         - name: Compare against the base branch
-    #           if: github.event_name == 'pull_request'
-    #           run: |
-    #               node .github/actions/ci/node/compare_download-artifact.js ${{ github.event.pull_request.base.repo.full_name }} ${{ github.event.pull_request.base.sha }} ${{ github.token }}
-    #               node .github/actions/ci/node/compare_artifact-tags.js
+  #         - name: Compare against the base branch
+  #           if: github.event_name == 'pull_request'
+  #           run: |
+  #               node .github/actions/ci/node/compare_download-artifact.js ${{ github.event.pull_request.base.repo.full_name }} ${{ github.event.pull_request.base.sha }} ${{ github.token }}
+  #               node .github/actions/ci/node/compare_artifact-tags.js
