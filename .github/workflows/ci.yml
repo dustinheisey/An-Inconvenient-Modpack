@@ -21,10 +21,6 @@ jobs:
     server:
         runs-on: ubuntu-latest
         timeout-minutes: 20
-        strategy:
-            fail-fast: false
-            matrix:
-                packmode: ["normal", "expert"]
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
@@ -38,11 +34,6 @@ jobs:
                   path: mods
                   key: ${{ github.run_id }}-mods
 
-            - name: Setting mode to ${{ matrix.packmode }}
-              run: |
-                  node .github/actions/ci/packmode.js ${{ matrix.packmode }} > mode.json
-                  cat mode.json
-
             - name: Install server
               run: |
                   cp ./automation/settings.cfg ./settings.cfg
@@ -54,14 +45,14 @@ jobs:
                   echo "eula=true" > eula.txt
                   cat eula.txt
 
-            - run: node .github/actions/ci/start-server.js bash ./start-automated-server.sh
+            - run: node .github/actions/ci/node/start-server.js bash ./start-automated-server.sh
             - run: sleep 1m
 
             - name: Upload artifacts
               uses: actions/upload-artifact@v3
               if: always()
               with:
-                  name: server (${{ matrix.packmode }})
+                  name: server
                   path: |
                       ./logs
                       ./crash-reports
