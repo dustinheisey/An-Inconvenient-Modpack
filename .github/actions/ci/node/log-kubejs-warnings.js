@@ -2,7 +2,19 @@
 // and determining whether it contained errors or not.
 
 const fs = require("fs");
-const server = fs.readFileSync("/logs/kubejs/server.txt", "utf-8");
+const path = require("path");
+
+// Use path.join to ensure the correct file path
+const serverLogPath = path.join(__dirname, "logs/kubejs/server.txt");
+
+// Read the file and check for errors
+let server;
+try {
+    server = fs.readFileSync(serverLogPath, "utf-8");
+} catch (err) {
+    console.error(`Error reading file: ${err.message}`);
+    process.exit(1);
+}
 
 let warnings = [];
 
@@ -25,5 +37,5 @@ warnings.forEach((warning) => {
     console.log(`::warning::${warning}`);
 });
 
-// return with exit code 1 for any warning amount
-process.exit(Math.min(1, warnings.length));
+// return with exit code 1 if there are any warnings
+process.exit(warnings.length > 0 ? 1 : 0);

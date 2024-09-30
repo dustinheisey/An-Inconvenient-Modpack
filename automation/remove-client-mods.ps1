@@ -1,14 +1,6 @@
 # List of Mods to remove for the Server
 # In the format @("filename", "filename")
 $CLIENT_MODS_TO_REMOVE_FROM_SERVER_FILES = @(
-	"Ding", 
-	"EntityCulling",
-	"moreoverlays",
-	"Neat",
-	"oauth",
-	"ponderjs",
-	"Toast-Control", 
-	"PackMenu"
 )
 
 if (Test-Path "mods" -PathType Container) {
