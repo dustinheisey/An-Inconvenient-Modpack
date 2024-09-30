@@ -1,6 +1,10 @@
 # List of Mods to remove for the Server
 # In the format @("filename", "filename")
 $CLIENT_MODS_TO_REMOVE_FROM_SERVER_FILES = @(
+	"oculus",
+	"probejs",
+	"itlt",
+	"rubidium"
 )
 
 if (Test-Path "mods" -PathType Container) {
