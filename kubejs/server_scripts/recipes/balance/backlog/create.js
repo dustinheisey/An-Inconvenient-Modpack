@@ -514,7 +514,7 @@ onEvent('recipes', event => {
           `pneumaticcraft:fluid_mixer`,
           'immersiveengineering:sample_drill',
           'pneumaticcraft:printed_circuit_board',
-          'create: crushing_wheel',
+          'create:crushing_wheel',
           'compactmachines:personal_shrinking_device',
           'naturesaura:offering_table',
           'compactcrafting: base',

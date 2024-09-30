@@ -46,40 +46,38 @@ jobs:
           cat eula.txt
 
       - run: node .github/actions/ci/node/start-server.js bash ./start-automated-server.sh
-
-      - name: Upload artifacts
+      - name: Compress files before upload
+        run: zip -r server_artifact.zip ./logs ./crash-reports ./kubejs/exported
+      - name: Upload compressed artifact
         uses: actions/upload-artifact@v3
-        if: always()
         with:
           name: server
-          path: |
-            ./logs
-            ./crash-reports
-            ./kubejs/exported
-  # kubejs:
-  #     needs: [server]
-  #     runs-on: ubuntu-latest
-  #     timeout-minutes: 2
-  #     steps:
-  #         - uses: actions/checkout@v3
-  #         - uses: actions/setup-node@v3
-  #         - name: Run actions/setup-npm@v3
-  #           run: cd .github/actions/ci/node && npm install
+          path: server_artifact.zip
 
-  #         - name: Download artifact
-  #           uses: actions/download-artifact@v3
-  #           with:
-  #               name: server
+  kubejs:
+    needs: [server]
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+      - name: Run actions/setup-npm@v3
+        run: cd .github/actions/ci/node && npm install
 
-  #         - run: tree
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: server
 
-  #         - run: node .github/actions/ci/node/log-kubejs-warnings.js
-  #         - run: node .github/actions/ci/kubejs-recipes.js
+      - run: tree
 
-  #         - run: node .github/actions/ci/node/kubejs-list-global-variables.js
+      - run: node .github/actions/ci/node/log-kubejs-warnings.js
+      - run: node .github/actions/ci/kubejs-recipes.js
 
-  #         - name: Compare against the base branch
-  #           if: github.event_name == 'pull_request'
-  #           run: |
-  #               node .github/actions/ci/node/compare_download-artifact.js ${{ github.event.pull_request.base.repo.full_name }} ${{ github.event.pull_request.base.sha }} ${{ github.token }}
-  #               node .github/actions/ci/node/compare_artifact-tags.js
+      - run: node .github/actions/ci/node/kubejs-list-global-variables.js
+
+      - name: Compare against the base branch
+        if: github.event_name == 'pull_request'
+        run: |
+          node .github/actions/ci/node/compare_download-artifact.js ${{ github.event.pull_request.base.repo.full_name }} ${{ github.event.pull_request.base.sha }} ${{ github.token }}
+          node .github/actions/ci/node/compare_artifact-tags.js
