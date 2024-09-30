@@ -74,5 +74,3 @@ index 41aceddd..b24be7e2 100644
 +		url "https://maven.nanite.dev/releases"
 +	}
  }
- 
- dependencies {
