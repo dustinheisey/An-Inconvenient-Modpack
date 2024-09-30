@@ -4,7 +4,11 @@ $CLIENT_MODS_TO_REMOVE_FROM_SERVER_FILES = @(
 	"oculus",
 	"probejs",
 	"itlt",
-	"rubidium"
+	"rubidium",
+	"Neat",
+	"Toast-Control",
+	"BetterF3"
+
 )
 
 if (Test-Path "mods" -PathType Container) {

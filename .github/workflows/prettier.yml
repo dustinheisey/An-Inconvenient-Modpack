@@ -26,11 +26,10 @@ jobs:
       - run: npm install prettier/prettier
 
       # Run Prettier (it will automatically respect .prettierignore)
-      - run: npx prettier --check .
+      - run: npx prettier --write .
 
       # If there are any changes needed, you can also automatically format and push
       - run: |
-          npx prettier --write .
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .

@@ -517,7 +517,7 @@ onEvent('recipes', event => {
           'create:crushing_wheel',
           'compactmachines:personal_shrinking_device',
           'naturesaura:offering_table',
-          'compactcrafting: base',
+          'compactcrafting:base',
           'botania:mana_spreader',
           'createaddition:alternator',
           'botania:apothecary_forest',

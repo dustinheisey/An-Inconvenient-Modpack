@@ -2,7 +2,7 @@
 // and determining whether it contained errors or not.
 
 const fs = require('fs');
-const server = fs.readFileSync('logs/kubejs/server.txt', 'utf-8');
+const server = fs.readFileSync('artifact/logs/kubejs/server.txt', 'utf-8');
 
 let warnings = [];
 
