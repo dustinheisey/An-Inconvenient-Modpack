@@ -6,10 +6,9 @@ const fsp = require("fs/promises");
 
 const arg_repo = process.argv[2];
 const arg_hash = process.argv[3];
-const arg_mode = process.argv[4];
-const arg_auth = process.argv[5];
+const arg_auth = process.argv[4];
 
-const name = `server (${arg_mode})`;
+const name = `server`;
 
 axios.defaults.headers.common = {
     Accept: "application/vnd.github.v3+json",
