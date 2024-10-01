@@ -28,3 +28,4 @@ config/xaeroworldmap-common.txt
 rhino.local.properties
 options.txt
 logs/categorized_logs.yaml
+output
