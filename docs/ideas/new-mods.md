@@ -1,6 +1,7 @@
 # Version 2.0
 
 ## Recording
+
 - replay
 
 ## Improvements

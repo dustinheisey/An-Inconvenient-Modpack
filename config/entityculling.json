@@ -10,9 +10,7 @@
     "botania:magic_missile",
     "botania:falling_star"
   ],
-  "entityWhitelist": [
-    "botania:mana_burst"
-  ],
+  "entityWhitelist": ["botania:mana_burst"],
   "tracingDistance": 128,
   "debugMode": false,
   "sleepDelay": 10,

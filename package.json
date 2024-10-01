@@ -18,9 +18,9 @@
     "arrowParens": "avoid"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "standard-version": "^9.5.0",
-    "cz-conventional-changelog": "^3.3.0"
+    "cz-conventional-changelog": "^3.3.0",
+    "prettier": "github:prettier/prettier",
+    "standard-version": "^9.5.0"
   },
   "standard-version": {
     "types": [

@@ -2,78 +2,71 @@
 
 ## [0.6.7](https://github.com/dustinheisey/An-Inconvenient-Modpack/compare/v0.6.6...v0.6.7) (2024-09-17)
 
-
 ### Bug Fixes
 
-* maybe fix template world not loading ([a7c68cb](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a7c68cb170497f0daa2c63aae9fa45efc9a358f6))
+- maybe fix template world not loading ([a7c68cb](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a7c68cb170497f0daa2c63aae9fa45efc9a358f6))
 
 ## [0.6.6](https://github.com/dustinheisey/An-Inconvenient-Modpack/compare/v0.6.5...v0.6.6) (2024-09-16)
 
-
 ### Bug Fixes
 
-* add kaolinite advancement ([f8ed699](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/f8ed699311729331a1d1bde468c58ee97fcaeff5))
-* change alloy kiln advancement to trigger on multiblock creation ([ede2a22](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/ede2a226c030cf31b7bf6687b297bcd0b30e8f31))
-* remove extra charcoal block recipe ([8b642b0](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/8b642b0544acecf8ee5a03cd1700e602ba4e8dd7))
-* stage alloy smelter to chapter 1 ([a5ccf63](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a5ccf6331b70edce0d8c1500f66b21efee56c11a))
+- add kaolinite advancement ([f8ed699](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/f8ed699311729331a1d1bde468c58ee97fcaeff5))
+- change alloy kiln advancement to trigger on multiblock creation ([ede2a22](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/ede2a226c030cf31b7bf6687b297bcd0b30e8f31))
+- remove extra charcoal block recipe ([8b642b0](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/8b642b0544acecf8ee5a03cd1700e602ba4e8dd7))
+- stage alloy smelter to chapter 1 ([a5ccf63](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a5ccf6331b70edce0d8c1500f66b21efee56c11a))
 
 ## [0.6.5](https://github.com/dustinheisey/An-Inconvenient-Modpack/compare/v0.6.4...v0.6.5) (2024-09-14)
 
-
 ### Bug Fixes
 
-* add a defaultoptions.txt to not reset people's options each update ([77ee2dd](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/77ee2dd745680f9158e2c55b5dee833044c7f4e9))
-* add back alloy mold recipes ([1d2ecee](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/1d2ecee3225e3df193f21d1f69b1c690e5a4206f))
-* add back cobbles recipes and jei items ([11ddb7c](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/11ddb7c7e48a37d2abe5107a4d6da5d46aa5a23a))
-* add bugs from second video ([d2943b2](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/d2943b294978c060f56ae135981ca6d1c9d71b05))
-* adjust staging of prismarine items ([5564041](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/55640414d93c38a503e5d1ecd9b6781f08667826))
-* make world settings more configurable ([5c4d4ca](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/5c4d4ca0a1cdab22d63c53c5aaa5af37fcec0236))
-* reduce the FOV and speed boost of grass paths ([6f17d92](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/6f17d92c47e4d1c2e93a367cf6cac2c11a4c4baa))
-* remove croptopia crop biome tags ([ff93951](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/ff93951d65fd5a66a85b635936201963e6c8761b))
-* remove extra leaf decay mod ([6741448](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/6741448796db9940cde155cce9cc61347d47fa88))
-* remove shaders and resource packs from repo ([34bc028](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/34bc02885281cfa6370e7664662966f810fe7948))
-* update incontrol, selene, xaeros minimap and xaeros world map ([1370bf8](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/1370bf886b18d1ec0b8ff935944a7161903d9ee1))
+- add a defaultoptions.txt to not reset people's options each update ([77ee2dd](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/77ee2dd745680f9158e2c55b5dee833044c7f4e9))
+- add back alloy mold recipes ([1d2ecee](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/1d2ecee3225e3df193f21d1f69b1c690e5a4206f))
+- add back cobbles recipes and jei items ([11ddb7c](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/11ddb7c7e48a37d2abe5107a4d6da5d46aa5a23a))
+- add bugs from second video ([d2943b2](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/d2943b294978c060f56ae135981ca6d1c9d71b05))
+- adjust staging of prismarine items ([5564041](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/55640414d93c38a503e5d1ecd9b6781f08667826))
+- make world settings more configurable ([5c4d4ca](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/5c4d4ca0a1cdab22d63c53c5aaa5af37fcec0236))
+- reduce the FOV and speed boost of grass paths ([6f17d92](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/6f17d92c47e4d1c2e93a367cf6cac2c11a4c4baa))
+- remove croptopia crop biome tags ([ff93951](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/ff93951d65fd5a66a85b635936201963e6c8761b))
+- remove extra leaf decay mod ([6741448](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/6741448796db9940cde155cce9cc61347d47fa88))
+- remove shaders and resource packs from repo ([34bc028](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/34bc02885281cfa6370e7664662966f810fe7948))
+- update incontrol, selene, xaeros minimap and xaeros world map ([1370bf8](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/1370bf886b18d1ec0b8ff935944a7161903d9ee1))
 
 ## [0.6.4](https://github.com/dustinheisey/An-Inconvenient-Modpack/compare/v0.6.3...v0.6.4) (2024-09-13)
 
-
 ### Bug Fixes
 
-* add rotten jerky texture ([a647873](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a6478735db1d6ba78119d41a28749e0455cf6259))
-* add titles and descriptions to some chapter 1 advancements ([68d0cd9](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/68d0cd9d4ab51a476bb9d316af7944e57bb7a136))
-* change hordes to version 1.2.3 to maybe get rid of ticking entity bug ([95db776](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/95db7767c0177066ddecb4044cdd46eef643d6da))
-* fix low contrast advancement plaques ([4370d39](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/4370d3904074768c0b89276357b8279fa72aefba))
-* increase drying time of plant fibers ([4ace805](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/4ace80577e87a75edfdf063155c579d64174849b))
-* stage totem torch recipe correctly ([f8cdc28](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/f8cdc28f5b2138753c3d1e5d70aa20aabc51f10b))
-* switch unity to stay true resource pack to fix torch render bug ([a63b351](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a63b351e74d39a6a3489673826d821edff7ed7be))
-* update drying times and add rotten jerky ([a11ebca](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a11ebca4bbeab0cdd72caf33a393d3aa008969cf))
-* update template world to have journal in inventory ([02c81c1](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/02c81c1627ace9aa3502cf8b337ff406611733f0))
+- add rotten jerky texture ([a647873](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a6478735db1d6ba78119d41a28749e0455cf6259))
+- add titles and descriptions to some chapter 1 advancements ([68d0cd9](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/68d0cd9d4ab51a476bb9d316af7944e57bb7a136))
+- change hordes to version 1.2.3 to maybe get rid of ticking entity bug ([95db776](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/95db7767c0177066ddecb4044cdd46eef643d6da))
+- fix low contrast advancement plaques ([4370d39](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/4370d3904074768c0b89276357b8279fa72aefba))
+- increase drying time of plant fibers ([4ace805](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/4ace80577e87a75edfdf063155c579d64174849b))
+- stage totem torch recipe correctly ([f8cdc28](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/f8cdc28f5b2138753c3d1e5d70aa20aabc51f10b))
+- switch unity to stay true resource pack to fix torch render bug ([a63b351](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a63b351e74d39a6a3489673826d821edff7ed7be))
+- update drying times and add rotten jerky ([a11ebca](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a11ebca4bbeab0cdd72caf33a393d3aa008969cf))
+- update template world to have journal in inventory ([02c81c1](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/02c81c1627ace9aa3502cf8b337ff406611733f0))
 
 ## [0.6.3](https://github.com/dustinheisey/An-Inconvenient-Modpack/compare/v0.6.1-beta...v0.6.3) (2024-08-24)
 
-
 ### Features
 
-* fix shaders not working ([e5a656d](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/e5a656d047c7763eaba5080c57ee3a9ac9659a5b))
-* start itlt configs ([07cd2c8](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/07cd2c858150b577b676bf1fe031ba77db11ca65))
-
+- fix shaders not working ([e5a656d](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/e5a656d047c7763eaba5080c57ee3a9ac9659a5b))
+- start itlt configs ([07cd2c8](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/07cd2c858150b577b676bf1fe031ba77db11ca65))
 
 ### Bug Fixes
 
-* change token to default github token ([50246bc](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/50246bcb2f0b27a4a03ced30da43e280b362ab96))
-* fix chapter 1 advancements ([c05b93b](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/c05b93b7bf0391b979866cc34f2ecbcd0dba533a))
-* fix flint tools recipes not loading ([b9dbcca](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/b9dbcca7acca6d571aac1787d30162949f133815))
-* fix metal recipes ([33bdbd1](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/33bdbd15ce09d570bc00d2fb1c7c3fa1fdd9319e))
-* fix recipe bugs ([5235a8e](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/5235a8e2879421cf9c89b576fc23ce7e914b4fb2))
-* hide farmersdelight flint knife ([e65cef8](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/e65cef8d0531df05cf9a62f7cc331bd794e70326))
-* remove seed drops from ferns and large ferns ([f775742](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/f775742ac8351cbe0e90c7d39cc509bce8b4dc6a))
-* stage rankine totems correctly ([bd872c1](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/bd872c1ce9b9055b87199a5c5056e3720c92c9dd))
-* update first night entry text ([c5e5fd5](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/c5e5fd57ec13695100b8524a1120681c0fe497f4))
-
+- change token to default github token ([50246bc](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/50246bcb2f0b27a4a03ced30da43e280b362ab96))
+- fix chapter 1 advancements ([c05b93b](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/c05b93b7bf0391b979866cc34f2ecbcd0dba533a))
+- fix flint tools recipes not loading ([b9dbcca](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/b9dbcca7acca6d571aac1787d30162949f133815))
+- fix metal recipes ([33bdbd1](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/33bdbd15ce09d570bc00d2fb1c7c3fa1fdd9319e))
+- fix recipe bugs ([5235a8e](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/5235a8e2879421cf9c89b576fc23ce7e914b4fb2))
+- hide farmersdelight flint knife ([e65cef8](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/e65cef8d0531df05cf9a62f7cc331bd794e70326))
+- remove seed drops from ferns and large ferns ([f775742](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/f775742ac8351cbe0e90c7d39cc509bce8b4dc6a))
+- stage rankine totems correctly ([bd872c1](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/bd872c1ce9b9055b87199a5c5056e3720c92c9dd))
+- update first night entry text ([c5e5fd5](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/c5e5fd57ec13695100b8524a1120681c0fe497f4))
 
 ### Miscellaneous Chores
 
-* release 0.6.3 ([45ed02a](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/45ed02a5eb61bded0c69fe583747c2666db9e8df))
+- release 0.6.3 ([45ed02a](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/45ed02a5eb61bded0c69fe583747c2666db9e8df))
 
 ### [0.6.1] (2024-08-15)
 

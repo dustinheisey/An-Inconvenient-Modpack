@@ -6,12 +6,12 @@
 **Merge Into:** `main` is the final destination for release branches.  
 **Automation on Merge:**
 
--   **Trigger Production Builds**
--   **Generate Changelog** (via conventional commits)
--   **Upload Modpack to CurseForge**
--   **Generate Server Files**
--   **Deploy Artifacts**
--   **Post-release Announcement on Discord, Reddit, etc.**
+- **Trigger Production Builds**
+- **Generate Changelog** (via conventional commits)
+- **Upload Modpack to CurseForge**
+- **Generate Server Files**
+- **Deploy Artifacts**
+- **Post-release Announcement on Discord, Reddit, etc.**
 
 ---
 
@@ -21,14 +21,14 @@
 **Merge Into:** `release` at specific points for final preparation for production.  
 **Merge From:**
 
--   **`feat/feature-name`**
--   **`fix/fix-name`**
--   **`chore/chore-name`**
--   **`tech/tech-name`**  
-    **Automation on Merge:**
--   **Run Automated Tests (CI)**
--   **Generate Pre-Release Builds for Testing**
--   **Create Pre-Release Changelog** (optional)
+- **`feat/feature-name`**
+- **`fix/fix-name`**
+- **`chore/chore-name`**
+- **`tech/tech-name`**  
+  **Automation on Merge:**
+- **Run Automated Tests (CI)**
+- **Generate Pre-Release Builds for Testing**
+- **Create Pre-Release Changelog** (optional)
 
 ---
 
@@ -39,11 +39,11 @@
 **Merge From:** `develop`.  
 **Automation on Merge:**
 
--   **Trigger Full Release Builds**
--   **Generate Release Changelog** (using conventional commits)
--   **Upload to CurseForge and Modrinth**
--   **Generate and Upload Server Files**
--   **Tag Release Version**
+- **Trigger Full Release Builds**
+- **Generate Release Changelog** (using conventional commits)
+- **Upload to CurseForge and Modrinth**
+- **Generate and Upload Server Files**
+- **Tag Release Version**
 
 ---
 
@@ -53,8 +53,8 @@
 **Merge Into:** `develop` after feature completion and testing.  
 **Automation on Merge:**
 
--   **Run Unit and Integration Tests**
--   **Generate Documentation**
+- **Run Unit and Integration Tests**
+- **Generate Documentation**
 
 ---
 
@@ -64,8 +64,8 @@
 **Merge Into:** `develop`.  
 **Automation on Merge:**
 
--   **Run Regression Tests**
--   **Close GitHub Issues for Fixed Bugs**
+- **Run Regression Tests**
+- **Close GitHub Issues for Fixed Bugs**
 
 ---
 
@@ -75,8 +75,8 @@
 **Merge Into:** `develop`.  
 **Automation on Merge:**
 
--   **Run Static Code Analysis**
--   **Update Dependencies and Reports**
+- **Run Static Code Analysis**
+- **Update Dependencies and Reports**
 
 ---
 
@@ -86,8 +86,8 @@
 **Merge Into:** `develop`.  
 **Automation on Merge:**
 
--   **Run Integration and Stress Tests**
--   **Generate Performance Reports**
+- **Run Integration and Stress Tests**
+- **Generate Performance Reports**
 
 ---
 
@@ -95,15 +95,15 @@
 
 1. **On `main` Merge (Release)**
 
-    - **Generate Full Changelog**
-    - **Upload to CurseForge/Modrinth**
-    - **Generate Server Files**
-    - **Post-Release Announcement (Discord, Reddit, Social Media)**
+   - **Generate Full Changelog**
+   - **Upload to CurseForge/Modrinth**
+   - **Generate Server Files**
+   - **Post-Release Announcement (Discord, Reddit, Social Media)**
 
 2. **On `develop` Merge (Feature/Tech/Fix/Chore)**
-    - **Run Full CI Tests** (unit, integration, and regression)
-    - **Generate Pre-Release Build**
-    - **Optional Pre-Release Changelog**
+   - **Run Full CI Tests** (unit, integration, and regression)
+   - **Generate Pre-Release Build**
+   - **Optional Pre-Release Changelog**
 
 ---
 

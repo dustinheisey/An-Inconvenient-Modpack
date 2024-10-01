@@ -7,13 +7,7 @@
       "reticle": 12,
       "stride": 0,
       "elevation": 0,
-      "mask": [
-        "OOOOO",
-        "OOOOO",
-        "OOXOO",
-        "OOXOO",
-        "OOOOO"
-      ]
+      "mask": ["OOOOO", "OOOOO", "OOXOO", "OOXOO", "OOOOO"]
     },
     {
       "name": "3x3",
@@ -22,13 +16,7 @@
       "reticle": 12,
       "stride": 0,
       "elevation": 0,
-      "mask": [
-        "OOOOO",
-        "OXXXO",
-        "OXXXO",
-        "OXXXO",
-        "OOOOO"
-      ]
+      "mask": ["OOOOO", "OXXXO", "OXXXO", "OXXXO", "OOOOO"]
     },
     {
       "name": "5x5",
@@ -37,13 +25,7 @@
       "reticle": 7,
       "stride": 0,
       "elevation": 0,
-      "mask": [
-        "XXXXX",
-        "XXXXX",
-        "XXXXX",
-        "XXXXX",
-        "XXXXX"
-      ]
+      "mask": ["XXXXX", "XXXXX", "XXXXX", "XXXXX", "XXXXX"]
     },
     {
       "name": "Stairs Up",
@@ -52,13 +34,7 @@
       "reticle": 12,
       "stride": 1,
       "elevation": 1,
-      "mask": [
-        "OOOOO",
-        "OOXOO",
-        "OOXOO",
-        "OOXOO",
-        "OOOOO"
-      ]
+      "mask": ["OOOOO", "OOXOO", "OOXOO", "OOXOO", "OOOOO"]
     },
     {
       "name": "Stairs Down",
@@ -67,13 +43,7 @@
       "reticle": 17,
       "stride": 1,
       "elevation": -1,
-      "mask": [
-        "OOOOO",
-        "OOXOO",
-        "OOXOO",
-        "OOXOO",
-        "OOOOO"
-      ]
+      "mask": ["OOOOO", "OOXOO", "OOXOO", "OOXOO", "OOOOO"]
     }
   ]
 }
