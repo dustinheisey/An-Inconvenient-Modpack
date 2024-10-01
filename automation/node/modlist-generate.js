@@ -24,24 +24,24 @@ function by_project_name(project_a, project_b) {
 axios
   .get('https://curse.melanx.de/projects', {
     data: minecraftinstance_json.installedAddons.map(
-      installedAddon => installedAddon.addonID
-    ),
+      (installedAddon) => installedAddon.addonID
+    )
   })
-  .then(response => {
+  .then((response) => {
     const projects = Object.values(response.data).sort(by_project_name);
     const file_for = [];
 
     // we know the filename from minecraftinstance.json already. ^-^
-    minecraftinstance_json.installedAddons.forEach(installedAddon => {
+    minecraftinstance_json.installedAddons.forEach((installedAddon) => {
       file_for[installedAddon.addonID] = {
         id: installedAddon.installedFile.id,
-        name: installedAddon.installedFile.fileName,
+        name: installedAddon.installedFile.fileName
       };
     });
 
     const lines = [`## ${CLIENT_NAME} - ${MODPACK_VERSION}`];
 
-    projects.forEach(project => {
+    projects.forEach((project) => {
       lines.push(
         `- [${file_for[project.project].name}](${
           project.website

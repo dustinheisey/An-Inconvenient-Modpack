@@ -1,6 +1,6 @@
-onEvent('tags.items', event => {
+onEvent('tags.items', (event) => {
   function setTags(chapter, collection, group, id) {
-    chapters.forEach(c => {
+    chapters.forEach((c) => {
       event.remove(`im:${c}`, id);
     });
     event.add(`im:${collection}`, id);
@@ -9,18 +9,18 @@ onEvent('tags.items', event => {
   }
 
   function addCollection(collection, config) {
-    Object.keys(config).forEach(chapter => {
+    Object.keys(config).forEach((chapter) => {
       if (
         config[chapter] instanceof Object &&
         !Array.isArray(config[chapter])
       ) {
-        Object.keys(config[chapter]).forEach(group => {
-          config[chapter][group].forEach(id => {
+        Object.keys(config[chapter]).forEach((group) => {
+          config[chapter][group].forEach((id) => {
             setTags(chapter, collection, group, id);
           });
         });
       } else {
-        config[chapter].forEach(id => {
+        config[chapter].forEach((id) => {
           setTags(chapter, collection, null, id);
         });
       }
@@ -33,143 +33,143 @@ onEvent('tags.items', event => {
         'minecraft:leather_helmet',
         'minecraft:leather_chestplate',
         'minecraft:leather_leggings',
-        'minecraft:leather_boots',
+        'minecraft:leather_boots'
       ],
       copper: [
         'charcoal_pit:copper_helmet',
         'charcoal_pit:copper_chestplate',
         'charcoal_pit:copper_leggings',
-        'charcoal_pit:copper_boots',
+        'charcoal_pit:copper_boots'
       ],
       bronze: [
         'charcoal_pit:bronze_helmet',
         'charcoal_pit:bronze_chestplate',
         'charcoal_pit:bronze_leggings',
-        'charcoal_pit:bronze_boots',
+        'charcoal_pit:bronze_boots'
       ],
       iron: [
         'minecraft:iron_helmet',
         'minecraft:iron_chestplate',
         'minecraft:iron_leggings',
-        'minecraft:iron_boots',
-      ],
+        'minecraft:iron_boots'
+      ]
     },
     chapter_2: {
       charoite: [
         'blue_skies:charoite_helmet',
         'blue_skies:charoite_chestplate',
         'blue_skies:charoite_leggings',
-        'blue_skies:charoite_boots',
-      ],
+        'blue_skies:charoite_boots'
+      ]
     },
     chapter_3: {
       utherium: [
         'undergarden:utherium_helmet',
         'undergarden:utherium_chestplate',
         'undergarden:utherium_leggings',
-        'undergarden:utherium_boots',
+        'undergarden:utherium_boots'
       ],
       horizonite: [
         'blue_skies:horizonite_helmet',
         'blue_skies:horizonite_chestplate',
         'blue_skies:horizonite_leggings',
-        'blue_skies:horizonite_boots',
+        'blue_skies:horizonite_boots'
       ],
       soul_stained_steel: [
         'malum:soul_stained_steel_helmet',
         'malum:soul_stained_steel_chestplate',
         'malum:soul_stained_steel_leggings',
-        'malum:soul_stained_steel_boots',
+        'malum:soul_stained_steel_boots'
       ],
       fiery: [
         'twilightforest:fiery_helmet',
         'twilightforest:fiery_chestplate',
         'twilightforest:fiery_leggings',
-        'twilightforest:fiery_boots',
-      ],
+        'twilightforest:fiery_boots'
+      ]
     },
     chapter_4: {
       netherite: [
         'minecraft:netherite_helmet',
         'minecraft:netherite_chestplate',
         'minecraft:netherite_leggings',
-        'minecraft:netherite_boots',
+        'minecraft:netherite_boots'
       ],
       ignitium: [
         'cataclysm:ignitium_helmet',
         'cataclysm:ignitium_chestplate',
         'cataclysm:ignitium_leggings',
-        'cataclysm:ignitium_boots',
+        'cataclysm:ignitium_boots'
       ],
       engineers: [
         'hem:steampunkoutfit_helmet',
         'hem:steampunkoutfit_chestplate',
         'hem:steampunkoutfit_leggings',
-        'hem:steampunkoutfit_boots',
-      ],
+        'hem:steampunkoutfit_boots'
+      ]
     },
     chapter_5_1: {
       manasteel: [
         'botania:manasteel_helmet',
         'botania:manasteel_chestplate',
         'botania:manasteel_leggings',
-        'botania:manasteel_boots',
+        'botania:manasteel_boots'
       ],
       sky: [
         'naturesaura:sky_helmet',
         'naturesaura:sky_chest',
         'naturesaura:sky_pants',
-        'naturesaura:sky_shoes',
+        'naturesaura:sky_shoes'
       ],
       terrasteel: [
         'botania:terrasteel_helmet',
         'botania:terrasteel_chestplate',
         'botania:terrasteel_leggings',
-        'botania:terrasteel_boots',
-      ],
+        'botania:terrasteel_boots'
+      ]
     },
     chapter_5_2: {
       brigandine: [
         'rankine:brigandine_helmet',
         'rankine:brigandine_chestplate',
         'rankine:brigandine_leggings',
-        'rankine:brigandine_boots',
+        'rankine:brigandine_boots'
       ],
       compressed_iron: [
         'pneumaticcraft:compressed_iron_helmet',
         'pneumaticcraft:compressed_iron_chestplate',
         'pneumaticcraft:compressed_iron_leggings',
-        'pneumaticcraft:compressed_iron_boots',
+        'pneumaticcraft:compressed_iron_boots'
       ],
       orichalcum: [
         'charcoal_pit:orichalcum_helmet',
         'charcoal_pit:orichalcum_chestplate',
         'charcoal_pit:orichalcum_leggings',
-        'charcoal_pit:orichalcum_boots',
-      ],
+        'charcoal_pit:orichalcum_boots'
+      ]
     },
     chapter_7_1: {
       diamond: [
         'minecraft:diamond_helmet',
         'minecraft:diamond_chestplate',
         'minecraft:diamond_leggings',
-        'minecraft:diamond_boots',
+        'minecraft:diamond_boots'
       ],
       mekasuit: [
         'mekanism:mekasuit_helmet',
         'mekanism:mekasuit_bodyarmor',
         'mekanism:mekasuit_pants',
-        'mekanism:mekasuit_boots',
-      ],
+        'mekanism:mekasuit_boots'
+      ]
     },
     chapter_7_2: {
       pneumatic: [
         'pneumaticcraft:pneumatic_helmet',
         'pneumaticcraft:pneumatic_chestplate',
         'pneumaticcraft:pneumatic_leggings',
-        'pneumaticcraft:pneumatic_boots',
-      ],
-    },
+        'pneumaticcraft:pneumatic_boots'
+      ]
+    }
   });
 
   addCollection('eyes', {
@@ -179,7 +179,7 @@ onEvent('tags.items', event => {
       'endrem:undead_eye',
       'endrem:corrupted_eye',
       'endrem:evil_eye',
-      'endrem:lost_eye',
+      'endrem:lost_eye'
     ],
     chapter_4: ['endrem:nether_eye', 'endrem:wither_eye'],
     chapter_5_1: ['endrem:cursed_eye'],
@@ -189,8 +189,8 @@ onEvent('tags.items', event => {
       'endrem:cryptic_eye',
       'endrem:old_eye',
       'endrem:witch_eye',
-      'endrem:magical_eye',
-    ],
+      'endrem:magical_eye'
+    ]
   });
 
   addCollection('lost_stories', {
@@ -198,11 +198,11 @@ onEvent('tags.items', event => {
     chapter_3: [
       'kubejs:undergarden_lost_story',
       'kubejs:everdawn_lost_story',
-      'kubejs:twilight_lost_story',
+      'kubejs:twilight_lost_story'
     ],
     chapter_4: ['kubejs:nether_lost_story'],
     chapter_5_1: ['kubejs:bumblezone_lost_story'],
-    chapter_5_2: ['kubejs:blueleaf_lost_story'],
+    chapter_5_2: ['kubejs:blueleaf_lost_story']
   });
 
   addCollection('lost_pages', {
@@ -210,11 +210,11 @@ onEvent('tags.items', event => {
     chapter_3: [
       'kubejs:undergarden_lost_page',
       'kubejs:everdawn_lost_page',
-      'kubejs:twilight_lost_page',
+      'kubejs:twilight_lost_page'
     ],
     chapter_4: ['kubejs:nether_lost_page'],
     chapter_5_1: ['kubejs:bumblezone_lost_page'],
-    chapter_5_2: ['kubejs:blueleaf_lost_page'],
+    chapter_5_2: ['kubejs:blueleaf_lost_page']
   });
 
   addCollection('totems', {
@@ -222,13 +222,13 @@ onEvent('tags.items', event => {
     chapter_3: [
       'rankine:totem_of_timesaving',
       'rankine:totem_of_hastening',
-      'rankine:totem_of_infusing',
+      'rankine:totem_of_infusing'
     ],
     chapter_4: [
       'rankine:totem_of_enduring',
       'rankine:totem_of_promising',
       'rankine:totem_of_softening',
-      'rankine:totem_of_blazing',
+      'rankine:totem_of_blazing'
     ],
     chapter_5_1: [],
     chapter_5_2: [],
@@ -236,8 +236,8 @@ onEvent('tags.items', event => {
       'rankine:totem_of_levitating',
       'rankine:totem_of_repulsing',
       'rankine:totem_of_powering',
-      'rankine:totem_of_invigorating',
-    ],
+      'rankine:totem_of_invigorating'
+    ]
   });
 
   addCollection('relics', {
@@ -250,8 +250,8 @@ onEvent('tags.items', event => {
         'artifacts:flippers',
         'artifacts:snorkel',
         'relics:researching_table',
-        'relics:relic_experience_bottle',
-      ],
+        'relics:relic_experience_bottle'
+      ]
     },
     chapter_3: {
       undergarden: [
@@ -260,7 +260,7 @@ onEvent('tags.items', event => {
         'artifacts:lucky_scarf',
         'artifacts:digging_claws',
         'artifacts:night_vision_goggles',
-        'artifacts:kitty_slippers',
+        'artifacts:kitty_slippers'
       ],
       everdawn: [
         'relics:rage_glove',
@@ -268,7 +268,7 @@ onEvent('tags.items', event => {
         'artifacts:scarf_of_invisibility',
         'artifacts:feral_claws',
         'artifacts:panic_necklace',
-        'artifacts:power_glove',
+        'artifacts:power_glove'
       ],
       twilight: [
         'relics:magic_mirror',
@@ -276,8 +276,8 @@ onEvent('tags.items', event => {
         'artifacts:universal_attractor',
         'artifacts:steadfast_spikes',
         'artifacts:pocket_piston',
-        'artifacts:crystal_heart',
-      ],
+        'artifacts:crystal_heart'
+      ]
     },
     chapter_4: {
       nether: [
@@ -286,7 +286,7 @@ onEvent('tags.items', event => {
         'relics:blazing_flask',
         'artifacts:fire_gauntlet',
         'artifacts:flame_pendant',
-        'artifacts:obsidian_skull',
+        'artifacts:obsidian_skull'
       ],
       blueleaf: [
         'relics:hunter_belt',
@@ -294,8 +294,8 @@ onEvent('tags.items', event => {
         'relics:horse_flute',
         'artifacts:plastic_drinking_hat',
         'artifacts:villager_hat',
-        'artifacts:novelty_drinking_hat',
-      ],
+        'artifacts:novelty_drinking_hat'
+      ]
     },
     chapter_5_1: {
       bumblezone: [
@@ -305,8 +305,8 @@ onEvent('tags.items', event => {
         'relics:infinity_ham',
         'artifacts:vampiric_glove',
         'artifacts:bunny_hoppers',
-        'artifacts:whoopee_cushion',
-      ],
+        'artifacts:whoopee_cushion'
+      ]
     },
     chapter_7_1: {
       tofuland: [
@@ -315,7 +315,7 @@ onEvent('tags.items', event => {
         'relics:ice_skates',
         'artifacts:charm_of_sinking',
         'artifacts:running_shoes',
-        'artifacts:aqua_dashers',
+        'artifacts:aqua_dashers'
       ],
       alfheim: [
         'artifacts:golden_hook',
@@ -323,7 +323,7 @@ onEvent('tags.items', event => {
         'artifacts:cloud_in_a_bottle',
         'artifacts:cross_necklace',
         'artifacts:umbrella',
-        'relics:holy_locket',
+        'relics:holy_locket'
       ],
       end: [
         'relics:shadow_glaive',
@@ -334,9 +334,9 @@ onEvent('tags.items', event => {
         'relics:reflection_necklace',
         'relics:spatial_sign',
         'relics:space_dissector',
-        'artifacts:shock_pendant',
-      ],
-    },
+        'artifacts:shock_pendant'
+      ]
+    }
   });
 
   addCollection('spawn_eggs', {
@@ -345,8 +345,8 @@ onEvent('tags.items', event => {
         'minecraft:zombie_spawn_egg',
         'minecraft:silverfish_spawn_egg',
         'minecraft:husk_spawn_egg',
-        'biomancy:flesh_blob_spawn_egg',
-      ],
+        'biomancy:flesh_blob_spawn_egg'
+      ]
     },
     chapter_2: {
       everbright: [
@@ -372,7 +372,7 @@ onEvent('tags.items', event => {
         'blue_skies:whistleshell_crab_spawn_egg',
         'blue_skies:grittle_flatfish_spawn_egg',
         'blue_skies:municipal_monkfish_spawn_egg',
-        'minecraft:elder_guardian_spawn_egg',
+        'minecraft:elder_guardian_spawn_egg'
       ],
       aquatic: [
         'minecraft:witch_spawn_egg',
@@ -387,8 +387,8 @@ onEvent('tags.items', event => {
         'minecraft:salmon_spawn_egg',
         'minecraft:squid_spawn_egg',
         'minecraft:tropical_fish_spawn_egg',
-        'minecraft:turtle_spawn_egg',
-      ],
+        'minecraft:turtle_spawn_egg'
+      ]
     },
     chapter_3: {
       experiments: [
@@ -398,7 +398,7 @@ onEvent('tags.items', event => {
         'occultism:spawn_egg/possessed_endermite',
         'occultism:spawn_egg/djinni',
         'occultism:spawn_egg/foliot',
-        'occultism:spawn_egg/otherworld_bird',
+        'occultism:spawn_egg/otherworld_bird'
       ],
       undergarden: [
         'undergarden:brute_spawn_egg',
@@ -416,13 +416,13 @@ onEvent('tags.items', event => {
         'undergarden:rotwalker_spawn_egg',
         'undergarden:scintling_spawn_egg',
         'undergarden:sploogie_spawn_egg',
-        'undergarden:stoneborn_spawn_egg',
+        'undergarden:stoneborn_spawn_egg'
       ],
       forgotten: [
         'minecraft:slime_spawn_egg',
         'minecraft:creeper_spawn_egg',
         'minecraft:bat_spawn_egg',
-        'cold_sweat:chameleon_spawn_egg',
+        'cold_sweat:chameleon_spawn_egg'
       ],
       everdawn: [
         'occultism:spawn_egg/afrit',
@@ -441,7 +441,7 @@ onEvent('tags.items', event => {
         'blue_skies:shade_monitor_spawn_egg',
         'blue_skies:venom_spider_spawn_egg',
         'blue_skies:alchemist_spawn_egg',
-        'blue_skies:arachnarch_spawn_egg',
+        'blue_skies:arachnarch_spawn_egg'
       ],
       poisonous: [
         'minecraft:spider_spawn_egg',
@@ -451,7 +451,7 @@ onEvent('tags.items', event => {
         'minecraft:cat_spawn_egg',
         'minecraft:panda_spawn_egg',
         'minecraft:parrot_spawn_egg',
-        'cold_sweat:chameleon_spawn_egg',
+        'cold_sweat:chameleon_spawn_egg'
       ],
       twilight: [
         'ecofriendly:droning_drum_ym_spawn_egg',
@@ -509,15 +509,15 @@ onEvent('tags.items', event => {
         'twilightforest:snow_queen_spawn_egg',
         'twilightforest:winter_wolf_spawn_egg',
         'twilightforest:wraith_spawn_egg',
-        'twilightforest:yeti_spawn_egg',
+        'twilightforest:yeti_spawn_egg'
       ],
       magical: [
         'minecraft:rabbit_spawn_egg',
         'minecraft:chicken_spawn_egg',
         'minecraft:wolf_spawn_egg',
         'totemic:bald_eagle_spawn_egg',
-        'totemic:baykok_spawn_egg',
-      ],
+        'totemic:baykok_spawn_egg'
+      ]
     },
     chapter_4: {
       nether: [
@@ -554,11 +554,11 @@ onEvent('tags.items', event => {
         'occultism:spawn_egg/familiar_guardian',
         'occultism:spawn_egg/familiar_headless',
         'occultism:spawn_egg/familiar_mummy',
-        'occultism:spawn_egg/familiar_parrot',
+        'occultism:spawn_egg/familiar_parrot'
       ],
       hellish: [
         'minecraft:zombified_piglin_spawn_egg',
-        'minecraft:pig_spawn_egg',
+        'minecraft:pig_spawn_egg'
       ],
       blueleaf: ['hem:militarybot_spawn_egg'],
       sooty: [
@@ -574,8 +574,8 @@ onEvent('tags.items', event => {
         'minecraft:evoker_spawn_egg',
         'minecraft:donkey_spawn_egg',
         'minecraft:horse_spawn_egg',
-        'minecraft:mule_spawn_egg',
-      ],
+        'minecraft:mule_spawn_egg'
+      ]
     },
     chapter_5_1: {
       birthing: ['minecraft:cow_spawn_egg', 'minecraft:sheep_spawn_egg'],
@@ -583,7 +583,7 @@ onEvent('tags.items', event => {
         'the_bumblezone:beehemoth_spawn_egg',
         'the_bumblezone:honey_slime_spawn_egg',
         'minecraft:bee_spawn_egg',
-        'productivebees:spawn_egg_configurable_bee',
+        'productivebees:spawn_egg_configurable_bee'
       ],
       buzzing: [
         'minecraft:bee_spawn_egg',
@@ -609,8 +609,8 @@ onEvent('tags.items', event => {
         'productivebees:spawn_egg_reed_bee',
         'productivebees:spawn_egg_resin_bee',
         'productivebees:spawn_egg_sweat_bee',
-        'productivebees:spawn_egg_yellow_black_carpenter_bee',
-      ],
+        'productivebees:spawn_egg_yellow_black_carpenter_bee'
+      ]
     },
     chapter_5_2: {},
     chapter_6: {},
@@ -620,7 +620,7 @@ onEvent('tags.items', event => {
         'tofucraft:tofufish_spawnegg',
         'tofucraft:tofunian_spawnegg',
         'tofucraft:tofuslime_spawnegg',
-        'tofucraft:tofuspider_spawnegg',
+        'tofucraft:tofuspider_spawnegg'
       ],
       alfheim: ['mythicbotany:alf_pixie_spawn_egg'],
       end: [
@@ -630,11 +630,11 @@ onEvent('tags.items', event => {
         'cataclysm:endermaptera_spawn_egg',
         'minecraft:enderman_spawn_egg',
         'minecraft:endermite_spawn_egg',
-        'minecraft:shulker_spawn_egg',
+        'minecraft:shulker_spawn_egg'
       ],
       mysterious: [
         'minecraft:enderman_spawn_egg',
-        'minecraft:phantom_spawn_egg',
+        'minecraft:phantom_spawn_egg'
       ],
       oceans: [
         'ecofriendly:kelpalo_ym_spawn_egg',
@@ -652,7 +652,7 @@ onEvent('tags.items', event => {
         'upgrade_aquatic:nautilus_spawn_egg',
         'upgrade_aquatic:perch_spawn_egg',
         'upgrade_aquatic:pike_spawn_egg',
-        'upgrade_aquatic:thrasher_spawn_egg',
+        'upgrade_aquatic:thrasher_spawn_egg'
       ],
       wetlands: [
         'cnb:minipad_spawn_egg',
@@ -660,19 +660,19 @@ onEvent('tags.items', event => {
         'minecraft:mooshroom_spawn_egg',
         'crittersandcompanions:dragonfly_spawn_egg',
         'naturalist:firefly_spawn_egg',
-        'cnb:sporeling_overworld_egg',
+        'cnb:sporeling_overworld_egg'
       ],
       savannahs: [
         'naturalist:elephant_spawn_egg',
         'naturalist:giraffe_spawn_egg',
         'naturalist:hippo_spawn_egg',
         'naturalist:lion_spawn_egg',
-        'naturalist:rhino_spawn_egg',
+        'naturalist:rhino_spawn_egg'
       ],
       jungles: [
         'ecofriendly:clouded_leopard_ym_spawn_egg',
         'naturalist:coral_snake_spawn_egg',
-        'crittersandcompanions:leaf_insect_spawn_egg',
+        'crittersandcompanions:leaf_insect_spawn_egg'
       ],
       forests: [
         'ecofriendly:isopod_spawn_egg_spawn_egg',
@@ -683,7 +683,7 @@ onEvent('tags.items', event => {
         'naturalist:deer_spawn_egg',
         'naturalist:robin_spawn_egg',
         'cnb:little_grebe_spawn_egg',
-        'naturalist:snail_spawn_egg',
+        'naturalist:snail_spawn_egg'
       ],
       grasslands: [
         'naturalist:canary_spawn_egg',
@@ -691,37 +691,37 @@ onEvent('tags.items', event => {
         'naturalist:rattlesnake_spawn_egg',
         'totemic:buffalo_spawn_egg',
         'naturalist:butterfly_spawn_egg',
-        'naturalist:caterpillar_spawn_egg',
+        'naturalist:caterpillar_spawn_egg'
       ],
       deserts: [
         'naturalist:snake_spawn_egg',
         'naturalist:vulture_spawn_egg',
         'naturalist:zebra_spawn_egg',
         'cnb:cactem_spawn_egg',
-        'cnb:lizard_spawn_egg',
+        'cnb:lizard_spawn_egg'
       ],
       colds: [
         'crittersandcompanions:red_panda_spawn_egg',
         'minecraft:polar_bear_spawn_egg',
         'minecraft:goat_spawn_egg',
         'minecraft:llama_spawn_egg',
-        'cnb:yeti_spawn_egg',
+        'cnb:yeti_spawn_egg'
       ],
       civilization: [
         'ecofriendly:recycleagger_spawn_egg',
         'minecraft:trader_llama_spawn_egg',
         'minecraft:villager_spawn_egg',
-        'minecraft:wandering_trader_spawn_egg',
-      ],
+        'minecraft:wandering_trader_spawn_egg'
+      ]
     },
     chapter_7_2: {
       infection: [
         'biomancy:hungry_flesh_blob_spawn_egg',
         'biomancy:legacy_flesh_blob_spawn_egg',
         'biomancy:primordial_flesh_blob_spawn_egg',
-        'biomancy:primordial_hungry_flesh_blob_spawn_egg',
-      ],
-    },
+        'biomancy:primordial_hungry_flesh_blob_spawn_egg'
+      ]
+    }
   });
 
   // [

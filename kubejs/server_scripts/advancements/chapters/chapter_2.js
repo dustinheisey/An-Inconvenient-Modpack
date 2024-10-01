@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'chapter_2', {
     icon: 'naturesaura:gold_leaf',
     item: 'endrem:cold_eye',
@@ -48,9 +48,9 @@ onEvent('server.datapack.high_priority', event => {
                                   {
                                     item: 'kubejs:glass_tube',
                                     title: 'Glass and Shadow',
-                                    description: 'Craft a slender glass tube',
-                                  },
-                                ],
+                                    description: 'Craft a slender glass tube'
+                                  }
+                                ]
                               },
                               {
                                 item: 'endrem:exotic_eye',
@@ -58,13 +58,13 @@ onEvent('server.datapack.high_priority', event => {
                                 description:
                                   'Have a flashback after building a smeltery',
                                 id: 'eye_exotic',
-                                frame: 'challenge',
+                                frame: 'challenge'
                               },
 
                               {
                                 item: 'bucket',
                                 title: 'Metallic Pour',
-                                description: 'Upgrade your bucket',
+                                description: 'Upgrade your bucket'
                               },
                               {
                                 item: 'tconstruct:ingot_cast',
@@ -97,7 +97,7 @@ onEvent('server.datapack.high_priority', event => {
                                                 item: 'blue_skies:bluebright_sapling',
                                                 title: 'Whisper of Winter',
                                                 description:
-                                                  'Dip a sapling in molten amethyst bronze',
+                                                  'Dip a sapling in molten amethyst bronze'
                                               },
                                               {
                                                 item: 'blue_skies:turquoise_stone',
@@ -119,9 +119,9 @@ onEvent('server.datapack.high_priority', event => {
                                                           'minecraft:changed_dimension',
                                                         conditions: {
                                                           from: 'minecraft:overworld',
-                                                          to: 'blue_skies:everbright',
-                                                        },
-                                                      },
+                                                          to: 'blue_skies:everbright'
+                                                        }
+                                                      }
                                                     },
                                                     children: [
                                                       {
@@ -137,7 +137,7 @@ onEvent('server.datapack.high_priority', event => {
                                                             title:
                                                               "Wanderer's Pouch",
                                                             description:
-                                                              'Collect a medicine bag from the Summoner',
+                                                              'Collect a medicine bag from the Summoner'
                                                           },
                                                           {
                                                             item: 'malum:crude_scythe',
@@ -158,9 +158,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                     title:
                                                                       "Echo's of the Forgotten",
                                                                     description:
-                                                                      'Craft an research table',
-                                                                  },
-                                                                ],
+                                                                      'Craft an research table'
+                                                                  }
+                                                                ]
                                                               },
                                                               {
                                                                 item: 'hexerei:animal_fat',
@@ -181,15 +181,15 @@ onEvent('server.datapack.high_priority', event => {
                                                                         title:
                                                                           'First Flicker',
                                                                         description:
-                                                                          'Create some candles with the tallow',
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                          'Create some candles with the tallow'
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         item: 'blue_skies:loot_bag_starlit_crusher',
@@ -242,24 +242,24 @@ onEvent('server.datapack.high_priority', event => {
                                                                                     location:
                                                                                       {
                                                                                         dimension:
-                                                                                          'minecraft:overworld',
+                                                                                          'minecraft:overworld'
                                                                                       },
                                                                                     item: {
                                                                                       items:
                                                                                         [
-                                                                                          'gateways:gate_pearl',
+                                                                                          'gateways:gate_pearl'
                                                                                         ],
-                                                                                      nbt: '{gateway:"gateways:aquatic_gate"}',
-                                                                                    },
-                                                                                  },
-                                                                              },
-                                                                          },
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
+                                                                                      nbt: '{gateway:"gateways:aquatic_gate"}'
+                                                                                    }
+                                                                                  }
+                                                                              }
+                                                                          }
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
                                                           },
                                                           {
                                                             item: 'totemic:totem_whittling_knife',
@@ -295,15 +295,15 @@ onEvent('server.datapack.high_priority', event => {
                                                                         description:
                                                                           "Conduct a ritual of the forest, and see through nature's eyes",
                                                                         reward:
-                                                                          'im:chapters/chapter_3',
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                          'im:chapters/chapter_3'
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         item: 'kubejs:iridescent_scales',
@@ -323,7 +323,7 @@ onEvent('server.datapack.high_priority', event => {
                                                               'Have a flashback after collected the heart of the sea from an aquatic gateway',
                                                             parent: 'ocean',
                                                             id: 'eye_guardian',
-                                                            frame: 'challenge',
+                                                            frame: 'challenge'
                                                           },
                                                           {
                                                             item: 'minecraft:heart_of_the_sea',
@@ -331,9 +331,9 @@ onEvent('server.datapack.high_priority', event => {
                                                             title:
                                                               'Heart of The Sea',
                                                             description:
-                                                              'Complete an aquatic gateway and collect a heart of the sea',
-                                                          },
-                                                        ],
+                                                              'Complete an aquatic gateway and collect a heart of the sea'
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         item: 'rankine:mercury',
@@ -347,9 +347,9 @@ onEvent('server.datapack.high_priority', event => {
                                                             title:
                                                               "Mercury's Message",
                                                             description:
-                                                              'Fill a glass tube with mercury to create a thermometer',
-                                                          },
-                                                        ],
+                                                              'Fill a glass tube with mercury to create a thermometer'
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         title: 'Thawing Truth',
@@ -365,9 +365,9 @@ onEvent('server.datapack.high_priority', event => {
                                                             frame: 'challenge',
                                                             description:
                                                               'Remake the lost story from Everbright',
-                                                            item: 'kubejs:everbright_lost_story',
-                                                          },
-                                                        ],
+                                                            item: 'kubejs:everbright_lost_story'
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         item: 'rankine:steel_gold_pan',
@@ -396,7 +396,7 @@ onEvent('server.datapack.high_priority', event => {
                                                                     title:
                                                                       'Catch of the Day',
                                                                     description:
-                                                                      'Craft a fishing rod',
+                                                                      'Craft a fishing rod'
                                                                   },
                                                                   {
                                                                     icon: 'smallships:oak_cog',
@@ -404,9 +404,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                     title:
                                                                       'Sails of Silk',
                                                                     description:
-                                                                      'Upgrade a raft into a cog',
-                                                                  },
-                                                                ],
+                                                                      'Upgrade a raft into a cog'
+                                                                  }
+                                                                ]
                                                               },
                                                               {
                                                                 item: 'rankine:gun_cotton',
@@ -421,36 +421,36 @@ onEvent('server.datapack.high_priority', event => {
                                                                       "Nomad's Nook",
                                                                     description:
                                                                       'Craft a better bed',
-                                                                    tag: 'minecraft:beds',
+                                                                    tag: 'minecraft:beds'
                                                                   },
                                                                   {
                                                                     item: 'totemic:drum',
                                                                     title:
                                                                       'Beat of the Wilds',
                                                                     description:
-                                                                      'Craft a drum',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
+                                                                      'Craft a drum'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'blue_skies:zeal_lighter',
                                             title: "Winter's Breath",
                                             description: 'Craft a zeal lighter',
-                                            reward: 'im:dimensions/everbright',
-                                          },
-                                        ],
-                                      },
-                                    ],
+                                            reward: 'im:dimensions/everbright'
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   },
                                   {
                                     item: 'rankine:pewter_ingot',
@@ -478,13 +478,13 @@ onEvent('server.datapack.high_priority', event => {
                                                       'minecraft:summoned_entity',
                                                     conditions: {
                                                       entity: {
-                                                        type: 'strawgolem:strawgolem',
-                                                      },
-                                                    },
-                                                  },
-                                                },
-                                              },
-                                            ],
+                                                        type: 'strawgolem:strawgolem'
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'paragon_textiles:flax_seeds',
@@ -510,11 +510,11 @@ onEvent('server.datapack.high_priority', event => {
                                                         title:
                                                           'Fortified Storage',
                                                         description:
-                                                          'Reinforce your basket',
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
+                                                          'Reinforce your basket'
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
                                               },
                                               {
                                                 item: 'paragon_textiles:fabric_red',
@@ -527,9 +527,9 @@ onEvent('server.datapack.high_priority', event => {
                                                     id: 'sewing_table',
                                                     title: 'Warmth Weaver',
                                                     description:
-                                                      'Craft a sewing table and insulate your armor',
-                                                  },
-                                                ],
+                                                      'Craft a sewing table and insulate your armor'
+                                                  }
+                                                ]
                                               },
                                               {
                                                 item: 'paragon_textiles:fabric_plain',
@@ -542,13 +542,13 @@ onEvent('server.datapack.high_priority', event => {
                                                     title:
                                                       'From Scraps to Straps',
                                                     description:
-                                                      'Transform a plastic bag into a basic backpack',
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
+                                                      'Transform a plastic bag into a basic backpack'
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
                                       },
                                       {
                                         item: 'farmersdelight:stove',
@@ -563,10 +563,9 @@ onEvent('server.datapack.high_priority', event => {
                                               {
                                                 item: 'farmersdelight:rice_roll_medley_block',
                                                 title: 'Seafood Symphony',
-                                                description:
-                                                  'Make a fish feast',
-                                              },
-                                            ],
+                                                description: 'Make a fish feast'
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'farmersrespite:kettle',
@@ -577,13 +576,13 @@ onEvent('server.datapack.high_priority', event => {
                                                 item: 'farmersrespite:coffee',
                                                 title: 'Grinds of Success',
                                                 description:
-                                                  'Finally make a cup of coffee',
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
+                                                  'Finally make a cup of coffee'
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   },
                                   {
                                     item: 'rankine:sterling_silver_ingot',
@@ -606,38 +605,38 @@ onEvent('server.datapack.high_priority', event => {
                                                 item: 'rankine:snowflake_obsidian',
                                                 title: 'Chilled to the Core',
                                                 description:
-                                                  'Cast freezing sap on a piece of obsidian',
-                                              },
-                                            ],
+                                                  'Cast freezing sap on a piece of obsidian'
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'rankine:resin_bucket',
                                             title: 'Sticky Fingers',
                                             description:
-                                              'Collect resin, a more convenient tanning fluid',
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                                              'Collect resin, a more convenient tanning fluid'
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             item: 'rankine:gypsum',
             title: 'Sticky Fingers',
-            description: 'Collect resin, a more convenient tanning fluid',
-          },
-        ],
+            description: 'Collect resin, a more convenient tanning fluid'
+          }
+        ]
       },
       {
         item: 'minecraft:iron_hoe',
@@ -647,9 +646,9 @@ onEvent('server.datapack.high_priority', event => {
           {
             item: 'astikorcarts:plow',
             title: 'Promise Fufilled',
-            description: 'Craft a plow',
-          },
-        ],
+            description: 'Craft a plow'
+          }
+        ]
       },
 
       {
@@ -671,11 +670,11 @@ onEvent('server.datapack.high_priority', event => {
                   {
                     item: 'tconstruct:tinker_station',
                     title: 'Workbench Wonders',
-                    description: 'Craft a tinker station',
-                  },
-                ],
-              },
-            ],
+                    description: 'Craft a tinker station'
+                  }
+                ]
+              }
+            ]
           },
           {
             item: 'rankine:compost',
@@ -690,11 +689,11 @@ onEvent('server.datapack.high_priority', event => {
                   {
                     item: 'farmersdelight:rich_soil',
                     title: 'Fertile Grounds',
-                    description: 'Develop some rich soil',
-                  },
-                ],
-              },
-            ],
+                    description: 'Develop some rich soil'
+                  }
+                ]
+              }
+            ]
           },
           {
             item: 'occultism:datura',
@@ -706,12 +705,12 @@ onEvent('server.datapack.high_priority', event => {
                 item: 'occultism:burnt_otherstone',
                 frame: 'goal',
                 title: 'Burnt Into Memory',
-                description: 'Create some burnt otherstone',
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                description: 'Create some burnt otherstone'
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

@@ -1,5 +1,5 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
-    shapeless: () => {},
+    shapeless: () => {}
   });
 });

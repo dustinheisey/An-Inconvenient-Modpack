@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'chapter_3', {
     icon: 'minecraft:spyglass',
     item: 'endrem:exotic_eye',
@@ -14,9 +14,9 @@ onEvent('server.datapack.high_priority', event => {
           {
             item: 'ironchest:iron_chest',
             title: 'Storage Savvy',
-            description: 'Increase the storage in your chest',
-          },
-        ],
+            description: 'Increase the storage in your chest'
+          }
+        ]
       },
       {
         item: 'occultism:crushed_end_stone',
@@ -33,9 +33,9 @@ onEvent('server.datapack.high_priority', event => {
               {
                 item: 'wither_skeleton_skull',
                 title: 'Summoning the Storm',
-                description: 'Collect a wither skull from the wild hunt',
-              },
-            ],
+                description: 'Collect a wither skull from the wild hunt'
+              }
+            ]
           },
           {
             item: 'naturesaura:token_joy',
@@ -58,9 +58,9 @@ onEvent('server.datapack.high_priority', event => {
                         item: 'rankine:shale',
                         title: 'Pillars of the Past',
                         description:
-                          'Throw infused stone in a puddle and forget about it',
-                      },
-                    ],
+                          'Throw infused stone in a puddle and forget about it'
+                      }
+                    ]
                   },
 
                   {
@@ -90,7 +90,7 @@ onEvent('server.datapack.high_priority', event => {
                                 description:
                                   'Have a flashback after slaying a Forgotten Guardian',
                                 id: 'eye_undead',
-                                frame: 'challenge',
+                                frame: 'challenge'
                               },
                               {
                                 item: 'malum:spirit_altar',
@@ -102,13 +102,13 @@ onEvent('server.datapack.high_priority', event => {
                                     item: 'malum:esoteric_spool',
                                     title: 'Spectrum Spun',
                                     description:
-                                      'Create an esoteric spool to show off your identity',
+                                      'Create an esoteric spool to show off your identity'
                                   },
                                   {
                                     item: 'malum:twisted_rock',
                                     title: 'TODO: fix',
                                     description:
-                                      'Infuse shale with wicked and arcane souls',
+                                      'Infuse shale with wicked and arcane souls'
                                   },
                                   {
                                     id: 'blood',
@@ -122,8 +122,7 @@ onEvent('server.datapack.high_priority', event => {
                                         parent: 'blood',
                                         item: 'bloodmagic:sacrificialdagger',
                                         title: "Vein's Verdict",
-                                        description:
-                                          'Craft a sacrificial knife',
+                                        description: 'Craft a sacrificial knife'
                                       },
                                       {
                                         item: 'bloodmagic:altar',
@@ -136,20 +135,20 @@ onEvent('server.datapack.high_priority', event => {
                                             item: 'bloodmagic:blankslate',
                                             title: 'Slate of the Sacrificed',
                                             description:
-                                              'Infuse stone with blood',
+                                              'Infuse stone with blood'
                                           },
 
                                           {
                                             item: 'bloodmagic:incensealtar',
                                             title: 'Pyre of Potency',
                                             description:
-                                              'Craft an incense altar',
+                                              'Craft an incense altar'
                                           },
                                           {
                                             item: 'bloodmagic:weakbloodorb',
                                             title: 'Crimson Conduit',
                                             description:
-                                              'Infuse a utherium crystal with blood',
+                                              'Infuse a utherium crystal with blood'
                                           },
                                           {
                                             item: 'bloodmagic:basemonstersoul',
@@ -175,13 +174,13 @@ onEvent('server.datapack.high_priority', event => {
                                                         title:
                                                           'Compact Continuity',
                                                         description:
-                                                          'Create your first chunk loader',
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
+                                                          'Create your first chunk loader'
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'rankine:blood_obsidian',
@@ -204,7 +203,7 @@ onEvent('server.datapack.high_priority', event => {
                                                     title:
                                                       'Capacity Beyond Belief',
                                                     description:
-                                                      'Upgrade your bag into a substantial satchel',
+                                                      'Upgrade your bag into a substantial satchel'
                                                   },
                                                   {
                                                     item: 'blue_skies:lunar_stonebrick',
@@ -233,7 +232,7 @@ onEvent('server.datapack.high_priority', event => {
                                                                 title:
                                                                   'Harmonized Brilliance',
                                                                 description:
-                                                                  'Craft a brilliant obelisk',
+                                                                  'Craft a brilliant obelisk'
                                                               },
                                                               {
                                                                 item: 'occultism:chalk_purple',
@@ -248,8 +247,7 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'Infernal Invasion',
                                                                     description:
                                                                       'Summon an slay an afrit demon',
-                                                                    children:
-                                                                      [],
+                                                                    children: []
                                                                   },
                                                                   {
                                                                     item: 'tconstruct:blazing_blood_bucket',
@@ -263,13 +261,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                         title:
                                                                           'Light Unto the Darkness',
                                                                         description:
-                                                                          'Finally make a permanent torch',
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
+                                                                          'Finally make a permanent torch'
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
                                                           },
                                                           {
                                                             item: 'minecraft:enchanting_table',
@@ -277,9 +275,9 @@ onEvent('server.datapack.high_priority', event => {
                                                               'Arcane Awakening',
                                                             description:
                                                               'Collect an enchanting table from the Alchemist',
-                                                            children: [],
-                                                          },
-                                                        ],
+                                                            children: []
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         item: 'blue_skies:horizonite_ingot',
@@ -306,13 +304,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                     title:
                                                                       'Dungeon Seeker',
                                                                     description:
-                                                                      "Craft an explorer's compass in a basic table",
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                      "Craft an explorer's compass in a basic table"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         item: 'blue_skies:loot_bag_arachnarch',
@@ -348,7 +346,7 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'Have a flashback after traveling to the Twilight Forest',
                                                                     id: 'eye_evil',
                                                                     frame:
-                                                                      'challenge',
+                                                                      'challenge'
                                                                   },
                                                                   {
                                                                     title:
@@ -365,9 +363,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                           'challenge',
                                                                         description:
                                                                           'Remake the lost story from the Twilight Forest',
-                                                                        item: 'kubejs:twilight_lost_story',
-                                                                      },
-                                                                    ],
+                                                                        item: 'kubejs:twilight_lost_story'
+                                                                      }
+                                                                    ]
                                                                   },
                                                                   {
                                                                     item: 'twilightforest:carminite',
@@ -389,11 +387,11 @@ onEvent('server.datapack.high_priority', event => {
                                                                               title:
                                                                                 'Crushing History',
                                                                               description:
-                                                                                'Craft a basic crushing head',
-                                                                            },
-                                                                          ],
-                                                                      },
-                                                                    ],
+                                                                                'Craft a basic crushing head'
+                                                                            }
+                                                                          ]
+                                                                      }
+                                                                    ]
                                                                   },
                                                                   {
                                                                     item: 'ecofriendly:garbage_item_ym',
@@ -417,11 +415,11 @@ onEvent('server.datapack.high_priority', event => {
                                                                               description:
                                                                                 'Craft a millstone in your basic workbench',
                                                                               children:
-                                                                                [],
-                                                                            },
-                                                                          ],
-                                                                      },
-                                                                    ],
+                                                                                []
+                                                                            }
+                                                                          ]
+                                                                      }
+                                                                    ]
                                                                   },
 
                                                                   {
@@ -447,13 +445,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                                   {
                                                                                     child:
                                                                                       {
-                                                                                        type: 'minecraft:chicken',
-                                                                                      },
-                                                                                  },
-                                                                              },
-                                                                          },
-                                                                      },
-                                                                    ],
+                                                                                        type: 'minecraft:chicken'
+                                                                                      }
+                                                                                  }
+                                                                              }
+                                                                          }
+                                                                      }
+                                                                    ]
                                                                   },
                                                                   {
                                                                     item: 'twilightforest:fiery_ingot',
@@ -486,13 +484,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                                 'challenge',
                                                                               id: 'eye_lost',
                                                                               reward:
-                                                                                'im:chapters/chapter_4',
-                                                                            },
-                                                                          ],
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
+                                                                                'im:chapters/chapter_4'
+                                                                            }
+                                                                          ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
                                                               },
                                                               {
                                                                 item: 'malum:soulwood_totem_base',
@@ -500,9 +498,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                   'Corrupted Core',
                                                                 description:
                                                                   'Create a soulwood totem',
-                                                                children: [],
-                                                              },
-                                                            ],
+                                                                children: []
+                                                              }
+                                                            ]
                                                           },
                                                           {
                                                             item: 'blue_skies:venom_sac',
@@ -531,13 +529,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'challenge',
                                                                     parent:
                                                                       'sacrifice',
-                                                                    id: 'eye_corrupted',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                    id: 'eye_corrupted'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         title: 'Chaotic Truth',
@@ -552,28 +550,28 @@ onEvent('server.datapack.high_priority', event => {
                                                             frame: 'challenge',
                                                             description:
                                                               'Remake the lost story from the Everdawn',
-                                                            item: 'kubejs:everdawn_lost_story',
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
+                                                            item: 'kubejs:everdawn_lost_story'
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
                           },
                           {
                             item: 'undergarden:regalium_crystal',
                             title: 'Gleam Amidst Gloom',
-                            description: 'Collect some regalium crystals',
+                            description: 'Collect some regalium crystals'
                           },
                           {
                             title: 'Lost Truth',
@@ -587,9 +585,9 @@ onEvent('server.datapack.high_priority', event => {
                                 frame: 'challenge',
                                 description:
                                   'Remake the lost story from the Undergarden',
-                                item: 'kubejs:undergarden_lost_story',
-                              },
-                            ],
+                                item: 'kubejs:undergarden_lost_story'
+                              }
+                            ]
                           },
                           {
                             item: 'undergarden:grongle_log',
@@ -604,11 +602,11 @@ onEvent('server.datapack.high_priority', event => {
                                   {
                                     item: 'paper',
                                     title: 'Pages of Promise',
-                                    description: 'Form a sheet of paper',
-                                  },
-                                ],
-                              },
-                            ],
+                                    description: 'Form a sheet of paper'
+                                  }
+                                ]
+                              }
+                            ]
                           },
                           {
                             item: 'undergarden:masticator_scales',
@@ -620,9 +618,9 @@ onEvent('server.datapack.high_priority', event => {
                                 item: 'hexerei:blood_sigil',
                                 title: 'Seal of Sacrifice',
                                 description:
-                                  'Create a blood sigil used to prick your finger',
-                              },
-                            ],
+                                  'Create a blood sigil used to prick your finger'
+                              }
+                            ]
                           },
                           {
                             item: 'undergarden:mogmoss',
@@ -633,20 +631,20 @@ onEvent('server.datapack.high_priority', event => {
                                 item: 'bloodmagic:arcaneashes',
                                 title: 'Dust of the Damned',
                                 description:
-                                  'Transmute the mogmoss into arcane ashes',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                                  'Transmute the mogmoss into arcane ashes'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

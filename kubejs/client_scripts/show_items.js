@@ -1,4 +1,4 @@
-onEvent('jei.add.items', event => {
+onEvent('jei.add.items', (event) => {
   list({
     realistictorches: ['realistictorches:unlit_torch'],
     endrem: ['endrem:cryptic_eye'],
@@ -8,9 +8,9 @@ onEvent('jei.add.items', event => {
       'create:refined_radiance',
       'create:shadow_steel',
       'create:refined_radiance_casing',
-      'create:shadow_steel_casing',
-    ],
-  }).forEach(item => {
+      'create:shadow_steel_casing'
+    ]
+  }).forEach((item) => {
     event.add(item);
   });
 });

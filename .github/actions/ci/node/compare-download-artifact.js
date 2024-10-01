@@ -1,7 +1,7 @@
 // This script runs for pull requests, it downloads the artifact for the target branch.
 
-const {default: axios} = require('axios');
-const {exec} = require('child_process');
+const { default: axios } = require('axios');
+const { exec } = require('child_process');
 const fsp = require('fs/promises');
 
 const arg_repo = process.argv[2];
@@ -12,7 +12,7 @@ const name = `server`;
 
 axios.defaults.headers.common = {
   Accept: 'application/vnd.github.v3+json',
-  Authorization: `token ${arg_auth}`,
+  Authorization: `token ${arg_auth}`
 };
 
 // axios.get('https://api.github.com/user').then(response => {
@@ -21,8 +21,8 @@ axios.defaults.headers.common = {
 
 axios
   .get(`https://api.github.com/repos/${arg_repo}/actions/artifacts`)
-  .then(response => {
-    let artifact = response.data.artifacts.find(artifact => {
+  .then((response) => {
+    let artifact = response.data.artifacts.find((artifact) => {
       return (
         artifact.name == name && artifact.workflow_run.head_sha == arg_hash
       );
@@ -35,8 +35,8 @@ axios
     exec(`rm -r '${__dirname}/artifact'`);
 
     axios
-      .get(artifact.archive_download_url, {responseType: 'stream'})
-      .then(response => {
+      .get(artifact.archive_download_url, { responseType: 'stream' })
+      .then((response) => {
         console.log('downloaded, saving...');
         fsp.writeFile(`${__dirname}/artifact.zip`, response.data).then(() => {
           console.log('saved, unzipping...');

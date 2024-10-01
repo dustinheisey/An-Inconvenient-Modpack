@@ -12,7 +12,7 @@ fsp.access('kubejs/exported/recipes').catch(() => {
   fsp.mkdir('kubejs/exported/recipes');
 });
 
-fsp.readFile('artifact/logs/kubejs/server.txt').then(data => {
+fsp.readFile('artifact/logs/kubejs/server.txt').then((data) => {
   const lines = data.toString().split('\n');
 
   let group = null;
@@ -23,10 +23,10 @@ fsp.readFile('artifact/logs/kubejs/server.txt').then(data => {
 
     duplicate: {},
     kjs: {},
-    md5: {},
+    md5: {}
   };
 
-  lines.forEach(line => {
+  lines.forEach((line) => {
     if (pattern_totals.test(line)) {
       return console.log(line.match(pattern_totals));
     }

@@ -1,4 +1,4 @@
-const {exec, execSync} = require('child_process');
+const { exec, execSync } = require('child_process');
 const fs = require('fs');
 const util = require('node:util');
 
@@ -14,24 +14,24 @@ const kubejs = {
   ),
   [b]: JSON.parse(
     fs.readFileSync(`${b}/kubejs/exported/kubejs-server-export.json`)
-  ),
+  )
 };
 
 let changes = 0;
 let notices = [];
 
 // [ 'blocks', 'items', 'fluids', 'entity_types' ]
-const types = Object.keys({...kubejs[a].tags, ...kubejs[b].tags});
+const types = Object.keys({ ...kubejs[a].tags, ...kubejs[b].tags });
 
-types.forEach(type => {
-  [a, b].forEach(c => {
+types.forEach((type) => {
+  [a, b].forEach((c) => {
     let lines = [];
 
     const keys = Object.keys(kubejs[c].tags[type]).sort();
-    keys.forEach(key => {
+    keys.forEach((key) => {
       kubejs[c].tags[type][key]
         .sort()
-        .forEach(item => lines.push(` #${key} > ${item}`));
+        .forEach((item) => lines.push(` #${key} > ${item}`));
       lines.push('');
     });
 
@@ -45,7 +45,7 @@ types.forEach(type => {
   let positives = 0;
   let negatives = 0;
 
-  diff.split('\n').forEach(line => {
+  diff.split('\n').forEach((line) => {
     if (diff == '') return;
 
     // remove the + and - for empty lines

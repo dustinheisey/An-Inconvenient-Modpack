@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'gateways', {
     item: 'gateways:gate_pearl',
     title: 'Collections: Gateways',
@@ -15,14 +15,14 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:item_used_on_block',
             conditions: {
               location: {
-                dimension: 'minecraft:overworld',
+                dimension: 'minecraft:overworld'
               },
               item: {
                 items: ['gateways:gate_pearl'],
-                nbt: '{gateway:"gateways:small_everbright_gateway"}',
-              },
-            },
-          },
+                nbt: '{gateway:"gateways:small_everbright_gateway"}'
+              }
+            }
+          }
         },
         children: [
           {
@@ -36,14 +36,14 @@ onEvent('server.datapack.high_priority', event => {
                 trigger: 'minecraft:item_used_on_block',
                 conditions: {
                   location: {
-                    dimension: 'minecraft:overworld',
+                    dimension: 'minecraft:overworld'
                   },
                   item: {
                     items: ['gateways:gate_pearl'],
-                    nbt: '{gateway:"gateways:medium_everbright_gateway"}',
-                  },
-                },
-              },
+                    nbt: '{gateway:"gateways:medium_everbright_gateway"}'
+                  }
+                }
+              }
             },
             children: [
               {
@@ -56,26 +56,26 @@ onEvent('server.datapack.high_priority', event => {
                     trigger: 'minecraft:item_used_on_block',
                     conditions: {
                       location: {
-                        dimension: 'minecraft:overworld',
+                        dimension: 'minecraft:overworld'
                       },
                       item: {
                         items: ['gateways:gate_pearl'],
-                        nbt: '{gateway:"gateways:large_everbright_gateway"}',
-                      },
-                    },
-                  },
+                        nbt: '{gateway:"gateways:large_everbright_gateway"}'
+                      }
+                    }
+                  }
                 },
                 children: [
                   {
                     title: 'Aquatic Token',
                     description: 'Collect a token from Everbright',
-                    item: 'kubejs:everbright_token',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    item: 'kubejs:everbright_token'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'gateways:gate_pearl',
@@ -88,14 +88,14 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:item_used_on_block',
             conditions: {
               location: {
-                dimension: 'minecraft:overworld',
+                dimension: 'minecraft:overworld'
               },
               item: {
                 items: ['gateways:gate_pearl'],
-                nbt: '{gateway:"gateways:small_undergarden_gateway"}',
-              },
-            },
-          },
+                nbt: '{gateway:"gateways:small_undergarden_gateway"}'
+              }
+            }
+          }
         },
         children: [
           {
@@ -109,14 +109,14 @@ onEvent('server.datapack.high_priority', event => {
                 trigger: 'minecraft:item_used_on_block',
                 conditions: {
                   location: {
-                    dimension: 'minecraft:overworld',
+                    dimension: 'minecraft:overworld'
                   },
                   item: {
                     items: ['gateways:gate_pearl'],
-                    nbt: '{gateway:"gateways:medium_undergarden_gateway"}',
-                  },
-                },
-              },
+                    nbt: '{gateway:"gateways:medium_undergarden_gateway"}'
+                  }
+                }
+              }
             },
             children: [
               {
@@ -129,26 +129,26 @@ onEvent('server.datapack.high_priority', event => {
                     trigger: 'minecraft:item_used_on_block',
                     conditions: {
                       location: {
-                        dimension: 'minecraft:overworld',
+                        dimension: 'minecraft:overworld'
                       },
                       item: {
                         items: ['gateways:gate_pearl'],
-                        nbt: '{gateway:"gateways:large_undergarden_gateway"}',
-                      },
-                    },
-                  },
+                        nbt: '{gateway:"gateways:large_undergarden_gateway"}'
+                      }
+                    }
+                  }
                 },
                 children: [
                   {
                     title: 'Forgotten Token',
                     description: 'Collect a token from the Undergarden',
-                    item: 'kubejs:undergarden_token',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    item: 'kubejs:undergarden_token'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'gateways:gate_pearl',
@@ -161,14 +161,14 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:item_used_on_block',
             conditions: {
               location: {
-                dimension: 'minecraft:overworld',
+                dimension: 'minecraft:overworld'
               },
               item: {
                 items: ['gateways:gate_pearl'],
-                nbt: '{gateway:"gateways:small_everdawn_gateway"}',
-              },
-            },
-          },
+                nbt: '{gateway:"gateways:small_everdawn_gateway"}'
+              }
+            }
+          }
         },
         children: [
           {
@@ -182,14 +182,14 @@ onEvent('server.datapack.high_priority', event => {
                 trigger: 'minecraft:item_used_on_block',
                 conditions: {
                   location: {
-                    dimension: 'minecraft:overworld',
+                    dimension: 'minecraft:overworld'
                   },
                   item: {
                     items: ['gateways:gate_pearl'],
-                    nbt: '{gateway:"gateways:medium_everdawn_gateway"}',
-                  },
-                },
-              },
+                    nbt: '{gateway:"gateways:medium_everdawn_gateway"}'
+                  }
+                }
+              }
             },
             children: [
               {
@@ -202,26 +202,26 @@ onEvent('server.datapack.high_priority', event => {
                     trigger: 'minecraft:item_used_on_block',
                     conditions: {
                       location: {
-                        dimension: 'minecraft:overworld',
+                        dimension: 'minecraft:overworld'
                       },
                       item: {
                         items: ['gateways:gate_pearl'],
-                        nbt: '{gateway:"gateways:large_everdawn_gateway"}',
-                      },
-                    },
-                  },
+                        nbt: '{gateway:"gateways:large_everdawn_gateway"}'
+                      }
+                    }
+                  }
                 },
                 children: [
                   {
                     title: 'Poisonous Token',
                     description: 'Collect a token from Everdawn',
-                    item: 'kubejs:everdawn_token',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    item: 'kubejs:everdawn_token'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'gateways:gate_pearl',
@@ -234,14 +234,14 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:item_used_on_block',
             conditions: {
               location: {
-                dimension: 'minecraft:overworld',
+                dimension: 'minecraft:overworld'
               },
               item: {
                 items: ['gateways:gate_pearl'],
-                nbt: '{gateway:"gateways:small_twilight_gateway"}',
-              },
-            },
-          },
+                nbt: '{gateway:"gateways:small_twilight_gateway"}'
+              }
+            }
+          }
         },
         children: [
           {
@@ -255,14 +255,14 @@ onEvent('server.datapack.high_priority', event => {
                 trigger: 'minecraft:item_used_on_block',
                 conditions: {
                   location: {
-                    dimension: 'minecraft:overworld',
+                    dimension: 'minecraft:overworld'
                   },
                   item: {
                     items: ['gateways:gate_pearl'],
-                    nbt: '{gateway:"gateways:medium_twilight_gateway"}',
-                  },
-                },
-              },
+                    nbt: '{gateway:"gateways:medium_twilight_gateway"}'
+                  }
+                }
+              }
             },
             children: [
               {
@@ -275,26 +275,26 @@ onEvent('server.datapack.high_priority', event => {
                     trigger: 'minecraft:item_used_on_block',
                     conditions: {
                       location: {
-                        dimension: 'minecraft:overworld',
+                        dimension: 'minecraft:overworld'
                       },
                       item: {
                         items: ['gateways:gate_pearl'],
-                        nbt: '{gateway:"gateways:large_twilight_gateway"}',
-                      },
-                    },
-                  },
+                        nbt: '{gateway:"gateways:large_twilight_gateway"}'
+                      }
+                    }
+                  }
                 },
                 children: [
                   {
                     title: 'Magical Token',
                     description: 'Collect a token from the Twilight Forest',
-                    item: 'kubejs:twilight_token',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    item: 'kubejs:twilight_token'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'gateways:gate_pearl',
@@ -307,14 +307,14 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:item_used_on_block',
             conditions: {
               location: {
-                dimension: 'minecraft:overworld',
+                dimension: 'minecraft:overworld'
               },
               item: {
                 items: ['gateways:gate_pearl'],
-                nbt: '{gateway:"gateways:small_nether_gateway"}',
-              },
-            },
-          },
+                nbt: '{gateway:"gateways:small_nether_gateway"}'
+              }
+            }
+          }
         },
         children: [
           {
@@ -328,14 +328,14 @@ onEvent('server.datapack.high_priority', event => {
                 trigger: 'minecraft:item_used_on_block',
                 conditions: {
                   location: {
-                    dimension: 'minecraft:overworld',
+                    dimension: 'minecraft:overworld'
                   },
                   item: {
                     items: ['gateways:gate_pearl'],
-                    nbt: '{gateway:"gateways:medium_nether_gateway"}',
-                  },
-                },
-              },
+                    nbt: '{gateway:"gateways:medium_nether_gateway"}'
+                  }
+                }
+              }
             },
             children: [
               {
@@ -348,26 +348,26 @@ onEvent('server.datapack.high_priority', event => {
                     trigger: 'minecraft:item_used_on_block',
                     conditions: {
                       location: {
-                        dimension: 'minecraft:overworld',
+                        dimension: 'minecraft:overworld'
                       },
                       item: {
                         items: ['gateways:gate_pearl'],
-                        nbt: '{gateway:"gateways:large_nether_gateway"}',
-                      },
-                    },
-                  },
+                        nbt: '{gateway:"gateways:large_nether_gateway"}'
+                      }
+                    }
+                  }
                 },
                 children: [
                   {
                     title: 'Hellish Token',
                     description: 'Collect a token from the Nether',
-                    item: 'kubejs:nether_token',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    item: 'kubejs:nether_token'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'gateways:gate_pearl',
@@ -380,14 +380,14 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:item_used_on_block',
             conditions: {
               location: {
-                dimension: 'minecraft:overworld',
+                dimension: 'minecraft:overworld'
               },
               item: {
                 items: ['gateways:gate_pearl'],
-                nbt: '{gateway:"gateways:small_blueleaf_gateway"}',
-              },
-            },
-          },
+                nbt: '{gateway:"gateways:small_blueleaf_gateway"}'
+              }
+            }
+          }
         },
         children: [
           {
@@ -401,14 +401,14 @@ onEvent('server.datapack.high_priority', event => {
                 trigger: 'minecraft:item_used_on_block',
                 conditions: {
                   location: {
-                    dimension: 'minecraft:overworld',
+                    dimension: 'minecraft:overworld'
                   },
                   item: {
                     items: ['gateways:gate_pearl'],
-                    nbt: '{gateway:"gateways:medium_blueleaf_gateway"}',
-                  },
-                },
-              },
+                    nbt: '{gateway:"gateways:medium_blueleaf_gateway"}'
+                  }
+                }
+              }
             },
             children: [
               {
@@ -421,26 +421,26 @@ onEvent('server.datapack.high_priority', event => {
                     trigger: 'minecraft:item_used_on_block',
                     conditions: {
                       location: {
-                        dimension: 'minecraft:overworld',
+                        dimension: 'minecraft:overworld'
                       },
                       item: {
                         items: ['gateways:gate_pearl'],
-                        nbt: '{gateway:"gateways:large_blueleaf_gateway"}',
-                      },
-                    },
-                  },
+                        nbt: '{gateway:"gateways:large_blueleaf_gateway"}'
+                      }
+                    }
+                  }
                 },
                 children: [
                   {
                     title: 'Sooty Token',
                     description: 'Collect a token from Blueleaf',
-                    item: 'kubejs:blueleaf_token',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    item: 'kubejs:blueleaf_token'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'gateways:gate_pearl',
@@ -453,14 +453,14 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:item_used_on_block',
             conditions: {
               location: {
-                dimension: 'minecraft:overworld',
+                dimension: 'minecraft:overworld'
               },
               item: {
                 items: ['gateways:gate_pearl'],
-                nbt: '{gateway:"gateways:small_bumblezone_gateway"}',
-              },
-            },
-          },
+                nbt: '{gateway:"gateways:small_bumblezone_gateway"}'
+              }
+            }
+          }
         },
         children: [
           {
@@ -474,14 +474,14 @@ onEvent('server.datapack.high_priority', event => {
                 trigger: 'minecraft:item_used_on_block',
                 conditions: {
                   location: {
-                    dimension: 'minecraft:overworld',
+                    dimension: 'minecraft:overworld'
                   },
                   item: {
                     items: ['gateways:gate_pearl'],
-                    nbt: '{gateway:"gateways:medium_bumblezone_gateway"}',
-                  },
-                },
-              },
+                    nbt: '{gateway:"gateways:medium_bumblezone_gateway"}'
+                  }
+                }
+              }
             },
             children: [
               {
@@ -494,26 +494,26 @@ onEvent('server.datapack.high_priority', event => {
                     trigger: 'minecraft:item_used_on_block',
                     conditions: {
                       location: {
-                        dimension: 'minecraft:overworld',
+                        dimension: 'minecraft:overworld'
                       },
                       item: {
                         items: ['gateways:gate_pearl'],
-                        nbt: '{gateway:"gateways:large_bumblezone_gateway"}',
-                      },
-                    },
-                  },
+                        nbt: '{gateway:"gateways:large_bumblezone_gateway"}'
+                      }
+                    }
+                  }
                 },
                 children: [
                   {
                     title: 'Buzzing Token',
                     description: 'Collect a token from the Bumblezone',
-                    item: 'kubejs:bumblezone_token',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    item: 'kubejs:bumblezone_token'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'gateways:gate_pearl',
@@ -526,14 +526,14 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:item_used_on_block',
             conditions: {
               location: {
-                dimension: 'minecraft:overworld',
+                dimension: 'minecraft:overworld'
               },
               item: {
                 items: ['gateways:gate_pearl'],
-                nbt: '{gateway:"gateways:small_end_gateway"}',
-              },
-            },
-          },
+                nbt: '{gateway:"gateways:small_end_gateway"}'
+              }
+            }
+          }
         },
         children: [
           {
@@ -547,14 +547,14 @@ onEvent('server.datapack.high_priority', event => {
                 trigger: 'minecraft:item_used_on_block',
                 conditions: {
                   location: {
-                    dimension: 'minecraft:overworld',
+                    dimension: 'minecraft:overworld'
                   },
                   item: {
                     items: ['gateways:gate_pearl'],
-                    nbt: '{gateway:"gateways:medium_end_gateway"}',
-                  },
-                },
-              },
+                    nbt: '{gateway:"gateways:medium_end_gateway"}'
+                  }
+                }
+              }
             },
             children: [
               {
@@ -567,27 +567,27 @@ onEvent('server.datapack.high_priority', event => {
                     trigger: 'minecraft:item_used_on_block',
                     conditions: {
                       location: {
-                        dimension: 'minecraft:overworld',
+                        dimension: 'minecraft:overworld'
                       },
                       item: {
                         items: ['gateways:gate_pearl'],
-                        nbt: '{gateway:"gateways:large_end_gateway"}',
-                      },
-                    },
-                  },
+                        nbt: '{gateway:"gateways:large_end_gateway"}'
+                      }
+                    }
+                  }
                 },
                 children: [
                   {
                     title: 'Mysterious Token',
                     description: 'Collect a token from the End',
-                    item: 'kubejs:end_token',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                    item: 'kubejs:end_token'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

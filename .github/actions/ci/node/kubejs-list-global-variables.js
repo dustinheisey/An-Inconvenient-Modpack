@@ -14,7 +14,7 @@ function console_log(color, line) {
 }
 
 // filter out the lines that do not relate to `new global variable` and its context
-filenames.forEach(filename => {
+filenames.forEach((filename) => {
   console.log(clc.blue(`${filename}.txt:`));
   const lines = fs
     .readFileSync(`artifacts/logs/kubejs/${filename}.txt`)

@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'chapter_1', {
     icon: 'paragon_textiles:plant_fibers',
     title: 'Chapter 1: Desperate Measures',
@@ -9,9 +9,9 @@ onEvent('server.datapack.high_priority', event => {
         trigger: 'minecraft:location',
         orb: false,
         conditions: {
-          dimension: 'overworld',
-        },
-      },
+          dimension: 'overworld'
+        }
+      }
     },
     reward: 'im:chapters/chapter_1',
     children: [
@@ -27,13 +27,13 @@ onEvent('server.datapack.high_priority', event => {
                 {
                   condition: 'minecraft:time_check',
                   value: {
-                    min: 24000,
-                  },
-                },
-              ],
-            },
-          },
-        },
+                    min: 24000
+                  }
+                }
+              ]
+            }
+          }
+        }
       },
       {
         hide: true,
@@ -43,11 +43,11 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:player_killed_entity',
             conditions: {
               entity: {
-                type: 'minecraft:zombie',
-              },
-            },
-          },
-        },
+                type: 'minecraft:zombie'
+              }
+            }
+          }
+        }
       },
       {
         item: 'minecraft:flint',
@@ -58,7 +58,7 @@ onEvent('server.datapack.high_priority', event => {
           {
             item: 'charcoal_pit:fire_starter',
             title: 'Flicker of Hope',
-            description: 'Craft a fire starter',
+            description: 'Craft a fire starter'
           },
           {
             item: 'rankine:flint_knife',
@@ -75,13 +75,12 @@ onEvent('server.datapack.high_priority', event => {
                   {
                     item: 'rankine:prospecting_stick',
                     title: 'Seek and You Shall Find',
-                    description: 'Craft a prospecting stick to find ores',
+                    description: 'Craft a prospecting stick to find ores'
                   },
                   {
                     item: 'hexerei:dowsing_rod',
                     title: 'Swamp Seeker',
-                    description:
-                      'Create a dowsing rod & use it to find a swamp',
+                    description: 'Create a dowsing rod & use it to find a swamp'
                   },
                   {
                     item: 'rankine:flint_pickaxe',
@@ -98,9 +97,9 @@ onEvent('server.datapack.high_priority', event => {
                             item: 'salt:salt',
                             title: 'Salt of the Earth',
                             description:
-                              'Collect some salt from the raw rock salt',
-                          },
-                        ],
+                              'Collect some salt from the raw rock salt'
+                          }
+                        ]
                       },
                       {
                         item: 'rankine:stone_hammer',
@@ -124,7 +123,7 @@ onEvent('server.datapack.high_priority', event => {
                                     item: 'minecraft:flint_and_steel',
                                     title: 'Strike of Fire',
                                     description:
-                                      'Craft flint and steel to ignite your forge',
+                                      'Craft flint and steel to ignite your forge'
                                   },
                                   {
                                     item: 'naturescompass:naturescompass',
@@ -144,9 +143,9 @@ onEvent('server.datapack.high_priority', event => {
                                             item: 'antiqueatlas:empty_antique_atlas',
                                             title: 'Soulbound Cartography',
                                             description:
-                                              'Craft an Antique Atlas with the undead soul',
-                                          },
-                                        ],
+                                              'Craft an Antique Atlas with the undead soul'
+                                          }
+                                        ]
                                       },
                                       {
                                         item: 'biomancy:living_flesh',
@@ -158,15 +157,15 @@ onEvent('server.datapack.high_priority', event => {
                                             item: 'farmersdelight:stuffed_pumpkin_block',
                                             title: 'Hearty Harvest',
                                             description:
-                                              'Craft a stuffed pumpkin for sustenance',
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
+                                              'Craft a stuffed pumpkin for sustenance'
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
                           },
                           {
                             item: 'rankine:chalk',
@@ -178,9 +177,9 @@ onEvent('server.datapack.high_priority', event => {
                                 item: 'rankine:quicklime',
                                 title: 'Lime in Time',
                                 description: 'Smelt chalk and create quicklime',
-                                children: [],
-                              },
-                            ],
+                                children: []
+                              }
+                            ]
                           },
                           {
                             item: 'rankine:cassiterite',
@@ -197,21 +196,21 @@ onEvent('server.datapack.high_priority', event => {
                                     item: 'rankine:altimeter',
                                     title: "Depth's Gauge",
                                     description:
-                                      'Craft an altimeter to help you find ores underground',
-                                  },
-                                ],
-                              },
-                            ],
+                                      'Craft an altimeter to help you find ores underground'
+                                  }
+                                ]
+                              }
+                            ]
                           },
                           {
                             item: 'rankine:kaolinite',
                             title: "Porcelain's Potential",
                             description:
-                              'Crush some kaolin found in the desert to collect kaolinite',
-                          },
-                        ],
-                      },
-                    ],
+                              'Crush some kaolin found in the desert to collect kaolinite'
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     item: 'rankine:flint_spear',
@@ -227,9 +226,9 @@ onEvent('server.datapack.high_priority', event => {
                             item: 'ceramicbucket:ceramic_bucket',
                             nbt: '{Fluid:{Amount:1000,FluidName:"kubejs:tanning_fluid"}}',
                             title: 'Putrid Potion',
-                            description: 'Brew tanning fluid from the brain',
-                          },
-                        ],
+                            description: 'Brew tanning fluid from the brain'
+                          }
+                        ]
                       },
                       {
                         item: 'minecraft:rotten_flesh',
@@ -267,13 +266,13 @@ onEvent('server.datapack.high_priority', event => {
                                                 item: 'paraglider:paraglider',
                                                 title: 'Wind Rider',
                                                 description:
-                                                  'Craft a paraglider',
+                                                  'Craft a paraglider'
                                               },
                                               {
                                                 item: 'upgrade_aquatic:bedroll',
                                                 title: "Slumber's Sanctuary",
                                                 description:
-                                                  'Craft a bedroll and regain your sanity',
+                                                  'Craft a bedroll and regain your sanity'
                                               },
                                               {
                                                 icon: 'leather_helmet',
@@ -282,27 +281,27 @@ onEvent('server.datapack.high_priority', event => {
                                                 frame: 'challenge',
                                                 description:
                                                   'Craft your first piece of armor',
-                                                tag: 'im:armors/leather',
+                                                tag: 'im:armors/leather'
                                               },
                                               {
                                                 item: 'charcoal_pit:bellows',
                                                 title: "Bloomery's Lungs",
                                                 description:
-                                                  'Craft some bellows',
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                                  'Craft some bellows'
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     item: 'rankine:flint_axe',
@@ -337,22 +336,22 @@ onEvent('server.datapack.high_priority', event => {
                                         title: 'High Heat Potential',
                                         description:
                                           'Refine fire clay for high-temperature uses',
-                                        children: [],
-                                      },
-                                    ],
+                                        children: []
+                                      }
+                                    ]
                                   },
                                   {
                                     item: 'rankine:mortar',
                                     title: 'Mixing Mortar',
                                     description:
                                       'Mix some mortar for building and bonding',
-                                    children: [],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
+                                    children: []
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         icon: 'oak_log',
@@ -385,7 +384,7 @@ onEvent('server.datapack.high_priority', event => {
                                         nbt: '{Purity:3}',
                                         title: "Thirst's Remedy",
                                         description:
-                                          'Collect some water and purify it fully',
+                                          'Collect some water and purify it fully'
                                       },
                                       {
                                         item: 'furnace',
@@ -399,19 +398,19 @@ onEvent('server.datapack.high_priority', event => {
                                             title: "Potter's Legacy",
                                             description:
                                               'Craft a ceramic vessel',
-                                            tag: 'charcoal_pit:ceramic_pots',
+                                            tag: 'charcoal_pit:ceramic_pots'
                                           },
                                           {
                                             item: 'ceramicbucket:ceramic_bucket',
                                             title: 'Primitive Pour',
                                             description:
-                                              'Craft a ceramic bucket',
+                                              'Craft a ceramic bucket'
                                           },
                                           {
                                             item: 'brickhopper:brick_hopper',
                                             title: 'Brick Hopper',
                                             description:
-                                              'Craft a brick hopper for item transport',
+                                              'Craft a brick hopper for item transport'
                                           },
                                           {
                                             item: 'rankine:refractory_brick',
@@ -424,7 +423,7 @@ onEvent('server.datapack.high_priority', event => {
                                                 item: 'immersiveengineering:hammer',
                                                 title: 'Engineer’s Tool',
                                                 description:
-                                                  'Craft a hammer to help you fire bronze ingots',
+                                                  'Craft a hammer to help you fire bronze ingots'
                                               },
                                               {
                                                 item: 'rankine:beehive_oven_pit',
@@ -436,16 +435,16 @@ onEvent('server.datapack.high_priority', event => {
                                                     item: 'rankine:bone_char',
                                                     title: 'Carbon Alchemy',
                                                     description:
-                                                      'Cook some bones in a beehive oven',
+                                                      'Cook some bones in a beehive oven'
                                                   },
                                                   {
                                                     item: 'kubejs:grog',
                                                     title: 'Clay Concoction',
                                                     description:
                                                       'Crush some grog from fired porcelain',
-                                                    children: [],
-                                                  },
-                                                ],
+                                                    children: []
+                                                  }
+                                                ]
                                               },
                                               {
                                                 icon: 'immersiveengineering:alloy_smelter',
@@ -462,11 +461,11 @@ onEvent('server.datapack.high_priority', event => {
                                                         'immersiveengineering:multiblocks/alloy_smelter',
                                                       item: {
                                                         items: [
-                                                          'immersiveengineering:hammer',
-                                                        ],
-                                                      },
-                                                    },
-                                                  },
+                                                          'immersiveengineering:hammer'
+                                                        ]
+                                                      }
+                                                    }
+                                                  }
                                                 },
                                                 children: [
                                                   {
@@ -496,7 +495,7 @@ onEvent('server.datapack.high_priority', event => {
                                                                 title:
                                                                   'Iron Caldron',
                                                                 description:
-                                                                  'Craft a cauldron to collect salt more easily',
+                                                                  'Craft a cauldron to collect salt more easily'
                                                               },
                                                               {
                                                                 item: 'cold_sweat:hearth',
@@ -521,13 +520,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                     frame:
                                                                       'challenge',
                                                                     reward:
-                                                                      'im:chapters/chapter_2',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                      'im:chapters/chapter_2'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         item: 'rankine:bronze_hammer',
@@ -556,11 +555,11 @@ onEvent('server.datapack.high_priority', event => {
                                                                     title:
                                                                       'Altar of Vitality',
                                                                     description:
-                                                                      'Construct a goddess statue',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
+                                                                      'Construct a goddess statue'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
                                                           },
 
                                                           {
@@ -576,9 +575,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                   'Lead Genesis',
                                                                 description:
                                                                   'Forge a lead ingot',
-                                                                children: [],
-                                                              },
-                                                            ],
+                                                                children: []
+                                                              }
+                                                            ]
                                                           },
 
                                                           {
@@ -593,9 +592,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                 title:
                                                                   'Silver Genesis',
                                                                 description:
-                                                                  'Forge a silver ingot',
-                                                              },
-                                                            ],
+                                                                  'Forge a silver ingot'
+                                                              }
+                                                            ]
                                                           },
                                                           {
                                                             item: 'rankine:graphite',
@@ -603,14 +602,14 @@ onEvent('server.datapack.high_priority', event => {
                                                               'Carbon in the Rough',
                                                             description:
                                                               'Find plumbago in an extreme hills and collect a piece of graphite',
-                                                            children: [],
+                                                            children: []
                                                           },
                                                           {
                                                             item: 'minecraft:amethyst_shard',
                                                             title:
                                                               'Violet Depths',
                                                             description:
-                                                              'Find a geode deep underground & collect some amethyst shards',
+                                                              'Find a geode deep underground & collect some amethyst shards'
                                                           },
                                                           {
                                                             item: 'rankine:plagioclase_feldspar',
@@ -618,23 +617,23 @@ onEvent('server.datapack.high_priority', event => {
                                                               'Feldspar Find',
                                                             description:
                                                               'Collect some plagioclase feldspar from stone',
-                                                            children: [],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
+                                                            children: []
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
                           },
                           {
                             item: 'minecraft:crafting_table',
@@ -645,7 +644,7 @@ onEvent('server.datapack.high_priority', event => {
                                 icon: 'justaraftmod:oak_raft',
                                 tag: 'im:rafts',
                                 title: 'Float On',
-                                description: 'Craft a basic raft',
+                                description: 'Craft a basic raft'
                               },
                               {
                                 item: 'hexerei:herb_drying_rack',
@@ -656,7 +655,7 @@ onEvent('server.datapack.high_priority', event => {
                                     item: 'cold_sweat:waterskin',
                                     id: 'waterskin',
                                     title: 'Cooling Off',
-                                    description: 'Craft a few waterskins',
+                                    description: 'Craft a few waterskins'
                                   },
                                   {
                                     item: 'realistictorches:matchbox',
@@ -675,15 +674,15 @@ onEvent('server.datapack.high_priority', event => {
                                             conditions: {
                                               item: {
                                                 items: [
-                                                  'realistictorches:matchbox',
-                                                ],
+                                                  'realistictorches:matchbox'
+                                                ]
                                               },
                                               location: {
                                                 block: {
-                                                  item: 'realistictorches:unlit_torch',
-                                                },
-                                              },
-                                            },
+                                                  item: 'realistictorches:unlit_torch'
+                                                }
+                                              }
+                                            }
                                           },
                                           crafting: {
                                             trigger: 'inventory_changed',
@@ -691,39 +690,37 @@ onEvent('server.datapack.high_priority', event => {
                                               items: [
                                                 {
                                                   items: [
-                                                    'realistictorches:lit_torch',
-                                                  ],
-                                                },
-                                              ],
-                                            },
-                                          },
+                                                    'realistictorches:lit_torch'
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          }
                                         },
-                                        requirements: [
-                                          ['lighting', 'crafting'],
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                        requirements: [['lighting', 'crafting']]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         item: 'ecofriendly:iron_can_ym',
         id: 'trash',
         title: 'Community Service',
-        description: 'Gather some debris from the ground',
-      },
-    ],
+        description: 'Gather some debris from the ground'
+      }
+    ]
   });
 });

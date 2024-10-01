@@ -27,7 +27,7 @@ global['unifypriorities'] = [
   'occultism',
   'bloodmagic',
   'createaddition',
-  'mekanism',
+  'mekanism'
 ];
 
 // Items to exclude (will not be unified)
@@ -43,7 +43,7 @@ let unifyTags = new Set([
   'forge:coal_coke',
   'forge:storage_blocks/coal_coke',
   'forge:salt',
-  'forge:storage_blocks/salt',
+  'forge:storage_blocks/salt'
 ]);
 
 // A list of lists of items to unify. Each list will be turned into a tag and added to the list of tags to unify.
@@ -52,14 +52,14 @@ let customtags = [
   [
     'farmersdelight:milk_bottle',
     'hexerei:milk_bottle',
-    'productivebees:milk_bottle',
+    'productivebees:milk_bottle'
   ],
   [
     'create:honey_bucket',
     'productivebees:honey_bucket',
     'tconstruct:honey_bucket',
-    'the_bumblezone:honey_bucket',
-  ],
+    'the_bumblezone:honey_bucket'
+  ]
 ];
 
 // ---------- PLATFORM SPECIFIC ----------
@@ -74,7 +74,7 @@ let tagGen = [
   'steel=storage_blocks,ingots,nuggets,dusts,ores,gears,rods,wires,plates',
   'sulfur=dusts,nuggets,ores',
   'fluorite=dusts,gems,storage_blocks',
-  'obsidian=dusts',
+  'obsidian=dusts'
 ];
 
 for (let line of tagGen) {
@@ -122,7 +122,7 @@ function tryTag(tag) {
   }
 }
 
-let e_tags_items = event => {
+let e_tags_items = (event) => {
   if (!('cache' in global)) {
     // Create custom tags
     let root = 'unifytags:tag';
@@ -145,7 +145,7 @@ let e_tags_items = event => {
 };
 
 // Replace input and output of recipes
-let e_recipes = event => {
+let e_recipes = (event) => {
   // If the cache is already generated, this doesn't need to run again
   if (!('cache' in global)) {
     // Necessary since Rhino doesn't support the spread operator
@@ -205,7 +205,7 @@ let e_recipes = event => {
         itemsToTags: itemsToTags,
         tagItems: tagItems,
         tagPriorityItems: tagPriorityItems,
-        unifyexclude: global['unifyexcludegen'],
+        unifyexclude: global['unifyexcludegen']
       };
       JsonIO.write('kubejs/config/unify_cache.json', global['cache']);
     }
@@ -229,15 +229,15 @@ let e_recipes = event => {
       if (global['RECIPE_DEDUPE']) {
         // Iterate over every recipe that has the output specified
         let rtypes = {};
-        event.forEachRecipe({output: priorityId}, r => {
+        event.forEachRecipe({ output: priorityId }, (r) => {
           // Calculate the "hash" of this recipe based on it's ingredients
           let hash = [];
-          r.outputItems.forEach(stack => {
+          r.outputItems.forEach((stack) => {
             hash.push(stack.getId(), '+', stack.getCount(), ',');
           });
           hash.push(';');
-          r.inputItems.forEach(ingredient => {
-            ingredient.getItemIds().forEach(item => {
+          r.inputItems.forEach((ingredient) => {
+            ingredient.getItemIds().forEach((item) => {
               hash.push(item, '/');
             });
             hash.push(',');
@@ -250,7 +250,7 @@ let e_recipes = event => {
             if (rtypes[rtype].has(hash)) {
               // Recipe match found. Delete this recipe
               // RecipeJS.removedRecipes.add() is not public, so we're doing this instead.
-              event.remove({id: r.getId().toString()});
+              event.remove({ id: r.getId().toString() });
             }
           } else {
             // First recipe of this type, add it's "hash"
@@ -273,13 +273,13 @@ if (global['V6P']) {
 let invnames = new Set([
   'net.minecraft.inventory.container.PlayerContainer',
   'net.minecraft.class_1723',
-  'net.minecraft.world.inventory.InventoryMenu',
+  'net.minecraft.world.inventory.InventoryMenu'
 ]);
 
 // Handle inventory change (to check for unificaiton)
 // Unfortunately it gets called twice due to setting the inventory.
 if (global['INVENTORY_UNIFY']) {
-  let e_player_inventory_changed = event => {
+  let e_player_inventory_changed = (event) => {
     let ename = String(
       event.getEntity().getOpenInventory().getClass().getName()
     );
@@ -322,7 +322,7 @@ if (global['INVENTORY_UNIFY']) {
 
 // Items on ground
 if (global['ITEM_UNIFY']) {
-  let e_entity_spawned = event => {
+  let e_entity_spawned = (event) => {
     // Check if an item has spawned
     let entity = event.getEntity();
     if (entity.getType() != 'minecraft:item') return;

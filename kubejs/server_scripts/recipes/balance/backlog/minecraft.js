@@ -1,19 +1,19 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
     shaped: () => {
       event.forEachRecipe(
         {
           output: 'minecraft:stick',
-          input: '#minecraft:planks',
+          input: '#minecraft:planks'
         },
-        recipe => {
+        (recipe) => {
           event.remove({
             input: '#minecraft:planks',
-            output: recipe.outputItems[0].id,
+            output: recipe.outputItems[0].id
           });
 
           event.shaped(`2x ${recipe.outputItems[0].id}`, ['a', 'a'], {
-            a: recipe.inputItems[0],
+            a: recipe.inputItems[0]
           });
         }
       );
@@ -24,16 +24,16 @@ onEvent('recipes', event => {
         {
           type: 'minecraft:crafting_shapeless',
           output: '#minecraft:planks',
-          input: '#minecraft:logs',
+          input: '#minecraft:logs'
         },
-        recipe => {
+        (recipe) => {
           event.remove({
             type: 'minecraft:crafting_shapeless',
-            output: recipe.outputItems[0].id,
+            output: recipe.outputItems[0].id
           });
 
           event.shapeless(`2x ${recipe.outputItems[0].id}`, [
-            recipe.inputItems[0],
+            recipe.inputItems[0]
           ]);
         }
       );
@@ -57,9 +57,9 @@ onEvent('recipes', event => {
           'immersiveengineering:ingot_hop_graphite',
           'rankine:sodium_carbonate',
           'blue_skies:moonstone',
-          'occultism:iesnium_ingot',
+          'occultism:iesnium_ingot'
         ],
-        type: 'minecraft:blasting',
+        type: 'minecraft:blasting'
       });
 
       event.blasting('#forge:sand', 'minecraft:glass');
@@ -118,9 +118,9 @@ onEvent('recipes', event => {
           'farmersdelight:cooked_bacon',
           'blue_skies:cooked_charscale_moki',
           'minecraft:charcoal',
-          'minecraft:bone',
+          'minecraft:bone'
         ],
-        type: 'minecraft:campfire_cooking',
+        type: 'minecraft:campfire_cooking'
       });
 
       event.campfireCooking(
@@ -212,9 +212,9 @@ onEvent('recipes', event => {
           'bloodmagic:saltpeter',
           'minecraft:light_blue_glazed_terracotta',
           'minecraft:purple_glazed_terracotta',
-          'minecraft:dried_kelp',
+          'minecraft:dried_kelp'
         ],
-        type: 'minecraft:smelting',
+        type: 'minecraft:smelting'
       });
 
       event.smelting('malum:crushed_soulstone', 'malum:processed_soulstone');
@@ -228,9 +228,9 @@ onEvent('recipes', event => {
           'farmersdelight:netherite_knife',
           'minecraft:netherite_shovel',
           'minecraft:netherite_pickaxe',
-          'minecraft:netherite_hoe',
+          'minecraft:netherite_hoe'
         ],
-        type: 'minecraft:smithing',
+        type: 'minecraft:smithing'
       });
 
       event.smithing(
@@ -273,9 +273,9 @@ onEvent('recipes', event => {
           'twilightforest:cracked_towerwood',
           'minecraft:bread',
           'pneumaticcraft:sourdough_bread',
-          'minecraft:popped_chorus_fruit',
+          'minecraft:popped_chorus_fruit'
         ],
-        type: 'minecraft:smoking',
+        type: 'minecraft:smoking'
       });
 
       event.smoking('minecraft:bread', 'create:dough');
@@ -294,6 +294,6 @@ onEvent('recipes', event => {
         'farmersrespite:black_tea_leaves',
         'farmersrespite:yellow_tea_leaves'
       );
-    },
+    }
   });
 });

@@ -1,4 +1,4 @@
-onEvent('lootjs', event => {
+onEvent('lootjs', (event) => {
   function removeChestLoot(items) {
     event
       .addLootTypeModifier(LootType.CHEST, LootType.GIFT, LootType.FISHING)
@@ -6,9 +6,9 @@ onEvent('lootjs', event => {
   }
 
   function addChestLoot(dimension, configs) {
-    configs.forEach(config => {
+    configs.forEach((config) => {
       if (config.tables) {
-        config.tables.forEach(table => {
+        config.tables.forEach((table) => {
           event
             .addLootTableModifier(table)
             .anyDimension(dimension)
@@ -184,59 +184,59 @@ onEvent('lootjs', event => {
     Item.of('relics:ghost_skin_talisman').ignoreNBT(),
     Item.of('relics:amphibian_boot').ignoreNBT(),
     Item.of('relics:amphibian_boot').ignoreNBT(),
-    Item.of('relics:slime_heart').ignoreNBT(),
+    Item.of('relics:slime_heart').ignoreNBT()
   ]);
 
   addChestLoot('blue_skies:everbright', [
     {
       rarity: 0.2,
-      id: 'kubejs:everbright_lost_page',
-    },
+      id: 'kubejs:everbright_lost_page'
+    }
   ]);
 
   addChestLoot('undergarden:undergarden', [
     {
       rarity: 0.2,
-      id: 'kubejs:undergarden_lost_page',
-    },
+      id: 'kubejs:undergarden_lost_page'
+    }
   ]);
 
   addChestLoot('blue_skies:everdawn', [
     {
       rarity: 0.2,
-      id: 'kubejs:everdawn_lost_page',
-    },
+      id: 'kubejs:everdawn_lost_page'
+    }
   ]);
 
   addChestLoot('twilightforest:twilight_forest', [
     {
       rarity: 0.2,
-      id: 'kubejs:twilight_lost_page',
-    },
+      id: 'kubejs:twilight_lost_page'
+    }
   ]);
 
   addChestLoot('minecraft:nether', [
     {
       rarity: 0.2,
-      id: 'kubejs:nether_lost_page',
-    },
+      id: 'kubejs:nether_lost_page'
+    }
   ]);
 
   addChestLoot('hem:blueleaf', [
     {
       rarity: 0.2,
-      id: 'kubejs:blueleaf_lost_page',
-    },
+      id: 'kubejs:blueleaf_lost_page'
+    }
   ]);
 
   addChestLoot('the_bumblezone:the_bumblezone', [
     {
       rarity: 0.2,
-      id: 'kubejs:bumblezone_lost_page',
-    },
+      id: 'kubejs:bumblezone_lost_page'
+    }
   ]);
 
-  ['common', 'uncommon', 'rare'].forEach(rarity => {
+  ['common', 'uncommon', 'rare'].forEach((rarity) => {
     event
       .addLootTableModifier(`blue_skies:loot_bags/summoner/${rarity}`)
       .removeLoot('minecraft:emerald')

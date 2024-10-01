@@ -1,17 +1,17 @@
 // You need to make a hearth because the hearth allows you to have a stable temperature and its you marking your flag in the soil and making a place that is safe, a home base.
 // cold eye
 
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setMilestoneRecipes({
     id: 'hearth',
     recipe: () => {
-      event.remove({output: 'cold_sweat:hearth'});
+      event.remove({ output: 'cold_sweat:hearth' });
       event
         .shaped('cold_sweat:hearth', ['  a', 'bcb', 'dda'], {
           a: 'minecraft:iron_ingot',
           b: 'minecraft:leather',
           c: 'endrem:undead_soul',
-          d: 'rankine:high_refractory_bricks',
+          d: 'rankine:high_refractory_bricks'
         })
         .stage('chapter_1')
         .id('inconvenient:hearth');
@@ -20,7 +20,7 @@ onEvent('recipes', event => {
         .shaped('cold_sweat:hearth', ['  a', 'bcb', 'aba'], {
           a: 'minecraft:iron_ingot',
           b: '#forge:bricks',
-          c: 'minecraft:furnace',
+          c: 'minecraft:furnace'
         })
         .stage('chapter_2')
         .id('inconvenient:hearth_2');
@@ -38,8 +38,8 @@ onEvent('recipes', event => {
             'immersiveengineering:smelting/iron_ingot_from_dust',
             'undergarden:smelt_shiverstone_iron_ore',
             'rankine:iron_ingot_from_rankine_iron_ore_smelting',
-            'alchemistry:iron_ingot_from_smelting_iron_dust',
-          ].forEach(id => event.remove({id: id}));
+            'alchemistry:iron_ingot_from_smelting_iron_dust'
+          ].forEach((id) => event.remove({ id: id }));
           event
             .smelting('minecraft:iron_ingot', 'rankine:hematite')
             .id('inconvenient:iron_ingot_from_hematite');
@@ -61,15 +61,15 @@ onEvent('recipes', event => {
                 'rankine:crushing/taenite_ore_crushing',
                 'rankine:crushing/tetrataenite_ore_crushing',
                 'charcoal_pit:blooming_recipes/iron_ore',
-                'charcoal_pit:blooming_recipes/iron_raw',
-              ].forEach(id => event.remove({id: id}));
+                'charcoal_pit:blooming_recipes/iron_raw'
+              ].forEach((id) => event.remove({ id: id }));
               event
                 .custom({
                   type: 'charcoal_pit:blooming',
-                  ingredient: {item: 'ecofriendly:smelted_iron_can_ym'},
+                  ingredient: { item: 'ecofriendly:smelted_iron_can_ym' },
                   result: 'minecraft:iron_nugget',
                   experience: 0.7,
-                  cookingtime: 200,
+                  cookingtime: 200
                 })
                 .id('inconvenient:iron_nugget_from_smelted_iron_can');
             },
@@ -78,13 +78,13 @@ onEvent('recipes', event => {
                 id: 'bloomery',
                 recipe: () => {
                   event.remove({
-                    id: 'charcoal_pit:bloomery',
+                    id: 'charcoal_pit:bloomery'
                   });
                   event
                     .shaped('charcoal_pit:bloomeryy', ['aaa', 'aba', 'ccc'], {
                       a: 'rankine:refractory_bricks',
                       b: 'minecraft:furnace',
-                      c: 'rankine:bronze_ingot',
+                      c: 'rankine:bronze_ingot'
                     })
                     .id('inconvenient:bloomery');
                 },
@@ -97,8 +97,8 @@ onEvent('recipes', event => {
                         recipe: () => {
                           [
                             'rankine:refractory_brick_campfire_cooking',
-                            'rankine:refractory_brick_from_fire_clay_ball_smelting',
-                          ].forEach(id => event.remove({id: id}));
+                            'rankine:refractory_brick_from_fire_clay_ball_smelting'
+                          ].forEach((id) => event.remove({ id: id }));
 
                           event.smelting(
                             'rankine:refractory_brick',
@@ -113,12 +113,12 @@ onEvent('recipes', event => {
                                 .custom({
                                   type: 'hexerei:drying_rack',
                                   ingredients: [
-                                    {item: 'kubejs:unfired_refractory_brick'},
+                                    { item: 'kubejs:unfired_refractory_brick' }
                                   ],
                                   output: {
-                                    item: 'kubejs:dry_unfired_refractory_brick',
+                                    item: 'kubejs:dry_unfired_refractory_brick'
                                   },
-                                  dryingTimeInTicks: 3000,
+                                  dryingTimeInTicks: 3000
                                 })
                                 .id(
                                   'inconvenient:dry_unfired_refractory_brick'
@@ -131,7 +131,7 @@ onEvent('recipes', event => {
                                   event.shaped(
                                     '2x kubejs:unfired_refractory_brick',
                                     ['aa'],
-                                    {a: 'rankine:fire_clay_ball'}
+                                    { a: 'rankine:fire_clay_ball' }
                                   );
                                 },
                                 children: [
@@ -140,8 +140,10 @@ onEvent('recipes', event => {
                                     recipe: () => {
                                       [
                                         'rankine:mixing/fire_clay_ball_mixing',
-                                        'rankine:mixing/fire_clay_ball_mixing_alt',
-                                      ].forEach(id => event.remove({id: id}));
+                                        'rankine:mixing/fire_clay_ball_mixing_alt'
+                                      ].forEach((id) =>
+                                        event.remove({ id: id })
+                                      );
                                       event.custom({
                                         type: 'rankine:mixing',
                                         mixTime: 100,
@@ -149,29 +151,29 @@ onEvent('recipes', event => {
                                         matScale: 2,
                                         fluidInput: {
                                           fluid: 'minecraft:water',
-                                          amount: 50,
+                                          amount: 50
                                         },
                                         input1: {
                                           tag: 'forge:sand',
                                           required: true,
                                           min: 0.4,
-                                          max: 0.6,
+                                          max: 0.6
                                         },
                                         input2: {
                                           item: 'rankine:kaolinite',
                                           required: true,
                                           min: 0.2,
-                                          max: 0.3,
+                                          max: 0.3
                                         },
                                         input3: {
                                           item: 'minecraft:clay_ball',
                                           required: true,
                                           min: 0.1,
-                                          max: 0.2,
+                                          max: 0.2
                                         },
                                         result: {
-                                          item: 'rankine:fire_clay_ball',
-                                        },
+                                          item: 'rankine:fire_clay_ball'
+                                        }
                                       });
                                     },
                                     children: [
@@ -188,62 +190,62 @@ onEvent('recipes', event => {
                                             'rankine:crushing/sylvinite_crushing',
                                             'rankine:crushing/bauxite_ore_crushing',
                                             'rankine:crushing/granite_crushing',
-                                            'rankine:sluicing/laterite_sluicing',
-                                          ].forEach(id =>
-                                            event.remove({id: id})
+                                            'rankine:sluicing/laterite_sluicing'
+                                          ].forEach((id) =>
+                                            event.remove({ id: id })
                                           );
                                           event.custom({
                                             type: 'rankine:crushing',
-                                            input: {item: 'rankine:kaolin'},
+                                            input: { item: 'rankine:kaolin' },
                                             guaranteed: [
                                               {
                                                 item: 'rankine:kaolinite',
-                                                count: 2,
-                                              },
+                                                count: 2
+                                              }
                                             ],
                                             outputs: [
-                                              {weight: 80, remove: false},
+                                              { weight: 80, remove: false },
                                               {
                                                 item: 'rankine:kaolinite',
                                                 weight: 20,
-                                                remove: false,
-                                              },
-                                            ],
+                                                remove: false
+                                              }
+                                            ]
                                           });
                                         },
                                         children: [
                                           {
                                             // ? TODO: kaolin spawns in badlands in between terracotta stripes at y level [x-y]
-                                            id: 'kaolin',
-                                          },
-                                        ],
+                                            id: 'kaolin'
+                                          }
+                                        ]
                                       },
                                       {
                                         id: 'sand',
                                         recipe: () => {
                                           [
                                             'rankine:crushing/end_stone_crushing',
-                                            'rankine:crushing/white_sandstone_crushing',
-                                          ].forEach(id =>
-                                            event.remove({id: id})
+                                            'rankine:crushing/white_sandstone_crushing'
+                                          ].forEach((id) =>
+                                            event.remove({ id: id })
                                           );
-                                        },
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         id: 'mortar',
                         recipe: () => {
                           [
                             'rankine:mortar_with_perlite',
-                            'rankine:mortar',
-                          ].forEach(id => event.remove({id: id}));
+                            'rankine:mortar'
+                          ].forEach((id) => event.remove({ id: id }));
                           event
                             .custom({
                               type: 'rankine:mixing',
@@ -252,21 +254,21 @@ onEvent('recipes', event => {
                               matScale: 1,
                               fluidInput: {
                                 fluid: 'minecraft:water',
-                                amount: 100,
+                                amount: 100
                               },
                               input1: {
                                 tag: 'minecraft:sand',
                                 required: true,
                                 min: 0.5,
-                                max: 0.8,
+                                max: 0.8
                               },
                               input2: {
                                 item: 'rankine:quicklime',
                                 required: true,
                                 min: 0.2,
-                                max: 0.5,
+                                max: 0.5
                               },
-                              result: {item: 'rankine:mortar'},
+                              result: { item: 'rankine:mortar' }
                             })
                             .id('inconvenient:mortar');
                         },
@@ -280,18 +282,18 @@ onEvent('recipes', event => {
                               [
                                 'rankine:compat/create/scoria_crushing',
                                 'rankine:crushing/scoria_crushing',
-                                'rankine:beehive_oven/quicklime_from_limestone_beehive_oven_cooking',
-                              ].forEach(id => event.remove({id: id}));
+                                'rankine:beehive_oven/quicklime_from_limestone_beehive_oven_cooking'
+                              ].forEach((id) => event.remove({ id: id }));
                               event
                                 .smelting('rankine:quicklime', 'rankine:chalk')
                                 .id('inconvenient:quicklime');
 
                               event.custom({
                                 type: 'rankine:beehive_oven',
-                                input: {item: 'rankine:chalk'},
+                                input: { item: 'rankine:chalk' },
                                 result: 'rankine:quicklime_block',
                                 minCookTime: 2400,
-                                maxCookTime: 4800,
+                                maxCookTime: 4800
                               });
                             },
                             children: [
@@ -300,8 +302,8 @@ onEvent('recipes', event => {
                                 recipe: () => {
                                   [
                                     'rankine:stonegen_sedimentary/chalk_generator',
-                                    'rankine:stonegen_sedimentary/chalk_generator2',
-                                  ].forEach(id => event.remove({id: id}));
+                                    'rankine:stonegen_sedimentary/chalk_generator2'
+                                  ].forEach((id) => event.remove({ id: id }));
 
                                   [
                                     'minecraft:dead_tube_coral_block',
@@ -318,26 +320,26 @@ onEvent('recipes', event => {
                                     'upgrade_aquatic:dead_rock_coral_block',
                                     'upgrade_aquatic:dead_pillow_coral_block',
                                     'upgrade_aquatic:dead_silk_coral_block',
-                                    'upgrade_aquatic:dead_chrome_coral_block',
+                                    'upgrade_aquatic:dead_chrome_coral_block'
                                   ].forEach((coral, index) => {
                                     event
                                       .custom({
                                         type: 'rankine:crushing',
-                                        input: {item: coral},
+                                        input: { item: coral },
                                         outputs: [
-                                          {weight: 60, remove: false},
+                                          { weight: 60, remove: false },
                                           {
                                             item: 'rankine:chalk',
                                             weight: 40,
-                                            remove: false,
-                                          },
-                                        ],
+                                            remove: false
+                                          }
+                                        ]
                                       })
                                       .id(`inconvenient:chalk_${index++}`);
                                   });
-                                },
-                              },
-                            ],
+                                }
+                              }
+                            ]
                           },
                           {
                             id: 'ceramic_bucket',
@@ -358,35 +360,37 @@ onEvent('recipes', event => {
                                         'rankine:crushing/siltstone_crushing',
                                         'rankine:crushing/slate_crushing',
                                         'rankine:crushing/white_marble_crushing',
-                                        'tconstruct:tools/severing/terracube_clay',
-                                      ].forEach(id => event.remove({id: id}));
-                                    },
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                        'tconstruct:tools/severing/terracube_clay'
+                                      ].forEach((id) =>
+                                        event.remove({ id: id })
+                                      );
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'furnace',
                     recipe: () => {
                       [
                         'minecraft:furnace',
-                        'blue_skies:furnace_compat',
-                      ].forEach(id => event.remove({id: id}));
+                        'blue_skies:furnace_compat'
+                      ].forEach((id) => event.remove({ id: id }));
                       event
                         .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
-                          a: 'minecraft:brick',
+                          a: 'minecraft:brick'
                         })
                         .id('iconvenient:furnace')
                         .stage('chapter_1');
 
                       event
                         .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
-                          a: '#forge:cobblestone',
+                          a: '#forge:cobblestone'
                         })
                         .id('iconvenient:furnace_2')
                         .stage('chapter_2');
@@ -397,8 +401,8 @@ onEvent('recipes', event => {
                         recipe: () => {
                           [
                             'minecraft:brick',
-                            'charcoal_pit:cooking_recipes/brick',
-                          ].forEach(id => event.remove({id: id}));
+                            'charcoal_pit:cooking_recipes/brick'
+                          ].forEach((id) => event.remove({ id: id }));
                           event
                             .campfireCooking(
                               'minecraft:brick',
@@ -421,16 +425,16 @@ onEvent('recipes', event => {
                                   type: 'hexerei:drying_rack',
                                   ingredients: [
                                     {
-                                      item: 'charcoal_pit:unfired_brick',
-                                    },
+                                      item: 'charcoal_pit:unfired_brick'
+                                    }
                                   ],
                                   output: {
-                                    item: 'kubejs:dry_unfired_brick',
+                                    item: 'kubejs:dry_unfired_brick'
                                   },
-                                  dryingTimeInTicks: 3000,
+                                  dryingTimeInTicks: 3000
                                 })
                                 .id('inconvenient:dry_unfired_brick');
-                            },
+                            }
                           },
                           {
                             id: 'campfire',
@@ -443,15 +447,15 @@ onEvent('recipes', event => {
                                     'architects_palette:charcoal_from_charcoal_blocks',
                                     'mekanism:charcoal',
                                     'mekanism:storage_blocks/charcoal',
-                                    'charcoal_pit:fire_starter',
-                                  ].forEach(id => event.remove({id: id}));
+                                    'charcoal_pit:fire_starter'
+                                  ].forEach((id) => event.remove({ id: id }));
 
                                   event.shaped(
                                     'charcoal_pit:fire_starter',
                                     [' a', 'b '],
                                     {
                                       a: '#forge:rods/wooden',
-                                      b: 'minecraft:flint',
+                                      b: 'minecraft:flint'
                                     }
                                   );
                                 },
@@ -467,16 +471,16 @@ onEvent('recipes', event => {
                                             recipe: () => {
                                               [
                                                 'farmersdelight:rope',
-                                                'farmersdelight:rope_from_safety_net',
-                                              ].forEach(id =>
-                                                event.remove({id: id})
+                                                'farmersdelight:rope_from_safety_net'
+                                              ].forEach((id) =>
+                                                event.remove({ id: id })
                                               );
                                               event
                                                 .shaped(
                                                   'farmersdelight:rope',
                                                   ['aa', 'aa'],
                                                   {
-                                                    a: 'paragon_textiles:plant_fibers',
+                                                    a: 'paragon_textiles:plant_fibers'
                                                   }
                                                 )
                                                 .id('inconvenient:rope');
@@ -492,7 +496,7 @@ onEvent('recipes', event => {
                                                 id: 'plant_fibers',
                                                 recipe: () => {
                                                   event.remove({
-                                                    id: 'paragon_textiles:plant_fibers',
+                                                    id: 'paragon_textiles:plant_fibers'
                                                   });
 
                                                   event.shapeless(
@@ -501,7 +505,7 @@ onEvent('recipes', event => {
                                                       '#createaddition:plants',
                                                       '#createaddition:plants',
                                                       '#createaddition:plants',
-                                                      '#createaddition:plants',
+                                                      '#createaddition:plants'
                                                     ]
                                                   );
                                                 },
@@ -510,9 +514,9 @@ onEvent('recipes', event => {
                                                     id: 'flint_knife',
                                                     recipe: () => {
                                                       [
-                                                        'rankine:flint_knife',
-                                                      ].forEach(id =>
-                                                        event.remove({id: id})
+                                                        'rankine:flint_knife'
+                                                      ].forEach((id) =>
+                                                        event.remove({ id: id })
                                                       );
 
                                                       event
@@ -521,7 +525,7 @@ onEvent('recipes', event => {
                                                           [' a', 'b '],
                                                           {
                                                             a: 'minecraft:flint',
-                                                            b: '#forge:rods/wooden',
+                                                            b: '#forge:rods/wooden'
                                                           }
                                                         )
                                                         .stage('chapter_1');
@@ -537,7 +541,7 @@ onEvent('recipes', event => {
                                                               [
                                                                 '#forge:gravel',
                                                                 '#forge:gravel',
-                                                                '#forge:gravel',
+                                                                '#forge:gravel'
                                                               ]
                                                             )
                                                             .stage('chapter_1');
@@ -548,36 +552,36 @@ onEvent('recipes', event => {
                                                             'rankine:crushing/blackstone_crushing',
                                                             'rankine:crushing/cobblestone_crushing',
                                                             'rankine:crushing/gilded_blackstone_crushing',
-                                                            'rankine:crushing/graywacke_crushing',
-                                                          ].forEach(id =>
+                                                            'rankine:crushing/graywacke_crushing'
+                                                          ].forEach((id) =>
                                                             event.remove({
-                                                              id: id,
+                                                              id: id
                                                             })
                                                           );
                                                         },
                                                         children: [
                                                           {
-                                                            id: 'flint_shovel',
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                                            id: 'flint_shovel'
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'bronze_ingot',
@@ -592,8 +596,8 @@ onEvent('recipes', event => {
                             'immersiveengineering:alloysmelter/rose_gold',
                             'immersiveengineering:alloysmelter/constantan',
                             'immersiveengineering:alloysmelter/invar',
-                            'immersiveengineering:alloysmelter/electrum',
-                          ].forEach(id => event.remove({id: id}));
+                            'immersiveengineering:alloysmelter/electrum'
+                          ].forEach((id) => event.remove({ id: id }));
                         },
                         children: [
                           {
@@ -610,11 +614,11 @@ onEvent('recipes', event => {
                                 'immersiveengineering:crafting/plate_nickel_hammering',
                                 'immersiveengineering:crafting/plate_lead_hammering',
                                 'immersiveengineering:crafting/plate_constantan_hammering',
-                                'immersiveengineering:crafting/hammer',
-                              ].forEach(id => event.remove({id: id}));
+                                'immersiveengineering:crafting/hammer'
+                              ].forEach((id) => event.remove({ id: id }));
 
                               event.remove({
-                                input: 'immersiveengineering:hammer',
+                                input: 'immersiveengineering:hammer'
                               });
 
                               event
@@ -624,11 +628,11 @@ onEvent('recipes', event => {
                                   {
                                     a: 'rankine:refractory_brick',
                                     b: 'farmersdelight:rope',
-                                    c: '#forge:rods/wooden',
+                                    c: '#forge:rods/wooden'
                                   }
                                 )
                                 .id('inconvenient:engineers_hammer');
-                            },
+                            }
                           },
                           {
                             id: 'kiln_brick',
@@ -636,8 +640,8 @@ onEvent('recipes', event => {
                               [
                                 'immersiveengineering:alloybrick',
                                 'createaddition:compat/immersiveengineering/item_application/kiln_brick',
-                                'immersiveengineering:crafting/alloybrick',
-                              ].forEach(id => event.remove({id: id}));
+                                'immersiveengineering:crafting/alloybrick'
+                              ].forEach((id) => event.remove({ id: id }));
 
                               event
                                 .shaped(
@@ -645,35 +649,35 @@ onEvent('recipes', event => {
                                   ['aba', 'bab', 'aba'],
                                   {
                                     a: 'rankine:refractory_brick',
-                                    b: 'rankine:mortar',
+                                    b: 'rankine:mortar'
                                   }
                                 )
                                 .id('inconvenient:kiln_brick');
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'tin_ingot',
                         recipe: () => {
                           [
                             'rankine:tin_ingot_from_native_ore_smelting',
-                            'mekanism:processing/tin/ingot/from_raw_smelting',
-                          ].forEach(id => event.remove({id: id}));
+                            'mekanism:processing/tin/ingot/from_raw_smelting'
+                          ].forEach((id) => event.remove({ id: id }));
 
                           event.custom({
                             type: 'charcoal_pit:orekiln',
-                            ingredients: [{item: 'rankine:cassiterite'}],
-                            result: {item: 'rankine:tin_ingot'},
-                            amount: 1,
+                            ingredients: [{ item: 'rankine:cassiterite' }],
+                            result: { item: 'rankine:tin_ingot' },
+                            amount: 1
                           });
 
                           event.custom({
                             type: 'rankine:beehive_oven',
-                            input: {item: 'rankine:cassiterite_block'},
+                            input: { item: 'rankine:cassiterite_block' },
                             result: 'rankine:tin_block',
                             minCookTime: 2400,
-                            maxCookTime: 4800,
+                            maxCookTime: 4800
                           });
                         },
                         children: [
@@ -686,24 +690,24 @@ onEvent('recipes', event => {
                                 'rankine:crushing/petalite_ore_crushing',
                                 'rankine:crushing/wolframite_ore_crushing',
                                 'mekanism:processing/tin/raw_storage_blocks/from_raw',
-                                'mekanism:processing/tin/ingot/from_raw_blasting',
-                              ].forEach(id => event.remove({id: id}));
+                                'mekanism:processing/tin/ingot/from_raw_blasting'
+                              ].forEach((id) => event.remove({ id: id }));
                               event
                                 .custom({
-                                  input: {item: 'rankine:cassiterite_ore'},
+                                  input: { item: 'rankine:cassiterite_ore' },
                                   type: 'rankine:crushing',
                                   guaranteed: [
                                     {
                                       item: 'rankine:cassiterite',
                                       tier: 'minecraft:stone',
-                                      count: 1,
+                                      count: 1
                                     },
                                     {
                                       item: 'rankine:cassiterite',
                                       count: 1,
-                                      tier: 'minecraft:diamond',
-                                    },
-                                  ],
+                                      tier: 'minecraft:diamond'
+                                    }
+                                  ]
                                 })
                                 .id('inconvenient:cassiterite');
                             },
@@ -711,37 +715,37 @@ onEvent('recipes', event => {
                               {
                                 id: 'stone_hammer',
                                 recipe: () => {
-                                  event.remove({id: 'rankine:stone_hammer'});
+                                  event.remove({ id: 'rankine:stone_hammer' });
                                   event
                                     .shaped(
                                       'rankine:stone_hammer',
                                       ['aaa', 'aba', ' b '],
                                       {
                                         a: '#forge:stone',
-                                        b: '#forge:rods/wooden',
+                                        b: '#forge:rods/wooden'
                                       }
                                     )
                                     .id('inconvenient:stone_hammer');
                                 },
                                 children: [
                                   {
-                                    id: 'flint_pickaxe',
-                                  },
-                                ],
+                                    id: 'flint_pickaxe'
+                                  }
+                                ]
                               },
                               {
                                 // ? TODO spawns in taigas at y level [x-y]
-                                id: 'cassiterite_ore',
-                              },
-                            ],
+                                id: 'cassiterite_ore'
+                              }
+                            ]
                           },
                           {
                             id: 'alloy_mold',
                             recipe: () => {
-                              event.remove({type: 'charcoal_pit:orekiln'});
-                            },
-                          },
-                        ],
+                              event.remove({ type: 'charcoal_pit:orekiln' });
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'copper_ingot',
@@ -759,21 +763,21 @@ onEvent('recipes', event => {
                             'rankine:copper_ingot_from_rankine_copper_ore_smelting',
                             'minecraft:copper_ingot_from_smelting_raw_copper',
                             'minecraft:copper_ingot_from_smelting_copper_ore',
-                            'bloodmagic:smelting/ingot_copper',
-                          ].forEach(id => event.remove({id: id}));
+                            'bloodmagic:smelting/ingot_copper'
+                          ].forEach((id) => event.remove({ id: id }));
                           event.custom({
                             type: 'charcoal_pit:orekiln',
-                            ingredients: [{item: 'rankine:malachite'}],
-                            result: {item: 'minecraft:copper_ingot'},
-                            amount: 1,
+                            ingredients: [{ item: 'rankine:malachite' }],
+                            result: { item: 'minecraft:copper_ingot' },
+                            amount: 1
                           });
 
                           event.custom({
                             type: 'rankine:beehive_oven',
-                            input: {item: 'rankine:malachite_block'},
+                            input: { item: 'rankine:malachite_block' },
                             result: 'minecraft:copper_block',
                             minCookTime: 2400,
-                            maxCookTime: 4800,
+                            maxCookTime: 4800
                           });
                         },
                         children: [
@@ -785,25 +789,25 @@ onEvent('recipes', event => {
                                 'rankine:crushing/chalcocite_ore_crushing',
                                 'rankine:crushing/rankine_copper_ore_crushing',
                                 'rankine:crushing/rankine_gold_ore_crushing',
-                                'rankine:green_dye_from_malachite',
-                              ].forEach(id => event.remove({id: id}));
+                                'rankine:green_dye_from_malachite'
+                              ].forEach((id) => event.remove({ id: id }));
 
                               event
                                 .custom({
-                                  input: {item: 'rankine:malachite_ore'},
+                                  input: { item: 'rankine:malachite_ore' },
                                   type: 'rankine:crushing',
                                   guaranteed: [
                                     {
                                       item: 'rankine:malachite',
                                       tier: 'minecraft:stone',
-                                      count: 1,
+                                      count: 1
                                     },
                                     {
                                       item: 'rankine:malachite',
                                       count: 2,
-                                      tier: 'minecraft:diamond',
-                                    },
-                                  ],
+                                      tier: 'minecraft:diamond'
+                                    }
+                                  ]
                                 })
                                 .id('inconvenient:malachite');
                             },
@@ -812,7 +816,7 @@ onEvent('recipes', event => {
                                 id: 'prospecting_stick',
                                 recipe: () => {
                                   event.remove({
-                                    id: 'rankine:prospecting_stick',
+                                    id: 'rankine:prospecting_stick'
                                   });
                                   event
                                     .shaped(
@@ -821,7 +825,7 @@ onEvent('recipes', event => {
                                       {
                                         a: '#forge:rods/wooden',
                                         b: 'minecraft:flint',
-                                        c: 'farmersdelight:rope',
+                                        c: 'farmersdelight:rope'
                                       }
                                     )
                                     .id('inconvenient:prospecting_stick');
@@ -835,21 +839,23 @@ onEvent('recipes', event => {
                                         'rankine:crushing/sapling_crushing',
                                         'rankine:foraging/badlands_foraging',
                                         'rankine:foraging/desert_foraging',
-                                        'rankine:foraging/podzol_foraging',
-                                      ].forEach(id => event.remove({id: id}));
-                                    },
-                                  },
-                                ],
+                                        'rankine:foraging/podzol_foraging'
+                                      ].forEach((id) =>
+                                        event.remove({ id: id })
+                                      );
+                                    }
+                                  }
+                                ]
                               },
                               {
                                 // ? malachite is found in swamps a y level [x-y]
-                                id: 'malachite_ore',
+                                id: 'malachite_ore'
                               },
                               {
                                 id: 'altimeter',
                                 recipe: () => {
-                                  ['rankine:altimeter'].forEach(id =>
-                                    event.remove({id: id})
+                                  ['rankine:altimeter'].forEach((id) =>
+                                    event.remove({ id: id })
                                   );
                                   event
                                     .shaped(
@@ -857,21 +863,21 @@ onEvent('recipes', event => {
                                       ['aaa', 'aba', 'aaa'],
                                       {
                                         a: 'rankine:tin_ingot',
-                                        b: 'ecofriendly:smelted_iron_can_ym',
+                                        b: 'ecofriendly:smelted_iron_can_ym'
                                       }
                                     )
                                     .id('inconvenient:altimeter');
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
-              {id: 'bellows'},
+              { id: 'bellows' },
               {
                 id: 'smelted_iron_can_ym',
                 recipe: () => {
@@ -885,13 +891,13 @@ onEvent('recipes', event => {
                 children: [
                   {
                     // ? spawns on the ground in forests and beaches
-                    id: 'ecofriendly:iron_can_ym',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                    id: 'ecofriendly:iron_can_ym'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         id: 'leather',
@@ -906,14 +912,14 @@ onEvent('recipes', event => {
             'ecofriendly:muskin_leather_recipe',
             'hexerei:leather_from_drying_rack',
             'rankine:foraging/plains_foraging',
-            'rankine:foraging/savanna_foraging',
-          ].forEach(id => event.remove({id: id}));
+            'rankine:foraging/savanna_foraging'
+          ].forEach((id) => event.remove({ id: id }));
           event
             .custom({
               type: 'hexerei:drying_rack',
-              ingredients: [{item: 'kubejs:wet_tanned_hide'}],
-              output: {item: 'minecraft:leather'},
-              dryingTimeInTicks: 3000,
+              ingredients: [{ item: 'kubejs:wet_tanned_hide' }],
+              output: { item: 'minecraft:leather' },
+              dryingTimeInTicks: 3000
             })
             .id('inconvenient:leather');
         },
@@ -927,14 +933,14 @@ onEvent('recipes', event => {
                   mixTime: 100,
                   ingredientTotal: 1,
                   matScale: 1,
-                  fluidInput: {fluid: 'kubejs:tanning_fluid', amount: 250},
+                  fluidInput: { fluid: 'kubejs:tanning_fluid', amount: 250 },
                   input1: {
                     item: 'kubejs:dried_hide',
                     required: true,
                     min: 1.0,
-                    max: 1.0,
+                    max: 1.0
                   },
-                  result: {item: 'kubejs:wet_tanned_hide'},
+                  result: { item: 'kubejs:wet_tanned_hide' }
                 })
                 .id('inconvenient:wet_tanned_hide');
             },
@@ -945,9 +951,9 @@ onEvent('recipes', event => {
                   event
                     .custom({
                       type: 'hexerei:drying_rack',
-                      ingredients: [{item: 'kubejs:salted_hide'}],
-                      output: {item: 'kubejs:dried_hide'},
-                      dryingTimeInTicks: 3000,
+                      ingredients: [{ item: 'kubejs:salted_hide' }],
+                      output: { item: 'kubejs:dried_hide' },
+                      dryingTimeInTicks: 3000
                     })
                     .id('inconvenient:dried_hide');
                 },
@@ -957,14 +963,14 @@ onEvent('recipes', event => {
                     recipe: () => {
                       event.remove({
                         output: 'kubejs:salted_hide',
-                        type: 'minecraft:crafting_shapeless',
+                        type: 'minecraft:crafting_shapeless'
                       });
                       event
                         .shapeless('kubejs:salted_hide', [
                           'kubejs:stitched_hide',
                           'salt:salt',
                           'salt:salt',
-                          'salt:salt',
+                          'salt:salt'
                         ])
                         .id('inconvenient:salted_hide');
                     },
@@ -976,13 +982,13 @@ onEvent('recipes', event => {
                             .shaped(
                               'kubejs:stitched_hide',
                               [' a ', 'aaa', ' a '],
-                              {a: 'minecraft:rotten_flesh'}
+                              { a: 'minecraft:rotten_flesh' }
                             )
                             .id('inconvenient:stitched_hide');
                           event
                             .shapeless('kubejs:stitched_hide', [
                               'biomancy:living_flesh',
-                              'biomancy:living_flesh',
+                              'biomancy:living_flesh'
                             ])
                             .id('inconvenient:stitched_hide_2');
                         },
@@ -992,24 +998,24 @@ onEvent('recipes', event => {
                             id: 'rotten_flesh',
                             children: [
                               {
-                                id: 'flint_spear',
-                              },
-                            ],
-                          },
-                        ],
+                                id: 'flint_spear'
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         id: 'salt',
                         children: [
                           {
                             // ? TODO found in beaches at y level [x-y]
-                            id: 'rock_salt',
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                            id: 'rock_salt'
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 id: 'tanning_fluid',
@@ -1017,11 +1023,14 @@ onEvent('recipes', event => {
                   event
                     .custom({
                       type: 'charcoal_pit:barrel',
-                      item_in: {item: 'kubejs:rotten_brain'},
+                      item_in: { item: 'kubejs:rotten_brain' },
                       in_amount: 1,
-                      fluid_in: {fluid: 'minecraft:water', amount: 1000},
-                      fluid_out: {fluid: 'kubejs:tanning_fluid', amount: 1000},
-                      time: 24000,
+                      fluid_in: { fluid: 'minecraft:water', amount: 1000 },
+                      fluid_out: {
+                        fluid: 'kubejs:tanning_fluid',
+                        amount: 1000
+                      },
+                      time: 24000
                     })
                     .id('inconvenient:tanning_fluid');
                 },
@@ -1030,73 +1039,73 @@ onEvent('recipes', event => {
                     id: 'barrel',
                     recipe: () => {
                       ['charcoal_pit:barrel', 'charcoal_pit:barrel2'].forEach(
-                        id => event.remove({id: id})
+                        (id) => event.remove({ id: id })
                       );
                       event
                         .shaped('charcoal_pit:barrel', ['aba', 'a a', 'aca'], {
                           a: 'rankine:cork',
                           b: '#forge:rods/wooden',
-                          c: '#minecraft:wooden_slabs',
+                          c: '#minecraft:wooden_slabs'
                         })
                         .id('inconvenient:barrel');
                     },
                     children: [
                       {
                         // ? strip from cork oat trees found in savannah
-                        id: 'cork',
-                      },
-                    ],
+                        id: 'cork'
+                      }
+                    ]
                   },
                   // TODO: Figure out loot?
                   {
                     // ? drops from zombies & & husks & flesh blobs
-                    id: 'rotten_brain',
-                  },
-                ],
+                    id: 'rotten_brain'
+                  }
+                ]
               },
               {
                 id: 'mixing_barrel',
                 recipe: () => {
-                  event.remove({id: 'rankine:mixing_barrel'});
+                  event.remove({ id: 'rankine:mixing_barrel' });
                   event
                     .shaped('rankine:mixing_barrel', ['aba', 'ccc'], {
                       a: 'ecofriendly:smelted_iron_can_ym',
                       b: 'charcoal_pit:barrel',
-                      c: '#minecraft:slabs',
+                      c: '#minecraft:slabs'
                     })
                     .id('inconvenient:mixing_barrel');
-                },
-              },
-            ],
+                }
+              }
+            ]
           },
           {
             id: 'drying_rack',
             recipe: () => {
-              ['hexerei:herb_drying_rack'].forEach(id =>
-                event.remove({id: id})
+              ['hexerei:herb_drying_rack'].forEach((id) =>
+                event.remove({ id: id })
               );
               event
                 .shaped('hexerei:herb_drying_rack', [' a ', 'bcb'], {
                   a: 'farmersdelight:rope',
                   b: '#forge:rods/wooden',
-                  c: '#minecraft:wooden_slabs',
+                  c: '#minecraft:wooden_slabs'
                 })
                 .id('inconvenient:drying_rack');
-            },
-          },
-        ],
+            }
+          }
+        ]
       },
       {
         // ? drops from flesh blobs in lost city. lost city found in badlands
         id: 'undead_soul',
         recipe: () => {
-          ['endrem:undead_eye'].forEach(id => event.remove({id: id}));
+          ['endrem:undead_eye'].forEach((id) => event.remove({ id: id }));
         },
         children: [
           {
             id: 'natures_compass',
             recipe: () => {
-              event.remove({id: 'naturescompass:natures_compass'});
+              event.remove({ id: 'naturescompass:natures_compass' });
               event
                 .shaped(
                   'naturescompass:naturescompass',
@@ -1104,7 +1113,7 @@ onEvent('recipes', event => {
                   {
                     a: '#minecraft:saplings',
                     b: 'farmersdelight:tree_bark',
-                    c: 'minecraft:copper_ingot',
+                    c: 'minecraft:copper_ingot'
                   }
                 )
                 .id('inconvenient:naturescompass');
@@ -1113,15 +1122,15 @@ onEvent('recipes', event => {
               {
                 id: 'dowsing_rod',
                 recipe: () => {
-                  event.remove({id: 'hexerei:dowsing_rod'});
+                  event.remove({ id: 'hexerei:dowsing_rod' });
                   event
                     .shaped('hexerei:dowsing_rod', [' a ', 'aba', 'aca'], {
                       a: '#forge:rods/wooden',
                       b: 'minecraft:flint',
-                      c: 'farmersdelight:rope',
+                      c: 'farmersdelight:rope'
                     })
                     .id('inconvenient:dowsing_rod');
-                },
+                }
               },
               {
                 id: 'tree_bark',
@@ -1130,34 +1139,34 @@ onEvent('recipes', event => {
                     'rankine:stripping/birch_log_stripping',
                     'rankine:stripping/black_birch_log_stripping',
                     'rankine:stripping/red_birch_log_stripping',
-                    'rankine:stripping/yellow_birch_log_stripping',
-                  ].forEach(id => event.remove({id: id}));
+                    'rankine:stripping/yellow_birch_log_stripping'
+                  ].forEach((id) => event.remove({ id: id }));
 
                   event.custom({
                     type: 'rankine:stripping',
                     chance: 0.3,
-                    input: {item: 'rankine:juniper_log'},
-                    result: {item: 'kubejs:juniper_bark', count: 1},
+                    input: { item: 'rankine:juniper_log' },
+                    result: { item: 'kubejs:juniper_bark', count: 1 }
                   });
 
                   [
                     'minecraft:birch_log',
                     'rankine:black_birch_log',
                     'rankine:red_birch',
-                    'rankine:yellow_birch_log',
-                  ].forEach(wood => {
+                    'rankine:yellow_birch_log'
+                  ].forEach((wood) => {
                     event.custom({
                       type: 'rankine:stripping',
                       chance: 0.3,
-                      input: {item: wood},
-                      result: {item: 'farmersdelight:tree_bark', count: 1},
+                      input: { item: wood },
+                      result: { item: 'farmersdelight:tree_bark', count: 1 }
                     });
                   });
-                },
-              },
-            ],
-          },
-        ],
+                }
+              }
+            ]
+          }
+        ]
       },
       {
         id: 'high_refractory_bricks',
@@ -1170,8 +1179,8 @@ onEvent('recipes', event => {
                 'rankine:high_refractory_brick_from_carbon',
                 'rankine:high_refractory_brick_from_magnesite',
                 'rankine:high_refractory_brick_from_silicon_carbide',
-                'rankine:high_refractory_brick_from_magnesia',
-              ].forEach(id => event.remove({id: id}));
+                'rankine:high_refractory_brick_from_magnesia'
+              ].forEach((id) => event.remove({ id: id }));
               event.smelting(
                 'rankine:high_refractory_brick',
                 'kubejs:dry_unfired_high_refractory_brick'
@@ -1185,12 +1194,12 @@ onEvent('recipes', event => {
                     .custom({
                       type: 'hexerei:drying_rack',
                       ingredients: [
-                        {item: 'kubejs:unfired_high_refractory_brick'},
+                        { item: 'kubejs:unfired_high_refractory_brick' }
                       ],
                       output: {
-                        item: 'kubejs:dry_unfired_high_refractory_brick',
+                        item: 'kubejs:dry_unfired_high_refractory_brick'
                       },
-                      dryingTimeInTicks: 3000,
+                      dryingTimeInTicks: 3000
                     })
                     .id('inconvenient:dry_unfired_high_refractory_brick');
                 },
@@ -1202,7 +1211,7 @@ onEvent('recipes', event => {
                         .shaped(
                           '2x kubejs:unfired_high_refractory_brick',
                           ['aa'],
-                          {a: 'kubejs:high_fire_clay_ball'}
+                          { a: 'kubejs:high_fire_clay_ball' }
                         )
                         .stage('chapter_1');
                     },
@@ -1215,26 +1224,29 @@ onEvent('recipes', event => {
                             mixTime: 100,
                             ingredientTotal: 3,
                             matScale: 2,
-                            fluidInput: {fluid: 'minecraft:water', amount: 50},
+                            fluidInput: {
+                              fluid: 'minecraft:water',
+                              amount: 50
+                            },
                             input1: {
                               item: 'rankine:fire_clay_ball',
                               required: true,
                               min: 0.4,
-                              max: 0.6,
+                              max: 0.6
                             },
                             input2: {
                               item: 'rankine:bone_char',
                               required: true,
                               min: 0.1,
-                              max: 0.2,
+                              max: 0.2
                             },
                             input3: {
                               item: 'kubejs:grog',
                               required: true,
                               min: 0.3,
-                              max: 0.4,
+                              max: 0.4
                             },
-                            result: {item: 'kubejs:high_fire_clay_ball'},
+                            result: { item: 'kubejs:high_fire_clay_ball' }
                           });
                         },
                         children: [
@@ -1244,8 +1256,8 @@ onEvent('recipes', event => {
                               event
                                 .custom({
                                   type: 'rankine:crushing',
-                                  input: {item: 'rankine:porcelain'},
-                                  guaranteed: [{item: 'kubejs:grog'}],
+                                  input: { item: 'rankine:porcelain' },
+                                  guaranteed: [{ item: 'kubejs:grog' }]
                                 })
                                 .id('inconvenient:grog');
                             },
@@ -1257,8 +1269,10 @@ onEvent('recipes', event => {
                                     id: 'porcelain_clay_ball',
                                     recipe: () => {
                                       [
-                                        'rankine:mixing/porcelain_clay_ball_mixing',
-                                      ].forEach(id => event.remove({id: id}));
+                                        'rankine:mixing/porcelain_clay_ball_mixing'
+                                      ].forEach((id) =>
+                                        event.remove({ id: id })
+                                      );
 
                                       event.custom({
                                         type: 'rankine:mixing',
@@ -1267,35 +1281,35 @@ onEvent('recipes', event => {
                                         matScale: 2,
                                         fluidInput: {
                                           fluid: 'minecraft:water',
-                                          amount: 25,
+                                          amount: 25
                                         },
                                         input1: {
                                           item: 'rankine:kaolinite',
                                           required: true,
                                           min: 0.2,
-                                          max: 0.4,
+                                          max: 0.4
                                         },
                                         input2: {
                                           item: 'rankine:plagioclase_feldspar',
                                           required: true,
                                           min: 0.2,
-                                          max: 0.4,
+                                          max: 0.4
                                         },
                                         input3: {
                                           item: 'minecraft:flint',
                                           required: true,
                                           min: 0.2,
-                                          max: 0.4,
+                                          max: 0.4
                                         },
                                         input4: {
                                           item: 'minecraft:clay_ball',
                                           required: true,
                                           min: 0.2,
-                                          max: 0.4,
+                                          max: 0.4
                                         },
                                         result: {
-                                          item: 'rankine:porcelain_clay_ball',
-                                        },
+                                          item: 'rankine:porcelain_clay_ball'
+                                        }
                                       });
                                     },
                                     children: [
@@ -1327,36 +1341,36 @@ onEvent('recipes', event => {
                                             'rankine:crushing/tholeiitic_basalt_crushing',
                                             'rankine:crushing/troctolite_crushing',
                                             'rankine:crushing/tuff_crushing',
-                                            'rankine:crushing/wadsleyone_crushing',
-                                          ].forEach(id =>
-                                            event.remove({id: id})
+                                            'rankine:crushing/wadsleyone_crushing'
+                                          ].forEach((id) =>
+                                            event.remove({ id: id })
                                           );
 
                                           event.custom({
                                             type: 'rankine:crushing',
                                             input: {
-                                              item: 'minecraft:stone',
+                                              item: 'minecraft:stone'
                                             },
                                             guaranteed: [
-                                              {item: 'minecraft:cobblestone'},
+                                              { item: 'minecraft:cobblestone' }
                                             ],
                                             outputs: [
-                                              {weight: 80, remove: false},
+                                              { weight: 80, remove: false },
                                               {
                                                 item: 'rankine:plagioclase_feldspar',
                                                 weight: 40,
                                                 remove: false,
-                                                tier: 'minecraft:iron',
-                                              },
-                                            ],
+                                                tier: 'minecraft:iron'
+                                              }
+                                            ]
                                           });
-                                        },
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
                           },
                           {
                             id: 'bone_char',
@@ -1366,39 +1380,39 @@ onEvent('recipes', event => {
                                 id: 'beehive_oven_pit',
                                 recipe: () => {
                                   event.replaceInput(
-                                    {output: 'rankine:beehive_oven_pit'},
+                                    { output: 'rankine:beehive_oven_pit' },
                                     '#forge:storage_blocks/coal',
                                     'charcoal_pit:charcoal_block'
                                   );
 
                                   event.replaceInput(
-                                    {output: 'minecraft:flint_and_steel'},
+                                    { output: 'minecraft:flint_and_steel' },
                                     'minecraft:iron_ingot',
                                     'minecraft:copper_ingot'
                                   );
 
                                   event.remove({
-                                    id: 'tconstruct:tools/building/flint_and_brick',
+                                    id: 'tconstruct:tools/building/flint_and_brick'
                                   });
                                   event.shapeless(
                                     'tconstruct:flint_and_brick',
                                     ['minecraft:flint', 'minecraft:brick']
                                   );
-                                },
+                                }
                               },
                               {
                                 id: 'bone_block',
                                 recipe: () => {
                                   [
                                     'minecraft:bone_meal_from_bone_block',
-                                    'minecraft:bone_block',
-                                  ].forEach(id => event.remove({id: id}));
+                                    'minecraft:bone_block'
+                                  ].forEach((id) => event.remove({ id: id }));
 
                                   event.shaped(
                                     'minecraft:bone_block',
                                     ['aaa', 'aaa', 'aaa'],
                                     {
-                                      a: 'minecraft:bone',
+                                      a: 'minecraft:bone'
                                     }
                                   );
                                 },
@@ -1410,24 +1424,26 @@ onEvent('recipes', event => {
                                         'rankine:crushing/netherrack_crushing',
                                         'rankine:crushing/soul_sandstone_crushing',
                                         'rankine:foraging/soul_sand_foraging',
-                                        'rankine:foraging/soul_soil_foraging',
-                                      ].forEach(id => event.remove({id: id}));
-                                    },
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                                        'rankine:foraging/soul_soil_foraging'
+                                      ].forEach((id) =>
+                                        event.remove({ id: id })
+                                      );
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

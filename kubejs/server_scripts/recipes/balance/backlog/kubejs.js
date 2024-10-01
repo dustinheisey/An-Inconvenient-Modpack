@@ -1,18 +1,18 @@
-onEvent('recipes', event => {
-  chapters.forEach(chapter => {
+onEvent('recipes', (event) => {
+  chapters.forEach((chapter) => {
     event.forEachRecipe(
       {
         output: `#im:${chapter}`,
         or: [
           {
-            type: 'minecraft:crafting_shaped',
+            type: 'minecraft:crafting_shaped'
           },
           {
-            type: 'minecraft:crafting_shapeless',
-          },
-        ],
+            type: 'minecraft:crafting_shapeless'
+          }
+        ]
       },
-      recipe => {
+      (recipe) => {
         // console.info(`staging: ${recipe}`);
         recipe.stage(chapter);
       }
@@ -25,40 +25,40 @@ onEvent('recipes', event => {
     'charcoal_pit:squish',
     'rankine:crucible',
     'rankine:foraging',
-    'rankine:cauldron_drying',
-  ].forEach(type => {
-    event.remove({type: type});
+    'rankine:cauldron_drying'
+  ].forEach((type) => {
+    event.remove({ type: type });
   });
 
   setBalanceRecipes({
     replaceInput: () => {
       event.replaceInput(
-        {output: 'botania:dodge_ring'},
+        { output: 'botania:dodge_ring' },
         'minecraft:emerald',
         'botania:terrasteel_nugget'
       );
       event.replaceInput(
-        {output: 'botania:itemfinder'},
+        { output: 'botania:itemfinder' },
         'minecraft:emerald',
         'botania:terrasteel_ingot'
       );
       event.replaceInput(
-        {output: 'naturesaura:shockwave_creator'},
+        { output: 'naturesaura:shockwave_creator' },
         'minecraft:diamond_boots',
         'botania:elementium_boots'
       );
       event.replaceInput(
-        {output: 'rankine:saddle_tree'},
+        { output: 'rankine:saddle_tree' },
         'rankine:steel_ingot',
         'naturesaura:sky_ingot'
       );
       event.replaceInput(
-        {output: 'minecraft:enchanted_golden_apple'},
+        { output: 'minecraft:enchanted_golden_apple' },
         'rankine:mischmetal_block',
         'rankine:amalgam_block'
       );
       event.replaceInput(
-        {output: 'immersiveengineering:rs_engineering'},
+        { output: 'immersiveengineering:rs_engineering' },
         'minecraft:redstone',
         'extendedcrafting:redstone_ingot'
       );
@@ -73,8 +73,8 @@ onEvent('recipes', event => {
             'pneumaticcraft:gun_ammo_ap',
             'pneumaticcraft:assembly_drill',
             'pneumaticcraft:large_tank',
-            'pneumaticcraft:smart_chest',
-          ],
+            'pneumaticcraft:smart_chest'
+          ]
         },
         'minecraft:diamond',
         'rankine:titanium_ingot'
@@ -82,38 +82,38 @@ onEvent('recipes', event => {
       event.replaceInput('charcoal_pit:straw', 'farmersdelight:straw');
 
       event.replaceInput(
-        {output: 'minecraft:bone_block'},
+        { output: 'minecraft:bone_block' },
         'minecraft:bone_meal',
         'minecraft:bone'
       );
 
       event.replaceInput(
-        {output: 'framedblocks:framed_torch'},
+        { output: 'framedblocks:framed_torch' },
         'rankine:coke',
         'realistictorches:glowstone_crystal'
       );
       event.replaceInput(
-        {output: 'framedblocks:framed_soul_torch'},
+        { output: 'framedblocks:framed_soul_torch' },
         'rankine:coke',
         'realistictorches:glowstone_crystal'
       );
       event.replaceInput(
-        {input: 'farmersdelight:wheat_dough'},
+        { input: 'farmersdelight:wheat_dough' },
         'farmersdelight:wheat_dough',
         'create:dough'
       );
       event.replaceInput(
-        {output: 'rankine:sodium_arc_tube'},
+        { output: 'rankine:sodium_arc_tube' },
         'rankine:xenon_nugget',
         'rankine:cobalt_nugget'
       );
       event.replaceInput(
-        {output: 'rankine:sodium_arc_tube'},
+        { output: 'rankine:sodium_arc_tube' },
         'rankine:sodium_ingot',
         'rankine:pink_salt'
       );
       event.replaceInput(
-        {output: 'rankine:glass_cutter'},
+        { output: 'rankine:glass_cutter' },
         'rankine:alloy_rod',
         'rankine:black_gold_ingot'
       );
@@ -124,67 +124,63 @@ onEvent('recipes', event => {
             'bloodmagic:masterritualstone',
             'bloodmagic:ritualstone',
             'waystones:waystone',
-            'bloodmagic:bettercapacityrune',
-          ],
+            'bloodmagic:bettercapacityrune'
+          ]
         },
         '#forge:obsidian',
         'rankine:blood_obsidian'
       );
       event.replaceInput(
         {
-          output: 'pneumaticcraft:drill_bit_diamond',
+          output: 'pneumaticcraft:drill_bit_diamond'
         },
         '#forge:storage_blocks/diamond',
         'rankine:titanium_alloy_block'
       );
       event.replaceInput(
         {
-          output: 'rankine:ore_detector',
+          output: 'rankine:ore_detector'
         },
         'rankine:indium_tin_oxide',
         'rankine:silicon_carbide'
       );
       event.replaceInput(
-        {output: 'bloodmagic:orbcapacityrune'},
+        { output: 'bloodmagic:orbcapacityrune' },
         '#forge:stone',
         'rankine:blood_obsidian'
       );
       event.replaceInput(
-        {output: 'charcoal_pit:dynamite_remote'},
+        { output: 'charcoal_pit:dynamite_remote' },
         'minecraft:ender_pearl',
         'minecraft:gunpowder'
       );
       event.replaceInput(
-        {output: 'minecraft:comparator'},
+        { output: 'minecraft:comparator' },
         'minecraft:quartz',
         'undergarden:regalium_crystal'
       );
       event.replaceInput(
-        {output: 'rankine:flood_gate'},
+        { output: 'rankine:flood_gate' },
         '#forge:ingots/aluminum',
         'minecraft:iron_ingot'
       );
 
       event.replaceInput(
-        {output: 'hexerei:book_of_shadows'},
+        { output: 'hexerei:book_of_shadows' },
         '#forge:dyes',
         'minecraft:red_dye'
       );
 
       event.replaceInput(
         {
-          output: [
-            'malum:gilded_ring',
-            'malum:gilded_belt',
-            'malum:spirit_jar',
-          ],
+          output: ['malum:gilded_ring', 'malum:gilded_belt', 'malum:spirit_jar']
         },
         'malum:hallowed_gold_ingot',
         'blue_skies:horizonite_ingot'
       );
 
       event.replaceInput(
-        {input: 'paragon_textiles:wood_stain'},
+        { input: 'paragon_textiles:wood_stain' },
         'minecraft:pink_dye',
         'minecraft:red_dye'
       );
@@ -195,29 +191,29 @@ onEvent('recipes', event => {
             'naturesaura:infused_iron_hoe',
             'naturesaura:infused_iron_shovel',
             'naturesaura:infused_iron_axe',
-            'naturesaura:infused_iron_pickaxe',
-          ],
+            'naturesaura:infused_iron_pickaxe'
+          ]
         },
         'naturesaura:ancient_stick',
         '#forge:rods/wooden'
       );
       event.replaceInput(
         {
-          output: 'farmersdelight:roast_chicken_block',
+          output: 'farmersdelight:roast_chicken_block'
         },
         'minecraft:bread',
         '#forge:flour'
       );
       event.replaceInput(
         {
-          output: 'blue_skies:bag_of_spoils',
+          output: 'blue_skies:bag_of_spoils'
         },
         'farmersdelight:rope',
         'minecraft:string'
       );
       event.replaceInput(
         {
-          output: ['bloodmagic:speedrune'],
+          output: ['bloodmagic:speedrune']
         },
         '#forge:stone',
         'rankine:gray_marble'
@@ -225,14 +221,14 @@ onEvent('recipes', event => {
 
       event.replaceInput(
         {
-          output: ['bloodmagic:altarcapacityrune'],
+          output: ['bloodmagic:altarcapacityrune']
         },
         '#forge:stone',
         'rankine:black_marble'
       );
       event.replaceInput(
         {
-          output: ['bloodmagic:dislocationrune', 'bloodmagic:accelerationrune'],
+          output: ['bloodmagic:dislocationrune', 'bloodmagic:accelerationrune']
         },
         '#forge:stone',
         'rankine:rose_marble'
@@ -240,13 +236,13 @@ onEvent('recipes', event => {
 
       event.replaceInput(
         {
-          output: 'sliceanddice:sprinkler',
+          output: 'sliceanddice:sprinkler'
         },
         '#forge:plates/copper',
         'naturesaura:sky_ingot'
       );
       event.replaceInput(
-        {output: 'minecraft:piston'},
+        { output: 'minecraft:piston' },
         'minecraft:iron_ingot',
         'create:andesite_alloy'
       );
@@ -496,9 +492,9 @@ onEvent('recipes', event => {
         'rankine:cobalt_ingot_from_cobalt_block',
         'rankine:cobalt_ingot_from_cobalt_nugget',
         'rankine:cobalt_block',
-        'rankine:cobalt_nugget',
-      ].forEach(id => {
-        event.remove({id: id});
+        'rankine:cobalt_nugget'
+      ].forEach((id) => {
+        event.remove({ id: id });
       });
 
       event.remove({
@@ -559,12 +555,12 @@ onEvent('recipes', event => {
 
           'immersiveengineering:stick_iron',
           'immersiveengineering:stick_steel',
-          'occultism:book_of_calling_foliot_transport_items',
+          'occultism:book_of_calling_foliot_transport_items'
         ],
         or: [
-          {type: 'minecraft:crafting_shaped'},
-          {type: 'minecraft:crafting_shapeless'},
-        ],
+          { type: 'minecraft:crafting_shaped' },
+          { type: 'minecraft:crafting_shapeless' }
+        ]
       });
 
       event.remove({
@@ -572,12 +568,12 @@ onEvent('recipes', event => {
           'ecofriendly:detergent_item_ym',
           '#rankine:cobbles',
           'minecraft:raw_copper_block',
-          'minecraft:raw_iron_block',
+          'minecraft:raw_iron_block'
         ],
         or: [
-          {type: 'minecraft:crafting_shaped'},
-          {type: 'minecraft:crafting_shapeless'},
-        ],
+          { type: 'minecraft:crafting_shaped' },
+          { type: 'minecraft:crafting_shapeless' }
+        ]
       });
 
       event.remove({
@@ -621,8 +617,8 @@ onEvent('recipes', event => {
           'occultism:candle_white',
           'occultism:spirit_attuned_gem',
           'farmersdelight:cooking_pot',
-          'minecraft:trident',
-        ],
+          'minecraft:trident'
+        ]
       });
 
       event.remove({
@@ -635,21 +631,21 @@ onEvent('recipes', event => {
           'immersiveengineering:raw_block_lead',
           '#farmersdelight:wild_crops',
           'ecofriendly:smelted_iron_can_ym',
-          'minecraft:barrier',
-        ],
+          'minecraft:barrier'
+        ]
       });
 
       event.remove({
         output: 'minecraft:black_dye',
-        input: ['architects_palette:withered_bone'],
+        input: ['architects_palette:withered_bone']
       });
       event.remove({
         output: 'extendedcrafting:luminessence',
-        input: ['minecraft:glowstone_dust'],
+        input: ['minecraft:glowstone_dust']
       });
       event.remove({
         output: 'rankine:carbon_nugget',
-        input: ['minecraft:charcoal', 'rankine:graphite', '#forge:coal_coke'],
+        input: ['minecraft:charcoal', 'rankine:graphite', '#forge:coal_coke']
       });
       event.remove({
         output: [
@@ -662,104 +658,104 @@ onEvent('recipes', event => {
           'rankine:bronze_shovel',
           'rankine:bronze_sword',
           'rankine:bronze_hammer',
-          'rankine:bronze_hoe',
+          'rankine:bronze_hoe'
         ],
-        input: ['rankine:brass_ingot'],
+        input: ['rankine:brass_ingot']
       });
 
       event.remove({
         output: 'minecraft:white_wool',
-        input: ['minecraft:string'],
+        input: ['minecraft:string']
       });
       event.remove({
         output: 'paragon_textiles:raw_fibers',
-        input: ['paragon_textiles:plant_fibers'],
+        input: ['paragon_textiles:plant_fibers']
       });
       event.remove({
         output: 'paragon_textiles:wicker',
-        input: ['minecraft:sugar_cane'],
+        input: ['minecraft:sugar_cane']
       });
       event.remove({
         output: 'minecraft:torch',
         input: [
           'minecraft:coal',
           'twilightforest:torchberries',
-          'undergarden:ditchbulb_paste',
-        ],
+          'undergarden:ditchbulb_paste'
+        ]
       });
       event.remove({
         input: Item.of('immersiveengineering:hammer').ignoreNBT(),
-        output: ['#forge:plates'],
+        output: ['#forge:plates']
       });
       event.remove({
         output: [
           'minecraft:minecart',
           'minecraft:detector_rail',
           'minecraft:activator_rail',
-          'minecraft:rail',
+          'minecraft:rail'
         ],
         input: [
           'rankine:aluminum_ingot',
           'rankine:osmium_ingot',
-          'rankine:steel_ingot',
-        ],
+          'rankine:steel_ingot'
+        ]
       });
       event.remove({
         output: 'extendedcrafting:luminessence',
-        input: 'minecraft:redstone',
+        input: 'minecraft:redstone'
       });
       event.remove({
         output: 'minecraft:hopper',
-        input: '#forge:ingots/aluminum',
+        input: '#forge:ingots/aluminum'
       });
       event.remove({
         output: 'twilightforest:fiery_ingot',
-        input: 'minecraft:iron_ingot',
+        input: 'minecraft:iron_ingot'
       });
       event.remove({
         output: 'extendedcrafting:black_iron_ingot',
-        input: 'minecraft:black_dye',
+        input: 'minecraft:black_dye'
       });
       event.remove({
         output: 'extendedcrafting:redstone_ingot',
-        input: 'minecraft:redstone',
+        input: 'minecraft:redstone'
       });
-      event.remove({output: 'minecraft:painting', input: '#minecraft:wool'});
+      event.remove({ output: 'minecraft:painting', input: '#minecraft:wool' });
       event.remove({
         output: 'paragon_textiles:wicker',
-        input: 'minecraft:sugar_cane',
+        input: 'minecraft:sugar_cane'
       });
       event.remove({
         output: 'paragon_textiles:raw_fibers',
-        input: 'paragon_textiles:plant_fibers',
+        input: 'paragon_textiles:plant_fibers'
       });
-      event.remove({output: 'minecraft:jukebox', input: 'minecraft:diamond'});
+      event.remove({ output: 'minecraft:jukebox', input: 'minecraft:diamond' });
       event.remove({
         output: '/rankine:bronze_.*/',
-        input: 'rankine:brass_ingot',
+        input: 'rankine:brass_ingot'
       });
-      event.remove({input: 'minecraft:clay_ball', output: 'minecraft:brick'});
+      event.remove({ input: 'minecraft:clay_ball', output: 'minecraft:brick' });
       event.remove({
         output: 'minecraft:slime_ball',
-        input: 'create:dough',
+        input: 'create:dough'
       });
       event.remove({
         output: 'minecraft:brewing_stand',
-        input: 'rankine:alloy_rod',
+        input: 'rankine:alloy_rod'
       });
       event.remove({
         output: ['minecraft:bow', 'minecraft:crossbow'],
-        input: 'farmersdelight:rope',
+        input: 'farmersdelight:rope'
       });
 
       event.remove({
         input: ['rankine:cast_iron_ingot', 'rankine:bismuth_ingot'],
-        output: 'rankine:cannonball',
+        output: 'rankine:cannonball'
       });
-      event.remove({output: '#create:seats', input: '#minecraft:wool'});
+      event.remove({ output: '#create:seats', input: '#minecraft:wool' });
       event.remove({
         output: 'productivebees:spawn_egg_configurable_bee',
-        type: 'tconstruct:casting_table',
+        type: 'tconstruct:casting_table'
       });
     },
     filter: () => {
@@ -1728,8 +1724,8 @@ onEvent('recipes', event => {
           'farmersdelight:wild_potatoes',
           'tconstruct:ender_slime_crystal_block',
           'charcoal_pit:tricolor_dango',
-          'charcoal_pit:engine',
-        ],
+          'charcoal_pit:engine'
+        ]
       });
     },
     stage: () => {
@@ -1738,12 +1734,12 @@ onEvent('recipes', event => {
           input: [
             'paraglider:deku_leaf',
             'minecraft:bone_meal',
-            'farmersdelight:safety_net',
+            'farmersdelight:safety_net'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           output: [
@@ -1751,15 +1747,15 @@ onEvent('recipes', event => {
             'paraglider:deku_leaf',
             'minecraft:stone_bricks',
             'minecraft:mossy_stone_bricks',
-            'smallships:sail',
+            'smallships:sail'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
-        },
-      ].forEach(target => {
-        event.forEachRecipe(target, recipe => {
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
+        }
+      ].forEach((target) => {
+        event.forEachRecipe(target, (recipe) => {
           recipe.stage('chapter_2');
         });
       });
@@ -1771,12 +1767,12 @@ onEvent('recipes', event => {
             'paragon_textiles:silk_wisps',
             'create:powdered_obsidian',
             '#create:seats',
-            'minecraft:black_dye',
+            'minecraft:black_dye'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           output: [
@@ -1798,12 +1794,12 @@ onEvent('recipes', event => {
             'minecraft:green_terracotta',
             'minecraft:brown_terracotta',
             'minecraft:blue_terracotta',
-            'minecraft:purple_terracotta',
+            'minecraft:purple_terracotta'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           output: [
@@ -1823,15 +1819,15 @@ onEvent('recipes', event => {
             'architects_palette:plating_slab',
             'architects_palette:plating_stairs',
             'architects_palette:plating_wall',
-            'architects_palette:plating_nub',
+            'architects_palette:plating_nub'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
-        },
-      ].forEach(target => {
-        event.forEachRecipe(target, recipe => {
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
+        }
+      ].forEach((target) => {
+        event.forEachRecipe(target, (recipe) => {
           recipe.stage('chapter_3');
         });
       });
@@ -1846,12 +1842,12 @@ onEvent('recipes', event => {
             'rankine:aluminum_nugget',
             'create:andesite_alloy',
             'minecraft:golden_apple',
-            'realistictorches:glowstone_crystal',
+            'realistictorches:glowstone_crystal'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           output: [
@@ -1879,15 +1875,15 @@ onEvent('recipes', event => {
             'create:andesite_alloy',
             'minecraft:magma_block',
             'naturesaura:crimson_meal',
-            'minecraft:enchanted_golden_apple',
+            'minecraft:enchanted_golden_apple'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
-        },
-      ].forEach(target => {
-        event.forEachRecipe(target, recipe => {
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
+        }
+      ].forEach((target) => {
+        event.forEachRecipe(target, (recipe) => {
           recipe.stage('chapter_4');
         });
       });
@@ -1902,54 +1898,54 @@ onEvent('recipes', event => {
             'naturesaura:token_euphoria',
             'naturesaura:token_terror',
             'naturesaura:token_rage',
-            'naturesaura:token_grief',
+            'naturesaura:token_grief'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           output: [
             'blue_skies:trough',
             '#minecraft:wool',
-            'minecraft:black_bed',
+            'minecraft:black_bed'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           input: Item.of('productivebees:stone_chip').ignoreNBT(),
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           input: Item.of('productivebees:wood_chip').ignoreNBT(),
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           input: '@productivebees',
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
-        },
-      ].forEach(target => {
-        event.forEachRecipe(target, recipe => {
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
+        }
+      ].forEach((target) => {
+        event.forEachRecipe(target, (recipe) => {
           recipe.stage('chapter_5_1');
         });
       });
 
       [
-        {id: 'rankine:crafting/tree_tap'},
-        {id: 'immersiveengineering:crafting/torch'},
+        { id: 'rankine:crafting/tree_tap' },
+        { id: 'immersiveengineering:crafting/torch' },
         {
           output: [
             'pneumaticcraft:wall_lamp_inverted_white',
@@ -1958,26 +1954,26 @@ onEvent('recipes', event => {
             'create:display_link',
             'pneumaticcraft:aerial_interface',
             'create:mechanical_arm',
-            'createaddition:rolling_mill',
+            'createaddition:rolling_mill'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           input: [
             'rankine:steel_nugget',
             'immersiveengineering:creosote_bucket',
-            'rankine:graphite_electrode',
+            'rankine:graphite_electrode'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
-        },
-      ].forEach(target => {
-        event.forEachRecipe(target, recipe => {
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
+        }
+      ].forEach((target) => {
+        event.forEachRecipe(target, (recipe) => {
           recipe.stage('chapter_5_2');
         });
       });
@@ -1987,15 +1983,15 @@ onEvent('recipes', event => {
           input: [
             'rankine:perlite',
             'rankine:saltpeter',
-            'rankine:stainless_steel',
+            'rankine:stainless_steel'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
-        },
-      ].forEach(target => {
-        event.forEachRecipe(target, recipe => {
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
+        }
+      ].forEach((target) => {
+        event.forEachRecipe(target, (recipe) => {
           recipe.stage('chapter_7');
         });
       });
@@ -2005,31 +2001,31 @@ onEvent('recipes', event => {
           input: [
             'ecofriendly:garbage_item_ym',
             'rankine:pumice_soap',
-            'rankine:cadmium_telluride_cell',
+            'rankine:cadmium_telluride_cell'
           ],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
         },
         {
           output: ['ecofriendly:oil_drum_ym'],
           or: [
-            {type: 'minecraft:crafting_shaped'},
-            {type: 'minecraft:crafting_shapeless'},
-          ],
-        },
-      ].forEach(target => {
-        event.forEachRecipe(target, recipe => {
+            { type: 'minecraft:crafting_shaped' },
+            { type: 'minecraft:crafting_shapeless' }
+          ]
+        }
+      ].forEach((target) => {
+        event.forEachRecipe(target, (recipe) => {
           recipe.stage('chapter_7_1');
         });
       });
 
-      [].forEach(target => {
-        event.forEachRecipe(target, recipe => {
+      [].forEach((target) => {
+        event.forEachRecipe(target, (recipe) => {
           recipe.stage('chapter_7_2');
         });
       });
-    },
+    }
   });
 });

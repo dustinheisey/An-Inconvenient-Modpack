@@ -6,7 +6,7 @@ const server = fs.readFileSync('artifact/logs/kubejs/server.txt', 'utf-8');
 
 let warnings = [];
 
-server.split(/\r?\n/).forEach(line => {
+server.split(/\r?\n/).forEach((line) => {
   // the 2nd reload causes this error, avoid reporting this
   if (line.includes('shadows.menu.PackMenuClient')) return;
 
@@ -21,6 +21,6 @@ server.split(/\r?\n/).forEach(line => {
   }
 });
 
-warnings.forEach(warning => {
+warnings.forEach((warning) => {
   console.log(`::warning::${warning}`);
 });

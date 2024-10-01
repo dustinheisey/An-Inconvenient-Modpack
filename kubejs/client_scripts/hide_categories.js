@@ -1,13 +1,13 @@
 // ? recipe-category-sort-order.ini in config/jei to find recipe categories
 
-onEvent('jei.remove.categories', event => {
+onEvent('jei.remove.categories', (event) => {
   list({
     create: [
       // TODO: stage showing categories in JEI
       'create:automatic_brewing',
       'create:automatic_packing',
       'create:automatic_shaped',
-      'create:automatic_shapeless',
+      'create:automatic_shapeless'
     ],
     charcoal_pit: [
       // 'charcoal_pit:hot_blasting',
@@ -21,7 +21,7 @@ onEvent('jei.remove.categories', event => {
       // 'rankine:fusion_furnace', // TODO: 7.1
     ],
     occultism: [
-      'occultism:miner', // TODO: 7.1
+      'occultism:miner' // TODO: 7.1
     ],
     // biomancy: [
     //   'biomancy:bio_brewing', // TODO: 7.2
@@ -66,11 +66,11 @@ onEvent('jei.remove.categories', event => {
     ],
     mythicbotany: [
       'mythicbotany:jei_category_infusion', // TODO: 7.1
-      'mythicbotany:jei_category_rune_ritual', // TODO: 7.1
+      'mythicbotany:jei_category_rune_ritual' // TODO: 7.1
     ],
     tofucraft: [
       'tofucraft:bittern', // TODO: 7.1
-      'tofucraft:harden', // TODO: 7.1
+      'tofucraft:harden' // TODO: 7.1
     ],
     extendedcrafting: [
       // 'extendedcrafting:compressor', // TODO: 7.1
@@ -78,9 +78,9 @@ onEvent('jei.remove.categories', event => {
       // 'extendedcrafting:ultimate_crafting', // TODO: 7.1
     ],
     pneumaticcraft: [
-      'pneumaticcraft:spawner_extraction', // TODO: 7.2
-    ],
-  }).forEach(category => {
+      'pneumaticcraft:spawner_extraction' // TODO: 7.2
+    ]
+  }).forEach((category) => {
     event.remove(category);
   });
 });
