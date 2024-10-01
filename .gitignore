@@ -27,3 +27,4 @@ config/xaeroworldmap-common.txt
 .curseclient
 rhino.local.properties
 options.txt
+logs/categorized_logs.yaml

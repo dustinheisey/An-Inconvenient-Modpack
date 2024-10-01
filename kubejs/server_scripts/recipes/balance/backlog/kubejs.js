@@ -13,7 +13,6 @@ onEvent('recipes', (event) => {
         ]
       },
       (recipe) => {
-        // console.info(`staging: ${recipe}`);
         recipe.stage(chapter);
       }
     );

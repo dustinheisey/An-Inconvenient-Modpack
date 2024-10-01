@@ -193,7 +193,6 @@ onEvent('recipes', (event) => {
     {
       id: 'bricks',
       recipe: () => {
-        console.log('bricks recipe loaded');
         [
           'minecraft:deepslate_bricks',
           'minecraft:polished_blackstone_bricks',
@@ -717,7 +716,6 @@ onEvent('recipes', (event) => {
     {
       id: 'tipi',
       recipe: () => {
-        console.log('tipi recipe loaded');
         ['totemic:tipi_from_hide', 'totemic:tipi_from_wool'].forEach((id) =>
           event.remove({ id: id })
         );
