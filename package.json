@@ -8,7 +8,9 @@
     "prepare": "husky",
     "log-errors": "node scripts/log-errors.js",
     "package": "node scripts/package.js",
-    "modlist": "node scripts/generate-modlist.js"
+    "modlist": "node scripts/generate-modlist.js",
+    "manifest": "node scripts/generate-manifest.js",
+    "validate-secrets": "node scripts/validate-secrets.js"
   },
   "devDependencies": {
     "archiver": "^7.0.1",

@@ -71,7 +71,7 @@ ${mdLines.join('\n')}`;
     // write the updated content to README.md
     writeFileSync(new URL('../README.md', import.meta.url), readmeContent);
     writeFileSync(
-      new URL('../MODLIST.html', import.meta.url),
+      new URL('../output/MODLIST.html', import.meta.url),
       htmlLines.join('\n')
     );
   });

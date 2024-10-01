@@ -29,3 +29,4 @@ rhino.local.properties
 options.txt
 logs/categorized_logs.yaml
 output
+scripts/secrets.js
