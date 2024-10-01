@@ -2,7 +2,7 @@
 
 An Inconvenient Modpack is a philosophical story of our current times and scathing political commentary about the issues that affect all of us, packaged in the form of an epic minecraft modpack. This is not your average modpack. There is an enormous amount to do here including but not limited to 9 large chapters of content and many collections of side quests, hundreds of advancements and intricately handcrafted progression changes to the more than 200 mods included with the pack. The narrative that will guide you through the content of this pack will make you think deeply about the issues affecting all of us right now.
 
-## Modlist - v0.6.8 (Latest Version)
+## Modlist - v0.6.8 | 1.18.2 | Forge 40.2.17
 
 - [AdChimneys-1.18.2-8.3.6.0-build.1586.jar](https://www.curseforge.com/minecraft/mc-mods/advanced-chimneys/files/5222264) (by [EnderLanky](https://www.curseforge.com/members/enderlanky/projects))
 - [AdvancementPlaques-1.18.2-1.4.5.1.jar](https://www.curseforge.com/minecraft/mc-mods/advancement-plaques/files/3856125) (by [Grend_G](https://www.curseforge.com/members/grend_g/projects))

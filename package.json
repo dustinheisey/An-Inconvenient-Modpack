@@ -1,6 +1,7 @@
 {
   "name": "inconvenient-modpack",
   "version": "0.6.8",
+  "type": "module",
   "scripts": {
     "format:check": "npx prettier --check '**/*.{js,json,md}'",
     "format:write": "npx prettier --write '**/*.{js,json,md}'",

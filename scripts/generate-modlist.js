@@ -1,16 +1,15 @@
-const fs = require('fs');
-const axios = require('axios');
+import { readFileSync, writeFileSync } from 'fs';
+import axios from 'axios';
+import {
+  MODPACK_NAME,
+  MC_VERSION,
+  MODPACK_VERSION,
+  FORGE_VERSION
+} from './settings.js';
 
 const minecraftinstance_json = JSON.parse(
-  fs.readFileSync(`${__dirname}/../minecraftinstance.json`)
+  readFileSync(new URL('../minecraftinstance.json', import.meta.url), 'utf-8')
 );
-
-// grab the name and the version for the markdown header from the pwsh settings
-const settings_ps1 = fs
-  .readFileSync(`${__dirname}/../automation/settings.ps1`)
-  .toString();
-const CLIENT_NAME = settings_ps1.match(/\$CLIENT_NAME = "(.*)"/)[1];
-const MODPACK_VERSION = settings_ps1.match(/\$MODPACK_VERSION = "(.*)"/)[1];
 
 // match the sorting of MelanX/ModListCreator
 function by_project_name(project_a, project_b) {
@@ -62,14 +61,17 @@ axios
     // write the generated HTML content to MODLIST.html
 
     // Overwrite README.md with modpack description and modlist
-    const readmeContent = `# An Inconvenient Modpack
+    const readmeContent = `# ${MODPACK_NAME}
 
-An Inconvenient Modpack is a philosophical story of our current times and scathing political commentary about the issues that affect all of us, packaged in the form of an epic minecraft modpack. This is not your average modpack. There is an enormous amount to do here including but not limited to 9 large chapters of content and many collections of side quests, hundreds of advancements and intricately handcrafted progression changes to the more than 200 mods included with the pack. The narrative that will guide you through the content of this pack will make you think deeply about the issues affecting all of us right now.
+${MODPACK_NAME} is a philosophical story of our current times and scathing political commentary about the issues that affect all of us, packaged in the form of an epic minecraft modpack. This is not your average modpack. There is an enormous amount to do here including but not limited to 9 large chapters of content and many collections of side quests, hundreds of advancements and intricately handcrafted progression changes to the more than 200 mods included with the pack. The narrative that will guide you through the content of this pack will make you think deeply about the issues affecting all of us right now.
 
-## Modlist - v${MODPACK_VERSION} (Latest Version) 
+## Modlist - v${MODPACK_VERSION} | ${MC_VERSION} | Forge ${FORGE_VERSION}
 ${mdLines.join('\n')}`;
 
     // write the updated content to README.md
-    fs.writeFileSync(`${__dirname}/../README.md`, readmeContent);
-    fs.writeFileSync(`${__dirname}/../MODLIST.html`, htmlLines.join('\n'));
+    writeFileSync(new URL('../README.md', import.meta.url), readmeContent);
+    writeFileSync(
+      new URL('../MODLIST.html', import.meta.url),
+      htmlLines.join('\n')
+    );
   });
