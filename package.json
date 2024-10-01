@@ -10,6 +10,6 @@
     "prettier": "^3.3.3"
   },
   "lint-staged": {
-    "*.{js,json,md}": "prettier --write"
+    "**/*.{js,json,md}": "prettier --write"
   }
 }
