@@ -3,6 +3,9 @@ kubejs/exported
 kubejs/probe
 .vscode
 .github/workflows/*.yml
+config
+defaultconfigs
+XaeroWaypoints*
 
 mods
 usernamecache.json
