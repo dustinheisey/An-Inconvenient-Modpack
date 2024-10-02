@@ -1,0 +1,18 @@
+{
+  "x": 0,
+  "y": 0,
+  "width": 116,
+  "height": 30,
+  "langKey": "menu.multiplayer",
+  "action": "OPEN_GUI",
+  "data": "MULTIPLAYER",
+  "texture": "im:textures/solarpunk-btns.png",
+  "u": 0,
+  "v": 0,
+  "hoverU": 0,
+  "hoverV": 30,
+  "texWidth": 116,
+  "texHeight": 60,
+  "dropShadow": false,
+  "active": true
+}

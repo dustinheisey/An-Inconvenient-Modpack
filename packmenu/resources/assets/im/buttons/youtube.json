@@ -1,0 +1,16 @@
+{
+  "x": 48,
+  "y": 102,
+  "action": "OPEN_URL",
+  "data": "https://www.youtube.com/@inconvenientDev",
+  "width": 20,
+  "height": 20,
+  "u": 0,
+  "v": 0,
+  "hoverU": 0,
+  "hoverV": 20,
+  "texWidth": 20,
+  "texHeight": 40,
+  "texture": "im:textures/youtube.png",
+  "active": true
+}

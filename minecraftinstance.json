@@ -15,8 +15,8 @@
   },
   "isUnlocked": true,
   "javaArgsOverride": null,
-  "lastPlayed": "2024-09-29T11:09:31.919Z",
-  "playedCount": 52,
+  "lastPlayed": "2024-10-01T09:51:17.574Z",
+  "playedCount": 56,
   "manifest": null,
   "fileDate": "0001-01-01T00:00:00",
   "installedModpack": null,
@@ -11776,7 +11776,7 @@
       },
       "dateInstalled": "2024-09-29T10:54:35.654925Z",
       "dateUpdated": "2024-09-29T10:54:35.6592078Z",
-      "status": 4,
+      "status": 5,
       "installSource": 6,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -14094,189 +14094,6 @@
       }
     },
     {
-      "instanceID": "bef0b2f9-2517-4817-8f5e-2cc4aed99258",
-      "modSource": 0,
-      "addonID": 358191,
-      "gameID": 432,
-      "categoryClassID": 6,
-      "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
-      "name": "PackMenu",
-      "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\mods",
-      "fileNameOnDisk": "PackMenu-1.18.2-4.1.4.jar",
-      "authors": [{ "Id": 10368195, "Name": "Shadows_of_Fire" }],
-      "primaryAuthor": "Shadows_of_Fire",
-      "primaryCategoryId": 424,
-      "packageType": 6,
-      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/packmenu",
-      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/244/144/256/256/637143842674144318.png",
-      "tags": [],
-      "installedFile": {
-        "id": 4050356,
-        "fileName": "PackMenu-1.18.2-4.1.4.jar",
-        "fileDate": "2022-10-25T18:59:45.037Z",
-        "fileLength": 542740,
-        "releaseType": 1,
-        "fileStatus": 4,
-        "downloadUrl": "https://edge.forgecdn.net/files/4050/356/PackMenu-1.18.2-4.1.4.jar",
-        "isAlternate": false,
-        "alternateFileId": 0,
-        "serverPackFileId": 0,
-        "dependencies": [{ "addonId": 283644, "type": 3 }],
-        "isAvailable": true,
-        "modules": [
-          {
-            "foldername": "META-INF",
-            "fingerprint": 164943839,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "shadows",
-            "fingerprint": 1518647839,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "assets",
-            "fingerprint": 1965465627,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "pack.mcmeta",
-            "fingerprint": 3571026891,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "packmenu.mixins.json",
-            "fingerprint": 2802764507,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "resources.zip",
-            "fingerprint": 2407690255,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "packmenu.refmap.json",
-            "fingerprint": 981328554,
-            "invalidFingerprint": false
-          }
-        ],
-        "packageFingerprint": 1397495876,
-        "gameVersion": ["1.18.2", "Forge"],
-        "sortableGameVersion": [
-          {
-            "gameVersion": "1.18.2",
-            "gameVersionName": "1.18.2",
-            "gameVersionTypeId": 73250
-          },
-          {
-            "gameVersion": "",
-            "gameVersionName": "Forge",
-            "gameVersionTypeId": 68441
-          }
-        ],
-        "hasInstallScript": false,
-        "isCompatibleWithClient": false,
-        "isEarlyAccessContent": false,
-        "restrictProjectFileAccess": 0,
-        "projectStatus": 4,
-        "projectId": 358191,
-        "fileNameOnDisk": "PackMenu-1.18.2-4.1.4.jar",
-        "hashes": [
-          { "type": 1, "value": "4a1748b1d65b4b1ba6c443418cbefe9f2e92af04" },
-          { "type": 2, "value": "d85b91fe8c559f09879592d5f266cd6f" }
-        ]
-      },
-      "dateInstalled": "2024-09-29T14:05:23.231077Z",
-      "dateUpdated": "2024-09-29T14:05:23.2360823Z",
-      "status": 4,
-      "installSource": 6,
-      "preferenceReleaseType": null,
-      "preferenceAutoInstallUpdates": null,
-      "preferenceAlternateFile": false,
-      "preferenceIsIgnored": false,
-      "isModified": false,
-      "isWorkingCopy": false,
-      "isFuzzyMatch": false,
-      "manifestName": null,
-      "installedTargets": [],
-      "latestFile": {
-        "id": 4050356,
-        "fileName": "PackMenu-1.18.2-4.1.4.jar",
-        "fileDate": "2022-10-25T18:59:45.037Z",
-        "fileLength": 542740,
-        "releaseType": 1,
-        "fileStatus": 4,
-        "downloadUrl": "https://edge.forgecdn.net/files/4050/356/PackMenu-1.18.2-4.1.4.jar",
-        "isAlternate": false,
-        "alternateFileId": 0,
-        "serverPackFileId": 0,
-        "dependencies": [{ "addonId": 283644, "type": 3 }],
-        "isAvailable": true,
-        "modules": [
-          {
-            "foldername": "META-INF",
-            "fingerprint": 164943839,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "shadows",
-            "fingerprint": 1518647839,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "assets",
-            "fingerprint": 1965465627,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "pack.mcmeta",
-            "fingerprint": 3571026891,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "packmenu.mixins.json",
-            "fingerprint": 2802764507,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "resources.zip",
-            "fingerprint": 2407690255,
-            "invalidFingerprint": false
-          },
-          {
-            "foldername": "packmenu.refmap.json",
-            "fingerprint": 981328554,
-            "invalidFingerprint": false
-          }
-        ],
-        "packageFingerprint": 1397495876,
-        "gameVersion": ["1.18.2", "Forge"],
-        "sortableGameVersion": [
-          {
-            "gameVersion": "1.18.2",
-            "gameVersionName": "1.18.2",
-            "gameVersionTypeId": 73250
-          },
-          {
-            "gameVersion": "",
-            "gameVersionName": "Forge",
-            "gameVersionTypeId": 68441
-          }
-        ],
-        "hasInstallScript": false,
-        "isCompatibleWithClient": false,
-        "isEarlyAccessContent": false,
-        "restrictProjectFileAccess": 0,
-        "projectStatus": 4,
-        "projectId": 358191,
-        "fileNameOnDisk": "PackMenu-1.18.2-4.1.4.jar",
-        "hashes": [
-          { "type": 1, "value": "4a1748b1d65b4b1ba6c443418cbefe9f2e92af04" },
-          { "type": 2, "value": "d85b91fe8c559f09879592d5f266cd6f" }
-        ]
-      }
-    },
-    {
       "instanceID": "39b48a7c-c528-402d-b029-6ccaefefb924",
       "modSource": 0,
       "addonID": 448233,
@@ -15665,7 +15482,7 @@
       },
       "dateInstalled": "2024-09-29T09:47:33.5495333Z",
       "dateUpdated": "2024-09-29T09:47:33.5495333Z",
-      "status": 4,
+      "status": 5,
       "installSource": 0,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -19455,7 +19272,7 @@
       },
       "dateInstalled": "2024-09-29T09:47:33.5484335Z",
       "dateUpdated": "2024-09-29T09:47:33.5484335Z",
-      "status": 4,
+      "status": 5,
       "installSource": 0,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -24651,7 +24468,7 @@
       },
       "dateInstalled": "2024-09-29T09:47:33.5392375Z",
       "dateUpdated": "2024-09-29T09:47:33.5392375Z",
-      "status": 4,
+      "status": 5,
       "installSource": 0,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -40633,6 +40450,189 @@
         "hashes": [
           { "type": 1, "value": "e14d072aa97605ac77f23f793578270c68d2624c" },
           { "type": 2, "value": "ab3e3ae18dae2302fa4573cdcebd2cf4" }
+        ]
+      }
+    },
+    {
+      "instanceID": "96d0780e-0411-4e39-9bde-b7583c363dd7",
+      "modSource": 0,
+      "addonID": 358191,
+      "gameID": 432,
+      "categoryClassID": 6,
+      "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
+      "name": "PackMenu",
+      "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\mods",
+      "fileNameOnDisk": "PackMenu-1.18.2-4.1.4.jar",
+      "authors": [{ "Id": 10368195, "Name": "Shadows_of_Fire" }],
+      "primaryAuthor": "Shadows_of_Fire",
+      "primaryCategoryId": 424,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/packmenu",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/244/144/256/256/637143842674144318.png",
+      "tags": [],
+      "installedFile": {
+        "id": 4050356,
+        "fileName": "PackMenu-1.18.2-4.1.4.jar",
+        "fileDate": "2022-10-25T18:59:45.037Z",
+        "fileLength": 542740,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4050/356/PackMenu-1.18.2-4.1.4.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [{ "addonId": 283644, "type": 3 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 164943839,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shadows",
+            "fingerprint": 1518647839,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 1965465627,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "pack.mcmeta",
+            "fingerprint": 3571026891,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "packmenu.mixins.json",
+            "fingerprint": 2802764507,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "resources.zip",
+            "fingerprint": 2407690255,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "packmenu.refmap.json",
+            "fingerprint": 981328554,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1397495876,
+        "gameVersion": ["1.18.2", "Forge"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Forge",
+            "gameVersionTypeId": 68441
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 358191,
+        "fileNameOnDisk": "PackMenu-1.18.2-4.1.4.jar",
+        "hashes": [
+          { "type": 1, "value": "4a1748b1d65b4b1ba6c443418cbefe9f2e92af04" },
+          { "type": 2, "value": "d85b91fe8c559f09879592d5f266cd6f" }
+        ]
+      },
+      "dateInstalled": "2024-10-01T13:22:09.3835213Z",
+      "dateUpdated": "2024-10-01T13:22:09.3885042Z",
+      "status": 4,
+      "installSource": 6,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": null,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 4050356,
+        "fileName": "PackMenu-1.18.2-4.1.4.jar",
+        "fileDate": "2022-10-25T18:59:45.037Z",
+        "fileLength": 542740,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4050/356/PackMenu-1.18.2-4.1.4.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [{ "addonId": 283644, "type": 3 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 164943839,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shadows",
+            "fingerprint": 1518647839,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 1965465627,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "pack.mcmeta",
+            "fingerprint": 3571026891,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "packmenu.mixins.json",
+            "fingerprint": 2802764507,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "resources.zip",
+            "fingerprint": 2407690255,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "packmenu.refmap.json",
+            "fingerprint": 981328554,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1397495876,
+        "gameVersion": ["1.18.2", "Forge"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Forge",
+            "gameVersionTypeId": 68441
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 358191,
+        "fileNameOnDisk": "PackMenu-1.18.2-4.1.4.jar",
+        "hashes": [
+          { "type": 1, "value": "4a1748b1d65b4b1ba6c443418cbefe9f2e92af04" },
+          { "type": 2, "value": "d85b91fe8c559f09879592d5f266cd6f" }
         ]
       }
     },

@@ -1,0 +1,18 @@
+{
+  "x": 0,
+  "y": 68,
+  "width": 116,
+  "height": 30,
+  "langKey": "packmenu.im.wiki",
+  "action": "OPEN_URL",
+  "data": "https://wiki.inconvenient.gg",
+  "texture": "im:textures/solarpunk-btns.png",
+  "u": 0,
+  "v": 0,
+  "hoverU": 0,
+  "hoverV": 30,
+  "texWidth": 116,
+  "texHeight": 60,
+  "dropShadow": false,
+  "active": true
+}

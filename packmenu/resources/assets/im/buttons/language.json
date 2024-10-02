@@ -1,0 +1,17 @@
+{
+  "x": -154,
+  "y": 146,
+  "width": 30,
+  "height": 30,
+  "u": 0,
+  "v": 0,
+  "hoverU": 0,
+  "hoverV": 30,
+  "texWidth": 30,
+  "texHeight": 60,
+  "widgets": false,
+  "action": "OPEN_GUI",
+  "texture": "im:textures/language.png",
+  "data": "LANGUAGE",
+  "active": true
+}

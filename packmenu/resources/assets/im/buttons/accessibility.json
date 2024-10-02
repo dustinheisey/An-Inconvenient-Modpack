@@ -1,0 +1,16 @@
+{
+  "x": 120,
+  "y": 146,
+  "width": 30,
+  "height": 30,
+  "u": 0,
+  "v": 0,
+  "hoverU": 0,
+  "hoverV": 30,
+  "texWidth": 30,
+  "texHeight": 60,
+  "texture": "im:textures/accessibility.png",
+  "action": "OPEN_GUI",
+  "data": "ACCESSIBILITY",
+  "active": true
+}
