@@ -15,8 +15,8 @@
   },
   "isUnlocked": true,
   "javaArgsOverride": null,
-  "lastPlayed": "2024-10-01T09:51:17.574Z",
-  "playedCount": 56,
+  "lastPlayed": "2024-10-03T12:23:19.139Z",
+  "playedCount": 70,
   "manifest": null,
   "fileDate": "0001-01-01T00:00:00",
   "installedModpack": null,
@@ -26324,42 +26324,42 @@
       "manifestName": null,
       "installedTargets": [],
       "latestFile": {
-        "id": 5709202,
-        "fileName": "ColdSweat-2.3.4.jar",
-        "fileDate": "2024-09-10T06:12:47.183Z",
-        "fileLength": 8461081,
+        "id": 5775335,
+        "fileName": "ColdSweat-2.3.5.jar",
+        "fileDate": "2024-10-02T02:49:34.21Z",
+        "fileLength": 8473009,
         "releaseType": 1,
         "fileStatus": 4,
-        "downloadUrl": "https://edge.forgecdn.net/files/5709/202/ColdSweat-2.3.4.jar",
+        "downloadUrl": "https://edge.forgecdn.net/files/5775/335/ColdSweat-2.3.5.jar",
         "isAlternate": false,
-        "alternateFileId": 5709203,
+        "alternateFileId": 5775336,
         "serverPackFileId": 0,
         "dependencies": [],
         "isAvailable": true,
         "modules": [
           {
             "foldername": "META-INF",
-            "fingerprint": 3696944519,
+            "fingerprint": 3242435854,
             "invalidFingerprint": false
           },
           {
             "foldername": "com",
-            "fingerprint": 932885957,
+            "fingerprint": 119998135,
             "invalidFingerprint": false
           },
           {
             "foldername": "data",
-            "fingerprint": 1351699690,
+            "fingerprint": 1363220,
             "invalidFingerprint": false
           },
           {
             "foldername": "cold_sweat.mixin.json",
-            "fingerprint": 2758548110,
+            "fingerprint": 1678972712,
             "invalidFingerprint": false
           },
           {
             "foldername": "assets",
-            "fingerprint": 3804440765,
+            "fingerprint": 2993813882,
             "invalidFingerprint": false
           },
           {
@@ -26369,11 +26369,11 @@
           },
           {
             "foldername": "cold_sweat.mixin-refmap.json",
-            "fingerprint": 1048176470,
+            "fingerprint": 498417153,
             "invalidFingerprint": false
           }
         ],
-        "packageFingerprint": 2830583721,
+        "packageFingerprint": 3793336952,
         "gameVersion": ["1.18.2", "Forge"],
         "sortableGameVersion": [
           {
@@ -26393,10 +26393,10 @@
         "restrictProjectFileAccess": 0,
         "projectStatus": 4,
         "projectId": 506194,
-        "fileNameOnDisk": "ColdSweat-2.3.4.jar",
+        "fileNameOnDisk": "ColdSweat-2.3.5.jar",
         "hashes": [
-          { "type": 1, "value": "d97cc1c4721c04b63a06dd886a0b0d3e3d9b916a" },
-          { "type": 2, "value": "68bf6cd76c706c74fe168851900f9675" }
+          { "type": 1, "value": "07be09e518f8e1e6aed1bb2e72a54be5b44465cc" },
+          { "type": 2, "value": "84eadc2eeae7ba1c0d3b5c4a9d5a3e11" }
         ]
       }
     },
@@ -37277,7 +37277,7 @@
       "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
       "name": "Create Slice & Dice",
       "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\mods",
-      "fileNameOnDisk": "sliceanddice-forge-1.3.3.jar",
+      "fileNameOnDisk": "sliceanddice-forge-1.4.0.jar",
       "authors": [{ "Id": 13652852, "Name": "possible_triangle" }],
       "primaryAuthor": "possible_triangle",
       "primaryCategoryId": 412,
@@ -37286,37 +37286,37 @@
       "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/1076/930/256/256/638614872387774853.png",
       "tags": [],
       "installedFile": {
-        "id": 5526218,
-        "fileName": "sliceanddice-forge-1.3.3.jar",
-        "fileDate": "2024-07-12T15:34:05.1Z",
-        "fileLength": 228033,
+        "id": 5736612,
+        "fileName": "sliceanddice-forge-1.4.0.jar",
+        "fileDate": "2024-09-19T09:49:36.053Z",
+        "fileLength": 1021671,
         "releaseType": 1,
         "fileStatus": 4,
-        "downloadUrl": "https://edge.forgecdn.net/files/5526/218/sliceanddice-forge-1.3.3.jar",
+        "downloadUrl": "https://edge.forgecdn.net/files/5736/612/sliceanddice-forge-1.4.0.jar",
         "isAlternate": false,
         "alternateFileId": 0,
         "serverPackFileId": 0,
         "dependencies": [
-          { "addonId": 351264, "type": 3 },
-          { "addonId": 398521, "type": 2 },
           { "addonId": 591666, "type": 2 },
-          { "addonId": 328085, "type": 3 }
+          { "addonId": 351264, "type": 3 },
+          { "addonId": 328085, "type": 3 },
+          { "addonId": 398521, "type": 2 }
         ],
         "isAvailable": true,
         "modules": [
           {
             "foldername": "META-INF",
-            "fingerprint": 3665339488,
+            "fingerprint": 1854523981,
             "invalidFingerprint": false
           },
           {
             "foldername": "assets",
-            "fingerprint": 2813531485,
+            "fingerprint": 215580924,
             "invalidFingerprint": false
           },
           {
             "foldername": "com",
-            "fingerprint": 3659657420,
+            "fingerprint": 2704159200,
             "invalidFingerprint": false
           },
           {
@@ -37331,7 +37331,7 @@
           },
           {
             "foldername": "sliceanddice.mixins.json",
-            "fingerprint": 3454846654,
+            "fingerprint": 3737125847,
             "invalidFingerprint": false
           },
           {
@@ -37340,7 +37340,7 @@
             "invalidFingerprint": false
           }
         ],
-        "packageFingerprint": 4120561601,
+        "packageFingerprint": 1877167634,
         "gameVersion": ["1.18.2", "Forge"],
         "sortableGameVersion": [
           {
@@ -37360,15 +37360,15 @@
         "restrictProjectFileAccess": 0,
         "projectStatus": 4,
         "projectId": 659674,
-        "fileNameOnDisk": "sliceanddice-forge-1.3.3.jar",
+        "fileNameOnDisk": "sliceanddice-forge-1.4.0.jar",
         "hashes": [
-          { "type": 1, "value": "bf21a1f8b6d4cde45dbe8084876ef420bbfb1894" },
-          { "type": 2, "value": "8b192560a737be729e3719e270d24639" }
+          { "type": 1, "value": "133e9e181dec08c6c3443bc6abecda2d5f01459e" },
+          { "type": 2, "value": "4e72a41507214d2bb524da735b6325b0" }
         ]
       },
       "dateInstalled": "2024-08-20T12:53:59.3134061Z",
-      "dateUpdated": "2024-08-20T12:53:59.3134061Z",
-      "status": 3,
+      "dateUpdated": "2024-10-03T12:26:34.0450109Z",
+      "status": 4,
       "installSource": 0,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -40548,7 +40548,7 @@
       },
       "dateInstalled": "2024-10-01T13:22:09.3835213Z",
       "dateUpdated": "2024-10-01T13:22:09.3885042Z",
-      "status": 4,
+      "status": 5,
       "installSource": 6,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
