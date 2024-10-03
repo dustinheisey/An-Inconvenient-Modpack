@@ -1,18 +1,15 @@
 {
-  "x": -120,
-  "y": 102,
+  "x": 0,
+  "y": 24,
   "width": 116,
-  "height": 30,
+  "height": 20,
   "langKey": "packmenu.im.github",
   "action": "OPEN_URL",
   "data": "https://github.com/dustinheisey/An-Inconvenient-Modpack/issues",
-  "texture": "im:textures/cyberpunk-btns.png",
   "u": 0,
   "v": 0,
   "hoverU": 0,
-  "hoverV": 30,
+  "hoverV": 20,
   "texWidth": 116,
-  "texHeight": 60,
-  "dropShadow": false,
-  "active": true
+  "texHeight": 40
 }
