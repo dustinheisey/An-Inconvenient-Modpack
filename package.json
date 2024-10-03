@@ -21,6 +21,7 @@
     "prettier": "^3.3.3"
   },
   "lint-staged": {
-    "**/*.{js,json,md}": "prettier --write"
+    "**/*.{js,json,md}": "prettier --write",
+    "MODLIST.html,manifest.json,README.md,minecraftinstance.json,scripts/generate-manifest.js,scripts/generate-modlist.js": "npm run modlist && npm run manifest"
   }
 }
