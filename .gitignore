@@ -31,3 +31,6 @@ logs/categorized_logs.yaml
 output
 scripts/secrets.js
 mods
+XaeroWaypoints*
+servers.dat
+servers.dat_old
