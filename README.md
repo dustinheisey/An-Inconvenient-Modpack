@@ -61,7 +61,7 @@ An Inconvenient Modpack is a philosophical story of our current times and scathi
 - [create-confectionery1.18.2_v1.0.9.jar](https://www.curseforge.com/minecraft/mc-mods/create-confectionery/files/4561122) (by [Furti_Two](https://www.curseforge.com/members/furti_two/projects))
 - [createaddition-1.18.2-1.0.0.jar](https://www.curseforge.com/minecraft/mc-mods/createaddition/files/4683727) (by [MRHminer](https://www.curseforge.com/members/mrhminer/projects))
 - [create_enchantment_industry-1.18.2-for-create-0.5.1.f-1.2.8.jar](https://www.curseforge.com/minecraft/mc-mods/create-enchantment-industry/files/5129831) (by [DragonsPlus](https://www.curseforge.com/members/dragonsplus/projects))
-- [sliceanddice-forge-1.3.3.jar](https://www.curseforge.com/minecraft/mc-mods/slice-and-dice/files/5526218) (by [possible_triangle](https://www.curseforge.com/members/possible_triangle/projects))
+- [sliceanddice-forge-1.4.0.jar](https://www.curseforge.com/minecraft/mc-mods/slice-and-dice/files/5736612) (by [possible_triangle](https://www.curseforge.com/members/possible_triangle/projects))
 - [vintageimprovements-1.18.2-0.1.2.0.jar](https://www.curseforge.com/minecraft/mc-mods/create-vintage-improvements/files/5154534) (by [Negodya1](https://www.curseforge.com/members/negodya1/projects))
 - [CreativeCore_FORGE_v2.11.27_mc1.18.2.jar](https://www.curseforge.com/minecraft/mc-mods/creativecore/files/5335387) (by [CreativeMD](https://www.curseforge.com/members/creativemd/projects))
 - [CNB-1.18.2-1.5.3.jar](https://www.curseforge.com/minecraft/mc-mods/creatures-and-beasts/files/4556105) (by [joosh_7889](https://www.curseforge.com/members/joosh_7889/projects))
