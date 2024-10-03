@@ -55,6 +55,8 @@ const jsonOutput = {
   overrides: 'overrides'
 };
 
+// TESTING
+
 // Remove existing manifest file if exists
 const manifestPath = path.join(INSTANCE_ROOT, MANIFEST_FILE);
 if (fs.existsSync(manifestPath)) {
