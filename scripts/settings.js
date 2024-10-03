@@ -16,7 +16,7 @@ export const MODPACK_VERSION = '0.6.8';
 export const FORGE_VERSION = '40.2.17';
 export const AUTHOR = 'Inconvenient Dev';
 export const INSTANCE_ROOT = path.join(__dirname, '../'); // or the path to the instance root
-export const MANIFEST_FILE = 'output/manifest.json';
+export const MANIFEST_FILE = 'manifest.json';
 export const MINECRAFT_INSTANCE_FILE = path.join(
   INSTANCE_ROOT,
   'minecraftinstance.json'
