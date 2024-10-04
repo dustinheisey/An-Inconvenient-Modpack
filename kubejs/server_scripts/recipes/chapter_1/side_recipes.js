@@ -197,6 +197,17 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'labels',
+      recipe: () => {
+        ['labels:label'].forEach((id) => event.remove({ id: id }));
+        event
+          .shaped('4x labels:label', ['aa', 'aa'], {
+            a: 'farmersdelight:canvas'
+          })
+          .id('inconvenient:labels');
+      }
+    },
+    {
       id: 'torches',
       recipe: () => {
         // ? torches don't last forever until chapter 3/4
