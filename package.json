@@ -8,8 +8,7 @@
     "prepare": "husky",
     "log-errors": "node scripts/log-errors.js",
     "package": "node scripts/package.js",
-    "modlist": "node scripts/generate-modlist.js",
-    "manifest": "node scripts/generate-manifest.js",
+    "modlist": "node scripts/modlist.js",
     "validate-secrets": "node scripts/validate-secrets.js"
   },
   "devDependencies": {
