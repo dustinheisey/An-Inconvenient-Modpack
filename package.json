@@ -7,7 +7,7 @@
     "format:write": "npx prettier --write '**/*.{js,json,md}'",
     "prepare": "husky",
     "log-errors": "node scripts/log-errors.js",
-    "package": "node scripts/package.js",
+    "release": "node scripts/release.js",
     "modlist": "node scripts/modlist.js",
     "validate-secrets": "node scripts/validate-secrets.js"
   },
