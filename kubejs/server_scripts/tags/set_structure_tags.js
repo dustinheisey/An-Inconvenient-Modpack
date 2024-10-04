@@ -1,7 +1,7 @@
 // priority: 303
-onEvent('tags.worldgen.biome', event => {
+onEvent('tags.worldgen.biome', (event) => {
   function removeStructures(structures) {
-    structures.forEach(structure => {
+    structures.forEach((structure) => {
       try {
         event.removeAll(structure);
       } catch (error) {
@@ -11,11 +11,11 @@ onEvent('tags.worldgen.biome', event => {
   }
 
   function setStructureBiomes(configs) {
-    configs.forEach(config => {
-      config.structures.forEach(structure => {
+    configs.forEach((config) => {
+      config.structures.forEach((structure) => {
         try {
           event.removeAll(structure);
-          config.biomes.forEach(biome => {
+          config.biomes.forEach((biome) => {
             event.add(structure, biome);
           });
         } catch (error) {
@@ -33,7 +33,7 @@ onEvent('tags.worldgen.biome', event => {
         'bettermineshafts:has_structure/has_mineshaft_spruce',
         'dungeons_arise:has_structure/small_blimp_biomes',
         'dungeons_arise:has_structure/mining_system_biomes',
-        'dungeons_arise:has_structure/heavenly_rider_biomes',
+        'dungeons_arise:has_structure/heavenly_rider_biomes'
       ],
       biomes: [
         'hem:hayfever_fields',
@@ -43,8 +43,8 @@ onEvent('tags.worldgen.biome', event => {
         'hem:lush_forest',
         'hem:redwood_woodlands',
         'hem:extreme_mountains',
-        'hem:cliffs',
-      ],
+        'hem:cliffs'
+      ]
     },
     {
       structures: [
@@ -55,15 +55,15 @@ onEvent('tags.worldgen.biome', event => {
         'dungeons_arise:has_structure/abandoned_temple_biomes',
         'dungeons_arise:has_structure/merchant_campsite_biomes',
         'dungeons_arise:has_structure/lighthouse_biomes',
-        'dungeons_arise:has_structure/wishing_well_biomes',
+        'dungeons_arise:has_structure/wishing_well_biomes'
       ],
       biomes: [
         'hem:hayfever_fields',
         'hem:blueleaf_plains',
         'hem:extreme_mountains',
-        'hem:cliffs',
-      ],
-    },
+        'hem:cliffs'
+      ]
+    }
   ]);
 
   removeStructures([
@@ -145,6 +145,6 @@ onEvent('tags.worldgen.biome', event => {
     'dungeons_arise:has_structure/thornborn_towers_biomes',
     'dungeons_arise:has_structure/infested_temple_biomes',
     'dungeons_arise:has_structure/monastery_biomes',
-    'dungeons_arise:has_structure/aviary_biomes',
+    'dungeons_arise:has_structure/aviary_biomes'
   ]);
 });

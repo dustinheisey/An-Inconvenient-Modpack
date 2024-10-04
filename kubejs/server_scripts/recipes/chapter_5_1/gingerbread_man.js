@@ -1,227 +1,227 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   event.custom({
     type: 'botania:runic_altar',
-    output: {item: 'botania:rune_mana'},
+    output: { item: 'botania:rune_mana' },
     mana: 6250,
     ingredients: [
-      {item: 'botania:manasteel_ingot'},
-      {item: 'botania:manasteel_ingot'},
-      {item: 'botania:manasteel_ingot'},
-      {item: 'botania:manasteel_ingot'},
-      {item: 'botania:manasteel_ingot'},
-      {item: 'naturesaura:sky_ingot'},
-    ],
+      { item: 'botania:manasteel_ingot' },
+      { item: 'botania:manasteel_ingot' },
+      { item: 'botania:manasteel_ingot' },
+      { item: 'botania:manasteel_ingot' },
+      { item: 'botania:manasteel_ingot' },
+      { item: 'naturesaura:sky_ingot' }
+    ]
   });
 
   event.custom({
     type: 'botania:petal_apothecary',
-    output: {item: 'botania:pure_daisy'},
+    output: { item: 'botania:pure_daisy' },
     ingredients: [
-      {item: 'naturesaura:token_joy'},
-      {item: 'naturesaura:token_fear'},
-      {item: 'naturesaura:token_anger'},
-      {item: 'naturesaura:token_sorrow'},
-      {item: 'botania:white_petal'},
-      {item: 'botania:white_petal'},
-      {item: 'botania:white_petal'},
-      {item: 'botania:white_petal'},
-      {item: 'farmersdelight:squid_ink_pasta'},
-      {item: 'farmersdelight:roast_chicken_block'},
-      {item: 'farmersdelight:stuffed_pumpkin_block'},
-      {item: 'farmersdelight:ratatouille'},
-      {item: 'farmersdelight:grilled_salmon'},
-    ],
+      { item: 'naturesaura:token_joy' },
+      { item: 'naturesaura:token_fear' },
+      { item: 'naturesaura:token_anger' },
+      { item: 'naturesaura:token_sorrow' },
+      { item: 'botania:white_petal' },
+      { item: 'botania:white_petal' },
+      { item: 'botania:white_petal' },
+      { item: 'botania:white_petal' },
+      { item: 'farmersdelight:squid_ink_pasta' },
+      { item: 'farmersdelight:roast_chicken_block' },
+      { item: 'farmersdelight:stuffed_pumpkin_block' },
+      { item: 'farmersdelight:ratatouille' },
+      { item: 'farmersdelight:grilled_salmon' }
+    ]
   });
 
   event.custom({
     type: 'botania:petal_apothecary',
-    output: {item: 'botania:fertilizer'},
+    output: { item: 'botania:fertilizer' },
     ingredients: [
-      {item: 'minecraft:bone_meal'},
-      {tag: 'forge:dyes'},
-      {tag: 'forge:dyes'},
-      {tag: 'forge:dyes'},
-      {tag: 'forge:dyes'},
-    ],
+      { item: 'minecraft:bone_meal' },
+      { tag: 'forge:dyes' },
+      { tag: 'forge:dyes' },
+      { tag: 'forge:dyes' },
+      { tag: 'forge:dyes' }
+    ]
   });
 
   event.custom({
     type: 'bloodmagic:altar',
     input: {
-      item: 'botania:diluted_pool',
+      item: 'botania:diluted_pool'
     },
     output: {
-      item: 'botania:mana_pool',
+      item: 'botania:mana_pool'
     },
     upgradeLevel: 3,
     altarSyphon: 20000,
     consumptionRate: 200,
-    drainRate: 200,
+    drainRate: 200
   });
 
   event.shaped('botania:diluted_pool', ['a a', 'aaa'], {
-    a: 'botania:livingrock_slab',
+    a: 'botania:livingrock_slab'
   });
 
   event.shaped('botania:mana_spreader', ['aaa', 'bc ', 'aaa'], {
     a: 'botania:livingwood',
     b: 'minecraft:gold_ingot',
-    c: '#botania:petals',
+    c: '#botania:petals'
   });
 
-  colors.forEach(color => {
+  colors.forEach((color) => {
     event.custom({
       type: 'create:milling',
-      ingredients: [{item: `botania:${color}_double_flower`}],
-      results: [{item: `botania:${color}_petal`, count: 4}],
-      processingTime: 50,
+      ingredients: [{ item: `botania:${color}_double_flower` }],
+      results: [{ item: `botania:${color}_petal`, count: 4 }],
+      processingTime: 50
     });
     event.custom({
       type: 'create:milling',
 
-      ingredients: [{item: `botania:${color}_mystical_flower`}],
-      results: [{item: `botania:${color}_petal`, count: 2}],
-      processingTime: 50,
+      ingredients: [{ item: `botania:${color}_mystical_flower` }],
+      results: [{ item: `botania:${color}_petal`, count: 2 }],
+      processingTime: 50
     });
   });
 
   event.custom({
     type: 'create:mixing',
-    results: [{item: 'botania:fertilizer'}],
+    results: [{ item: 'botania:fertilizer' }],
     ingredients: [
-      {item: 'create:refined_radiance'},
-      {item: 'tconstruct:pig_iron_ingot'},
-      {item: 'hem:copparite'},
-      {count: 4, item: 'rankine:bone_char'},
+      { item: 'create:refined_radiance' },
+      { item: 'tconstruct:pig_iron_ingot' },
+      { item: 'hem:copparite' },
+      { count: 4, item: 'rankine:bone_char' }
     ],
-    heatRequirement: 'superheated',
+    heatRequirement: 'superheated'
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:runic_altar'},
+    result: { item: 'botania:runic_altar' },
     pattern: ['aaa', 'aba'],
     key: {
       a: 'botania:livingrock',
-      b: 'botania:manasteel_ingot',
-    },
+      b: 'botania:manasteel_ingot'
+    }
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_forest'},
+    result: { item: 'botania:apothecary_forest' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'botania:metamorphic_forest_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_plains'},
+    result: { item: 'botania:apothecary_plains' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'botania:metamorphic_plains_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_mountain'},
+    result: { item: 'botania:apothecary_mountain' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'botania:metamorphic_mountain_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_fungal'},
+    result: { item: 'botania:apothecary_fungal' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'botania:metamorphic_fungal_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_swamp'},
+    result: { item: 'botania:apothecary_swamp' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'botania:metamorphic_swamp_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_desert'},
+    result: { item: 'botania:apothecary_desert' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'botania:metamorphic_desert_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_taiga'},
+    result: { item: 'botania:apothecary_taiga' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'botania:metamorphic_taiga_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_mesa'},
+    result: { item: 'botania:apothecary_mesa' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'botania:metamorphic_mesa_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_mossy'},
+    result: { item: 'botania:apothecary_mossy' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'minecraft:mossy_cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:apothecary_default'},
+    result: { item: 'botania:apothecary_default' },
     pattern: ['aba', ' c ', 'aaa'],
     key: {
       a: 'minecraft:cobblestone',
       b: '#botania:petals',
-      c: 'create:refined_radiance_casing',
-    },
+      c: 'create:refined_radiance_casing'
+    }
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:mana_spreader'},
+    result: { item: 'botania:mana_spreader' },
     pattern: ['aaaaa', 'bccc ', 'bd   ', 'bccc ', 'aaaaa'],
     key: {
       a: 'botania:livingwood',
       b: 'rankine:rose_gold_ingot',
       c: 'create:refined_radiance',
-      d: '#botania:petals',
-    },
+      d: '#botania:petals'
+    }
   });
   setMilestoneRecipes({
     id: 'gingerbread_man',
     recipe: () => {
-      event.remove({output: 'create_confectionery:gingerbread_man'});
+      event.remove({ output: 'create_confectionery:gingerbread_man' });
       event.recipes
         .createSequencedAssembly(
           ['create_confectionery:gingerbread_man'],
@@ -234,20 +234,20 @@ onEvent('recipes', event => {
             ),
             event.recipes.createDeploying('create_confectionery:gingerdough', [
               'create_confectionery:gingerdough',
-              'kubejs:cookie_cutter',
+              'kubejs:cookie_cutter'
             ]),
             event.recipes.createDeploying('create_confectionery:gingerdough', [
               'create_confectionery:gingerdough',
-              'create_confectionery:black_chocolate_candy',
+              'create_confectionery:black_chocolate_candy'
             ]),
             event.recipes.createDeploying('create_confectionery:gingerdough', [
               'create_confectionery:gingerdough',
-              'create_confectionery:marshmallow',
+              'create_confectionery:marshmallow'
             ]),
             event.recipes.createDeploying('create_confectionery:gingerdough', [
               'create_confectionery:gingerdough',
-              'create_confectionery:black_chocolate_glazed_berries',
-            ]),
+              'create_confectionery:black_chocolate_glazed_berries'
+            ])
           ]
         )
         .transitionalItem('create_confectionery:gingerdough')
@@ -261,14 +261,14 @@ onEvent('recipes', event => {
             type: 'vintageimprovements:curving',
             ingredients: [
               {
-                item: 'kubejs:round_manasteel_sheet',
-              },
+                item: 'kubejs:round_manasteel_sheet'
+              }
             ],
             results: [
               {
-                item: 'kubejs:cookie_cutter',
-              },
-            ],
+                item: 'kubejs:cookie_cutter'
+              }
+            ]
           });
         },
         children: [
@@ -279,14 +279,14 @@ onEvent('recipes', event => {
                 type: 'vintageimprovements:curving',
                 ingredients: [
                   {
-                    item: 'kubejs:curved_manasteel_sheet',
-                  },
+                    item: 'kubejs:curved_manasteel_sheet'
+                  }
                 ],
                 results: [
                   {
-                    item: 'kubejs:round_manasteel_sheet',
-                  },
-                ],
+                    item: 'kubejs:round_manasteel_sheet'
+                  }
+                ]
               });
             },
             children: [
@@ -297,19 +297,19 @@ onEvent('recipes', event => {
                     'kubejs:manasteel_sheet',
                     'botania:manasteel_block'
                   );
-                },
-              },
-            ],
-          },
-        ],
+                }
+              }
+            ]
+          }
+        ]
       },
       {
         id: 'ginger_dough',
         recipe: () => {
-          event.remove({output: 'create_confectionery:gingerdough'});
+          event.remove({ output: 'create_confectionery:gingerdough' });
           event.recipes.create.mixing('create_confectionery:gingerdough', [
             'kubejs:dry_ingredients',
-            Fluid.of('kubejs:wet_ingredients', 1000),
+            Fluid.of('kubejs:wet_ingredients', 1000)
           ]);
         },
         children: [
@@ -322,7 +322,7 @@ onEvent('recipes', event => {
                 'kubejs:ginger_powder',
                 'kubejs:cinnamon_powder',
                 'kubejs:nutmeg_powder',
-                'salt:salt',
+                'salt:salt'
               ]);
             },
             children: [
@@ -337,14 +337,14 @@ onEvent('recipes', event => {
                     'rankine:oat_grain',
                     'rankine:millet_grain',
                     'rankine:barley_grain',
-                    'kubejs:soy_flour',
+                    'kubejs:soy_flour'
                   ]);
                 },
                 children: [
                   {
                     id: 'barley_grain',
                     recipe: () => {
-                      event.remove({output: 'rankine:barley_grain'});
+                      event.remove({ output: 'rankine:barley_grain' });
                       event.recipes.create.crushing(
                         ['rankine:barley_grain'],
                         'kubejs:barley_meal'
@@ -375,29 +375,29 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'botania:mana_infusion',
                                     input: {
-                                      item: 'minecraft:wheat_seeds',
+                                      item: 'minecraft:wheat_seeds'
                                     },
                                     output: {
-                                      item: 'rankine:barley_seeds',
+                                      item: 'rankine:barley_seeds'
                                     },
                                     mana: 5000,
                                     catalyst: {
                                       type: 'block',
-                                      block: 'botania:alchemy_catalyst',
-                                    },
+                                      block: 'botania:alchemy_catalyst'
+                                    }
                                   });
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'millet_grain',
                     recipe: () => {
-                      event.remove({output: 'rankine:millet_grain'});
+                      event.remove({ output: 'rankine:millet_grain' });
                       event.recipes.create.crushing(
                         ['rankine:millet_grain'],
                         'kubejs:millet_meal'
@@ -428,29 +428,29 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'botania:mana_infusion',
                                     input: {
-                                      item: 'rankine:barley_seeds',
+                                      item: 'rankine:barley_seeds'
                                     },
                                     output: {
-                                      item: 'rankine:millet_seeds',
+                                      item: 'rankine:millet_seeds'
                                     },
                                     mana: 5000,
                                     catalyst: {
                                       type: 'block',
-                                      block: 'botania:alchemy_catalyst',
-                                    },
+                                      block: 'botania:alchemy_catalyst'
+                                    }
                                   });
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'oat_grain',
                     recipe: () => {
-                      event.remove({output: 'rankine:oat_grain'});
+                      event.remove({ output: 'rankine:oat_grain' });
                       event.recipes.create.crushing(
                         ['rankine:oat_grain'],
                         'kubejs:oat_meal'
@@ -481,29 +481,29 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'botania:mana_infusion',
                                     input: {
-                                      item: 'rankine:millet_seeds',
+                                      item: 'rankine:millet_seeds'
                                     },
                                     output: {
-                                      item: 'rankine:oat_seeds',
+                                      item: 'rankine:oat_seeds'
                                     },
                                     mana: 5000,
                                     catalyst: {
                                       type: 'block',
-                                      block: 'botania:alchemy_catalyst',
-                                    },
+                                      block: 'botania:alchemy_catalyst'
+                                    }
                                   });
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'rice_grain',
                     recipe: () => {
-                      event.remove({output: 'rankine:rice_grain'});
+                      event.remove({ output: 'rankine:rice_grain' });
                       event.recipes.create.crushing(
                         ['rankine:rice_grain'],
                         'kubejs:rice_meal'
@@ -534,29 +534,29 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'botania:mana_infusion',
                                     input: {
-                                      item: 'rankine:oat_seeds',
+                                      item: 'rankine:oat_seeds'
                                     },
                                     output: {
-                                      item: 'rankine:rice_seeds',
+                                      item: 'rankine:rice_seeds'
                                     },
                                     mana: 5000,
                                     catalyst: {
                                       type: 'block',
-                                      block: 'botania:alchemy_catalyst',
-                                    },
+                                      block: 'botania:alchemy_catalyst'
+                                    }
                                   });
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'rye_grain',
                     recipe: () => {
-                      event.remove({output: 'rankine:rye_grain'});
+                      event.remove({ output: 'rankine:rye_grain' });
                       event.recipes.create.crushing(
                         ['rankine:rye_grain'],
                         'kubejs:rye_meal'
@@ -587,29 +587,29 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'botania:mana_infusion',
                                     input: {
-                                      item: 'rankine:rice_seeds',
+                                      item: 'rankine:rice_seeds'
                                     },
                                     output: {
-                                      item: 'rankine:rye_seeds',
+                                      item: 'rankine:rye_seeds'
                                     },
                                     mana: 5000,
                                     catalyst: {
                                       type: 'block',
-                                      block: 'botania:alchemy_catalyst',
-                                    },
+                                      block: 'botania:alchemy_catalyst'
+                                    }
                                   });
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'sorghum_grain',
                     recipe: () => {
-                      event.remove({output: 'rankine:sorghum_grain'});
+                      event.remove({ output: 'rankine:sorghum_grain' });
                       event.recipes.create.crushing(
                         ['rankine:sorghum_grain'],
                         'kubejs:sorghum_meal'
@@ -640,29 +640,29 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'botania:mana_infusion',
                                     input: {
-                                      item: 'rankine:rye_seeds',
+                                      item: 'rankine:rye_seeds'
                                     },
                                     output: {
-                                      item: 'rankine:sorghum_seeds',
+                                      item: 'rankine:sorghum_seeds'
                                     },
                                     mana: 5000,
                                     catalyst: {
                                       type: 'block',
-                                      block: 'botania:alchemy_catalyst',
-                                    },
+                                      block: 'botania:alchemy_catalyst'
+                                    }
                                   });
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'wheat_grain',
                     recipe: () => {
-                      event.remove({output: 'rankine:wheat_grain'});
+                      event.remove({ output: 'rankine:wheat_grain' });
                       event.recipes.create.crushing(
                         ['rankine:wheat_grain'],
                         'kubejs:wheat_meal'
@@ -693,24 +693,24 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'botania:mana_infusion',
                                     input: {
-                                      item: 'rankine:soybeans',
+                                      item: 'rankine:soybeans'
                                     },
                                     output: {
-                                      item: 'minecraft:wheat_seeds',
+                                      item: 'minecraft:wheat_seeds'
                                     },
                                     mana: 5000,
                                     catalyst: {
                                       type: 'block',
-                                      block: 'botania:alchemy_catalyst',
-                                    },
+                                      block: 'botania:alchemy_catalyst'
+                                    }
                                   });
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'soy_flour',
@@ -745,26 +745,26 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'botania:mana_infusion',
                                     input: {
-                                      item: 'rankine:sorghum_seeds',
+                                      item: 'rankine:sorghum_seeds'
                                     },
                                     output: {
-                                      item: 'rankine:soybeans',
+                                      item: 'rankine:soybeans'
                                     },
                                     mana: 5000,
                                     catalyst: {
                                       type: 'block',
-                                      block: 'botania:alchemy_catalyst',
-                                    },
+                                      block: 'botania:alchemy_catalyst'
+                                    }
                                   });
-                                },
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 id: 'ginger_powder',
@@ -781,20 +781,20 @@ onEvent('recipes', event => {
                       event.custom({
                         type: 'botania:mana_infusion',
                         input: {
-                          item: 'occultism:datura_seeds',
+                          item: 'occultism:datura_seeds'
                         },
                         output: {
-                          item: 'croptopia:ginger_seed',
+                          item: 'croptopia:ginger_seed'
                         },
                         mana: 5000,
                         catalyst: {
                           type: 'block',
-                          block: 'botania:alchemy_catalyst',
-                        },
+                          block: 'botania:alchemy_catalyst'
+                        }
                       });
-                    },
-                  },
-                ],
+                    }
+                  }
+                ]
               },
               {
                 id: 'cinnamon_powder',
@@ -808,24 +808,24 @@ onEvent('recipes', event => {
                   {
                     id: 'cinnamon_sapling',
                     recipe: () => {
-                      event.remove({output: 'rankine:cinnamon_sapling'});
+                      event.remove({ output: 'rankine:cinnamon_sapling' });
                       event.custom({
                         type: 'botania:mana_infusion',
                         input: {
-                          item: 'blue_skies:maple_sapling',
+                          item: 'blue_skies:maple_sapling'
                         },
                         output: {
-                          item: 'rankine:cinnamon_sapling',
+                          item: 'rankine:cinnamon_sapling'
                         },
                         mana: 5000,
                         catalyst: {
                           type: 'block',
-                          block: 'botania:alchemy_catalyst',
-                        },
+                          block: 'botania:alchemy_catalyst'
+                        }
                       });
-                    },
-                  },
-                ],
+                    }
+                  }
+                ]
               },
               {
                 id: 'nutmeg_powder',
@@ -839,26 +839,26 @@ onEvent('recipes', event => {
                   {
                     id: 'nutmeg_sapling',
                     recipe: () => {
-                      event.remove({output: 'croptopia:nutmeg_sapling'});
+                      event.remove({ output: 'croptopia:nutmeg_sapling' });
                       event.custom({
                         type: 'botania:mana_infusion',
                         input: {
-                          item: 'blue_skies:cherry_sapling',
+                          item: 'blue_skies:cherry_sapling'
                         },
                         output: {
-                          item: 'croptopia:nutmeg_sapling',
+                          item: 'croptopia:nutmeg_sapling'
                         },
                         mana: 5000,
                         catalyst: {
                           type: 'block',
-                          block: 'botania:alchemy_catalyst',
-                        },
+                          block: 'botania:alchemy_catalyst'
+                        }
                       });
-                    },
-                  },
-                ],
-              },
-            ],
+                    }
+                  }
+                ]
+              }
+            ]
           },
           {
             id: 'wet_ingredients',
@@ -869,7 +869,7 @@ onEvent('recipes', event => {
                   'kubejs:lard_whip',
                   'kubejs:brown_sugar',
                   Fluid.of('create:honey', 1000),
-                  'kubejs:egg_whip',
+                  'kubejs:egg_whip'
                 ]
               );
             },
@@ -879,21 +879,21 @@ onEvent('recipes', event => {
                 id: 'lard_whip',
                 recipe: () => {
                   event.recipes.create.mixing('kubejs:lard_whip', [
-                    '2x kubejs:lard',
+                    '2x kubejs:lard'
                   ]);
                 },
                 children: [
                   {
                     id: 'lard',
                     recipe: () => {
-                      event.remove({output: 'kubejs:lard'});
+                      event.remove({ output: 'kubejs:lard' });
                       event.custom({
                         type: 'rankine:evaporation',
                         processTime: 12000,
                         input: {
-                          fluid: 'kubejs:lard',
+                          fluid: 'kubejs:lard'
                         },
-                        outputs: [{item: 'kubejs:lard', weight: 100}],
+                        outputs: [{ item: 'kubejs:lard', weight: 100 }]
                       });
                     },
                     children: [
@@ -903,7 +903,7 @@ onEvent('recipes', event => {
                           event.recipes.create
                             .mixing(Fluid.of('kubejs:lard', 100), [
                               Fluid.of('minecraft:water', 1000),
-                              '3x kubejs:pork_fat',
+                              '3x kubejs:pork_fat'
                             ])
                             .heated();
                         },
@@ -912,7 +912,7 @@ onEvent('recipes', event => {
                             id: 'butcher_knife',
                             recipe: () => {
                               event.remove({
-                                output: 'kubejs:butcher_knife',
+                                output: 'kubejs:butcher_knife'
                               });
                               event.recipes.createMechanicalCrafting(
                                 'kubejs:butcher_knife',
@@ -920,7 +920,7 @@ onEvent('recipes', event => {
                                 {
                                   a: 'botania:manasteel_ingot',
                                   b: '#forge:rods/wooden',
-                                  c: 'botania:manasteel_nugget',
+                                  c: 'botania:manasteel_nugget'
                                 }
                               );
                             },
@@ -931,8 +931,8 @@ onEvent('recipes', event => {
                                   event.remove({
                                     output: [
                                       'botania:manasteel_ingot',
-                                      'botania:manasteel_block',
-                                    ],
+                                      'botania:manasteel_block'
+                                    ]
                                   });
                                   event.recipes.botania.mana_infusion(
                                     'botania:manasteel_ingot',
@@ -945,15 +945,15 @@ onEvent('recipes', event => {
                                     'tconstruct:pig_iron_block',
                                     18000
                                   );
-                                },
-                              },
-                            ],
+                                }
+                              }
+                            ]
                           },
                           {
                             id: 'skinning_knife',
                             recipe: () => {
                               event.remove({
-                                output: 'kubejs:skinning_knife',
+                                output: 'kubejs:skinning_knife'
                               });
                               event.recipes.createMechanicalCrafting(
                                 'kubejs:skinning_knife',
@@ -961,53 +961,53 @@ onEvent('recipes', event => {
                                 {
                                   a: 'botania:manasteel_ingot',
                                   b: '#forge:rods/wooden',
-                                  c: 'botania:manasteel_nugget',
+                                  c: 'botania:manasteel_nugget'
                                 }
                               );
-                            },
+                            }
                           },
                           {
                             id: 'bone_saw',
                             recipe: () => {
-                              event.remove({output: 'kubejs:bone_saw'});
+                              event.remove({ output: 'kubejs:bone_saw' });
                               event.recipes.createMechanicalCrafting(
                                 'kubejs:bone_saw',
                                 ['acb', 'ccb'],
                                 {
                                   a: 'botania:manasteel_ingot',
                                   b: '#forge:rods/wooden',
-                                  c: 'botania:manasteel_nugget',
+                                  c: 'botania:manasteel_nugget'
                                 }
                               );
-                            },
+                            }
                           },
                           {
                             id: 'gut_knife',
                             recipe: () => {
-                              event.remove({output: 'kubejs:gut_knife'});
+                              event.remove({ output: 'kubejs:gut_knife' });
                               event.recipes.createMechanicalCrafting(
                                 'kubejs:gut_knife',
                                 ['a  ', ' c ', ' b '],
                                 {
                                   a: 'botania:manasteel_ingot',
                                   b: '#forge:rods/wooden',
-                                  c: 'botania:manasteel_nugget',
+                                  c: 'botania:manasteel_nugget'
                                 }
                               );
-                            },
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 id: 'brown_sugar',
                 recipe: () => {
                   event.recipes.create.filling('kubejs:brown_sugar', [
                     'minecraft:sugar',
-                    Fluid.of('kubejs:molasses', 1000),
+                    Fluid.of('kubejs:molasses', 1000)
                   ]);
                 },
                 children: [
@@ -1016,7 +1016,7 @@ onEvent('recipes', event => {
                     recipe: () => {
                       event.recipes.create
                         .mixing(Fluid.of('kubejs:molasses', 100), [
-                          Fluid.of('kubejs:sugar_cane_juice', 1000),
+                          Fluid.of('kubejs:sugar_cane_juice', 1000)
                         ])
                         .heated();
                     },
@@ -1028,22 +1028,22 @@ onEvent('recipes', event => {
                             Fluid.of('kubejs:sugar_cane_juice', 250),
                             'minecraft:sugar_cane'
                           );
-                        },
-                      },
-                    ],
-                  },
-                ],
+                        }
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 id: 'beehive',
                 recipe: () => {
-                  event.remove({output: 'minecraft:beehive'});
+                  event.remove({ output: 'minecraft:beehive' });
                   event.recipes.createMechanicalCrafting(
                     'minecraft:beehive',
                     ['a', 'b', 'b', 'b'],
                     {
                       a: 'kubejs:beehive_cover',
-                      b: 'kubejs:brood_box',
+                      b: 'kubejs:brood_box'
                     }
                   );
                 },
@@ -1057,7 +1057,7 @@ onEvent('recipes', event => {
                         {
                           a: 'kubejs:shadow_steel_casing_knob',
                           b: 'kubejs:shadow_steel_casing_strip',
-                          c: 'kubejs:curved_manasteel_sheet',
+                          c: 'kubejs:curved_manasteel_sheet'
                         }
                       );
                     },
@@ -1094,13 +1094,13 @@ onEvent('recipes', event => {
                                     )
                                     .processingTime(50); // like a normal recipe function, is used as a sequence step in this array. Input and output have the transitional item
                                 },
-                                children: [],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                children: []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'brood_box',
@@ -1129,7 +1129,7 @@ onEvent('recipes', event => {
                             event.recipes.createDeploying(
                               'kubejs:empty_brood_box',
                               ['kubejs:empty_brood_box', 'kubejs:empty_frame']
-                            ),
+                            )
                           ]
                         )
                         .transitionalItem('kubejs:empty_brood_box')
@@ -1143,11 +1143,11 @@ onEvent('recipes', event => {
                             'kubejs:empty_brood_box',
                             [' a ', 'a a', ' a '],
                             {
-                              a: 'kubejs:shadow_steel_casing_panel',
+                              a: 'kubejs:shadow_steel_casing_panel'
                             }
                           );
                         },
-                        children: [],
+                        children: []
                       },
                       {
                         id: 'empty_frame',
@@ -1156,31 +1156,31 @@ onEvent('recipes', event => {
                             'kubejs:empty_frame',
                             [' a ', 'a a', ' a '],
                             {
-                              a: 'kubejs:shadow_steel_casing_strip',
+                              a: 'kubejs:shadow_steel_casing_strip'
                             }
                           );
                         },
-                        children: [],
-                      },
-                    ],
-                  },
-                ],
+                        children: []
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 id: 'bee',
                 recipe: () => {
-                  event.remove({output: 'naturesaura:animal_spawner'});
+                  event.remove({ output: 'naturesaura:animal_spawner' });
                   event.custom({
                     type: 'naturesaura:animal_spawner',
                     ingredients: [
-                      {item: 'naturesaura:birth_spirit'},
-                      {item: 'naturesaura:token_joy'},
-                      {item: 'kubejs:elements_rune'},
-                      {item: 'bloodmagic:demonslate'},
+                      { item: 'naturesaura:birth_spirit' },
+                      { item: 'naturesaura:token_joy' },
+                      { item: 'kubejs:elements_rune' },
+                      { item: 'bloodmagic:demonslate' }
                     ],
                     entity: 'minecraft:bee',
                     aura: 50000,
-                    time: 1000,
+                    time: 1000
                   });
                   // sheep - elements rune, token of sonder, demonic slate, nutrients
                   // bee - elements rune, token of ??, demonic slate, black lotus,
@@ -1202,7 +1202,7 @@ onEvent('recipes', event => {
                           'naturesaura:token_joy',
                           'naturesaura:token_fear',
                           'naturesaura:token_anger',
-                          'naturesaura:token_sorrow',
+                          'naturesaura:token_sorrow'
                         ],
                         10000
                       );
@@ -1216,31 +1216,31 @@ onEvent('recipes', event => {
                             ['abbba', 'b   b', 'b   b', 'b   b', 'abbba'],
                             {
                               a: 'kubejs:shadow_steel_casing_knob',
-                              b: 'kubejs:shadow_steel_casing_strip',
+                              b: 'kubejs:shadow_steel_casing_strip'
                             }
                           );
-                        },
-                      },
-                    ],
+                        }
+                      }
+                    ]
                   },
                   {
                     id: 'demon_slate',
                     recipe: () => {
-                      event.remove({output: 'bloodmagic:demonslate'});
+                      event.remove({ output: 'bloodmagic:demonslate' });
                       event.custom({
                         type: 'bloodmagic:altar',
                         input: {
-                          item: 'create:shadow_steel',
+                          item: 'create:shadow_steel'
                         },
                         output: {
-                          item: 'bloodmagic:demonslate',
+                          item: 'bloodmagic:demonslate'
                         },
                         upgradeLevel: 3,
                         altarSyphon: 12500,
                         consumptionRate: 100,
-                        drainRate: 100,
+                        drainRate: 100
                       });
-                    },
+                    }
                   },
                   {
                     id: 'elements_rune',
@@ -1252,18 +1252,18 @@ onEvent('recipes', event => {
                           'botania:rune_water',
                           'botania:rune_fire',
                           'botania:rune_air',
-                          'create:shadow_steel',
+                          'create:shadow_steel'
                         ],
                         9000
                       );
-                    },
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

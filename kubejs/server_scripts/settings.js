@@ -4,6 +4,6 @@ settings.logSkippedRecipes = false;
 settings.logErroringRecipes = true;
 settings.logOverrides = false;
 
-onEvent('lootjs', event => {
+onEvent('lootjs', (event) => {
   event.enableLogging();
 });

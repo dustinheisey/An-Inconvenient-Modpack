@@ -1,15 +1,15 @@
-onEvent('jei.hide.items', event => {
+onEvent('jei.hide.items', (event) => {
   list({
     artifacts: [
       'artifacts:mimic_spawn_egg',
       'artifacts:everlasting_beef',
-      'artifacts:eternal_steak',
+      'artifacts:eternal_steak'
     ],
     malum: [
       'malum:brilliant_stone',
       'malum:brilliant_deepslate',
       'malum:deepslate_soulstone_ore',
-      'malum:soulstone_ore',
+      'malum:soulstone_ore'
     ],
     twilightforest: ['twilightforest:uncrafting_table'],
     charcoal_pit: [
@@ -140,7 +140,7 @@ onEvent('jei.hide.items', event => {
       'charcoal_pit:serinan_stew',
       'charcoal_pit:cedar_sapling',
       'charcoal_pit:steel_boots',
-      'charcoal_pit:engine',
+      'charcoal_pit:engine'
     ],
     rankine: [
       'rankine:bronze_hoe',
@@ -489,7 +489,7 @@ onEvent('jei.hide.items', event => {
       'rankine:mossy_kimberlite_bricks_wall',
       'rankine:sodium_chloride',
       'rankine:sodium_chloride_block',
-      'rankine:episyenite_bricks_wall',
+      'rankine:episyenite_bricks_wall'
     ],
     paraglider: ['paraglider:horned_statue'],
     minecraft: [
@@ -567,7 +567,7 @@ onEvent('jei.hide.items', event => {
       'minecraft:gray_candle',
       'minecraft:redstone_ore',
       'minecraft:flowering_azalea_leaves',
-      'minecraft:purple_candle',
+      'minecraft:purple_candle'
     ],
     immersiveengineering: ['immersiveengineering:armor_faraday_legs'],
     tconstruct: [
@@ -720,7 +720,7 @@ onEvent('jei.hide.items', event => {
       'tconstruct:blood_slime_grass_seeds',
       'tconstruct:bloodshroom_fence_gate',
       'tconstruct:ender_vanilla_slime_grass',
-      'tconstruct:earth_sky_slime_grass',
+      'tconstruct:earth_sky_slime_grass'
     ],
     blue_skies: [
       'blue_skies:turquoise_stone_hoe',
@@ -784,7 +784,7 @@ onEvent('jei.hide.items', event => {
       'blue_skies:multi_portal_item',
       'blue_skies:lunar_bookshelf',
       'blue_skies:bluebright_bookshelf',
-      'blue_skies:alchemy_table',
+      'blue_skies:alchemy_table'
     ],
     occultism: [
       'occultism:jei_dummy/require_item_use',
@@ -817,7 +817,7 @@ onEvent('jei.hide.items', event => {
       'occultism:debug_wand',
       'occultism:raw_silver',
       'occultism:jei_dummy/require_sacrifice',
-      'occultism:gold_dust',
+      'occultism:gold_dust'
     ],
     ecofriendly: [
       'ecofriendly:billberry_ground_0',
@@ -850,7 +850,7 @@ onEvent('jei.hide.items', event => {
       'ecofriendly:vertical_beet_ym_3',
       'ecofriendly:tossed_tire_ym',
       'ecofriendly:pollutioner_item',
-      'ecofriendly:bilberry_ground_1',
+      'ecofriendly:bilberry_ground_1'
     ],
     productivebees: [
       'productivebees:advanced_river_beehive',
@@ -929,7 +929,7 @@ onEvent('jei.hide.items', event => {
       'productivebees:advanced_grimwood_beehive',
       'productivebees:advanced_wisteria_beehive',
       'productivebees:stone_nest',
-      'productivebees:expansion_box_maple',
+      'productivebees:expansion_box_maple'
     ],
     hem: [
       'hem:blueleafwheatsmall',
@@ -954,7 +954,7 @@ onEvent('jei.hide.items', event => {
       'hem:blueleafpinetreesmalltrunk',
       'hem:blueleafpinetreemiddle',
       'hem:raw_rose_copper',
-      'hem:blueleafwheatplant',
+      'hem:blueleafwheatplant'
     ],
     architects_palette: [
       'architects_palette:charcoal_block',
@@ -992,7 +992,7 @@ onEvent('jei.hide.items', event => {
       'architects_palette:redstone_ore_brick_vertical_slab',
       'architects_palette:osseous_brick_vertical_slab',
       'architects_palette:myonite_brick_vertical_slab',
-      'architects_palette:plating_vertical_slab',
+      'architects_palette:plating_vertical_slab'
     ],
     createaddition: [
       'createaddition:copper_wire',
@@ -1009,7 +1009,7 @@ onEvent('jei.hide.items', event => {
       'createaddition:biomass',
       'createaddition:copper_rod',
       'createaddition:seed_oil_bucket',
-      'createaddition:gold_wire',
+      'createaddition:gold_wire'
     ],
     immersiveengineering: [
       'immersiveengineering:fake_icon_ravenholm',
@@ -1074,11 +1074,11 @@ onEvent('jei.hide.items', event => {
       'immersiveengineering:nugget_silver',
       'immersiveengineering:nugget_aluminum',
       'immersiveengineering:armor_steel_head',
-      'immersiveengineering:axe_steel',
+      'immersiveengineering:axe_steel'
     ],
     naturesaura: [
       'naturesaura:warped_aura_mushroom',
-      'naturesaura:crimson_aura_mushroom',
+      'naturesaura:crimson_aura_mushroom'
     ],
     twilightforest: [
       'twilightforest:shader_bag_common',
@@ -1101,13 +1101,13 @@ onEvent('jei.hide.items', event => {
       'twilightforest:shader_bag_twilight',
       'twilightforest:cinder_furnace',
       'twilightforest:cinder_wood',
-      'twilightforest:shader_bag_rare',
+      'twilightforest:shader_bag_rare'
     ],
     undergarden: [
       'undergarden:masticated_chestplate',
       'undergarden:depthrock_diamond_ore',
       'undergarden:depthrock_gold_ore',
-      'undergarden:shiverstone_diamond_ore',
+      'undergarden:shiverstone_diamond_ore'
     ],
     structure_gel: [
       'structure_gel:yellow_gel',
@@ -1118,7 +1118,7 @@ onEvent('jei.hide.items', event => {
       'structure_gel:building_tool',
       'structure_gel:cyan_gel',
       'structure_gel:red_gel',
-      'structure_gel:dynamic_spawner',
+      'structure_gel:dynamic_spawner'
     ],
     create: [
       'create:wheat_flour',
@@ -1136,7 +1136,7 @@ onEvent('jei.hide.items', event => {
       'create:incomplete_track',
       'create:unprocessed_obsidian_sheet',
       'create:raw_zinc_block',
-      'create:crushed_quicksilver_ore',
+      'create:crushed_quicksilver_ore'
     ],
     botania: [
       'botania:living_root',
@@ -1144,7 +1144,7 @@ onEvent('jei.hide.items', event => {
       'botania:pebble',
       'botania:blacker_lotus',
       'botania:black_lotus',
-      'botania:root',
+      'botania:root'
     ],
     pneumaticcraft: ['pneumaticcraft:wheat_flour'],
     hexerei: [
@@ -1155,7 +1155,7 @@ onEvent('jei.hide.items', event => {
       'hexerei:mindful_trance_blend',
       'hexerei:yellow_dock_bush',
       'hexerei:quicksilver_bucket',
-      'hexerei:belladonna_flower',
+      'hexerei:belladonna_flower'
     ],
     farmersrespite: ['farmersrespite:wild_tea_bush'],
     farmersdelight: [
@@ -1177,24 +1177,24 @@ onEvent('jei.hide.items', event => {
       'farmersdelight:brown_mushroom_colony',
       'farmersdelight:glow_berry_custard',
       'farmersdelight:rice_bag',
-      'farmersdelight:rice',
+      'farmersdelight:rice'
     ],
     citadel: [
       'citadel:effect_item',
       'citadel:debug',
       'citadel:citadel_book',
-      'citadel:fancy_item',
+      'citadel:fancy_item'
     ],
     bloodmagic: [
       'bloodmagic:nether_soil',
       'bloodmagic:dungeon_tester',
-      'bloodmagic:spectral',
+      'bloodmagic:spectral'
     ],
     paragon_textiles: ['paragon_textiles:flaxseed_oil_bottle'],
     extendedcrafting: ['extendedcrafting:recipe_maker'],
     gravestone: ['gravestone:obituary'],
-    mekanism: ['mekanism:block_salt'],
-  }).forEach(item => {
+    mekanism: ['mekanism:block_salt']
+  }).forEach((item) => {
     event.hide(item);
   });
 
@@ -1204,8 +1204,8 @@ onEvent('jei.hide.items', event => {
     'blue_skies:aquatic_arc',
     'minecraft:structure_block',
     'blue_skies:runic_arc',
-    'modonomicon:modonomicon',
-  ].forEach(item => {
+    'modonomicon:modonomicon'
+  ].forEach((item) => {
     event.hide(item.of(item).ignoreNBT());
   });
 });

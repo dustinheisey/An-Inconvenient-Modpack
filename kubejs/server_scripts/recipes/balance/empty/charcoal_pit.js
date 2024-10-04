@@ -1,3 +1,3 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({});
 });

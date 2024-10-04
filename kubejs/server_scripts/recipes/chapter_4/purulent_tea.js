@@ -1,4 +1,4 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setMilestoneRecipes({
     id: 'purulent_tea',
     recipe: () => {
@@ -6,25 +6,25 @@ onEvent('recipes', event => {
         type: 'farmersrespite:brewing',
         ingredients: [
           {
-            item: 'bloodmagic:weakbloodshard',
+            item: 'bloodmagic:weakbloodshard'
           },
           {
-            item: 'minecraft:fermented_spider_eye',
-          },
+            item: 'minecraft:fermented_spider_eye'
+          }
         ],
         result: {
-          item: 'farmersrespite:purulent_tea',
+          item: 'farmersrespite:purulent_tea'
         },
         experience: 0.35,
         brewingtime: 2400,
-        needwater: true,
+        needwater: true
       });
     },
     children: [
       {
         id: 'blaze_cake',
         recipe: () => {
-          event.remove({output: 'create:blaze_cake'});
+          event.remove({ output: 'create:blaze_cake' });
           event.recipes
             .createSequencedAssembly(
               ['create:blaze_cake'],
@@ -32,24 +32,24 @@ onEvent('recipes', event => {
               [
                 event.recipes.createFilling('create:blaze_cake_base', [
                   'create:blaze_cake_base',
-                  Fluid.of('createaddition:seed_oil', 500000),
+                  Fluid.of('createaddition:seed_oil', 500000)
                 ]),
                 event.recipes.createFilling('create:blaze_cake_base', [
                   'create:blaze_cake_base',
-                  Fluid.of('kubejs:liquid_tau', 100000),
+                  Fluid.of('kubejs:liquid_tau', 100000)
                 ]),
                 event.recipes.createFilling('create:blaze_cake_base', [
                   'create:blaze_cake_base',
-                  Fluid.of('tconstruct:magma', 500000),
+                  Fluid.of('tconstruct:magma', 500000)
                 ]),
                 event.recipes.createFilling('create:blaze_cake_base', [
                   'create:blaze_cake_base',
-                  Fluid.of('bloodmagic:life_essence_fluid', 1000000),
+                  Fluid.of('bloodmagic:life_essence_fluid', 1000000)
                 ]),
                 event.recipes.createFilling('create:blaze_cake', [
                   'create:blaze_cake_base',
-                  Fluid.of('minecraft:lava', 500000),
-                ]),
+                  Fluid.of('minecraft:lava', 500000)
+                ])
               ]
             )
             .transitionalItem('create:blaze_cake_base')
@@ -59,7 +59,7 @@ onEvent('recipes', event => {
           {
             id: 'blaze_cake_base',
             recipe: () => {
-              event.remove({output: 'create:blaze_cake_base'});
+              event.remove({ output: 'create:blaze_cake_base' });
               event.recipes
                 .createCompacting(
                   'create:blaze_cake_base',
@@ -76,7 +76,7 @@ onEvent('recipes', event => {
                     [
                       Fluid.of('charcoal_pit:sunflower_oil', 1000),
                       'kubejs:egg_whip',
-                      'kubejs:cake_mix',
+                      'kubejs:cake_mix'
                     ]
                   );
                 },
@@ -88,7 +88,7 @@ onEvent('recipes', event => {
                         Fluid.of('charcoal_pit:sunflower_oil', 250),
                         'minecraft:sunflower'
                       );
-                    },
+                    }
                   },
                   {
                     id: 'vinegar',
@@ -96,18 +96,18 @@ onEvent('recipes', event => {
                       event.custom({
                         type: 'charcoal_pit:barrel',
                         item_in: {
-                          tag: 'forge:mushrooms',
+                          tag: 'forge:mushrooms'
                         },
                         fluid_in: {
                           fluid: 'kubejs:wine',
-                          amount: 1000,
+                          amount: 1000
                         },
                         fluid_out: {
                           fluid: 'charcoal_pit:vinegar_still',
-                          amount: 250,
+                          amount: 250
                         },
                         flags: 1,
-                        time: 6000,
+                        time: 6000
                       });
                     },
                     children: [
@@ -117,21 +117,21 @@ onEvent('recipes', event => {
                           event.custom({
                             type: 'charcoal_pit:barrel',
                             item_in: {
-                              tag: 'forge:mushrooms',
+                              tag: 'forge:mushrooms'
                             },
                             fluid_in: {
                               fluid: 'kubejs:berry_juice',
-                              amount: 16000,
+                              amount: 16000
                             },
                             fluid_out: {
                               fluid: 'kubejs:wine',
-                              amount: 4000,
+                              amount: 4000
                             },
                             item_out: {
-                              item: 'kubejs:tartaric_acid',
+                              item: 'kubejs:tartaric_acid'
                             },
                             flags: 1,
-                            time: 6000,
+                            time: 6000
                           });
                         },
                         children: [
@@ -142,19 +142,19 @@ onEvent('recipes', event => {
                                 Fluid.of('kubejs:berry_juice', 50),
                                 '#forge:berries'
                               );
-                            },
-                          },
-                        ],
-                      },
-                    ],
+                            }
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'egg_whip',
                     recipe: () => {
                       event.recipes.create.mixing('kubejs:egg_whip', [
-                        '2x minecraft:egg',
+                        '2x minecraft:egg'
                       ]);
-                    },
+                    }
                   },
                   {
                     id: 'cake_mix',
@@ -162,14 +162,14 @@ onEvent('recipes', event => {
                       event.recipes.create.mixing('kubejs:cake_mix', [
                         '3x minecraft:sugar',
                         'kubejs:baking_powder',
-                        '2x create:cinder_flour',
+                        '2x create:cinder_flour'
                       ]);
                     },
                     children: [
                       {
                         id: 'sugar',
                         recipe: () => {
-                          event.remove({output: 'minecraft:sugar'});
+                          event.remove({ output: 'minecraft:sugar' });
                           event.recipes.create.crushing(
                             ['minecraft:sugar'],
                             'minecraft:sugar_cane'
@@ -181,31 +181,31 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'create:mechanical_crafting',
-                                result: {item: '2x create:crushing_wheel'},
+                                result: { item: '2x create:crushing_wheel' },
                                 pattern: [
                                   ' aaa ',
                                   'aabaa',
                                   'abcba',
                                   'aabaa',
-                                  ' aaa ',
+                                  ' aaa '
                                 ],
                                 key: {
                                   a: 'create:andesite_alloy',
                                   b: 'rankine:promethium_ingot',
-                                  c: 'rankine:rose_marble',
-                                },
+                                  c: 'rankine:rose_marble'
+                                }
                               });
                             },
-                            children: [],
-                          },
-                        ],
+                            children: []
+                          }
+                        ]
                       },
                       {
                         id: 'baking_powder',
                         recipe: () => {
                           event.recipes.create.mixing('kubejs:baking_powder', [
                             'kubejs:baking_soda',
-                            'kubejs:cream_of_tartar',
+                            'kubejs:cream_of_tartar'
                           ]);
                         },
                         children: [
@@ -215,7 +215,7 @@ onEvent('recipes', event => {
                               event.recipes.create
                                 .mixing('kubejs:baking_soda', [
                                   'kubejs:soda_ash',
-                                  'rankine:carbon_dioxide_gas_bottle',
+                                  'rankine:carbon_dioxide_gas_bottle'
                                 ])
                                 .heated();
                             },
@@ -227,11 +227,11 @@ onEvent('recipes', event => {
                                     type: 'rankine:evaporation',
                                     processTime: 12000,
                                     input: {
-                                      fluid: 'kubejs:carbonate_slurry',
+                                      fluid: 'kubejs:carbonate_slurry'
                                     },
                                     outputs: [
-                                      {item: 'kubejs:soda_ash', weight: 100},
-                                    ],
+                                      { item: 'kubejs:soda_ash', weight: 100 }
+                                    ]
                                   });
                                 },
                                 children: [
@@ -246,7 +246,7 @@ onEvent('recipes', event => {
                                           ),
                                           [
                                             Fluid.of('minecraft:water', 1000),
-                                            'kubejs:trona_dust',
+                                            'kubejs:trona_dust'
                                           ]
                                         )
                                         .heated();
@@ -274,7 +274,7 @@ onEvent('recipes', event => {
                                                 id: 'trona',
                                                 recipe: () => {
                                                   event.remove({
-                                                    id: 'rankine:evaporation/water_river_evaporation',
+                                                    id: 'rankine:evaporation/water_river_evaporation'
                                                   });
                                                   event.custom({
                                                     type: 'rankine:evaporation',
@@ -282,30 +282,30 @@ onEvent('recipes', event => {
                                                     biomes: {
                                                       biomeTags: [
                                                         'minecraft:is_river',
-                                                        'forge:is_swamp',
-                                                      ],
+                                                        'forge:is_swamp'
+                                                      ]
                                                     },
                                                     input: {
-                                                      fluid: 'minecraft:water',
+                                                      fluid: 'minecraft:water'
                                                     },
                                                     outputs: [
                                                       {
                                                         item: 'minecraft:sand',
-                                                        weight: 30,
+                                                        weight: 30
                                                       },
                                                       {
                                                         item: 'rankine:silt',
-                                                        weight: 50,
+                                                        weight: 50
                                                       },
                                                       {
                                                         item: 'minecraft:clay_ball',
-                                                        weight: 20,
+                                                        weight: 20
                                                       },
                                                       {
                                                         item: 'rankine:trona',
-                                                        weight: 4,
-                                                      },
-                                                    ],
+                                                        weight: 4
+                                                      }
+                                                    ]
                                                   });
                                                 },
                                                 children: [
@@ -315,19 +315,19 @@ onEvent('recipes', event => {
                                                       event.custom({
                                                         type: 'extendedcrafting:shaped_table',
                                                         result: {
-                                                          item: 'rankine:evaporation_tower',
+                                                          item: 'rankine:evaporation_tower'
                                                         },
                                                         pattern: [
                                                           'aaa',
                                                           'bcb',
-                                                          'ada',
+                                                          'ada'
                                                         ],
                                                         key: {
                                                           a: 'kubejs:cinder_ingot',
                                                           b: 'minecraft:magma_block',
                                                           c: 'immersivepetroleum:crudeoil_bucket',
-                                                          d: 'minecraft:hopper',
-                                                        },
+                                                          d: 'minecraft:hopper'
+                                                        }
                                                       });
                                                     },
                                                     children: [
@@ -342,31 +342,31 @@ onEvent('recipes', event => {
                                                                 type: 'create:pressing',
                                                                 results: [
                                                                   {
-                                                                    item: 'chemlib:copper_plate',
-                                                                  },
+                                                                    item: 'chemlib:copper_plate'
+                                                                  }
                                                                 ],
                                                                 ingredients: [
                                                                   {
-                                                                    item: 'minecraft:copper_ingot',
-                                                                  },
-                                                                ],
+                                                                    item: 'minecraft:copper_ingot'
+                                                                  }
+                                                                ]
                                                               });
                                                             },
-                                                            children: [],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
+                                                            children: []
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
                               },
                               {
                                 id: 'carbon_dioxide',
@@ -379,7 +379,7 @@ onEvent('recipes', event => {
                                           'charcoal_pit:vinegar_still',
                                           1000
                                         ),
-                                        'kubejs:calcium_carbonate_dust',
+                                        'kubejs:calcium_carbonate_dust'
                                       ]
                                     )
                                     .heated();
@@ -398,21 +398,21 @@ onEvent('recipes', event => {
                                         id: 'gray_marble',
                                         recipe: () => {
                                           event.remove({
-                                            id: 'rankine:stonegen_metamorphic/gray_marble_generator',
+                                            id: 'rankine:stonegen_metamorphic/gray_marble_generator'
                                           });
                                           event.recipes.create
                                             .mixing('rankine:gray_marble', [
                                               'rankine:white_marble',
-                                              'rankine:black_marble',
+                                              'rankine:black_marble'
                                             ])
                                             .heated();
-                                        },
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
                           },
                           {
                             id: 'cream_of_tartar',
@@ -421,17 +421,17 @@ onEvent('recipes', event => {
                                 ['kubejs:cream_of_tartar'],
                                 'kubejs:tartaric_acid'
                               );
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'cinder_flour',
                         recipe: () => {
-                          event.remove({output: 'create:cinder_flour'});
+                          event.remove({ output: 'create:cinder_flour' });
                           event.recipes.create
                             .mixing('create:cinder_flour', [
-                              'kubejs:cinder_dust',
+                              'kubejs:cinder_dust'
                             ])
                             .heated();
                         },
@@ -441,14 +441,14 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.recipes.create
                                 .mixing('kubejs:cinder_dust', [
-                                  'create:powdered_obsidian',
+                                  'create:powdered_obsidian'
                                 ])
                                 .heated();
-                            },
-                          },
-                        ],
-                      },
-                    ],
+                            }
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'mixer',
@@ -463,18 +463,18 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'create:pressing',
-                                results: [{item: 'chemlib:iron_plate'}],
-                                ingredients: [{item: 'minecraft:iron_ingot'}],
+                                results: [{ item: 'chemlib:iron_plate' }],
+                                ingredients: [{ item: 'minecraft:iron_ingot' }]
                               });
-                            },
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             id: 'liquid_tau',
@@ -482,14 +482,14 @@ onEvent('recipes', event => {
               event.custom({
                 type: 'tconstruct:melting',
                 ingredient: {
-                  item: 'bloodmagic:strong_tau',
+                  item: 'bloodmagic:strong_tau'
                 },
                 result: {
                   fluid: 'kubejs:liquid_tau',
-                  amount: 1000,
+                  amount: 1000
                 },
                 temperature: 1200,
-                time: 30,
+                time: 30
               });
             },
             children: [
@@ -506,18 +506,18 @@ onEvent('recipes', event => {
                           event.custom({
                             type: 'bloodmagic:altar',
                             input: {
-                              item: 'create:sturdy_sheet',
+                              item: 'create:sturdy_sheet'
                             },
                             upgradeLevel: 2,
                             altarSyphon: 40000,
                             consumptionRate: 40,
                             drainRate: 40,
                             output: {
-                              item: 'bloodmagic:activationcrystalweak',
-                            },
+                              item: 'bloodmagic:activationcrystalweak'
+                            }
                           });
                         },
-                        children: [{id: 'sturdy_sheet', recipe: () => {}}],
+                        children: [{ id: 'sturdy_sheet', recipe: () => {} }]
                       },
                       {
                         id: 'ritual_diviner',
@@ -525,28 +525,28 @@ onEvent('recipes', event => {
                           event.custom({
                             type: 'occultism:ritual',
                             ritual_type: 'occultism:craft',
-                            activation_item: {item: 'create:sturdy_sheet'},
+                            activation_item: { item: 'create:sturdy_sheet' },
                             pentacle_id: 'occultism:craft_marid',
                             ritual_dummy: {
-                              item: 'occultism:ritual_dummy/custom_ritual',
+                              item: 'occultism:ritual_dummy/custom_ritual'
                             },
                             ingredients: [
                               {
-                                item: 'bloodmagic:airscribetool',
+                                item: 'bloodmagic:airscribetool'
                               },
                               {
-                                item: 'bloodmagic:waterscribetool',
+                                item: 'bloodmagic:waterscribetool'
                               },
                               {
-                                item: 'bloodmagic:firescribetool',
+                                item: 'bloodmagic:firescribetool'
                               },
                               {
-                                item: 'bloodmagic:earthscribetool',
-                              },
+                                item: 'bloodmagic:earthscribetool'
+                              }
                             ],
                             result: {
-                              item: 'bloodmagic:ritualdiviner',
-                            },
+                              item: 'bloodmagic:ritualdiviner'
+                            }
                           });
                         },
                         children: [
@@ -556,15 +556,15 @@ onEvent('recipes', event => {
                               event.custom({
                                 type: 'bloodmagic:altar',
                                 input: {
-                                  item: 'bloodmagic:bow_velocity_anointment',
+                                  item: 'bloodmagic:bow_velocity_anointment'
                                 },
                                 upgradeLevel: 2,
                                 altarSyphon: 2000,
                                 consumptionRate: 2,
                                 drainRate: 2,
                                 output: {
-                                  item: 'bloodmagic:airscribetool',
-                                },
+                                  item: 'bloodmagic:airscribetool'
+                                }
                               });
                             },
                             children: [
@@ -579,12 +579,12 @@ onEvent('recipes', event => {
                                       b: '#minecraft:planks',
                                       c: 'blue_skies:horizonite_ingot',
                                       d: 'extendedcrafting:black_iron_ingot',
-                                      e: 'bloodmagic:blankslate',
+                                      e: 'bloodmagic:blankslate'
                                     }
                                   );
-                                },
-                              },
-                            ],
+                                }
+                              }
+                            ]
                           },
                           {
                             id: 'earth_scribe_tool',
@@ -592,18 +592,18 @@ onEvent('recipes', event => {
                               event.custom({
                                 type: 'bloodmagic:altar',
                                 input: {
-                                  item: 'bloodmagic:fortune_anointment',
+                                  item: 'bloodmagic:fortune_anointment'
                                 },
                                 upgradeLevel: 2,
                                 altarSyphon: 2000,
                                 consumptionRate: 2,
                                 drainRate: 2,
                                 output: {
-                                  item: 'bloodmagic:earthscribetool',
-                                },
+                                  item: 'bloodmagic:earthscribetool'
+                                }
                               });
                             },
-                            children: [],
+                            children: []
                           },
                           {
                             id: 'fire_scribe_tool',
@@ -611,18 +611,18 @@ onEvent('recipes', event => {
                               event.custom({
                                 type: 'bloodmagic:altar',
                                 input: {
-                                  item: 'bloodmagic:smelting_anointment',
+                                  item: 'bloodmagic:smelting_anointment'
                                 },
                                 upgradeLevel: 2,
                                 altarSyphon: 2000,
                                 consumptionRate: 2,
                                 drainRate: 2,
                                 output: {
-                                  item: 'bloodmagic:firescribetool',
-                                },
+                                  item: 'bloodmagic:firescribetool'
+                                }
                               });
                             },
-                            children: [],
+                            children: []
                           },
                           {
                             id: 'water_scribe_tool',
@@ -630,45 +630,47 @@ onEvent('recipes', event => {
                               event.custom({
                                 type: 'bloodmagic:altar',
                                 input: {
-                                  item: 'bloodmagic:holy_water_anointment',
+                                  item: 'bloodmagic:holy_water_anointment'
                                 },
                                 upgradeLevel: 2,
                                 altarSyphon: 2000,
                                 consumptionRate: 2,
                                 drainRate: 2,
                                 output: {
-                                  item: 'bloodmagic:waterscribetool',
-                                },
+                                  item: 'bloodmagic:waterscribetool'
+                                }
                               });
                             },
-                            children: [],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                            children: []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             id: 'lava',
             recipe: () => {
               event.remove({
-                id: 'rankine:treetapping/crimson_stem_treetapping',
+                id: 'rankine:treetapping/crimson_stem_treetapping'
               });
-              event.remove({id: 'rankine:treetapping/warped_stem_treetapping'});
+              event.remove({
+                id: 'rankine:treetapping/warped_stem_treetapping'
+              });
               event.custom({
                 type: 'tconstruct:melting',
                 ingredient: {
-                  item: 'kubejs:mixed_pebble',
+                  item: 'kubejs:mixed_pebble'
                 },
                 result: {
                   fluid: 'minecraft:lava',
-                  amount: 50,
+                  amount: 50
                 },
                 temperature: 600,
-                time: 30,
+                time: 30
               });
             },
             children: [
@@ -679,7 +681,7 @@ onEvent('recipes', event => {
                     'kubejs:turquoise_pebble',
                     'undergarden:depthrock_pebble',
                     'kubejs:lunar_pebble',
-                    'kubejs:deadrock_pebble',
+                    'kubejs:deadrock_pebble'
                   ]);
                 },
                 children: [
@@ -690,21 +692,21 @@ onEvent('recipes', event => {
                         [Item.of('kubejs:turquoise_pebble').withChance(0.5)],
                         'blue_skies:turquoise_stone'
                       );
-                    },
+                    }
                   },
                   {
                     id: 'depthrock_pebble',
                     recipe: () => {
-                      event.remove({output: 'undergarden:depthrock_pebble'});
+                      event.remove({ output: 'undergarden:depthrock_pebble' });
                       event.recipes.create.crushing(
                         [
                           Item.of('undergarden:depthrock_pebble').withChance(
                             0.5
-                          ),
+                          )
                         ],
                         'undergarden:depthrock'
                       );
-                    },
+                    }
                   },
                   {
                     id: 'lunar_pebble',
@@ -713,7 +715,7 @@ onEvent('recipes', event => {
                         [Item.of('kubejs:lunar_pebble').withChance(0.5)],
                         'blue_skies:lunar_stone'
                       );
-                    },
+                    }
                   },
                   {
                     id: 'deadrock_pebble',
@@ -722,27 +724,27 @@ onEvent('recipes', event => {
                         [Item.of('kubejs:deadrock_pebble').withChance(0.5)],
                         'twilightforest:deadrock'
                       );
-                    },
-                  },
-                ],
-              },
-            ],
+                    }
+                  }
+                ]
+              }
+            ]
           },
           {
             id: 'magma_cream',
             recipe: () => {
               event.remove({
                 output: `minecraft:magma_cream`,
-                type: 'minecraft:crafting_shapeless',
+                type: 'minecraft:crafting_shapeless'
               });
               event.recipes.create.haunting(
                 'minecraft:magma_cream',
                 'malum:unholy_sapball'
               );
-            },
-          },
-        ],
-      },
-    ],
+            }
+          }
+        ]
+      }
+    ]
   });
 });

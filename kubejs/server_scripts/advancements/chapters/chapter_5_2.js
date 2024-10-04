@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'chapter_5_2', {
     icon: 'immersiveengineering:wirecoil_steel',
     item: 'create:refined_radiance',
@@ -16,9 +16,9 @@ onEvent('server.datapack.high_priority', event => {
             id: 'blueleaf_lost_story',
             frame: 'challenge',
             description: 'Remake the lost story from Blueleaf',
-            item: 'kubejs:blueleaf_lost_story',
-          },
-        ],
+            item: 'kubejs:blueleaf_lost_story'
+          }
+        ]
       },
       {
         item: 'immersiveengineering:blast_furnace',
@@ -38,7 +38,7 @@ onEvent('server.datapack.high_priority', event => {
                   {
                     item: 'pneumaticcraft:air_compressor',
                     title: 'Air Compressor',
-                    description: 'Craft an air compressor',
+                    description: 'Craft an air compressor'
                   },
                   {
                     item: 'pneumaticcraft:pressure_chamber_wall',
@@ -65,17 +65,17 @@ onEvent('server.datapack.high_priority', event => {
                                     item: 'immersiveengineering:rs_engineering',
                                     title: 'Redstone Engineering',
                                     description:
-                                      'Craft a redstone engineering block',
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                                      'Craft a redstone engineering block'
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 item: 'immersiveengineering:plate_steel',
@@ -90,9 +90,9 @@ onEvent('server.datapack.high_priority', event => {
                       {
                         item: 'immersiveengineering:revolver',
                         title: 'Revolver',
-                        description: 'Craft a revolver',
-                      },
-                    ],
+                        description: 'Craft a revolver'
+                      }
+                    ]
                   },
                   {
                     item: 'immersiveengineering:component_steel',
@@ -148,7 +148,7 @@ onEvent('server.datapack.high_priority', event => {
                                                     item: 'pneumaticcraft:assembly_controller',
                                                     title: 'Assemby Automation',
                                                     description:
-                                                      'Craft an assembly controller',
+                                                      'Craft an assembly controller'
                                                   },
                                                   {
                                                     item: 'immersiveengineering:component_electronic_adv',
@@ -162,7 +162,7 @@ onEvent('server.datapack.high_priority', event => {
                                                         item: 'adpother:aerometer',
                                                         title: 'Aerometer',
                                                         description:
-                                                          'Create an aerometer',
+                                                          'Create an aerometer'
                                                       },
                                                       {
                                                         item: 'pneumaticcraft:amadron_tablet',
@@ -193,15 +193,15 @@ onEvent('server.datapack.high_priority', event => {
                                                                   'challenge',
                                                                 id: 'eye_black',
                                                                 parent:
-                                                                  'prophecy',
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
+                                                                  'prophecy'
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
                                               },
                                               {
                                                 parent: 'plastic',
@@ -209,11 +209,11 @@ onEvent('server.datapack.high_priority', event => {
                                                 title:
                                                   'Thermopneumatic Processing Plant',
                                                 description:
-                                                  'Craft an thermopneumatic processing plant',
-                                              },
-                                            ],
-                                          },
-                                        ],
+                                                  'Craft an thermopneumatic processing plant'
+                                              }
+                                            ]
+                                          }
+                                        ]
                                       },
                                       {
                                         item: 'immersiveengineering:acetaldehyde_bucket',
@@ -231,27 +231,27 @@ onEvent('server.datapack.high_priority', event => {
                                                 item: 'immersiveengineering:plate_duroplast',
                                                 title: 'Duroplast Sheet',
                                                 description:
-                                                  'Cast the resin into a sheet',
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                                  'Cast the resin into a sheet'
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         item: 'immersiveengineering:coke_oven',
@@ -285,9 +285,9 @@ onEvent('server.datapack.high_priority', event => {
                           {
                             item: 'immersiveengineering:light_engineering',
                             title: 'Light Engineering',
-                            description: 'Craft a light engineering block',
-                          },
-                        ],
+                            description: 'Craft a light engineering block'
+                          }
+                        ]
                       },
                       {
                         item: 'immersiveengineering:electron_tube',
@@ -321,11 +321,11 @@ onEvent('server.datapack.high_priority', event => {
                                             item: 'rankine:alnico_magnet',
                                             title: 'Alnico Magnet',
                                             description:
-                                              'Craft an alnico magnet',
-                                          },
-                                        ],
-                                      },
-                                    ],
+                                              'Craft an alnico magnet'
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   },
                                   {
                                     item: 'rankine:uraninite',
@@ -345,11 +345,11 @@ onEvent('server.datapack.high_priority', event => {
                                             title: 'Ender Ingot',
                                             description:
                                               'Create an ender ingot',
-                                            frame: 'goal',
-                                          },
-                                        ],
-                                      },
-                                    ],
+                                            frame: 'goal'
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   },
                                   {
                                     item: 'rankine:ilmenite',
@@ -365,23 +365,23 @@ onEvent('server.datapack.high_priority', event => {
                                           {
                                             item: 'extendedcrafting:elite_table',
                                             title: 'Elite Table',
-                                            description: 'Craft an elite table',
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                                            description: 'Craft an elite table'
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             item: 'immersiveengineering:coal_coke',
@@ -406,9 +406,9 @@ onEvent('server.datapack.high_priority', event => {
                           {
                             item: 'compactmachines:personal_shrinking_device',
                             title: 'Personal Shrinking Device',
-                            description: 'Craft a personal shrinking device',
-                          },
-                        ],
+                            description: 'Craft a personal shrinking device'
+                          }
+                        ]
                       },
                       {
                         item: 'immersiveengineering:graphite_electrode',
@@ -420,15 +420,15 @@ onEvent('server.datapack.high_priority', event => {
                             item: 'kubejs:catalyst',
                             title: 'Catalyst',
                             description:
-                              'Create a catalyst for your chemical engineering',
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                              'Create a catalyst for your chemical engineering'
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             hide: true,
@@ -439,15 +439,15 @@ onEvent('server.datapack.high_priority', event => {
                 conditions: {
                   items: [
                     {
-                      items: ['croptopia:cheeseburger', 'kubejs:iron_coin'],
-                    },
-                  ],
-                },
-              },
-            },
-          },
-        ],
-      },
-    ],
+                      items: ['croptopia:cheeseburger', 'kubejs:iron_coin']
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    ]
   });
 });

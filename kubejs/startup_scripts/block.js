@@ -1,4 +1,4 @@
-onEvent('block.registry', event => {
+onEvent('block.registry', (event) => {
   event.create('tar_sand').displayName('Tar Sand').material('sand');
   event
     .create('kiln_feed_block')

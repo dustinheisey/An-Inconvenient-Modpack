@@ -1,8 +1,8 @@
 // priority: 301
 
-onEvent('tags.items', event => {
+onEvent('tags.items', (event) => {
   function addItems(tag, items) {
-    items.forEach(item => event.add(tag, item));
+    items.forEach((item) => event.add(tag, item));
   }
 
   // TODO: 7.1
@@ -114,6 +114,6 @@ onEvent('tags.items', event => {
     'justaraftmod:jungle_raft',
     'justaraftmod:acacia_raft',
     'justaraftmod:dark_oak_raft',
-    'justaraftmod:bamboo_raft',
+    'justaraftmod:bamboo_raft'
   ]);
 });

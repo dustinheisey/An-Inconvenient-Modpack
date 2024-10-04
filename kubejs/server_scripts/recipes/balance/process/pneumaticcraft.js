@@ -1,9 +1,9 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
     amadron_trade: () => {},
     explosion_crafting: () => {
-      event.remove({output: 'pneumaticcraft:ingot_iron_compressed'});
-      event.remove({output: 'pneumaticcraft:compressed_iron_block'});
+      event.remove({ output: 'pneumaticcraft:ingot_iron_compressed' });
+      event.remove({ output: 'pneumaticcraft:compressed_iron_block' });
     },
     fluid_mixer: () => {},
     pressure_chamber: () => {
@@ -12,9 +12,9 @@ onEvent('recipes', event => {
           'pneumaticcraft:empty_pcb',
           'pneumaticcraft:pcb_blueprint',
           'pneumaticcraft:etching_acid_bucket',
-          'pneumaticcraft:capacitor',
+          'pneumaticcraft:capacitor'
         ],
-        type: 'pneumaticcraft:pressure_chamber',
+        type: 'pneumaticcraft:pressure_chamber'
       });
     },
     refinery: () => {},
@@ -25,18 +25,18 @@ onEvent('recipes', event => {
         fluid_input: {
           type: 'pneumaticcraft:fluid',
           amount: 100,
-          tag: 'forge:lubricant',
+          tag: 'forge:lubricant'
         },
         item_input: {
-          item: 'rankine:titanium_alloy_block',
+          item: 'rankine:titanium_alloy_block'
         },
         item_output: {
-          item: 'pneumaticcraft:drill_bit_diamond',
+          item: 'pneumaticcraft:drill_bit_diamond'
         },
         pressure: 7.5,
         temperature: {
-          min_temp: 500,
-        },
+          min_temp: 500
+        }
       });
 
       event.custom({
@@ -45,27 +45,27 @@ onEvent('recipes', event => {
         fluid_input: {
           type: 'pneumaticcraft:fluid',
           amount: 100,
-          fluid: 'immersivepetroleum:naphtha',
+          fluid: 'immersivepetroleum:naphtha'
         },
         fluid_output: {
           amount: 80,
-          fluid: 'pneumaticcraft:lpg',
+          fluid: 'pneumaticcraft:lpg'
         },
         pressure: 2.0,
         temperature: {
-          min_temp: 573,
-        },
+          min_temp: 573
+        }
       });
-    },
+    }
   });
 });
 
-onEvent('server.datapack.high_priority', event => {
-  ['oil_2', 'oil_3', 'oil_4'].forEach(id => {
+onEvent('server.datapack.high_priority', (event) => {
+  ['oil_2', 'oil_3', 'oil_4'].forEach((id) => {
     event.addJson(`pneumaticcraft:recipes/refinery/${id}.json`, {});
   });
 
-  ['lpg', 'kerosene'].forEach(id => {
+  ['lpg', 'kerosene'].forEach((id) => {
     event.addJson(`pneumaticcraft:recipes/thermo_plant/${id}.json`, {});
   });
 
@@ -81,19 +81,19 @@ onEvent('server.datapack.high_priority', event => {
     'lubricant_to_emerald',
     'oil_to_emerald',
     'emerald_to_oil',
-    'pcb_blueprint',
-  ].forEach(id =>
+    'pcb_blueprint'
+  ].forEach((id) =>
     event.addJson(`pneumaticcraft:recipes/amadron/${id}.json`, {
       type: 'forge:conditional',
       recipes: [
         {
           conditions: [
             {
-              type: 'forge:false',
-            },
-          ],
-        },
-      ],
+              type: 'forge:false'
+            }
+          ]
+        }
+      ]
     })
   );
 });

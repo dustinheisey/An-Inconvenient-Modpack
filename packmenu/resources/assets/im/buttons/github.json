@@ -1,0 +1,15 @@
+{
+  "x": 0,
+  "y": 24,
+  "width": 116,
+  "height": 20,
+  "langKey": "packmenu.im.github",
+  "action": "OPEN_URL",
+  "data": "https://github.com/dustinheisey/An-Inconvenient-Modpack/issues",
+  "u": 0,
+  "v": 0,
+  "hoverU": 0,
+  "hoverV": 20,
+  "texWidth": 116,
+  "texHeight": 40
+}

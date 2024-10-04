@@ -12,18 +12,18 @@ const grasses = [
   'rankine:sandy_clay_loam_grass_block',
   'rankine:silty_clay_loam_grass_block',
   'rankine:sandy_clay_grass_block',
-  'rankine:silty_clay_grass_block',
+  'rankine:silty_clay_grass_block'
 ];
 
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setMilestoneRecipes({
     id: 'smeltery',
     children: [
       {
-        id: 'casting_basin',
+        id: 'casting_basin'
       },
       {
-        id: 'casting_table',
+        id: 'casting_table'
       },
       {
         id: 'seared_stones',
@@ -34,21 +34,21 @@ onEvent('recipes', event => {
             'tconstruct:smeltery/casting/seared/cobble/slab',
             'tconstruct:smeltery/casting/seared/cobble/stairs',
             'tconstruct:smeltery/casting/seared/cobble/wall',
-            'tconstruct:smeltery/casting/seared/paver',
-          ].forEach(id => event.remove({id: id}));
+            'tconstruct:smeltery/casting/seared/paver'
+          ].forEach((id) => event.remove({ id: id }));
 
           event.custom({
-            input: {item: 'tconstruct:seared_stone'},
+            input: { item: 'tconstruct:seared_stone' },
             type: 'rankine:crushing',
             guaranteed: [
               {
                 item: 'tconstruct:seared_cobble',
                 tier: 'minecraft:stone',
-                count: 1,
-              },
-            ],
+                count: 1
+              }
+            ]
           });
-        },
+        }
       },
       {
         id: 'seared_glasses',
@@ -56,30 +56,30 @@ onEvent('recipes', event => {
           [
             'tconstruct:smeltery/melting/glass/sand',
             'tconstruct:smeltery/melting/glass/sand_cast',
-            'tconstruct:smeltery/entity_melting/heads/creeper',
-          ].forEach(id => event.remove({id: id}));
-        },
+            'tconstruct:smeltery/entity_melting/heads/creeper'
+          ].forEach((id) => event.remove({ id: id }));
+        }
       },
       {
-        id: 'seared_drain',
+        id: 'seared_drain'
       },
       {
-        id: 'seared_chute',
+        id: 'seared_chute'
       },
       {
-        id: 'seared_fuel_tanks',
+        id: 'seared_fuel_tanks'
       },
       {
-        id: 'seared_ingot_tanks',
+        id: 'seared_ingot_tanks'
       },
       {
-        id: 'seared_lantern',
+        id: 'seared_lantern'
       },
       {
-        id: 'seared_faucet',
+        id: 'seared_faucet'
       },
       {
-        id: 'seared_channel',
+        id: 'seared_channel'
       },
       {
         id: 'smeltery_controller',
@@ -87,28 +87,28 @@ onEvent('recipes', event => {
           {
             id: 'molten_copper',
             recipe: () => {
-              ['tconstruct:smeltery/melting/metal/copper/raw'].forEach(id =>
-                event.remove({id: id})
+              ['tconstruct:smeltery/melting/metal/copper/raw'].forEach((id) =>
+                event.remove({ id: id })
               );
 
               event.custom({
                 type: 'tconstruct:melting',
-                ingredient: {item: 'rankine:malachite'},
-                result: {fluid: 'tconstruct:molten_copper', amount: 90},
+                ingredient: { item: 'rankine:malachite' },
+                result: { fluid: 'tconstruct:molten_copper', amount: 90 },
                 temperature: 500,
-                time: 158,
+                time: 158
               });
             },
-            children: [],
+            children: []
           },
           {
             id: 'seared_melter',
             recipe: () => {
-              ['tconstruct:smeltery/seared/melter'].forEach(id =>
-                event.remove({id: id})
+              ['tconstruct:smeltery/seared/melter'].forEach((id) =>
+                event.remove({ id: id })
               );
               event.shaped('tconstruct:seared_melter', ['a a', 'aaa'], {
-                a: 'tconstruct:seared_bricks',
+                a: 'tconstruct:seared_bricks'
               });
             },
             children: [
@@ -123,17 +123,17 @@ onEvent('recipes', event => {
                     'tconstruct:smeltery/casting/seared/cracked',
                     'tconstruct:smeltery/casting/seared/chiseled',
                     'tconstruct:smeltery/seared/seared_bricks_from_brick',
-                    'tconstruct:smeltery/seared/seared_bricks_crafting',
-                  ].forEach(id => event.remove({id: id}));
+                    'tconstruct:smeltery/seared/seared_bricks_crafting'
+                  ].forEach((id) => event.remove({ id: id }));
 
                   event.shaped('2x tconstruct:seared_bricks', ['ab', 'ba'], {
                     a: 'tconstruct:seared_brick',
-                    b: 'rankine:mortar',
+                    b: 'rankine:mortar'
                   });
 
                   event.shaped('4x tconstruct:seared_bricks', ['ab', 'ba'], {
                     a: 'tconstruct:seared_brick',
-                    b: 'kubejs:grout_ball',
+                    b: 'kubejs:grout_ball'
                   });
                 },
                 children: [
@@ -142,8 +142,8 @@ onEvent('recipes', event => {
                     recipe: () => {
                       [
                         'tconstruct:smeltery/seared/seared_brick_kiln',
-                        'tconstruct:smeltery/seared/seared_brick',
-                      ].forEach(id => event.remove({id: id}));
+                        'tconstruct:smeltery/seared/seared_brick'
+                      ].forEach((id) => event.remove({ id: id }));
                       event.smelting(
                         'tconstruct:seared_brick',
                         'kubejs:dry_unfired_seared_brick'
@@ -154,9 +154,9 @@ onEvent('recipes', event => {
                         id: 'seared_stone_fluid',
                         recipe: () => {
                           ['tconstruct:smeltery/melting/seared/grout'].forEach(
-                            id => event.remove({id: id})
+                            (id) => event.remove({ id: id })
                           );
-                        },
+                        }
                       },
                       {
                         id: 'dry_unfired_seared_brick',
@@ -164,10 +164,10 @@ onEvent('recipes', event => {
                           event.custom({
                             type: 'hexerei:drying_rack',
                             ingredients: [
-                              {item: 'kubejs:unfired_seared_brick'},
+                              { item: 'kubejs:unfired_seared_brick' }
                             ],
-                            output: {item: 'kubejs:dry_unfired_seared_brick'},
-                            dryingTimeInTicks: 3000,
+                            output: { item: 'kubejs:dry_unfired_seared_brick' },
+                            dryingTimeInTicks: 3000
                           });
                         },
                         children: [
@@ -178,7 +178,7 @@ onEvent('recipes', event => {
                                 'kubejs:unfired_seared_brick',
                                 ['aa'],
                                 {
-                                  a: 'kubejs:grout_ball',
+                                  a: 'kubejs:grout_ball'
                                 }
                               );
                             },
@@ -193,27 +193,27 @@ onEvent('recipes', event => {
                                     matScale: 2,
                                     fluidInput: {
                                       fluid: 'minecraft:water',
-                                      amount: 50,
+                                      amount: 50
                                     },
                                     input1: {
                                       item: 'rankine:cement_mix',
                                       required: true,
                                       min: 0.3,
-                                      max: 0.4,
+                                      max: 0.4
                                     },
                                     input2: {
                                       tag: 'forge:sand',
                                       required: true,
                                       min: 0.55,
-                                      max: 0.65,
+                                      max: 0.65
                                     },
                                     input3: {
                                       item: 'occultism:burnt_otherstone',
                                       required: true,
                                       min: 0.1,
-                                      max: 0.2,
+                                      max: 0.2
                                     },
-                                    result: {item: 'kubejs:grout_ball'},
+                                    result: { item: 'kubejs:grout_ball' }
                                   });
                                 },
                                 children: [
@@ -223,14 +223,14 @@ onEvent('recipes', event => {
                                       event.custom({
                                         type: 'hexerei:pestle_and_mortar',
                                         ingredients: [
-                                          {item: 'kubejs:clinker'},
-                                          {item: 'rankine:gypsum'},
+                                          { item: 'kubejs:clinker' },
+                                          { item: 'rankine:gypsum' }
                                         ],
                                         output: {
                                           item: 'rankine:cement_mix',
-                                          count: 1,
+                                          count: 1
                                         },
-                                        grindingTime: 300,
+                                        grindingTime: 300
                                       });
                                     },
                                     children: [
@@ -238,9 +238,9 @@ onEvent('recipes', event => {
                                         id: 'mortar_and_pestle',
                                         recipe: () => {
                                           [
-                                            'hexerei:pestle_and_mortar_from_mixing_cauldron',
-                                          ].forEach(id =>
-                                            event.remove({id: id})
+                                            'hexerei:pestle_and_mortar_from_mixing_cauldron'
+                                          ].forEach((id) =>
+                                            event.remove({ id: id })
                                           );
 
                                           event.shaped(
@@ -249,10 +249,10 @@ onEvent('recipes', event => {
                                             {
                                               a: 'minecraft:iron_ingot',
                                               b: 'hexerei:selenite_shard',
-                                              c: 'rankine:dolostone',
+                                              c: 'rankine:dolostone'
                                             }
                                           );
-                                        },
+                                        }
                                       },
                                       {
                                         id: 'clinker',
@@ -260,11 +260,11 @@ onEvent('recipes', event => {
                                           event.custom({
                                             type: 'rankine:beehive_oven',
                                             input: {
-                                              item: 'kubejs:kiln_feed_block',
+                                              item: 'kubejs:kiln_feed_block'
                                             },
                                             result: 'kubejs:clinker',
                                             minCookTime: 2400,
-                                            maxCookTime: 4800,
+                                            maxCookTime: 4800
                                           });
                                         },
                                         children: [
@@ -277,7 +277,7 @@ onEvent('recipes', event => {
                                                   'kubejs:kiln_feed',
                                                   'kubejs:kiln_feed',
                                                   'kubejs:kiln_feed',
-                                                  'kubejs:kiln_feed',
+                                                  'kubejs:kiln_feed'
                                                 ]
                                               );
                                             },
@@ -289,21 +289,23 @@ onEvent('recipes', event => {
                                                     type: 'hexerei:pestle_and_mortar',
                                                     ingredients: [
                                                       {
-                                                        item: 'rankine:limestone',
+                                                        item: 'rankine:limestone'
                                                       },
-                                                      {tag: 'forge:clay_balls'},
+                                                      {
+                                                        tag: 'forge:clay_balls'
+                                                      }
                                                     ],
                                                     output: {
                                                       item: 'kubejs:kiln_feed',
-                                                      count: 1,
+                                                      count: 1
                                                     },
-                                                    grindingTime: 300,
+                                                    grindingTime: 300
                                                   });
-                                                },
-                                              },
-                                            ],
-                                          },
-                                        ],
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
                                       },
                                       {
                                         id: 'gypsum',
@@ -313,33 +315,33 @@ onEvent('recipes', event => {
                                             'rankine:crushing/gypsic_dripstone_block_crushing',
                                             'rankine:crushing/honeystone_crushing',
                                             'rankine:crushing/nitric_dripstone_block_crushing',
-                                            'rankine:crushing/red_sandstone_crushing',
-                                          ].forEach(id =>
-                                            event.remove({id: id})
+                                            'rankine:crushing/red_sandstone_crushing'
+                                          ].forEach((id) =>
+                                            event.remove({ id: id })
                                           );
 
                                           event.custom({
                                             type: 'hexerei:pestle_and_mortar',
                                             ingredients: [
                                               {
-                                                item: 'rankine:dolostone',
+                                                item: 'rankine:dolostone'
                                               },
                                               {
-                                                item: 'rankine:dolostone',
+                                                item: 'rankine:dolostone'
                                               },
                                               {
-                                                item: 'rankine:dolostone',
+                                                item: 'rankine:dolostone'
                                               },
                                               {
-                                                item: 'rankine:dolostone',
+                                                item: 'rankine:dolostone'
                                               },
-                                              {item: 'rankine:dolostone'},
+                                              { item: 'rankine:dolostone' }
                                             ],
                                             output: {
                                               item: 'rankine:gypsum',
-                                              count: 3,
+                                              count: 3
                                             },
-                                            grindingTime: 300,
+                                            grindingTime: 300
                                           });
                                         },
                                         children: [
@@ -350,11 +352,11 @@ onEvent('recipes', event => {
                                                 type: 'rankine:rock_generator',
                                                 genType: 'sedimentary',
                                                 input1: {
-                                                  item: 'rankine:dolomite_block',
+                                                  item: 'rankine:dolomite_block'
                                                 },
                                                 result: {
-                                                  block: 'rankine:dolostone',
-                                                },
+                                                  block: 'rankine:dolostone'
+                                                }
                                               });
                                             },
                                             children: [
@@ -375,154 +377,154 @@ onEvent('recipes', event => {
                                                         'rankine:crushing/mariposite_crushing',
                                                         'rankine:crushing/rankine_quartz_ore_crushing',
                                                         'rankine:crushing/skarn_crushing',
-                                                        'rankine:crushing/zirconic_dripstone_block_crushing',
-                                                      ].forEach(id =>
-                                                        event.remove({id: id})
+                                                        'rankine:crushing/zirconic_dripstone_block_crushing'
+                                                      ].forEach((id) =>
+                                                        event.remove({ id: id })
                                                       );
 
                                                       event.custom({
                                                         type: 'rankine:crushing',
                                                         input: {
-                                                          item: 'rankine:boracitic_dripstone_block',
+                                                          item: 'rankine:boracitic_dripstone_block'
                                                         },
                                                         guaranteed: [
                                                           {
                                                             item: 'rankine:dolomite',
-                                                            tier: 'minecraft:diamond',
-                                                          },
+                                                            tier: 'minecraft:diamond'
+                                                          }
                                                         ],
                                                         outputs: [
                                                           {
                                                             weight: 60,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:calcite',
                                                             weight: 30,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:dolomite',
                                                             weight: 10,
-                                                            remove: false,
-                                                          },
-                                                        ],
+                                                            remove: false
+                                                          }
+                                                        ]
                                                       });
 
                                                       event.custom({
                                                         type: 'rankine:crushing',
                                                         input: {
-                                                          item: 'minecraft:dripstone_block',
+                                                          item: 'minecraft:dripstone_block'
                                                         },
                                                         guaranteed: [
                                                           {
                                                             item: 'rankine:calcite',
-                                                            tier: 'minecraft:diamond',
-                                                          },
+                                                            tier: 'minecraft:diamond'
+                                                          }
                                                         ],
                                                         outputs: [
                                                           {
                                                             weight: 30,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:calcite',
                                                             weight: 50,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:dolomite',
                                                             weight: 20,
-                                                            remove: false,
-                                                          },
-                                                        ],
+                                                            remove: false
+                                                          }
+                                                        ]
                                                       });
 
                                                       event.custom({
                                                         type: 'rankine:crushing',
                                                         input: {
-                                                          item: 'rankine:halitic_dripstone_block',
+                                                          item: 'rankine:halitic_dripstone_block'
                                                         },
                                                         guaranteed: [
                                                           {
                                                             item: 'salt:raw_rock_salt',
-                                                            tier: 'minecraft:diamond',
-                                                          },
+                                                            tier: 'minecraft:diamond'
+                                                          }
                                                         ],
                                                         outputs: [
                                                           {
                                                             weight: 20,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'salt:raw_rock_salt',
                                                             weight: 30,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:dolomite',
                                                             weight: 50,
-                                                            remove: false,
-                                                          },
-                                                        ],
+                                                            remove: false
+                                                          }
+                                                        ]
                                                       });
 
                                                       event.custom({
                                                         type: 'rankine:crushing',
                                                         input: {
-                                                          item: 'rankine:magnesitic_dripstone_block',
+                                                          item: 'rankine:magnesitic_dripstone_block'
                                                         },
                                                         guaranteed: [
                                                           {
                                                             item: 'rankine:dolomite',
-                                                            tier: 'minecraft:diamond',
-                                                          },
+                                                            tier: 'minecraft:diamond'
+                                                          }
                                                         ],
                                                         outputs: [
                                                           {
                                                             weight: 30,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:calcite',
                                                             weight: 50,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:dolomite',
                                                             weight: 20,
-                                                            remove: false,
-                                                          },
-                                                        ],
+                                                            remove: false
+                                                          }
+                                                        ]
                                                       });
 
                                                       event.custom({
                                                         type: 'rankine:crushing',
                                                         input: {
-                                                          item: 'rankine:zirconic_dripstone_block',
+                                                          item: 'rankine:zirconic_dripstone_block'
                                                         },
                                                         guaranteed: [
                                                           {
                                                             item: 'rankine:dolomite',
-                                                            tier: 'minecraft:diamond',
-                                                          },
+                                                            tier: 'minecraft:diamond'
+                                                          }
                                                         ],
                                                         outputs: [
                                                           {
                                                             weight: 30,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:calcite',
                                                             weight: 50,
-                                                            remove: false,
+                                                            remove: false
                                                           },
                                                           {
                                                             item: 'rankine:dolomite',
                                                             weight: 20,
-                                                            remove: false,
-                                                          },
-                                                        ],
+                                                            remove: false
+                                                          }
+                                                        ]
                                                       });
                                                     },
                                                     children: [
@@ -535,26 +537,26 @@ onEvent('recipes', event => {
                                                               'intrusive_igneous',
                                                             result: {
                                                               block:
-                                                                'minecraft:diorite',
+                                                                'minecraft:diorite'
                                                             },
                                                             input1: {
-                                                              item: 'rankine:cassiterite_block',
+                                                              item: 'rankine:cassiterite_block'
                                                             },
                                                             input2: {
-                                                              item: 'rankine:graphite_block',
-                                                            },
+                                                              item: 'rankine:graphite_block'
+                                                            }
                                                           });
-                                                        },
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   },
                                   {
                                     id: 'burnt_otherstone',
@@ -567,39 +569,39 @@ onEvent('recipes', event => {
                                           {
                                             id: 'datura',
                                             recipe: () => {
-                                              grasses.forEach(id => {
+                                              grasses.forEach((id) => {
                                                 event.custom({
                                                   type: 'rankine:sluicing',
-                                                  input: {item: id},
+                                                  input: { item: id },
                                                   outputs: [
                                                     {
                                                       item: 'minecraft:dirt',
-                                                      weight: 100,
+                                                      weight: 100
                                                     },
                                                     {
                                                       item: 'minecraft:sand',
-                                                      weight: 16.5,
+                                                      weight: 16.5
                                                     },
                                                     {
                                                       item: 'rankine:silt',
-                                                      weight: 1,
+                                                      weight: 1
                                                     },
                                                     {
                                                       item: 'rankine:compost',
-                                                      weight: 25,
+                                                      weight: 25
                                                     },
                                                     {
                                                       item: 'rankine:jute_seeds',
-                                                      weight: 1,
+                                                      weight: 1
                                                     },
                                                     {
                                                       item: 'occultism:datura_seeds',
-                                                      weight: 1,
-                                                    },
+                                                      weight: 1
+                                                    }
                                                   ],
                                                   tool: {
-                                                    item: 'rankine:wooden_gold_pan',
-                                                  },
+                                                    item: 'rankine:wooden_gold_pan'
+                                                  }
                                                 });
                                               });
                                             },
@@ -607,40 +609,40 @@ onEvent('recipes', event => {
                                               {
                                                 id: 'wooden_sifter',
                                                 recipe: () => {},
-                                                children: [],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                                                children: []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             id: 'seared_heater',
             recipe: () => {
-              ['tconstruct:smeltery/seared/heater'].forEach(id =>
-                event.remove({id: id})
+              ['tconstruct:smeltery/seared/heater'].forEach((id) =>
+                event.remove({ id: id })
               );
               event.shaped('tconstruct:seared_heater', ['aaa', 'a a', 'aaa'], {
-                a: 'tconstruct:seared_bricks',
+                a: 'tconstruct:seared_bricks'
               });
-            },
-          },
-        ],
-      },
-    ],
+            }
+          }
+        ]
+      }
+    ]
   });
 });
 

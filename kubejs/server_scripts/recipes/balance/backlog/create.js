@@ -1,12 +1,12 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
     shapeless: () => {
-      ['create:crafting/kinetics/yellow_seat_from_other_seat'].forEach(id =>
-        event.remove({id: id})
+      ['create:crafting/kinetics/yellow_seat_from_other_seat'].forEach((id) =>
+        event.remove({ id: id })
       );
       event.shapeless('create:yellow_seat', [
         '#create:seats',
-        'minecraft:yellow_dye',
+        'minecraft:yellow_dye'
       ]);
     },
     application: () => {},
@@ -15,25 +15,25 @@ onEvent('recipes', event => {
         output: [
           'minecraft:blaze_rod',
           'paragon_textiles:flaxseed_oil_bucket',
-          'createaddition:cake_base',
-        ],
+          'createaddition:cake_base'
+        ]
       });
 
       event.custom({
         type: 'create:compacting',
-        ingredients: [{item: 'minecraft:blaze_powder', count: 3}],
-        results: [{item: 'minecraft:blaze_rod'}],
+        ingredients: [{ item: 'minecraft:blaze_powder', count: 3 }],
+        results: [{ item: 'minecraft:blaze_rod' }]
       });
 
       event.custom({
         type: 'create:compacting',
         ingredients: [
-          {tag: 'forge:eggs'},
-          {item: 'minecraft:sugar', count: 2},
-          {item: 'create:dough'},
-          {fluid: 'minecraft:milk', amount: 1000},
+          { tag: 'forge:eggs' },
+          { item: 'minecraft:sugar', count: 2 },
+          { item: 'create:dough' },
+          { fluid: 'minecraft:milk', amount: 1000 }
         ],
-        results: [{item: 'createaddition:cake_base'}],
+        results: [{ item: 'createaddition:cake_base' }]
       });
     },
     crushing: () => {
@@ -72,9 +72,9 @@ onEvent('recipes', event => {
           '#create:stone_types/tuff',
           '#create:stone_types/crimsite',
           '#create:stone_types/ochrum',
-          '#create:stone_types/veridium',
+          '#create:stone_types/veridium'
         ],
-        type: 'create:crushing',
+        type: 'create:crushing'
       });
       event.remove({
         output: [
@@ -91,419 +91,419 @@ onEvent('recipes', event => {
           'chemlib:copper_dust',
           'chemlib:gold_dust',
           'chemlib:iron_dust',
-          'occultism:iesnium_dust',
-        ],
+          'occultism:iesnium_dust'
+        ]
       });
 
       event.custom({
-        results: [{count: 2, item: 'malum:crushed_soulstone'}],
+        results: [{ count: 2, item: 'malum:crushed_soulstone' }],
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'malum:raw_soulstone'}],
+        ingredients: [{ item: 'malum:raw_soulstone' }]
       });
       event.custom({
-        results: [{count: 2, item: 'malum:crushed_brilliance'}],
+        results: [{ count: 2, item: 'malum:crushed_brilliance' }],
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'malum:cluster_of_brilliance'}],
-      });
-
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'minecraft:ancient_debris'}],
-        results: [
-          {count: 2, item: 'minecraft:netherite_scrap'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:bauxite'}],
-        results: [
-          {count: 2, item: 'chemlib:aluminum_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:pentlandite'}],
-        results: [
-          {count: 2, item: 'chemlib:nickel_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:uraninite'}],
-        results: [
-          {count: 2, item: 'chemlib:uranium_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:galena'}],
-        results: [
-          {count: 2, item: 'chemlib:lead_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:cassiterite'}],
-        results: [
-          {count: 2, item: 'chemlib:tin_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:acanthite'}],
-        results: [
-          {count: 2, item: 'chemlib:silver_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:malachite'}],
-        results: [
-          {count: 2, item: 'chemlib:copper_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'minecraft:raw_gold'}],
-        results: [
-          {count: 2, item: 'chemlib:gold_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:hematite'}],
-        results: [
-          {count: 2, item: 'chemlib:iron_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+        ingredients: [{ item: 'malum:cluster_of_brilliance' }]
       });
 
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:horizonite_ore'}],
+        ingredients: [{ item: 'minecraft:ancient_debris' }],
         results: [
-          {count: 2, item: 'blue_skies:raw_horizonite'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'minecraft:netherite_scrap' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:everdawn_moonstone_ore'}],
+        ingredients: [{ item: 'rankine:bauxite' }],
         results: [
-          {count: 2, item: 'blue_skies:moonstone_shard'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'chemlib:aluminum_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:everdawn_charoite_ore'}],
+        ingredients: [{ item: 'rankine:pentlandite' }],
         results: [
-          {count: 2, item: 'blue_skies:raw_charoite'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'chemlib:nickel_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:everdawn_aquite_ore'}],
+        ingredients: [{ item: 'rankine:uraninite' }],
         results: [
-          {count: 2, item: 'blue_skies:raw_aquite'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'chemlib:uranium_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:everdawn_pyrope_ore'}],
+        ingredients: [{ item: 'rankine:galena' }],
         results: [
-          {count: 2, item: 'blue_skies:pyrope_gem'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'chemlib:lead_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:everdawn_diopside_ore'}],
+        ingredients: [{ item: 'rankine:cassiterite' }],
         results: [
-          {count: 2, item: 'blue_skies:diopside_gem'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'chemlib:tin_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:ventium_ore'}],
+        ingredients: [{ item: 'rankine:acanthite' }],
         results: [
-          {count: 2, item: 'blue_skies:raw_ventium'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'chemlib:silver_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:falsite_ore'}],
+        ingredients: [{ item: 'rankine:malachite' }],
         results: [
-          {count: 2, item: 'blue_skies:raw_falsite'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'chemlib:copper_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:everbright_moonstone_ore'}],
+        ingredients: [{ item: 'minecraft:raw_gold' }],
         results: [
-          {count: 2, item: 'blue_skies:moonstone_shard'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
+          { count: 2, item: 'chemlib:gold_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
       event.custom({
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'blue_skies:everbright_charoite_ore'}],
+        ingredients: [{ item: 'rankine:hematite' }],
         results: [
-          {count: 2, item: 'blue_skies:raw_charoite'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'blue_skies:everbright_aquite_ore'}],
-        results: [
-          {count: 2, item: 'blue_skies:raw_aquite'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'blue_skies:everbright_pyrope_ore'}],
-        results: [
-          {count: 2, item: 'blue_skies:pyrope_gem'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'blue_skies:everbright_diopside_ore'}],
-        results: [
-          {count: 2, item: 'blue_skies:diopside_gem'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'occultism:iesnium_ore'}],
-        results: [
-          {count: 2, item: 'occultism:iesnium_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:nether_quartz_ore'}],
-        results: [
-          {count: 2, item: 'minecraft:quartz'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:plumbago_ore'}],
-        results: [
-          {count: 2, item: 'rankine:graphite'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:native_sulfur_ore'}],
-        results: [
-          {count: 6, item: 'rankine:sulfur_nugget'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:cinnabar_ore'}],
-        results: [
-          {item: 'minecraft:redstone', count: 12},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:shiverstone_regalium_ore'}],
-        results: [
-          {count: 2, item: 'undergarden:regalium_crystal'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:depthrock_regalium_ore'}],
-        results: [
-          {count: 2, item: 'undergarden:regalium_crystal'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:depthrock_utherium_ore'}],
-        results: [
-          {count: 2, item: 'undergarden:utherium_crystal'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:tremblecrust_utherium_ore'}],
-        results: [
-          {count: 2, item: 'undergarden:utherium_crystal'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:shiverstone_utherium_ore'}],
-        results: [
-          {count: 2, item: 'undergarden:utherium_crystal'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:shiverstone_froststeel_ore'}],
-        results: [
-          {count: 2, item: 'undergarden:raw_froststeel'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:shiverstone_cloggrum_ore'}],
-        results: [
-          {count: 2, item: 'undergarden:raw_cloggrum'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:depthrock_cloggrum_ore'}],
-        results: [
-          {count: 2, item: 'undergarden:raw_cloggrum'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:shiverstone_coal_ore'}],
-        results: [
-          {count: 3, item: 'minecraft:coal'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'undergarden:depthrock_coal_ore'}],
-        results: [
-          {count: 3, item: 'minecraft:coal'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:ilmenite'}],
-        results: [
-          {count: 2, item: 'chemlib:titanium_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:cobaltite'}],
-        results: [
-          {count: 2, item: 'chemlib:cobalt_dust'},
-          {item: 'create:experience_nugget', chance: 0.5},
-        ],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:sulfur'}],
-        results: [{item: 'chemlib:sulfur_dust'}],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:silicon'}],
-        results: [{item: 'chemlib:silicon_dust'}],
-      });
-      event.custom({
-        type: 'create:crushing',
-        processingTime: 250,
-        ingredients: [{item: 'rankine:sodium_chloride'}],
-        results: [{item: 'chemlib:sodium_dust'}],
+          { count: 2, item: 'chemlib:iron_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
       });
 
       event.custom({
-        results: [{item: 'bloodmagic:coalsand'}],
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'minecraft:coal'}],
+        ingredients: [{ item: 'blue_skies:horizonite_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:raw_horizonite' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everdawn_moonstone_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:moonstone_shard' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everdawn_charoite_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:raw_charoite' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everdawn_aquite_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:raw_aquite' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everdawn_pyrope_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:pyrope_gem' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everdawn_diopside_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:diopside_gem' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:ventium_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:raw_ventium' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:falsite_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:raw_falsite' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everbright_moonstone_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:moonstone_shard' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everbright_charoite_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:raw_charoite' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everbright_aquite_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:raw_aquite' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everbright_pyrope_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:pyrope_gem' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'blue_skies:everbright_diopside_ore' }],
+        results: [
+          { count: 2, item: 'blue_skies:diopside_gem' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'occultism:iesnium_ore' }],
+        results: [
+          { count: 2, item: 'occultism:iesnium_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:nether_quartz_ore' }],
+        results: [
+          { count: 2, item: 'minecraft:quartz' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:plumbago_ore' }],
+        results: [
+          { count: 2, item: 'rankine:graphite' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:native_sulfur_ore' }],
+        results: [
+          { count: 6, item: 'rankine:sulfur_nugget' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:cinnabar_ore' }],
+        results: [
+          { item: 'minecraft:redstone', count: 12 },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:shiverstone_regalium_ore' }],
+        results: [
+          { count: 2, item: 'undergarden:regalium_crystal' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:depthrock_regalium_ore' }],
+        results: [
+          { count: 2, item: 'undergarden:regalium_crystal' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:depthrock_utherium_ore' }],
+        results: [
+          { count: 2, item: 'undergarden:utherium_crystal' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:tremblecrust_utherium_ore' }],
+        results: [
+          { count: 2, item: 'undergarden:utherium_crystal' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:shiverstone_utherium_ore' }],
+        results: [
+          { count: 2, item: 'undergarden:utherium_crystal' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:shiverstone_froststeel_ore' }],
+        results: [
+          { count: 2, item: 'undergarden:raw_froststeel' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:shiverstone_cloggrum_ore' }],
+        results: [
+          { count: 2, item: 'undergarden:raw_cloggrum' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:depthrock_cloggrum_ore' }],
+        results: [
+          { count: 2, item: 'undergarden:raw_cloggrum' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:shiverstone_coal_ore' }],
+        results: [
+          { count: 3, item: 'minecraft:coal' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'undergarden:depthrock_coal_ore' }],
+        results: [
+          { count: 3, item: 'minecraft:coal' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:ilmenite' }],
+        results: [
+          { count: 2, item: 'chemlib:titanium_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:cobaltite' }],
+        results: [
+          { count: 2, item: 'chemlib:cobalt_dust' },
+          { item: 'create:experience_nugget', chance: 0.5 }
+        ]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:sulfur' }],
+        results: [{ item: 'chemlib:sulfur_dust' }]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:silicon' }],
+        results: [{ item: 'chemlib:silicon_dust' }]
+      });
+      event.custom({
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'rankine:sodium_chloride' }],
+        results: [{ item: 'chemlib:sodium_dust' }]
       });
 
       event.custom({
-        results: [{count: 9, item: 'bloodmagic:coalsand'}],
+        results: [{ item: 'bloodmagic:coalsand' }],
         type: 'create:crushing',
         processingTime: 250,
-        ingredients: [{item: 'minecraft:coal_block'}],
+        ingredients: [{ item: 'minecraft:coal' }]
+      });
+
+      event.custom({
+        results: [{ count: 9, item: 'bloodmagic:coalsand' }],
+        type: 'create:crushing',
+        processingTime: 250,
+        ingredients: [{ item: 'minecraft:coal_block' }]
       });
     },
     filling: () => {
-      event.remove({output: ['minecraft:gunpowder'], type: 'create:filling'});
+      event.remove({ output: ['minecraft:gunpowder'], type: 'create:filling' });
     },
     mechanical_crafting: () => {
       event.remove({
@@ -514,10 +514,10 @@ onEvent('recipes', event => {
           `pneumaticcraft:fluid_mixer`,
           'immersiveengineering:sample_drill',
           'pneumaticcraft:printed_circuit_board',
-          'create: crushing_wheel',
+          'create:crushing_wheel',
           'compactmachines:personal_shrinking_device',
           'naturesaura:offering_table',
-          'compactcrafting: base',
+          'compactcrafting:base',
           'botania:mana_spreader',
           'createaddition:alternator',
           'botania:apothecary_forest',
@@ -560,123 +560,123 @@ onEvent('recipes', event => {
           'productivebees:advanced_dark_oak_beehive',
           'productivebees:advanced_oak_beehive',
           'productivebees:advanced_jungle_beehive',
-          'productivebees:advanced_acacia_beehive',
-        ],
+          'productivebees:advanced_acacia_beehive'
+        ]
       });
 
       event.custom({
         global: true,
-        result: {item: 'immersiveengineering:sample_drill'},
+        result: { item: 'immersiveengineering:sample_drill' },
         pattern: ['aba', 'aba', 'cdc'],
         key: {
           a: 'immersiveengineering:steel_scaffolding_standard',
           b: 'immersiveengineering:steel_fence',
           c: 'immersiveengineering:light_engineering',
-          d: 'create:precision_mechanism',
-        },
+          d: 'create:precision_mechanism'
+        }
       });
 
       event.custom({
         global: true,
-        result: {item: 'rankine:diamond_tier_crushing_head'},
+        result: { item: 'rankine:diamond_tier_crushing_head' },
         pattern: [' a ', 'aba', 'cdc'],
         key: {
           a: 'rankine:titanium_alloy_ingot',
           b: 'create:precision_mechanism',
           c: 'minecraft:piston',
-          d: 'rankine:titanium_alloy_block',
-        },
+          d: 'rankine:titanium_alloy_block'
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'rankine:netherite_tier_crushing_head'},
+        result: { item: 'rankine:netherite_tier_crushing_head' },
         pattern: [' a ', 'aba', 'cdc'],
         key: {
           a: 'rankine:nitinol_ingot',
           b: 'create:precision_mechanism',
           c: 'minecraft:piston',
-          d: 'rankine:nitinol_block',
-        },
+          d: 'rankine:nitinol_block'
+        }
       });
 
       event.custom({
         global: true,
-        result: {item: 'rankine:iron_tier_crushing_head'},
+        result: { item: 'rankine:iron_tier_crushing_head' },
         pattern: [' a ', 'aba', 'cdc'],
         key: {
           a: 'rankine:steel_ingot',
           b: 'create:precision_mechanism',
           c: 'minecraft:piston',
-          d: 'rankine:steel_block',
-        },
+          d: 'rankine:steel_block'
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'rankine:stone_tier_crushing_head'},
+        result: { item: 'rankine:stone_tier_crushing_head' },
         pattern: [' a ', 'aba', 'cdc'],
         key: {
           a: 'rankine:brass_block',
           b: 'create:electron_tube',
           c: 'minecraft:piston',
-          d: 'rankine:brass_block',
-        },
+          d: 'rankine:brass_block'
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'create:mechanical_plough'},
+        result: { item: 'create:mechanical_plough' },
         pattern: ['aaa', 'bbb', ' c '],
         key: {
           a: 'naturesaura:sky_ingot',
           b: 'create:andesite_alloy',
-          c: 'create:andesite_casing',
-        },
+          c: 'create:andesite_casing'
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'create:mechanical_harvester'},
+        result: { item: 'create:mechanical_harvester' },
         pattern: ['bab', 'bab', ' c '],
         key: {
           a: 'naturesaura:sky_ingot',
           b: 'create:andesite_alloy',
-          c: 'create:andesite_casing',
-        },
+          c: 'create:andesite_casing'
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'botania:alchemy_catalyst'},
+        result: { item: 'botania:alchemy_catalyst' },
         pattern: ['aba', 'cdc', 'aba'],
         key: {
           a: 'botania:livingrock',
           b: 'rankine:rose_gold_ingot',
           c: 'minecraft:brewing_stand',
-          d: 'minecraft:honeycomb',
-        },
+          d: 'minecraft:honeycomb'
+        }
       });
 
       event.custom({
         global: true,
-        result: {item: 'botania:mana_tablet'},
+        result: { item: 'botania:mana_tablet' },
         pattern: ['aaa', 'aba', 'aaa'],
         key: {
           a: 'botania:livingrock',
-          b: 'botania:mana_pearl',
-        },
+          b: 'botania:mana_pearl'
+        }
       });
 
       event.custom({
         global: true,
-        result: {item: 'create:mechanical_drill'},
+        result: { item: 'create:mechanical_drill' },
         pattern: [' b ', 'bab', ' c '],
         key: {
           a: 'cataclysm:ignitium_ingot',
           b: 'create:andesite_alloy',
-          c: 'create:andesite_casing',
-        },
+          c: 'create:andesite_casing'
+        }
       });
 
       event.custom({
         global: true,
-        result: {item: 'kubejs:tin_coin'},
+        result: { item: 'kubejs:tin_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -686,15 +686,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:copper_coin`,
-        },
+          a: `kubejs:copper_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:iron_coin'},
+        result: { item: 'kubejs:iron_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -704,15 +704,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:tin_coin`,
-        },
+          a: `kubejs:tin_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:lead_coin'},
+        result: { item: 'kubejs:lead_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -722,15 +722,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:iron_coin`,
-        },
+          a: `kubejs:iron_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:silver_coin'},
+        result: { item: 'kubejs:silver_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -740,15 +740,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:lead_coin`,
-        },
+          a: `kubejs:lead_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:zinc_coin'},
+        result: { item: 'kubejs:zinc_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -758,15 +758,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:silver_coin`,
-        },
+          a: `kubejs:silver_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:aluminum_coin'},
+        result: { item: 'kubejs:aluminum_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -776,15 +776,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:zinc_coin`,
-        },
+          a: `kubejs:zinc_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:gold_coin'},
+        result: { item: 'kubejs:gold_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -794,15 +794,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:aluminum_coin`,
-        },
+          a: `kubejs:aluminum_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:steel_coin'},
+        result: { item: 'kubejs:steel_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -812,15 +812,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:gold_coin`,
-        },
+          a: `kubejs:gold_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:nickel_coin'},
+        result: { item: 'kubejs:nickel_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -830,15 +830,15 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:steel_coin`,
-        },
+          a: `kubejs:steel_coin`
+        }
       });
       event.custom({
         global: true,
-        result: {item: 'kubejs:platinum_coin'},
+        result: { item: 'kubejs:platinum_coin' },
         pattern: [
           '  aaaaa  ',
           ' aaaaaaa ',
@@ -848,11 +848,11 @@ onEvent('recipes', event => {
           'aaaaaaaaa',
           'aaaaaaaaa',
           ' aaaaaaa ',
-          '  aaaaa  ',
+          '  aaaaa  '
         ],
         key: {
-          a: `kubejs:nickel_coin`,
-        },
+          a: `kubejs:nickel_coin`
+        }
       });
     },
     milling: () => {
@@ -896,12 +896,12 @@ onEvent('recipes', event => {
           'minecraft:peony',
           'minecraft:charcoal',
           'minecraft:pink_tulip',
-          'minecraft:fern',
+          'minecraft:fern'
         ],
-        type: 'create:milling',
+        type: 'create:milling'
       });
 
-      evet.remove({output: ['minecraft:bonemeal'], type: 'create:milling'});
+      evet.remove({ output: ['minecraft:bonemeal'], type: 'create:milling' });
 
       event.remove({
         output: [
@@ -925,64 +925,67 @@ onEvent('recipes', event => {
           'undergarden:ditchbulb_paste',
           'minecraft:blaze_powder',
           'charcoal_pit:prismarine_dust',
-          'extendedcrafting:luminessence',
-        ],
+          'extendedcrafting:luminessence'
+        ]
       });
 
       event.custom({
         type: 'create:milling',
-        ingredients: [{item: 'minecraft:bone'}],
-        results: [{item: '3x minecraft:bone_meal'}],
-        processingTime: 50,
+        ingredients: [{ item: 'minecraft:bone' }],
+        results: [{ item: '3x minecraft:bone_meal' }],
+        processingTime: 50
       });
       event.custom({
         type: 'create:milling',
-        ingredients: [{item: 'undergarden:ditchbulb'}],
+        ingredients: [{ item: 'undergarden:ditchbulb' }],
         results: [
           {
-            item: 'undergarden:ditchbulb_paste',
-          },
+            item: 'undergarden:ditchbulb_paste'
+          }
         ],
-        processingTime: 50,
+        processingTime: 50
       });
       event.custom({
         type: 'create:milling',
-        ingredients: [{item: 'minecraft:blaze_rod'}],
+        ingredients: [{ item: 'minecraft:blaze_rod' }],
         results: [
           {
-            item: 'minecraft:blaze_powder',
-          },
+            item: 'minecraft:blaze_powder'
+          }
         ],
-        processingTime: 50,
+        processingTime: 50
       });
       event.custom({
         type: 'create:milling',
-        ingredients: [{item: 'minecraft:prismarine'}],
+        ingredients: [{ item: 'minecraft:prismarine' }],
         results: [
           {
-            item: 'charcoal_pit:prismarine_dust',
-          },
+            item: 'charcoal_pit:prismarine_dust'
+          }
         ],
-        processingTime: 50,
+        processingTime: 50
       });
 
       event.custom({
         type: 'create:milling',
-        ingredients: [{item: 'blue_skies:spider_webbing'}],
-        results: [{item: '3x minecraft:string'}],
-        processingTime: 50,
+        ingredients: [{ item: 'blue_skies:spider_webbing' }],
+        results: [{ item: '3x minecraft:string' }],
+        processingTime: 50
       });
     },
     mixing: () => {
-      event.remove({input: ['createaddition:biomass'], type: 'create:mixing'});
+      event.remove({
+        input: ['createaddition:biomass'],
+        type: 'create:mixing'
+      });
       event.remove({
         output: [
           'immersiveengineering:ingot_electrum',
           'immersiveengineering:ingot_constantan',
           'rankine:zinc_nugget',
-          'rankine:cupronickel_ingot',
+          'rankine:cupronickel_ingot'
         ],
-        type: 'create:mixing',
+        type: 'create:mixing'
       });
 
       event.remove({
@@ -1000,73 +1003,76 @@ onEvent('recipes', event => {
           'hem:rose_copper_ingot',
           'hem:bronze_ingot',
           'rankine:rose_gold_ingot',
-          'hem:copparite',
-        ],
+          'hem:copparite'
+        ]
       });
 
       event.custom({
         type: 'create:mixing',
-        results: [{item: 'farmersdelight:pie_crust'}],
-        ingredients: [{tag: 'forge:flour'}, Fluid.of('minecraft:milk', 1000)],
+        results: [{ item: 'farmersdelight:pie_crust' }],
+        ingredients: [{ tag: 'forge:flour' }, Fluid.of('minecraft:milk', 1000)]
       });
 
       event.custom({
         type: 'create:mixing',
-        results: [{item: 'create:dough'}],
+        results: [{ item: 'create:dough' }],
         ingredients: [
-          {tag: '3x #forge:flour'},
-          Fluid.of('minecraft:water', 1000),
-        ],
+          { tag: '3x #forge:flour' },
+          Fluid.of('minecraft:water', 1000)
+        ]
       });
       event.custom({
         type: 'create:mixing',
-        results: [{count: 8, item: 'minecraft:cookie'}],
-        ingredients: [{item: 'create:dough'}, {item: 'minecraft:cocoa_beans'}],
-        heatRequirement: 'heated',
+        results: [{ count: 8, item: 'minecraft:cookie' }],
+        ingredients: [
+          { item: 'create:dough' },
+          { item: 'minecraft:cocoa_beans' }
+        ],
+        heatRequirement: 'heated'
       });
 
       event.custom({
         type: 'create:mixing',
-        results: [{item: 'rankine:maple_syrup'}],
+        results: [{ item: 'rankine:maple_syrup' }],
         ingredients: [
-          {fluid: 'rankine:maple_sap', amount: 1000},
-          {item: 'minecraft:glass_bottle'},
+          { fluid: 'rankine:maple_sap', amount: 1000 },
+          { item: 'minecraft:glass_bottle' }
         ],
-        heatRequirement: 'heated',
+        heatRequirement: 'heated'
       });
       event.custom({
         type: 'create:mixing',
-        results: [{item: 'rankine:pancake_batter'}],
+        results: [{ item: 'rankine:pancake_batter' }],
         ingredients: [
-          {fluid: 'minecraft:milk', amount: 1000},
-          {item: 'minecraft:sugar'},
-          {tag: 'forge:flour'},
-          {item: 'minecraft:egg'},
-          {tag: 'forge:salt'},
-        ],
+          { fluid: 'minecraft:milk', amount: 1000 },
+          { item: 'minecraft:sugar' },
+          { tag: 'forge:flour' },
+          { item: 'minecraft:egg' },
+          { tag: 'forge:salt' }
+        ]
       });
     },
     pressing: () => {
       event.custom({
         type: 'create:pressing',
-        results: [{item: 'chemlib:silver_plate'}],
-        ingredients: [{item: 'rankine:silver_ingot'}],
+        results: [{ item: 'chemlib:silver_plate' }],
+        ingredients: [{ item: 'rankine:silver_ingot' }]
       });
       event.custom({
         type: 'create:pressing',
-        results: [{item: 'chemlib:lead_plate'}],
-        ingredients: [{item: 'rankine:lead_ingot'}],
+        results: [{ item: 'chemlib:lead_plate' }],
+        ingredients: [{ item: 'rankine:lead_ingot' }]
       });
       event.custom({
         type: 'create:pressing',
-        results: [{item: 'chemlib:aluminum_plate'}],
-        ingredients: [{item: 'rankine:aluminum_ingot'}],
+        results: [{ item: 'chemlib:aluminum_plate' }],
+        ingredients: [{ item: 'rankine:aluminum_ingot' }]
       });
 
       event.custom({
         type: 'create:pressing',
-        results: [{item: 'chemlib:gold_plate'}],
-        ingredients: [{item: 'minecraft:gold_ingot'}],
+        results: [{ item: 'chemlib:gold_plate' }],
+        ingredients: [{ item: 'minecraft:gold_ingot' }]
       });
       // event.custom({
       //     results: [{item: "chemlib:zinc_plate"}],
@@ -1074,67 +1080,79 @@ onEvent('recipes', event => {
       // });
       event.custom({
         type: 'create:pressing',
-        results: [{item: 'chemlib:cobalt_plate'}],
-        ingredients: [{item: 'rankine:cobalt_ingot'}],
+        results: [{ item: 'chemlib:cobalt_plate' }],
+        ingredients: [{ item: 'rankine:cobalt_ingot' }]
       });
       event.custom({
         type: 'create:pressing',
-        results: [{item: 'chemlib:tin_plate'}],
-        ingredients: [{item: 'rankine:tin_ingot'}],
+        results: [{ item: 'chemlib:tin_plate' }],
+        ingredients: [{ item: 'rankine:tin_ingot' }]
       });
       event.custom({
         type: 'create:pressing',
-        results: [{item: 'chemlib:sodium_plate'}],
-        ingredients: [{item: 'rankine:sodium_chloride'}],
+        results: [{ item: 'chemlib:sodium_plate' }],
+        ingredients: [{ item: 'rankine:sodium_chloride' }]
       });
       event.custom({
         type: 'create:pressing',
-        results: [{item: 'chemlib:titanium_plate'}],
-        ingredients: [{item: 'rankine:aluminum_ingot'}],
+        results: [{ item: 'chemlib:titanium_plate' }],
+        ingredients: [{ item: 'rankine:aluminum_ingot' }]
       });
     },
     sequenced_assembly: () => {
       event.custom({
         type: 'create:sequenced_assembly',
-        ingredient: {item: 'rankine:pancake'},
-        transitionalItem: {item: 'rankine:pancake'},
+        ingredient: { item: 'rankine:pancake' },
+        transitionalItem: { item: 'rankine:pancake' },
         sequence: [
           event.custom({
             type: 'create:deploying',
-            ingredients: [{item: 'rankine:pancake'}, {item: 'rankine:pancake'}],
-            results: [{item: 'rankine:pancake'}],
+            ingredients: [
+              { item: 'rankine:pancake' },
+              { item: 'rankine:pancake' }
+            ],
+            results: [{ item: 'rankine:pancake' }]
           }),
           event.custom({
             type: 'create:deploying',
-            ingredients: [{item: 'rankine:pancake'}, {item: 'rankine:pancake'}],
-            results: [{item: 'rankine:pancake'}],
+            ingredients: [
+              { item: 'rankine:pancake' },
+              { item: 'rankine:pancake' }
+            ],
+            results: [{ item: 'rankine:pancake' }]
           }),
           event.custom({
             type: 'create:deploying',
-            ingredients: [{item: 'rankine:pancake'}, {item: 'rankine:pancake'}],
-            results: [{item: 'rankine:pancake'}],
+            ingredients: [
+              { item: 'rankine:pancake' },
+              { item: 'rankine:pancake' }
+            ],
+            results: [{ item: 'rankine:pancake' }]
           }),
           event.custom({
             type: 'create:deploying',
-            ingredients: [{item: 'rankine:pancake'}, {item: 'rankine:pancake'}],
-            results: [{item: 'rankine:pancake'}],
-          }),
+            ingredients: [
+              { item: 'rankine:pancake' },
+              { item: 'rankine:pancake' }
+            ],
+            results: [{ item: 'rankine:pancake' }]
+          })
         ],
-        results: [{item: 'rankine:pancake_breakfast'}],
-        loops: 1,
+        results: [{ item: 'rankine:pancake_breakfast' }],
+        loops: 1
       });
     },
     splashing: () => {
       event.remove({
         output: ['minecraft:red_sand', 'rankine:zinc_nugget'],
-        type: 'create:splashing',
+        type: 'create:splashing'
       });
 
       event.custom({
         type: 'create:splashing',
-        ingredients: [{item: 'create:crushed_raw_zinc'}],
-        results: [{item: 'rankine:zinc_nugget', count: 9}],
+        ingredients: [{ item: 'create:crushed_raw_zinc' }],
+        results: [{ item: 'rankine:zinc_nugget', count: 9 }]
       });
-    },
+    }
   });
 });

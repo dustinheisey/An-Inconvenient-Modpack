@@ -1,15 +1,15 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setSideRecipes([
     {
       id: 'collections',
       recipe: () => {},
       children: [
-        {id: 'gateways', recipe: () => {}, children: []},
+        { id: 'gateways', recipe: () => {}, children: [] },
         {
           id: 'guidebooks',
           recipe: () => {
-            ['tofucraft:integration/book'].forEach(id =>
-              event.remove({id: id})
+            ['tofucraft:integration/book'].forEach((id) =>
+              event.remove({ id: id })
             );
             // tofubook
             event.shapeless(
@@ -19,15 +19,15 @@ onEvent('recipes', event => {
               ),
               ['minecraft:book', '#forge:tofu']
             );
-          },
+          }
         },
         {
           id: 'end_eyes',
-          recipe: () => {},
+          recipe: () => {}
         },
         {
           id: 'lost_stories',
-          recipe: () => {},
+          recipe: () => {}
         },
         {
           id: 'armor',
@@ -40,58 +40,58 @@ onEvent('recipes', event => {
               'mekanism:mekasuit_helmet',
               'mekanism:mekasuit_bodyarmor',
               'mekanism:mekasuit_pants',
-              'mekanism:mekasuit_boots',
-            ].forEach(id => event.remove({id: id}));
+              'mekanism:mekasuit_boots'
+            ].forEach((id) => event.remove({ id: id }));
 
             event
               .shaped('minecraft:diamond_helmet', ['aaa', 'aba'], {
                 a: 'minecraft:diamond',
-                b: 'botania:elementium_helmet',
+                b: 'botania:elementium_helmet'
               })
               .stage('chapter_7_1');
 
             event
               .shaped('minecraft:diamond_helmet', ['aaa', 'a a'], {
-                a: 'minecraft:diamond',
+                a: 'minecraft:diamond'
               })
               .stage('armor_diamond');
 
             event
               .shaped('minecraft:diamond_chestplate', ['aba', 'aaa', 'aaa'], {
                 a: 'minecraft:diamond',
-                b: 'botania:elementium_chestplate',
+                b: 'botania:elementium_chestplate'
               })
               .stage('chapter_7_1');
 
             event
               .shaped('minecraft:diamond_chestplate', ['a a', 'aaa', 'aaa'], {
-                a: 'minecraft:diamond',
+                a: 'minecraft:diamond'
               })
               .stage('armor_diamond');
 
             event
               .shaped('minecraft:diamond_leggings', ['aaa', 'aba', 'a a'], {
                 a: 'minecraft:diamond',
-                b: 'botania:elementium_leggings',
+                b: 'botania:elementium_leggings'
               })
               .stage('chapter_7_1');
 
             event
               .shaped('minecraft:diamond_leggings', ['aaa', 'a a', 'a a'], {
-                a: 'minecraft:diamond',
+                a: 'minecraft:diamond'
               })
               .stage('armor_diamond');
 
             event
               .shaped('minecraft:diamond_boots', ['aba', 'a a'], {
                 a: 'minecraft:diamond',
-                b: 'botania:elementium_boots',
+                b: 'botania:elementium_boots'
               })
               .stage('chapter_7_1');
 
             event
               .shaped('minecraft:diamond_boots', ['a a', 'a a'], {
-                a: 'minecraft:diamond',
+                a: 'minecraft:diamond'
               })
               .stage('armor_diamond');
 
@@ -101,7 +101,7 @@ onEvent('recipes', event => {
                 b: 'mekanism:ultimate_control_circuit',
                 c: 'minecraft:diamond_helmet',
                 d: 'mekanism:pellet_polonium',
-                e: 'mekanism:basic_induction_cell',
+                e: 'mekanism:basic_induction_cell'
               })
               .stage('chapter_7_1');
 
@@ -111,7 +111,7 @@ onEvent('recipes', event => {
                 b: 'mekanism:ultimate_control_circuit',
                 c: 'minecraft:diamond_chestplate',
                 d: 'mekanism:pellet_polonium',
-                e: 'mekanism:basic_induction_cell',
+                e: 'mekanism:basic_induction_cell'
               })
               .stage('chapter_7_1');
 
@@ -121,7 +121,7 @@ onEvent('recipes', event => {
                 b: 'mekanism:ultimate_control_circuit',
                 c: 'minecraft:diamond_leggings',
                 d: 'mekanism:pellet_polonium',
-                e: 'mekanism:basic_induction_cell',
+                e: 'mekanism:basic_induction_cell'
               })
               .stage('chapter_7_1');
 
@@ -131,12 +131,12 @@ onEvent('recipes', event => {
                 b: 'mekanism:ultimate_control_circuit',
                 c: 'minecraft:diamond_boots',
                 d: 'mekanism:pellet_polonium',
-                e: 'mekanism:basic_induction_cell',
+                e: 'mekanism:basic_induction_cell'
               })
               .stage('chapter_7_1');
-          },
-        },
-      ],
-    },
+          }
+        }
+      ]
+    }
   ]);
 });

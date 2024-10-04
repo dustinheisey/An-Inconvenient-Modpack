@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'chapter_5_1', {
     icon: 'minecraft:beef',
     item: 'create:shadow_steel',
@@ -40,11 +40,11 @@ onEvent('server.datapack.high_priority', event => {
                                 item: 'kubejs:brown_sugar',
                                 title: 'Mana Pool',
                                 description: 'Upgrade your diluted pool',
-                                children: [],
-                              },
-                            ],
-                          },
-                        ],
+                                children: []
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         item: 'kubejs:butcher_knife',
@@ -60,15 +60,15 @@ onEvent('server.datapack.high_priority', event => {
                                 item: 'kubejs:wet_ingredients_bucket',
                                 title: 'Mana Pool',
                                 description: 'Upgrade your diluted pool',
-                                children: [],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                                children: []
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 item: 'botania:runic_altar',
@@ -130,9 +130,9 @@ onEvent('server.datapack.high_priority', event => {
                                                         title: 'Mana Pool',
                                                         description:
                                                           'Upgrade your diluted pool',
-                                                        children: [],
-                                                      },
-                                                    ],
+                                                        children: []
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'kubejs:skinned_potato',
@@ -158,15 +158,15 @@ onEvent('server.datapack.high_priority', event => {
                                                                   'Mana Pool',
                                                                 description:
                                                                   'Upgrade your diluted pool',
-                                                                children: [],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
+                                                                children: []
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
                                               },
                                               {
                                                 item: 'sliceanddice:slicer',
@@ -191,15 +191,15 @@ onEvent('server.datapack.high_priority', event => {
                                                             title: 'Mana Pool',
                                                             description:
                                                               'Upgrade your diluted pool',
-                                                            children: [],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
+                                                            children: []
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'biomancy:decomposer',
@@ -223,11 +223,11 @@ onEvent('server.datapack.high_priority', event => {
                                                         item: 'minecraft:chorus_flower',
                                                         title: 'Chorus Flower',
                                                         description:
-                                                          'Create a chorus flower',
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
+                                                          'Create a chorus flower'
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
                                               },
                                               {
                                                 item: 'kubejs:ender_syrup_bucket',
@@ -240,11 +240,11 @@ onEvent('server.datapack.high_priority', event => {
                                                     title: 'Mana Pool',
                                                     description:
                                                       'Upgrade your diluted pool',
-                                                    children: [],
-                                                  },
-                                                ],
-                                              },
-                                            ],
+                                                    children: []
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'biomancy:primordial_cradle',
@@ -263,7 +263,7 @@ onEvent('server.datapack.high_priority', event => {
                                                     title: 'Mana Pool',
                                                     description:
                                                       'Upgrade your diluted pool',
-                                                    children: [],
+                                                    children: []
                                                   },
                                                   {
                                                     item: 'kubejs:cow_carcass',
@@ -291,17 +291,17 @@ onEvent('server.datapack.high_priority', event => {
                                                                   'Mana Pool',
                                                                 description:
                                                                   'Upgrade your diluted pool',
-                                                                children: [],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
+                                                                children: []
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'biomancy:digester',
@@ -326,13 +326,13 @@ onEvent('server.datapack.high_priority', event => {
                                                         title: 'Mana Pool',
                                                         description:
                                                           'Upgrade your diluted pool',
-                                                        children: [],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
+                                                        children: []
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'biomancy:bio_lab',
@@ -359,9 +359,9 @@ onEvent('server.datapack.high_priority', event => {
                                                         frame: 'challenge',
                                                         description:
                                                           'Remake the lost story from the Bumblezone',
-                                                        item: 'kubejs:bumblezone_lost_story',
-                                                      },
-                                                    ],
+                                                        item: 'kubejs:bumblezone_lost_story'
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'productivebees:advanced_oak_beehive',
@@ -419,9 +419,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                                     description:
                                                                                       'Upgrade your diluted pool',
                                                                                     children:
-                                                                                      [],
-                                                                                  },
-                                                                                ],
+                                                                                      []
+                                                                                  }
+                                                                                ]
                                                                             },
                                                                             {
                                                                               item: 'botania:orechid',
@@ -430,11 +430,11 @@ onEvent('server.datapack.high_priority', event => {
                                                                               description:
                                                                                 'Upgrade your environmental eye into an environmental ocular',
                                                                               children:
-                                                                                [],
-                                                                            },
-                                                                          ],
-                                                                      },
-                                                                    ],
+                                                                                []
+                                                                            }
+                                                                          ]
+                                                                      }
+                                                                    ]
                                                                   },
                                                                   {
                                                                     item: 'naturesaura:token_grief',
@@ -448,7 +448,7 @@ onEvent('server.datapack.high_priority', event => {
                                                                         title:
                                                                           'Ocular',
                                                                         description:
-                                                                          'Upgrade your environmental eye into an environmental ocular',
+                                                                          'Upgrade your environmental eye into an environmental ocular'
                                                                       },
                                                                       {
                                                                         item: 'bloodmagic:ritualdivinerdusk',
@@ -500,13 +500,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                                                         'Have a flashback after making some nutrient paste',
                                                                                                       frame:
                                                                                                         'challenge',
-                                                                                                      id: 'eye_cursed',
-                                                                                                    },
-                                                                                                  ],
-                                                                                              },
-                                                                                            ],
-                                                                                        },
-                                                                                      ],
+                                                                                                      id: 'eye_cursed'
+                                                                                                    }
+                                                                                                  ]
+                                                                                              }
+                                                                                            ]
+                                                                                        }
+                                                                                      ]
                                                                                   },
                                                                                   {
                                                                                     item: 'industrialforegoing:fermentation_station',
@@ -523,25 +523,25 @@ onEvent('server.datapack.high_priority', event => {
                                                                                           description:
                                                                                             'Upgrade your diluted pool',
                                                                                           children:
-                                                                                            [],
-                                                                                        },
-                                                                                      ],
-                                                                                  },
-                                                                                ],
-                                                                            },
-                                                                          ],
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
+                                                                                            []
+                                                                                        }
+                                                                                      ]
+                                                                                  }
+                                                                                ]
+                                                                            }
+                                                                          ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
                                               },
                                               {
                                                 item: 'rankine:blackberries',
@@ -560,11 +560,11 @@ onEvent('server.datapack.high_priority', event => {
                                                         title: 'Mana Pool',
                                                         description:
                                                           'Upgrade your diluted pool',
-                                                        children: [],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
+                                                        children: []
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
                                               },
                                               {
                                                 item: 'croptopia:corn',
@@ -577,9 +577,9 @@ onEvent('server.datapack.high_priority', event => {
                                                     title: 'Mana Pool',
                                                     description:
                                                       'Upgrade your diluted pool',
-                                                    children: [],
-                                                  },
-                                                ],
+                                                    children: []
+                                                  }
+                                                ]
                                               },
                                               {
                                                 item: 'croptopia:mustard',
@@ -592,25 +592,25 @@ onEvent('server.datapack.high_priority', event => {
                                                     title: 'Mana Pool',
                                                     description:
                                                       'Upgrade your diluted pool',
-                                                    children: [],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                                                    children: []
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 item: 'botania:alchemy_catalyst',
@@ -631,11 +631,11 @@ onEvent('server.datapack.high_priority', event => {
                             item: 'kubejs:dry_ingredients',
                             title: 'Mana Pool',
                             description: 'Upgrade your diluted pool',
-                            children: [],
-                          },
-                        ],
-                      },
-                    ],
+                            children: []
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     item: 'croptopia:nutmeg',
@@ -646,16 +646,16 @@ onEvent('server.datapack.high_priority', event => {
                         item: 'kubejs:nutmeg_powder',
                         title: 'Mana Pool',
                         description: 'Upgrade your diluted pool',
-                        children: [],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                        children: []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

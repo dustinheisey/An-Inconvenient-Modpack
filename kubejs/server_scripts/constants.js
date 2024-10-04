@@ -10,7 +10,7 @@ const chapters = [
   'chapter_7',
   'chapter_7_1',
   'chapter_7_2',
-  'chapter_8',
+  'chapter_8'
 ];
 
 const colors = [
@@ -29,7 +29,7 @@ const colors = [
   'brown',
   'green',
   'red',
-  'black',
+  'black'
 ];
 
 const overworldWoods = [
@@ -38,5 +38,5 @@ const overworldWoods = [
   'spruce',
   'acacia',
   'jungle',
-  'dark_oak',
+  'dark_oak'
 ];

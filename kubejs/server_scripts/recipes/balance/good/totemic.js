@@ -1,15 +1,15 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
     shaped: () => {
-      ['totemic:totem_torch'].forEach(id => event.remove({id: id}));
+      ['totemic:totem_torch'].forEach((id) => event.remove({ id: id }));
 
       event
         .shaped('2x totemic:totem_torch', ['aba', 'aca', ' a '], {
           a: '#forge:rods/wooden',
           b: 'realistictorches:lit_torch',
-          c: '#minecraft:logs',
+          c: '#minecraft:logs'
         })
         .stage('chapter_2');
-    },
+    }
   });
 });

@@ -1,68 +1,25 @@
 {
   "name": "inconvenient-modpack",
-  "version": "0.5.3",
+  "version": "0.6.8",
+  "type": "module",
   "scripts": {
-    "commit": "cz",
-    "format": "npx prettier --write .",
-    "preview": "standard-version --dry-run",
-    "preview:patch": "standard-version --dry-run",
-    "release": "standard-version",
-    "release:patch": "standard-version -- --release-as patch",
-    "release:minor": "standard-version -- --release-as minor",
-    "release:major": "standard-version -- --release-as major"
-  },
-  "prettier": {
-    "bracketSpacing": false,
-    "singleQuote": true,
-    "trailingComma": "es5",
-    "arrowParens": "avoid"
+    "format:check": "npx prettier --check '**/*.{js,json,md}'",
+    "format:write": "npx prettier --write '**/*.{js,json,md}'",
+    "prepare": "husky",
+    "log-errors": "node scripts/log-errors.js",
+    "release": "node scripts/release.js",
+    "modlist": "node scripts/modlist.js",
+    "validate-secrets": "node scripts/validate-secrets.js"
   },
   "devDependencies": {
-    "prettier": "^3.2.5",
-    "standard-version": "^9.5.0",
-    "cz-conventional-changelog": "^3.3.0"
+    "archiver": "^7.0.1",
+    "axios": "^1.7.7",
+    "fs-extra": "^11.2.0",
+    "husky": "^9.1.6",
+    "js-yaml": "^4.1.0",
+    "prettier": "^3.3.3"
   },
-  "standard-version": {
-    "types": [
-      {
-        "type": "feat",
-        "section": "Features"
-      },
-      {
-        "type": "fix",
-        "section": "Bug Fixes"
-      },
-      {
-        "type": "chore",
-        "section": "Chores"
-      },
-      {
-        "type": "docs",
-        "section": "Docs"
-      },
-      {
-        "type": "style",
-        "section": "Style"
-      },
-      {
-        "type": "refactor",
-        "section": "Refactors"
-      },
-      {
-        "type": "perf",
-        "section": "Performance"
-      },
-      {
-        "type": "test",
-        "section": "Testing"
-      }
-    ],
-    "commitUrlFormat": "",
-    "compareUrlFormat": ""
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+  "lint-staged": {
+    "**/*.{js,json,md}": "prettier --write"
   }
 }

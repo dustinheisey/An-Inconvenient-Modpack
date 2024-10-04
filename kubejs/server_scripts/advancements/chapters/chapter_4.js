@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'chapter_4', {
     icon: 'create:brass_hand',
     item: 'endrem:lost_eye',
@@ -40,28 +40,28 @@ onEvent('server.datapack.high_priority', event => {
                               {
                                 item: 'occultism:infused_pickaxe',
                                 title: 'Infused Pickaxe',
-                                description: 'Craft an infused pickaxe',
-                              },
-                            ],
+                                description: 'Craft an infused pickaxe'
+                              }
+                            ]
                           },
                           {
                             item: 'bloodmagic:masterbloodorb',
                             title: "Magician's Blood Orb",
-                            description: "Create a magician's blood orb",
-                          },
-                        ],
+                            description: "Create a magician's blood orb"
+                          }
+                        ]
                       },
                       {
                         item: 'kubejs:liquid_tau_bucket',
                         title: 'Bread',
                         description: 'Make your first piece of bread',
-                        children: [],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                        children: []
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             item: 'kubejs:berry_juice_bucket',
@@ -76,7 +76,7 @@ onEvent('server.datapack.high_priority', event => {
                   {
                     item: 'charcoal_pit:vinegar_bucket',
                     title: 'Infused Pickaxe',
-                    description: 'Craft an infused pickaxe',
+                    description: 'Craft an infused pickaxe'
                   },
                   {
                     item: 'kubejs:tartaric_acid',
@@ -86,13 +86,13 @@ onEvent('server.datapack.high_priority', event => {
                       {
                         item: 'kubejs:cream_of_tartar',
                         title: 'Infused Pickaxe',
-                        description: 'Craft an infused pickaxe',
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                        description: 'Craft an infused pickaxe'
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             item: 'chemlib:iron_plate',
@@ -125,11 +125,11 @@ onEvent('server.datapack.high_priority', event => {
                               {
                                 item: 'rankine:carbon_dioxide_gas_bottle',
                                 title: 'Bread',
-                                description: 'Make your first piece of bread',
-                              },
-                            ],
-                          },
-                        ],
+                                description: 'Make your first piece of bread'
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         item: 'create:cinder_flour',
@@ -174,11 +174,11 @@ onEvent('server.datapack.high_priority', event => {
                                                 conditions: {
                                                   item: {
                                                     items: [
-                                                      'farmersrespite:purulent_tea',
-                                                    ],
-                                                  },
-                                                },
-                                              },
+                                                      'farmersrespite:purulent_tea'
+                                                    ]
+                                                  }
+                                                }
+                                              }
                                             },
                                             reward: 'im:dimensions/nether',
                                             description:
@@ -190,7 +190,7 @@ onEvent('server.datapack.high_priority', event => {
                                                 description:
                                                   'Go to sleep after brewing some purulent tea',
                                                 frame: 'challenge',
-                                                id: 'eye_nether',
+                                                id: 'eye_nether'
                                               },
                                               {
                                                 icon: 'netherrack',
@@ -202,9 +202,9 @@ onEvent('server.datapack.high_priority', event => {
                                                       'minecraft:changed_dimension',
                                                     conditions: {
                                                       from: 'minecraft:overworld',
-                                                      to: 'minecraft:the_nether',
-                                                    },
-                                                  },
+                                                      to: 'minecraft:the_nether'
+                                                    }
+                                                  }
                                                 },
                                                 description: 'Enter the nether',
                                                 children: [
@@ -247,7 +247,7 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'Have a flashback after creating an inert compound',
                                                                     frame:
                                                                       'challenge',
-                                                                    id: 'eye_wither',
+                                                                    id: 'eye_wither'
                                                                   },
                                                                   {
                                                                     item: 'create:chromatic_compound',
@@ -267,7 +267,7 @@ onEvent('server.datapack.high_priority', event => {
                                                                         description:
                                                                           'Create gunpowder',
                                                                         reward:
-                                                                          'im:chapters/chapter_5_1',
+                                                                          'im:chapters/chapter_5_1'
                                                                       },
                                                                       {
                                                                         item: 'create:refined_radiance',
@@ -278,17 +278,17 @@ onEvent('server.datapack.high_priority', event => {
                                                                         description:
                                                                           'Create gunpowder',
                                                                         reward:
-                                                                          'im:chapters/chapter_5_2',
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
+                                                                          'im:chapters/chapter_5_2'
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     title: 'Burning Truth',
@@ -302,9 +302,9 @@ onEvent('server.datapack.high_priority', event => {
                                                         frame: 'challenge',
                                                         description:
                                                           'Remake the lost story from the Nether',
-                                                        item: 'kubejs:nether_lost_story',
-                                                      },
-                                                    ],
+                                                        item: 'kubejs:nether_lost_story'
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'nethersdelight:soul_compost',
@@ -338,16 +338,15 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'Tainted Gold',
                                                                     description:
                                                                       'Collect a tainted gold ingot from a crimson altar',
-                                                                    children:
-                                                                      [],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
+                                                                    children: []
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'minecraft:blast_furnace',
@@ -359,9 +358,9 @@ onEvent('server.datapack.high_priority', event => {
                                                         item: 'biomancy:tough_fibers',
                                                         title: 'Tainted Gold',
                                                         description:
-                                                          'Collect a tainted gold ingot from a crimson altar',
-                                                      },
-                                                    ],
+                                                          'Collect a tainted gold ingot from a crimson altar'
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'cataclysm:altar_of_fire',
@@ -374,9 +373,9 @@ onEvent('server.datapack.high_priority', event => {
                                                         title: 'Tainted Gold',
                                                         description:
                                                           'Collect a tainted gold ingot from a crimson altar',
-                                                        children: [],
-                                                      },
-                                                    ],
+                                                        children: []
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'minecraft:crimson_fungus',
@@ -389,9 +388,9 @@ onEvent('server.datapack.high_priority', event => {
                                                         title: 'Tainted Gold',
                                                         description:
                                                           'Collect a tainted gold ingot from a crimson altar',
-                                                        children: [],
-                                                      },
-                                                    ],
+                                                        children: []
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'rankine:zinc_ingot',
@@ -425,12 +424,11 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'Tainted Gold',
                                                                     description:
                                                                       'Collect a tainted gold ingot from a crimson altar',
-                                                                    children:
-                                                                      [],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
+                                                                    children: []
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
                                                           },
                                                           {
                                                             item: 'minecraft:netherite_ingot',
@@ -445,9 +443,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                   'Tainted Gold',
                                                                 description:
                                                                   'Collect a tainted gold ingot from a crimson altar',
-                                                                children: [],
-                                                              },
-                                                            ],
+                                                                children: []
+                                                              }
+                                                            ]
                                                           },
                                                           {
                                                             item: 'rankine:rose_gold_ingot',
@@ -462,9 +460,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                   'Gunpowder',
                                                                 description:
                                                                   'Create gunpowder',
-                                                                children: [],
-                                                              },
-                                                            ],
+                                                                children: []
+                                                              }
+                                                            ]
                                                           },
                                                           {
                                                             item: 'create:brass_ingot',
@@ -494,13 +492,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                         description:
                                                                           'Collect a tainted gold ingot from a crimson altar',
                                                                         children:
-                                                                          [],
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
+                                                                          []
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
                                                           },
                                                           {
                                                             item: 'tconstruct:manyullyn_ingot',
@@ -520,15 +518,15 @@ onEvent('server.datapack.high_priority', event => {
                                                                     title:
                                                                       'Waystone',
                                                                     description:
-                                                                      'Craft a waystone',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
+                                                                      'Craft a waystone'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'minecraft:quartz',
@@ -569,9 +567,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                         description:
                                                                           'Create gunpowder',
                                                                         children:
-                                                                          [],
-                                                                      },
-                                                                    ],
+                                                                          []
+                                                                      }
+                                                                    ]
                                                                   },
                                                                   {
                                                                     item: 'minecraft:orange_dye',
@@ -587,9 +585,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                         description:
                                                                           'Create gunpowder',
                                                                         children:
-                                                                          [],
-                                                                      },
-                                                                    ],
+                                                                          []
+                                                                      }
+                                                                    ]
                                                                   },
                                                                   {
                                                                     item: 'minecraft:green_dye',
@@ -605,9 +603,9 @@ onEvent('server.datapack.high_priority', event => {
                                                                         description:
                                                                           'Create gunpowder',
                                                                         children:
-                                                                          [],
-                                                                      },
-                                                                    ],
+                                                                          []
+                                                                      }
+                                                                    ]
                                                                   },
                                                                   {
                                                                     item: 'minecraft:blue_dye',
@@ -623,17 +621,17 @@ onEvent('server.datapack.high_priority', event => {
                                                                         description:
                                                                           'Create gunpowder',
                                                                         children:
-                                                                          [],
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
+                                                                          []
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'rankine:sulfur',
@@ -646,9 +644,9 @@ onEvent('server.datapack.high_priority', event => {
                                                         title: 'Tainted Gold',
                                                         description:
                                                           'Collect a tainted gold ingot from a crimson altar',
-                                                        children: [],
-                                                      },
-                                                    ],
+                                                        children: []
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'nethersdelight:hoglin_loin',
@@ -660,9 +658,9 @@ onEvent('server.datapack.high_priority', event => {
                                                         item: 'tconstruct:pig_iron_ingot',
                                                         title: 'Pig Iron',
                                                         description:
-                                                          'Forge a pig iron ingot',
-                                                      },
-                                                    ],
+                                                          'Forge a pig iron ingot'
+                                                      }
+                                                    ]
                                                   },
                                                   {
                                                     item: 'occultism:iesnium_ingot',
@@ -675,38 +673,38 @@ onEvent('server.datapack.high_priority', event => {
                                                         title:
                                                           'Dimensional Storage',
                                                         description:
-                                                          'Craft a Dimensional Storage Actuator',
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
+                                                          'Craft a Dimensional Storage Actuator'
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
                       },
                       {
                         item: 'kubejs:egg_whip',
                         title: 'Bread',
                         description: 'Make your first piece of bread',
-                        children: [],
+                        children: []
                       },
                       {
                         item: 'kubejs:flaxseed_oil_bucket',
                         title: 'Bread',
-                        description: 'Make your first piece of bread',
-                      },
-                    ],
-                  },
-                ],
+                        description: 'Make your first piece of bread'
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 item: 'create:propeller',
@@ -728,9 +726,9 @@ onEvent('server.datapack.high_priority', event => {
                             title: 'Soulspring Lamp',
                             id: 'soulspring_lamp',
                             description:
-                              'Craft a soulspring lamp to stay cool in the nether',
-                          },
-                        ],
+                              'Craft a soulspring lamp to stay cool in the nether'
+                          }
+                        ]
                       },
                       {
                         item: 'minecraft:magma_cream',
@@ -741,15 +739,15 @@ onEvent('server.datapack.high_priority', event => {
                             item: 'tconstruct:magma_bucket',
                             title: 'Bread',
                             description: 'Make your first piece of bread',
-                            children: [],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                            children: []
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             item: 'chemlib:copper_plate',
@@ -784,11 +782,11 @@ onEvent('server.datapack.high_priority', event => {
                                   {
                                     item: 'adchimneys:metal_pump',
                                     title: 'Pump',
-                                    description: 'Craft a metal pump',
-                                  },
-                                ],
-                              },
-                            ],
+                                    description: 'Craft a metal pump'
+                                  }
+                                ]
+                              }
+                            ]
                           },
 
                           {
@@ -824,21 +822,21 @@ onEvent('server.datapack.high_priority', event => {
                                                 title: 'Bread',
                                                 description:
                                                   'Make your first piece of bread',
-                                                children: [],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                                children: []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     item: 'create:fluid_tank',
@@ -849,21 +847,21 @@ onEvent('server.datapack.high_priority', event => {
                         item: 'create:spout',
                         title: 'Bread',
                         description: 'Make your first piece of bread',
-                        children: [],
-                      },
-                    ],
+                        children: []
+                      }
+                    ]
                   },
                   {
                     item: 'create:crushing_wheel',
                     title: 'Bread',
-                    description: 'Make your first piece of bread',
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                    description: 'Make your first piece of bread'
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

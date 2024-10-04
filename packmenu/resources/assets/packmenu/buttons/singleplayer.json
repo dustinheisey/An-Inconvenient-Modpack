@@ -1,0 +1,15 @@
+{
+  "x": -120,
+  "y": 0,
+  "width": 116,
+  "height": 20,
+  "langKey": "menu.singleplayer",
+  "action": "OPEN_GUI",
+  "data": "SINGLEPLAYER",
+  "u": 0,
+  "v": 0,
+  "hoverU": 0,
+  "hoverV": 20,
+  "texWidth": 116,
+  "texHeight": 40
+}

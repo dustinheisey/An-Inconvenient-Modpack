@@ -1,14 +1,14 @@
 // priority: 203
 
-onEvent('tags.items', event => {
+onEvent('tags.items', (event) => {
   function overrideCollectionsChapters(collections) {
-    collections.forEach(collection => {
-      chapters.forEach(chapter => {
+    collections.forEach((collection) => {
+      chapters.forEach((chapter) => {
         event
           .get(`im:${collection}/${chapter}`)
           .getObjectIds()
-          .forEach(id => {
-            chapters.forEach(chapter => {
+          .forEach((id) => {
+            chapters.forEach((chapter) => {
               event.remove(`im:${chapter}`, id);
             });
           });
@@ -25,7 +25,7 @@ onEvent('tags.items', event => {
     'lost_pages',
     'relics',
     'spawn_eggs',
-    'totems',
+    'totems'
     // 'ingots',
     // 'nuggets',
     // 'metal_blocks',

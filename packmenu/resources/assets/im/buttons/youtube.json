@@ -1,0 +1,12 @@
+{
+  "x": -120,
+  "y": 96,
+  "action": "OPEN_URL",
+  "data": "https://www.youtube.com/@inconvenientDev",
+  "width": 116,
+  "height": 20,
+  "langKey": "packmenu.im.youtube",
+  "hoverV": 20,
+  "texWidth": 116,
+  "texHeight": 40
+}

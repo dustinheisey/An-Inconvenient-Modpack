@@ -9,7 +9,7 @@ function hideItems(event) {
       // Get priority item
       let priorityId = global['tagPriorityItems'][tag];
       // Hide all items in this tag that are not the priority item
-      stacks.forEach(itemId => {
+      stacks.forEach((itemId) => {
         if (itemId != priorityId && !global['unifyexclude'].has(itemId)) {
           event.hide(itemId);
         }

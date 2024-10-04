@@ -1,12 +1,12 @@
 // priority: 301
 
-onEvent('tags.items', event => {
+onEvent('tags.items', (event) => {
   function removeTags(tags, item) {
-    tags.forEach(tag => event.remove(tag, item));
+    tags.forEach((tag) => event.remove(tag, item));
   }
 
   function removeItems(tag, items) {
-    items.forEach(item => event.remove(tag, item));
+    items.forEach((item) => event.remove(tag, item));
   }
 
   event.remove('forge:ingots/electrum', 'rankine:green_gold_ingot');
@@ -14,13 +14,13 @@ onEvent('tags.items', event => {
   event.remove('forge:storage_blocks/electrum', 'rankine:green_gold_block');
   event.remove('forge:ingots/netherite', 'cataclysm:witherite_ingot');
   removeTags(['minecraft:wool', 'forge:wool'], `paragon_textiles:fabric_plain`);
-  colors.forEach(color => {
+  colors.forEach((color) => {
     removeTags(
       [
         'minecraft:wool',
         'forge:wool',
         `minecraft:wool/${color}`,
-        `forge:wool/${color}`,
+        `forge:wool/${color}`
       ],
       `paragon_textiles:fabric_${color}`
     );
@@ -45,6 +45,6 @@ onEvent('tags.items', event => {
     'rankine:brown_fiber_mat',
     'rankine:red_fiber_mat',
     'rankine:black_fiber_mat',
-    'undergarden:mogmoss_rug',
+    'undergarden:mogmoss_rug'
   ]);
 });

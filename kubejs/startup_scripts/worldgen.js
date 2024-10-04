@@ -1,22 +1,22 @@
-onEvent('worldgen.remove', event => {
-  event.removeOres(props => {
+onEvent('worldgen.remove', (event) => {
+  event.removeOres((props) => {
     props.blocks = [
       'minecraft:slime_block',
       'minecraft:sugar_cane',
       'minecraft:cactus',
-      'minecraft:bee_nest',
+      'minecraft:bee_nest'
     ];
   });
 
   event.removeFeatureById('lakes', [
     'pneumaticcraft:lake_oil_surface',
-    'pneumaticcraft:lake_oil_underground',
+    'pneumaticcraft:lake_oil_underground'
   ]);
   event.removeFeatureById('underground_structures', [
     'minecraft:monster_room',
     'minecraft:monster_room_deep',
     'minecraft:fossil_upper',
-    'minecraft:fossil_lower',
+    'minecraft:fossil_lower'
   ]);
   event.removeFeatureById('surface_structures', [
     'hem:bronze',
@@ -31,7 +31,7 @@ onEvent('worldgen.remove', event => {
     'ecofriendly:tossed_bottle_forest',
     'ecofriendly:recycle_station',
     'ecofriendly:tossed_tire_ym_structure',
-    'ecofriendly:tossed_detergent_structure_ym',
+    'ecofriendly:tossed_detergent_structure_ym'
   ]);
   event.removeFeatureById('underground_ores', [
     'minecraft:ore_tuff',
@@ -60,11 +60,11 @@ onEvent('worldgen.remove', event => {
     'minecraft:ore_gold_nether',
     'minecraft:ore_quartz_nether',
     'minecraft:ore_copper_large',
-    'blue_skies:ore_everbright_emerald',
+    'blue_skies:ore_everbright_emerald'
   ]);
   event.removeFeatureById('underground_decoration', [
     'minecraft:ore_infested',
-    'blue_skies:sunset_maple_forest_cave_magma',
+    'blue_skies:sunset_maple_forest_cave_magma'
   ]);
   event.removeFeatureById('vegetal_decoration', [
     'ecofriendly:billberry_ground_0',
@@ -99,6 +99,6 @@ onEvent('worldgen.remove', event => {
     'minecraft:flower_flower_forest',
     'minecraft:sugar_cane',
     'minecraft:dandelion',
-    'minecraft:rose_bush',
+    'minecraft:rose_bush'
   ]);
 });

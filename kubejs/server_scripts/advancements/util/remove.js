@@ -1,15 +1,15 @@
 // ? Remove - get rid of advancement pages from other mods
 
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   function removeAdvancements(ids) {
-    ids.forEach(id => {
+    ids.forEach((id) => {
       let [mod, path] = id.split(':');
       event.addJson(`${mod}:advancements/${path}.json`, {
         criteria: {
           impossible: {
-            trigger: 'minecraft:impossible',
-          },
-        },
+            trigger: 'minecraft:impossible'
+          }
+        }
       });
     });
   }
@@ -61,6 +61,6 @@ onEvent('server.datapack.high_priority', event => {
     'cataclysm:root',
     'cold_sweat:root',
     'mythicbotany:mythicbotany/root',
-    'tofucraft:tofucraft/roots',
+    'tofucraft:tofucraft/roots'
   ]);
 });

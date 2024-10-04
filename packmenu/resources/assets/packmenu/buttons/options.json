@@ -1,0 +1,15 @@
+{
+  "x": -120,
+  "y": 146,
+  "width": 116,
+  "height": 20,
+  "langKey": "menu.options",
+  "action": "OPEN_GUI",
+  "data": "OPTIONS",
+  "u": 0,
+  "v": 0,
+  "hoverU": 0,
+  "hoverV": 20,
+  "texWidth": 116,
+  "texHeight": 40
+}
