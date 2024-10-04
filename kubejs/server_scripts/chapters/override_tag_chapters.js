@@ -1,13 +1,13 @@
 // priority: 204
 
-onEvent('tags.items', event => {
+onEvent('tags.items', (event) => {
   function overrideTagChapters(chapter, tags) {
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       event
         .get(tag)
         .getObjectIds()
-        .forEach(id => {
-          chapters.forEach(chapter => {
+        .forEach((id) => {
+          chapters.forEach((chapter) => {
             event.remove(`im:${chapter}`, id);
           });
           event.add(`im:${chapter}`, id);
@@ -20,7 +20,7 @@ onEvent('tags.items', event => {
     'botania:petals',
     'botania:mystical_flowers',
     'botania:double_mystical_flowers',
-    'forge:amalgam_tools',
+    'forge:amalgam_tools'
   ]);
   overrideTagChapters('chapter_5_1', [
     'chipped:red_carpet',
@@ -61,14 +61,14 @@ onEvent('tags.items', event => {
     'chipped:waxed_copper_block',
     'chipped:waxed_exposed_copper',
     'chipped:waxed_oxidized_copper',
-    'chipped:waxed_weathered_copper',
+    'chipped:waxed_weathered_copper'
   ]);
   overrideTagChapters('chapter_5_2', [
     'forge:titanium_alloy_tools',
     'forge:steel_tools',
     'forge:invar_tools',
     'forge:nickel_superalloy_tools',
-    'rankine:leds',
+    'rankine:leds'
   ]);
   overrideTagChapters('chapter_7_1', [
     'forge:stainless_steel_tools',
@@ -77,6 +77,6 @@ onEvent('tags.items', event => {
     'forge:mineral_wool',
     'forge:shulker_boxes',
     'forge:ender_amalgam_tools',
-    'forge:osmiridium_tools',
+    'forge:osmiridium_tools'
   ]);
 });

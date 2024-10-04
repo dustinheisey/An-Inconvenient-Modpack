@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'dimension_travel', {
     hide: true,
     criteria: {
@@ -6,9 +6,9 @@ onEvent('server.datapack.high_priority', event => {
         trigger: 'minecraft:changed_dimension',
         conditions: {
           from: 'minecraft:overworld',
-          to: 'blue_skies:everbright',
-        },
-      },
+          to: 'blue_skies:everbright'
+        }
+      }
     },
     children: [
       {
@@ -19,10 +19,10 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'blue_skies:everbright',
-            },
-          },
-        },
+              to: 'blue_skies:everbright'
+            }
+          }
+        }
       },
       {
         hide: true,
@@ -32,10 +32,10 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'undergarden:undergarden',
-            },
-          },
-        },
+              to: 'undergarden:undergarden'
+            }
+          }
+        }
       },
       {
         hide: true,
@@ -45,10 +45,10 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'blue_skies:everdawn',
-            },
-          },
-        },
+              to: 'blue_skies:everdawn'
+            }
+          }
+        }
       },
       {
         hide: true,
@@ -58,11 +58,11 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'twilightforest:twilight_forest',
-            },
-          },
+              to: 'twilightforest:twilight_forest'
+            }
+          }
         },
-        reward: 'im:eyes/eye_evil',
+        reward: 'im:eyes/eye_evil'
       },
       {
         hide: true,
@@ -72,11 +72,11 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'minecraft:the_nether',
-            },
-          },
+              to: 'minecraft:the_nether'
+            }
+          }
         },
-        reward: 'im:eyes/eye_nether',
+        reward: 'im:eyes/eye_nether'
       },
       {
         hide: true,
@@ -86,10 +86,10 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'hem:blueleaf',
-            },
-          },
-        },
+              to: 'hem:blueleaf'
+            }
+          }
+        }
       },
       {
         hide: true,
@@ -99,10 +99,10 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'bumblezone:bumblezone',
-            },
-          },
-        },
+              to: 'bumblezone:bumblezone'
+            }
+          }
+        }
       },
       {
         hide: true,
@@ -112,10 +112,10 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'tofucraft:tofuland',
-            },
-          },
-        },
+              to: 'tofucraft:tofuland'
+            }
+          }
+        }
       },
       {
         hide: true,
@@ -125,10 +125,10 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'mythicbotany:alfheim',
-            },
-          },
-        },
+              to: 'mythicbotany:alfheim'
+            }
+          }
+        }
       },
       {
         hide: true,
@@ -138,11 +138,11 @@ onEvent('server.datapack.high_priority', event => {
             trigger: 'minecraft:changed_dimension',
             conditions: {
               from: 'minecraft:overworld',
-              to: 'minecraft:the_end',
-            },
-          },
-        },
-      },
-    ],
+              to: 'minecraft:the_end'
+            }
+          }
+        }
+      }
+    ]
   });
 });

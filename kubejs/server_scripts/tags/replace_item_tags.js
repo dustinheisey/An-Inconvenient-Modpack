@@ -1,13 +1,13 @@
 // priority: 301
 
-onEvent('tags.items', event => {
+onEvent('tags.items', (event) => {
   function replaceTag(tag, item) {
     event.removeAll(tag);
     event.add(tag, item);
   }
 
   function replaceTags(tags, item) {
-    tags.forEach(tag => {
+    tags.forEach((tag) => {
       event.removeAll(tag);
       event.add(tag, item);
     });
@@ -20,7 +20,7 @@ onEvent('tags.items', event => {
       'forge:grain/wheat',
       'forge:crops',
       'forge:crops/wheat',
-      'hexerei:herbs',
+      'hexerei:herbs'
     ],
     'kubejs:wheat'
   );

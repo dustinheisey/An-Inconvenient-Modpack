@@ -1,4 +1,4 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
     chapter_2: () => {
       event.remove({
@@ -30,69 +30,69 @@ onEvent('recipes', event => {
           'farmersdelight:cooking_pot',
           'minecraft:lead',
           'smallships:sail',
-          'rankine:gun_cotton',
+          'rankine:gun_cotton'
         ],
-        type: 'minecraft:crafting_shaped',
+        type: 'minecraft:crafting_shaped'
       });
 
       event.shaped('cold_sweat:minecart_insulation', ['a a', 'aaa'], {
-        a: 'cold_sweat:fur',
+        a: 'cold_sweat:fur'
       });
 
       event.shaped(`2x blue_skies:cherry_stick`, ['a', 'a'], {
-        a: 'blue_skies:cherry_planks',
+        a: 'blue_skies:cherry_planks'
       });
       event.shaped(`2x blue_skies:frostbright_stick`, ['a', 'a'], {
-        a: 'blue_skies:frostbright_planks',
+        a: 'blue_skies:frostbright_planks'
       });
       event.shaped(`2x blue_skies:starlit_stick`, ['a', 'a'], {
-        a: 'blue_skies:starlit_planks',
+        a: 'blue_skies:starlit_planks'
       });
       event.shaped(`2x blue_skies:bluebright_stick`, ['a', 'a'], {
-        a: 'blue_skies:bluebright_planks',
+        a: 'blue_skies:bluebright_planks'
       });
       event.shaped(`3x rankine:bamboo_culms_sign`, ['aaa', 'aaa', ' b '], {
         a: `rankine:bamboo_culms`,
-        b: '#forge:rods/wooden',
+        b: '#forge:rods/wooden'
       });
 
       event.shaped(`rankine:fins`, ['a  ', 'aaa'], {
-        a: 'minecraft:leather',
+        a: 'minecraft:leather'
       });
       event.shaped(`rankine:ice_skates`, ['a  ', 'bba', 'ccc'], {
         a: 'minecraft:leather',
         b: 'farmersdelight:rope',
-        c: 'rankine:pewter_nugget',
+        c: 'rankine:pewter_nugget'
       });
 
       event.shaped('paragon_textiles:cushion_plain', ['a', 'b'], {
         a: `paragon_textiles:fabric_plain`,
-        b: '#minecraft:wooden_slabs',
+        b: '#minecraft:wooden_slabs'
       });
       event.shaped('paragon_textiles:cushion_red', ['a', 'b'], {
         a: `paragon_textiles:fabric_red`,
-        b: '#minecraft:wooden_slabs',
+        b: '#minecraft:wooden_slabs'
       });
       event.shaped('occultism:brush', ['aaa', 'bbb'], {
         a: '#minecraft:planks',
-        b: 'paragon_textiles:silk',
+        b: 'paragon_textiles:silk'
       });
       event.shaped(`create:red_seat`, ['a', 'b'], {
         a: `paragon_textiles:cushion_red`,
-        b: '#minecraft:wooden_slabs',
+        b: '#minecraft:wooden_slabs'
       });
 
       event.shaped(`minecraft:scaffolding`, ['aba', 'a a', 'a a'], {
         a: `#forge:rods/wooden`,
-        b: 'farmersdelight:canvas',
+        b: 'farmersdelight:canvas'
       });
 
       event.shaped(`rankine:oat_bale`, ['aaa', 'aaa', 'aaa'], {
-        a: `rankine:oats`,
+        a: `rankine:oats`
       });
       event.shaped(`rankine:lead_glass`, [' a ', 'aba', ' a '], {
         a: `rankine:lead_ingot`,
-        b: '#forge:glass',
+        b: '#forge:glass'
       });
 
       let signs = [
@@ -116,72 +116,72 @@ onEvent('recipes', event => {
         'rankine:weeping_willow_sign',
         'rankine:erythrina_sign',
         'rankine:charred_sign',
-        'rankine:bamboo_sign',
+        'rankine:bamboo_sign'
       ];
 
       let bricks = [
         {
           input: 'minecraft:obsidian',
-          output: 'cataclysm:obsidian_bricks',
+          output: 'cataclysm:obsidian_bricks'
         },
 
         {
           input: 'charcoal_pit:sandy_brick_item',
-          output: 'charcoal_pit:sandy_brick',
+          output: 'charcoal_pit:sandy_brick'
         },
         {
           input: 'blue_skies:nature_stone',
-          output: 'blue_skies:nature_stonebrick',
+          output: 'blue_skies:nature_stonebrick'
         },
         {
           input: 'blue_skies:polished_brumble',
-          output: 'blue_skies:polished_brumble_bricks',
+          output: 'blue_skies:polished_brumble_bricks'
         },
         {
           input: 'blue_skies:turquoise_stone',
-          output: 'blue_skies:turquoise_stonebrick',
+          output: 'blue_skies:turquoise_stonebrick'
         },
         {
           input: 'minecraft:polished_deepslate',
-          output: 'minecraft:deepslate_bricks',
+          output: 'minecraft:deepslate_bricks'
         },
         {
           input: 'architects_palette:myonite',
-          output: 'architects_palette:myonite_bricks',
+          output: 'architects_palette:myonite_bricks'
         },
         {
           input: 'minecraft:dripstone_block',
-          output: 'architects_palette:dripstone_bricks',
+          output: 'architects_palette:dripstone_bricks'
         },
         {
           input: 'architects_palette:abyssaline',
-          output: 'architects_palette:abyssaline_bricks',
+          output: 'architects_palette:abyssaline_bricks'
         },
         {
           input: 'minecraft:calcite',
-          output: 'architects_palette:calcite_bricks',
-        },
+          output: 'architects_palette:calcite_bricks'
+        }
       ];
 
       let grains = ['sorghum', 'rye', 'millet', 'barley'];
 
-      signs.forEach(id => {
+      signs.forEach((id) => {
         event.shaped(`3x ${id}`, ['aaa', 'aaa', ' b '], {
           a: `${id.slice(0, -5)}_planks`,
-          b: '#forge:rods/wooden',
+          b: '#forge:rods/wooden'
         });
       });
 
-      bricks.forEach(item => {
+      bricks.forEach((item) => {
         event.shaped(`2x ${item.output}`, ['ab', 'ba'], {
           a: item.input,
-          b: 'rankine:mortar',
+          b: 'rankine:mortar'
         });
       });
 
-      grains.forEach(id => {
+      grains.forEach((id) => {
         event.shaped(`rankine:${id}_bale`, ['aaa', 'aaa', 'aaa'], {
-          a: `rankine:${id}`,
+          a: `rankine:${id}`
         });
       });
     },
@@ -223,23 +223,23 @@ onEvent('recipes', event => {
           'blue_skies:maple_stick',
           'blue_skies:dusk_stick',
           'blue_skies:lunar_stick',
-          `twilightforest:darkwood_chest`,
+          `twilightforest:darkwood_chest`
         ],
-        type: 'minecraft:crafting_shaped',
+        type: 'minecraft:crafting_shaped'
       });
 
-      colors.forEach(color => {
+      colors.forEach((color) => {
         if (color !== 'red') {
           event.shaped(`paragon_textiles:cushion_${color}`, ['a', 'b'], {
             a: `paragon_textiles:fabric_${color}`,
-            b: '#minecraft:wooden_slabs',
+            b: '#minecraft:wooden_slabs'
           });
         }
       });
 
       event.shaped('malum:spirit_pouch', [' a ', 'b b', ' b '], {
         a: 'minecraft:string',
-        b: 'malum:spirit_fabric',
+        b: 'malum:spirit_fabric'
       });
 
       event.shaped(
@@ -247,90 +247,90 @@ onEvent('recipes', event => {
         ['ab', 'ba'],
         {
           a: `architects_palette:withered_bone_block`,
-          b: 'rankine:mortar',
+          b: 'rankine:mortar'
         }
       );
       event.shaped('architects_palette:osseous_bricks', ['ab', 'ba'], {
         a: `minecraft:bone_block`,
-        b: 'rankine:mortar',
+        b: 'rankine:mortar'
       });
       event.shaped(`twilightforest:twilight_oak_chest`, ['aaa', 'a a', 'aaa'], {
-        a: `twilightforest:twilight_oak_planks`,
+        a: `twilightforest:twilight_oak_planks`
       });
       event.shaped(`twilightforest:canopy_chest`, ['aaa', 'a a', 'aaa'], {
-        a: `twilightforest:canopy_planks`,
+        a: `twilightforest:canopy_planks`
       });
       event.shaped(`twilightforest:mangrove_chest`, ['aaa', 'a a', 'aaa'], {
-        a: `twilightforest:mangrove_planks`,
+        a: `twilightforest:mangrove_planks`
       });
       event.shaped(`twilightforest:time_chest`, ['aaa', 'a a', 'aaa'], {
-        a: `twilightforest:time_planks`,
+        a: `twilightforest:time_planks`
       });
       event.shaped(
         `twilightforest:transformation_chest`,
         ['aaa', 'a a', 'aaa'],
-        {a: `twilightforest:transformation_planks`}
+        { a: `twilightforest:transformation_planks` }
       );
       event.shaped(`twilightforest:mining_chest`, ['aaa', 'a a', 'aaa'], {
-        a: `twilightforest:mining_planks`,
+        a: `twilightforest:mining_planks`
       });
       event.shaped(`twilightforest:sorting_chest`, ['aaa', 'a a', 'aaa'], {
-        a: `twilightforest:sorting_planks`,
+        a: `twilightforest:sorting_planks`
       });
 
       event.shaped('bloodmagic:sacrificerune', ['aba', 'cdc', 'aba'], {
         a: 'rankine:black_marble',
         b: 'bloodmagic:reinforcedslate',
         c: 'minecraft:glowstone_dust',
-        d: 'bloodmagic:blankrune',
+        d: 'bloodmagic:blankrune'
       });
 
       event.shaped('rankine:rock_drill', [' a ', 'bcb', ' b '], {
         a: 'create:shaft',
         b: 'rankine:bronze_ingot',
-        c: 'create:powdered_obsidian',
+        c: 'create:powdered_obsidian'
       });
       event.shaped('bloodmagic:selfsacrificerune', ['aba', 'cdc', 'aba'], {
         a: 'rankine:gray_marble',
         b: 'bloodmagic:reinforcedslate',
         c: 'minecraft:redstone',
-        d: 'bloodmagic:blankrune',
+        d: 'bloodmagic:blankrune'
       });
       event.shaped('minecraft:bow', [' ab', 'a b', ' ab'], {
         a: '#forge:rods/wooden',
-        b: 'minecraft:string',
+        b: 'minecraft:string'
       });
 
       event.shaped('minecraft:sticky_piston', ['a', 'b'], {
         a: 'tconstruct:sky_slime_ball',
-        b: 'minecraft:piston',
+        b: 'minecraft:piston'
       });
       event.shaped('minecraft:lectern', ['aaa', ' b ', ' a '], {
         a: '#minecraft:wooden_slabs',
-        b: '#forge:bookshelves',
+        b: '#forge:bookshelves'
       });
       event.shaped('minecraft:book', ['aa', 'ab'], {
         a: 'minecraft:paper',
-        b: 'minecraft:leather',
+        b: 'minecraft:leather'
       });
       event.shaped('2x naturesaura:infused_brick', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'naturesaura:infused_stone',
+        b: 'naturesaura:infused_stone'
       });
       event.shaped('2x undergarden:twistytwig', [' a', 'a '], {
-        a: 'undergarden:wigglewood_planks',
+        a: 'undergarden:wigglewood_planks'
       });
       event.shaped('2x blue_skies:maple_stick', ['a', 'a'], {
-        a: 'blue_skies:maple_planks',
+        a: 'blue_skies:maple_planks'
       });
       event.shaped('2x blue_skies:dusk_stick', ['a', 'a'], {
-        a: 'blue_skies:dusk_planks',
+        a: 'blue_skies:dusk_planks'
       });
       event.shaped('2x blue_skies:lunar_stick', ['a', 'a'], {
-        a: 'blue_skies:lunar_planks',
+        a: 'blue_skies:lunar_planks'
       });
       event.shaped(`twilightforest:darkwood_chest`, ['aaa', 'a a', 'aaa'], {
-        a: `twilightforest:dark_planks`,
+        a: `twilightforest:dark_planks`
       });
     },
     chapter_4: () => {
@@ -353,9 +353,9 @@ onEvent('recipes', event => {
           'botania:livingrock_bricks',
           `cataclysm:witherite_block`,
           `rankine:alloy_furnace`,
-          'rankine:glass_cutter',
+          'rankine:glass_cutter'
         ],
-        type: 'minecraft:crafting_shaped',
+        type: 'minecraft:crafting_shaped'
       });
 
       event.shaped('hexerei:book_of_shadows', ['aba', 'cde', 'aaa'], {
@@ -363,58 +363,58 @@ onEvent('recipes', event => {
         b: 'architects_palette:twisted_sapling',
         c: 'hexerei:animal_fat',
         d: 'minecraft:book',
-        e: 'hexerei:sage_seed',
+        e: 'hexerei:sage_seed'
       });
       event.shaped(`create:controls`, ['a', 'b', 'c'], {
         a: `minecraft:lever`,
         b: 'create:railway_casing',
-        c: 'create:electron_tube',
+        c: 'create:electron_tube'
       });
 
       event.shaped(
         `2x immersiveengineering:sheetmetal_gold`,
         ['aba', 'aba', 'aba'],
-        {a: `minecraft:gold_nugget`, b: `minecraft:gold_ingot`}
+        { a: `minecraft:gold_nugget`, b: `minecraft:gold_ingot` }
       );
 
       event.shaped(
         `2x immersiveengineering:sheetmetal_silver`,
         ['aba', 'aba', 'aba'],
-        {a: `rankine:silver_nugget`, b: `rankine:silver_ingot`}
+        { a: `rankine:silver_nugget`, b: `rankine:silver_ingot` }
       );
       event.shaped(`2x rankine:copper_sheetmetal`, ['aba', 'aba', 'aba'], {
         a: `rankine:copper_nugget`,
-        b: `minecraft:copper_ingot`,
+        b: `minecraft:copper_ingot`
       });
       event.shaped(`4x rankine:iron_sheetmetal`, [' a ', 'a a', ' a '], {
-        a: `create:iron_sheet`,
+        a: `create:iron_sheet`
       });
       event.shaped(
         `4x immersiveengineering:sheetmetal_gold`,
         [' a ', 'a a', ' a '],
-        {a: `create:golden_sheet`}
+        { a: `create:golden_sheet` }
       );
       event.shaped(`4x rankine:brass_sheetmetal`, [' a ', 'a a', ' a '], {
-        a: `create:brass_sheet`,
+        a: `create:brass_sheet`
       });
       event.shaped(`4x rankine:copper_sheetmetal`, [' a ', 'a a', ' a '], {
-        a: `create:copper_sheet`,
+        a: `create:copper_sheet`
       });
       event.shaped(`2x tconstruct:scorched_bricks`, ['ab', 'ba'], {
         a: `tconstruct:scorched_brick`,
-        b: 'rankine:mortar',
+        b: 'rankine:mortar'
       });
       event.shaped(`2x botania:livingrock_bricks`, ['ab', 'ba'], {
         a: `botania:livingrock`,
-        b: 'rankine:mortar',
+        b: 'rankine:mortar'
       });
       event.shaped(`cataclysm:witherite_block`, ['aaa', 'aaa', 'aaa'], {
-        a: `cataclysm:witherite_ingot`,
+        a: `cataclysm:witherite_ingot`
       });
 
       event.shaped('rankine:glass_cutter', [' aa', ' ba', 'b  '], {
         a: 'minecraft:quartz',
-        b: 'rankine:black_gold_ingot',
+        b: 'rankine:black_gold_ingot'
       });
 
       [
@@ -428,30 +428,30 @@ onEvent('recipes', event => {
         'bronze',
         'brass',
         'sterling_silver',
-        'amalgam',
-      ].forEach(id => {
+        'amalgam'
+      ].forEach((id) => {
         event.shaped(`2x rankine:${id}_sheetmetal`, ['aba', 'aba', 'aba'], {
           a: `rankine:${id}_nugget`,
-          b: `rankine:${id}_ingot`,
+          b: `rankine:${id}_ingot`
         });
       });
 
-      ['aluminum', 'tin', 'lead'].forEach(id => {
+      ['aluminum', 'tin', 'lead'].forEach((id) => {
         event.shaped(`2x rankine:${id}_sheetmetal`, ['aba', 'aba', 'aba'], {
           a: `rankine:${id}_nugget`,
-          b: `rankine:${id}_ingot`,
+          b: `rankine:${id}_ingot`
         });
       });
 
       event.shaped('minecraft:brewing_stand', [' a ', 'bbb'], {
         a: 'minecraft:blaze_rod',
-        b: '#forge:stone',
+        b: '#forge:stone'
       });
       event.shaped('minecraft:piston', ['aaa', 'bcb', 'bdb'], {
         a: '#minecraft:planks',
         b: 'minecraft:cobblestone',
         c: 'minecraft:iron_ingot',
-        d: 'minecraft:redstone',
+        d: 'minecraft:redstone'
       });
     },
     chapter_5_1: () => {
@@ -462,75 +462,75 @@ onEvent('recipes', event => {
           'botania:mana_pylon',
           'architects_palette:tuff_bricks',
           'botania:metamorphic_forest_bricks',
-          'botania: metamorphic_mountain_bricks',
-          'botania: metamorphic_fungal_bricks',
-          'botania: metamorphic_swamp_bricks',
-          'botania: metamorphic_desert_bricks',
-          'botania: metamorphic_taiga_bricks',
+          'botania:metamorphic_mountain_bricks',
+          'botania:metamorphic_fungal_bricks',
+          'botania:metamorphic_swamp_bricks',
+          'botania:metamorphic_desert_bricks',
+          'botania:metamorphic_taiga_bricks',
           'tconstruct:earth_cake',
           'tconstruct:sky_cake',
-          'tconstruct:blood_cake',
+          'tconstruct:blood_cake'
         ],
-        type: 'minecraft:crafting_shaped',
+        type: 'minecraft:crafting_shaped'
       });
 
       event.shaped('2x architects_palette:tuff_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'minecraft:tuff',
+        b: 'minecraft:tuff'
       });
       event.shaped('2x botania:metamorphic_forest_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'botania:metamorphic_forest_stone',
+        b: 'botania:metamorphic_forest_stone'
       });
       event.shaped('2x botania:metamorphic_plains_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'botania:metamorphic_plains_stone',
+        b: 'botania:metamorphic_plains_stone'
       });
       event.shaped('2x botania:metamorphic_mountain_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'botania:metamorphic_mountain_stone',
+        b: 'botania:metamorphic_mountain_stone'
       });
       event.shaped('2x botania:metamorphic_fungal_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'botania:metamorphic_fungal_stone',
+        b: 'botania:metamorphic_fungal_stone'
       });
       event.shaped('2x botania:metamorphic_swamp_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'botania:metamorphic_swamp_stone',
+        b: 'botania:metamorphic_swamp_stone'
       });
       event.shaped('2x botania:metamorphic_desert_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'botania:metamorphic_desert_stone',
+        b: 'botania:metamorphic_desert_stone'
       });
       event.shaped('2x botania:metamorphic_taiga_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'botania:metamorphic_taiga_stone',
+        b: 'botania:metamorphic_taiga_stone'
       });
       event.shaped('2x botania:metamorphic_mesa_bricks', ['ab', 'ba'], {
         a: 'rankine:mortar',
-        b: 'botania:metamorphic_mesa_stone',
+        b: 'botania:metamorphic_mesa_stone'
       });
       event.shaped('tconstruct:earth_cake', ['aaa', 'bcb', 'ddd'], {
         a: 'tconstruct:earth_slime_bucket',
         b: 'minecraft:glowstone_dust',
         c: 'minecraft:egg',
-        d: 'minecraft:grass',
+        d: 'minecraft:grass'
       });
       event.shaped('tconstruct:sky_cake', ['aaa', 'bcb', 'ddd'], {
         a: 'tconstruct:sky_slime_bucket',
         b: 'minecraft:glowstone_dust',
         c: 'minecraft:egg',
-        d: 'hem:blueleaf_grass',
+        d: 'hem:blueleaf_grass'
       });
       event.shaped('tconstruct:blood_cake', ['aaa', 'bcb', 'ddd'], {
         a: 'tconstruct:blood_bucket',
         b: 'tconstruct:blood_slime_ball',
         c: 'minecraft:egg',
-        d: 'blue_skies:cherry_grass',
+        d: 'blue_skies:cherry_grass'
       });
 
       event.shaped('naturesaura:tainted_gold_block', ['aaa', 'aaa', 'aaa'], {
-        a: 'naturesaura:tainted_gold',
+        a: 'naturesaura:tainted_gold'
       });
     },
     chapter_5_2: () => {
@@ -551,38 +551,38 @@ onEvent('recipes', event => {
           'rankine: nickel_sheetmetal',
           'rankine:silver_zinc_battery',
           'rankine:lead_acid_battery',
-          `rankine:magnetometer`,
+          `rankine:magnetometer`
         ],
-        type: 'minecraft:crafting_shaped',
+        type: 'minecraft:crafting_shaped'
       });
 
       event.shaped('pneumaticcraft:compressed_bricks', ['ab', 'ba'], {
         a: 'pneumaticcraft:compressed_stone',
-        b: 'rankine:mortar',
+        b: 'rankine:mortar'
       });
       event.shaped('pneumaticcraft:reinforced_bricks', ['ab', 'ba'], {
         a: 'pneumaticcraft:reinforced_stone',
-        b: 'rankine:mortar',
+        b: 'rankine:mortar'
       });
 
       event.shaped(`2x rankine:cast_iron_sheetmetal`, ['aba', 'aba', 'aba'], {
         a: `rankine:cast_iron_nugget`,
-        b: `rankine:cast_iron_ingot`,
+        b: `rankine:cast_iron_ingot`
       });
       event.shaped(`2x rankine:invar_sheetmetal`, ['aba', 'aba', 'aba'], {
         a: `rankine:invar_nugget`,
-        b: `rankine:invar_ingot`,
+        b: `rankine:invar_ingot`
       });
       event.shaped(`2x rankine:cupronickel_sheetmetal`, ['aba', 'aba', 'aba'], {
         a: `rankine:cupronickel_nugget`,
-        b: `rankine:cupronickel_ingot`,
+        b: `rankine:cupronickel_ingot`
       });
       event.shaped(
         `2x rankine:nickel_silver_sheetmetal`,
         ['aba', 'aba', 'aba'],
         {
           a: `rankine:nickel_silver_nugget`,
-          b: `rankine:nickel_silver_ingot`,
+          b: `rankine:nickel_silver_ingot`
         }
       );
       event.shaped(
@@ -590,16 +590,16 @@ onEvent('recipes', event => {
         ['aba', 'aba', 'aba'],
         {
           a: `rankine:titanium_alloy_nugget`,
-          b: `rankine:titanium_alloy_ingot`,
+          b: `rankine:titanium_alloy_ingot`
         }
       );
       event.shaped(`2x rankine:nitinol_sheetmetal`, ['aba', 'aba', 'aba'], {
         a: `rankine:nitinol_nugget`,
-        b: `rankine:nitinol_ingot`,
+        b: `rankine:nitinol_ingot`
       });
       event.shaped(`2x rankine:alnico_sheetmetal`, ['aba', 'aba', 'aba'], {
         a: `rankine:alnico_nugget`,
-        b: `rankine:alnico_ingot`,
+        b: `rankine:alnico_ingot`
       });
 
       event.shaped(
@@ -607,30 +607,30 @@ onEvent('recipes', event => {
         ['aba', 'aba', 'aba'],
         {
           a: `rankine:nickel_superalloy_nugget`,
-          b: `rankine:nickel_superalloy_ingot`,
+          b: `rankine:nickel_superalloy_ingot`
         }
       );
       event.shaped(`2x rankine:titanium_sheetmetal`, ['aba', 'aba', 'aba'], {
         a: `rankine:titanium_nugget`,
-        b: `rankine:titanium_ingot`,
+        b: `rankine:titanium_ingot`
       });
       event.shaped(`2x rankine:nickel_sheetmetal`, ['aba', 'aba', 'aba'], {
         a: `rankine:nickel_nugget`,
-        b: `rankine:nickel_ingot`,
+        b: `rankine:nickel_ingot`
       });
       event.shaped('rankine:silver_zinc_battery', ['aba', 'cdc', 'aea'], {
         a: `rankine:vulcanized_rubber`,
         b: `rankine:silver_ingot`,
         c: 'minecraft:redstone',
         d: 'rankine:graphite_electrode',
-        e: 'rankine:zinc_ingot',
+        e: 'rankine:zinc_ingot'
       });
       event.shaped('rankine:lead_acid_battery', ['aba', 'cdc', 'aba'], {
         a: `rankine:vulcanized_rubber`,
         b: `rankine:lead_ingot`,
         c: 'minecraft:redstone',
-        d: 'immersiveengineering:redstone_acid_bucket',
+        d: 'immersiveengineering:redstone_acid_bucket'
       });
-    },
+    }
   });
 });

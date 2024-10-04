@@ -1,26 +1,50 @@
-name: Package Modpack
+name: Release
 
 on:
   push:
     branches:
-      - v0.6.8
+      - "main"
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
-  package_modpack:
+  release-modpack:
     runs-on: ubuntu-latest
-
+    needs: release-please
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
-      - name: Create Modpack ZIP
-        run: |
-          mkdir -p modpack
-          cp -r config defaultconfigs kubejs patchouli_books template xaeroworldmap.txt xaerominimap.txt modpack/
-          zip -r modpack.zip modpack
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-      - name: Upload Modpack ZIP
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run release script
+        run: node release-script.js
+
+      - name: Upload Modpack Zip as Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: modpack
-          path: modpack.zip
+          name: modpack-zip
+          path: ./output/*.zip
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+          release-type: simple
+      - name: Print release outputs for debugging
+        continue-on-error: true
+        run: |
+          echo "Release outputs:"
+          echo "${{ toJson(steps.release.outputs) }}"

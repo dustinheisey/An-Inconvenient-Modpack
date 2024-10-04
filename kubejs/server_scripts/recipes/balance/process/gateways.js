@@ -1,4 +1,4 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
     craft: () => {
       event.custom({
@@ -6,422 +6,422 @@ onEvent('recipes', event => {
         ritual_type: 'occultism:craft',
         duration: 60,
         ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
+          item: 'occultism:ritual_dummy/custom_ritual'
         },
-        activation_item: {item: 'kubejs:iridescent_scales'},
+        activation_item: { item: 'kubejs:iridescent_scales' },
         pentacle_id: 'occultism:summon_foliot',
         ingredients: [
           {
-            item: 'blue_skies:aquite',
+            item: 'blue_skies:aquite'
           },
           {
-            item: 'blue_skies:aquite',
+            item: 'blue_skies:aquite'
           },
           {
-            item: 'blue_skies:soul_fragment',
+            item: 'blue_skies:soul_fragment'
           },
           {
-            item: 'blue_skies:cryo_root',
+            item: 'blue_skies:cryo_root'
           },
           {
-            item: 'blue_skies:winter_leaves',
+            item: 'blue_skies:winter_leaves'
           },
           {
-            item: 'blue_skies:municipal_monkfish',
+            item: 'blue_skies:municipal_monkfish'
           },
           {
-            item: 'blue_skies:grittle_flatfish',
+            item: 'blue_skies:grittle_flatfish'
           },
           {
-            item: 'rankine:white_marble',
+            item: 'rankine:white_marble'
           },
           {
-            item: 'rankine:white_marble',
+            item: 'rankine:white_marble'
           },
           {
-            item: 'blue_skies:starlit_sapling',
+            item: 'blue_skies:starlit_sapling'
           },
           {
-            item: 'blue_skies:chilled_lily_pad',
+            item: 'blue_skies:chilled_lily_pad'
           },
           {
-            item: 'blue_skies:azulfo_horn',
-          },
+            item: 'blue_skies:azulfo_horn'
+          }
         ],
         result: {
           item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_everbright_gateway"}',
-        },
+          nbt: '{gateway:"gateways:small_everbright_gateway"}'
+        }
       });
       event.custom({
         type: 'occultism:ritual',
         ritual_type: 'occultism:craft',
         duration: 60,
         ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
+          item: 'occultism:ritual_dummy/custom_ritual'
         },
-        activation_item: {item: 'undergarden:masticator_scales'},
+        activation_item: { item: 'undergarden:masticator_scales' },
         pentacle_id: 'occultism:craft_foliot',
         ingredients: [
           {
-            item: 'undergarden:bloody_stew',
+            item: 'undergarden:bloody_stew'
           },
           {
-            item: 'undergarden:inky_stew',
+            item: 'undergarden:inky_stew'
           },
           {
-            item: 'undergarden:indigo_stew',
+            item: 'undergarden:indigo_stew'
           },
           {
-            item: 'undergarden:veiled_stew',
+            item: 'undergarden:veiled_stew'
           },
           {
-            item: 'undergarden:utherium_crystal',
+            item: 'undergarden:utherium_crystal'
           },
           {
-            item: 'undergarden:forgotten_nugget',
+            item: 'undergarden:forgotten_nugget'
           },
           {
-            item: 'undergarden:twistytwig',
+            item: 'undergarden:twistytwig'
           },
           {
-            item: 'undergarden:utherium_crystal',
+            item: 'undergarden:utherium_crystal'
           },
           {
-            item: 'undergarden:forgotten_nugget',
+            item: 'undergarden:forgotten_nugget'
           },
           {
-            item: 'undergarden:twistytwig',
+            item: 'undergarden:twistytwig'
           },
           {
-            item: 'undergarden:rotten_blisterberry',
+            item: 'undergarden:rotten_blisterberry'
           },
           {
-            item: 'undergarden:brute_tusk',
-          },
+            item: 'undergarden:brute_tusk'
+          }
         ],
         result: {
           item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_undergarden_gateway"}',
-        },
+          nbt: '{gateway:"gateways:small_undergarden_gateway"}'
+        }
       });
       event.custom({
         type: 'occultism:ritual',
         ritual_type: 'occultism:craft',
         duration: 60,
         ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
+          item: 'occultism:ritual_dummy/custom_ritual'
         },
-        activation_item: {item: 'blue_skies:soul_fragment'},
+        activation_item: { item: 'blue_skies:soul_fragment' },
         pentacle_id: 'occultism:craft_djinni',
         ingredients: [
           {
-            item: 'blue_skies:crescent_fruit',
+            item: 'blue_skies:crescent_fruit'
           },
           {
-            item: 'blue_skies:monitor_tail',
+            item: 'blue_skies:monitor_tail'
           },
           {
-            item: 'blue_skies:charscale_moki',
+            item: 'blue_skies:charscale_moki'
           },
           {
-            item: 'blue_skies:horizofin_tunid',
+            item: 'blue_skies:horizofin_tunid'
           },
           {
-            item: 'blue_skies:fox_pelt',
+            item: 'blue_skies:fox_pelt'
           },
           {
-            item: 'blue_skies:bug_guts',
+            item: 'blue_skies:bug_guts'
           },
           {
-            item: 'blue_skies:horizonite_ingot',
+            item: 'blue_skies:horizonite_ingot'
           },
           {
-            item: 'blue_skies:bug_guts',
+            item: 'blue_skies:bug_guts'
           },
           {
-            item: 'blue_skies:horizonite_ingot',
+            item: 'blue_skies:horizonite_ingot'
           },
           {
-            item: 'blue_skies:venom_sac',
+            item: 'blue_skies:venom_sac'
           },
           {
-            item: 'blue_skies:blaze_bud',
+            item: 'blue_skies:blaze_bud'
           },
           {
-            item: 'blue_skies:moonlit_water_lily',
-          },
+            item: 'blue_skies:moonlit_water_lily'
+          }
         ],
         result: {
           item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_everdawn_gateway"}',
-        },
+          nbt: '{gateway:"gateways:small_everdawn_gateway"}'
+        }
       });
       event.custom({
         type: 'occultism:ritual',
         ritual_type: 'occultism:craft',
         duration: 60,
         ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
+          item: 'occultism:ritual_dummy/custom_ritual'
         },
-        activation_item: {item: 'blue_skies:soul_fragment'},
+        activation_item: { item: 'blue_skies:soul_fragment' },
         pentacle_id: 'occultism:summon_wild_greater_spirit',
         ingredients: [
           {
-            item: 'twilightforest:charm_of_keeping_2',
+            item: 'twilightforest:charm_of_keeping_2'
           },
           {
-            item: 'twilightforest:charm_of_keeping_2',
+            item: 'twilightforest:charm_of_keeping_2'
           },
           {
-            item: 'twilightforest:raw_ironwood',
+            item: 'twilightforest:raw_ironwood'
           },
           {
-            item: 'twilightforest:experiment_115',
+            item: 'twilightforest:experiment_115'
           },
           {
-            item: 'twilightforest:huge_water_lily',
+            item: 'twilightforest:huge_water_lily'
           },
           {
-            item: 'twilightforest:transformation_powder',
+            item: 'twilightforest:transformation_powder'
           },
           {
-            item: 'twilightforest:transformation_powder',
+            item: 'twilightforest:transformation_powder'
           },
           {
-            item: 'twilightforest:carminite',
+            item: 'twilightforest:carminite'
           },
           {
-            item: 'twilightforest:fiery_tears',
+            item: 'twilightforest:fiery_tears'
           },
           {
-            item: 'twilightforest:fiery_blood',
+            item: 'twilightforest:fiery_blood'
           },
           {
-            item: 'twilightforest:fiery_blood',
+            item: 'twilightforest:fiery_blood'
           },
           {
-            item: 'twilightforest:thorn_rose',
-          },
+            item: 'twilightforest:thorn_rose'
+          }
         ],
         result: {
           item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_twilight_gateway"}',
-        },
+          nbt: '{gateway:"gateways:small_twilight_gateway"}'
+        }
       });
       event.custom({
         type: 'occultism:ritual',
         ritual_type: 'occultism:craft',
         duration: 60,
         ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
+          item: 'occultism:ritual_dummy/custom_ritual'
         },
-        activation_item: {item: 'blue_skies:soul_fragment'},
+        activation_item: { item: 'blue_skies:soul_fragment' },
         pentacle_id: 'occultism:summon_marid',
         ingredients: [
           {
-            item: 'minecraft:wither_rose',
+            item: 'minecraft:wither_rose'
           },
           {
-            item: 'minecraft:crimson_fungus',
+            item: 'minecraft:crimson_fungus'
           },
           {
-            item: 'minecraft:warped_fungus',
+            item: 'minecraft:warped_fungus'
           },
           {
-            item: 'minecraft:quartz',
+            item: 'minecraft:quartz'
           },
           {
-            item: 'minecraft:porkchop',
+            item: 'minecraft:porkchop'
           },
           {
-            item: 'cataclysm:witherite_ingot',
+            item: 'cataclysm:witherite_ingot'
           },
           {
-            item: 'rankine:carbon_dioxide_gas_bottle',
+            item: 'rankine:carbon_dioxide_gas_bottle'
           },
           {
-            item: 'minecraft:porkchop',
+            item: 'minecraft:porkchop'
           },
           {
-            item: 'cataclysm:witherite_ingot',
+            item: 'cataclysm:witherite_ingot'
           },
           {
-            item: 'rankine:carbon_dioxide_gas_bottle',
+            item: 'rankine:carbon_dioxide_gas_bottle'
           },
           {
-            item: 'occultism:iesnium_ingot',
+            item: 'occultism:iesnium_ingot'
           },
           {
-            item: 'minecraft:blaze_powder',
-          },
+            item: 'minecraft:blaze_powder'
+          }
         ],
         result: {
           item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_nether_gateway"}',
-        },
+          nbt: '{gateway:"gateways:small_nether_gateway"}'
+        }
       });
       event.custom({
         type: 'occultism:ritual',
         ritual_type: 'occultism:craft',
         duration: 60,
         ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
+          item: 'occultism:ritual_dummy/custom_ritual'
         },
-        activation_item: {item: 'blue_skies:soul_fragment'},
+        activation_item: { item: 'blue_skies:soul_fragment' },
         pentacle_id: 'occultism:craft_marid',
         ingredients: [
           {
-            item: 'hem:copparite',
+            item: 'hem:copparite'
           },
           {
-            item: 'rankine:vulcanized_rubber',
+            item: 'rankine:vulcanized_rubber'
           },
           {
-            item: 'hem:lush_flower_1',
+            item: 'hem:lush_flower_1'
           },
           {
-            item: 'hem:shotgun_shell',
+            item: 'hem:shotgun_shell'
           },
           {
-            item: 'create:chromatic_compound',
+            item: 'create:chromatic_compound'
           },
           {
-            item: 'hem:copparite',
+            item: 'hem:copparite'
           },
           {
-            item: 'rankine:vulcanized_rubber',
+            item: 'rankine:vulcanized_rubber'
           },
           {
-            item: 'hem:lush_flower_1',
+            item: 'hem:lush_flower_1'
           },
           {
-            item: 'hem:shotgun_shell',
+            item: 'hem:shotgun_shell'
           },
           {
-            item: 'create:chromatic_compound',
+            item: 'create:chromatic_compound'
           },
           {
-            item: 'rankine:steel_ingot',
+            item: 'rankine:steel_ingot'
           },
           {
-            item: 'rankine:steel_ingot',
-          },
+            item: 'rankine:steel_ingot'
+          }
         ],
         result: {
           item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_blueleaf_gateway"}',
-        },
+          nbt: '{gateway:"gateways:small_blueleaf_gateway"}'
+        }
       });
       event.custom({
         type: 'occultism:ritual',
         ritual_type: 'occultism:craft',
         duration: 60,
         ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
+          item: 'occultism:ritual_dummy/custom_ritual'
         },
-        activation_item: {item: 'blue_skies:soul_fragment'},
+        activation_item: { item: 'blue_skies:soul_fragment' },
         pentacle_id: 'occultism:craft_marid',
         ingredients: [
           {
-            item: 'hem:copparite',
+            item: 'hem:copparite'
           },
           {
-            item: 'rankine:vulcanized_rubber',
+            item: 'rankine:vulcanized_rubber'
           },
           {
-            item: 'hem:lush_flower_1',
+            item: 'hem:lush_flower_1'
           },
           {
-            item: 'hem:shotgun_shell',
+            item: 'hem:shotgun_shell'
           },
           {
-            item: 'create:chromatic_compound',
+            item: 'create:chromatic_compound'
           },
           {
-            item: 'hem:copparite',
+            item: 'hem:copparite'
           },
           {
-            item: 'rankine:vulcanized_rubber',
+            item: 'rankine:vulcanized_rubber'
           },
           {
-            item: 'hem:lush_flower_1',
+            item: 'hem:lush_flower_1'
           },
           {
-            item: 'hem:shotgun_shell',
+            item: 'hem:shotgun_shell'
           },
           {
-            item: 'create:chromatic_compound',
+            item: 'create:chromatic_compound'
           },
           {
-            item: 'rankine:steel_ingot',
+            item: 'rankine:steel_ingot'
           },
           {
-            item: 'rankine:steel_ingot',
-          },
+            item: 'rankine:steel_ingot'
+          }
         ],
         result: {
           item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_bumblezone_gateway"}',
-        },
+          nbt: '{gateway:"gateways:small_bumblezone_gateway"}'
+        }
       });
       event.custom({
         type: 'occultism:ritual',
         ritual_type: 'occultism:craft',
         duration: 60,
         ritual_dummy: {
-          item: 'occultism:ritual_dummy/custom_ritual',
+          item: 'occultism:ritual_dummy/custom_ritual'
         },
-        activation_item: {item: 'blue_skies:soul_fragment'},
+        activation_item: { item: 'blue_skies:soul_fragment' },
         pentacle_id: 'occultism:craft_marid',
         ingredients: [
           {
-            item: 'hem:copparite',
+            item: 'hem:copparite'
           },
           {
-            item: 'rankine:vulcanized_rubber',
+            item: 'rankine:vulcanized_rubber'
           },
           {
-            item: 'hem:lush_flower_1',
+            item: 'hem:lush_flower_1'
           },
           {
-            item: 'hem:shotgun_shell',
+            item: 'hem:shotgun_shell'
           },
           {
-            item: 'create:chromatic_compound',
+            item: 'create:chromatic_compound'
           },
           {
-            item: 'hem:copparite',
+            item: 'hem:copparite'
           },
           {
-            item: 'rankine:vulcanized_rubber',
+            item: 'rankine:vulcanized_rubber'
           },
           {
-            item: 'hem:lush_flower_1',
+            item: 'hem:lush_flower_1'
           },
           {
-            item: 'hem:shotgun_shell',
+            item: 'hem:shotgun_shell'
           },
           {
-            item: 'create:chromatic_compound',
+            item: 'create:chromatic_compound'
           },
           {
-            item: 'rankine:steel_ingot',
+            item: 'rankine:steel_ingot'
           },
           {
-            item: 'rankine:steel_ingot',
-          },
+            item: 'rankine:steel_ingot'
+          }
         ],
         result: {
           item: 'gateways:gate_pearl',
-          nbt: '{gateway:"gateways:small_end_gateway"}',
-        },
+          nbt: '{gateway:"gateways:small_end_gateway"}'
+        }
       });
-    },
+    }
   });
 });
 
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   [
     'blaze_gate',
     'creeper_gate',
@@ -433,8 +433,8 @@ onEvent('server.datapack.high_priority', event => {
     'slime_gate',
     'spider_gate',
     'witch_gate',
-    'zombie_gate',
-  ].forEach(id => {
+    'zombie_gate'
+  ].forEach((id) => {
     event.addJson(`gateways:recipes/${id}_small.json`, {});
     event.addJson(`gateways:recipes/${id}.json`, {});
     event.addJson(`gateways:recipes/${id}_large.json`, {});
@@ -456,17 +456,26 @@ onEvent('server.datapack.high_priority', event => {
   function computeEntities(config, size) {
     let json = [];
 
-    config.entities.forEach(id => {
+    config.entities.forEach((id) => {
       let x = 0;
       if (size === 'small')
-        x = config.type === 'mob' ? 5 : config.type === 'group' ? 3 : 1;
+        x =
+          config.type === 'mob' ? 5
+          : config.type === 'group' ? 3
+          : 1;
       else if (size === 'medium')
-        x = config.type === 'mob' ? 10 : config.type === 'group' ? 5 : 1;
+        x =
+          config.type === 'mob' ? 10
+          : config.type === 'group' ? 5
+          : 1;
       else if (size === 'large')
-        x = config.type === 'mob' ? 20 : config.type === 'group' ? 7 : 1;
+        x =
+          config.type === 'mob' ? 20
+          : config.type === 'group' ? 7
+          : 1;
       for (let i = 0; i < x; i++) {
         json.push({
-          entity: id,
+          entity: id
         });
       }
     });
@@ -481,58 +490,61 @@ onEvent('server.datapack.high_priority', event => {
         {
           attribute: 'generic.max_health',
           operation: 'MULTIPLY_TOTAL',
-          value: 2.0,
+          value: 2.0
         },
         {
           attribute: 'generic.movement_speed',
           operation: 'MULTIPLY_TOTAL',
-          value: 0.05,
+          value: 0.05
         },
         {
           attribute: 'generic.armor',
           operation: 'ADDITION',
-          value: 4,
-        },
+          value: 4
+        }
       ];
     else if (size === 'large')
       return [
         {
           attribute: 'generic.max_health',
           operation: 'MULTIPLY_TOTAL',
-          value: 4.0,
+          value: 4.0
         },
         {
           attribute: 'generic.movement_speed',
           operation: 'MULTIPLY_TOTAL',
-          value: 0.05,
+          value: 0.05
         },
         {
           attribute: 'generic.armor',
           operation: 'ADDITION',
-          value: 4,
-        },
+          value: 4
+        }
       ];
   }
 
   function computeWaveRewards(config, size) {
     let json = [];
 
-    config.entities.forEach(id => {
+    config.entities.forEach((id) => {
       json.push({
         type: 'entity_loot',
         entity: id,
-        rolls: size === 'small' ? 10 : size === 'medium' ? 20 : 40,
+        rolls:
+          size === 'small' ? 10
+          : size === 'medium' ? 20
+          : 40
       });
     });
 
     if (config.rewards) {
-      config.rewards.forEach(reward => {
+      config.rewards.forEach((reward) => {
         json.push({
           type: 'stack',
           stack: {
             item: reward.id,
-            count: reward.count,
-          },
+            count: reward.count
+          }
         });
       });
     }
@@ -547,7 +559,7 @@ onEvent('server.datapack.high_priority', event => {
       json.push({
         type: 'command',
         command: `gamestage add <summoner> restoration_${config.id}_gateway`,
-        desc: `Restore life to the Overworld from ${config.dimension}`,
+        desc: `Restore life to the Overworld from ${config.dimension}`
       });
 
       json.push({
@@ -555,14 +567,14 @@ onEvent('server.datapack.high_priority', event => {
         stack: {
           item: 'gateways:gate_pearl',
           nbt: `{gateway:"gateways:medium_${config.id}_gateway"}`,
-          count: 1,
-        },
+          count: 1
+        }
       });
-      config.restorations.forEach(config => {
+      config.restorations.forEach((config) => {
         json.push({
           type: 'command',
           command: `summon ${config.id}`,
-          desc: `Find a ${config.name}`,
+          desc: `Find a ${config.name}`
         });
       });
     } else if (size === 'medium') {
@@ -571,33 +583,36 @@ onEvent('server.datapack.high_priority', event => {
         stack: {
           item: 'gateways:gate_pearl',
           nbt: `{gateway:"gateways:large_${config.id}_gateway"}`,
-          count: 1,
-        },
+          count: 1
+        }
       });
     } else if (size === 'large') {
-      config.rewards.forEach(item => {
+      config.rewards.forEach((item) => {
         json.push({
           type: 'stack',
           stack: {
             item: item.id,
             nbt: item.nbt,
-            count: item.count,
-          },
+            count: item.count
+          }
         });
       });
     }
 
-    config.relics.forEach(id => {
+    config.relics.forEach((id) => {
       json.push({
         type: 'chanced',
-        chance: size === 'small' ? 0.1 : size === 'medium' ? 0.3 : 0.75,
+        chance:
+          size === 'small' ? 0.1
+          : size === 'medium' ? 0.3
+          : 0.75,
         reward: {
           type: 'stack',
           stack: {
             item: id,
-            count: 1,
-          },
-        },
+            count: 1
+          }
+        }
       });
     });
 
@@ -608,9 +623,18 @@ onEvent('server.datapack.high_priority', event => {
     let json = {
       size: size,
       color: config.color,
-      completion_xp: size === 'small' ? 500 : size === 'medium' ? 5000 : 50000,
-      spawn_range: size === 'small' ? 10 : size === 'medium' ? 20 : 40,
-      leash_range: size === 'small' ? 40 : size === 'medium' ? 80 : 160,
+      completion_xp:
+        size === 'small' ? 500
+        : size === 'medium' ? 5000
+        : 50000,
+      spawn_range:
+        size === 'small' ? 10
+        : size === 'medium' ? 20
+        : 40,
+      leash_range:
+        size === 'small' ? 40
+        : size === 'medium' ? 80
+        : 160,
       spawn_algorithm: 'gateways:inward_spiral',
       waves: [],
       failures: [
@@ -618,20 +642,20 @@ onEvent('server.datapack.high_priority', event => {
           type: 'explosion',
           strength: 3.0,
           fire: false,
-          block_damage: true,
-        },
-      ],
+          block_damage: true
+        }
+      ]
     };
 
     json.rewards = computeCompletionRewards(config, size);
 
-    config.waves.forEach(wave => {
+    config.waves.forEach((wave) => {
       let config = {
         entities: computeEntities(wave, size),
         modifiers: computeModifiers(size),
         rewards: computeWaveRewards(wave, size),
         max_wave_time: computeMaxWaveTime(wave, size),
-        setup_time: computeSetupTime(wave, size),
+        setup_time: computeSetupTime(wave, size)
       };
 
       json.waves.push(config);
@@ -663,36 +687,36 @@ onEvent('server.datapack.high_priority', event => {
     waves: [
       {
         type: 'mob',
-        entities: ['blue_skies:artificial_golem'],
+        entities: ['blue_skies:artificial_golem']
       },
       {
         type: 'mob',
-        entities: ['blue_skies:armored_frost_spirit'],
+        entities: ['blue_skies:armored_frost_spirit']
       },
       {
         type: 'mob',
-        entities: ['blue_skies:diophyde_prowler'],
+        entities: ['blue_skies:diophyde_prowler']
       },
       {
         type: 'mob',
-        entities: ['blue_skies:polargeist'],
+        entities: ['blue_skies:polargeist']
       },
       {
         type: 'mob',
-        entities: ['blue_skies:crynocerous'],
+        entities: ['blue_skies:crynocerous']
       },
       {
         type: 'boss',
         entities: ['blue_skies:summoner'],
-        rewards: [{id: 'blue_skies:loot_bag_summoner', count: 2}],
+        rewards: [{ id: 'blue_skies:loot_bag_summoner', count: 2 }]
       },
       {
         type: 'mob',
-        entities: ['blue_skies:stonelet'],
+        entities: ['blue_skies:stonelet']
       },
       {
         type: 'mob',
-        entities: ['blue_skies:spewter'],
+        entities: ['blue_skies:spewter']
       },
       {
         type: 'boss',
@@ -700,16 +724,16 @@ onEvent('server.datapack.high_priority', event => {
         rewards: [
           {
             id: 'blue_skies:loot_bag_starlit_crusher',
-            count: 2,
-          },
-        ],
-      },
+            count: 2
+          }
+        ]
+      }
     ],
     restorations: [
-      {id: 'blue_skies:seclam', name: 'seclam'},
-      {id: 'blue_skies:whistleshell_crab', name: 'whistleshell crab'},
-      {id: 'minecraft:turtle', name: 'turtle'},
-      {id: 'minecraft:skeleton', name: 'skeleton'},
+      { id: 'blue_skies:seclam', name: 'seclam' },
+      { id: 'blue_skies:whistleshell_crab', name: 'whistleshell crab' },
+      { id: 'minecraft:turtle', name: 'turtle' },
+      { id: 'minecraft:skeleton', name: 'skeleton' }
     ],
     relics: [
       'relics:amphibian_boot',
@@ -717,18 +741,18 @@ onEvent('server.datapack.high_priority', event => {
       'relics:aqua_walker',
       'relics:jellyfish_necklace',
       'artifacts:flippers',
-      'artifacts:snorkel',
+      'artifacts:snorkel'
     ],
     rewards: [
-      {id: 'minecraft:cod', count: 15},
-      {id: 'minecraft:salmon', count: 15},
-      {id: 'minecraft:tropical_fish', count: 15},
-      {id: 'minecraft:pufferfish', count: 15},
-      {id: 'blue_skies:municipal_monkfish', count: 15},
-      {id: 'rankine:tuna', count: 15},
-      {id: 'kubejs:everbright_token', count: 1},
-      {id: 'minecraft:heart_of_the_sea', count: 1},
-    ],
+      { id: 'minecraft:cod', count: 15 },
+      { id: 'minecraft:salmon', count: 15 },
+      { id: 'minecraft:tropical_fish', count: 15 },
+      { id: 'minecraft:pufferfish', count: 15 },
+      { id: 'blue_skies:municipal_monkfish', count: 15 },
+      { id: 'rankine:tuna', count: 15 },
+      { id: 'kubejs:everbright_token', count: 1 },
+      { id: 'minecraft:heart_of_the_sea', count: 1 }
+    ]
   });
 
   // Undergarden
@@ -739,40 +763,40 @@ onEvent('server.datapack.high_priority', event => {
     waves: [
       {
         type: 'mob',
-        entities: ['undergarden:rotling'],
+        entities: ['undergarden:rotling']
       },
       {
         type: 'mob',
-        entities: ['undergarden:muncher'],
+        entities: ['undergarden:muncher']
       },
       {
         type: 'mob',
         entities: ['undergarden:nargoyle'],
-        rewards: [{id: 'undergarden:raw_cloggrum', count: 15}],
+        rewards: [{ id: 'undergarden:raw_cloggrum', count: 15 }]
       },
       {
         type: 'mob',
-        entities: ['undergarden:rotwalker'],
+        entities: ['undergarden:rotwalker']
       },
       {
         type: 'mob',
-        entities: ['undergarden:rotbeast'],
+        entities: ['undergarden:rotbeast']
       },
       {
         type: 'mob',
-        entities: ['undergarden:forgotten_guardian'],
+        entities: ['undergarden:forgotten_guardian']
       },
       {
         type: 'boss',
         entities: ['undergarden:masticator'],
-        rewards: [{id: 'undergarden:masticator_scales', count: 10}],
-      },
+        rewards: [{ id: 'undergarden:masticator_scales', count: 10 }]
+      }
     ],
     restorations: [
-      {id: 'minecraft:slime', name: 'slime'},
-      {id: 'minecraft:creeper', name: 'creeper'},
-      {id: 'undergarden:mog', name: 'mog'},
-      {id: 'undergarden:gloomper', name: 'gloomper'},
+      { id: 'minecraft:slime', name: 'slime' },
+      { id: 'minecraft:creeper', name: 'creeper' },
+      { id: 'undergarden:mog', name: 'mog' },
+      { id: 'undergarden:gloomper', name: 'gloomper' }
     ],
     relics: [
       'relics:spore_sack',
@@ -780,9 +804,9 @@ onEvent('server.datapack.high_priority', event => {
       'artifacts:lucky_scarf',
       'artifacts:digging_claws',
       'artifacts:night_vision_goggles',
-      'artifacts:kitty_slippers',
+      'artifacts:kitty_slippers'
     ],
-    rewards: [{id: 'kubejs:undergarden_token', count: 1}],
+    rewards: [{ id: 'kubejs:undergarden_token', count: 1 }]
   });
 
   // Everdawn
@@ -793,36 +817,36 @@ onEvent('server.datapack.high_priority', event => {
     waves: [
       {
         type: 'mob',
-        entities: ['blue_skies:emberback'],
+        entities: ['blue_skies:emberback']
       },
       {
         type: 'boss',
         entities: ['blue_skies:alchemist'],
-        rewards: [{id: 'blue_skies:loot_bag_alchemist', count: 2}],
+        rewards: [{ id: 'blue_skies:loot_bag_alchemist', count: 2 }]
       },
       {
         type: 'mob',
-        entities: ['blue_skies:nested_spider'],
+        entities: ['blue_skies:nested_spider']
       },
       {
         type: 'mob',
-        entities: ['blue_skies:venom_spider'],
+        entities: ['blue_skies:venom_spider']
       },
       {
         type: 'mob',
-        entities: ['blue_skies:infested_swarmer'],
+        entities: ['blue_skies:infested_swarmer']
       },
       {
         type: 'boss',
         entities: ['blue_skies:arachnarch'],
-        rewards: [{id: 'blue_skies:loot_bag_arachnarch', count: 2}],
-      },
+        rewards: [{ id: 'blue_skies:loot_bag_arachnarch', count: 2 }]
+      }
     ],
     restorations: [
-      {id: 'minecraft:spider', name: 'spider'},
-      {id: 'minecraft:cave_spider', name: 'cave spider'},
-      {id: 'minecraft:fox', name: 'fox'},
-      {id: 'blue_skies:cosmic_fox', name: 'cosmic fox'},
+      { id: 'minecraft:spider', name: 'spider' },
+      { id: 'minecraft:cave_spider', name: 'cave spider' },
+      { id: 'minecraft:fox', name: 'fox' },
+      { id: 'blue_skies:cosmic_fox', name: 'cosmic fox' }
     ],
     relics: [
       'relics:rage_glove',
@@ -830,9 +854,9 @@ onEvent('server.datapack.high_priority', event => {
       'artifacts:scarf_of_invisibility',
       'artifacts:feral_claws',
       'artifacts:panic_necklace',
-      'artifacts:power_glove',
+      'artifacts:power_glove'
     ],
-    rewards: [{id: 'kubejs:everdawn_token', count: 1}],
+    rewards: [{ id: 'kubejs:everdawn_token', count: 1 }]
   });
 
   // Twilight
@@ -848,24 +872,24 @@ onEvent('server.datapack.high_priority', event => {
           'twilightforest:skeleton_druid',
           'twilightforest:swarm_spider',
           'twilightforest:king_spider',
-          'twilightforest:hedge_spider',
-        ],
+          'twilightforest:hedge_spider'
+        ]
       },
       {
         type: 'boss',
-        entities: ['twilightforest:naga'],
+        entities: ['twilightforest:naga']
       },
       {
         type: 'group',
         entities: [
           'twilightforest:redcap',
           'twilightforest:redcap_sapper',
-          'twilightforest:kobold',
-        ],
+          'twilightforest:kobold'
+        ]
       },
       {
         type: 'boss',
-        entities: ['twilightforest:lich'],
+        entities: ['twilightforest:lich']
       },
       {
         type: 'group',
@@ -873,16 +897,16 @@ onEvent('server.datapack.high_priority', event => {
           'twilightforest:fire_beetle',
           'twilightforest:pinch_beetle',
           'twilightforest:slime_beetle',
-          'twilightforest:maze_slime',
-        ],
+          'twilightforest:maze_slime'
+        ]
       },
       {
         type: 'boss',
-        entities: ['twilightforest:minoshroom'],
+        entities: ['twilightforest:minoshroom']
       },
       {
         type: 'boss',
-        entities: ['twilightforest:hydra'],
+        entities: ['twilightforest:hydra']
       },
       {
         type: 'group',
@@ -890,12 +914,12 @@ onEvent('server.datapack.high_priority', event => {
           'twilightforest:helmet_crab',
           'twilightforest:blockchain_goblin',
           'twilightforest:lower_goblin_knight',
-          'twilightforest:upper_goblin_knight',
-        ],
+          'twilightforest:upper_goblin_knight'
+        ]
       },
       {
         type: 'boss',
-        entities: ['twilightforest:knight_phantom'],
+        entities: ['twilightforest:knight_phantom']
       },
       {
         type: 'group',
@@ -903,16 +927,16 @@ onEvent('server.datapack.high_priority', event => {
           'twilightforest:carminite_broodling',
           'twilightforest:carminite_ghastguard',
           'twilightforest:carminite_ghastling',
-          'twilightforest:carminite_golem',
-        ],
+          'twilightforest:carminite_golem'
+        ]
       },
       {
         type: 'boss',
-        entities: ['twilightforest:ur_ghast'],
+        entities: ['twilightforest:ur_ghast']
       },
       {
         type: 'boss',
-        entities: ['twilightforest:alpha_yeti'],
+        entities: ['twilightforest:alpha_yeti']
       },
       {
         type: 'group',
@@ -920,31 +944,31 @@ onEvent('server.datapack.high_priority', event => {
           'twilightforest:stable_ice_core',
           'twilightforest:unstable_ice_core',
           'twilightforest:ice_crystal',
-          'twilightforest:snow_guardian',
-        ],
+          'twilightforest:snow_guardian'
+        ]
       },
       {
         type: 'boss',
-        entities: ['twilightforest:snow_queen'],
+        entities: ['twilightforest:snow_queen']
       },
       {
         type: 'group',
         entities: [
           'twilightforest:giant_miner',
           'twilightforest:armored_giant',
-          'twilightforest:troll',
-        ],
+          'twilightforest:troll'
+        ]
       },
       {
         type: 'boss',
-        entities: ['ecofriendly:pollutor_king_ym'],
-      },
+        entities: ['ecofriendly:pollutor_king_ym']
+      }
     ],
     restorations: [
-      {id: 'minecraft:rabbit', name: 'rabbit'},
-      {id: 'minecraft:chicken', name: 'chicken'},
-      {id: 'minecraft:wolf', name: 'wolf'},
-      {id: 'totemic:bald_eagle', name: 'bald eagle'},
+      { id: 'minecraft:rabbit', name: 'rabbit' },
+      { id: 'minecraft:chicken', name: 'chicken' },
+      { id: 'minecraft:wolf', name: 'wolf' },
+      { id: 'totemic:bald_eagle', name: 'bald eagle' }
     ],
     relics: [
       'relics:magic_mirror',
@@ -952,10 +976,10 @@ onEvent('server.datapack.high_priority', event => {
       'artifacts:universal_attractor',
       'artifacts:steadfast_spikes',
       'artifacts:pocket_piston',
-      'artifacts:crystal_heart',
+      'artifacts:crystal_heart'
     ],
 
-    rewards: [{id: 'kubejs:twilight_token', count: 1}],
+    rewards: [{ id: 'kubejs:twilight_token', count: 1 }]
   });
 
   // Nether
@@ -966,59 +990,59 @@ onEvent('server.datapack.high_priority', event => {
     waves: [
       {
         type: 'mob',
-        entities: ['minecraft:magma_cube'],
+        entities: ['minecraft:magma_cube']
       },
       {
         type: 'mob',
-        entities: ['minecraft:wither_skeleton'],
+        entities: ['minecraft:wither_skeleton']
       },
       {
         type: 'mob',
-        entities: ['minecraft:ghast'],
+        entities: ['minecraft:ghast']
       },
       {
         type: 'boss',
-        entities: ['minecraft:wither'],
+        entities: ['minecraft:wither']
       },
       {
         type: 'mob',
-        entities: ['minecraft:blaze'],
+        entities: ['minecraft:blaze']
       },
       {
         type: 'boss',
-        entities: ['cataclysm:ignited_revenant'],
+        entities: ['cataclysm:ignited_revenant']
       },
       {
         type: 'boss',
-        entities: ['cataclysm:ignis'],
+        entities: ['cataclysm:ignis']
       },
       {
         type: 'group',
-        entities: ['minecraft:hoglin', 'minecraft:zoglin'],
+        entities: ['minecraft:hoglin', 'minecraft:zoglin']
       },
       {
         type: 'mob',
-        entities: ['minecraft:zombified_piglin'],
+        entities: ['minecraft:zombified_piglin']
       },
       {
         type: 'group',
-        entities: ['minecraft:piglin', 'minecraft:piglin_brute'],
+        entities: ['minecraft:piglin', 'minecraft:piglin_brute']
       },
       {
         type: 'boss',
-        entities: ['cataclysm:netherite_monstrosity'],
-      },
+        entities: ['cataclysm:netherite_monstrosity']
+      }
     ],
-    restorations: [{id: 'minecraft:pig', name: 'pig'}],
+    restorations: [{ id: 'minecraft:pig', name: 'pig' }],
     relics: [
       'relics:magma_walker',
       'relics:bastion_ring',
       'relics:blazing_flask',
       'artifacts:fire_gauntlet',
       'artifacts:flame_pendant',
-      'artifacts:obsidian_skull',
+      'artifacts:obsidian_skull'
     ],
-    rewards: [{id: 'kubejs:nether_token', count: 1}],
+    rewards: [{ id: 'kubejs:nether_token', count: 1 }]
   });
 
   // Blueleaf
@@ -1029,49 +1053,49 @@ onEvent('server.datapack.high_priority', event => {
     waves: [
       {
         type: 'mob',
-        entities: ['minecraft:skeleton_horse'],
+        entities: ['minecraft:skeleton_horse']
       },
       {
         type: 'mob',
-        entities: ['minecraft:zombie_villager'],
+        entities: ['minecraft:zombie_villager']
       },
       {
         type: 'mob',
-        entities: ['minecraft:zombie_horse'],
+        entities: ['minecraft:zombie_horse']
       },
       {
         type: 'mob',
-        entities: ['minecraft:vex'],
+        entities: ['minecraft:vex']
       },
       {
         type: 'mob',
-        entities: ['minecraft:vindicator'],
+        entities: ['minecraft:vindicator']
       },
       {
         type: 'mob',
-        entities: ['minecraft:ravager'],
+        entities: ['minecraft:ravager']
       },
       {
         type: 'mob',
-        entities: ['minecraft:evoker'],
+        entities: ['minecraft:evoker']
       },
       {
         type: 'mob',
-        entities: ['hem:militarybot'],
+        entities: ['hem:militarybot']
       },
       {
         type: 'boss',
-        entities: ['hem:enemy_air_airship'],
+        entities: ['hem:enemy_air_airship']
       },
       {
         type: 'boss',
-        entities: ['hem:ancient_one'],
-      },
+        entities: ['hem:ancient_one']
+      }
     ],
     restorations: [
-      {id: 'minecraft:mule', name: 'mule'},
-      {id: 'minecraft:donkey', name: 'donkey'},
-      {id: 'minecraft:horse', name: 'horse'},
+      { id: 'minecraft:mule', name: 'mule' },
+      { id: 'minecraft:donkey', name: 'donkey' },
+      { id: 'minecraft:horse', name: 'horse' }
     ],
     relics: [
       'relics:hunter_belt',
@@ -1079,9 +1103,9 @@ onEvent('server.datapack.high_priority', event => {
       'relics:horse_flute',
       'artifacts:plastic_drinking_hat',
       'artifacts:villager_hat',
-      'artifacts:novelty_drinking_hat',
+      'artifacts:novelty_drinking_hat'
     ],
-    rewards: [{id: 'kubejs:blueleaf_token', count: 1}],
+    rewards: [{ id: 'kubejs:blueleaf_token', count: 1 }]
   });
 
   // Bumblezone
@@ -1092,19 +1116,19 @@ onEvent('server.datapack.high_priority', event => {
     waves: [
       {
         type: 'mob',
-        entities: ['minecraft:bee'],
-      },
+        entities: ['minecraft:bee']
+      }
     ],
-    restorations: [{id: 'minecraft:bee', name: 'Bee'}],
+    restorations: [{ id: 'minecraft:bee', name: 'Bee' }],
     relics: [
       'relics:leather_belt',
       'relics:wool_mitten',
       'relics:infinity_ham',
       'artifacts:vampiric_glove',
       'artifacts:bunny_hoppers',
-      'artifacts:whoopee_cushion',
+      'artifacts:whoopee_cushion'
     ],
-    rewards: [{id: 'kubejs:bumblezone_token', count: 1}],
+    rewards: [{ id: 'kubejs:bumblezone_token', count: 1 }]
   });
 
   // End
@@ -1115,10 +1139,10 @@ onEvent('server.datapack.high_priority', event => {
     waves: [
       {
         type: 'mob',
-        entities: ['minecraft:bee'],
-      },
+        entities: ['minecraft:bee']
+      }
     ],
-    restorations: [{id: 'minecraft:bee', name: 'Bee'}],
+    restorations: [{ id: 'minecraft:bee', name: 'Bee' }],
     relics: [
       'relics:shadow_glaive',
       'relics:elytra_booster',
@@ -1127,8 +1151,8 @@ onEvent('server.datapack.high_priority', event => {
       'relics:midnight_robe',
       'relics:reflection_necklace',
       'relics:spatial_sign',
-      'artifacts:shock_pendant',
+      'artifacts:shock_pendant'
     ],
-    rewards: [{id: 'kubejs:end_token', count: 1}],
+    rewards: [{ id: 'kubejs:end_token', count: 1 }]
   });
 });

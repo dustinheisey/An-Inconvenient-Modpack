@@ -1,39 +1,39 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
     shapeless: () => {
-      ['rankine:glass_from_colors'].forEach(id => event.remove({id: id}));
+      ['rankine:glass_from_colors'].forEach((id) => event.remove({ id: id }));
     },
     shaped: () => {
       [
         'rankine:hardness_tester',
         'rankine:flint_and_steel_from_pyrite',
         'rankine:rope',
-        'rankine:fiber_block',
-      ].forEach(id => event.remove({id: id}));
+        'rankine:fiber_block'
+      ].forEach((id) => event.remove({ id: id }));
       event.shaped('rankine:fiber_block', ['aaa', 'aaa', 'aaa'], {
-        a: 'paragon_textiles:plant_fibers',
+        a: 'paragon_textiles:plant_fibers'
       });
       event.shaped('rankine:hardness_tester', ['  a', ' b ', 'c  '], {
         a: '#forge:stone',
         b: '#forge:rods/wooden',
-        c: 'minecraft:flint',
+        c: 'minecraft:flint'
       });
       event.shaped('rankine:stick_block', ['aaa', 'aaa', 'aaa'], {
-        a: '#forge:rods/wooden',
+        a: '#forge:rods/wooden'
       });
     },
     shapeless: () => {
       [
         'rankine:yellow_fiber_mat_from_dye',
-        'rankine:yellow_fiber_block_from_dye',
-      ].forEach(id => event.remove({id: id}));
+        'rankine:yellow_fiber_block_from_dye'
+      ].forEach((id) => event.remove({ id: id }));
       event.shapeless('rankine:yellow_fiber_block', [
         'rankine:fiber_block',
-        'minecraft:yellow_dye',
+        'minecraft:yellow_dye'
       ]);
       event.shapeless('rankine:yellow_fiber_mat', [
         'rankine:fiber_mat',
-        'minecraft:yellow_dye',
+        'minecraft:yellow_dye'
       ]);
     },
     air_distillation: () => {},
@@ -48,8 +48,10 @@ onEvent('recipes', event => {
         'maraging_steel',
         'nickel_silver',
         'permalloy',
-        'titanium_alloy',
-      ].forEach(id => event.remove({id: `rankine:alloying/${id}_alloying`}));
+        'titanium_alloy'
+      ].forEach((id) =>
+        event.remove({ id: `rankine:alloying/${id}_alloying` })
+      );
 
       event.custom({
         type: 'rankine:alloying',
@@ -60,54 +62,54 @@ onEvent('recipes', event => {
           element: 'rankine:elements/neptunium',
           min: 0.1,
           max: 0.25,
-          required: true,
+          required: true
         },
         input2: {
           element: 'rankine:elements/aluminum',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
         input3: {
           element: 'rankine:elements/palladium',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
         input4: {
           element: 'rankine:elements/tin',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
         input5: {
           element: 'rankine:elements/uranium',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
         input6: {
           element: 'rankine:elements/americium',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
         input7: {
           element: 'rankine:elements/plutonium',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
         input8: {
           element: 'rankine:elements/zirconium',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
         input9: {
           element: 'rankine:elements/iron',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
         input10: {
           element: 'rankine:elements/germanium',
           min: 0.25,
-          max: 0.75,
+          max: 0.75
         },
-        result: 'rankine:neptunium_alloy_ingot',
+        result: 'rankine:neptunium_alloy_ingot'
       });
 
       event.custom({
@@ -119,31 +121,31 @@ onEvent('recipes', event => {
           element: 'rankine:elements/copper',
           min: 0.5,
           max: 0.7,
-          required: true,
+          required: true
         },
         input2: {
           element: 'rankine:elements/nickel',
           min: 0.15,
           max: 0.25,
-          required: true,
+          required: true
         },
         input3: {
           element: 'rankine:elements/zinc',
           min: 0.15,
           max: 0.25,
-          required: true,
+          required: true
         },
         input4: {
           element: 'rankine:elements/iron',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input5: {
           element: 'rankine:elements/manganese',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
-        result: 'rankine:nickel_silver_ingot',
+        result: 'rankine:nickel_silver_ingot'
       });
 
       event.custom({
@@ -155,116 +157,116 @@ onEvent('recipes', event => {
           element: 'rankine:elements/titanium',
           min: 0.55,
           max: 0.95,
-          required: true,
+          required: true
         },
         input2: {
           element: 'rankine:elements/niobium',
           min: 0.0,
-          max: 0.45,
+          max: 0.45
         },
         input3: {
           element: 'rankine:elements/tantalum',
           min: 0.0,
-          max: 0.45,
+          max: 0.45
         },
         input4: {
           element: 'rankine:elements/molybdenum',
           min: 0.0,
-          max: 0.15,
+          max: 0.15
         },
         input5: {
           element: 'rankine:elements/aluminum',
           min: 0.0,
-          max: 0.1,
+          max: 0.1
         },
         input6: {
           element: 'rankine:elements/vanadium',
           min: 0.0,
-          max: 0.1,
+          max: 0.1
         },
         input7: {
           element: 'rankine:elements/chromium',
           min: 0.0,
-          max: 0.1,
+          max: 0.1
         },
         input8: {
           element: 'rankine:elements/scandium',
           min: 0.0,
-          max: 0.1,
+          max: 0.1
         },
         input9: {
           element: 'rankine:elements/zirconium',
           min: 0.0,
-          max: 0.1,
+          max: 0.1
         },
         input10: {
           element: 'rankine:elements/copper',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input11: {
           element: 'rankine:elements/tin',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input12: {
           element: 'rankine:elements/nickel',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input13: {
           element: 'rankine:elements/iron',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input14: {
           element: 'rankine:elements/cobalt',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input15: {
           element: 'rankine:elements/ruthenium',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input16: {
           element: 'rankine:elements/palladium',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input17: {
           element: 'rankine:elements/germanium',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input18: {
           element: 'rankine:elements/gallium',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input19: {
           element: 'rankine:elements/iridium',
           min: 0.0,
-          max: 0.05,
+          max: 0.05
         },
         input20: {
           element: 'rankine:elements/carbon',
           min: 0.0,
-          max: 0.02,
+          max: 0.02
         },
         input21: {
           element: 'rankine:elements/silicon',
           min: 0.0,
-          max: 0.02,
+          max: 0.02
         },
         input22: {
           element: 'rankine:elements/oxygen',
           min: 0.0,
-          max: 0.02,
+          max: 0.02
         },
         result: 'rankine:titanium_alloy_ingot',
         enchantments: ['minecraft:projectile_protection'],
-        enchantmentTypes: ['ARMOR'],
+        enchantmentTypes: ['ARMOR']
       });
     },
     beehive_oven: () => {
@@ -300,19 +302,19 @@ onEvent('recipes', event => {
           'rankine:bismuth_block',
           'rankine:silver_block',
           'rankine:magnesia_block',
-          'rankine:coke_block',
+          'rankine:coke_block'
         ],
-        type: 'rankine:beehive_oven',
+        type: 'rankine:beehive_oven'
       });
 
       event.custom({
         type: 'rankine:beehive_oven',
         input: {
-          item: 'tconstruct:nether_grout',
+          item: 'tconstruct:nether_grout'
         },
         result: 'tconstruct:scorched_stone',
         minCookTime: 2400,
-        maxCookTime: 4800,
+        maxCookTime: 4800
       });
     },
     crushing: () => {
@@ -392,9 +394,9 @@ onEvent('recipes', event => {
           'rankine:redstone_ore',
           'rankine:lapis_ore',
           'rankine:gold_ore',
-          'rankine:iron_ore',
+          'rankine:iron_ore'
         ],
-        type: 'rankine:crushing',
+        type: 'rankine:crushing'
       });
 
       let stones = {
@@ -429,17 +431,17 @@ onEvent('recipes', event => {
           'minecraft:andesite',
           'rankine:anorthosite',
           'rankine:black_dacite',
-          'rankine:bridgmanham',
+          'rankine:bridgmanham'
         ],
         'minecraft:gravel': [
           'minecraft:stone',
           'minecraft:cobblestone',
-          'rankine:graywacke',
+          'rankine:graywacke'
         ],
         'minecraft:obsidian': [
           'rankine:snowflake_obsidian',
           'rankine:blood_obsidian',
-          'minecraft:crying_obsidian',
+          'minecraft:crying_obsidian'
         ],
         'rankine:light_gravel': [
           'minecraft:end_stone',
@@ -447,27 +449,27 @@ onEvent('recipes', event => {
           'rankine:sylvinite',
           'rankine:pumice',
           'rankine:phosphorite',
-          'rankine:chalk',
+          'rankine:chalk'
         ],
         'rankine:dark_gravel': [
           'rankine:skarn',
           'minecraft:gilded_blackstone',
           'minecraft:cobbled_deepslate',
           'minecraft:blackstone',
-          'rankine:shale',
+          'rankine:shale'
         ],
         'minecraft:sand': ['minecraft:sandstone', 'rankine:limestone'],
         'minecraft:red_sand': ['minecraft:red_sandstone', 'rankine:arkose'],
         'rankine:white_sand': [
           'rankine:white_sandstone',
           'rankine:marlstone',
-          'rankine:quartzite',
+          'rankine:quartzite'
         ],
         'rankine:desert_sand': [
           'rankine:desert_sandstone',
           'rankine:siltstone',
           'rankine:itacolumite',
-          'rankine:mudstone',
+          'rankine:mudstone'
         ],
         'rankine:black_sand': ['rankine:black_sandstone'],
         'minecraft:blackstone': [
@@ -483,7 +485,7 @@ onEvent('recipes', event => {
           'rankine:dunite',
           'rankine:diabase',
           'minecraft:basalt',
-          'minecraft:obsidian',
+          'minecraft:obsidian'
         ],
         'minecraft:cobbled_deepslate': ['minecraft:deepslate'],
         'rankine:skarn': [
@@ -501,377 +503,377 @@ onEvent('recipes', event => {
           'rankine:gneiss',
           'rankine:eclogite',
           'rankine:blueschist',
-          'rankine:black_marble',
+          'rankine:black_marble'
         ],
-        'minecraft:soul_sand': ['rankine:soul_sandstone'],
+        'minecraft:soul_sand': ['rankine:soul_sandstone']
       };
 
-      Object.keys(stones).forEach(key => {
-        stones[key].forEach(id => {
+      Object.keys(stones).forEach((key) => {
+        stones[key].forEach((id) => {
           event.custom({
-            input: {item: id},
+            input: { item: id },
             type: 'rankine:crushing',
-            guaranteed: [{item: key, count: 1, tier: 'minecraft:stone'}],
+            guaranteed: [{ item: key, count: 1, tier: 'minecraft:stone' }]
           });
         });
       });
 
       event.custom({
-        input: {item: 'rankine:hematite_ore'},
+        input: { item: 'rankine:hematite_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'rankine:hematite',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'rankine:hematite',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'rankine:lazurite_ore'},
+        input: { item: 'rankine:lazurite_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'minecraft:lapis_lazuli',
             count: 1,
-            tier: 'minecraft:diamond',
+            tier: 'minecraft:diamond'
           },
           {
             item: 'minecraft:lapis_lazuli',
             count: 2,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'minecraft:gold_ore'},
+        input: { item: 'minecraft:gold_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'minecraft:raw_gold',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'rankine:cinnabar_ore'},
+        input: { item: 'rankine:cinnabar_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'minecraft:redstone',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'minecraft:redstone',
             tier: 'minecraft:netherite',
-            count: 3,
-          },
-        ],
+            count: 3
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'minecraft:gravel'},
+        input: { item: 'minecraft:gravel' },
         type: 'rankine:crushing',
         guaranteed: [
-          {item: 'minecraft:sand', tier: 'minecraft:stone', count: 1},
-        ],
+          { item: 'minecraft:sand', tier: 'minecraft:stone', count: 1 }
+        ]
       });
       event.custom({
-        input: {item: 'rankine:light_gravel'},
+        input: { item: 'rankine:light_gravel' },
         type: 'rankine:crushing',
         guaranteed: [
-          {item: 'rankine:white_sand', tier: 'minecraft:stone', count: 1},
-        ],
+          { item: 'rankine:white_sand', tier: 'minecraft:stone', count: 1 }
+        ]
       });
 
       event.custom({
-        input: {item: 'blue_skies:everbright_diopside_ore'},
+        input: { item: 'blue_skies:everbright_diopside_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'blue_skies:diopside_gem',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'blue_skies:diopside_gem',
             count: 1,
-            tier: 'minecraft:diamond',
-          },
-        ],
+            tier: 'minecraft:diamond'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'blue_skies:everbright_aquite_ore'},
+        input: { item: 'blue_skies:everbright_aquite_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'blue_skies:raw_aquite',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'blue_skies:raw_aquite',
             count: 1,
-            tier: 'minecraft:diamond',
-          },
-        ],
+            tier: 'minecraft:diamond'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'blue_skies:everbright_charoite_ore'},
+        input: { item: 'blue_skies:everbright_charoite_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'blue_skies:raw_charoite',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'blue_skies:raw_charoite',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'blue_skies:everdawn_moonstone_ore'},
+        input: { item: 'blue_skies:everdawn_moonstone_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'blue_skies:moonstone_shard',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'blue_skies:moonstone_shard',
             count: 2,
-            tier: 'minecraft:diamond',
-          },
-        ],
+            tier: 'minecraft:diamond'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'blue_skies:ventium_ore'},
+        input: { item: 'blue_skies:ventium_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'blue_skies:raw_ventium',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'blue_skies:raw_ventium',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'blue_skies:everdawn_diopside_ore'},
+        input: { item: 'blue_skies:everdawn_diopside_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'blue_skies:diopside_gem',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'blue_skies:diopside_gem',
             count: 1,
-            tier: 'minecraft:iron',
-          },
-        ],
+            tier: 'minecraft:iron'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'blue_skies:everdawn_aquite_ore'},
+        input: { item: 'blue_skies:everdawn_aquite_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'blue_skies:raw_aquite',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'blue_skies:raw_aquite',
             count: 1,
-            tier: 'minecraft:diamond',
-          },
-        ],
+            tier: 'minecraft:diamond'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'blue_skies:everdawn_charoite_ore'},
+        input: { item: 'blue_skies:everdawn_charoite_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'blue_skies:raw_charoite',
             count: 1,
-            tier: 'minecraft:iron',
+            tier: 'minecraft:iron'
           },
           {
             item: 'blue_skies:raw_charoite',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'undergarden:shiverstone_utherium_ore'},
+        input: { item: 'undergarden:shiverstone_utherium_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'undergarden:utheric_shard',
             count: 1,
-            tier: 'minecraft:diamond',
+            tier: 'minecraft:diamond'
           },
           {
             item: 'undergarden:utherium_crystal',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'undergarden:tremblecrust_utherium_ore'},
+        input: { item: 'undergarden:tremblecrust_utherium_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'undergarden:utheric_shard',
             count: 1,
-            tier: 'minecraft:diamond',
+            tier: 'minecraft:diamond'
           },
           {
             item: 'undergarden:utherium_crystal',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
 
       event.custom({
-        input: {item: 'undergarden:depthrock_coal_ore'},
+        input: { item: 'undergarden:depthrock_coal_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'minecraft:coal',
             tier: 'minecraft:stone',
-            count: 1,
+            count: 1
           },
           {
             item: 'minecraft:coal',
             count: 3,
-            tier: 'minecraft:diamond',
-          },
-        ],
+            tier: 'minecraft:diamond'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'undergarden:shiverstone_coal_ore'},
+        input: { item: 'undergarden:shiverstone_coal_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'minecraft:coal',
             tier: 'minecraft:stone',
-            count: 1,
+            count: 1
           },
           {
             item: 'minecraft:coal',
             count: 3,
-            tier: 'minecraft:diamond',
-          },
-        ],
+            tier: 'minecraft:diamond'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'undergarden:depthrock_cloggrum_ore'},
+        input: { item: 'undergarden:depthrock_cloggrum_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'undergarden:raw_cloggrum',
             tier: 'minecraft:iron',
-            count: 1,
+            count: 1
           },
           {
             item: 'undergarden:raw_cloggrum',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'undergarden:shiverstone_cloggrum_ore'},
+        input: { item: 'undergarden:shiverstone_cloggrum_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'undergarden:raw_cloggrum',
             tier: 'minecraft:iron',
-            count: 1,
+            count: 1
           },
           {
             item: 'undergarden:raw_cloggrum',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'undergarden:shiverstone_froststeel_ore'},
+        input: { item: 'undergarden:shiverstone_froststeel_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'undergarden:raw_froststeel',
             count: 1,
-            tier: 'minecraft:diamond',
+            tier: 'minecraft:diamond'
           },
           {
             item: 'undergarden:raw_froststeel',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'undergarden:depthrock_utherium_ore'},
+        input: { item: 'undergarden:depthrock_utherium_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'undergarden:utheric_shard',
             count: 1,
-            tier: 'minecraft:diamond',
+            tier: 'minecraft:diamond'
           },
           {
             item: 'undergarden:utherium_crystal',
             count: 1,
-            tier: 'minecraft:netherite',
-          },
-        ],
+            tier: 'minecraft:netherite'
+          }
+        ]
       });
       event.custom({
-        input: {item: 'rankine:lazurite_ore'},
+        input: { item: 'rankine:lazurite_ore' },
         type: 'rankine:crushing',
         guaranteed: [
           {
             item: 'minecraft:lapis_lazuli',
             count: 1,
-            tier: 'minecraft:diamond',
+            tier: 'minecraft:diamond'
           },
           {
             item: 'minecraft:lapis_lazuli',
             tier: 'minecraft:netherite',
-            count: 2,
-          },
-        ],
+            count: 2
+          }
+        ]
       });
     },
     evaporation: () => {},
@@ -888,9 +890,9 @@ onEvent('recipes', event => {
           'rankine:rhyolite',
           'rankine:red_dacite',
           'rankine:phonolite',
-          'minecraft:end_stone',
+          'minecraft:end_stone'
         ],
-        type: 'rankine:rock_generator',
+        type: 'rankine:rock_generator'
       });
     },
     intrusive_igneous_generator: () => {
@@ -917,24 +919,24 @@ onEvent('recipes', event => {
           'create:ochrum',
           'create:asurine',
           'minecraft:stone',
-          'minecraft:granite',
+          'minecraft:granite'
         ],
-        type: 'rankine:rock_generator',
+        type: 'rankine:rock_generator'
       });
 
       event.custom({
         type: 'rankine:rock_generator',
         genType: 'intrusive_igneous',
-        result: {block: 'minecraft:stone'},
-        input1: {item: 'create:asurine'},
-        input2: {item: 'create:crimsite'},
+        result: { block: 'minecraft:stone' },
+        input1: { item: 'create:asurine' },
+        input2: { item: 'create:crimsite' }
       });
       event.custom({
         type: 'rankine:rock_generator',
         genType: 'intrusive_igneous',
-        result: {block: 'minecraft:granite'},
-        input1: {item: 'rankine:malachite_block'},
-        input2: {item: 'rankine:graphite_block'},
+        result: { block: 'minecraft:granite' },
+        input1: { item: 'rankine:malachite_block' },
+        input2: { item: 'rankine:graphite_block' }
       });
     },
     metamorphic_generator: () => {
@@ -952,9 +954,9 @@ onEvent('recipes', event => {
           'rankine:slate',
           'rankine:black_marble',
           'rankine:white_marble',
-          'rankine:mariposite',
+          'rankine:mariposite'
         ],
-        type: 'rankine:rock_generator',
+        type: 'rankine:rock_generator'
       });
     },
     mixing: () => {
@@ -972,9 +974,9 @@ onEvent('recipes', event => {
           'rankine:porcelain_clay_ball',
           'rankine:cob',
           'rankine:refined_cob',
-          'rankine:roman_concrete',
+          'rankine:roman_concrete'
         ],
-        type: 'rankine:mixing',
+        type: 'rankine:mixing'
       });
 
       event.custom({
@@ -982,12 +984,12 @@ onEvent('recipes', event => {
         mixTime: 100,
         matScale: 1,
         ingredientTotal: 2,
-        fluidInput: {fluid: 'minecraft:water', amount: 20},
+        fluidInput: { fluid: 'minecraft:water', amount: 20 },
         inputs: [
-          {tag: 'forge:stones/pumice', min: 0.9, max: 0.95},
-          {tag: 'rankine:alkali_hydroxides', min: 0.05, max: 0.1},
+          { tag: 'forge:stones/pumice', min: 0.9, max: 0.95 },
+          { tag: 'rankine:alkali_hydroxides', min: 0.05, max: 0.1 }
         ],
-        result: {item: 'rankine:pumice_soap'},
+        result: { item: 'rankine:pumice_soap' }
       });
       event.custom({
         type: 'rankine:mixing',
@@ -996,26 +998,26 @@ onEvent('recipes', event => {
         ingredientTotal: 3,
         fluidInput: {
           fluid: 'minecraft:water',
-          amount: 50,
+          amount: 50
         },
         inputs: [
           {
             tag: 'minecraft:dirt',
             min: 0.4,
-            max: 0.6,
+            max: 0.6
           },
           {
             tag: 'minecraft:sand',
             min: 0.4,
-            max: 0.6,
+            max: 0.6
           },
           {
             id: 'paragon_textiles:plant_fibers',
             min: 0.05,
-            max: 0.25,
-          },
+            max: 0.25
+          }
         ],
-        result: {item: 'rankine:cob'},
+        result: { item: 'rankine:cob' }
       });
       event.custom({
         type: 'rankine:mixing',
@@ -1024,82 +1026,82 @@ onEvent('recipes', event => {
         ingredientTotal: 3,
         fluidInput: {
           fluid: 'minecraft:water',
-          amount: 50,
+          amount: 50
         },
         inputs: [
           {
             tag: 'minecraft:sand',
             min: 0.6,
-            max: 0.75,
+            max: 0.75
           },
           {
             id: 'rankine:fire_clay_ball',
             min: 0.05,
-            max: 0.2,
+            max: 0.2
           },
           {
             id: 'paragon_textiles:plant_fibers',
             min: 0.2,
-            max: 0.5,
-          },
+            max: 0.5
+          }
         ],
-        result: {item: 'rankine:refined_cob'},
+        result: { item: 'rankine:refined_cob' }
       });
     },
     sedimentary_generator: () => {
       event.remove({
         output: ['rankine:dolostone', 'rankine:chalk', 'rankine:shale'],
-        type: 'rankine:rock_generator',
+        type: 'rankine:rock_generator'
       });
     },
     sluicing: () => {
       event.remove({
         input: ['rankine:laterite', 'rankine:light_gravel', 'minecraft:gravel'],
-        type: 'rankine:sluicing',
+        type: 'rankine:sluicing'
       });
 
       event.custom({
         type: 'rankine:sluicing',
-        input: {item: 'rankine:desert_sand'},
+        input: { item: 'rankine:desert_sand' },
         outputs: [
-          {item: `minecraft:sand`, weight: 100},
-          {item: 'minecraft:cactus', weight: 1},
+          { item: `minecraft:sand`, weight: 100 },
+          { item: 'minecraft:cactus', weight: 1 }
         ],
-        tool: {item: 'rankine:wooden_gold_pan'},
+        tool: { item: 'rankine:wooden_gold_pan' }
       });
       event.custom({
         type: 'rankine:sluicing',
-        input: {item: 'blue_skies:lunar_grass_block'},
+        input: { item: 'blue_skies:lunar_grass_block' },
 
         outputs: [
-          {item: `blue_skies:lunar_dirt`, weight: 100},
-          {item: 'hexerei:sage_seed', weight: 1},
-          {item: 'blue_skies:fiery_bean_seeds', weight: 1},
-          {item: 'blue_skies:scalefruit_seeds', weight: 1},
-          {item: 'hexerei:mandrake_root', weight: 1},
-          {item: 'minecraft:cocoa_beans', weight: 1},
+          { item: `blue_skies:lunar_dirt`, weight: 100 },
+          { item: 'hexerei:sage_seed', weight: 1 },
+          { item: 'blue_skies:fiery_bean_seeds', weight: 1 },
+          { item: 'blue_skies:scalefruit_seeds', weight: 1 },
+          { item: 'hexerei:mandrake_root', weight: 1 },
+          { item: 'minecraft:cocoa_beans', weight: 1 }
         ],
-        tool: {item: 'rankine:steel_gold_pan'},
+        tool: { item: 'rankine:steel_gold_pan' }
       });
       event.custom({
         type: 'rankine:sluicing',
-        input: {item: 'undergarden:deepturf_block'},
+        input: { item: 'undergarden:deepturf_block' },
         outputs: [
-          {item: `undergarden:deepsoil`, weight: 100},
-          {item: 'undergarden:gloomgourd_seeds', weight: 1},
-          {item: 'undergarden:underbeans', weight: 1},
-          {item: 'minecraft:sugar_cane', weight: 1},
+          { item: `undergarden:deepsoil`, weight: 100 },
+          { item: 'undergarden:gloomgourd_seeds', weight: 1 },
+          { item: 'undergarden:underbeans', weight: 1 },
+          { item: 'minecraft:sugar_cane', weight: 1 }
         ],
-        tool: {item: 'rankine:steel_gold_pan'},
+        tool: { item: 'rankine:steel_gold_pan' }
       });
       event.custom({
         type: 'rankine:sluicing',
-        input: {item: 'minecraft:soul_soil'},
+        input: { item: 'minecraft:soul_soil' },
         outputs: [
-          {item: `minecraft:soul_sand`, weight: 100},
-          {item: 'minecraft:nether_wart', weight: 1},
+          { item: `minecraft:soul_sand`, weight: 100 },
+          { item: 'minecraft:nether_wart', weight: 1 }
         ],
-        tool: {item: 'rankine:steel_gold_pan'},
+        tool: { item: 'rankine:steel_gold_pan' }
       });
     },
     stripping: () => {},
@@ -1113,25 +1115,25 @@ onEvent('recipes', event => {
           'rankine:andesitic_tuff',
           'rankine:basaltic_tuff',
           'rankine:rhyolitic_tuff',
-          'minecraft:crying_obsidian',
+          'minecraft:crying_obsidian'
         ],
-        type: 'rankine:rock_generator',
+        type: 'rankine:rock_generator'
       });
 
       event.custom({
         type: 'rankine:rock_generator',
         genType: 'volcanic',
-        input1: {item: 'minecraft:obsidian'},
+        input1: { item: 'minecraft:obsidian' },
         result: {
-          block: 'minecraft:crying_obsidian',
-        },
+          block: 'minecraft:crying_obsidian'
+        }
       });
-    },
+    }
   });
 });
 
-onEvent('server.datapack.high_priority', event => {
-  ['overworld', 'nether'].forEach(dimension => {
+onEvent('server.datapack.high_priority', (event) => {
+  ['overworld', 'nether'].forEach((dimension) => {
     event.addJson(
       `rankine:recipes/air_distillation/${dimension}_air_distillation.json`,
       {
@@ -1140,11 +1142,11 @@ onEvent('server.datapack.high_priority', event => {
           {
             conditions: [
               {
-                type: 'forge:false',
-              },
-            ],
-          },
-        ],
+                type: 'forge:false'
+              }
+            ]
+          }
+        ]
       }
     );
   });

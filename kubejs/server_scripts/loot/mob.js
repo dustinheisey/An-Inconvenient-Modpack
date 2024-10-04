@@ -1,4 +1,4 @@
-onEvent('lootjs', event => {
+onEvent('lootjs', (event) => {
   function removeLoot(item, mob) {
     if (mob) {
       event.addEntityLootModifier(mob).removeLoot(Item.of(item).ignoreNBT());
@@ -177,7 +177,7 @@ onEvent('lootjs', event => {
   removeLoot('minecraft:mutton', 'twilightforest:bighorn_sheep');
   removeLoot('endrem:undead_soul');
 
-  colors.forEach(color => {
+  colors.forEach((color) => {
     removeLoot(`minecraft:${color}_wool`, 'blue_skies:stardust_ram');
     removeLoot(`minecraft:${color}_wool`, 'twilightforest:bighorn_sheep');
   });

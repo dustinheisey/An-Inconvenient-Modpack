@@ -2,10 +2,10 @@
 
 // get mods list from `ingredient-list-mod-sort-order.ini` in `config/jei` and group them into chapters
 
-onEvent('tags.items', event => {
+onEvent('tags.items', (event) => {
   function setModsChapter(chapter, mods) {
-    mods.forEach(mod => {
-      Ingredient.of(`@${mod}`).itemIds.forEach(id => {
+    mods.forEach((mod) => {
+      Ingredient.of(`@${mod}`).itemIds.forEach((id) => {
         event.add(`im:${chapter}`, id);
       });
     });
@@ -27,7 +27,7 @@ onEvent('tags.items', event => {
     'death_compass',
     'gravestone',
     'salt',
-    'labels',
+    'labels'
   ]);
   setModsChapter('chapter_2', [
     'farmersdelight',
@@ -41,7 +41,7 @@ onEvent('tags.items', event => {
     'farmersrespite',
     'modonomicon',
     'totemic',
-    'astikorcarts',
+    'astikorcarts'
   ]);
   setModsChapter('chapter_3', [
     'comforts',
@@ -57,7 +57,7 @@ onEvent('tags.items', event => {
     'twilighttweaks',
     'malum',
     'twilightdelight',
-    'undergardendelight',
+    'undergardendelight'
   ]);
   setModsChapter('chapter_4', [
     'bloodmagic',
@@ -74,7 +74,7 @@ onEvent('tags.items', event => {
     'create_enchantment_industry',
     // 'create_connected',
     'vintageimprovements',
-    'nethersdelight',
+    'nethersdelight'
   ]);
   setModsChapter('chapter_5_1', [
     'sliceanddice',
@@ -89,7 +89,7 @@ onEvent('tags.items', event => {
     'create_central_kitchen',
     'croptopia',
     'endersdelight',
-    'botania',
+    'botania'
   ]);
   setModsChapter('chapter_5_2', [
     'hem',
@@ -101,7 +101,7 @@ onEvent('tags.items', event => {
     'immersiveengineering',
     'pneumaticcraft',
     'compressedcreativity',
-    'immersivepetroleum',
+    'immersivepetroleum'
   ]);
   setModsChapter('chapter_6', ['canned_goods']);
   setModsChapter('chapter_7_1', [
@@ -121,7 +121,7 @@ onEvent('tags.items', event => {
     'mekanism',
     'naturesaura',
     'endrem',
-    'ppr',
+    'ppr'
   ]);
   // setModsChapter('chapter_7_2', ['bloodsmeltery', 'infectum']);
 });

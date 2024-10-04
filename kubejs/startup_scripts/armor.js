@@ -1,10 +1,10 @@
-onEvent('item.modification', event => {
+onEvent('item.modification', (event) => {
   function setProtection(id, protection, pieces) {
     if (!pieces) pieces = ['helmet', 'chestplate', 'leggings', 'boots'];
 
     pieces.forEach((piece, index) => {
       try {
-        event.modify(`${id}_${piece}`, modification => {
+        event.modify(`${id}_${piece}`, (modification) => {
           modification.setArmorProtection(protection[index]);
         });
       } catch (error) {

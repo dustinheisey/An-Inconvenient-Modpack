@@ -1,0 +1,12 @@
+{
+  "x": 0,
+  "y": 72,
+  "action": "OPEN_URL",
+  "data": "https://www.reddit.com/r/InconvenientModpack/",
+  "width": 116,
+  "height": 20,
+  "langKey": "packmenu.im.reddit",
+  "hoverV": 20,
+  "texWidth": 116,
+  "texHeight": 40
+}

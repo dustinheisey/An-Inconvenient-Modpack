@@ -1,0 +1,25 @@
+{
+  "name": "inconvenient-modpack",
+  "version": "0.6.8",
+  "type": "module",
+  "scripts": {
+    "format:check": "npx prettier --check '**/*.{js,json,md}'",
+    "format:write": "npx prettier --write '**/*.{js,json,md}'",
+    "prepare": "husky",
+    "log-errors": "node scripts/log-errors.js",
+    "release": "node scripts/release.js",
+    "modlist": "node scripts/modlist.js",
+    "validate-secrets": "node scripts/validate-secrets.js"
+  },
+  "devDependencies": {
+    "archiver": "^7.0.1",
+    "axios": "^1.7.7",
+    "fs-extra": "^11.2.0",
+    "husky": "^9.1.6",
+    "js-yaml": "^4.1.0",
+    "prettier": "^3.3.3"
+  },
+  "lint-staged": {
+    "**/*.{js,json,md}": "prettier --write"
+  }
+}

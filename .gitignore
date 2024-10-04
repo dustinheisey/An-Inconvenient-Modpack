@@ -7,7 +7,6 @@
 .DS_Store
 lightspeed-chache/**/*
 usercache.json
-minecraftinstance.json
 xaerominimap_entities.json
 /config/jei/world/**/*
 /node_modules
@@ -28,4 +27,10 @@ config/xaeroworldmap-common.txt
 .curseclient
 rhino.local.properties
 options.txt
-docs
+logs/categorized_logs.yaml
+output
+scripts/secrets.js
+mods
+XaeroWaypoints*
+servers.dat
+servers.dat_old

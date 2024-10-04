@@ -1,6 +1,6 @@
-onEvent('item.registry', event => {
+onEvent('item.registry', (event) => {
   function items(config) {
-    global.flat(config).forEach(item => {
+    global.flat(config).forEach((item) => {
       // console.log('typeofitem?' + typeof item);
       if (typeof item === 'string') {
         event.create(item).displayName(global.toTitleCase(item));
@@ -20,7 +20,7 @@ onEvent('item.registry', event => {
         'salted_hide',
         'dried_hide',
         'wet_tanned_hide',
-        'rotten_jerky',
+        'rotten_jerky'
       ],
       bricks: [
         'dry_unfired_brick',
@@ -29,16 +29,16 @@ onEvent('item.registry', event => {
         'high_fire_clay_ball',
         'unfired_high_refractory_brick',
         'dry_unfired_high_refractory_brick',
-        'grog',
+        'grog'
       ],
-      misc: ['goddess_heart'],
+      misc: ['goddess_heart']
     },
     chapter_2: {
       smeltery: [
         'dry_unfired_seared_brick',
         'unfired_seared_brick',
         'grout_ball',
-        'kiln_feed',
+        'kiln_feed'
       ],
       aura_eye: ['iridescent_scales'],
       misc: [
@@ -48,9 +48,9 @@ onEvent('item.registry', event => {
         'glass_tube',
         'wheat',
         'everbright_token',
-        {id: 'everbright_lost_page', label: 'Frigid Lost Page'},
-        {id: 'everbright_lost_story', label: "A Grandmother's Story"},
-      ],
+        { id: 'everbright_lost_page', label: 'Frigid Lost Page' },
+        { id: 'everbright_lost_story', label: "A Grandmother's Story" }
+      ]
     },
     chapter_3: {
       misc: [
@@ -61,13 +61,13 @@ onEvent('item.registry', event => {
         'everdawn_token',
         'twilight_token',
         'fiery_dust',
-        {id: 'undergarden_lost_page', label: 'Slimy Lost Page'},
-        {id: 'everdawn_lost_page', label: 'Tattered Lost Page'},
-        {id: 'twilight_lost_page', label: 'Dark Lost Page'},
-        {id: 'undergarden_lost_story', label: 'The Virus'},
-        {id: 'everdawn_lost_story', label: 'Climate Chaos'},
-        {id: 'twilight_lost_story', label: 'Rise of A Dictator'},
-      ],
+        { id: 'undergarden_lost_page', label: 'Slimy Lost Page' },
+        { id: 'everdawn_lost_page', label: 'Tattered Lost Page' },
+        { id: 'twilight_lost_page', label: 'Dark Lost Page' },
+        { id: 'undergarden_lost_story', label: 'The Virus' },
+        { id: 'everdawn_lost_story', label: 'Climate Chaos' },
+        { id: 'twilight_lost_story', label: 'Rise of A Dictator' }
+      ]
     },
     chapter_4: {
       blaze_cake: [
@@ -85,7 +85,7 @@ onEvent('item.registry', event => {
         'cream_of_tartar',
         'baking_powder',
         'egg_whip',
-        'cinder_ingot',
+        'cinder_ingot'
       ],
       chromatic_compound: [
         'drop_of_tar',
@@ -94,16 +94,16 @@ onEvent('item.registry', event => {
         'potassium_nitrate_chunks',
         'mixed_dust',
         'brass_dust',
-        'electrum_dust',
+        'electrum_dust'
       ],
       misc: [
         'pig_carcass',
         'wheat_meal',
         'wheat_flour',
         'nether_token',
-        {id: 'nether_lost_page', label: 'Burnt Lost Page'},
-        {id: 'nether_lost_story', label: 'A Dire Warning'},
-      ],
+        { id: 'nether_lost_page', label: 'Burnt Lost Page' },
+        { id: 'nether_lost_story', label: 'A Dire Warning' }
+      ]
     },
     chapter_5_1: {
       gingerbread_man: [
@@ -112,7 +112,7 @@ onEvent('item.registry', event => {
         'butcher_knife',
         'skinning_knife',
         'gut_knife',
-        {id: 'elements_rune', label: 'Rune of Elements'},
+        { id: 'elements_rune', label: 'Rune of Elements' },
         'pork_fat',
         'curved_manasteel_sheet',
         'round_manasteel_sheet',
@@ -147,7 +147,7 @@ onEvent('item.registry', event => {
         'sorghum_meal',
         'soy_meal',
         'soy_flour',
-        'brown_sugar',
+        'brown_sugar'
       ],
       happy_meal: {
         fries_and_ketchup: [
@@ -169,7 +169,7 @@ onEvent('item.registry', event => {
           'onion_powder',
           'garlic_powder',
           'celery_powder',
-          'mustard_powder',
+          'mustard_powder'
         ],
         bottle_of_soda: [
           'bottle_of_soda',
@@ -193,7 +193,7 @@ onEvent('item.registry', event => {
           'specimen_143',
           'petri_dish_143',
           'empty_petri_dish',
-          'yeast',
+          'yeast'
         ],
         cheeseburger: [
           'onion_slices',
@@ -218,8 +218,8 @@ onEvent('item.registry', event => {
           'skinned_cow_carcass',
           'drained_cow_carcass',
           'cow_carcass',
-          {id: 'monachopsis_token', label: 'Token of Monachopsis'},
-          {id: 'seasons_rune', label: 'Rune of Seasons'},
+          { id: 'monachopsis_token', label: 'Token of Monachopsis' },
+          { id: 'seasons_rune', label: 'Rune of Seasons' },
           'strange_dna',
           'egg_yolk',
           'egg_whites',
@@ -237,9 +237,9 @@ onEvent('item.registry', event => {
           'specimen_725',
           'petri_dish_725',
           'ground_beef',
-          'partially_ground_beef',
+          'partially_ground_beef'
         ],
-        misc: ['happy_meal'],
+        misc: ['happy_meal']
       },
       nutrient_paste: {
         miracle_ground_beef: [
@@ -249,30 +249,30 @@ onEvent('item.registry', event => {
           'partially_ground_high_grade_beef',
           'ground_medium_grade_beef',
           'partially_ground_medium_grade_beef',
-          {id: 'sins_rune', label: 'Rune of Sins'},
-          {id: 'sonder_token', label: 'Token of Sonder'},
-          {id: 'schadenfreude_token', label: 'Token of Schadenfreude'},
-          {id: 'kenopsia_token', label: 'Token of Kenopsia'},
-          {id: 'kuebiko_token', label: 'Token of Kuebiko'},
+          { id: 'sins_rune', label: 'Rune of Sins' },
+          { id: 'sonder_token', label: 'Token of Sonder' },
+          { id: 'schadenfreude_token', label: 'Token of Schadenfreude' },
+          { id: 'kenopsia_token', label: 'Token of Kenopsia' },
+          { id: 'kuebiko_token', label: 'Token of Kuebiko' },
 
-          {id: 'confusion_token', label: 'Token of confusion'},
-          {id: 'loneliness_token', label: 'Token of loneliness'},
-          {id: 'sadness_token', label: 'Token of sadness'},
+          { id: 'confusion_token', label: 'Token of confusion' },
+          { id: 'loneliness_token', label: 'Token of loneliness' },
+          { id: 'sadness_token', label: 'Token of sadness' },
 
-          {id: 'fear_token', label: 'Token of fear'},
-          {id: 'curiosity_token', label: 'Token of curiosity'},
+          { id: 'fear_token', label: 'Token of fear' },
+          { id: 'curiosity_token', label: 'Token of curiosity' },
 
-          {id: 'wonder_token', label: 'Token of wonder'},
-          {id: 'empathy_token', label: 'Token of empathy'},
-          {id: 'melancholy_token', label: 'Token of melancholy'},
+          { id: 'wonder_token', label: 'Token of wonder' },
+          { id: 'empathy_token', label: 'Token of empathy' },
+          { id: 'melancholy_token', label: 'Token of melancholy' },
 
-          {id: 'joy_token', label: 'Token of joy'},
-          {id: 'guilt_token', label: 'Token of guilt'},
-          {id: 'contempt_token', label: 'Token of contempt'},
+          { id: 'joy_token', label: 'Token of joy' },
+          { id: 'guilt_token', label: 'Token of guilt' },
+          { id: 'contempt_token', label: 'Token of contempt' },
 
-          {id: 'exhaustion_token', label: 'Token of exhaustion'},
-          {id: 'compassion_token', label: 'Token of compassion'},
-          {id: 'despair_token', label: 'Token of despair'},
+          { id: 'exhaustion_token', label: 'Token of exhaustion' },
+          { id: 'compassion_token', label: 'Token of compassion' },
+          { id: 'despair_token', label: 'Token of despair' }
         ],
         misc: [
           'flesh_bits',
@@ -451,24 +451,24 @@ onEvent('item.registry', event => {
           'high_grade_feed',
           'medium_grade_feed',
           'primal_dna',
-          'miracle_carbohydrates',
-        ],
+          'miracle_carbohydrates'
+        ]
       },
       misc: [
         'sheep_carcass',
         'bumblezone_token',
-        {id: 'bumblezone_lost_page', label: 'Sticky Lost Page'},
-        {id: 'bumblezone_lost_story', label: 'The Last Flower'},
-      ],
+        { id: 'bumblezone_lost_page', label: 'Sticky Lost Page' },
+        { id: 'bumblezone_lost_story', label: 'The Last Flower' }
+      ]
     },
     chapter_5_2: {
       misc: [
         'silica_dust',
         'blueleaf_token',
         'catalyst',
-        {id: 'blueleaf_lost_page', label: 'Sooty Lost Page'},
-        {id: 'blueleaf_lost_story', label: 'Welcome to Blueleaf'},
-      ],
+        { id: 'blueleaf_lost_page', label: 'Sooty Lost Page' },
+        { id: 'blueleaf_lost_story', label: 'Welcome to Blueleaf' }
+      ]
     },
     chapter_6: {
       gold_coin: [
@@ -479,32 +479,32 @@ onEvent('item.registry', event => {
         'silver_coin',
         'zinc_coin',
         'aluminum_coin',
-        'gold_coin',
-      ],
+        'gold_coin'
+      ]
     },
     chapter_7_1: {
       misc: [
         'end_token',
         'restoration_token',
         'earth_token',
-        {id: 'realms_rune', label: 'Rune of Realms'},
-      ],
+        { id: 'realms_rune', label: 'Rune of Realms' }
+      ]
     },
     chapter_7_2: {
       platinum_coin: ['steel_coin', 'nickel_coin', 'platinum_coin'],
-      misc: ['hell_token'],
-    },
+      misc: ['hell_token']
+    }
   });
 });
 
-onEvent('item.modification', event => {
-  event.modify('minecraft:ender_pearl', item => {
+onEvent('item.modification', (event) => {
+  event.modify('minecraft:ender_pearl', (item) => {
     item.maxStackSize = 64;
     item.fireResistant = true;
   });
 
-  event.modify('kubejs:rotten_jerky', item => {
-    item.foodProperties = food => {
+  event.modify('kubejs:rotten_jerky', (item) => {
+    item.foodProperties = (food) => {
       food.hunger(3);
       food.saturation(1);
       food.meat(true);

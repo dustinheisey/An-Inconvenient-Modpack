@@ -1,10 +1,10 @@
 // priority: 202
 
-onEvent('tags.items', event => {
+onEvent('tags.items', (event) => {
   function overrideChapters(mod, config) {
-    Object.keys(config).forEach(chapter => {
-      config[chapter].forEach(override => {
-        chapters.forEach(chapter => {
+    Object.keys(config).forEach((chapter) => {
+      config[chapter].forEach((override) => {
+        chapters.forEach((chapter) => {
           event.remove(`im:${chapter}`, override);
         });
         event.add(`im:${chapter}`, override);
@@ -137,7 +137,7 @@ onEvent('tags.items', event => {
       'minecraft:oak_pressure_plate',
       'minecraft:heavy_weighted_pressure_plate',
       'minecraft:polished_blackstone_pressure_plate',
-      'minecraft:stone_pressure_plate',
+      'minecraft:stone_pressure_plate'
     ],
     chapter_2: [
       'rankine:white_marble_bricks_pressure_plate',
@@ -149,7 +149,7 @@ onEvent('tags.items', event => {
       'blue_skies:frostbright_pressure_plate',
       'blue_skies:cherry_pressure_plate',
       'totemic:cedar_pressure_plate',
-      'malum:runewood_planks_pressure_plate',
+      'malum:runewood_planks_pressure_plate'
     ],
     chapter_3: [
       'blue_skies:dusk_pressure_plate',
@@ -177,7 +177,7 @@ onEvent('tags.items', event => {
       'undergarden:wigglewood_pressure_plate',
       'undergarden:grongle_pressure_plate',
       'hexerei:willow_pressure_plate',
-      'malum:soulwood_planks_pressure_plate',
+      'malum:soulwood_planks_pressure_plate'
     ],
     chapter_4: [
       'malum:tainted_rock_pressure_plate',
@@ -189,9 +189,9 @@ onEvent('tags.items', event => {
       'hexerei:mahogany_pressure_plate',
       'rankine:komatiite_pressure_plate',
       'rankine:komatiite_bricks_pressure_plate',
-      'architects_palette:twisted_pressure_plate',
+      'architects_palette:twisted_pressure_plate'
     ],
-    chapter_7_1: ['rankine:petrified_chorus_pressure_plate'],
+    chapter_7_1: ['rankine:petrified_chorus_pressure_plate']
   });
   overrideChapters('chipped', {
     chapter_5_1: ['chipped:loom_table'],
@@ -276,7 +276,7 @@ onEvent('tags.items', event => {
       'chipped:purpur_block_66',
       'chipped:purpur_block_67',
       'chipped:purpur_block_68',
-      'chipped:purpur_block_69',
+      'chipped:purpur_block_69'
     ],
     chapter_7_2: [
       'chipped:emerald_block_1',
@@ -290,21 +290,21 @@ onEvent('tags.items', event => {
       'chipped:emerald_block_9',
       'chipped:emerald_block_10',
       'chipped:emerald_block_11',
-      'chipped:emerald_block_12',
-    ],
+      'chipped:emerald_block_12'
+    ]
   });
   overrideChapters('productivebees', {
     chapter_5_1: [
       'productivebees:configurable_comb',
       'productivebees:stone_chip',
-      'productivebees:configurable_honeycomb',
+      'productivebees:configurable_honeycomb'
     ],
     chapter_7_1: [
       'productivebees:draconic_dust',
       'productivebees:draconic_chunk',
       'productivebees:dragon_egg_hive',
       'productivebees:inactive_dragon_egg',
-      'productivebees:heated_centrifuge',
+      'productivebees:heated_centrifuge'
     ],
     chapter_7_2: [
       'productivebees:upgrade_base',
@@ -318,8 +318,8 @@ onEvent('tags.items', event => {
       'productivebees:upgrade_filter',
       'productivebees:upgrade_bee_sampler',
       'productivebees:upgrade_simulator',
-      'productivebees:breeding_chamber',
-    ],
+      'productivebees:breeding_chamber'
+    ]
   });
   overrideChapters('tconstruct', {
     chapter_1: ['tconstruct:husk_head', 'tconstruct:flint_and_brick'],
@@ -358,7 +358,7 @@ onEvent('tags.items', event => {
       'tconstruct:hammer_head',
       'tconstruct:large_plate_cast',
       'tconstruct:large_plate_sand_cast',
-      'tconstruct:large_plate_red_sand_cast',
+      'tconstruct:large_plate_red_sand_cast'
     ],
     chapter_3: [
       'tconstruct:molten_obsidian_bucket',
@@ -438,7 +438,7 @@ onEvent('tags.items', event => {
       'tconstruct:glow_ball',
       'tconstruct:necrotic_bone',
       'tconstruct:blazing_bone',
-      'tconstruct:magma_bottle',
+      'tconstruct:magma_bottle'
     ],
     chapter_4: [
       'tconstruct:encyclopedia',
@@ -530,7 +530,7 @@ onEvent('tags.items', event => {
       'tconstruct:ichor_slime_crystal_cluster',
       'tconstruct:small_ichor_slime_crystal_bud',
       'tconstruct:medium_ichor_slime_crystal_bud',
-      'tconstruct:large_ichor_slime_crystal_bud',
+      'tconstruct:large_ichor_slime_crystal_bud'
     ],
     chapter_5_1: [
       'tconstruct:piggy_backpack',
@@ -543,7 +543,7 @@ onEvent('tags.items', event => {
       'tconstruct:waxed_weathered_copper_platform',
       'tconstruct:waxed_exposed_copper_platform',
       'tconstruct:waxed_copper_platform',
-      'tconstruct:lingering_bottle',
+      'tconstruct:lingering_bottle'
     ],
     chapter_5_2: [
       'tconstruct:necronium_bone',
@@ -558,7 +558,7 @@ onEvent('tags.items', event => {
       'tconstruct:wire_cast',
       'tconstruct:wire_sand_cast',
       'tconstruct:wire_red_sand_cast',
-      'tconstruct:molten_uranium_bucket',
+      'tconstruct:molten_uranium_bucket'
     ],
     chapter_7_1: [
       'tconstruct:modifier_crystal',
@@ -585,12 +585,12 @@ onEvent('tags.items', event => {
       'tconstruct:dragon_scale',
       'tconstruct:ender_slime_crystal',
       'tconstruct:diamond_item_frame',
-      'tconstruct:necronium_bone',
+      'tconstruct:necronium_bone'
     ],
     chapter_7_2: [
       'tconstruct:molten_emerald_bucket',
-      'tconstruct:emerald_reinforcement',
-    ],
+      'tconstruct:emerald_reinforcement'
+    ]
   });
   overrideChapters('ecofriendly', {
     chapter_1: [
@@ -605,7 +605,7 @@ onEvent('tags.items', event => {
       'ecofriendly:tossed_bag_ym',
       'ecofriendly:bilberry_ground_1',
       'ecofriendly:bilberry_ground_2',
-      'ecofriendly:bilberry_ground_3',
+      'ecofriendly:bilberry_ground_3'
     ],
     chapter_2: ['ecofriendly:recycled_carrier_bag_ym'],
     chapter_3: [
@@ -613,7 +613,7 @@ onEvent('tags.items', event => {
       'ecofriendly:trash_slab_ym',
       'ecofriendly:trash',
       'ecofriendly:oil_drum_ym',
-      'ecofriendly:garbage_item_ym',
+      'ecofriendly:garbage_item_ym'
     ],
     chapter_7_1: [
       'tconstruct:crystalshot',
@@ -627,17 +627,17 @@ onEvent('tags.items', event => {
       'ecofriendly:bowl_of_clown_isopod',
       'ecofriendly:bowl_of_peach_isopod',
       'ecofriendly:oil_spill',
-      'ecofriendly:bottle_of_oil_ym',
+      'ecofriendly:bottle_of_oil_ym'
     ],
     chapter_7_2: [
       'ecofriendly:novelty_sody_hat_ym_helmet',
       'ecofriendly:tossed_milk_carton_ym',
-      'ecofriendly:tossed_bottle_ym',
-    ],
+      'ecofriendly:tossed_bottle_ym'
+    ]
   });
   overrideChapters('realistictorches', {
     chapter_3: ['realistictorches:glowstone_crystal'],
-    chapter_4: ['realistictorches:glowstone_paste'],
+    chapter_4: ['realistictorches:glowstone_paste']
   });
   overrideChapters('architects_palette', {
     chapter_1: [
@@ -711,7 +711,7 @@ onEvent('tags.items', event => {
       'architects_palette:grinning_acacia_totem',
       'architects_palette:acacia_totem_wing',
       'architects_palette:rotten_flesh_block',
-      'architects_palette:coarse_snow',
+      'architects_palette:coarse_snow'
     ],
     chapter_2: [
       'architects_palette:calcite_lamp',
@@ -733,7 +733,7 @@ onEvent('tags.items', event => {
       'architects_palette:entrails_slab',
       'architects_palette:entrails_vertical_slab',
       'architects_palette:entrails_stairs',
-      'architects_palette:scute_block',
+      'architects_palette:scute_block'
     ],
     chapter_3: [
       'architects_palette:polished_glowstone_nub',
@@ -822,12 +822,12 @@ onEvent('tags.items', event => {
       'architects_palette:polished_glowstone_slab',
       'architects_palette:polished_glowstone_wall',
       'architects_palette:cracked_end_stone_bricks',
-      'architects_palette:chiseled_end_stone_bricks',
+      'architects_palette:chiseled_end_stone_bricks'
     ],
     chapter_4: [
       'architects_palette:entrails',
       'architects_palette:entrails_slab',
-      'architects_palette:entrails_stairs',
+      'architects_palette:entrails_stairs'
     ],
     chapter_5_1: [
       'architects_palette:nub_of_ender',
@@ -844,7 +844,7 @@ onEvent('tags.items', event => {
       'architects_palette:tuff_brick_stairs',
       'architects_palette:tuff_brick_vertical_slab',
       'architects_palette:tuff_brick_slab',
-      'architects_palette:tuff_bricks',
+      'architects_palette:tuff_bricks'
     ],
     chapter_7_1: [
       'architects_palette:sunmetal_nub',
@@ -929,7 +929,7 @@ onEvent('tags.items', event => {
       'architects_palette:choral_end_stone_bricks',
       'architects_palette:algal_cage_lantern',
       'architects_palette:ender_pearl_block',
-      'architects_palette:unobtanium_block',
+      'architects_palette:unobtanium_block'
     ],
     chapter_7_2: [
       'architects_palette:emerald_nub',
@@ -962,8 +962,8 @@ onEvent('tags.items', event => {
       'architects_palette:emerald_ore_brick_stairs',
       'architects_palette:emerald_ore_brick_wall',
       'architects_palette:cracked_emerald_ore_bricks',
-      'architects_palette:chiseled_emerald_ore_bricks',
-    ],
+      'architects_palette:chiseled_emerald_ore_bricks'
+    ]
   });
   overrideChapters('rankine', {
     chapter_1: [
@@ -1556,7 +1556,7 @@ onEvent('tags.items', event => {
       'rankine:mossy_dolostone_bricks',
       'rankine:mossy_dolostone_bricks_slab',
       'rankine:mossy_dolostone_bricks_stairs',
-      'rankine:mossy_dolostone_bricks_wall',
+      'rankine:mossy_dolostone_bricks_wall'
     ],
     chapter_2: [
       'rankine:white_marble_cobble',
@@ -1700,7 +1700,7 @@ onEvent('tags.items', event => {
       'rankine:snowflake_obsidian',
       'rankine:pearl_block',
       'rankine:red_glazed_porcelain',
-      'rankine:cement_mix',
+      'rankine:cement_mix'
     ],
     chapter_3: [
       'rankine:shale_cobble',
@@ -1946,7 +1946,7 @@ onEvent('tags.items', event => {
       'rankine:smooth_soul_sandstone_stairs',
       'rankine:smooth_soul_sandstone_slab',
       'rankine:smooth_soul_sandstone',
-      'rankine:soul_sandstone_wall',
+      'rankine:soul_sandstone_wall'
     ],
     chapter_4: [
       'rankine:rose_marble_cobble',
@@ -2349,7 +2349,7 @@ onEvent('tags.items', event => {
       'rankine:silicon_block',
       'rankine:solder',
       'rankine:sulfur_dioxide_gas_block',
-      'rankine:sulfur_dioxide_gas_bottle',
+      'rankine:sulfur_dioxide_gas_bottle'
     ],
     chapter_5_1: [
       'rankine:orthoclase_feldspar_block',
@@ -2366,7 +2366,7 @@ onEvent('tags.items', event => {
       'rankine:saddle_tree',
       'rankine:komatiitic_tuff',
       'rankine:calcium_chloride',
-      'rankine:calcium_chloride_block',
+      'rankine:calcium_chloride_block'
     ],
     chapter_5_2: [
       'rankine:dolostone_button',
@@ -2528,7 +2528,7 @@ onEvent('tags.items', event => {
       'rankine:induction_furnace',
       'rankine:titanium_alloy_knife',
       'rankine:titanium_alloy_crowbar',
-      'rankine:titanium_alloy_blunderbuss',
+      'rankine:titanium_alloy_blunderbuss'
     ],
     chapter_7: [
       'rankine:stainless_steel_ladder',
@@ -2735,7 +2735,7 @@ onEvent('tags.items', event => {
       'rankine:black_liquor_bucket',
       'rankine:green_liquor_bucket',
       'rankine:white_liquor_bucket',
-      'rankine:coin',
+      'rankine:coin'
     ],
     chapter_7_1: [
       'rankine:gold_ore',
@@ -3376,7 +3376,7 @@ onEvent('tags.items', event => {
       'rankine:calcium_silicate_block',
       'rankine:spodumene',
       'rankine:spodumene_block',
-      'rankine:fusion_furnace',
+      'rankine:fusion_furnace'
     ],
     chapter_7_2: [
       'rankine:anthracite_coal',
@@ -3386,8 +3386,8 @@ onEvent('tags.items', event => {
       'rankine:carcass',
       'rankine:unamed_explosive',
       'rankine:bandage',
-      'rankine:gas_mask',
-    ],
+      'rankine:gas_mask'
+    ]
   });
   overrideChapters('paraglider', {
     chapter_2: ['paraglider:deku_leaf'],
@@ -3395,8 +3395,8 @@ onEvent('tags.items', event => {
     chapter_7: [
       'paraglider:horned_statue',
       'paraglider:anti_vessel',
-      'paraglider:essence',
-    ],
+      'paraglider:essence'
+    ]
   });
   overrideChapters('occultism', {
     chapter_2: [
@@ -3431,11 +3431,11 @@ onEvent('tags.items', event => {
       'occultism:spirit_attuned_crystal',
       'occultism:sacrificial_bowl',
       'occultism:golden_sacrificial_bowl',
-      'occultism:dictionary_of_spirits',
+      'occultism:dictionary_of_spirits'
     ],
     chapter_3: [
       'occultism:ritual_dummy/summon_foliot_transport_items',
-      'occultism:ritual_dummy/summon_foliot_cleaner',
+      'occultism:ritual_dummy/summon_foliot_cleaner'
     ],
     chapter_4: [
       'occultism:book_of_calling_djinni_manage_machine',
@@ -3502,7 +3502,7 @@ onEvent('tags.items', event => {
       'occultism:ritual_dummy/craft_stabilizer_tier3',
       'occultism:ritual_dummy/craft_stabilizer_tier4',
       'occultism:book_of_binding_bound_marid',
-      'occultism:book_of_binding_marid',
+      'occultism:book_of_binding_marid'
     ],
     chapter_7_1: [
       'occultism:ritual_dummy/craft_dimensional_mineshaft',
@@ -3516,8 +3516,8 @@ onEvent('tags.items', event => {
       'occultism:miner_afrit_deeps',
       'occultism:ritual_dummy/craft_miner_marid_master',
       'occultism:ritual_dummy/craft_miner_afrit_deeps',
-      'occultism:dimensional_mineshaft',
-    ],
+      'occultism:dimensional_mineshaft'
+    ]
   });
   overrideChapters('naturesaura', {
     chapter_2: [
@@ -3526,7 +3526,7 @@ onEvent('tags.items', event => {
       'naturesaura:gold_leaf',
       'naturesaura:gold_powder',
       'naturesaura:wood_stand',
-      'naturesaura:golden_leaves',
+      'naturesaura:golden_leaves'
     ],
     chapter_3: [
       'naturesaura:birth_spirit',
@@ -3563,7 +3563,7 @@ onEvent('tags.items', event => {
       'naturesaura:bottle_two_the_rebottling',
       'naturesaura:farming_stencil',
       'naturesaura:token_joy',
-      'naturesaura:token_sorrow',
+      'naturesaura:token_sorrow'
     ],
     chapter_4: [
       'naturesaura:crimson_aura_mushroom',
@@ -3578,7 +3578,7 @@ onEvent('tags.items', event => {
       'naturesaura:token_anger',
       'naturesaura:crushing_catalyst',
       'naturesaura:tainted_gold',
-      'naturesaura:tainted_gold_block',
+      'naturesaura:tainted_gold_block'
     ],
     chapter_5_1: [
       'naturesaura:cave_finder',
@@ -3609,24 +3609,24 @@ onEvent('tags.items', event => {
       'naturesaura:token_terror',
       'naturesaura:token_euphoria',
       'naturesaura:range_visualizer',
-      'naturesaura:potion_generator',
+      'naturesaura:potion_generator'
     ],
     chapter_7_1: [
       'naturesaura:shockwave_creator',
       'naturesaura:ancient_leaves',
-      'naturesaura:powder_placer',
+      'naturesaura:powder_placer'
     ],
-    chapter_7_2: ['naturesaura:outpost_finder'],
+    chapter_7_2: ['naturesaura:outpost_finder']
   });
   overrideChapters('chunkloaders', {
-    chapter_3: ['chunkloaders:single_chunk_loader'],
+    chapter_3: ['chunkloaders:single_chunk_loader']
   });
   overrideChapters('farmersrespite', {
     chapter_3: ['farmersrespite:tea_curry'],
     chapter_4: [
       'farmersrespite:nether_wart_sourdough',
       'farmersrespite:blazing_chili',
-      'farmersrespite:purulent_tea',
+      'farmersrespite:purulent_tea'
     ],
     chapter_5_1: [
       'farmersrespite:blazing_chili',
@@ -3647,8 +3647,8 @@ onEvent('tags.items', event => {
       'farmersrespite:long_rose_hip_tea',
       'farmersrespite:long_black_tea',
       'farmersrespite:long_yellow_tea',
-      'farmersrespite:long_green_tea',
-    ],
+      'farmersrespite:long_green_tea'
+    ]
   });
   overrideChapters('minecraft', {
     chapter_1: [
@@ -3721,7 +3721,7 @@ onEvent('tags.items', event => {
       'minecraft:brick_wall',
       'minecraft:cauldron',
       'minecraft:smooth_basalt',
-      'minecraft:flint_and_steel',
+      'minecraft:flint_and_steel'
     ],
     chapter_2: [
       'minecraft:dark_prismarine',
@@ -3858,7 +3858,7 @@ onEvent('tags.items', event => {
       'minecraft:red_wool',
       'minecraft:green_wool',
       'minecraft:black_wool',
-      'minecraft:composter',
+      'minecraft:composter'
     ],
     chapter_3: [
       'minecraft:potion',
@@ -4019,7 +4019,7 @@ onEvent('tags.items', event => {
       'minecraft:jack_o_lantern',
       'minecraft:lantern',
       'minecraft:magma_block',
-      'minecraft:enchanted_golden_apple',
+      'minecraft:enchanted_golden_apple'
     ],
     chapter_4: [
       'minecraft:red_concrete',
@@ -4173,7 +4173,7 @@ onEvent('tags.items', event => {
       'minecraft:netherite_pickaxe',
       'minecraft:netherite_axe',
       'minecraft:netherite_hoe',
-      'minecraft:cookie',
+      'minecraft:cookie'
     ],
     chapter_5: ['minecraft:ender_pearl', 'minecraft:ender_eye'],
     chapter_5_1: [
@@ -4264,7 +4264,7 @@ onEvent('tags.items', event => {
       'minecraft:beehive',
       'minecraft:honey_block',
       'minecraft:honeycomb_block',
-      'minecraft:name_tag',
+      'minecraft:name_tag'
     ],
     chapter_7_1: [
       'minecraft:experience_bottle',
@@ -4327,9 +4327,9 @@ onEvent('tags.items', event => {
       'minecraft:elytra',
       'minecraft:diamond',
       'minecraft:raw_gold_block',
-      'minecraft:raw_gold',
+      'minecraft:raw_gold'
     ],
-    chapter_7_2: ['minecraft:emerald_block', 'minecraft:emerald'],
+    chapter_7_2: ['minecraft:emerald_block', 'minecraft:emerald']
   });
 
   // overrideChapters('create_confectionery', {
@@ -4365,7 +4365,7 @@ onEvent('tags.items', event => {
       'kubejs:stitched_hide',
       'kubejs:salted_hide',
       'kubejs:dried_hide',
-      'kubejs:wet_tanned_hide',
+      'kubejs:wet_tanned_hide'
     ],
     chapter_2: [
       'kubejs:dry_unfired_seared_brick',
@@ -4388,7 +4388,7 @@ onEvent('tags.items', event => {
       'kubejs:molten_sterling_silver_bucket',
       'kubejs:freezing_sap_bucket',
       'kubejs:everbright_token',
-      'kubejs:glass_tube',
+      'kubejs:glass_tube'
     ],
     chapter_3: [
       'kubejs:fiery_dust',
@@ -4407,7 +4407,7 @@ onEvent('tags.items', event => {
       'kubejs:fiery_blood_bucket',
       'kubejs:undergarden_token',
       'kubejs:everdawn_token',
-      'kubejs:twilight_token',
+      'kubejs:twilight_token'
     ],
     chapter_4: [
       'kubejs:electrum_dust',
@@ -4443,7 +4443,7 @@ onEvent('tags.items', event => {
       'kubejs:corn_flakes',
       'kubejs:wheat_flakes',
       'kubejs:nether_token',
-      'kubejs:tar_sand',
+      'kubejs:tar_sand'
     ],
     chapter_5_1: [
       'kubejs:rennet_bucket',
@@ -4851,7 +4851,7 @@ onEvent('tags.items', event => {
       'kubejs:trimmed_medium_grade_beef',
       'kubejs:miracle_feed',
       'kubejs:high_grade_feed',
-      'kubejs:medium_grade_feed',
+      'kubejs:medium_grade_feed'
     ],
     chapter_5_2: [
       'kubejs:catalyst',
@@ -4862,12 +4862,12 @@ onEvent('tags.items', event => {
       'kubejs:iron_coin',
       'kubejs:lead_coin',
       'kubejs:silver_coin',
-      'kubejs:zinc_coin',
+      'kubejs:zinc_coin'
     ],
     chapter_7_1: [
       'kubejs:end_token',
       'kubejs:restoration_token',
-      'kubejs:earth_token',
+      'kubejs:earth_token'
     ],
     chapter_7_2: [
       'kubejs:hell_token',
@@ -4875,11 +4875,11 @@ onEvent('tags.items', event => {
       'kubejs:gold_coin',
       'kubejs:steel_coin',
       'kubejs:nickel_coin',
-      'kubejs:platinum_coin',
-    ],
+      'kubejs:platinum_coin'
+    ]
   });
   overrideChapters('undergarden', {
-    chapter_3: ['undergarden:gloom_o_lantern'],
+    chapter_3: ['undergarden:gloom_o_lantern']
   });
   overrideChapters('immersiveengineering', {
     chapter_1: [
@@ -4888,7 +4888,7 @@ onEvent('tags.items', event => {
       'immersiveengineering:alloybrick',
       'immersiveengineering:slab_alloybrick',
       'immersiveengineering:hammer',
-      'immersiveengineering:alloy_smelter',
+      'immersiveengineering:alloy_smelter'
     ],
     chapter_3: [
       'immersiveengineering:shader_bag_uncommon',
@@ -4897,7 +4897,7 @@ onEvent('tags.items', event => {
       'immersiveengineering:shader_bag_rare',
       'immersiveengineering:shader_bag_twilight',
       'immersiveengineering:shader_bag_common',
-      'immersiveengineering:shader',
+      'immersiveengineering:shader'
     ],
     chapter_4: [
       'immersiveengineering:slab_storage_aluminum',
@@ -4943,14 +4943,14 @@ onEvent('tags.items', event => {
       'immersiveengineering:slab_sheetmetal_colored_orange',
       'immersiveengineering:slab_sheetmetal_lead',
       'immersiveengineering:slab_sheetmetal_aluminum',
-      'immersiveengineering:slab_sheetmetal_copper',
+      'immersiveengineering:slab_sheetmetal_copper'
     ],
     chapter_5: [
       'immersiveengineering:wirecutter',
       'immersiveengineering:wirecoil_copper',
       'immersiveengineering:connector_lv_relay',
       'immersiveengineering:connector_lv',
-      'immersiveengineering:wire_copper',
+      'immersiveengineering:wire_copper'
     ],
     chapter_5_1: [
       'immersiveengineering:cushion',
@@ -4967,15 +4967,15 @@ onEvent('tags.items', event => {
       'immersiveengineering:hempcrete',
       'immersiveengineering:slab_hempcrete',
       'immersiveengineering:stairs_hempcrete',
-      'immersiveengineering:wirecoil_structure_rope',
+      'immersiveengineering:wirecoil_structure_rope'
     ],
-    chapter_7_1: ['immersiveengineering:ersatz_leather'],
+    chapter_7_1: ['immersiveengineering:ersatz_leather']
   });
   overrideChapters('immersivepetroleum', {
-    chapter_4: ['immersivepetroleum:crudeoil_bucket'],
+    chapter_4: ['immersivepetroleum:crudeoil_bucket']
   });
   overrideChapters('immersive_aircraft', {
-    chapter_5_1: ['immersive_aircraft:airship'],
+    chapter_5_1: ['immersive_aircraft:airship']
   });
   overrideChapters('extendedcrafting', {
     chapter_2: ['extendedcrafting:handheld_table'],
@@ -4990,12 +4990,12 @@ onEvent('tags.items', event => {
       'extendedcrafting:black_iron_slate',
       'extendedcrafting:luminessence',
       'extendedcrafting:basic_component',
-      'extendedcrafting:basic_catalyst',
+      'extendedcrafting:basic_catalyst'
     ],
     chapter_4: [
       'extendedcrafting:advanced_table',
       'extendedcrafting:advanced_component',
-      'extendedcrafting:advanced_catalyst',
+      'extendedcrafting:advanced_catalyst'
     ],
     chapter_5_2: [
       'extendedcrafting:elite_table',
@@ -5008,7 +5008,7 @@ onEvent('tags.items', event => {
       'extendedcrafting:elite_component',
       'extendedcrafting:elite_catalyst',
       'extendedcrafting:redstone_nugget',
-      'extendedcrafting:redstone_ingot',
+      'extendedcrafting:redstone_ingot'
     ],
     chapter_7_1: [
       'extendedcrafting:ultimate_table',
@@ -5024,7 +5024,7 @@ onEvent('tags.items', event => {
       'extendedcrafting:ender_crafter',
       'extendedcrafting:ender_alternator',
       'extendedcrafting:ender_catalyst',
-      'extendedcrafting:redstone_catalyst',
+      'extendedcrafting:redstone_catalyst'
     ],
     chapter_8: [
       'extendedcrafting:the_ultimate_block',
@@ -5032,8 +5032,8 @@ onEvent('tags.items', event => {
       'extendedcrafting:the_ultimate_nugget',
       'extendedcrafting:the_ultimate_catalyst',
       'extendedcrafting:the_ultimate_component',
-      'extendedcrafting:ultimate_singularity',
-    ],
+      'extendedcrafting:ultimate_singularity'
+    ]
   });
   overrideChapters('bunker', {
     chapter_1: [
@@ -5043,8 +5043,8 @@ onEvent('tags.items', event => {
       'architects_palette:plating_wall',
       'architects_palette:flint_pillar',
       'architects_palette:pipe',
-      'pneumaticcraft:wall_lamp_inverted_white',
-    ],
+      'pneumaticcraft:wall_lamp_inverted_white'
+    ]
   });
   overrideChapters('ironchests', {
     chapter_4: [
@@ -5059,14 +5059,14 @@ onEvent('tags.items', event => {
       'ironchest:trapped_gold_chest',
       'ironchest:trapped_diamond_chest',
       'ironchest:trapped_crystal_chest',
-      'ironchest:trapped_obsidian_chest',
-    ],
+      'ironchest:trapped_obsidian_chest'
+    ]
   });
   overrideChapters('totemic', {
     chapter_3: [
       'totemic:eagle_feather',
       'totemic:eagle_bone',
-      'totemic:eagle_bone_whistle',
+      'totemic:eagle_bone_whistle'
     ],
     chapter_5_1: [
       'totemic:baykok_bow',
@@ -5077,8 +5077,8 @@ onEvent('tags.items', event => {
       'totemic:rattle',
       'totemic:eagle_bone_whistle',
       'totemic:eagle_feather',
-      'totemic:eagle_bone',
-    ],
+      'totemic:eagle_bone'
+    ]
   });
   overrideChapters('malum', {
     chapter_1: ['malum:charcoal_fragment'],
@@ -5129,7 +5129,7 @@ onEvent('tags.items', event => {
       'malum:arcane_charcoal',
       'malum:arcane_charcoal_fragment',
       'malum:block_of_arcane_charcoal',
-      'malum:crude_scythe',
+      'malum:crude_scythe'
     ],
     chapter_4: [
       'malum:runewood_obelisk',
@@ -5229,7 +5229,7 @@ onEvent('tags.items', event => {
       'malum:vivid_nitrate',
       'malum:etheric_nitrate',
       'malum:crushed_soulstone',
-      'malum:crushed_brilliance',
+      'malum:crushed_brilliance'
     ],
     chapter_5_1: ['malum:unholy_caramel', 'malum:holy_caramel'],
     chapter_5_2: [
@@ -5238,7 +5238,7 @@ onEvent('tags.items', event => {
       'malum:cracked_uranium_impetus',
       'malum:nickel_node',
       'malum:nickel_impetus',
-      'malum:cracked_nickel_impetus',
+      'malum:cracked_nickel_impetus'
     ],
     chapter_7_1: [
       'malum:block_of_astral_weave',
@@ -5248,8 +5248,8 @@ onEvent('tags.items', event => {
       'malum:cracked_osmium_impetus',
       'malum:necklace_of_blissful_harmony',
       'malum:necklace_of_the_mystic_mirror',
-      'malum:ring_of_the_hoarder',
-    ],
+      'malum:ring_of_the_hoarder'
+    ]
   });
   overrideChapters('create', {
     chapter_2: [
@@ -5267,7 +5267,7 @@ onEvent('tags.items', event => {
       'create:jungle_window_pane',
       'create:acacia_window_pane',
       'create:dark_oak_window_pane',
-      'create:ornate_iron_window_pane',
+      'create:ornate_iron_window_pane'
     ],
     chapter_3: [
       'create:cut_granite',
@@ -5498,7 +5498,7 @@ onEvent('tags.items', event => {
       'create:large_cogwheel',
       'create:shaft',
       'create:hand_crank',
-      'create:andesite_alloy',
+      'create:andesite_alloy'
     ],
     chapter_4: [
       'create:cinder_flour',
@@ -5526,7 +5526,7 @@ onEvent('tags.items', event => {
       'create:oxidized_copper_shingles',
       'create:weathered_copper_shingles',
       'create:exposed_copper_shingles',
-      'create:copper_shingles',
+      'create:copper_shingles'
     ],
     chapter_5_1: [
       'create:filter',
@@ -5571,7 +5571,7 @@ onEvent('tags.items', event => {
       'create:waxed_copper_shingle_stairs',
       'create:waxed_exposed_copper_shingle_stairs',
       'create:waxed_weathered_copper_shingle_stairs',
-      'create:waxed_oxidized_copper_shingle_stairs',
+      'create:waxed_oxidized_copper_shingle_stairs'
     ],
     chapter_5_2: [
       'create:rotation_speed_controller',
@@ -5583,16 +5583,16 @@ onEvent('tags.items', event => {
       'create:mechanical_arm',
       'create:display_link',
       'create:display_board',
-      'create:precision_mechanism',
+      'create:precision_mechanism'
     ],
-    chapter_7_1: ['create:crushed_raw_osmium'],
+    chapter_7_1: ['create:crushed_raw_osmium']
   });
   overrideChapters('createaddition', {
     chapter_5_1: [
       'createaddition:cake_base_baked',
       'createaddition:cake_base',
       'createaddition:honey_cake',
-      'createaddition:chocolate_cake',
+      'createaddition:chocolate_cake'
     ],
     chapter_5_2: [
       'create:framed_glass_trapdoor',
@@ -5613,18 +5613,18 @@ onEvent('tags.items', event => {
       'createaddition:gold_wire',
       'createaddition:straw',
       'createaddition:connector',
-      'createaddition:redstone_relay',
+      'createaddition:redstone_relay'
     ],
     chapter_7_1: [
       'createaddition:diamond_grit_sandpaper',
-      'createaddition:diamond_grit',
-    ],
+      'createaddition:diamond_grit'
+    ]
   });
   overrideChapters('constructionwand', {
     chapter_4: [
       'constructionwand:diamond_wand',
-      'constructionwand:infinity_wand',
-    ],
+      'constructionwand:infinity_wand'
+    ]
   });
   overrideChapters('cold_sweat', {
     chapter_1: [
@@ -5632,13 +5632,13 @@ onEvent('tags.items', event => {
       'cold_sweat:waterskin',
       'cold_sweat:filled_waterskin',
       'cold_sweat:boiler',
-      'cold_sweat:icebox',
+      'cold_sweat:icebox'
     ],
     chapter_3: [
       'cold_sweat:thermolith',
       'cold_sweat:chameleon_molt',
       'cold_sweat:minecart_insulation',
-      'cold_sweat:insulated_minecart',
+      'cold_sweat:insulated_minecart'
     ],
     chapter_4: [
       'cold_sweat:soulspring_lamp',
@@ -5647,8 +5647,8 @@ onEvent('tags.items', event => {
       'cold_sweat:hoglin_headpiece',
       'cold_sweat:hoglin_tunic',
       'cold_sweat:hoglin_hooves',
-      'cold_sweat:hoglin_trousers',
-    ],
+      'cold_sweat:hoglin_trousers'
+    ]
   });
   overrideChapters('charcoal_pit', {
     chapter_2: [
@@ -5658,7 +5658,7 @@ onEvent('tags.items', event => {
       'charcoal_pit:cooked_calamari',
       'charcoal_pit:calamari',
       'charcoal_pit:copper_hoe',
-      'charcoal_pit:bronze_hoe',
+      'charcoal_pit:bronze_hoe'
     ],
     chapter_3: [
       'charcoal_pit:nether_shard',
@@ -5679,7 +5679,7 @@ onEvent('tags.items', event => {
       'charcoal_pit:pink_pot',
       'charcoal_pit:purple_pot',
       'charcoal_pit:white_pot',
-      'charcoal_pit:yellow_pot',
+      'charcoal_pit:yellow_pot'
     ],
     chapter_4: [
       'charcoal_pit:dynamite_remote',
@@ -5692,7 +5692,7 @@ onEvent('tags.items', event => {
       'charcoal_pit:alloy_orichalcum',
       'charcoal_pit:alloy_pig_iron',
       'charcoal_pit:flux',
-      'charcoal_pit:nether_brick_item',
+      'charcoal_pit:nether_brick_item'
     ],
     chapter_5_1: [
       'charcoal_pit:olive_leaves',
@@ -5718,7 +5718,7 @@ onEvent('tags.items', event => {
       'charcoal_pit:pickled_olives',
       'charcoal_pit:olives',
       'charcoal_pit:olive_sapling',
-      'charcoal_pit:olive_oil_bucket',
+      'charcoal_pit:olive_oil_bucket'
     ],
     chapter_5_2: [
       'charcoal_pit:steel_boots',
@@ -5729,8 +5729,8 @@ onEvent('tags.items', event => {
       'charcoal_pit:steel_hoe',
       'charcoal_pit:steel_axe',
       'charcoal_pit:steel_shovel',
-      'charcoal_pit:steel_pick',
-    ],
+      'charcoal_pit:steel_pick'
+    ]
   });
   overrideChapters('botania', {
     chapter_4: [
@@ -5827,7 +5827,7 @@ onEvent('tags.items', event => {
       'botania:twig_wand',
       'botania:livingwood_twig',
       'botania:living_root',
-      'botania:mana_spreader',
+      'botania:mana_spreader'
     ],
     chapter_7_1: [
       'botania:thermalily',
@@ -5973,8 +5973,8 @@ onEvent('tags.items', event => {
       'botania:life_essence',
       'botania:gaia_ingot',
       'botania:ender_air_bottle',
-      'botania:fabulous_pool',
-    ],
+      'botania:fabulous_pool'
+    ]
   });
   overrideChapters('creative', {
     chapter_8: [
@@ -5993,8 +5993,8 @@ onEvent('tags.items', event => {
       'botania:lens_storm',
       'botania:infrangible_platform',
       'botania:creative_pool',
-      'bloodmagic:activationcrystalcreative',
-    ],
+      'bloodmagic:activationcrystalcreative'
+    ]
   });
   overrideChapters('blue_skies', {
     chapter_2: [
@@ -6006,7 +6006,7 @@ onEvent('tags.items', event => {
       'blue_skies:blue_journal',
       'blue_skies:trough',
       'blue_skies:cherry_pie',
-      'blue_skies:camellia',
+      'blue_skies:camellia'
     ],
     chapter_3: [
       'blue_skies:starlit_bookshelf',
@@ -6234,13 +6234,10 @@ onEvent('tags.items', event => {
       'blue_skies:poison_stone_pillar',
       'blue_skies:lunar_bookshelf',
       'blue_skies:dusk_bookshelf',
-      'blue_skies:maple_bookshelf',
+      'blue_skies:maple_bookshelf'
     ],
     chapter_5_1: ['blue_skies:ventium_milk_bucket'],
-    chapter_4: [
-      'blue_skies:bluebright_bookshelf',
-      'blue_skies:lunar_bookshelf',
-    ],
+    chapter_4: ['blue_skies:bluebright_bookshelf', 'blue_skies:lunar_bookshelf']
   });
   overrideChapters('chemlib', {
     chapter_4: [
@@ -6263,7 +6260,7 @@ onEvent('tags.items', event => {
       'chemlib:silver_dust',
       'chemlib:aluminum_dust',
       'chemlib:cobalt_plate',
-      'chemlib:cobalt_dust',
+      'chemlib:cobalt_dust'
     ],
     chapter_5_1: ['chemlib:sodium_dust', 'chemlib:sodium_plate'],
     chapter_5_2: [
@@ -6274,8 +6271,8 @@ onEvent('tags.items', event => {
       'chemlib:nickel_plate',
       'chemlib:uranium_plate',
       'chemlib:chromium_oxide',
-      'chemlib:silicon_dioxide',
-    ],
+      'chemlib:silicon_dioxide'
+    ]
   });
   overrideChapters('bloodmagic', {
     chapter_3: [
@@ -6303,7 +6300,7 @@ onEvent('tags.items', event => {
       'bloodmagic:arcaneashes',
       'bloodmagic:sacrificialdagger',
       'bloodmagic:altar',
-      'bloodmagic:altarcapacityrune',
+      'bloodmagic:altarcapacityrune'
     ],
     chapter_5_1: [
       'bloodmagic:teleposerfocus',
@@ -6316,7 +6313,7 @@ onEvent('tags.items', event => {
       'bloodmagic:chargingrune',
       'bloodmagic:orbcapacityrune',
       'bloodmagic:reagentsuppression',
-      'bloodmagic:sigilofsuppression',
+      'bloodmagic:sigilofsuppression'
     ],
     chapter_7_2: [
       'bloodmagic:voiding_anointment_xl',
@@ -6396,12 +6393,12 @@ onEvent('tags.items', event => {
       'bloodmagic:etherealslate',
       'bloodmagic:sand_hellforged',
       'bloodmagic:ingot_hellforged',
-      'bloodmagic:dungeon_metal',
-    ],
+      'bloodmagic:dungeon_metal'
+    ]
   });
   overrideChapters('adpother', {
     chapter_2: ['adpother:polluted_water_bucket'],
-    chapter_5_2: ['adpother:aerometer'],
+    chapter_5_2: ['adpother:aerometer']
   });
   overrideChapters('cataclysm', {
     chapter_2: [
@@ -6409,14 +6406,14 @@ onEvent('tags.items', event => {
       'cataclysm:obsidian_brick_stairs',
       'cataclysm:obsidian_brick_slab',
       'cataclysm:chiseled_obsidian_bricks',
-      'cataclysm:obsidian_bricks',
+      'cataclysm:obsidian_bricks'
     ],
     chapter_3: [
       'cataclysm:end_stone_pillar',
       'cataclysm:chiseled_end_stone_bricks',
       'cataclysm:polished_end_stone_stairs',
       'cataclysm:polished_end_stone_slab',
-      'cataclysm:polished_end_stone',
+      'cataclysm:polished_end_stone'
     ],
     chapter_4: [
       [
@@ -6432,16 +6429,16 @@ onEvent('tags.items', event => {
         'cataclysm:ignitium_block',
         'cataclysm:witherite_block',
         'cataclysm:altar_of_fire',
-        'cataclysm:burning_ashes',
-      ],
+        'cataclysm:burning_ashes'
+      ]
     ],
     chapter_5_1: [
       'cataclysm:chorus_fence',
       'cataclysm:chorus_stairs',
       'cataclysm:chorus_slab',
-      'cataclysm:chorus_planks',
+      'cataclysm:chorus_planks'
     ],
-    chapter_7_1: ['cataclysm:ignitium_elytra_chestplate'],
+    chapter_7_1: ['cataclysm:ignitium_elytra_chestplate']
   });
   overrideChapters('hexerei', {
     chapter_1: [
@@ -6454,7 +6451,7 @@ onEvent('tags.items', event => {
       'hexerei:selenite_cluster',
       'hexerei:large_selenite_bud',
       'hexerei:medium_selenite_bud',
-      'hexerei:small_selenite_bud',
+      'hexerei:small_selenite_bud'
     ],
     chapter_2: [
       'hexerei:mushroom_witch_hat',
@@ -6474,7 +6471,7 @@ onEvent('tags.items', event => {
       'hexerei:candle',
       'hexerei:candle_red',
       'hexerei:candelabra',
-      'hexerei:herb_jar',
+      'hexerei:herb_jar'
     ],
     chapter_3: [
       'hexerei:herb_drying_rack_full',
@@ -6496,7 +6493,7 @@ onEvent('tags.items', event => {
       'hexerei:candle_cyan',
       'hexerei:candle_yellow',
       'hexerei:herb_enhanced_broom_brush',
-      'hexerei:wet_herb_enhanced_broom_brush',
+      'hexerei:wet_herb_enhanced_broom_brush'
     ],
     chapter_4: [
       'hexerei:crow_flute',
@@ -6525,17 +6522,17 @@ onEvent('tags.items', event => {
       'hexerei:warhammer',
       'hexerei:medium_satchel',
       'hexerei:small_satchel',
-      'hexerei:large_satchel',
+      'hexerei:large_satchel'
     ],
     chapter_5_1: ['hexerei:milk_bottle'],
-    chapter_7_1: ['hexerei:crystal_ball'],
+    chapter_7_1: ['hexerei:crystal_ball']
   });
   overrideChapters('paragon_textiles', {
     chapter_1: ['paragon_textiles:plant_fibers'],
     chapter_2: [
       'paragon_textiles:fabric_plain',
       'paragon_textiles:silk',
-      'paragon_textiles:fabric_red',
+      'paragon_textiles:fabric_red'
     ],
     chapter_3: [
       'paragon_textiles:silk_wisps',
@@ -6569,13 +6566,13 @@ onEvent('tags.items', event => {
       'paragon_textiles:fabric_cyan',
       'paragon_textiles:fabric_light_blue',
       'paragon_textiles:fabric_blue',
-      'paragon_textiles:packed_feathers',
+      'paragon_textiles:packed_feathers'
     ],
     chapter_4: [
       'paragon_textiles:wood_stain',
       'paragon_textiles:wood_bleach',
-      'paragon_textiles:flaxseed_oil_bucket',
-    ],
+      'paragon_textiles:flaxseed_oil_bucket'
+    ]
   });
   overrideChapters('smallships', {
     chapter_3: [
@@ -6592,28 +6589,28 @@ onEvent('tags.items', event => {
       'smallships:jungle_galley',
       'smallships:acacia_galley',
       'smallships:dark_oak_galley',
-      'smallships:dark_oak_galley',
+      'smallships:dark_oak_galley'
     ],
-    chapter_4: ['smallships:cannon', 'smallships:cannon_ball'],
+    chapter_4: ['smallships:cannon', 'smallships:cannon_ball']
   });
   overrideChapters('pneumaticcraft', {
     chapter_5_1: [
       'pneumaticcraft:sourdough',
       'pneumaticcraft:raw_salmon_tempura',
       'pneumaticcraft:sourdough_bread',
-      'pneumaticcraft:salmon_tempura',
+      'pneumaticcraft:salmon_tempura'
     ],
     chapter_5_2: [
       'pneumaticcraft:yeast_culture_bucket',
       'pneumaticcraft:reinforced_bricks',
       'pneumaticcraft:compressed_bricks',
       'pneumaticcraft:chips',
-      'pneumaticcraft:cod_n_chips',
+      'pneumaticcraft:cod_n_chips'
     ],
     chapter_7_1: [
       'pneumaticcraft:solar_wafer',
       'pneumaticcraft:solar_cell',
-      'pneumaticcraft:solar_compressor',
+      'pneumaticcraft:solar_compressor'
     ],
     chapter_7_2: [
       'pneumaticcraft:memory_stick',
@@ -6662,8 +6659,8 @@ onEvent('tags.items', event => {
       'pneumaticcraft:pneumatic_leggings',
       'pneumaticcraft:pneumatic_chestplate',
       'pneumaticcraft:pneumatic_helmet',
-      'pneumaticcraft:bandage',
-    ],
+      'pneumaticcraft:bandage'
+    ]
   });
   // overrideChapters('bloodsmeltery', {
   //   chapter_3: [
@@ -6692,7 +6689,7 @@ onEvent('tags.items', event => {
       'farmersdelight:tree_bark',
       'farmersdelight:sandy_shrub',
       'farmersdelight:brown_mushroom_colony',
-      'farmersdelight:red_mushroom_colony',
+      'farmersdelight:red_mushroom_colony'
     ],
     chapter_3: [
       'farmersdelight:oak_cabinet',
@@ -6725,7 +6722,7 @@ onEvent('tags.items', event => {
       'farmersdelight:roast_chicken_block',
       'farmersdelight:chicken_soup',
       'farmersdelight:chicken_cuts',
-      'farmersdelight:cooked_chicken_cuts',
+      'farmersdelight:cooked_chicken_cuts'
     ],
     chapter_4: [
       'farmersdelight:noodle_soup',
@@ -6742,7 +6739,7 @@ onEvent('tags.items', event => {
       'farmersdelight:ham',
       'farmersdelight:smoked_ham',
       'farmersdelight:dumplings',
-      'farmersdelight:nether_salad',
+      'farmersdelight:nether_salad'
     ],
     chapter_5_1: [
       'farmersdelight:pumpkin_soup',
@@ -6778,19 +6775,19 @@ onEvent('tags.items', event => {
       'farmersdelight:pie_crust',
       'farmersdelight:apple_pie',
       'farmersdelight:sweet_berry_cheesecake',
-      'farmersdelight:glow_berry_custard',
+      'farmersdelight:glow_berry_custard'
     ],
-    chapter_7_1: ['farmersdelight:diamond_knife'],
+    chapter_7_1: ['farmersdelight:diamond_knife']
   });
   overrideChapters('biomancy', {
-    chapter_1: ['biomancy:living_flesh'],
+    chapter_1: ['biomancy:living_flesh']
   });
   overrideChapters('salt', {
     chapter_3: ['salt:salt_lamp'],
-    chapter_5_1: ['salt:salt_block'],
+    chapter_5_1: ['salt:salt_block']
   });
   overrideChapters('thirst', {
-    chapter_4: ['thirst:sand_filter'],
+    chapter_4: ['thirst:sand_filter']
   });
   // overrideChapters('za', {
   //   chapter_1: [
@@ -6817,8 +6814,8 @@ onEvent('tags.items', event => {
       'cnb:cinder_sword',
       'cnb:cinder_furnace',
       'cnb:cindershell_bucket',
-      'cnb:cindershell_shell_shard',
-    ],
+      'cnb:cindershell_shell_shard'
+    ]
   });
   overrideChapters('upgrade_aquatic', {
     chapter_1: [
@@ -6907,7 +6904,7 @@ onEvent('tags.items', event => {
       'upgrade_aquatic:purple_pickerelweed',
       'upgrade_aquatic:boiled_blue_pickerelweed',
       'upgrade_aquatic:boiled_purple_pickerelweed',
-      'upgrade_aquatic:mulberry',
+      'upgrade_aquatic:mulberry'
     ],
     chapter_2: [
       'upgrade_aquatic:river_boat',
@@ -6937,7 +6934,7 @@ onEvent('tags.items', event => {
       'upgrade_aquatic:glass_door',
       'upgrade_aquatic:squid_bucket',
       'upgrade_aquatic:glow_squid_bucket',
-      'upgrade_aquatic:nautilus_bucket',
+      'upgrade_aquatic:nautilus_bucket'
     ],
     chapter_3: [
       'upgrade_aquatic:mulberry_jam_block',
@@ -6958,7 +6955,7 @@ onEvent('tags.items', event => {
       'upgrade_aquatic:blue_bedroll',
       'upgrade_aquatic:brown_bedroll',
       'upgrade_aquatic:green_bedroll',
-      'upgrade_aquatic:black_bedroll',
-    ],
+      'upgrade_aquatic:black_bedroll'
+    ]
   });
 });

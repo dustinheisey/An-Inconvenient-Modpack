@@ -1,12 +1,12 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setBalanceRecipes({
     shapeless: () => {
-      ['farmersdelight:yellow_canvas_sign'].forEach(id =>
-        event.remove({id: id})
+      ['farmersdelight:yellow_canvas_sign'].forEach((id) =>
+        event.remove({ id: id })
       );
       event.shapeless('farmersdelight:yellow_canvas_sign', [
         '#farmersdelight:canvas_signs',
-        'minecraft:yellow_dye',
+        'minecraft:yellow_dye'
       ]);
     },
     cooking_pot: () => {
@@ -16,8 +16,8 @@ onEvent('recipes', event => {
           'undergarden:bloody_stew',
           'undergarden:inky_stew',
           'undergarden:indigo_stew',
-          'minecraft:fermented_spider_eye',
-        ],
+          'minecraft:fermented_spider_eye'
+        ]
       });
 
       event.custom({
@@ -25,17 +25,17 @@ onEvent('recipes', event => {
         recipe_book_tab: 'meals',
         result: {
           item: 'farmersrespite:blazing_chili',
-          count: 1,
+          count: 1
         },
         ingredients: [
-          {item: 'minecraft:blaze_powder'},
-          {item: 'minecraft:blaze_powder'},
-          {item: 'minecraft:nether_wart'},
-          {item: 'minecraft:nether_wart'},
-          {item: 'farmersrespite:coffee_beans'},
-          {item: 'minecraft:porkchop'},
+          { item: 'minecraft:blaze_powder' },
+          { item: 'minecraft:blaze_powder' },
+          { item: 'minecraft:nether_wart' },
+          { item: 'minecraft:nether_wart' },
+          { item: 'farmersrespite:coffee_beans' },
+          { item: 'minecraft:porkchop' }
         ],
-        cookingtime: 200,
+        cookingtime: 200
       });
 
       event.custom({
@@ -43,98 +43,98 @@ onEvent('recipes', event => {
         recipe_book_tab: 'meals',
         result: {
           item: 'minecraft:fermented_spider_eye',
-          count: 1,
+          count: 1
         },
         ingredients: [
-          {item: 'minecraft:spider_eye'},
-          {item: 'minecraft:sugar'},
-          {item: 'undergarden:blood_mushroom'},
+          { item: 'minecraft:spider_eye' },
+          { item: 'minecraft:sugar' },
+          { item: 'undergarden:blood_mushroom' }
         ],
-        cookingtime: 200,
+        cookingtime: 200
       });
       event.custom({
         type: 'farmersdelight:cooking',
         recipe_book_tab: 'meals',
         result: {
           item: 'undergarden:veiled_stew',
-          count: 1,
+          count: 1
         },
         ingredients: [
-          {item: 'undergarden:veil_mushroom'},
-          {item: 'undergarden:veil_mushroom'},
-          {item: 'undergarden:veil_mushroom'},
+          { item: 'undergarden:veil_mushroom' },
+          { item: 'undergarden:veil_mushroom' },
+          { item: 'undergarden:veil_mushroom' }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl',
+        container: 'minecraft:bowl'
       });
       event.custom({
         type: 'farmersdelight:cooking',
         recipe_book_tab: 'meals',
         result: {
           item: 'undergarden:bloody_stew',
-          count: 1,
+          count: 1
         },
         ingredients: [
-          {item: 'undergarden:blood_mushroom'},
-          {item: 'undergarden:blood_mushroom'},
-          {item: 'undergarden:blood_mushroom'},
+          { item: 'undergarden:blood_mushroom' },
+          { item: 'undergarden:blood_mushroom' },
+          { item: 'undergarden:blood_mushroom' }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl',
+        container: 'minecraft:bowl'
       });
       event.custom({
         type: 'farmersdelight:cooking',
         recipe_book_tab: 'meals',
         result: {
           item: 'undergarden:inky_stew',
-          count: 1,
+          count: 1
         },
         ingredients: [
-          {item: 'undergarden:ink_mushroom'},
-          {item: 'undergarden:ink_mushroom'},
-          {item: 'undergarden:ink_mushroom'},
+          { item: 'undergarden:ink_mushroom' },
+          { item: 'undergarden:ink_mushroom' },
+          { item: 'undergarden:ink_mushroom' }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl',
+        container: 'minecraft:bowl'
       });
       event.custom({
         type: 'farmersdelight:cooking',
         recipe_book_tab: 'meals',
         result: {
           item: 'undergarden:indigo_stew',
-          count: 1,
+          count: 1
         },
         ingredients: [
-          {item: 'undergarden:indigo_mushroom'},
-          {item: 'undergarden:indigo_mushroom'},
-          {item: 'undergarden:indigo_mushroom'},
+          { item: 'undergarden:indigo_mushroom' },
+          { item: 'undergarden:indigo_mushroom' },
+          { item: 'undergarden:indigo_mushroom' }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl',
+        container: 'minecraft:bowl'
       });
       event.custom({
         type: 'farmersdelight:cooking',
         recipe_book_tab: 'meals',
         result: {
           item: 'farmersdelight:dog_food',
-          count: 1,
+          count: 1
         },
         ingredients: [
           {
-            item: 'minecraft:rotten_flesh',
+            item: 'minecraft:rotten_flesh'
           },
           {
-            item: 'minecraft:bone_meal',
+            item: 'minecraft:bone_meal'
           },
           {
-            tag: 'farmersdelight:wolf_prey',
+            tag: 'farmersdelight:wolf_prey'
           },
           {
-            tag: 'forge:crops/rice',
-          },
+            tag: 'forge:crops/rice'
+          }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl',
+        container: 'minecraft:bowl'
       });
     },
     cutting_board: () => {
@@ -194,10 +194,10 @@ onEvent('recipes', event => {
           'minecraft:stripped_spruce_wood',
           'minecraft:stripped_crimson_hyphae',
           'farmersdelight:tree_bark',
-          'minecraft:amethyst_shard',
+          'minecraft:amethyst_shard'
         ],
-        type: 'farmersdelight:cutting',
+        type: 'farmersdelight:cutting'
       });
-    },
+    }
   });
 });

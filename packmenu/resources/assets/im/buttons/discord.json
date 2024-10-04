@@ -1,0 +1,12 @@
+{
+  "x": -120,
+  "y": 72,
+  "action": "OPEN_URL",
+  "data": "https://discord.gg/F6K96yFT",
+  "width": 116,
+  "height": 20,
+  "langKey": "packmenu.im.discord",
+  "hoverV": 20,
+  "texWidth": 116,
+  "texHeight": 40
+}

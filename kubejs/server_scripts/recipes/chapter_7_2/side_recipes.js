@@ -1,18 +1,18 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   setSideRecipes([
     {
       id: 'collections',
       recipe: () => {},
       children: [
-        {id: 'gateways', recipe: () => {}, children: []},
-        {id: 'guidebooks', recipe: () => {}, children: []},
+        { id: 'gateways', recipe: () => {}, children: [] },
+        { id: 'guidebooks', recipe: () => {}, children: [] },
         {
           id: 'end_eyes',
-          recipe: () => {},
+          recipe: () => {}
         },
         {
           id: 'lost_stories',
-          recipe: () => {},
+          recipe: () => {}
         },
         {
           id: 'armor',
@@ -21,8 +21,8 @@ onEvent('recipes', event => {
               'pneumaticcraft:pneumatic_helmet',
               'pneumaticcraft:pneumatic_chestplate',
               'pneumaticcraft:pneumatic_leggings',
-              'pneumaticcraft:pneumatic_boots',
-            ].forEach(id => event.remove({id: id}));
+              'pneumaticcraft:pneumatic_boots'
+            ].forEach((id) => event.remove({ id: id }));
 
             event
               .shaped(
@@ -31,7 +31,7 @@ onEvent('recipes', event => {
                 {
                   a: 'pneumaticcraft:air_canister',
                   b: 'pneumaticcraft:printed_circuit_board',
-                  c: 'charcoal_pit:orichalcum_helmet',
+                  c: 'charcoal_pit:orichalcum_helmet'
                 }
               )
               .stage('chapter_7_2');
@@ -43,7 +43,7 @@ onEvent('recipes', event => {
                 {
                   a: 'pneumaticcraft:air_canister',
                   b: 'pneumaticcraft:printed_circuit_board',
-                  c: 'charcoal_pit:orichalcum_chestplate',
+                  c: 'charcoal_pit:orichalcum_chestplate'
                 }
               )
               .stage('chapter_7_2');
@@ -55,7 +55,7 @@ onEvent('recipes', event => {
                 {
                   a: 'pneumaticcraft:air_canister',
                   b: 'pneumaticcraft:printed_circuit_board',
-                  c: 'charcoal_pit:orichalcum_leggings',
+                  c: 'charcoal_pit:orichalcum_leggings'
                 }
               )
               .stage('chapter_7_2');
@@ -64,12 +64,12 @@ onEvent('recipes', event => {
               .shaped('pneumaticcraft:pneumatic_boots', ['aba', 'aca', 'aaa'], {
                 a: 'pneumaticcraft:air_canister',
                 b: 'pneumaticcraft:printed_circuit_board',
-                c: 'charcoal_pit:orichalcum_boots',
+                c: 'charcoal_pit:orichalcum_boots'
               })
               .stage('chapter_7_2');
-          },
-        },
-      ],
-    },
+          }
+        }
+      ]
+    }
   ]);
 });

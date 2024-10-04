@@ -1,98 +1,98 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   event.custom({
     type: 'compactcrafting:miniaturization',
     recipeSize: 1,
     layers: [
       {
         type: 'compactcrafting:filled',
-        component: 'R',
+        component: 'R'
       },
       {
         type: 'compactcrafting:filled',
-        component: 'I',
-      },
+        component: 'I'
+      }
     ],
     catalyst: {
       id: 'minecraft:ender_pearl',
-      Count: 1,
+      Count: 1
     },
     components: {
       R: {
         type: 'compactcrafting:block',
-        block: 'minecraft:redstone_wire',
+        block: 'minecraft:redstone_wire'
       },
       I: {
         type: 'compactcrafting:block',
-        block: 'minecraft:iron_block',
-      },
+        block: 'minecraft:iron_block'
+      }
     },
     outputs: [
       {
         id: 'compactmachines:wall',
-        Count: 16,
-      },
-    ],
+        Count: 16
+      }
+    ]
   });
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
     results: [
       {
-        item: 'pneumaticcraft:empty_pcb',
-      },
+        item: 'pneumaticcraft:empty_pcb'
+      }
     ],
     inputs: [
       {
         type: 'pneumaticcraft:stacked_item',
         item: 'extendedcrafting:ender_ingot',
-        count: 2,
+        count: 2
       },
       {
         type: 'pneumaticcraft:stacked_item',
         item: 'rankine:rose_gold_nugget',
-        count: 3,
+        count: 3
       },
       {
         type: 'pneumaticcraft:stacked_item',
         item: 'pneumaticcraft:plastic',
-        count: 8,
-      },
+        count: 8
+      }
     ],
-    pressure: 1.5,
+    pressure: 1.5
   });
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
-    results: [{item: 'pneumaticcraft:pcb_blueprint'}],
+    results: [{ item: 'pneumaticcraft:pcb_blueprint' }],
     inputs: [
       {
         type: 'pneumaticcraft:stacked_item',
         item: 'rankine:titanium_ingot',
-        count: 8,
+        count: 8
       },
       {
         type: 'pneumaticcraft:stacked_item',
         item: 'rankine:rose_gold_nugget',
-        count: 3,
+        count: 3
       },
       {
         type: 'pneumaticcraft:stacked_item',
         item: 'pneumaticcraft:plastic',
-        count: 8,
-      },
+        count: 8
+      }
     ],
-    pressure: 3,
+    pressure: 3
   });
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
-    results: [{item: 'pneumaticcraft:etching_acid_bucket'}],
+    results: [{ item: 'pneumaticcraft:etching_acid_bucket' }],
     inputs: [
-      {item: 'minecraft:bucket'},
+      { item: 'minecraft:bucket' },
       {
         type: 'pneumaticcraft:stacked_item',
         item: 'minecraft:gunpowder',
-        count: 3,
-      },
+        count: 3
+      }
     ],
-    pressure: 1,
+    pressure: 1
   });
 
   event.custom({
@@ -101,21 +101,21 @@ onEvent('recipes', event => {
       {
         type: 'pneumaticcraft:stacked_item',
         count: 3,
-        tag: 'forge:nuggets/cast_iron',
+        tag: 'forge:nuggets/cast_iron'
       },
       {
-        tag: 'forge:dusts/redstone',
+        tag: 'forge:dusts/redstone'
       },
       {
-        item: 'pneumaticcraft:plastic',
-      },
+        item: 'pneumaticcraft:plastic'
+      }
     ],
     pressure: 1.0,
     results: [
       {
-        item: 'pneumaticcraft:transistor',
-      },
-    ],
+        item: 'pneumaticcraft:transistor'
+      }
+    ]
   });
   event.custom({
     type: 'pneumaticcraft:pressure_chamber',
@@ -123,34 +123,34 @@ onEvent('recipes', event => {
       {
         type: 'pneumaticcraft:stacked_item',
         count: 2,
-        tag: 'forge:nuggets/titanium',
+        tag: 'forge:nuggets/titanium'
       },
       {
-        tag: 'forge:slimeballs',
+        tag: 'forge:slimeballs'
       },
       {
-        item: 'pneumaticcraft:plastic',
-      },
+        item: 'pneumaticcraft:plastic'
+      }
     ],
     pressure: 1.0,
     results: [
       {
-        item: 'pneumaticcraft:capacitor',
-      },
-    ],
+        item: 'pneumaticcraft:capacitor'
+      }
+    ]
   });
 
   event.custom({
     type: 'pneumaticcraft:explosion_crafting',
-    results: [{item: 'pneumaticcraft:ingot_iron_compressed'}],
-    input: {item: 'rankine:steel_ingot'},
-    loss_rate: 20,
+    results: [{ item: 'pneumaticcraft:ingot_iron_compressed' }],
+    input: { item: 'rankine:steel_ingot' },
+    loss_rate: 20
   });
   event.custom({
     type: 'pneumaticcraft:explosion_crafting',
-    results: [{item: 'pneumaticcraft:compressed_iron_block'}],
-    input: {item: 'rankine:steel_block'},
-    loss_rate: 20,
+    results: [{ item: 'pneumaticcraft:compressed_iron_block' }],
+    input: { item: 'rankine:steel_block' },
+    loss_rate: 20
   });
   event.blasting(
     'immersiveengineering:dust_hop_graphite',
@@ -159,86 +159,86 @@ onEvent('recipes', event => {
 
   event.remove({
     output: ['immersiveengineering:redstone_acid'],
-    type: 'immersiveengineering:mixer',
+    type: 'immersiveengineering:mixer'
   });
 
   event.custom({
     type: 'immersiveengineering:mixer',
     inputs: [
       {
-        tag: 'forge:dusts/redstone',
-      },
+        tag: 'forge:dusts/redstone'
+      }
     ],
     result: {
       fluid: 'immersiveengineering:redstone_acid',
-      amount: 250,
+      amount: 250
     },
     fluid: {
       tag: 'pneumaticcraft:etching_acid',
-      amount: 250,
+      amount: 250
     },
-    energy: 1600,
+    energy: 1600
   });
 
   event.custom({
     type: 'immersiveengineering:metal_press',
     mold: 'immersiveengineering:mold_plate',
-    result: {item: 'chemlib:sodium_plate'},
-    input: {item: 'rankine:sodium_chloride'},
-    energy: 2400,
+    result: { item: 'chemlib:sodium_plate' },
+    input: { item: 'rankine:sodium_chloride' },
+    energy: 2400
   });
 
   event.custom({
     type: 'immersiveengineering:metal_press',
     mold: 'immersiveengineering:mold_plate',
-    result: {item: 'chemlib:titanium_plate'},
-    input: {item: 'rankine:titanium_ingot'},
-    energy: 2400,
+    result: { item: 'chemlib:titanium_plate' },
+    input: { item: 'rankine:titanium_ingot' },
+    energy: 2400
   });
 
   event.custom({
     type: 'immersiveengineering:arc_furnace',
-    results: [{item: 'rankine:silicon_carbide'}],
-    input: {item: 'rankine:silicon'},
-    additives: [{count: 4, item: 'rankine:carbon'}],
+    results: [{ item: 'rankine:silicon_carbide' }],
+    input: { item: 'rankine:silicon' },
+    additives: [{ count: 4, item: 'rankine:carbon' }],
     time: 100,
-    energy: 51200,
+    energy: 51200
   });
 
   event.shaped(`create:electron_tube`, ['a', 'b', 'c'], {
     a: 'create:polished_rose_quartz',
     b: 'rankine:promethium_ingot',
-    c: 'chemlib:iron_plate',
+    c: 'chemlib:iron_plate'
   });
 
   event.custom({
     type: 'create:item_application',
-    ingredients: [{tag: 'minecraft:planks'}, {item: 'create:shadow_steel'}],
-    results: [{item: 'create:shadow_steel_casing'}],
+    ingredients: [{ tag: 'minecraft:planks' }, { item: 'create:shadow_steel' }],
+    results: [{ item: 'create:shadow_steel_casing' }]
   });
 
   event.custom({
     type: 'create:mixing',
-    results: [{item: 'hem:bronze_ingot'}],
+    results: [{ item: 'hem:bronze_ingot' }],
     ingredients: [
-      {item: 'rankine:bronze_ingot'},
-      {item: 'rankine:rose_gold_ingot'},
+      { item: 'rankine:bronze_ingot' },
+      { item: 'rankine:rose_gold_ingot' }
     ],
-    heatRequirement: 'heated',
+    heatRequirement: 'heated'
   });
 
   event.custom({
     type: 'create:mixing',
-    results: [{item: 'hem:rose_copper_ingot'}],
+    results: [{ item: 'hem:rose_copper_ingot' }],
     ingredients: [
-      {item: 'minecraft:copper_ingot'},
-      {item: 'rankine:rose_gold_ingot'},
+      { item: 'minecraft:copper_ingot' },
+      { item: 'rankine:rose_gold_ingot' }
     ],
-    heatRequirement: 'heated',
+    heatRequirement: 'heated'
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'rankine:induction_furnace'},
+    result: { item: 'rankine:induction_furnace' },
     pattern: ['abbba', 'bcdcb', 'bdedb', 'bcccb', 'afffa'],
     key: {
       a: 'rankine:steel_block',
@@ -249,107 +249,107 @@ onEvent('recipes', event => {
         '{Elements:[{id:"rankine:elements/nickel",percent:15s},{id:"rankine:elements/copper",percent:85s}],StoredAlloy:{comp:"85Cu-15Ni",recipe:"rankine:alloying/cupronickel_alloying"},color:11946807,nameOverride:"item.rankine.cupronickel_alloying"}'
       ),
       e: 'rankine:alloy_furnace',
-      f: 'rankine:simple_electromagnet',
-    },
+      f: 'rankine:simple_electromagnet'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'create:steam_engine'},
+    result: { item: 'create:steam_engine' },
     pattern: ['  abb', '  b  ', ' cdc ', ' cdc ', 'c   c'],
     key: {
       a: 'create:brass_sheet',
       b: 'immersiveengineering:plate_steel',
       c: 'minecraft:waxed_copper_block',
-      d: 'create:andesite_alloy',
-    },
+      d: 'create:andesite_alloy'
+    }
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'hem:transporter_top'},
+    result: { item: 'hem:transporter_top' },
     pattern: ['aaa', 'aba', 'cdd'],
     key: {
       a: 'hem:copparite',
       b: 'hem:teir_one_computer',
       c: 'immersive_aircraft:boiler',
-      d: 'hem:generator_piping',
-    },
+      d: 'hem:generator_piping'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'hem:transporter_bottom'},
+    result: { item: 'hem:transporter_bottom' },
     pattern: ['aba', 'cdc', 'ccc'],
     key: {
       a: 'hem:generator_piping',
       b: 'create:electron_tube',
       c: 'hem:copparite',
-      d: 'immersive_aircraft:boiler',
-    },
+      d: 'immersive_aircraft:boiler'
+    }
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'hem:steam_engine'},
+    result: { item: 'hem:steam_engine' },
     pattern: ['aaa', 'aba', 'cbc'],
     key: {
       a: 'hem:copparite',
       b: 'immersive_aircraft:boiler',
-      c: 'hem:generator_piping',
-    },
+      c: 'hem:generator_piping'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'hem:generator_piping'},
+    result: { item: 'hem:generator_piping' },
     pattern: ['aba', '   ', 'aba'],
     key: {
       a: 'hem:copparite',
-      b: 'hem:rose_copper_ingot',
-    },
+      b: 'hem:rose_copper_ingot'
+    }
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'hem:teir_one_computer'},
+    result: { item: 'hem:teir_one_computer' },
     pattern: ['aaaaa', 'abbba', 'abcba', 'accca', 'aaaaa'],
     key: {
       a: 'hem:copparite',
       b: 'create:electron_tube',
-      c: 'hem:circuit_board',
-    },
+      c: 'hem:circuit_board'
+    }
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'hem:circuit_board'},
+    result: { item: 'hem:circuit_board' },
     pattern: ['aba', 'cdc', 'ada'],
     key: {
       a: 'hem:copparite',
       b: 'create:electron_tube',
       c: 'hem:bronze_ingot',
-      d: 'minecraft:redstone',
-    },
+      d: 'minecraft:redstone'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'immersive_aircraft:boiler'},
+    result: { item: 'immersive_aircraft:boiler' },
     pattern: ['aaa', 'aba', 'cbd'],
     key: {
       a: 'hem:copparite',
       b: 'tconstruct:molten_pig_iron_bucket',
       c: 'minecraft:gunpowder',
-      d: 'tconstruct:blazing_blood_bucket',
-    },
+      d: 'tconstruct:blazing_blood_bucket'
+    }
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'pneumaticcraft:printed_circuit_board'},
+    result: { item: 'pneumaticcraft:printed_circuit_board' },
     pattern: [' a ', 'bcb', ' a '],
     key: {
       a: 'pneumaticcraft:transistor',
       b: 'pneumaticcraft:capacitor',
-      c: 'pneumaticcraft:unassembled_pcb',
-    },
+      c: 'pneumaticcraft:unassembled_pcb'
+    }
   });
 
   event.custom({
@@ -361,47 +361,47 @@ onEvent('recipes', event => {
       element: 'rankine:elements/iron',
       min: 0.3,
       max: 0.5,
-      required: true,
+      required: true
     },
     input2: {
       element: 'rankine:elements/nickel',
       min: 0.13,
       max: 0.26,
-      required: true,
+      required: true
     },
     input3: {
       element: 'rankine:elements/cobalt',
       min: 0.05,
       max: 0.35,
-      required: true,
+      required: true
     },
     input4: {
       element: 'rankine:elements/aluminum',
       min: 0.08,
       max: 0.12,
-      required: true,
+      required: true
     },
     input5: {
       element: 'rankine:elements/copper',
       min: 0.0,
-      max: 0.12,
+      max: 0.12
     },
     input6: {
       element: 'rankine:elements/titanium',
       min: 0.0,
-      max: 0.12,
+      max: 0.12
     },
     input7: {
       element: 'rankine:elements/niobium',
       min: 0.0,
-      max: 0.12,
+      max: 0.12
     },
     input8: {
       element: 'rankine:elements/hafnium',
       min: 0.0,
-      max: 0.12,
+      max: 0.12
     },
-    result: 'rankine:alnico_ingot',
+    result: 'rankine:alnico_ingot'
   });
 
   event.custom({
@@ -413,65 +413,65 @@ onEvent('recipes', event => {
       element: 'rankine:elements/iron',
       min: 0.85,
       max: 0.97,
-      required: true,
+      required: true
     },
     input2: {
       element: 'rankine:elements/carbon',
       min: 0.03,
       max: 0.05,
-      required: true,
+      required: true
     },
     input3: {
       element: 'rankine:elements/manganese',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input4: {
       element: 'rankine:elements/nickel',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input5: {
       element: 'rankine:elements/chromium',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input6: {
       element: 'rankine:elements/molybdenum',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input7: {
       element: 'rankine:elements/titanium',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input8: {
       element: 'rankine:elements/vanadium',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input9: {
       element: 'rankine:elements/tellurium',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input10: {
       element: 'rankine:elements/barium',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input11: {
       element: 'rankine:elements/silicon',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input12: {
       element: 'rankine:elements/phosphorus',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
-    result: 'rankine:cast_iron_ingot',
+    result: 'rankine:cast_iron_ingot'
   });
 
   event.custom({
@@ -483,85 +483,85 @@ onEvent('recipes', event => {
       element: 'rankine:elements/copper',
       min: 0.7,
       max: 0.9,
-      required: true,
+      required: true
     },
     input2: {
       element: 'rankine:elements/nickel',
       min: 0.1,
       max: 0.3,
-      required: true,
+      required: true
     },
     input3: {
       element: 'rankine:elements/iron',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input4: {
       element: 'rankine:elements/manganese',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input5: {
       element: 'rankine:elements/tin',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input6: {
       element: 'rankine:elements/niobium',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input7: {
       element: 'rankine:elements/tantalum',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input8: {
       element: 'rankine:elements/titanium',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input9: {
       element: 'rankine:elements/lead',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input10: {
       element: 'rankine:elements/chromium',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input11: {
       element: 'rankine:elements/aluminum',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input12: {
       element: 'rankine:elements/bismuth',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input13: {
       element: 'rankine:elements/beryllium',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input14: {
       element: 'rankine:elements/silicon',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input15: {
       element: 'rankine:elements/phosphorus',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     input16: {
       element: 'rankine:elements/chlorine',
       min: 0,
-      max: 0.05,
+      max: 0.05
     },
-    result: 'rankine:cupronickel_ingot',
+    result: 'rankine:cupronickel_ingot'
   });
 
   event.custom({
@@ -573,46 +573,46 @@ onEvent('recipes', event => {
       element: 'rankine:elements/nickel',
       min: 0.75,
       max: 0.9,
-      required: true,
+      required: true
     },
     input2: {
       element: 'rankine:elements/iron',
       min: 0.1,
       max: 0.25,
-      required: true,
+      required: true
     },
     input3: {
       element: 'rankine:elements/molybdenum',
       min: 0.0,
-      max: 0.1,
+      max: 0.1
     },
     input4: {
       element: 'rankine:elements/fluorine',
       min: 0.0,
-      max: 0.05,
+      max: 0.05
     },
     result: 'rankine:invar_ingot',
     durability: -100,
     miningSpeed: -2.0,
     damage: 0.5,
-    heatresist: 0.25,
+    heatresist: 0.25
   });
 
   event.custom({
-    input: {item: 'rankine:bauxite_ore'},
+    input: { item: 'rankine:bauxite_ore' },
     type: 'rankine:crushing',
     guaranteed: [
       {
         item: 'rankine:bauxite',
         count: 1,
-        tier: 'minecraft:diamond',
+        tier: 'minecraft:diamond'
       },
       {
         item: 'rankine:bauxite',
         count: 1,
-        tier: 'minecraft:netherite',
-      },
-    ],
+        tier: 'minecraft:netherite'
+      }
+    ]
   });
   // {
   //   fluids: [
@@ -696,6 +696,6 @@ onEvent('recipes', event => {
   setMilestoneRecipes({
     id: 'computer',
     recipe: () => {},
-    children: [],
+    children: []
   });
 });

@@ -1,9 +1,6 @@
 {
   "name": "singularity.extendedcrafting.emerald",
-  "colors": [
-    "7df8ac",
-    "8e1a"
-  ],
+  "colors": ["7df8ac", "8e1a"],
   "ingredient": {
     "item": "minecraft:emerald"
   }

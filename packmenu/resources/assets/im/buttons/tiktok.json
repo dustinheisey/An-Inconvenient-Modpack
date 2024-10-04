@@ -1,0 +1,12 @@
+{
+  "x": 0,
+  "y": 96,
+  "action": "OPEN_URL",
+  "data": "https://www.tiktok.com/@inconvenientdev",
+  "width": 116,
+  "height": 20,
+  "langKey": "packmenu.im.tiktok",
+  "hoverV": 20,
+  "texWidth": 116,
+  "texHeight": 40
+}

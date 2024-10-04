@@ -1,99 +1,102 @@
-onEvent('recipes', event => {
+onEvent('recipes', (event) => {
   event.custom({
     type: 'productivebees:block_conversion',
     bee: 'productivebees:pure',
     from: {
-      Name: 'botania:dreamwood_log',
+      Name: 'botania:dreamwood_log'
     },
     to: {
-      Name: 'naturesaura:ancient_log',
+      Name: 'naturesaura:ancient_log'
     },
     chance: 0.25,
     conditions: [
       {
         type: 'productivebees:bee_exists',
-        bee: 'productivebees:pure',
-      },
-    ],
+        bee: 'productivebees:pure'
+      }
+    ]
   });
 
   event.custom({
     type: 'productivebees:bee_breeding',
     parent1: 'productivebees:elementium',
     parent2: 'productivebees:radioactive',
-    offspring: ['productivebees:ender'],
+    offspring: ['productivebees:ender']
   });
 
   event.custom({
     type: 'productivebees:bee_breeding',
     parent1: 'productivebees:regenerative',
     parent2: 'productivebees:glowing',
-    offspring: ['productivebees:radioactive'],
+    offspring: ['productivebees:radioactive']
   });
 
   event.custom({
     type: 'productivebees:bee_breeding',
     parent1: 'productivebees:ashy_mining_bee',
     parent2: 'productivebees:silky',
-    offspring: ['productivebees:crystalline'],
+    offspring: ['productivebees:crystalline']
   });
 
   event.remove({
     output: ['botania:terrasteel_ingot'],
-    type: 'botania:terra_plate',
+    type: 'botania:terra_plate'
   });
   event.custom({
     type: 'botania:terra_plate',
     mana: 500000,
     ingredients: [
-      {item: 'naturesaura:sky_ingot'},
-      {item: 'naturesaura:token_euphoria'},
-      {item: 'naturesaura:tainted_gold'},
+      { item: 'naturesaura:sky_ingot' },
+      { item: 'naturesaura:token_euphoria' },
+      { item: 'naturesaura:tainted_gold' }
     ],
-    result: {item: 'botania:terrasteel_ingot'},
+    result: { item: 'botania:terrasteel_ingot' }
   });
 
   event.custom({
     type: 'botania:elven_trade',
-    ingredients: [{item: 'minecraft:honeycomb'}],
-    output: [{item: 'botania:pixie_dust'}],
+    ingredients: [{ item: 'minecraft:honeycomb' }],
+    output: [{ item: 'botania:pixie_dust' }]
   });
 
   event.custom({
     type: 'botania:elven_trade',
-    ingredients: [{item: 'minecraft:wheat_seeds'}],
-    output: [{item: 'immersiveengineering:seed'}],
+    ingredients: [{ item: 'minecraft:wheat_seeds' }],
+    output: [{ item: 'immersiveengineering:seed' }]
   });
 
   event.custom({
     type: 'bloodmagic:altar',
     input: {
-      item: 'minecraft:dragon_breath',
+      item: 'minecraft:dragon_breath'
     },
     output: {
-      item: 'minecraft:chorus_fruit',
+      item: 'minecraft:chorus_fruit'
     },
     upgradeLevel: 3,
     altarSyphon: 150000,
     consumptionRate: 300,
-    drainRate: 300,
+    drainRate: 300
   });
 
   event.shaped('botania:mana_pylon', [' a ', 'bcb', ' a '], {
     a: 'naturesaura:tainted_gold',
     b: 'naturesaura:sky_ingot',
-    c: 'naturesaura:infused_iron_block',
+    c: 'naturesaura:infused_iron_block'
   });
 
   event.custom({
     type: 'create:item_application',
-    ingredients: [{tag: 'minecraft:planks'}, {item: 'create:refined_radiance'}],
-    results: [{item: 'create:refined_radiance_casing'}],
+    ingredients: [
+      { tag: 'minecraft:planks' },
+      { item: 'create:refined_radiance' }
+    ],
+    results: [{ item: 'create:refined_radiance_casing' }]
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_snake_block_beehive'},
+    result: { item: 'productivebees:advanced_snake_block_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_forest_stone',
@@ -101,12 +104,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_warped_beehive'},
+    result: { item: 'productivebees:advanced_warped_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_forest_stone',
@@ -114,12 +117,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_birch_beehive'},
+    result: { item: 'productivebees:advanced_birch_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_plains_stone',
@@ -127,12 +130,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_spruce_beehive'},
+    result: { item: 'productivebees:advanced_spruce_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_swamp_stone',
@@ -140,12 +143,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_dark_oak_beehive'},
+    result: { item: 'productivebees:advanced_dark_oak_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_taiga_stone',
@@ -153,12 +156,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_oak_beehive'},
+    result: { item: 'productivebees:advanced_oak_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_mountain_stone',
@@ -166,12 +169,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_jungle_beehive'},
+    result: { item: 'productivebees:advanced_jungle_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_mesa_stone',
@@ -179,12 +182,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_acacia_beehive'},
+    result: { item: 'productivebees:advanced_acacia_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_desert_stone',
@@ -192,12 +195,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'productivebees:advanced_crimson_beehive'},
+    result: { item: 'productivebees:advanced_crimson_beehive' },
     pattern: ['aaaaa', 'abbba', 'acdca', 'aebfa', 'aaaaa'],
     key: {
       a: 'botania:metamorphic_fungal_stone',
@@ -205,12 +208,12 @@ onEvent('recipes', event => {
       c: '#forge:honeycombs',
       d: 'minecraft:beehive',
       e: 'the_bumblezone:honey_crystal_shards',
-      f: '#forge:shears',
-    },
+      f: '#forge:shears'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'botania:terra_plate'},
+    result: { item: 'botania:terra_plate' },
     pattern: ['aaa', 'bcd', 'efg'],
     key: {
       a: 'tconstruct:pig_iron_block',
@@ -219,58 +222,58 @@ onEvent('recipes', event => {
       d: 'botania:rune_fire',
       e: 'botania:rune_earth',
       f: 'botania:rune_mana',
-      g: 'botania:rune_air',
-    },
+      g: 'botania:rune_air'
+    }
   });
   event.custom({
     type: 'create:mechanical_crafting',
-    result: {item: 'create:mechanical_saw'},
+    result: { item: 'create:mechanical_saw' },
     pattern: [' a ', 'aba', ' c '],
     key: {
       a: 'chemlib:iron_plate',
       b: 'cataclysm:witherite_ingot',
-      c: 'create:andesite_casing',
-    },
+      c: 'create:andesite_casing'
+    }
   });
 
   event.replaceInput(
     {
-      output: 'productivebees:bottler',
+      output: 'productivebees:bottler'
     },
     '#forge:glass',
     'the_bumblezone:honey_crystal_shards'
   );
   event.replaceInput(
     {
-      output: 'productivebees:centrifuge',
+      output: 'productivebees:centrifuge'
     },
     'minecraft:grindstone',
     'the_bumblezone:honey_crystal_shards'
   );
   event.replaceInput(
     {
-      output: 'productivebees:catcher',
+      output: 'productivebees:catcher'
     },
     'minecraft:dirt',
     'the_bumblezone:honey_crystal_shards'
   );
   event.replaceInput(
     {
-      output: 'productivebees:incubator',
+      output: 'productivebees:incubator'
     },
     'minecraft:hay_block',
     'the_bumblezone:honey_crystal_shards'
   );
   event.replaceInput(
     {
-      output: 'productivebees:gene_indexer',
+      output: 'productivebees:gene_indexer'
     },
     '#forge:workbenches',
     'the_bumblezone:honey_crystal_shards'
   );
 
   event.replaceInput(
-    {output: 'botania:natura_pylon'},
+    { output: 'botania:natura_pylon' },
     'minecraft:ender_eye',
     'botania:rune_envy'
   );
@@ -284,12 +287,12 @@ onEvent('recipes', event => {
           [
             event.recipes.createDeploying('croptopia:cheeseburger', [
               'croptopia:cheeseburger',
-              'kubejs:fries_and_ketchup',
+              'kubejs:fries_and_ketchup'
             ]),
             event.recipes.createDeploying('croptopia:cheeseburger', [
               'croptopia:cheeseburger',
-              'kubejs:bottle_of_soda',
-            ]),
+              'kubejs:bottle_of_soda'
+            ])
           ]
         )
         .transitionalItem('croptopia:cheeseburger')
@@ -301,14 +304,14 @@ onEvent('recipes', event => {
         recipe: () => {
           event.recipes.createDeploying('kubejs:fries_and_ketchup', [
             'croptopia:french_fries',
-            'kubejs:ketchup',
+            'kubejs:ketchup'
           ]);
         },
         children: [
           {
             id: 'fries',
             recipe: () => {
-              event.remove({output: 'croptopia:french_fries'});
+              event.remove({ output: 'croptopia:french_fries' });
               event.recipes
                 .createSequencedAssembly(
                   ['croptopia:french_fries'],
@@ -316,20 +319,20 @@ onEvent('recipes', event => {
                   [
                     event.recipes.create.filling('kubejs:uncooked_fries', [
                       'kubejs:uncooked_fries',
-                      Fluid.of('kubejs:beef_oil', 1000),
+                      Fluid.of('kubejs:beef_oil', 1000)
                     ]),
                     event.recipes.create.filling('kubejs:uncooked_fries', [
                       'kubejs:uncooked_fries',
-                      Fluid.of('kubejs:beef_oil', 1000),
+                      Fluid.of('kubejs:beef_oil', 1000)
                     ]),
                     event.recipes.create.filling('kubejs:uncooked_fries', [
                       'kubejs:uncooked_fries',
-                      Fluid.of('kubejs:beef_oil', 1000),
+                      Fluid.of('kubejs:beef_oil', 1000)
                     ]),
                     event.recipes.createDeploying('kubejs:uncooked_fries', [
                       'kubejs:uncooked_fries',
-                      'kubejs:ton_of_salt',
-                    ]),
+                      'kubejs:ton_of_salt'
+                    ])
                   ]
                 )
                 .transitionalItem('kubejs:uncooked_fries')
@@ -348,15 +351,15 @@ onEvent('recipes', event => {
                   {
                     id: 'salt_block',
                     recipe: () => {
-                      event.remove({output: 'salt:salt_block'});
+                      event.remove({ output: 'salt:salt_block' });
                       event.recipes.create.mechanicalCrafting(
                         'salt:salt_block',
                         ['aaaaa', 'aaaaa', 'aaaaa', 'aaaaa', 'aaaaa'],
-                        {a: 'salt:salt'}
+                        { a: 'salt:salt' }
                       );
-                    },
-                  },
-                ],
+                    }
+                  }
+                ]
               },
               {
                 id: 'uncooked_fries',
@@ -377,16 +380,16 @@ onEvent('recipes', event => {
                         speed_limits: 1,
                         ingredients: [
                           {
-                            item: 'kubejs:washed_potato',
-                          },
+                            item: 'kubejs:washed_potato'
+                          }
                         ],
                         results: [
                           {
                             item: 'kubejs:skinned_potato',
-                            count: 1,
-                          },
+                            count: 1
+                          }
                         ],
-                        processingTime: 20,
+                        processingTime: 20
                       });
                     },
                     children: [
@@ -396,13 +399,13 @@ onEvent('recipes', event => {
                           // TODO: splashing
                           event.recipes.create.mixing('kubejs:washed_potato', [
                             'minecraft:potato',
-                            Fluid.of('minecraft:water', 1000),
+                            Fluid.of('minecraft:water', 1000)
                           ]);
-                        },
-                      },
-                    ],
-                  },
-                ],
+                        }
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 id: 'beef_oil',
@@ -411,7 +414,7 @@ onEvent('recipes', event => {
                     Fluid.of('kubejs:beef_oil', 1000),
                     [
                       Fluid.of('kubejs:beef_tallow', 100),
-                      Fluid.of('pneumaticcraft:vegetable_oil', 1000),
+                      Fluid.of('pneumaticcraft:vegetable_oil', 1000)
                     ]
                   );
                 },
@@ -423,19 +426,19 @@ onEvent('recipes', event => {
                       event.recipes.create
                         .mixing(Fluid.of('kubejs:beef_tallow', 100), [
                           Fluid.of('minecraft:water', 1000),
-                          '3x kubejs:beef_fat',
+                          '3x kubejs:beef_fat'
                         ])
                         .heated();
-                    },
+                    }
                   },
                   {
                     id: 'vegetable_oil',
                     recipe: () => {
                       event.remove({
-                        id: 'pneumaticcraft:thermo_plant/vegetable_oil_from_crops',
+                        id: 'pneumaticcraft:thermo_plant/vegetable_oil_from_crops'
                       });
                       event.remove({
-                        id: 'pneumaticcraft:thermo_plant/vegetable_oil_from_seeds',
+                        id: 'pneumaticcraft:thermo_plant/vegetable_oil_from_seeds'
                       });
                       event.recipes.create.mixing(
                         Fluid.of('pneumaticcraft:vegetable_oil', 1000),
@@ -443,7 +446,7 @@ onEvent('recipes', event => {
                           Fluid.of('kubejs:corn_oil', 250),
                           Fluid.of('charcoal_pit:olive_oil', 250),
                           Fluid.of('kubejs:soybean_oil', 250),
-                          'kubejs:hydrogenated_soybean_oil',
+                          'kubejs:hydrogenated_soybean_oil'
                         ]
                       );
                     },
@@ -462,19 +465,19 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
+                                ingredients: [{ item: 'minecraft:potato' }],
                                 reactant: {
-                                  item: 'biomancy:organic_compound',
+                                  item: 'biomancy:organic_compound'
                                 },
                                 result: {
-                                  item: 'croptopia:corn_seed',
+                                  item: 'croptopia:corn_seed'
                                 },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'olive_oil',
@@ -490,19 +493,19 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
+                                ingredients: [{ item: 'minecraft:potato' }],
                                 reactant: {
-                                  item: 'biomancy:organic_compound',
+                                  item: 'biomancy:organic_compound'
                                 },
                                 result: {
-                                  item: 'croptopia:olive_seed',
+                                  item: 'croptopia:olive_seed'
                                 },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'soybean_oil',
@@ -518,19 +521,19 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
+                                ingredients: [{ item: 'minecraft:potato' }],
                                 reactant: {
-                                  item: 'biomancy:organic_compound',
+                                  item: 'biomancy:organic_compound'
                                 },
                                 result: {
-                                  item: 'croptopia:soybean_seed',
+                                  item: 'croptopia:soybean_seed'
                                 },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'hydrogenated_soybean_oil',
@@ -540,23 +543,23 @@ onEvent('recipes', event => {
                             type: 'vintageimprovements:vacuumizing',
                             ingredients: [
                               {
-                                item: 'kubejs:soybean_oil_bucket',
+                                item: 'kubejs:soybean_oil_bucket'
                               },
                               {
-                                item: 'kubejs:palladium_catalyst',
+                                item: 'kubejs:palladium_catalyst'
                               },
                               {
                                 item: 'rankine:hydrogen_gas_bottle',
-                                count: 3,
-                              },
+                                count: 3
+                              }
                             ],
                             results: [
                               {
                                 item: 'kubejs:hydrogenated_soybean_oil',
-                                count: 1,
-                              },
+                                count: 1
+                              }
                             ],
-                            processingTime: 600,
+                            processingTime: 600
                           });
                         },
                         children: [
@@ -569,15 +572,15 @@ onEvent('recipes', event => {
                                 outputs: [
                                   {
                                     item: 'rankine:carbon_dioxide_gas_block',
-                                    chance: 0.8,
+                                    chance: 0.8
                                   },
                                   {
                                     item: 'rankine:hydrogen_gas_block',
-                                    chance: 0.2,
-                                  },
-                                ],
+                                    chance: 0.2
+                                  }
+                                ]
                               });
-                            },
+                            }
                           },
                           {
                             id: 'palladium_catalyst',
@@ -604,9 +607,9 @@ onEvent('recipes', event => {
                                         Fluid.of(
                                           'kubejs:sodium_hydroxide',
                                           1000
-                                        ),
+                                        )
                                       ]
-                                    ),
+                                    )
                                     // event.recipes.create.mixing(
                                     //   'kubejs:sodium_tetrachloropalladate',
                                     //   [
@@ -669,17 +672,17 @@ onEvent('recipes', event => {
                                         // TODO: nitric acid
                                         id: 'nitric_acid',
                                         recipe: () => {},
-                                        children: [],
+                                        children: []
                                       },
                                       {
                                         // TODO: hydrochloric acid
                                         id: 'hydrochloric_acid',
                                         recipe: () => {},
-                                        children: [],
-                                      },
-                                    ],
-                                  },
-                                ],
+                                        children: []
+                                      }
+                                    ]
+                                  }
+                                ]
                               },
                               {
                                 id: 'sodium_hydroxide_fluid',
@@ -699,18 +702,18 @@ onEvent('recipes', event => {
                                         type: 'createaddition:charging',
                                         input: {
                                           item: 'mekanism:brine_bucket',
-                                          count: 1,
+                                          count: 1
                                         },
                                         result: {
                                           item: 'rankine:sodium_hydroxide',
-                                          count: 1,
+                                          count: 1
                                         },
-                                        energy: 10000,
+                                        energy: 10000
                                       });
                                     },
-                                    children: [],
-                                  },
-                                ],
+                                    children: []
+                                  }
+                                ]
                               },
                               {
                                 id: 'potassium_borohydride_fluid',
@@ -759,16 +762,20 @@ onEvent('recipes', event => {
                                 //     .loops(1);
                                 // },
                                 children: [
-                                  {id: 'borax', recipe: () => {}, children: []},
+                                  {
+                                    id: 'borax',
+                                    recipe: () => {},
+                                    children: []
+                                  },
                                   {
                                     id: 'sulfuric_acid',
                                     recipe: () => {},
-                                    children: [],
+                                    children: []
                                   },
                                   {
                                     id: 'potassium_hydroxide',
                                     recipe: () => {},
-                                    children: [],
+                                    children: []
                                   },
                                   {
                                     id: 'magnesium_dust',
@@ -777,22 +784,22 @@ onEvent('recipes', event => {
                                       {
                                         id: 'magnesium',
                                         recipe: () => {},
-                                        children: [],
-                                      },
-                                    ],
-                                  },
-                                ],
+                                        children: []
+                                      }
+                                    ]
+                                  }
+                                ]
                               },
-                              {id: 'carbon', recipe: () => {}},
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                              { id: 'carbon', recipe: () => {} }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
 
           {
@@ -800,7 +807,7 @@ onEvent('recipes', event => {
             recipe: () => {
               event.recipes.create.filling('kubejs:ketchup', [
                 'minecraft:glass_bottle',
-                Fluid.of('kubejs:ketchup', 1000),
+                Fluid.of('kubejs:ketchup', 1000)
               ]);
             },
             children: [
@@ -816,7 +823,7 @@ onEvent('recipes', event => {
                       Fluid.of('minecraft:water', 1000),
                       'kubejs:brown_sugar',
                       'salt:salt',
-                      'kubejs:ketchup_spices',
+                      'kubejs:ketchup_spices'
                     ]
                   );
                 },
@@ -835,7 +842,7 @@ onEvent('recipes', event => {
                         id: 'tomato_sauce',
                         recipe: () => {
                           event.remove({
-                            id: 'create_central_kitchen:mixing/tomato_sauce',
+                            id: 'create_central_kitchen:mixing/tomato_sauce'
                           });
                           event.recipes.create.compacting(
                             Fluid.of(
@@ -854,16 +861,16 @@ onEvent('recipes', event => {
                                 speed_limits: 1,
                                 ingredients: [
                                   {
-                                    item: 'kubejs:washed_tomato',
-                                  },
+                                    item: 'kubejs:washed_tomato'
+                                  }
                                 ],
                                 results: [
                                   {
                                     item: 'kubejs:skinned_tomato',
-                                    count: 1,
-                                  },
+                                    count: 1
+                                  }
                                 ],
-                                processingTime: 20,
+                                processingTime: 20
                               });
                             },
                             children: [
@@ -874,7 +881,7 @@ onEvent('recipes', event => {
                                     'kubejs:washed_tomato',
                                     [
                                       'croptopia:tomato',
-                                      Fluid.of('minecraft:water', 1000),
+                                      Fluid.of('minecraft:water', 1000)
                                     ]
                                   );
                                 },
@@ -885,26 +892,26 @@ onEvent('recipes', event => {
                                       event.custom({
                                         type: 'biomancy:bio_brewing',
                                         ingredients: [
-                                          {item: 'minecraft:potato'},
+                                          { item: 'minecraft:potato' }
                                         ],
                                         reactant: {
-                                          item: 'biomancy:organic_compound',
+                                          item: 'biomancy:organic_compound'
                                         },
                                         result: {
-                                          item: 'croptopia:tomato_seed',
+                                          item: 'croptopia:tomato_seed'
                                         },
                                         processingTime: 80,
-                                        nutrientsCost: 8,
+                                        nutrientsCost: 8
                                       });
-                                    },
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'ketchup_spices',
@@ -913,7 +920,7 @@ onEvent('recipes', event => {
                         'kubejs:onion_powder',
                         'kubejs:garlic_powder',
                         'kubejs:celery_powder',
-                        'kubejs:mustard_powder',
+                        'kubejs:mustard_powder'
                       ]);
                     },
                     children: [
@@ -931,15 +938,15 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
-                                reactant: {item: 'biomancy:organic_compound'},
-                                result: {item: 'croptopia:onion_seed'},
+                                ingredients: [{ item: 'minecraft:potato' }],
+                                reactant: { item: 'biomancy:organic_compound' },
+                                result: { item: 'croptopia:onion_seed' },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'garlic_powder',
@@ -955,15 +962,15 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
-                                reactant: {item: 'biomancy:organic_compound'},
-                                result: {item: 'croptopia:garlic_seed'},
+                                ingredients: [{ item: 'minecraft:potato' }],
+                                reactant: { item: 'biomancy:organic_compound' },
+                                result: { item: 'croptopia:garlic_seed' },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'celery_powder',
@@ -979,15 +986,15 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
-                                reactant: {item: 'biomancy:organic_compound'},
-                                result: {item: 'croptopia:celery_seed'},
+                                ingredients: [{ item: 'minecraft:potato' }],
+                                reactant: { item: 'biomancy:organic_compound' },
+                                result: { item: 'croptopia:celery_seed' },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'mustard_powder',
@@ -1003,23 +1010,23 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
-                                reactant: {item: 'biomancy:organic_compound'},
-                                result: {item: 'croptopia:mustard_seed'},
+                                ingredients: [{ item: 'minecraft:potato' }],
+                                reactant: { item: 'biomancy:organic_compound' },
+                                result: { item: 'croptopia:mustard_seed' },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
 
       {
@@ -1027,7 +1034,7 @@ onEvent('recipes', event => {
         recipe: () => {
           event.recipes.create.filling('kubejs:bottle_of_soda', [
             'minecraft:glass_bottle',
-            Fluid.of('kubejs:soda', 1000),
+            Fluid.of('kubejs:soda', 1000)
           ]);
         },
         children: [
@@ -1036,7 +1043,7 @@ onEvent('recipes', event => {
             recipe: () => {
               event.recipes.create.mixing(Fluid.of('kubejs:soda'), [
                 Fluid.of('kubejs:carbonated_water', 750),
-                Fluid.of('kubejs:soda_syrup', 250),
+                Fluid.of('kubejs:soda_syrup', 250)
               ]);
             },
             children: [
@@ -1046,20 +1053,20 @@ onEvent('recipes', event => {
                   event.custom({
                     type: 'charcoal_pit:barrel',
                     item_in: {
-                      item: 'kubejs:yeast',
+                      item: 'kubejs:yeast'
                     },
                     fluid_in: {
                       fluid: 'the_bumblezone:sugar_water_still',
-                      amount: 1000,
+                      amount: 1000
                     },
                     fluid_out: {
                       fluid: 'kubejs:carbonated_water',
-                      amount: 1000,
+                      amount: 1000
                     },
                     flags: 1,
-                    time: 6000,
+                    time: 6000
                   });
-                },
+                }
               },
               {
                 id: 'soda_syrup',
@@ -1070,7 +1077,7 @@ onEvent('recipes', event => {
                       Fluid.of('kubejs:high_fructose_corn_syrup', 750),
                       'chemlib:caffeine_dust',
                       'kubejs:pectin_gel',
-                      Fluid.of('kubejs:natural_flavors', 250),
+                      Fluid.of('kubejs:natural_flavors', 250)
                     ]
                   );
                 },
@@ -1091,10 +1098,10 @@ onEvent('recipes', event => {
                         recipe: () => {
                           event.custom({
                             type: 'biomancy:digesting',
-                            ingredient: {item: 'kubejs:corn_syrup'},
-                            result: {item: 'kubejs:fructose', count: 1},
+                            ingredient: { item: 'kubejs:corn_syrup' },
+                            result: { item: 'kubejs:fructose', count: 1 },
                             processingTime: 600,
-                            nutrientsCost: 4,
+                            nutrientsCost: 4
                           });
                         },
                         children: [
@@ -1103,15 +1110,15 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:decomposing',
-                                ingredient: {item: 'kubejs:maltodextrin'},
+                                ingredient: { item: 'kubejs:maltodextrin' },
                                 results: [
                                   {
                                     item: 'kubejs:corn_syrup',
-                                    countRange: {type: 'constant', value: 1},
-                                  },
+                                    countRange: { type: 'constant', value: 1 }
+                                  }
                                 ],
                                 processingTime: 600,
-                                nutrientsCost: 4,
+                                nutrientsCost: 4
                               });
                             },
                             children: [
@@ -1120,11 +1127,15 @@ onEvent('recipes', event => {
                                 recipe: () => {
                                   event.custom({
                                     type: 'biomancy:bio_brewing',
-                                    ingredients: [{item: 'kubejs:corn_starch'}],
-                                    reactant: [{item: 'kubejs:alpha_amylase'}],
-                                    result: {item: 'kubejs:maltodextrin'},
+                                    ingredients: [
+                                      { item: 'kubejs:corn_starch' }
+                                    ],
+                                    reactant: [
+                                      { item: 'kubejs:alpha_amylase' }
+                                    ],
+                                    result: { item: 'kubejs:maltodextrin' },
                                     processingTime: 80,
-                                    nutrientsCost: 4,
+                                    nutrientsCost: 4
                                   });
                                 },
                                 children: [
@@ -1135,14 +1146,14 @@ onEvent('recipes', event => {
                                         type: 'vintageimprovements:centrifugation',
                                         ingredients: [
                                           {
-                                            item: 'kubejs:corn_starch_slurry_bucket',
-                                          },
+                                            item: 'kubejs:corn_starch_slurry_bucket'
+                                          }
                                         ],
                                         results: [
-                                          {item: 'kubejs:corn_starch'},
-                                          {item: 'kubejs:gluten'},
+                                          { item: 'kubejs:corn_starch' },
+                                          { item: 'kubejs:gluten' }
                                         ],
-                                        processingTime: 600,
+                                        processingTime: 600
                                       });
                                     },
                                     children: [
@@ -1160,7 +1171,7 @@ onEvent('recipes', event => {
                                                 Fluid.of(
                                                   'minecraft:water',
                                                   1000
-                                                ),
+                                                )
                                               ]
                                             )
                                             .heated();
@@ -1191,15 +1202,15 @@ onEvent('recipes', event => {
                                                         'kubejs:corn_flakes',
                                                         'croptopia:corn'
                                                       );
-                                                    },
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
                                   },
                                   {
                                     id: 'alpha_amylase',
@@ -1208,20 +1219,20 @@ onEvent('recipes', event => {
                                         type: 'vintageimprovements:centrifugation',
                                         ingredients: [
                                           {
-                                            item: 'kubejs:specimen_264',
-                                          },
+                                            item: 'kubejs:specimen_264'
+                                          }
                                         ],
                                         results: [
                                           {
                                             item: 'kubejs:alpha_amylase',
-                                            count: 1,
+                                            count: 1
                                           },
                                           {
                                             item: 'kubejs:bacillus_subtilis',
-                                            count: 3,
-                                          },
+                                            count: 3
+                                          }
                                         ],
-                                        processingTime: 1000,
+                                        processingTime: 1000
                                       });
                                     },
                                     children: [
@@ -1232,16 +1243,16 @@ onEvent('recipes', event => {
                                           event.custom({
                                             type: 'biomancy:bio_brewing',
                                             ingredients: [
-                                              {item: 'kubejs:petri_dish_264'},
+                                              { item: 'kubejs:petri_dish_264' }
                                             ],
                                             reactant: {
-                                              item: 'kubejs:bacillus_subtilis',
+                                              item: 'kubejs:bacillus_subtilis'
                                             },
                                             result: {
-                                              item: 'kubejs:specimen_264',
+                                              item: 'kubejs:specimen_264'
                                             },
                                             processingTime: 80,
-                                            nutrientsCost: 8,
+                                            nutrientsCost: 8
                                           });
                                         },
                                         children: [
@@ -1255,7 +1266,7 @@ onEvent('recipes', event => {
                                                   Fluid.of(
                                                     'pneumaticcraft:yeast_culture',
                                                     1000
-                                                  ),
+                                                  )
                                                 ]
                                               );
                                             },
@@ -1273,10 +1284,10 @@ onEvent('recipes', event => {
                                                       Fluid.of(
                                                         'minecraft:water',
                                                         10
-                                                      ),
+                                                      )
                                                     ]
                                                   );
-                                                },
+                                                }
                                               },
                                               {
                                                 id: 'fungal_spores',
@@ -1284,7 +1295,7 @@ onEvent('recipes', event => {
                                                   event.custom({
                                                     type: 'biomancy:decomposing',
                                                     ingredient: {
-                                                      item: 'undergarden:blood_mushroom',
+                                                      item: 'undergarden:blood_mushroom'
                                                     },
                                                     results: [
                                                       {
@@ -1292,16 +1303,16 @@ onEvent('recipes', event => {
                                                         countRange: {
                                                           type: 'uniform',
                                                           min: 0,
-                                                          max: 2,
-                                                        },
-                                                      },
+                                                          max: 2
+                                                        }
+                                                      }
                                                     ],
                                                     processingTime: 250,
-                                                    nutrientsCost: 1,
+                                                    nutrientsCost: 1
                                                   });
-                                                },
-                                              },
-                                            ],
+                                                }
+                                              }
+                                            ]
                                           },
                                           {
                                             id: 'bacillus_subtilis',
@@ -1309,7 +1320,7 @@ onEvent('recipes', event => {
                                               event.custom({
                                                 type: 'biomancy:decomposing',
                                                 ingredient: {
-                                                  item: 'rankine:compost',
+                                                  item: 'rankine:compost'
                                                 },
                                                 results: [
                                                   {
@@ -1317,35 +1328,35 @@ onEvent('recipes', event => {
                                                     countRange: {
                                                       type: 'uniform',
                                                       min: 0,
-                                                      max: 1,
-                                                    },
+                                                      max: 1
+                                                    }
                                                   },
                                                   {
                                                     item: 'biomancy:organic_matter',
                                                     countRange: {
                                                       type: 'uniform',
                                                       min: 0,
-                                                      max: 1,
-                                                    },
-                                                  },
+                                                      max: 1
+                                                    }
+                                                  }
                                                 ],
                                                 processingTime: 600,
-                                                nutrientsCost: 4,
+                                                nutrientsCost: 4
                                               });
                                             },
-                                            children: [],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                            children: []
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'caffeine_dust',
@@ -1361,7 +1372,7 @@ onEvent('recipes', event => {
                         recipe: () => {
                           event.recipes.create
                             .mixing('kubejs:caffeine_crystals', [
-                              Fluid.of('create_central_kitchen:coffee', 10000),
+                              Fluid.of('create_central_kitchen:coffee', 10000)
                             ])
                             .heated();
                         },
@@ -1370,13 +1381,13 @@ onEvent('recipes', event => {
                             id: 'coffee_fluid',
                             recipe: () => {
                               event.remove({
-                                id: 'create_central_kitchen:mixing/coffee',
+                                id: 'create_central_kitchen:mixing/coffee'
                               });
-                            },
-                          },
-                        ],
-                      },
-                    ],
+                            }
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'pectin_gel',
@@ -1413,19 +1424,19 @@ onEvent('recipes', event => {
                             speed_limits: 1,
                             ingredients: [
                               {
-                                item: 'minecraft:apple',
-                              },
+                                item: 'minecraft:apple'
+                              }
                             ],
                             results: [
                               {
                                 item: 'kubejs:apple_peel',
-                                count: 1,
-                              },
+                                count: 1
+                              }
                             ],
-                            processingTime: 20,
+                            processingTime: 20
                           });
                         },
-                        children: [],
+                        children: []
                       },
                       {
                         id: 'citric_acid_fluid',
@@ -1434,7 +1445,7 @@ onEvent('recipes', event => {
                             Fluid.of('kubejs:citric_acid', 1000),
                             [
                               'kubejs:citric_acid',
-                              Fluid.of('minecraft:water', 1000),
+                              Fluid.of('minecraft:water', 1000)
                             ]
                           );
                           // put sugarcane juice in a petri dish. add bacteria to it and put it in a fermentation barrel or bio lab. centrifuge the mixture to get citric acid. mix with water to get citric acid fluid.
@@ -1447,24 +1458,24 @@ onEvent('recipes', event => {
                                 type: 'vintageimprovements:centrifugation',
                                 ingredients: [
                                   {
-                                    item: 'kubejs:specimen_143',
-                                  },
+                                    item: 'kubejs:specimen_143'
+                                  }
                                 ],
                                 results: [
                                   {
                                     item: 'minecraft:sugar',
-                                    count: 1,
+                                    count: 1
                                   },
                                   {
                                     item: 'kubejs:citric_acid',
-                                    count: 1,
+                                    count: 1
                                   },
                                   {
                                     item: 'kubejs:fungal_spores',
-                                    count: 3,
-                                  },
+                                    count: 3
+                                  }
                                 ],
-                                processingTime: 1000,
+                                processingTime: 1000
                               });
                             },
                             children: [
@@ -1475,16 +1486,16 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'biomancy:bio_brewing',
                                     ingredients: [
-                                      {item: 'kubejs:petri_dish_143'},
+                                      { item: 'kubejs:petri_dish_143' }
                                     ],
                                     reactant: {
-                                      item: 'kubejs:fungal_spores',
+                                      item: 'kubejs:fungal_spores'
                                     },
                                     result: {
-                                      item: 'kubejs:specimen_143',
+                                      item: 'kubejs:specimen_143'
                                     },
                                     processingTime: 80,
-                                    nutrientsCost: 8,
+                                    nutrientsCost: 8
                                   });
                                 },
                                 children: [
@@ -1499,7 +1510,7 @@ onEvent('recipes', event => {
                                           Fluid.of(
                                             'kubejs:sugar_cane_juice',
                                             1000
-                                          ),
+                                          )
                                         ]
                                       );
                                     },
@@ -1510,7 +1521,7 @@ onEvent('recipes', event => {
                                           event.custom({
                                             type: 'biomancy:decomposing',
                                             ingredient: {
-                                              item: 'undergarden:blood_mushroom',
+                                              item: 'undergarden:blood_mushroom'
                                             },
                                             results: [
                                               {
@@ -1518,24 +1529,24 @@ onEvent('recipes', event => {
                                                 countRange: {
                                                   type: 'uniform',
                                                   min: 0,
-                                                  max: 2,
-                                                },
-                                              },
+                                                  max: 2
+                                                }
+                                              }
                                             ],
                                             processingTime: 250,
-                                            nutrientsCost: 1,
+                                            nutrientsCost: 1
                                           });
-                                        },
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
+                                        }
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   },
                   {
                     id: 'natural_flavors',
@@ -1546,7 +1557,7 @@ onEvent('recipes', event => {
                           Fluid.of('kubejs:vanilla_extract', 250),
                           Fluid.of('kubejs:blackberry_extract', 250),
                           Fluid.of('kubejs:lemon_extract', 250),
-                          Fluid.of('kubejs:ender_extract', 250),
+                          Fluid.of('kubejs:ender_extract', 250)
                         ]
                       );
                     },
@@ -1557,18 +1568,18 @@ onEvent('recipes', event => {
                           event.custom({
                             type: 'charcoal_pit:barrel',
                             item_in: {
-                              item: 'croptopia:vanilla',
+                              item: 'croptopia:vanilla'
                             },
                             fluid_in: {
                               fluid: 'immersiveengineering:ethanol',
-                              amount: 1000,
+                              amount: 1000
                             },
                             fluid_out: {
                               fluid: 'kubejs:vanilla_extract',
-                              amount: 1000,
+                              amount: 1000
                             },
                             flags: 1,
-                            time: 6000,
+                            time: 6000
                           });
                         },
                         children: [
@@ -1577,19 +1588,19 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
+                                ingredients: [{ item: 'minecraft:potato' }],
                                 reactant: {
-                                  item: 'biomancy:organic_compound',
+                                  item: 'biomancy:organic_compound'
                                 },
                                 result: {
-                                  item: 'croptopia:vanilla_seeds',
+                                  item: 'croptopia:vanilla_seeds'
                                 },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'blackberry_extract',
@@ -1597,18 +1608,18 @@ onEvent('recipes', event => {
                           event.custom({
                             type: 'charcoal_pit:barrel',
                             item_in: {
-                              item: 'croptopia:blackberry',
+                              item: 'croptopia:blackberry'
                             },
                             fluid_in: {
                               fluid: 'immersiveengineering:ethanol',
-                              amount: 1000,
+                              amount: 1000
                             },
                             fluid_out: {
                               fluid: 'kubejs:blackberry_extract',
-                              amount: 1000,
+                              amount: 1000
                             },
                             flags: 1,
-                            time: 6000,
+                            time: 6000
                           });
                         },
                         children: [
@@ -1617,19 +1628,19 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
+                                ingredients: [{ item: 'minecraft:potato' }],
                                 reactant: {
-                                  item: 'biomancy:organic_compound',
+                                  item: 'biomancy:organic_compound'
                                 },
                                 result: {
-                                  item: 'croptopia:blackberry_seed',
+                                  item: 'croptopia:blackberry_seed'
                                 },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'lemon_extract',
@@ -1637,18 +1648,18 @@ onEvent('recipes', event => {
                           event.custom({
                             type: 'charcoal_pit:barrel',
                             item_in: {
-                              item: 'croptopia:lemon',
+                              item: 'croptopia:lemon'
                             },
                             fluid_in: {
                               fluid: 'immersiveengineering:ethanol',
-                              amount: 1000,
+                              amount: 1000
                             },
                             fluid_out: {
                               fluid: 'kubejs:lemon_extract',
-                              amount: 1000,
+                              amount: 1000
                             },
                             flags: 1,
-                            time: 6000,
+                            time: 6000
                           });
                         },
                         children: [
@@ -1657,19 +1668,19 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'minecraft:potato'}],
+                                ingredients: [{ item: 'minecraft:potato' }],
                                 reactant: {
-                                  item: 'biomancy:organic_compound',
+                                  item: 'biomancy:organic_compound'
                                 },
                                 result: {
-                                  item: 'croptopia:lemon_sapling',
+                                  item: 'croptopia:lemon_sapling'
                                 },
                                 processingTime: 80,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
-                            },
-                          },
-                        ],
+                            }
+                          }
+                        ]
                       },
                       {
                         id: 'ender_extract',
@@ -1677,18 +1688,18 @@ onEvent('recipes', event => {
                           event.custom({
                             type: 'charcoal_pit:barrel',
                             item_in: {
-                              item: 'minecraft:ender_pearl',
+                              item: 'minecraft:ender_pearl'
                             },
                             fluid_in: {
                               fluid: 'immersiveengineering:ethanol',
-                              amount: 1000,
+                              amount: 1000
                             },
                             fluid_out: {
                               fluid: 'kubejs:ender_extract',
-                              amount: 1000,
+                              amount: 1000
                             },
                             flags: 1,
-                            time: 6000,
+                            time: 6000
                           });
                         },
                         children: [
@@ -1708,18 +1719,18 @@ onEvent('recipes', event => {
                                   event.custom({
                                     type: 'charcoal_pit:barrel',
                                     item_in: {
-                                      item: 'kubejs:yeast',
+                                      item: 'kubejs:yeast'
                                     },
                                     fluid_in: {
                                       fluid: 'kubejs:corn_syrup',
-                                      amount: 1000,
+                                      amount: 1000
                                     },
                                     fluid_out: {
                                       fluid: 'kubejs:beer',
-                                      amount: 1000,
+                                      amount: 1000
                                     },
                                     flags: 1,
-                                    time: 6000,
+                                    time: 6000
                                   });
                                 },
                                 children: [
@@ -1730,13 +1741,13 @@ onEvent('recipes', event => {
                                         type: 'rankine:evaporation',
                                         processTime: 12000,
                                         input: {
-                                          fluid: 'pneumaticcraft:yeast_culture',
+                                          fluid: 'pneumaticcraft:yeast_culture'
                                         },
                                         outputs: [
-                                          {item: 'kubejs:yeast', weight: 100},
-                                        ],
+                                          { item: 'kubejs:yeast', weight: 100 }
+                                        ]
                                       });
-                                    },
+                                    }
                                   },
                                   {
                                     id: 'corn_syrup',
@@ -1745,22 +1756,22 @@ onEvent('recipes', event => {
                                         Fluid.of('kubejs:corn_syrup', 1000),
                                         ['kubejs:corn_syrup']
                                       );
-                                    },
-                                  },
-                                ],
-                              },
-                            ],
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
                           },
-                          {id: 'ender_pearl', children: []},
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                          { id: 'ender_pearl', children: [] }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         id: 'cheeseburger',
@@ -1772,20 +1783,20 @@ onEvent('recipes', event => {
               [
                 event.recipes.create.filling('croptopia:hamburger', [
                   'croptopia:hamburger',
-                  Fluid.of('kubejs:mayonnaise', 1000),
+                  Fluid.of('kubejs:mayonnaise', 1000)
                 ]),
                 event.recipes.createDeploying('croptopia:hamburger', [
                   'croptopia:hamburger',
-                  'rankine:cheese',
+                  'rankine:cheese'
                 ]),
                 event.recipes.createDeploying('croptopia:hamburger', [
                   'croptopia:hamburger',
-                  'charcoal_pit:pickled_olives',
+                  'charcoal_pit:pickled_olives'
                 ]),
                 event.recipes.createDeploying('croptopia:hamburger', [
                   'croptopia:hamburger',
-                  'kubejs:onion_slices',
-                ]),
+                  'kubejs:onion_slices'
+                ])
               ]
             )
             .transitionalItem('croptopia:hamburger')
@@ -1802,20 +1813,20 @@ onEvent('recipes', event => {
                   [
                     event.recipes.createDeploying('kubejs:burger_bun', [
                       'kubejs:burger_bun',
-                      'farmersdelight:cabbage_leaf',
+                      'farmersdelight:cabbage_leaf'
                     ]),
                     event.recipes.createDeploying('kubejs:burger_bun', [
                       'kubejs:burger_bun',
-                      'kubejs:tomato_slices',
+                      'kubejs:tomato_slices'
                     ]),
                     event.recipes.createDeploying('kubejs:burger_bun', [
                       'kubejs:burger_bun',
-                      'farmersdelight:beef_patty',
+                      'farmersdelight:beef_patty'
                     ]),
                     event.recipes.createDeploying('kubejs:burger_bun', [
                       'kubejs:burger_bun',
-                      'kubejs:burger_bun',
-                    ]),
+                      'kubejs:burger_bun'
+                    ])
                   ]
                 )
                 .transitionalItem('kubejs:burger_bun')
@@ -1835,23 +1846,23 @@ onEvent('recipes', event => {
                           'pneumaticcraft:sourdough_bread',
                           [
                             'pneumaticcraft:sourdough_bread',
-                            'kubejs:sesame_seeds',
+                            'kubejs:sesame_seeds'
                           ]
                         ),
                         event.recipes.create.deploying(
                           'pneumaticcraft:sourdough_bread',
                           [
                             'pneumaticcraft:sourdough_bread',
-                            'kubejs:sesame_seeds',
+                            'kubejs:sesame_seeds'
                           ]
                         ),
                         event.recipes.create.deploying(
                           'pneumaticcraft:sourdough_bread',
                           [
                             'pneumaticcraft:sourdough_bread',
-                            'kubejs:sesame_seeds',
+                            'kubejs:sesame_seeds'
                           ]
-                        ),
+                        )
                       ]
                     )
                     .transitionalItem('pneumaticcraft:sourdough_bread')
@@ -1863,18 +1874,18 @@ onEvent('recipes', event => {
                     recipe: () => {
                       event.custom({
                         type: 'biomancy:bio_brewing',
-                        ingredients: [{item: 'minecraft:potato'}],
+                        ingredients: [{ item: 'minecraft:potato' }],
                         reactant: {
-                          item: 'biomancy:organic_compound',
+                          item: 'biomancy:organic_compound'
                         },
                         result: {
-                          item: 'kubejs:sesame_seeds',
+                          item: 'kubejs:sesame_seeds'
                         },
                         processingTime: 80,
-                        nutrientsCost: 8,
+                        nutrientsCost: 8
                       });
                     },
-                    children: [],
+                    children: []
                   },
                   //
                   {
@@ -1889,13 +1900,13 @@ onEvent('recipes', event => {
                       {
                         id: 'sourdough',
                         recipe: () => {
-                          event.remove({output: 'pneumaticcraft:sourdough'});
+                          event.remove({ output: 'pneumaticcraft:sourdough' });
                           event.recipes.create.mixing(
                             'pneumaticcraft:sourdough',
                             [
                               'kubejs:all_purpose_flour',
                               'kubejs:sourdough_starter',
-                              'salt:salt',
+                              'salt:salt'
                             ]
                           );
                         },
@@ -1905,24 +1916,26 @@ onEvent('recipes', event => {
                             recipe: () => {
                               event.custom({
                                 type: 'biomancy:bio_brewing',
-                                ingredients: [{item: 'kubejs:ripe_mix'}],
+                                ingredients: [{ item: 'kubejs:ripe_mix' }],
                                 // reactant: [{item: reactant}],
-                                result: {item: 'kubejs:sourdough_starter'},
+                                result: { item: 'kubejs:sourdough_starter' },
                                 processingTime: 600,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
                               event.custom({
                                 type: 'biomancy:bio_brewing',
                                 ingredients: [
-                                  {item: 'kubejs:sourdough_starter'},
+                                  { item: 'kubejs:sourdough_starter' }
                                 ],
-                                reactant: [{item: 'kubejs:all_purpose_flour'}],
+                                reactant: [
+                                  { item: 'kubejs:all_purpose_flour' }
+                                ],
                                 result: {
                                   item: 'kubejs:sourdough_starter',
-                                  count: 2,
+                                  count: 2
                                 },
                                 processingTime: 600,
-                                nutrientsCost: 8,
+                                nutrientsCost: 8
                               });
                             },
                             children: [
@@ -1934,7 +1947,7 @@ onEvent('recipes', event => {
                                     [
                                       'rankine:rye_grain',
                                       Fluid.of('minecraft:water', 1000),
-                                      'kubejs:ripe_ferment',
+                                      'kubejs:ripe_ferment'
                                     ]
                                   );
                                 },
@@ -1945,12 +1958,12 @@ onEvent('recipes', event => {
                                       event.custom({
                                         type: 'biomancy:bio_brewing',
                                         ingredients: [
-                                          {item: 'kubejs:bubbly_mix'},
+                                          { item: 'kubejs:bubbly_mix' }
                                         ],
                                         // reactant: [{item: reactant}],
-                                        result: {item: 'kubejs:ripe_ferment'},
+                                        result: { item: 'kubejs:ripe_ferment' },
                                         processingTime: 600,
-                                        nutrientsCost: 8,
+                                        nutrientsCost: 8
                                       });
                                     },
                                     children: [
@@ -1962,7 +1975,7 @@ onEvent('recipes', event => {
                                             [
                                               'rankine:rye_grain',
                                               Fluid.of('minecraft:water', 1000),
-                                              'kubejs:bubbly_ferment',
+                                              'kubejs:bubbly_ferment'
                                             ]
                                           );
                                         },
@@ -1973,14 +1986,14 @@ onEvent('recipes', event => {
                                               event.custom({
                                                 type: 'biomancy:bio_brewing',
                                                 ingredients: [
-                                                  {item: 'kubejs:active_mix'},
+                                                  { item: 'kubejs:active_mix' }
                                                 ],
                                                 // reactant: [{item: reactant}],
                                                 result: {
-                                                  item: 'kubejs:bubbly_ferment',
+                                                  item: 'kubejs:bubbly_ferment'
                                                 },
                                                 processingTime: 600,
-                                                nutrientsCost: 8,
+                                                nutrientsCost: 8
                                               });
                                             },
                                             children: [
@@ -1995,7 +2008,7 @@ onEvent('recipes', event => {
                                                         'minecraft:water',
                                                         1000
                                                       ),
-                                                      'kubejs:active_ferment',
+                                                      'kubejs:active_ferment'
                                                     ]
                                                   );
                                                 },
@@ -2007,15 +2020,15 @@ onEvent('recipes', event => {
                                                         type: 'biomancy:bio_brewing',
                                                         ingredients: [
                                                           {
-                                                            item: 'kubejs:starter_mix',
-                                                          },
+                                                            item: 'kubejs:starter_mix'
+                                                          }
                                                         ],
                                                         // reactant: [{item: reactant}],
                                                         result: {
-                                                          item: 'kubejs:active_ferment',
+                                                          item: 'kubejs:active_ferment'
                                                         },
                                                         processingTime: 600,
-                                                        nutrientsCost: 8,
+                                                        nutrientsCost: 8
                                                       });
                                                     },
                                                     children: [
@@ -2029,31 +2042,31 @@ onEvent('recipes', event => {
                                                               Fluid.of(
                                                                 'minecraft:water',
                                                                 1000
-                                                              ),
+                                                              )
                                                             ]
                                                           );
                                                         },
-                                                        children: [],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                                                        children: []
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 // animal agriculture
@@ -2097,9 +2110,11 @@ onEvent('recipes', event => {
                                 recipe: () => {
                                   event.custom({
                                     type: 'farmersdelight:cutting',
-                                    ingredients: [{item: 'kubejs:prime_beef'}],
-                                    tool: {tag: 'forge:tools/knives'},
-                                    result: [{item: 'kubejs:trimmed_beef'}],
+                                    ingredients: [
+                                      { item: 'kubejs:prime_beef' }
+                                    ],
+                                    tool: { tag: 'forge:tools/knives' },
+                                    result: [{ item: 'kubejs:trimmed_beef' }]
                                   });
                                 },
                                 children: [
@@ -2114,7 +2129,7 @@ onEvent('recipes', event => {
                                           Item.of(
                                             'kubejs:subprime_beef'
                                           ).withChance(0.2),
-                                          Item.of('kubejs:secondary_beef'),
+                                          Item.of('kubejs:secondary_beef')
                                         ],
                                         'kubejs:aged_cow_carcass'
                                       );
@@ -2126,19 +2141,19 @@ onEvent('recipes', event => {
                                           event.custom({
                                             type: 'biomancy:decomposing',
                                             ingredient: {
-                                              item: 'kubejs:washed_cow_carcass',
+                                              item: 'kubejs:washed_cow_carcass'
                                             },
                                             results: [
                                               {
                                                 item: 'kubejs:aged_cow_carcass',
                                                 countRange: {
                                                   type: 'constant',
-                                                  value: 1,
-                                                },
-                                              },
+                                                  value: 1
+                                                }
+                                              }
                                             ],
                                             processingTime: 6000,
-                                            nutrientsCost: 32,
+                                            nutrientsCost: 32
                                           });
                                         },
                                         children: [
@@ -2158,7 +2173,7 @@ onEvent('recipes', event => {
                                                     'kubejs:gutted_cow_carcass',
                                                     [
                                                       'kubejs:skinned_cow_carcass',
-                                                      'kubejs:gut_knife',
+                                                      'kubejs:gut_knife'
                                                     ]
                                                   );
                                                 },
@@ -2170,7 +2185,7 @@ onEvent('recipes', event => {
                                                         'kubejs:skinned_cow_carcass',
                                                         [
                                                           'kubejs:drained_cow_carcass',
-                                                          'kubejs:skinning_knife',
+                                                          'kubejs:skinning_knife'
                                                         ]
                                                       );
                                                     },
@@ -2182,7 +2197,7 @@ onEvent('recipes', event => {
                                                             'kubejs:drained_cow_carcass',
                                                             [
                                                               'kubejs:cow_carcass',
-                                                              'kubejs:butcher_knife',
+                                                              'kubejs:butcher_knife'
                                                             ]
                                                           );
                                                         },
@@ -2201,72 +2216,72 @@ onEvent('recipes', event => {
                                                                     ingredients:
                                                                       [
                                                                         {
-                                                                          item: 'naturesaura:birth_spirit',
+                                                                          item: 'naturesaura:birth_spirit'
                                                                         },
                                                                         {
-                                                                          item: 'kubejs:monachopsis_token',
+                                                                          item: 'kubejs:monachopsis_token'
                                                                         },
                                                                         {
-                                                                          item: 'kubejs:seasons_rune',
+                                                                          item: 'kubejs:seasons_rune'
                                                                         },
                                                                         {
-                                                                          item: 'bloodmagic:demonslate',
+                                                                          item: 'bloodmagic:demonslate'
                                                                         },
                                                                         {
-                                                                          item: 'bloodmagic:defaultcrystal',
+                                                                          item: 'bloodmagic:defaultcrystal'
                                                                         },
                                                                         {
-                                                                          item: 'kubejs:strange_dna',
-                                                                        },
+                                                                          item: 'kubejs:strange_dna'
+                                                                        }
                                                                       ],
                                                                     entity:
                                                                       'minecraft:cow',
                                                                     aura: 50000,
-                                                                    time: 1000,
+                                                                    time: 1000
                                                                   });
                                                                 },
-                                                                children: [],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
+                                                                children: []
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 id: 'cabbage_seeds',
                 recipe: () => {
                   event.custom({
                     type: 'biomancy:bio_brewing',
-                    ingredients: [{item: 'minecraft:potato'}],
+                    ingredients: [{ item: 'minecraft:potato' }],
                     reactant: {
-                      item: 'biomancy:organic_compound',
+                      item: 'biomancy:organic_compound'
                     },
                     result: {
-                      item: 'farmersdelight:cabbage_seeds',
+                      item: 'farmersdelight:cabbage_seeds'
                     },
                     processingTime: 80,
-                    nutrientsCost: 8,
+                    nutrientsCost: 8
                   });
-                },
+                }
               },
               {
                 id: 'tomato_slices',
@@ -2275,22 +2290,22 @@ onEvent('recipes', event => {
                     type: 'farmersdelight:cutting',
                     ingredients: [
                       {
-                        item: 'croptopia:tomato',
-                      },
+                        item: 'croptopia:tomato'
+                      }
                     ],
                     tool: {
-                      tag: 'forge:tools/knives',
+                      tag: 'forge:tools/knives'
                     },
                     result: [
                       {
-                        item: 'kubejs:tomato_slices',
-                      },
-                    ],
+                        item: 'kubejs:tomato_slices'
+                      }
+                    ]
                   });
                 },
-                children: [],
-              },
-            ],
+                children: []
+              }
+            ]
           },
           {
             id: 'mayonnaise',
@@ -2300,7 +2315,7 @@ onEvent('recipes', event => {
                 '2x kubejs:egg_yolk',
                 Fluid.of('kubejs:mustard', 1000),
                 Fluid.of('charcoal_pit:vinegar_still', 1000),
-                Fluid.of('pneumaticcraft:vegetable_oil', 1000),
+                Fluid.of('pneumaticcraft:vegetable_oil', 1000)
               ]);
             },
             children: [
@@ -2309,14 +2324,14 @@ onEvent('recipes', event => {
                 recipe: () => {
                   event.custom({
                     type: 'vintageimprovements:centrifugation',
-                    ingredients: [{item: 'minecraft:egg'}],
+                    ingredients: [{ item: 'minecraft:egg' }],
                     results: [
-                      {item: 'kubejs:egg_yolk'},
-                      {item: 'kubejs:egg_whites'},
+                      { item: 'kubejs:egg_yolk' },
+                      { item: 'kubejs:egg_whites' }
                     ],
-                    processingTime: 600,
+                    processingTime: 600
                   });
-                },
+                }
               },
               {
                 id: 'mustard',
@@ -2329,7 +2344,7 @@ onEvent('recipes', event => {
                       Fluid.of('charcoal_pit:vinegar_still', 1000),
                       Fluid.of('kubejs:wine', 1000),
                       '3x salt:salt',
-                      '3x croptopia:pepper',
+                      '3x croptopia:pepper'
                     ]
                   );
                 },
@@ -2348,60 +2363,60 @@ onEvent('recipes', event => {
                         recipe: () => {
                           event.custom({
                             type: 'biomancy:bio_brewing',
-                            ingredients: [{item: 'minecraft:potato'}],
+                            ingredients: [{ item: 'minecraft:potato' }],
                             reactant: {
-                              item: 'biomancy:organic_compound',
+                              item: 'biomancy:organic_compound'
                             },
                             result: {
-                              item: 'croptopia:pepper_seed',
+                              item: 'croptopia:pepper_seed'
                             },
                             processingTime: 80,
-                            nutrientsCost: 8,
+                            nutrientsCost: 8
                           });
-                        },
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             id: 'cheese_slice',
             recipe: () => {
-              event.remove({output: 'rankine:cheese'});
+              event.remove({ output: 'rankine:cheese' });
               event.custom({
                 type: 'farmersdelight:cutting',
-                ingredients: [{item: 'rankine:aged_cheese'}],
-                tool: {tag: 'forge:tools/knives'},
-                result: [{item: 'rankine:cheese'}],
+                ingredients: [{ item: 'rankine:aged_cheese' }],
+                tool: { tag: 'forge:tools/knives' },
+                result: [{ item: 'rankine:cheese' }]
               });
             },
             children: [
               {
                 id: 'aged_cheese',
                 recipe: () => {
-                  event.remove({output: 'rankine:aged_cheese'});
+                  event.remove({ output: 'rankine:aged_cheese' });
                   event.custom({
                     type: 'biomancy:decomposing',
                     ingredient: {
-                      item: 'rankine:unaged_cheese',
+                      item: 'rankine:unaged_cheese'
                     },
                     results: [
                       {
                         item: 'rankine:aged_cheese',
-                        countRange: {type: 'constant', value: 1},
-                      },
+                        countRange: { type: 'constant', value: 1 }
+                      }
                     ],
                     processingTime: 6000,
-                    nutrientsCost: 32,
+                    nutrientsCost: 32
                   });
                 },
                 children: [
                   {
                     id: 'unaged_cheese',
                     recipe: () => {
-                      event.remove({output: 'rankine:unaged_cheese'});
+                      event.remove({ output: 'rankine:unaged_cheese' });
                       event.recipes.create.compacting(
                         'rankine:unaged_cheese',
                         '9x kubejs:brined_cheese_curds'
@@ -2416,7 +2431,7 @@ onEvent('recipes', event => {
                             [
                               Fluid.of('minecraft:water', 1000),
                               'kubejs:ton_of_salt',
-                              'kubejs:pressed_cheese_curds',
+                              'kubejs:pressed_cheese_curds'
                             ]
                           );
                         },
@@ -2436,7 +2451,7 @@ onEvent('recipes', event => {
                                   event.recipes.createEmptying(
                                     [
                                       'kubejs:cheese_curds',
-                                      Fluid.of('kubejs:whey', 2750),
+                                      Fluid.of('kubejs:whey', 2750)
                                     ],
                                     'kubejs:curdled_milk_bucket'
                                   );
@@ -2453,7 +2468,7 @@ onEvent('recipes', event => {
                                             1000
                                           ),
                                           'kubejs:lactobacillus',
-                                          'kubejs:rennet',
+                                          'kubejs:rennet'
                                         ]
                                       );
                                     },
@@ -2471,7 +2486,7 @@ onEvent('recipes', event => {
                                                 Fluid.of(
                                                   'kubejs:skim_milk',
                                                   1000
-                                                ),
+                                                )
                                               ]
                                             )
                                             .superheated();
@@ -2484,20 +2499,20 @@ onEvent('recipes', event => {
                                                 type: 'vintageimprovements:centrifugation',
                                                 ingredients: [
                                                   {
-                                                    item: 'minecraft:milk_bucket',
-                                                  },
+                                                    item: 'minecraft:milk_bucket'
+                                                  }
                                                 ],
                                                 results: [
-                                                  {item: 'kubejs:cream'},
+                                                  { item: 'kubejs:cream' },
                                                   {
-                                                    item: 'kubejs:skim_milk_bucket',
-                                                  },
+                                                    item: 'kubejs:skim_milk_bucket'
+                                                  }
                                                 ],
-                                                processingTime: 6000,
+                                                processingTime: 6000
                                               });
-                                            },
-                                          },
-                                        ],
+                                            }
+                                          }
+                                        ]
                                       },
                                       {
                                         id: 'rennet',
@@ -2505,19 +2520,19 @@ onEvent('recipes', event => {
                                           event.custom({
                                             type: 'charcoal_pit:barrel',
                                             item_in: {
-                                              item: 'kubejs:aged_stomach_slice',
+                                              item: 'kubejs:aged_stomach_slice'
                                             },
                                             fluid_in: {
                                               fluid:
                                                 'immersiveengineering:ethanol',
-                                              amount: 1000,
+                                              amount: 1000
                                             },
                                             fluid_out: {
                                               fluid: 'kubejs:rennet',
-                                              amount: 1000,
+                                              amount: 1000
                                             },
                                             flags: 1,
-                                            time: 6000,
+                                            time: 6000
                                           });
                                         },
                                         children: [
@@ -2527,19 +2542,19 @@ onEvent('recipes', event => {
                                               event.custom({
                                                 type: 'biomancy:decomposing',
                                                 ingredient: {
-                                                  item: 'kubejs:stomach_slice',
+                                                  item: 'kubejs:stomach_slice'
                                                 },
                                                 results: [
                                                   {
                                                     item: 'kubejs:aged_stomach_slice',
                                                     countRange: {
                                                       type: 'constant',
-                                                      value: 1,
-                                                    },
-                                                  },
+                                                      value: 1
+                                                    }
+                                                  }
                                                 ],
                                                 processingTime: 6000,
-                                                nutrientsCost: 32,
+                                                nutrientsCost: 32
                                               });
                                             },
                                             children: [
@@ -2550,38 +2565,38 @@ onEvent('recipes', event => {
                                                     type: 'farmersdelight:cutting',
                                                     ingredients: [
                                                       {
-                                                        item: 'kubejs:stomach',
-                                                      },
+                                                        item: 'kubejs:stomach'
+                                                      }
                                                     ],
                                                     tool: {
-                                                      tag: 'forge:tools/knives',
+                                                      tag: 'forge:tools/knives'
                                                     },
                                                     result: [
                                                       {
-                                                        item: 'kubejs:stomach_slice',
-                                                      },
-                                                    ],
+                                                        item: 'kubejs:stomach_slice'
+                                                      }
+                                                    ]
                                                   });
                                                 },
-                                                children: [],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
+                                                children: []
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             id: 'onion_slices',
@@ -2590,20 +2605,20 @@ onEvent('recipes', event => {
                 type: 'farmersdelight:cutting',
                 ingredients: [
                   {
-                    item: 'croptopia:onion',
-                  },
+                    item: 'croptopia:onion'
+                  }
                 ],
                 tool: {
-                  tag: 'forge:tools/knives',
+                  tag: 'forge:tools/knives'
                 },
                 result: [
                   {
-                    item: 'kubejs:onion_slices',
-                  },
-                ],
+                    item: 'kubejs:onion_slices'
+                  }
+                ]
               });
             },
-            children: [],
+            children: []
           },
           {
             id: 'pickles',
@@ -2612,15 +2627,15 @@ onEvent('recipes', event => {
             recipe: () => {
               event.custom({
                 type: 'biomancy:bio_brewing',
-                ingredients: [{item: 'kubejs:olive_jar'}],
+                ingredients: [{ item: 'kubejs:olive_jar' }],
                 reactant: {
-                  item: 'kubejs:lactobacillus',
+                  item: 'kubejs:lactobacillus'
                 },
                 result: {
-                  item: 'charcoal_pit:pickled_olives',
+                  item: 'charcoal_pit:pickled_olives'
                 },
                 processingTime: 80,
-                nutrientsCost: 8,
+                nutrientsCost: 8
               });
             },
             children: [
@@ -2634,16 +2649,16 @@ onEvent('recipes', event => {
                       [
                         event.recipes.create.deploying('kubejs:empty_jar', [
                           'kubejs:empty_jar',
-                          'charcoal_pit:olives',
+                          'charcoal_pit:olives'
                         ]),
                         event.recipes.create.deploying('kubejs:empty_jar', [
                           'kubejs:empty_jar',
-                          'kubejs:ton_of_salt',
+                          'kubejs:ton_of_salt'
                         ]),
                         event.recipes.create.filling('kubejs:empty_jar', [
                           'kubejs:empty_jar',
-                          Fluid.of('charcoal_pit:vinegar_still', 1000),
-                        ]),
+                          Fluid.of('charcoal_pit:vinegar_still', 1000)
+                        ])
                       ]
                     )
                     .transitionalItem('kubejs:empty_jar')
@@ -2655,19 +2670,19 @@ onEvent('recipes', event => {
                     recipe: () => {
                       event.custom({
                         type: 'biomancy:bio_brewing',
-                        ingredients: [{item: 'minecraft:potato'}],
+                        ingredients: [{ item: 'minecraft:potato' }],
                         reactant: {
-                          item: 'biomancy:organic_compound',
+                          item: 'biomancy:organic_compound'
                         },
                         result: {
-                          item: 'charcoal_pit:olive_sapling',
+                          item: 'charcoal_pit:olive_sapling'
                         },
                         processingTime: 80,
-                        nutrientsCost: 8,
+                        nutrientsCost: 8
                       });
-                    },
-                  },
-                ],
+                    }
+                  }
+                ]
               },
               {
                 id: 'lactobacillus',
@@ -2675,7 +2690,7 @@ onEvent('recipes', event => {
                   event.custom({
                     type: 'biomancy:decomposing',
                     ingredient: {
-                      item: 'charcoal_pit:olives',
+                      item: 'charcoal_pit:olives'
                     },
                     results: [
                       {
@@ -2683,38 +2698,38 @@ onEvent('recipes', event => {
                         countRange: {
                           type: 'uniform',
                           min: 0,
-                          max: 1,
-                        },
+                          max: 1
+                        }
                       },
                       {
                         item: 'biomancy:organic_matter',
                         countRange: {
                           type: 'uniform',
                           min: 0,
-                          max: 1,
-                        },
-                      },
+                          max: 1
+                        }
+                      }
                     ],
                     processingTime: 600,
-                    nutrientsCost: 4,
+                    nutrientsCost: 4
                   });
                   event.custom({
                     type: 'vintageimprovements:centrifugation',
                     ingredients: [
                       {
-                        item: 'kubejs:specimen_725',
-                      },
+                        item: 'kubejs:specimen_725'
+                      }
                     ],
                     results: [
                       {
                         item: 'kubejs:lactobacillus',
-                        count: 32,
-                      },
+                        count: 32
+                      }
                     ],
-                    processingTime: 1000,
+                    processingTime: 1000
                   });
                 },
-                children: [],
+                children: []
               },
               {
                 id: 'specimen_725',
@@ -2722,15 +2737,15 @@ onEvent('recipes', event => {
                   // fermenting innoculated petri dish
                   event.custom({
                     type: 'biomancy:bio_brewing',
-                    ingredients: [{item: 'kubejs:petri_dish_725'}],
+                    ingredients: [{ item: 'kubejs:petri_dish_725' }],
                     reactant: {
-                      item: 'kubejs:lactobacillus',
+                      item: 'kubejs:lactobacillus'
                     },
                     result: {
-                      item: 'kubejs:specimen_725',
+                      item: 'kubejs:specimen_725'
                     },
                     processingTime: 80,
-                    nutrientsCost: 8,
+                    nutrientsCost: 8
                   });
                 },
                 children: [
@@ -2739,16 +2754,16 @@ onEvent('recipes', event => {
                     recipe: () => {
                       event.recipes.create.filling('kubejs:petri_dish_725', [
                         'kubejs:empty_petri_dish',
-                        Fluid.of('kubejs:beef_tallow', 1000),
+                        Fluid.of('kubejs:beef_tallow', 1000)
                       ]);
-                    },
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

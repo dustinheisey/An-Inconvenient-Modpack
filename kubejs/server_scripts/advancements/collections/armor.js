@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'armor', {
     icon: 'minecraft:armor_stand',
     title: 'Collection: Armor',
@@ -117,13 +117,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'upgrade to pneumatic boots',
                                                                     item: 'pneumaticcraft:pneumatic_boots',
                                                                     reward:
-                                                                      'im:armor/pneumatic/boots',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                      'im:armor/pneumatic/boots'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         title:
@@ -168,39 +168,39 @@ onEvent('server.datapack.high_priority', event => {
                                                                           'upgrade to mekasuit boots',
                                                                         item: 'mekanism:mekasuit_boots',
                                                                         reward:
-                                                                          'im:armor/mekasuit/boots',
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                                                          'im:armor/mekasuit/boots'
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         title: 'Leather Chestplate',
@@ -327,15 +327,15 @@ onEvent('server.datapack.high_priority', event => {
                                                                           'upgrade to mekasuit bodyarmor',
                                                                         item: 'mekanism:mekasuit_bodyarmor',
                                                                         reward:
-                                                                          'im:armor/mekasuit/chestplate',
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                          'im:armor/mekasuit/chestplate'
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         title:
@@ -371,37 +371,37 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'upgrade to pneumatic chestplate',
                                                                     item: 'pneumaticcraft:pneumatic_chestplate',
                                                                     reward:
-                                                                      'im:armor/pneumatic/chestplate',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                                                      'im:armor/pneumatic/chestplate'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         title: 'Leather Leggings',
@@ -518,13 +518,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'upgrade to pneumatic leggings',
                                                                     item: 'pneumaticcraft:pneumatic_leggings',
                                                                     reward:
-                                                                      'im:armor/pneumatic/leggings',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                      'im:armor/pneumatic/leggings'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         title:
@@ -569,39 +569,39 @@ onEvent('server.datapack.high_priority', event => {
                                                                           'upgrade to mekasuit pants',
                                                                         item: 'mekanism:mekasuit_pants',
                                                                         reward:
-                                                                          'im:armor/mekasuit/leggings',
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                                                          'im:armor/mekasuit/leggings'
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         title: 'Leather Helmet',
@@ -716,13 +716,13 @@ onEvent('server.datapack.high_priority', event => {
                                                                       'upgrade to pneumatic helmet',
                                                                     item: 'pneumaticcraft:pneumatic_helmet',
                                                                     reward:
-                                                                      'im:armor/pneumatic/helmet',
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
+                                                                      'im:armor/pneumatic/helmet'
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
                                                       },
                                                       {
                                                         title:
@@ -767,40 +767,40 @@ onEvent('server.datapack.high_priority', event => {
                                                                           'upgrade to mekasuit helmet',
                                                                         item: 'mekanism:mekasuit_helmet',
                                                                         reward:
-                                                                          'im:armor/mekasuit/helmet',
-                                                                      },
-                                                                    ],
-                                                                  },
-                                                                ],
-                                                              },
-                                                            ],
-                                                          },
-                                                        ],
-                                                      },
-                                                    ],
-                                                  },
-                                                ],
-                                              },
-                                            ],
-                                          },
-                                        ],
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                                                                          'im:armor/mekasuit/helmet'
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });

@@ -1,4 +1,4 @@
-onEvent('server.datapack.high_priority', event => {
+onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'relics', {
     icon: 'relics:researching_table',
     tag: 'im:relics',
@@ -44,19 +44,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Flippers',
                                 description:
                                   'Collect some flippers from an aquatic gateway',
-                                item: 'artifacts:flippers',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:flippers'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'undergarden:catalyst',
@@ -97,19 +97,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Kitty Slippers',
                                 description:
                                   'Collect kitty slippers from a forgotten gateway',
-                                item: 'artifacts:kitty_slippers',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:kitty_slippers'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'minecraft:netherrack',
@@ -149,19 +149,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Fire Gauntlet',
                                 description:
                                   'Collect a fire gauntlet from a hellish gateway',
-                                item: 'artifacts:fire_gauntlet',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:fire_gauntlet'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'hem:steam_engine',
@@ -200,19 +200,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Villager Hat',
                                 description:
                                   'Collect a villager hat from a sooty gateway',
-                                item: 'artifacts:villager_hat',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:villager_hat'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'blue_skies:everdawn_portal',
@@ -253,19 +253,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Power Glove',
                                 description:
                                   'Collect a power glove from a poisonous gateway',
-                                item: 'artifacts:power_glove',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:power_glove'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'twilightforest:twilight_portal_miniature_structure',
@@ -305,19 +305,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Steadfast Spikes',
                                 description:
                                   'Collect steadfast spikes from a magical gateway',
-                                item: 'artifacts:steadfast_spikes',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:steadfast_spikes'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'minecraft:beehive',
@@ -357,19 +357,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Bunny Hoppers',
                                 description:
                                   'Collect bunny hoppers from a buzzing gateway',
-                                item: 'artifacts:bunny_hoppers',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:bunny_hoppers'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'tofucraft:tofukinu',
@@ -408,19 +408,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Aqua Dashers',
                                 description:
                                   'Collect aqua dashers from a soy gateway',
-                                item: 'artifacts:aqua_dashers',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:aqua_dashers'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'mythicbotany:kvasir_mead',
@@ -460,19 +460,19 @@ onEvent('server.datapack.high_priority', event => {
                                 title: 'Golden Hook',
                                 description:
                                   'Collect a golden hook from a golden gateway',
-                                item: 'artifacts:golden_hook',
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+                                item: 'artifacts:golden_hook'
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       },
       {
         icon: 'botania:ender_air_bottle',
@@ -525,24 +525,24 @@ onEvent('server.datapack.high_priority', event => {
                                         title: 'Shock Pendant',
                                         description:
                                           'Collect a shock pendant from a mysterious gateway',
-                                        item: 'artifacts:shock_pendant',
-                                      },
-                                    ],
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-    ],
+                                        item: 'artifacts:shock_pendant'
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
   });
 });
