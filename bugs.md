@@ -6,7 +6,7 @@
 
 ## Staging
 
-- [ ] spirit orb not able to be picked up if you get an advancement when your inventory is full
+- [x] spirit orb staged incorrectly
 - [ ] fins recipe stage to chapter 2
 - [ ] powdered snow block staging
 - [ ] biometer chapter 1

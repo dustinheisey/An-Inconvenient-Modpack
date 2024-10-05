@@ -4475,7 +4475,6 @@ onEvent('tags.items', (event) => {
       'kubejs:corn_syrup_bucket',
       'kubejs:natural_flavors_bucket',
       'kubejs:mayonnaise_bucket',
-      'paraglider:spirit_orb',
       'kubejs:mustard_bucket',
       'kubejs:whey_bucket',
       'kubejs:curdled_milk_bucket',
