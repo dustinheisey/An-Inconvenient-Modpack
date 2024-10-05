@@ -7,7 +7,6 @@
 - [x] biometer staged incorrectly
 - [x] wadslyestone staged incorrectly
 - [x] iron door staged incorrectly
-- [ ] glass panes staged incorrectly
 - [x] chicken's spawning too early
 - [x] carved pumpkins staged incorrectly
 - [x] iron bars staged incorrectly
@@ -44,12 +43,14 @@
 - [ ] tin ingot from tin block
 - [ ] lead block to lead ingot recipe
 - [ ] maybe tin block to tin ingot recipe
-- [ ] bloomery doesn't work with charcoal fragment
-- [ ] copper cauldron recipe
-- [ ] hearth doesn't work with charcoal fragment
+- [x] bloomery doesn't work with charcoal fragment
+- [x] copper cauldron recipe
+- [x] hearth doesn't work with charcoal fragment
 
 ## Worldgen
 
+- [ ] remove glass from lost cities
+- [ ] make lost cities much bigger and epic
 - [ ] deepslate layer is too small
 - [ ] lost cities are too close to spawn
 - [ ] regenerate the template world
@@ -103,6 +104,7 @@
 - [ ] have to have cheats enabled to do locatebiome, rtp
 - [ ] look into upgradable tools
 - [ ] maybe add traveller's titles back
+- [ ] glass panes staged incorrectly (fix with garbage biome overhaul)
 
 ## Past Releases
 

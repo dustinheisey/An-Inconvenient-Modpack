@@ -394,6 +394,14 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'bronze_cauldron',
+      recipe: () => {
+        event.shaped('minecraft:cauldron', ['a a', 'a a', 'aaa'], {
+          a: 'rankine:bronze_ingot'
+        });
+      }
+    },
+    {
       id: 'goddess_statue',
       recipe: () => {
         event
