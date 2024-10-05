@@ -1,13 +1,9 @@
 # Bugs
 
-## Advancements
-
-- [ ] icebox and boiler advancements?
-
 ## Staging
 
 - [x] spirit orb staged incorrectly
-- [ ] powdered snow block staging
+- [x] powdered snow block staging
 - [ ] biometer staged incorrectly
 - [ ] wadslyestone staged incorrectly
 - [ ] iron door staged incorrectly
@@ -79,6 +75,10 @@
 - [ ] make more uses for cactus in chapter 1
 - [ ] farmers delight mushrooms chapter 1
 - [ ] find more uses for tin in chapter 1
+
+## Advancements
+
+- [ ] icebox and boiler advancements?
 
 ## Weird
 

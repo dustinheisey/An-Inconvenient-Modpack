@@ -3723,7 +3723,8 @@ onEvent('tags.items', (event) => {
       'minecraft:smooth_basalt',
       'minecraft:flint_and_steel',
       'minecraft:carved_pumpkin',
-      'minecraft:cyan_terracotta'
+      'minecraft:cyan_terracotta',
+      'minecraft:powder_snow_bucket'
     ],
     chapter_2: [
       'minecraft:dark_prismarine',
@@ -3753,7 +3754,6 @@ onEvent('tags.items', (event) => {
       'minecraft:beetroot',
       'minecraft:heart_of_the_sea',
       'minecraft:beetroot_seeds',
-      'minecraft:powder_snow_bucket',
       'minecraft:beetroot_soup',
       'minecraft:tinted_glass',
       // "minecraft:mossy_stone_bricks",
