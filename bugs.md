@@ -8,7 +8,7 @@
 - [x] wadslyestone staged incorrectly
 - [x] iron door staged incorrectly
 - [ ] glass panes staged incorrectly
-- [ ] chicken's spawning too early
+- [x] chicken's spawning too early
 - [x] carved pumpkins staged incorrectly
 - [x] iron bars staged incorrectly
 - [x] cyan terracotta staged incorrectly
@@ -20,7 +20,6 @@
 
 ## Recipes
 
-- [ ] charcoal pit exploit
 - [x] pumpkin feast use jack o lantern
 - [ ] icebox only uses cobblestone slab
 - [ ] crushing recipes are not working correctly
@@ -48,7 +47,6 @@
 - [ ] bloomery doesn't work with charcoal fragment
 - [ ] copper cauldron recipe
 - [ ] hearth doesn't work with charcoal fragment
-- [ ] metal doors don't open
 
 ## Worldgen
 
@@ -70,7 +68,6 @@
 - [ ] evaluate limestone use
 - [ ] fix mixing barrel automation
 - [ ] look into method of getting plagioclase feldspar
-- [ ] look into zombie sounds
 - [ ] high fire clay return on investment
 - [ ] make more uses for cactus in chapter 1
 - [ ] farmers delight mushrooms chapter 1
@@ -81,6 +78,8 @@
 - [ ] icebox and boiler advancements?
 
 ## Weird
+
+- [ ] charcoal pit exploit
 
 ## Backlog
 
