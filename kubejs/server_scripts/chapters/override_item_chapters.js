@@ -3721,7 +3721,8 @@ onEvent('tags.items', (event) => {
       'minecraft:brick_wall',
       'minecraft:cauldron',
       'minecraft:smooth_basalt',
-      'minecraft:flint_and_steel'
+      'minecraft:flint_and_steel',
+      'minecraft:cyan_terracotta'
     ],
     chapter_2: [
       'minecraft:dark_prismarine',
@@ -3891,7 +3892,6 @@ onEvent('tags.items', (event) => {
       'minecraft:light_blue_terracotta',
       'minecraft:lime_terracotta',
       'minecraft:pink_terracotta',
-      'minecraft:cyan_terracotta',
       'minecraft:purple_terracotta',
       'minecraft:blue_terracotta',
       'minecraft:green_terracotta',

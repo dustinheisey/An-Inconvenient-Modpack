@@ -7,17 +7,15 @@
 ## Staging
 
 - [x] spirit orb staged incorrectly
-- [ ] fins recipe stage to chapter 2
 - [ ] powdered snow block staging
-- [ ] biometer chapter 1
-- [ ] wadslyestone chapter 1
-- [ ] iron door chapter
-- [ ] glass panes chapter
-- [ ] chicken's in chapter 1
-- [ ] carved pumpkins and pumpkins chapter 1
-- [ ] metal doors don't open
-- [ ] iron bars staging
-- [ ] cyan terracotta staging
+- [ ] biometer staged incorrectly
+- [ ] wadslyestone staged incorrectly
+- [ ] iron door staged incorrectly
+- [ ] glass panes staged incorrectly
+- [ ] chicken's spawning too early
+- [ ] carved pumpkins staged incorrectly
+- [ ] iron bars staged incorrectly
+- [x] cyan terracotta staged incorrectly
 
 ## UI
 
@@ -54,6 +52,7 @@
 - [ ] bloomery doesn't work with charcoal fragment
 - [ ] copper cauldron recipe
 - [ ] hearth doesn't work with charcoal fragment
+- [ ] metal doors don't open
 
 ## Worldgen
 
@@ -89,6 +88,7 @@
   - [ ] redstone engineering block recipe stage
   - [ ] kettle recipe stage
   - [ ] copper sheetmetal recipe stage
+  - [ ] fins recipe staged incorrectly
 - [ ] gingerbread man showing in jei too early
 - [ ] forgotten knife showing in jei too early
 - [ ] bees showing in jei too early
