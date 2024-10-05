@@ -4,8 +4,8 @@
 
 - [x] spirit orb staged incorrectly
 - [x] powdered snow block staging
-- [ ] biometer staged incorrectly
-- [ ] wadslyestone staged incorrectly
+- [x] biometer staged incorrectly
+- [x] wadslyestone staged incorrectly
 - [x] iron door staged incorrectly
 - [ ] glass panes staged incorrectly
 - [ ] chicken's spawning too early
