@@ -78,6 +78,7 @@ onEvent('tags.items', (event) => {
 
   //   event.add("forge:storage_blocks/salt", "rankine:sodium_chloride_block");
 
+  event.add('forge:pumpkins', 'minecraft:carved_pumpkin');
   event.add('forge:storage_blocks/salt', 'rankine:pink_salt_block');
 
   event.add('forge:bitumen', 'rankine:bitumen');

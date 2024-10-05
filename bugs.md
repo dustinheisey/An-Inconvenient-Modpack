@@ -13,7 +13,7 @@
 - [ ] iron door staged incorrectly
 - [ ] glass panes staged incorrectly
 - [ ] chicken's spawning too early
-- [ ] carved pumpkins staged incorrectly
+- [x] carved pumpkins staged incorrectly
 - [ ] iron bars staged incorrectly
 - [x] cyan terracotta staged incorrectly
 

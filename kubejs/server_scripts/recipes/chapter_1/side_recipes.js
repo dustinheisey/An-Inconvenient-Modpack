@@ -387,7 +387,7 @@ onEvent('recipes', (event) => {
               e: 'biomancy:living_flesh',
               g: 'rankine:sulfur_shelf_mushroom',
               i: 'rankine:lions_mane_mushroom',
-              h: 'minecraft:pumpkin'
+              h: '#forge:pumpkins'
             }
           )
           .stage('chapter_1');

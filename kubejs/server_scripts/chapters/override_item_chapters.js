@@ -3722,6 +3722,7 @@ onEvent('tags.items', (event) => {
       'minecraft:cauldron',
       'minecraft:smooth_basalt',
       'minecraft:flint_and_steel',
+      'minecraft:carved_pumpkin',
       'minecraft:cyan_terracotta'
     ],
     chapter_2: [
@@ -3729,7 +3730,6 @@ onEvent('tags.items', (event) => {
       'minecraft:dark_prismarine_slab',
       'minecraft:dark_prismarine_stairs',
       'minecraft:sculk_sensor',
-      'minecraft:carved_pumpkin',
       'minecraft:pumpkin',
       'minecraft:melon',
       'minecraft:farmland',
