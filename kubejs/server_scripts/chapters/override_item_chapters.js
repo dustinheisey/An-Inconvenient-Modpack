@@ -3724,7 +3724,11 @@ onEvent('tags.items', (event) => {
       'minecraft:flint_and_steel',
       'minecraft:carved_pumpkin',
       'minecraft:cyan_terracotta',
-      'minecraft:powder_snow_bucket'
+      'minecraft:powder_snow_bucket',
+      'minecraft:iron_door',
+      'minecraft:iron_trapdoor',
+      'minecraft:iron_bars',
+      'minecraft:chain'
     ],
     chapter_2: [
       'minecraft:dark_prismarine',
@@ -3790,8 +3794,6 @@ onEvent('tags.items', (event) => {
       'minecraft:chainmail_boots',
       'minecraft:shears',
       'minecraft:nautilus_shell',
-      'minecraft:iron_door',
-      'minecraft:iron_trapdoor',
       'minecraft:hopper',
       'minecraft:bucket',
       'minecraft:water_bucket',
@@ -3805,8 +3807,6 @@ onEvent('tags.items', (event) => {
       'minecraft:turtle_helmet',
       'minecraft:scute',
       'minecraft:trident',
-      'minecraft:chain',
-      'minecraft:iron_bars',
       'minecraft:sponge',
       'minecraft:wet_sponge',
       'minecraft:ink_sac',

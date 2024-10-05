@@ -6,11 +6,11 @@
 - [x] powdered snow block staging
 - [ ] biometer staged incorrectly
 - [ ] wadslyestone staged incorrectly
-- [ ] iron door staged incorrectly
+- [x] iron door staged incorrectly
 - [ ] glass panes staged incorrectly
 - [ ] chicken's spawning too early
 - [x] carved pumpkins staged incorrectly
-- [ ] iron bars staged incorrectly
+- [x] iron bars staged incorrectly
 - [x] cyan terracotta staged incorrectly
 
 ## UI
