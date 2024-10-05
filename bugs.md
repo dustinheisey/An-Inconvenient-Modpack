@@ -6,23 +6,23 @@
 
 ## Staging
 
-- [ ] carved pumpkins stage to chapter 1
 - [x] spirit orb not able to be picked up if you get an advancement when your inventory is full
 - [ ] fins recipe stage to chapter 2
 - [ ] powdered snow block staging
 - [ ] biometer chapter 1
-- [ ] spirit orbs are stages to chapter 5.1
 - [ ] wadslyestone chapter 1
 - [ ] iron door chapter
 - [ ] glass panes chapter
 - [ ] chicken's in chapter 1
-- [ ] pumpkins chapter 1
+- [ ] carved pumpkins and pumpkins chapter 1
+- [ ] metal doors don't open
+- [ ] iron bars staging
+- [ ] cyan terracotta staging
 
 ## UI
 
 - [x] experience bar number clipping behind temperature number
-- [ ] find lang title for dead coral reef
-- [ ] update rankine text to fit modpack
+- [x] fix lang title for dead coral reef
 
 ## Recipes
 
@@ -74,14 +74,8 @@
 
 - [ ] evaluate limestone use
 - [ ] fix mixing barrel automation
-- [ ] have to have cheats enabled to do locatebiome, rtp
-- [ ] look into upgradable tools
 - [ ] look into method of getting plagioclase feldspar
 - [ ] look into zombie sounds
-- [ ] metal doors don't open
-- [ ] iron bars staging
-- [ ] cyan terracotta staging
-- [ ] maybe add traveller's titles back
 - [ ] high fire clay return on investment
 - [ ] make more uses for cactus in chapter 1
 - [ ] farmers delight mushrooms chapter 1
@@ -89,12 +83,9 @@
 
 ## Weird
 
-- [ ] black screen randomly
-- [ ] transparent border in antique atlas
-
 ## Backlog
 
-- [ ] fix all recipe stages
+- [ ] set correct recipe stages for all custom recipes
   - [ ] redstone engineering block recipe stage
   - [ ] kettle recipe stage
   - [ ] copper sheetmetal recipe stage
@@ -103,11 +94,16 @@
 - [ ] bees showing in jei too early
 - [ ] fire doesn't go away when you die visually
 - [ ] unification errors
-- [ ] set correct recipe stages for all custom recipes
 - [ ] fix chapter 1 advancement page icons so it fits in one page height
 - [ ] add % info to tree stripping jei
 - [ ] ceramic bucket doesn't show fluid in hand
 - [ ] optimize material staging and remove all extra code
+- [ ] update rankine text to fit modpack
+- [ ] black screen randomly
+- [ ] transparent border in antique atlas
+- [ ] have to have cheats enabled to do locatebiome, rtp
+- [ ] look into upgradable tools
+- [ ] maybe add traveller's titles back
 
 ## Past Releases
 
