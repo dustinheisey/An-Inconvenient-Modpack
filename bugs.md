@@ -24,21 +24,19 @@
 - [x] should be able to light torch with campfire
 - [x] make rankine book recipe shapeless
 - [x] bronze cauldron recipe
+- [x] need to crush deepslate to get cobbled deepslate
+- [x] alloy kiln out of high refractory bricks
+- [x] make hearth out of ultra high refractory bricks
+- [x] bronze hammer to crush porcelain
 - [ ] boiler recipe not working
 - [ ] some ingots from metal block recipes broken
-- [ ] crushing recipes are not working correctly
-- [ ] crush block of selenite into selenite shard
-- [x] need to crush deepslate to get cobbled deepslate
-- [ ] altimeter from copper recipe
+- [x] altimeter from copper recipe
 - [ ] rankine clays drop clay balls
 - [ ] crushing cobble to gravel to sand to silt to clay
 - [ ] fire clay should work with all types of sand
 - [ ] crushing recipes for all types of gravel and sand
 - [ ] less fire clay in a recipe
-- [x] alloy kiln out of high refractory bricks
-- [x] make hearth out of ultra high refractory bricks
 - [ ] porcelain clay to porcelain clay bricks
-- [x] bronze hammer to crush porcelain
 - [ ] high fire clay recipe 60 fire clay, 40 bone char 20 grog
 
 ## Worldgen
@@ -75,6 +73,7 @@
 - [ ] icebox and boiler advancements?
 - [ ] bronze cauldron advancement
 - [ ] rework refractory bricks and beehive oven, alloy kiln and hearth advancements
+- [ ] move altimeter advancement to copper ingot
 
 ## Weird
 
@@ -105,6 +104,7 @@
 - [ ] glass panes staged incorrectly (fix with garbage biome overhaul)
 - [ ] bloomery doesn't work with charcoal fragment
 - [ ] hearth rdoesn't work with charcoal fragment
+- [ ] crushing recipes are not working correctly
 
 ## Past Releases
 

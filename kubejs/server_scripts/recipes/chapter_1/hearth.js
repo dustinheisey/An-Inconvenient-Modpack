@@ -862,7 +862,7 @@ onEvent('recipes', (event) => {
                                       'rankine:altimeter',
                                       ['aaa', 'aba', 'aaa'],
                                       {
-                                        a: 'rankine:tin_ingot',
+                                        a: 'minecraft:copper_ingot',
                                         b: 'ecofriendly:smelted_iron_can_ym'
                                       }
                                     )
