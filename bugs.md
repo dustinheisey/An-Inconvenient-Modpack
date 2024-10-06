@@ -20,13 +20,16 @@
 ## Recipes
 
 - [x] pumpkin feast use jack o lantern
-- [ ] icebox only uses cobblestone slab
+- [x] icebox only uses cobblestone slab
+- [x] should be able to light torch with campfire
+- [ ] make rankine book recipe shapeless
+- [x] bronze cauldron recipe
+- [ ] boiler recipe not working
+- [ ] some ingots from metal block recipes broken
 - [ ] crushing recipes are not working correctly
 - [ ] crush block of selenite into selenite shard
 - [ ] need to crush deepslate to get cobbled deepslate
-- [ ] boiler recipe not working
 - [ ] altimeter from copper recipe
-- [ ] should be able to light torch with campfire
 - [ ] rankine clays drop clay balls
 - [ ] crushing cobble to gravel to sand to silt to clay
 - [ ] uses for calcite
@@ -34,18 +37,11 @@
 - [ ] fire clay should work with all types of sand
 - [ ] crushing recipes for all types of gravel and sand
 - [ ] less fire clay in a recipe
-- [ ] make rankine book recipe shapeless
 - [ ] alloy kiln out of high refractory bricks
 - [ ] make hearth out of ultra high refractory bricks
 - [ ] porcelain clay to porcelain clay bricks
-- [ ] bronze hammer to crush porcelain
+- [x] bronze hammer to crush porcelain
 - [ ] high fire clay recipe 60 fire clay, 40 bone char 20 grog
-- [ ] tin ingot from tin block
-- [ ] lead block to lead ingot recipe
-- [ ] maybe tin block to tin ingot recipe
-- [x] bloomery doesn't work with charcoal fragment
-- [x] copper cauldron recipe
-- [x] hearth doesn't work with charcoal fragment
 
 ## Worldgen
 
@@ -77,6 +73,7 @@
 ## Advancements
 
 - [ ] icebox and boiler advancements?
+- [ ] bronze cauldron advancement
 
 ## Weird
 
@@ -105,6 +102,8 @@
 - [ ] look into upgradable tools
 - [ ] maybe add traveller's titles back
 - [ ] glass panes staged incorrectly (fix with garbage biome overhaul)
+- [ ] bloomery doesn't work with charcoal fragment
+- [ ] hearth rdoesn't work with charcoal fragment
 
 ## Past Releases
 

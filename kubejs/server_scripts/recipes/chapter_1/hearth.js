@@ -1257,7 +1257,13 @@ onEvent('recipes', (event) => {
                                 .custom({
                                   type: 'rankine:crushing',
                                   input: { item: 'rankine:porcelain' },
-                                  guaranteed: [{ item: 'kubejs:grog' }]
+                                  guaranteed: [
+                                    {
+                                      item: 'kubejs:grog',
+                                      count: 1,
+                                      tier: 'minecraft:iron'
+                                    }
+                                  ]
                                 })
                                 .id('inconvenient:grog');
                             },
