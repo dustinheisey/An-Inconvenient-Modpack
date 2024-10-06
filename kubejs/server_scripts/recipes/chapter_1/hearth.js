@@ -11,7 +11,7 @@ onEvent('recipes', (event) => {
           a: 'minecraft:iron_ingot',
           b: 'minecraft:leather',
           c: 'endrem:undead_soul',
-          d: 'rankine:high_refractory_bricks'
+          d: 'rankine:ultra_high_refractory_bricks'
         })
         .stage('chapter_1')
         .id('inconvenient:hearth');
@@ -648,7 +648,7 @@ onEvent('recipes', (event) => {
                                   'immersiveengineering:alloybrick',
                                   ['aba', 'bab', 'aba'],
                                   {
-                                    a: 'rankine:refractory_brick',
+                                    a: 'rankine:high_refractory_brick',
                                     b: 'rankine:mortar'
                                   }
                                 )
@@ -1169,11 +1169,11 @@ onEvent('recipes', (event) => {
         ]
       },
       {
-        id: 'high_refractory_bricks',
+        id: 'ultra_high_refractory_bricks',
         // use grog from pottery only made in the beehive oven and filtered water made with bone char
         children: [
           {
-            id: 'high_refractory_brick',
+            id: 'ultra_high_refractory_brick',
             recipe: () => {
               [
                 'rankine:high_refractory_brick_from_carbon',
@@ -1185,11 +1185,28 @@ onEvent('recipes', (event) => {
                 'rankine:high_refractory_brick',
                 'kubejs:dry_unfired_high_refractory_brick'
               );
+              event.smelting(
+                'rankine:ultra_high_refractory_brick',
+                'kubejs:dry_unfired_ultra_high_refractory_brick'
+              );
             },
             children: [
               {
-                id: 'dry_unfired_high_refractory_brick',
+                id: 'dry_unfired_ultra_high_refractory_brick',
                 recipe: () => {
+                  event
+                    .custom({
+                      type: 'hexerei:drying_rack',
+                      ingredients: [
+                        { item: 'kubejs:unfired_ultra_high_refractory_brick' }
+                      ],
+                      output: {
+                        item: 'kubejs:dry_unfired_ultra_high_refractory_brick'
+                      },
+                      dryingTimeInTicks: 3000
+                    })
+                    .id('inconvenient:dry_unfired_ultra_high_refractory_brick');
+
                   event
                     .custom({
                       type: 'hexerei:drying_rack',
@@ -1205,8 +1222,15 @@ onEvent('recipes', (event) => {
                 },
                 children: [
                   {
-                    id: 'unfired_high_refractory_brick',
+                    id: 'unfired_ultra_high_refractory_brick',
                     recipe: () => {
+                      event
+                        .shaped(
+                          '2x kubejs:unfired_ultra_high_refractory_brick',
+                          ['aa'],
+                          { a: 'kubejs:ultra_high_fire_clay_ball' }
+                        )
+                        .stage('chapter_1');
                       event
                         .shaped(
                           '2x kubejs:unfired_high_refractory_brick',
@@ -1217,36 +1241,30 @@ onEvent('recipes', (event) => {
                     },
                     children: [
                       {
-                        id: 'high_fire_clay_ball',
+                        id: 'ultra_high_fire_clay_ball',
                         recipe: () => {
                           event.custom({
                             type: 'rankine:mixing',
-                            mixTime: 100,
-                            ingredientTotal: 3,
-                            matScale: 2,
+                            mixTime: 70,
+                            ingredientTotal: 2,
+                            matScale: 1,
                             fluidInput: {
                               fluid: 'minecraft:water',
                               amount: 50
                             },
                             input1: {
-                              item: 'rankine:fire_clay_ball',
+                              item: 'kubejs:high_fire_clay_ball',
                               required: true,
                               min: 0.4,
                               max: 0.6
                             },
                             input2: {
-                              item: 'rankine:bone_char',
-                              required: true,
-                              min: 0.1,
-                              max: 0.2
-                            },
-                            input3: {
                               item: 'kubejs:grog',
                               required: true,
-                              min: 0.3,
-                              max: 0.4
+                              min: 0.4,
+                              max: 0.6
                             },
-                            result: { item: 'kubejs:high_fire_clay_ball' }
+                            result: { item: 'kubejs:ultra_high_fire_clay_ball' }
                           });
                         },
                         children: [
@@ -1379,62 +1397,94 @@ onEvent('recipes', (event) => {
                             ]
                           },
                           {
-                            id: 'bone_char',
+                            id: 'high_fire_clay_ball',
+                            recipe: () => {
+                              event.custom({
+                                type: 'rankine:mixing',
+                                mixTime: 70,
+                                ingredientTotal: 2,
+                                matScale: 1,
+                                fluidInput: {
+                                  fluid: 'minecraft:water',
+                                  amount: 50
+                                },
+                                input1: {
+                                  item: 'rankine:fire_clay_ball',
+                                  required: true,
+                                  min: 0.4,
+                                  max: 0.6
+                                },
+                                input2: {
+                                  item: 'rankine:bone_char',
+                                  required: true,
+                                  min: 0.4,
+                                  max: 0.6
+                                },
+                                result: { item: 'kubejs:high_fire_clay_ball' }
+                              });
+                            },
                             children: [
                               {
-                                // ? build a beehive oven multiblock and fire bone blocks
-                                id: 'beehive_oven_pit',
-                                recipe: () => {
-                                  event.replaceInput(
-                                    { output: 'rankine:beehive_oven_pit' },
-                                    '#forge:storage_blocks/coal',
-                                    'charcoal_pit:charcoal_block'
-                                  );
-
-                                  event.replaceInput(
-                                    { output: 'minecraft:flint_and_steel' },
-                                    'minecraft:iron_ingot',
-                                    'minecraft:copper_ingot'
-                                  );
-
-                                  event.remove({
-                                    id: 'tconstruct:tools/building/flint_and_brick'
-                                  });
-                                  event.shapeless(
-                                    'tconstruct:flint_and_brick',
-                                    ['minecraft:flint', 'minecraft:brick']
-                                  );
-                                }
-                              },
-                              {
-                                id: 'bone_block',
-                                recipe: () => {
-                                  [
-                                    'minecraft:bone_meal_from_bone_block',
-                                    'minecraft:bone_block'
-                                  ].forEach((id) => event.remove({ id: id }));
-
-                                  event.shaped(
-                                    'minecraft:bone_block',
-                                    ['aaa', 'aaa', 'aaa'],
-                                    {
-                                      a: 'minecraft:bone'
-                                    }
-                                  );
-                                },
+                                id: 'bone_char',
                                 children: [
                                   {
-                                    id: 'bone',
+                                    // ? build a beehive oven multiblock and fire bone blocks
+                                    id: 'beehive_oven_pit',
+                                    recipe: () => {
+                                      event.replaceInput(
+                                        { output: 'rankine:beehive_oven_pit' },
+                                        '#forge:storage_blocks/coal',
+                                        'charcoal_pit:charcoal_block'
+                                      );
+
+                                      event.replaceInput(
+                                        { output: 'minecraft:flint_and_steel' },
+                                        'minecraft:iron_ingot',
+                                        'minecraft:copper_ingot'
+                                      );
+
+                                      event.remove({
+                                        id: 'tconstruct:tools/building/flint_and_brick'
+                                      });
+                                      event.shapeless(
+                                        'tconstruct:flint_and_brick',
+                                        ['minecraft:flint', 'minecraft:brick']
+                                      );
+                                    }
+                                  },
+                                  {
+                                    id: 'bone_block',
                                     recipe: () => {
                                       [
-                                        'rankine:crushing/netherrack_crushing',
-                                        'rankine:crushing/soul_sandstone_crushing',
-                                        'rankine:foraging/soul_sand_foraging',
-                                        'rankine:foraging/soul_soil_foraging'
+                                        'minecraft:bone_meal_from_bone_block',
+                                        'minecraft:bone_block'
                                       ].forEach((id) =>
                                         event.remove({ id: id })
                                       );
-                                    }
+
+                                      event.shaped(
+                                        'minecraft:bone_block',
+                                        ['aaa', 'aaa', 'aaa'],
+                                        {
+                                          a: 'minecraft:bone'
+                                        }
+                                      );
+                                    },
+                                    children: [
+                                      {
+                                        id: 'bone',
+                                        recipe: () => {
+                                          [
+                                            'rankine:crushing/netherrack_crushing',
+                                            'rankine:crushing/soul_sandstone_crushing',
+                                            'rankine:foraging/soul_sand_foraging',
+                                            'rankine:foraging/soul_soil_foraging'
+                                          ].forEach((id) =>
+                                            event.remove({ id: id })
+                                          );
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
                               }

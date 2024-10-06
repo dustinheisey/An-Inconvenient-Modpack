@@ -32,13 +32,11 @@
 - [ ] altimeter from copper recipe
 - [ ] rankine clays drop clay balls
 - [ ] crushing cobble to gravel to sand to silt to clay
-- [ ] uses for calcite
-- [ ] quartzite crushing recipe
 - [ ] fire clay should work with all types of sand
 - [ ] crushing recipes for all types of gravel and sand
 - [ ] less fire clay in a recipe
-- [ ] alloy kiln out of high refractory bricks
-- [ ] make hearth out of ultra high refractory bricks
+- [x] alloy kiln out of high refractory bricks
+- [x] make hearth out of ultra high refractory bricks
 - [ ] porcelain clay to porcelain clay bricks
 - [x] bronze hammer to crush porcelain
 - [ ] high fire clay recipe 60 fire clay, 40 bone char 20 grog
@@ -69,11 +67,14 @@
 - [ ] make more uses for cactus in chapter 1
 - [ ] farmers delight mushrooms chapter 1
 - [ ] find more uses for tin in chapter 1
+- [ ] uses for calcite
+- [ ] quartzite crushing recipe
 
 ## Advancements
 
 - [ ] icebox and boiler advancements?
 - [ ] bronze cauldron advancement
+- [ ] rework refractory bricks and beehive oven, alloy kiln and hearth advancements
 
 ## Weird
 

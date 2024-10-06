@@ -29,6 +29,9 @@ onEvent('item.registry', (event) => {
         'high_fire_clay_ball',
         'unfired_high_refractory_brick',
         'dry_unfired_high_refractory_brick',
+        'ultra_high_fire_clay_ball',
+        'unfired_ultra_high_refractory_brick',
+        'dry_unfired_ultra_high_refractory_brick',
         'grog'
       ],
       misc: ['goddess_heart']
