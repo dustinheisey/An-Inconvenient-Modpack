@@ -33,11 +33,7 @@
 - [x] altimeter from copper recipe
 - [ ] rankine clays drop clay balls
 - [ ] crushing cobble to gravel to sand to silt to clay
-- [ ] fire clay should work with all types of sand
-- [ ] crushing recipes for all types of gravel and sand
-- [ ] less fire clay in a recipe
-- [ ] porcelain clay to porcelain clay bricks
-- [ ] high fire clay recipe 60 fire clay, 40 bone char 20 grog
+- [x] fire clay should work with desert sand
 
 ## Worldgen
 
@@ -67,6 +63,7 @@
 - [ ] find more uses for tin in chapter 1
 - [ ] uses for calcite
 - [ ] quartzite crushing recipe
+- [ ] rework feldspar and porcelain production
 
 ## Advancements
 
