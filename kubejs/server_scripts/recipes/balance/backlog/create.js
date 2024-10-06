@@ -566,6 +566,7 @@ onEvent('recipes', (event) => {
 
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'immersiveengineering:sample_drill' },
         pattern: ['aba', 'aba', 'cdc'],
         key: {
@@ -578,6 +579,7 @@ onEvent('recipes', (event) => {
 
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'rankine:diamond_tier_crushing_head' },
         pattern: [' a ', 'aba', 'cdc'],
         key: {
@@ -589,6 +591,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'rankine:netherite_tier_crushing_head' },
         pattern: [' a ', 'aba', 'cdc'],
         key: {
@@ -601,6 +604,7 @@ onEvent('recipes', (event) => {
 
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'rankine:iron_tier_crushing_head' },
         pattern: [' a ', 'aba', 'cdc'],
         key: {
@@ -612,6 +616,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'rankine:stone_tier_crushing_head' },
         pattern: [' a ', 'aba', 'cdc'],
         key: {
@@ -623,6 +628,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'create:mechanical_plough' },
         pattern: ['aaa', 'bbb', ' c '],
         key: {
@@ -633,6 +639,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'create:mechanical_harvester' },
         pattern: ['bab', 'bab', ' c '],
         key: {
@@ -643,6 +650,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'botania:alchemy_catalyst' },
         pattern: ['aba', 'cdc', 'aba'],
         key: {
@@ -655,6 +663,7 @@ onEvent('recipes', (event) => {
 
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'botania:mana_tablet' },
         pattern: ['aaa', 'aba', 'aaa'],
         key: {
@@ -665,6 +674,7 @@ onEvent('recipes', (event) => {
 
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'create:mechanical_drill' },
         pattern: [' b ', 'bab', ' c '],
         key: {
@@ -676,6 +686,7 @@ onEvent('recipes', (event) => {
 
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:tin_coin' },
         pattern: [
           '  aaaaa  ',
@@ -694,6 +705,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:iron_coin' },
         pattern: [
           '  aaaaa  ',
@@ -712,6 +724,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:lead_coin' },
         pattern: [
           '  aaaaa  ',
@@ -730,6 +743,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:silver_coin' },
         pattern: [
           '  aaaaa  ',
@@ -748,6 +762,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:zinc_coin' },
         pattern: [
           '  aaaaa  ',
@@ -766,6 +781,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:aluminum_coin' },
         pattern: [
           '  aaaaa  ',
@@ -784,6 +800,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:gold_coin' },
         pattern: [
           '  aaaaa  ',
@@ -802,6 +819,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:steel_coin' },
         pattern: [
           '  aaaaa  ',
@@ -820,6 +838,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:nickel_coin' },
         pattern: [
           '  aaaaa  ',
@@ -838,6 +857,7 @@ onEvent('recipes', (event) => {
       });
       event.custom({
         global: true,
+        type: 'create:mechanical_crafting',
         result: { item: 'kubejs:platinum_coin' },
         pattern: [
           '  aaaaa  ',
@@ -901,7 +921,7 @@ onEvent('recipes', (event) => {
         type: 'create:milling'
       });
 
-      evet.remove({ output: ['minecraft:bonemeal'], type: 'create:milling' });
+      event.remove({ output: ['minecraft:bonemeal'], type: 'create:milling' });
 
       event.remove({
         output: [
@@ -1010,15 +1030,17 @@ onEvent('recipes', (event) => {
       event.custom({
         type: 'create:mixing',
         results: [{ item: 'farmersdelight:pie_crust' }],
-        ingredients: [{ tag: 'forge:flour' }, Fluid.of('minecraft:milk', 1000)]
+        ingredients: [
+          { tag: 'forge:flour' },
+          { fluid: 'minecraft:milk', amount: 1000 }
+        ]
       });
-
       event.custom({
         type: 'create:mixing',
         results: [{ item: 'create:dough' }],
         ingredients: [
           { tag: '3x #forge:flour' },
-          Fluid.of('minecraft:water', 1000)
+          { fluid: 'minecraft:water', amount: 1000 }
         ]
       });
       event.custom({
