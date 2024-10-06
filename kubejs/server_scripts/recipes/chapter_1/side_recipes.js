@@ -67,13 +67,12 @@ onEvent('recipes', (event) => {
             );
 
             event
-              .shaped(
+              .shapeless(
                 Item.of(
                   'patchouli:guide_book',
                   '{"patchouli:book":"rankine:rankine_journal"}'
                 ),
-                ['ab'],
-                { a: 'farmersdelight:canvas', b: 'minecraft:flint' }
+                ['farmersdelight:canvas', 'minecraft:flint']
               )
               .stage('chapter_1');
             event
@@ -365,6 +364,35 @@ onEvent('recipes', (event) => {
           'rankine:brass_shovel',
           'rankine:brass_sword'
         ].forEach((id) => event.remove({ id: id }));
+      }
+    },
+    {
+      id: 'lit_torch',
+      recipe: () => {
+        event.campfireCooking(
+          'realistictorches:lit_torch',
+          'realistictorches:unlit_torch'
+        );
+      }
+    },
+    {
+      id: 'icebox',
+      recipe: () => {
+        ['cold_sweat:icebox'].forEach((id) => event.remove({ id: id }));
+        event.shaped('cold_sweat:icebox', ['aaa', 'b b', 'bbb'], {
+          a: 'minecraft:cobbled_deepslate_slab',
+          b: '#minecraft:planks'
+        });
+      }
+    },
+    {
+      id: 'boiler',
+      recipe: () => {
+        ['cold_sweat:boiler'].forEach((id) => event.remove({ id: id }));
+        event.shaped('cold_sweat:boiler', ['aaa', 'a a', 'bbb'], {
+          a: '#forge:cobblestone',
+          b: 'minecraft:cobbled_deepslate'
+        });
       }
     },
     {

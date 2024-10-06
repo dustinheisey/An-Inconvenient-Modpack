@@ -22,7 +22,7 @@
 - [x] pumpkin feast use jack o lantern
 - [x] icebox only uses cobblestone slab
 - [x] should be able to light torch with campfire
-- [ ] make rankine book recipe shapeless
+- [x] make rankine book recipe shapeless
 - [x] bronze cauldron recipe
 - [ ] boiler recipe not working
 - [ ] some ingots from metal block recipes broken
