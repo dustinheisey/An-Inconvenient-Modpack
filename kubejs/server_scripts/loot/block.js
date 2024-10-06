@@ -71,7 +71,8 @@ onEvent('lootjs', (event) => {
     'blue_skies:falsite_ore',
     'blue_skies:ventium_ore',
     'rankine:acanthite_ore',
-    'rankine:galena_ore'
+    'rankine:galena_ore',
+    'minecraft:deepslate'
   ].forEach((ore) => {
     event.addBlockLootModifier(ore).removeLoot('/.*/');
     event.addBlockLootModifier(ore).addLoot(ore);

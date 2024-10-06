@@ -28,7 +28,7 @@
 - [ ] some ingots from metal block recipes broken
 - [ ] crushing recipes are not working correctly
 - [ ] crush block of selenite into selenite shard
-- [ ] need to crush deepslate to get cobbled deepslate
+- [x] need to crush deepslate to get cobbled deepslate
 - [ ] altimeter from copper recipe
 - [ ] rankine clays drop clay balls
 - [ ] crushing cobble to gravel to sand to silt to clay
