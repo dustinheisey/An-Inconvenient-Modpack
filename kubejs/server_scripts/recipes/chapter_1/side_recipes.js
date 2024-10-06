@@ -500,6 +500,22 @@ onEvent('recipes', (event) => {
               ]
             },
             {
+              id: 'clays',
+              recipe: () => {
+                event.custom({
+                  type: 'rankine:crushing',
+                  input: { item: 'rankine:sandy_clay' },
+                  guaranteed: [{ item: 'rankine:silty_clay' }]
+                });
+
+                event.custom({
+                  type: 'rankine:crushing',
+                  input: { item: 'rankine:silty_clay' },
+                  guaranteed: [{ item: 'minecraft:clay' }]
+                });
+              }
+            },
+            {
               id: 'lead_ingot',
               recipe: () => {
                 [

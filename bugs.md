@@ -31,7 +31,7 @@
 - [ ] boiler recipe not working
 - [ ] some ingots from metal block recipes broken
 - [x] altimeter from copper recipe
-- [ ] rankine clays drop clay balls
+- [x] rankine clays crush to minecraft clay
 - [ ] crushing cobble to gravel to sand to silt to clay
 - [x] fire clay should work with desert sand
 
