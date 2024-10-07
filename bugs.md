@@ -39,18 +39,15 @@
 
 - [ ] remove glass from lost cities
 - [ ] make lost cities much bigger and epic
-- [ ] deepslate layer is too small
 - [ ] lost cities are too close to spawn
-- [ ] regenerate the template world
-- [ ] spawn in a hot biome
 - [ ] not enough mobs in lost city
 - [ ] living flesh hard to find in lost city
 - [ ] lost city too easy
 - [ ] redo lost cities
 - [ ] lost cities are too common
+- [ ] regenerate the template world in a hot biome
+- [x] deepslate layer is too small
 - [ ] get rid of flowers from overworld
-- [ ] kaolinite spawn y=0 to y=80
-- [ ] make kaolinite easier to find
 
 ## Design
 
