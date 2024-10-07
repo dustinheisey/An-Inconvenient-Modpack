@@ -146,9 +146,9 @@ onEvent('recipes', (event) => {
                                       );
                                       event.custom({
                                         type: 'rankine:mixing',
-                                        mixTime: 100,
+                                        mixTime: 70,
                                         ingredientTotal: 3,
-                                        matScale: 2,
+                                        matScale: 0.33,
                                         fluidInput: {
                                           fluid: 'minecraft:water',
                                           amount: 50
@@ -156,20 +156,20 @@ onEvent('recipes', (event) => {
                                         input1: {
                                           tag: 'forge:sand',
                                           required: true,
-                                          min: 0.4,
-                                          max: 0.6
+                                          min: 0.1,
+                                          max: 0.4
                                         },
                                         input2: {
                                           item: 'rankine:kaolinite',
                                           required: true,
-                                          min: 0.2,
-                                          max: 0.3
+                                          min: 0.1,
+                                          max: 0.4
                                         },
                                         input3: {
                                           item: 'minecraft:clay_ball',
                                           required: true,
                                           min: 0.1,
-                                          max: 0.2
+                                          max: 0.4
                                         },
                                         result: {
                                           item: 'rankine:fire_clay_ball'
@@ -1247,7 +1247,7 @@ onEvent('recipes', (event) => {
                             type: 'rankine:mixing',
                             mixTime: 70,
                             ingredientTotal: 2,
-                            matScale: 1,
+                            matScale: 0.5,
                             fluidInput: {
                               fluid: 'minecraft:water',
                               amount: 50
@@ -1403,7 +1403,7 @@ onEvent('recipes', (event) => {
                                 type: 'rankine:mixing',
                                 mixTime: 70,
                                 ingredientTotal: 2,
-                                matScale: 1,
+                                matScale: 0.5,
                                 fluidInput: {
                                   fluid: 'minecraft:water',
                                   amount: 50

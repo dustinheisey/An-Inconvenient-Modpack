@@ -37,29 +37,16 @@
 
 ## Worldgen
 
-- [ ] remove glass from lost cities
-- [ ] make lost cities much bigger and epic
-- [ ] lost cities are too close to spawn
-- [ ] not enough mobs in lost city
-- [ ] living flesh hard to find in lost city
-- [ ] lost city too easy
-- [ ] redo lost cities
-- [ ] lost cities are too common
-- [ ] regenerate the template world in a hot biome
 - [x] deepslate layer is too small
 - [x] maybe get rid of more flowers from overworld
 
 ## Design
 
-- [ ] evaluate limestone use
-- [ ] fix mixing barrel automation
-- [ ] look into method of getting plagioclase feldspar
-- [ ] high fire clay return on investment
+- [x] fire clays return on investment
 - [ ] make more uses for cactus in chapter 1
 - [ ] farmers delight mushrooms chapter 1
 - [ ] find more uses for tin in chapter 1
 - [ ] uses for calcite
-- [ ] quartzite crushing recipe
 - [ ] rework feldspar and porcelain production
 
 ## Advancements
@@ -99,6 +86,7 @@
 - [ ] bloomery doesn't work with charcoal fragment
 - [ ] hearth rdoesn't work with charcoal fragment
 - [ ] crushing recipes are not working correctly
+- [ ] regenerate the template world in a hot biome
 
 ## Past Releases
 
