@@ -95,24 +95,30 @@ onEvent('recipes', (event) => {
     time: 100,
     energy: 51200
   });
+
   event.custom({
     type: 'immersiveengineering:arc_furnace',
-    results: [{ count: 3, item: 'rankine:titanium_ingot' }],
+    results: [{ item: 'rankine:titanium_ingot', count: 3 }],
     input: { item: 'rankine:ilmenite_ore' },
+    additives: [],
     time: 100,
     energy: 51200
   });
+
   event.custom({
     type: 'immersiveengineering:arc_furnace',
-    results: [{ count: 3, item: 'rankine:nickel_ingot' }],
+    results: [{ item: 'rankine:nickel_ingot', count: 3 }],
     input: { item: 'rankine:pentlandite_ore' },
+    additives: [],
     time: 100,
     energy: 51200
   });
+
   event.custom({
     type: 'immersiveengineering:arc_furnace',
-    results: [{ count: 3, item: 'rankine:uranium_ingot' }],
+    results: [{ item: 'rankine:uranium_ingot', count: 3 }],
     input: { item: 'rankine:uraninite_ore' },
+    additives: [],
     time: 100,
     energy: 51200
   });

@@ -65,7 +65,7 @@ onEvent('recipes', (event) => {
           { item: 'undergarden:veil_mushroom' }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl'
+        container: { item: 'minecraft:bowl' }
       });
       event.custom({
         type: 'farmersdelight:cooking',
@@ -80,7 +80,7 @@ onEvent('recipes', (event) => {
           { item: 'undergarden:blood_mushroom' }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl'
+        container: { item: 'minecraft:bowl' }
       });
       event.custom({
         type: 'farmersdelight:cooking',
@@ -95,7 +95,7 @@ onEvent('recipes', (event) => {
           { item: 'undergarden:ink_mushroom' }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl'
+        container: { item: 'minecraft:bowl' }
       });
       event.custom({
         type: 'farmersdelight:cooking',
@@ -110,7 +110,7 @@ onEvent('recipes', (event) => {
           { item: 'undergarden:indigo_mushroom' }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl'
+        container: { item: 'minecraft:bowl' }
       });
       event.custom({
         type: 'farmersdelight:cooking',
@@ -134,7 +134,7 @@ onEvent('recipes', (event) => {
           }
         ],
         cookingtime: 200,
-        container: 'minecraft:bowl'
+        container: { item: 'minecraft:bowl' }
       });
     },
     cutting_board: () => {

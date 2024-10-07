@@ -518,7 +518,7 @@ onEvent('recipes', (event) => {
               type: 'tconstruct:casting_table',
               cast: { item: 'tconstruct:ingot_cast' },
               cast_consumed: false,
-              fluid: { name: 'rankine:mercury', amount: 90 },
+              fluid: { name: 'rankine:liquid_mercury', amount: 90 },
               result: 'rankine:mercury',
               cooling_time: 100
             });
@@ -527,7 +527,7 @@ onEvent('recipes', (event) => {
               type: 'tconstruct:casting_table',
               cast: { item: 'tconstruct:ingot_cast' },
               cast_consumed: false,
-              fluid: { name: 'rankine:mercury', amount: 10 },
+              fluid: { name: 'rankine:liquid_mercury', amount: 10 },
               result: 'rankine:mercury_nugget',
               cooling_time: 100
             });

@@ -95,7 +95,7 @@ onEvent('recipes', (event) => {
                   event.custom({
                     type: 'tconstruct:casting_basin',
                     fluid: { name: 'kubejs:freezing_sap', amount: 250 },
-                    cast: 'minecraft:obsidian',
+                    cast: { item: 'minecraft:obsidian' },
                     cooling_time: 100,
                     result: 'rankine:snowflake_obsidian'
                   });

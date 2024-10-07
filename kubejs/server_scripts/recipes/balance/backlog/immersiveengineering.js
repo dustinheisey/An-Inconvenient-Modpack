@@ -31,6 +31,7 @@ onEvent('recipes', (event) => {
         type: 'immersiveengineering:arc_furnace',
         results: [{ item: 'minecraft:netherite_scrap', count: 3 }],
         input: { item: 'minecraft:ancient_debris' },
+        additives: [],
         time: 100,
         energy: 51200
       });
@@ -39,6 +40,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'minecraft:iron_ingot', count: 3 }],
         input: { item: 'rankine:hematite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -46,6 +48,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'minecraft:copper_ingot', count: 3 }],
         input: { item: 'rankine:malachite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -53,6 +56,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'rankine:zinc_ingot', count: 3 }],
         input: { item: 'rankine:sphalerite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -60,6 +64,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'rankine:tin_ingot', count: 3 }],
         input: { item: 'rankine:cassiterite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -67,6 +72,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'minecraft:gold_ingot', count: 3 }],
         input: { item: 'minecraft:gold_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -74,6 +80,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'rankine:lead_ingot' }],
         input: { item: 'rankine:galena_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -81,6 +88,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'rankine:silver_ingot' }],
         input: { item: 'rankine:acanthite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -88,6 +96,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'rankine:aluminum_ingot' }],
         input: { item: 'rankine:bauxite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -95,6 +104,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'rankine:cobalt_ingot' }],
         input: { item: 'rankine:cobaltite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
 
@@ -103,6 +113,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:horizonite_ingot' }],
         input: { item: 'blue_skies:horizonite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -110,6 +121,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:moonstone_shard' }],
         input: { item: 'blue_skies:everdawn_moonstone_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -117,6 +129,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:charoite' }],
         input: { item: 'blue_skies:everdawn_charoite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -124,6 +137,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:aquite' }],
         input: { item: 'blue_skies:everdawn_aquite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -131,6 +145,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:pyrope_gem' }],
         input: { item: 'blue_skies:everdawn_pyrope_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -138,6 +153,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:diopside_gem' }],
         input: { item: 'blue_skies:everdawn_diopside_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -145,6 +161,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:ventium_ingot' }],
         input: { item: 'blue_skies:ventium_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -152,6 +169,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:falsite_ingot' }],
         input: { item: 'blue_skies:falsite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -159,6 +177,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:moonstone_shard' }],
         input: { item: 'blue_skies:everbright_moonstone_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -166,6 +185,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:charoite' }],
         input: { item: 'blue_skies:everbright_charoite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -173,6 +193,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:aquite' }],
         input: { item: 'blue_skies:everbright_aquite_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -180,6 +201,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:pyrope_gem' }],
         input: { item: 'blue_skies:everbright_pyrope_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -187,6 +209,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'blue_skies:diopside_gem' }],
         input: { item: 'blue_skies:everbright_diopside_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -194,6 +217,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'occultism:iesnium_ingot' }],
         input: { item: 'occultism:iesnium_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -201,6 +225,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 6, item: 'minecraft:quartz' }],
         input: { item: 'rankine:nether_quartz_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -208,6 +233,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'rankine:graphite' }],
         input: { item: 'rankine:plumbago_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -215,6 +241,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'rankine:sulfur' }],
         input: { item: 'rankine:native_sulfur_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -222,6 +249,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 16, item: 'minecraft:redstone' }],
         input: { item: 'rankine:cinnabar_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -229,6 +257,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'undergarden:regalium_crystal' }],
         input: { item: 'undergarden:shiverstone_regalium_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -236,6 +265,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'undergarden:regalium_crystal' }],
         input: { item: 'undergarden:depthrock_regalium_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -243,6 +273,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'undergarden:utherium_crystal' }],
         input: { item: 'undergarden:depthrock_utherium_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -250,6 +281,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'undergarden:utherium_crystal' }],
         input: { item: 'undergarden:tremblecrust_utherium_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -257,6 +289,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'undergarden:utherium_crystal' }],
         input: { item: 'undergarden:shiverstone_utherium_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -264,6 +297,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'undergarden:froststeel_ingot' }],
         input: { item: 'undergarden:shiverstone_froststeel_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -271,6 +305,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'undergarden:cloggrum_ingot' }],
         input: { item: 'undergarden:shiverstone_cloggrum_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -278,6 +313,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 3, item: 'undergarden:cloggrum_ingot' }],
         input: { item: 'undergarden:depthrock_cloggrum_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -285,6 +321,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 5, item: 'minecraft:coal' }],
         input: { item: 'undergarden:shiverstone_coal_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -292,6 +329,7 @@ onEvent('recipes', (event) => {
         results: [{ count: 5, item: 'minecraft:coal' }],
         input: { item: 'undergarden:depthrock_coal_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
 
@@ -300,6 +338,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'minecraft:copper_ingot' }],
         input: { item: 'chemlib:copper_dust' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -311,6 +350,7 @@ onEvent('recipes', (event) => {
         ],
         input: { item: 'chemlib:tin_dust' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -318,6 +358,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'rankine:titanium_ingot' }],
         input: { item: 'chemlib:titanium_dust' },
         time: 100,
+        additives: [],
         energy: 51200
       });
 
@@ -326,6 +367,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'blue_skies:horizonite_ingot', count: 2 }],
         input: { item: 'blue_skies:raw_horizonite' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -333,6 +375,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'blue_skies:moonstone_shard', count: 3 }],
         input: { item: 'blue_skies:everdawn_moonstone_ore' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -340,6 +383,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'blue_skies:charoite', count: 2 }],
         input: { item: 'blue_skies:raw_charoite' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -347,6 +391,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'blue_skies:aquite', count: 2 }],
         input: { item: 'blue_skies:raw_aquite' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -354,6 +399,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'blue_skies:ventium_ingot', count: 2 }],
         input: { item: 'blue_skies:raw_ventium' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -361,6 +407,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'blue_skies:falsite_ingot', count: 2 }],
         input: { item: 'blue_skies:raw_falsite' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -368,6 +415,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'blue_skies:charoite', count: 2 }],
         input: { item: 'blue_skies:raw_charoite' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -375,6 +423,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'blue_skies:aquite', count: 2 }],
         input: { item: 'blue_skies:raw_aquite' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -382,6 +431,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'occultism:iesnium_ingot' }],
         input: { item: 'occultism:iesnium_dust' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -389,6 +439,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'undergarden:froststeel_ingot', count: 2 }],
         input: { item: 'undergarden:raw_froststeel' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -396,6 +447,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'undergarden:cloggrum_ingot', count: 2 }],
         input: { item: 'undergarden:raw_cloggrum' },
         time: 100,
+        additives: [],
         energy: 51200
       });
       event.custom({
@@ -403,6 +455,7 @@ onEvent('recipes', (event) => {
         results: [{ item: 'undergarden:cloggrum_ingot', count: 2 }],
         input: { item: 'undergarden:raw_cloggrum' },
         time: 100,
+        additives: [],
         energy: 51200
       });
     },
@@ -427,8 +480,9 @@ onEvent('recipes', (event) => {
 
       event.custom({
         type: 'immersiveengineering:crusher',
-        result: { tag: 'forge:dusts/coal' },
+        result: { item: 'mekanism:dusts_coal' },
         input: { item: 'minecraft:coal' },
+        secondaries: [],
         energy: 2400
       });
 

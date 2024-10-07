@@ -1127,38 +1127,38 @@ onEvent('recipes', (event) => {
         ingredient: { item: 'rankine:pancake' },
         transitionalItem: { item: 'rankine:pancake' },
         sequence: [
-          event.custom({
+          {
             type: 'create:deploying',
             ingredients: [
               { item: 'rankine:pancake' },
               { item: 'rankine:pancake' }
             ],
             results: [{ item: 'rankine:pancake' }]
-          }),
-          event.custom({
+          },
+          {
             type: 'create:deploying',
             ingredients: [
               { item: 'rankine:pancake' },
               { item: 'rankine:pancake' }
             ],
             results: [{ item: 'rankine:pancake' }]
-          }),
-          event.custom({
+          },
+          {
             type: 'create:deploying',
             ingredients: [
               { item: 'rankine:pancake' },
               { item: 'rankine:pancake' }
             ],
             results: [{ item: 'rankine:pancake' }]
-          }),
-          event.custom({
+          },
+          {
             type: 'create:deploying',
             ingredients: [
               { item: 'rankine:pancake' },
               { item: 'rankine:pancake' }
             ],
             results: [{ item: 'rankine:pancake' }]
-          })
+          }
         ],
         results: [{ item: 'rankine:pancake_breakfast' }],
         loops: 1

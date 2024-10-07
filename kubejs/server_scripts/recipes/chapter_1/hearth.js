@@ -1152,7 +1152,7 @@ onEvent('recipes', (event) => {
                   [
                     'minecraft:birch_log',
                     'rankine:black_birch_log',
-                    'rankine:red_birch',
+                    'rankine:red_birch_log',
                     'rankine:yellow_birch_log'
                   ].forEach((wood) => {
                     event.custom({
