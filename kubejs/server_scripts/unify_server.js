@@ -16,18 +16,32 @@ global['RECIPE_DEDUPE'] = true;
 
 // Mod priorities
 global['unifypriorities'] = [
-  'immersivepetroleum',
-  'rankine',
-  'minecraft',
   'chemlib',
   'immersiveengineering',
+  'salt',
   'create',
+  'rankine',
+  'mekanism',
+  'farmersdelight',
+  'hexerei',
+  'croptopia',
+  'productivebees',
+  'the_bumblezone',
   'tconstruct',
-  'charcoal_pit',
-  'occultism',
   'bloodmagic',
-  'createaddition',
-  'mekanism'
+  'vintageimprovements'
+  // 'immersivepetroleum',
+  // 'rankine',
+  // 'minecraft',
+  // 'chemlib',
+  // 'immersiveengineering',
+  // 'create',
+  // 'tconstruct',
+  // 'charcoal_pit',
+  // 'occultism',
+  // 'bloodmagic',
+  // 'createaddition',
+  // 'mekanism'
 ];
 
 // Items to exclude (will not be unified)
@@ -37,12 +51,12 @@ global['unifyexcludegen'] = [
 
 // Add oredictionary tags here to unify (or use javascript to generate it!). These are also higher priority than tagGen.
 // Non-existant tags will be ignored.
-let unifyTags = new Set([
+let tags = new Set([
   'forge:slag',
-  'forge:silicon',
   'forge:coal_coke',
   'forge:storage_blocks/coal_coke',
-  'forge:salt',
+  'forge:salts',
+  'forge:ores/salt',
   'forge:storage_blocks/salt'
 ]);
 
@@ -50,6 +64,7 @@ let unifyTags = new Set([
 // Accepts Regex. You can preface an id with # to make it add all the items from that tag.
 let customtags = [
   [
+    'croptopia:milk_bottle',
     'farmersdelight:milk_bottle',
     'hexerei:milk_bottle',
     'productivebees:milk_bottle'
@@ -57,24 +72,59 @@ let customtags = [
   [
     'create:honey_bucket',
     'productivebees:honey_bucket',
-    'tconstruct:honey_bucket',
-    'the_bumblezone:honey_bucket'
+    'the_bumblezone:honey_bucket',
+    'tconstruct:honey_bucket'
   ]
 ];
+
+// Adds items into the first string in each list. If a tag does not exist, it will be created.
+let tagUnions = [
+  // Regex is supported, excluding the first string. The first string to merge into must not have a #, but other ones must.
+  // The first string may optionally use one equal sign and commas like how tagSplits does.
+  // ["forge:plates/iron", "#annoyingmod:iron_plates", "#anothermod:iron_plates", "thirdmod:iron_plate"]
+  // ["forge:ores_in_ground/deepslate", /thermal:deepslate_.*_ore/g],
+  // ["forge:ores_in_ground/stone", /thermal:(?!deepslate).*_ore/g]
+  ['forge:salts', 'rankine:calcium_chloride'],
+  ['forge:ores/salt', 'salt:rock_salt_ore', 'croptopia:salt_ore'],
+  [
+    'forge:storage_blocks/salt',
+    'salt:salt_block',
+    'rankine:pink_salt_block',
+    'rankine:calcium_chloride_block'
+  ],
+  ['forge:gems/sulfur', 'rankine:sulfur']
+];
+
+// Split tags apart to create new ones. If a tag does not exist, it will not be merged into or used.
+// NOTE: THIS FEATURE IS FOR 1.18+ ONLY! IT DOES NOT DO ANYTHING ON 1.16 OR BELOW.
+// BLAME THE KUBEJS DEVS FOR MAKING THE gatherAllItemIDs() METHOD PRIVATE.
+let tagSplits = [
+  // Makes it so that deepslate, netherrack, and stone ores are unified separately.
+  // [
+  //     "forge:ores/=copper,tin,aluminum,lead,silver,nickel,bronze,steel,platinum,uranium,iridium,zinc,osmium,sulfur",
+  //     "forge:ores_in_ground/=deepslate,netherrack",
+  //     "forge:ores_in_ground/stone"
+  // ]
+];
+// gears, rods,wires, gems, raw_materials
 
 // ---------- PLATFORM SPECIFIC ----------
 
 // Easier way to add multiple tags on forge (all items here are inserted into the tags set)
 let tagGen = [
-  'brass,bronze,constantan,gold,rose_gold,copper,tin,aluminum,lead,silver,nickel,`uranium`,zinc,osmium,cobalt' +
-    '=storage_blocks,sheetmetals,ingots,nuggets,dusts,ores,gears,rods,wires,plates,raw_materials',
-  'helium,neon,argon,krypton,xenon,radon,lithium,beryllium,boron,carbon,sodium,magnesium,silicon,phosphorus,potassium,calcium,scandium,titanium,vanadium,chromium,manganese,gallium,germanium,arsenic,selenium,rubidium,strontium,yttrium,zirconium,niobium,molybdenum,ruthenium,rhodium,palladium,cadmium,indium,neodymium,praseodymium,cerium,lanthanum,barium,cesium,iodine,tellurium,antimony,samarium,europium,gadolinium,terbium,dysprosium,holmium,erbium,thulium,ytterbium,platinum,iridium,rhenium,tungsten,tantalum,hafnium,lutetium,thallium,bismuth,polonium,astatine,francium,adium,actinium,thorium,protactinium' +
-    '=storage_blocks,ingots,nuggets,dusts,plates',
-  'iron=storage_blocks,ingots,nuggets,dusts,ores,gears,rods,wires,plates,raw_materials',
-  'steel=storage_blocks,ingots,nuggets,dusts,ores,gears,rods,wires,plates',
-  'sulfur=dusts,nuggets,ores',
-  'fluorite=dusts,gems,storage_blocks',
-  'obsidian=dusts'
+  // ? Atomic Elements
+  'lithium,beryllium,sodium,magnesium,aluminum,potassium,calcium,scandium,titanium,vanadium,chromium,manganese,cobalt,nickel,zinc,gallium,rubidium,strontium,yttrium,zirconium,niobium,molybdenum,ruthenium,rhodium,palladium,silver,cadmium,indium,tin,cesium,barium,lanthanum,cerium,praseodymium,neodymium,samarium,europium,gadolinium,terbium,dysprosium,holmium,erbium,thulium,ytterbium,lutetium,hafnium,tantalum,tungsten,rhenium,osmium,iridium,platinum,thallium,lead,bismuth,polonium,francium,radium,actinium,thorium,protactinium,uranium' +
+    '=dusts,nuggets,ingots,plates,storage_blocks,',
+  'steel=rods,storage_blocks,ingots,dusts,wires,nuggets',
+  'fluorite=gems,storage_blocks',
+  'obsidian=dusts',
+  'sulfur=storage_blocks,nuggets,dusts,gems',
+  'iron=plates,dusts',
+  'brass=storage_blocks,ingots',
+  'bronze,constantan' + '=storage_blocks,ingots,nuggets',
+  'electrum=plates,wires',
+  'gold=plates',
+  'tin,lead,uranium' + '=raw_materials,ores'
 ];
 
 for (let line of tagGen) {
@@ -84,9 +134,7 @@ for (let line of tagGen) {
 
   for (let type of ts) {
     for (let material of ms) {
-      unifyTags.add(
-        'forge:' + type + (material.length > 0 ? '/' + material : '')
-      );
+      tags.add('forge:' + type + (material.length > 0 ? '/' + material : ''));
     }
   }
 }
@@ -138,8 +186,72 @@ let e_tags_items = (event) => {
       }
 
       // Add new tag into tags to unify
-      unifyTags.add(root + i);
+      tags.add(root + i);
       ++i;
+    }
+
+    // Union tags
+    for (let union of tagUnions) {
+      for (let sum of esplit(union[0])) {
+        let tag = event.get(sum);
+        for (let item of union.slice(1)) {
+          try {
+            tag.add(item);
+          } catch (err) {}
+        }
+      }
+    }
+
+    // Create tags from intersections (1.18+ only)
+    if (global['VERSION'][1] >= 18) {
+      for (let split of tagSplits) {
+        for (let sum of esplit(split[0])) {
+          let sumtag = tryTag(sum);
+          if (!sumtag) continue;
+
+          let sumset = new Set();
+          let sumevget = event.get(sum);
+
+          let sumitems;
+          let fname = 'getObjectIds';
+          try {
+            sumitems = sumevget.getObjectIds();
+          } catch (err) {
+            try {
+              sumitems = sumevget.getAllItemIds();
+              fname = 'getAllItemIds';
+            } catch (err) {
+              sumitems = sumevget.gatherAllItemIDs();
+              fname = 'gatherAllItemIDs';
+            }
+          }
+
+          for (let v of sumitems) {
+            sumset.add(String(v));
+          }
+
+          // Perform intersection
+          for (let intersectors of split.slice(1)) {
+            for (let intersector of esplit(intersectors)) {
+              let intertag = tryTag(intersector);
+              if (!intertag) continue;
+
+              // Ok, actually do the test to perform the intersection
+              let tag = event.get(root + i);
+              for (let item of event.get(intersector)[fname]()) {
+                if (sumset.has(String(item))) tag.add(String(item));
+              }
+
+              // Add tag to list of tags to unify
+              tags.add(root + i);
+              ++i;
+            }
+          }
+
+          // Remove original tag from tags to unify
+          tags.delete(sum);
+        }
+      }
     }
   }
 };
@@ -158,7 +270,7 @@ let e_recipes = (event) => {
     // Maps tags to their priority item
     let tagPriorityItems = {};
 
-    for (let tag of unifyTags) {
+    for (let tag of tags) {
       let itag = tryTag(tag);
       if (itag) {
         // Only load tags with 2 or more items
@@ -263,7 +375,7 @@ let e_recipes = (event) => {
 };
 
 if (global['V6P']) {
-  ServerEvents.tags('item', e_recipes);
+  ServerEvents.tags('item', e_tags_items);
   ServerEvents.recipes(e_recipes);
 } else {
   onEvent('tags.items', e_tags_items);
@@ -338,8 +450,9 @@ if (global['ITEM_UNIFY']) {
     if (global['unifyexclude'].has(itemId)) return;
 
     // Check if this item is in a tag that needs to be unified
-    let itemTag = global['itemsToTags'][itemId];
-    if (!itemTag) return;
+    let itemTag;
+    if (global['itemToTags']) itemTag = global['itemsToTags'][itemId];
+    else return;
 
     // Check if the item is the priority item (if so, it does not need to be unified)
     let priorityId = global['tagPriorityItems'][itemTag];

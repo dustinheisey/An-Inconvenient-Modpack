@@ -42,8 +42,8 @@
 ## Design
 
 - [x] fire clays return on investment
-- [ ] make more uses for cactus and mushrooms in chapter 1
-- [ ] unification broken again
+- [x] make more uses for cactus and mushrooms in chapter 1
+- [x] unification broken again
 
 ## Advancements
 
