@@ -952,7 +952,7 @@ onEvent('recipes', (event) => {
       event.custom({
         type: 'create:milling',
         ingredients: [{ item: 'minecraft:bone' }],
-        results: [{ item: '3x minecraft:bone_meal' }],
+        results: [{ item: 'minecraft:bone_meal', count: 3 }],
         processingTime: 50
       });
       event.custom({
@@ -989,7 +989,7 @@ onEvent('recipes', (event) => {
       event.custom({
         type: 'create:milling',
         ingredients: [{ item: 'blue_skies:spider_webbing' }],
-        results: [{ item: '3x minecraft:string' }],
+        results: [{ item: 'minecraft:string', count: 3 }],
         processingTime: 50
       });
     },
@@ -1039,7 +1039,7 @@ onEvent('recipes', (event) => {
         type: 'create:mixing',
         results: [{ item: 'create:dough' }],
         ingredients: [
-          { tag: '3x #forge:flour' },
+          { tag: 'forge:flour', count: 3 },
           { fluid: 'minecraft:water', amount: 1000 }
         ]
       });

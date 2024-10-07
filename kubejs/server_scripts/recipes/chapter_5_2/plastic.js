@@ -207,7 +207,7 @@ onEvent('recipes', (event) => {
     results: [{ item: 'chemlib:chromium_oxide' }],
     ingredients: [
       { item: 'rankine:chromium_nugget' },
-      { item: '3x rankine:oxygen_gas_bottle' }
+      { item: 'rankine:oxygen_gas_bottle', count: 3 }
     ],
     heatRequirement: 'superheated'
   });

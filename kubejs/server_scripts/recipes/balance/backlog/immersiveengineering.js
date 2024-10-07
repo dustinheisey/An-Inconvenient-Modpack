@@ -435,28 +435,28 @@ onEvent('recipes', (event) => {
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x minecraft:netherite_scrap' },
+        result: { item: 'minecraft:netherite_scrap', count: 3 },
         input: { item: 'minecraft:ancient_debris' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:iron_dust' },
+        result: { item: 'chemlib:iron_dust', count: 3 },
         input: { item: 'rankine:hematite' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:copper_dust' },
+        result: { item: 'chemlib:copper_dust', count: 3 },
         input: { item: 'rankine:malachite' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:sulfur_dust' },
+        result: { item: 'chemlib:sulfur_dust', count: 3 },
         input: { item: 'rankine:sulfur' },
         energy: 2400
       });
@@ -470,49 +470,49 @@ onEvent('recipes', (event) => {
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:zinc_dust' },
+        result: { item: 'chemlib:zinc_dust', count: 3 },
         input: { item: 'rankine:sphalerite' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:tin_dust' },
+        result: { item: 'chemlib:tin_dust', count: 3 },
         input: { item: 'rankine:cassiterite' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:gold_dust' },
+        result: { item: 'chemlib:gold_dust', count: 3 },
         input: { item: 'minecraft:raw_gold' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:lead_dust' },
+        result: { item: 'chemlib:lead_dust', count: 3 },
         input: { item: 'rankine:galena' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:silver_dust' },
+        result: { item: 'chemlib:silver_dust', count: 3 },
         input: { item: 'rankine:acanthite' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:aluminum_dust' },
+        result: { item: 'chemlib:aluminum_dust', count: 3 },
         input: { item: 'rankine:bauxite' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x chemlib:cobalt_dust' },
+        result: { item: 'chemlib:cobalt_dust', count: 3 },
         input: { item: 'rankine:cobaltite' },
         energy: 2400
       });
@@ -590,196 +590,196 @@ onEvent('recipes', (event) => {
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:raw_horizonite' },
+        result: { item: 'blue_skies:raw_horizonite', count: 3 },
         input: { item: 'blue_skies:horizonite_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:moonstone_shard' },
+        result: { item: 'blue_skies:moonstone_shard', count: 3 },
         input: { item: 'blue_skies:everdawn_moonstone_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:raw_charoite' },
+        result: { item: 'blue_skies:raw_charoite', count: 3 },
         input: { item: 'blue_skies:everdawn_charoite_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:raw_aquite' },
+        result: { item: 'blue_skies:raw_aquite', count: 3 },
         input: { item: 'blue_skies:everdawn_aquite_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:pyrope_gem' },
+        result: { item: 'blue_skies:pyrope_gem', count: 3 },
         input: { item: 'blue_skies:everdawn_pyrope_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:diopside_gem' },
+        result: { item: 'blue_skies:diopside_gem', count: 3 },
         input: { item: 'blue_skies:everdawn_diopside_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:raw_ventium' },
+        result: { item: 'blue_skies:raw_ventium', count: 3 },
         input: { item: 'blue_skies:ventium_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:raw_falsite' },
+        result: { item: 'blue_skies:raw_falsite', count: 3 },
         input: { item: 'blue_skies:falsite_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:moonstone_shard' },
+        result: { item: 'blue_skies:moonstone_shard', count: 3 },
         input: { item: 'blue_skies:everbright_moonstone_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:raw_charoite' },
+        result: { item: 'blue_skies:raw_charoite', count: 3 },
         input: { item: 'blue_skies:everbright_charoite_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:raw_aquite' },
+        result: { item: 'blue_skies:raw_aquite', count: 3 },
         input: { item: 'blue_skies:everbright_aquite_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:pyrope_gem' },
+        result: { item: 'blue_skies:pyrope_gem', count: 3 },
         input: { item: 'blue_skies:everbright_pyrope_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x blue_skies:diopside_gem' },
+        result: { item: 'blue_skies:diopside_gem', count: 3 },
         input: { item: 'blue_skies:everbright_diopside_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x occultism:iesnium_dust' },
+        result: { item: 'occultism:iesnium_dust', count: 3 },
         input: { item: 'occultism:iesnium_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '6x minecraft:quartz' },
+        result: { item: 'minecraft:quartz', count: 6 },
         input: { item: 'rankine:nether_quartz_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x rankine:graphite' },
+        result: { item: 'rankine:graphite', count: 3 },
         input: { item: 'rankine:plumbago_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x rankine:sulfur' },
+        result: { item: 'rankine:sulfur', count: 3 },
         input: { item: 'rankine:native_sulfur_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '16x minecraft:redstone' },
+        result: { item: 'minecraft:redstone', count: 16 },
         input: { item: 'rankine:cinnabar_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x undergarden:regalium_crystal' },
+        result: { item: 'undergarden:regalium_crystal', count: 3 },
         input: { item: 'undergarden:shiverstone_regalium_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x undergarden:regalium_crystal' },
+        result: { item: 'undergarden:regalium_crystal', count: 3 },
         input: { item: 'undergarden:depthrock_regalium_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x undergarden:utherium_crystal' },
+        result: { item: 'undergarden:utherium_crystal', count: 3 },
         input: { item: 'undergarden:depthrock_utherium_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x undergarden:utherium_crystal' },
+        result: { item: 'undergarden:utherium_crystal', count: 3 },
         input: { item: 'undergarden:tremblecrust_utherium_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x undergarden:utherium_crystal' },
+        result: { item: 'undergarden:utherium_crystal', count: 3 },
         input: { item: 'undergarden:shiverstone_utherium_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x undergarden:raw_froststeel' },
+        result: { item: 'undergarden:raw_froststeel', count: 3 },
         input: { item: 'undergarden:shiverstone_froststeel_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x undergarden:raw_cloggrum' },
+        result: { item: 'undergarden:raw_cloggrum', count: 3 },
         input: { item: 'undergarden:shiverstone_cloggrum_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '3x undergarden:raw_cloggrum' },
+        result: { item: 'undergarden:raw_cloggrum', count: 3 },
         input: { item: 'undergarden:depthrock_cloggrum_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '5x minecraft:coal' },
+        result: { item: 'minecraft:coal', count: 5 },
         input: { item: 'undergarden:shiverstone_coal_ore' },
         energy: 2400
       });
       event.custom({
         type: 'immersiveengineering:crusher',
         secondaries: [],
-        result: { item: '5x minecraft:coal' },
+        result: { item: 'minecraft:coal', count: 5 },
         input: { item: 'undergarden:depthrock_coal_ore' },
         energy: 2400
       });

@@ -232,7 +232,8 @@ onEvent('recipes', (event) => {
           tag: 'bloodmagic:arc/explosive'
         },
         output: {
-          item: '2x bloodmagic:goldfragment'
+          item: 'bloodmagic:goldfragment',
+          count: 2
         },
         mainoutputchance: 0.0,
         inputsize: 1,
@@ -247,7 +248,8 @@ onEvent('recipes', (event) => {
           tag: 'bloodmagic:arc/explosive'
         },
         output: {
-          item: '2x bloodmagic:copperfragment'
+          item: 'bloodmagic:copperfragment',
+          count: 2
         },
         mainoutputchance: 0.0,
         inputsize: 1,
@@ -262,7 +264,8 @@ onEvent('recipes', (event) => {
           tag: 'bloodmagic:arc/explosive'
         },
         output: {
-          item: '2x bloodmagic:ironfragment'
+          item: 'bloodmagic:ironfragment',
+          count: 2
         },
         mainoutputchance: 0.0,
         inputsize: 1,

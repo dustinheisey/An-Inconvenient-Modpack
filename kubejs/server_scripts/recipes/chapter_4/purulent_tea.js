@@ -181,7 +181,10 @@ onEvent('recipes', (event) => {
                             recipe: () => {
                               event.custom({
                                 type: 'create:mechanical_crafting',
-                                result: { item: '2x create:crushing_wheel' },
+                                result: {
+                                  item: 'create:crushing_wheel',
+                                  count: 2
+                                },
                                 pattern: [
                                   ' aaa ',
                                   'aabaa',
