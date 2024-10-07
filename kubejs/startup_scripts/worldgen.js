@@ -66,7 +66,10 @@ onEvent('worldgen.remove', (event) => {
     'minecraft:ore_infested',
     'blue_skies:sunset_maple_forest_cave_magma'
   ]);
+
   event.removeFeatureById('vegetal_decoration', [
+    'minecraft:flower_default',
+    'croptopia:random_crop',
     'ecofriendly:billberry_ground_0',
     'ecofriendly:billberry_ground_1',
     'ecofriendly:billberry_ground_2',

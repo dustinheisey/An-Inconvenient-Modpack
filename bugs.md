@@ -47,7 +47,7 @@
 - [ ] lost cities are too common
 - [ ] regenerate the template world in a hot biome
 - [x] deepslate layer is too small
-- [ ] get rid of flowers from overworld
+- [x] maybe get rid of more flowers from overworld
 
 ## Design
 
