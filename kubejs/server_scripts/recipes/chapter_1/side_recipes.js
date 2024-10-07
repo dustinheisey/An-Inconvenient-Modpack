@@ -541,7 +541,7 @@ onEvent('recipes', (event) => {
         ['cold_sweat:boiler'].forEach((id) => event.remove({ id: id }));
         event.shaped('cold_sweat:boiler', ['aaa', 'a a', 'bbb'], {
           a: '#forge:cobblestone',
-          b: 'minecraft:cobbled_deepslate'
+          b: 'minecraft:cobbled_deepslate_slab'
         });
       }
     },
