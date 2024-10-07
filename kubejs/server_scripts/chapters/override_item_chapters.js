@@ -1179,6 +1179,7 @@ onEvent('tags.items', (event) => {
   });
   overrideChapters('rankine', {
     chapter_1: [
+      'rankine:aloe',
       'rankine:biometer',
       'rankine:mossy_purple_porphyry_bricks',
       'rankine:mossy_purple_porphyry_bricks_slab',
@@ -2862,7 +2863,6 @@ onEvent('tags.items', (event) => {
       'rankine:molybdenite_block',
       'rankine:molybdenite',
       'rankine:muscovite_block',
-      'rankine:aloe',
       'rankine:dry_ice',
       'rankine:filled_penning_trap',
       'rankine:magnesium_chloride',
@@ -4461,10 +4461,25 @@ onEvent('tags.items', (event) => {
 
   overrideChapters('kubejs', {
     chapter_1: [
+      'kubejs:rotten_jerky',
+      'kubejs:ultra_high_fire_clay_ball',
+      'kubejs:unfired_ultra_high_refractory_brick',
+      'kubejs:dry_unfired_ultra_high_refractory_brick',
+      'kubejs:mushroom_strip',
       'kubejs:stitched_hide',
       'kubejs:salted_hide',
       'kubejs:dried_hide',
-      'kubejs:wet_tanned_hide'
+      'kubejs:wet_tanned_hide',
+      'kubejs:rotten_brain',
+      'kubejs:dry_unfired_brick',
+      'kubejs:unfired_refractory_brick',
+      'kubejs:dry_unfired_refractory_brick',
+      'kubejs:high_fire_clay_ball',
+      'kubejs:unfired_high_refractory_brick',
+      'kubejs:dry_unfired_high_refractory_brick',
+      'kubejs:grog',
+      'kubejs:goddess_heart',
+      'kubejs:juniper_bark'
     ],
     chapter_2: [
       'kubejs:dry_unfired_seared_brick',
@@ -6675,6 +6690,7 @@ onEvent('tags.items', (event) => {
     chapter_4: ['smallships:cannon', 'smallships:cannon_ball']
   });
   overrideChapters('pneumaticcraft', {
+    chapter_1: ['pneumaticcraft:bandage'],
     chapter_5_1: [
       'pneumaticcraft:sourdough',
       'pneumaticcraft:raw_salmon_tempura',
@@ -6739,8 +6755,7 @@ onEvent('tags.items', (event) => {
       'pneumaticcraft:pneumatic_boots',
       'pneumaticcraft:pneumatic_leggings',
       'pneumaticcraft:pneumatic_chestplate',
-      'pneumaticcraft:pneumatic_helmet',
-      'pneumaticcraft:bandage'
+      'pneumaticcraft:pneumatic_helmet'
     ]
   });
   // overrideChapters('bloodsmeltery', {

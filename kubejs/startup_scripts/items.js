@@ -14,6 +14,7 @@ onEvent('item.registry', (event) => {
 
   items({
     chapter_1: {
+      bandage: ['mushroom_strip'],
       leather: [
         'rotten_brain',
         'stitched_hide',
@@ -34,7 +35,7 @@ onEvent('item.registry', (event) => {
         'dry_unfired_ultra_high_refractory_brick',
         'grog'
       ],
-      misc: ['goddess_heart']
+      goddess_statue: ['goddess_heart']
     },
     chapter_2: {
       smeltery: [

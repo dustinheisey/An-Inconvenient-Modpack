@@ -28,8 +28,7 @@
 - [x] alloy kiln out of high refractory bricks
 - [x] make hearth out of ultra high refractory bricks
 - [x] bronze hammer to crush porcelain
-- [ ] boiler recipe not working
-- [ ] some ingots from metal block recipes broken
+- [x] boiler recipe not working
 - [x] altimeter from copper recipe
 - [x] rankine clays crush to minecraft clay
 - [x] crushing cobble to gravel to sand to silt to clay
@@ -43,16 +42,14 @@
 ## Design
 
 - [x] fire clays return on investment
-- [ ] make more uses for cactus in chapter 1
-- [ ] farmers delight mushrooms chapter 1
-- [ ] rework feldspar and porcelain production (tin)
+- [ ] make more uses for cactus and mushrooms in chapter 1
+- [ ] unification broken again
 
 ## Advancements
 
 - [x] bronze cauldron advancement
-- [ ] rework refractory bricks and beehive oven, alloy kiln and hearth advancements
+- [x] rework refractory bricks and beehive oven, alloy kiln and hearth advancements
 - [x] move altimeter advancement to copper ingot
-- [ ] advancement appearance and titles and descriptions
 
 ## Weird
 
@@ -60,6 +57,9 @@
 
 ## Backlog
 
+- [ ] advancement appearance and titles and descriptions
+- [ ] rework feldspar and porcelain production (tin)
+- [ ] some ingots from metal block recipes broken
 - [ ] set correct recipe stages for all custom recipes
   - [ ] redstone engineering block recipe stage
   - [ ] kettle recipe stage

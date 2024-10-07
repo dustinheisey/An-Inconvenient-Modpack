@@ -526,6 +526,59 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'bandages',
+      recipe: () => {
+        ['pneumaticcraft:bandage'].forEach((id) => event.remove({ id: id }));
+        event.shaped('pneumaticcraft:bandage', ['ab', 'bb'], {
+          a: 'kubejs:mushroom_strip',
+          b: 'rankine:aloe'
+        });
+      },
+      children: [
+        {
+          id: 'mushroom_strip',
+          recipe: () => {
+            [
+              'minecraft:brown_mushroom',
+              'minecraft:red_mushroom',
+              'rankine:oyster_mushroom',
+              'rankine:lions_mane_mushroom',
+              'rankine:sulfur_shelf_mushroom',
+              'rankine:honey_mushroom',
+              'rankine:artist_conk_mushroom',
+              'rankine:turkey_tail_mushroom',
+              'rankine:cinnabar_polypore_mushroom',
+              'rankine:tinder_conk_mushroom',
+              'undergarden:indigo_mushroom',
+              'undergarden:veil_mushroom',
+              'undergarden:ink_mushroom',
+              'undergarden:blood_mushroom',
+              'blue_skies:snowcap_mushroom',
+              'blue_skies:baneful_mushroom'
+            ].forEach((mushroom) => {
+              event.custom({
+                type: 'hexerei:drying_rack',
+                ingredients: [{ item: mushroom }],
+                output: { item: 'kubejs:mushroom_strip' },
+                dryingTimeInTicks: 1000
+              });
+            });
+          }
+        },
+        {
+          id: 'aloe',
+          recipe: () => {
+            event
+              .shapeless('rankine:aloe', [
+                'minecraft:cactus',
+                Item.of('#forge:knives').ignoreNBT()
+              ])
+              .damageIngredient(Item.of('#forge:knives').ignoreNBT());
+          }
+        }
+      ]
+    },
+    {
       id: 'icebox',
       recipe: () => {
         ['cold_sweat:icebox'].forEach((id) => event.remove({ id: id }));
