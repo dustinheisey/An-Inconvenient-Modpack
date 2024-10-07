@@ -32,7 +32,7 @@
 - [ ] some ingots from metal block recipes broken
 - [x] altimeter from copper recipe
 - [x] rankine clays crush to minecraft clay
-- [ ] crushing cobble to gravel to sand to silt to clay
+- [x] crushing cobble to gravel to sand to silt to clay
 - [x] fire clay should work with desert sand
 
 ## Worldgen
@@ -52,6 +52,7 @@
 - [x] bronze cauldron advancement
 - [ ] rework refractory bricks and beehive oven, alloy kiln and hearth advancements
 - [x] move altimeter advancement to copper ingot
+- [ ] advancement appearance and titles and descriptions
 
 ## Weird
 
@@ -68,7 +69,7 @@
 - [ ] forgotten knife showing in jei too early
 - [ ] bees showing in jei too early
 - [ ] fire doesn't go away when you die visually
-
+- [ ] fix rankine crushing recipes
 - [ ] fix chapter 1 advancement page icons so it fits in one page height
 - [ ] add % info to tree stripping jei
 - [ ] ceramic bucket doesn't show fluid in hand
@@ -82,7 +83,6 @@
 - [ ] glass panes staged incorrectly (fix with garbage biome overhaul)
 - [ ] bloomery doesn't work with charcoal fragment
 - [ ] hearth rdoesn't work with charcoal fragment
-- [ ] crushing recipes are not working correctly
 - [ ] regenerate the template world in a hot biome
 - [ ] charcoal pit exploit
 

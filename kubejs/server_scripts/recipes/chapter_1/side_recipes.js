@@ -315,6 +315,156 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'stone_to_gravel',
+      recipe: () => {
+        [
+          'minecraft:end_stone',
+          'rankine:breccia',
+          'rankine:sylvinite',
+          'rankine:pumice',
+          'rankine:phosphorite',
+          'rankine:chalk'
+        ].forEach((stone) => {
+          event.custom({
+            input: { item: stone },
+            type: 'rankine:crushing',
+            guaranteed: [
+              {
+                item: 'rankine:light_gravel',
+                tier: 'minecraft:stone',
+                count: 1
+              }
+            ]
+          });
+        });
+
+        [
+          'rankine:skarn',
+          'minecraft:gilded_blackstone',
+          'minecraft:cobbled_deepslate',
+          'minecraft:blackstone',
+          'rankine:shale'
+        ].forEach((stone) => {
+          event.custom({
+            input: { item: stone },
+            type: 'rankine:crushing',
+            guaranteed: [
+              {
+                item: 'rankine:dark_gravel',
+                tier: 'minecraft:stone',
+                count: 1
+              }
+            ]
+          });
+        });
+
+        [
+          'minecraft:stone',
+          'minecraft:cobblestone',
+          'rankine:graywacke'
+        ].forEach((stone) => {
+          event.custom({
+            input: { item: stone },
+            type: 'rankine:crushing',
+            guaranteed: [
+              {
+                item: 'minecraft:gravel',
+                tier: 'minecraft:stone',
+                count: 1
+              }
+            ]
+          });
+        });
+      },
+      children: [
+        {
+          id: 'gravel_to_sand',
+          recipe: () => {
+            event.custom({
+              input: { item: 'minecraft:gravel' },
+              type: 'rankine:crushing',
+              guaranteed: [
+                {
+                  item: 'minecraft:sand',
+                  tier: 'minecraft:stone',
+                  count: 1
+                }
+              ]
+            });
+            event.custom({
+              input: { item: 'rankine:light_gravel' },
+              type: 'rankine:crushing',
+              guaranteed: [
+                {
+                  item: 'rankine:white_sand',
+                  tier: 'minecraft:stone',
+                  count: 1
+                }
+              ]
+            });
+            event.custom({
+              input: { item: 'rankine:dark_gravel' },
+              type: 'rankine:crushing',
+              guaranteed: [
+                {
+                  item: 'rankine:black_sand',
+                  tier: 'minecraft:stone',
+                  count: 1
+                }
+              ]
+            });
+          },
+          children: [
+            {
+              id: 'sand_to_silt',
+              recipe: () => {
+                [
+                  'minecraft:sand',
+                  'minecraft:red_sand',
+                  'minecraft:soul_sand',
+                  'blue_skies:midnight_sand',
+                  'blue_skies:crystal_sand',
+                  'rankine:black_sand',
+                  'rankine:white_sand',
+                  'rankine:desert_sand'
+                ].forEach((sand) => {
+                  event.custom({
+                    input: { item: sand },
+                    type: 'rankine:crushing',
+                    guaranteed: [
+                      {
+                        item: 'rankine:silt',
+                        tier: 'minecraft:stone',
+                        count: 1
+                      }
+                    ]
+                  });
+                });
+              },
+              children: [
+                {
+                  id: 'silt_to_clay',
+                  recipe: () => {
+                    event.custom({
+                      input: { item: 'rankine:silt' },
+                      type: 'rankine:crushing',
+                      guaranteed: [
+                        {
+                          item: 'minecraft:clay_ball',
+                          tier: 'minecraft:stone',
+                          count: 1
+                        }
+                      ]
+                    });
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       id: 'roman_concrete',
       recipe: () => {
         event.remove({ id: 'rankine:mixing/roman_concrete_mixing' });

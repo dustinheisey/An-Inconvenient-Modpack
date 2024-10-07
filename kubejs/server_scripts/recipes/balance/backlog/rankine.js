@@ -433,30 +433,10 @@ onEvent('recipes', (event) => {
           'rankine:black_dacite',
           'rankine:bridgmanham'
         ],
-        'minecraft:gravel': [
-          'minecraft:stone',
-          'minecraft:cobblestone',
-          'rankine:graywacke'
-        ],
         'minecraft:obsidian': [
           'rankine:snowflake_obsidian',
           'rankine:blood_obsidian',
           'minecraft:crying_obsidian'
-        ],
-        'rankine:light_gravel': [
-          'minecraft:end_stone',
-          'rankine:breccia',
-          'rankine:sylvinite',
-          'rankine:pumice',
-          'rankine:phosphorite',
-          'rankine:chalk'
-        ],
-        'rankine:dark_gravel': [
-          'rankine:skarn',
-          'minecraft:gilded_blackstone',
-          'minecraft:cobbled_deepslate',
-          'minecraft:blackstone',
-          'rankine:shale'
         ],
         'minecraft:sand': ['minecraft:sandstone', 'rankine:limestone'],
         'minecraft:red_sand': ['minecraft:red_sandstone', 'rankine:arkose'],
@@ -578,21 +558,6 @@ onEvent('recipes', (event) => {
             tier: 'minecraft:netherite',
             count: 3
           }
-        ]
-      });
-
-      event.custom({
-        input: { item: 'minecraft:gravel' },
-        type: 'rankine:crushing',
-        guaranteed: [
-          { item: 'minecraft:sand', tier: 'minecraft:stone', count: 1 }
-        ]
-      });
-      event.custom({
-        input: { item: 'rankine:light_gravel' },
-        type: 'rankine:crushing',
-        guaranteed: [
-          { item: 'rankine:white_sand', tier: 'minecraft:stone', count: 1 }
         ]
       });
 
