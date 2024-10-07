@@ -120,6 +120,12 @@ onEvent('server.datapack.high_priority', (event) => {
                                 description: 'Forge a copper ingot',
                                 children: [
                                   {
+                                    item: 'rankine:altimeter',
+                                    title: "Depth's Gauge",
+                                    description:
+                                      'Craft an altimeter to help you find ores underground'
+                                  },
+                                  {
                                     item: 'minecraft:flint_and_steel',
                                     title: 'Strike of Fire',
                                     description:
@@ -191,14 +197,7 @@ onEvent('server.datapack.high_priority', (event) => {
                                 item: 'rankine:tin_ingot',
                                 title: 'Tin Transmutation',
                                 description: 'Forge a tin ingot',
-                                children: [
-                                  {
-                                    item: 'rankine:altimeter',
-                                    title: "Depth's Gauge",
-                                    description:
-                                      'Craft an altimeter to help you find ores underground'
-                                  }
-                                ]
+                                children: []
                               }
                             ]
                           },
@@ -420,59 +419,17 @@ onEvent('server.datapack.high_priority', (event) => {
                                             frame: 'goal',
                                             children: [
                                               {
-                                                item: 'immersiveengineering:hammer',
-                                                title: 'Engineer’s Tool',
+                                                item: 'rankine:high_refractory_brick',
+                                                title: "Kiln's Core",
                                                 description:
-                                                  'Craft a hammer to help you fire bronze ingots'
-                                              },
-                                              {
-                                                item: 'rankine:beehive_oven_pit',
-                                                title: "Kiln's Foundation",
-                                                description:
-                                                  'Craft a beehive oven pit',
-                                                children: [
-                                                  {
-                                                    item: 'rankine:bone_char',
-                                                    title: 'Carbon Alchemy',
-                                                    description:
-                                                      'Cook some bones in a beehive oven'
-                                                  },
-                                                  {
-                                                    item: 'kubejs:grog',
-                                                    title: 'Clay Concoction',
-                                                    description:
-                                                      'Crush some grog from fired porcelain',
-                                                    children: []
-                                                  }
-                                                ]
-                                              },
-                                              {
-                                                icon: 'immersiveengineering:alloy_smelter',
+                                                  'Fire a refractory brick',
                                                 frame: 'goal',
-                                                title: 'Alloy Mastery',
-                                                description:
-                                                  "Craft allow kiln bricks and create an allow kiln with your engineer's hammer",
-                                                criteria: {
-                                                  form_multiblock: {
-                                                    trigger:
-                                                      'immersiveengineering:multiblock_formed',
-                                                    conditions: {
-                                                      multiblock:
-                                                        'immersiveengineering:multiblocks/alloy_smelter',
-                                                      item: {
-                                                        items: [
-                                                          'immersiveengineering:hammer'
-                                                        ]
-                                                      }
-                                                    }
-                                                  }
-                                                },
                                                 children: [
                                                   {
-                                                    item: 'rankine:bronze_ingot',
-                                                    title: 'Bronze Age Beckons',
+                                                    item: 'rankine:ultra_high_refractory_brick',
+                                                    title: "Kiln's Core",
                                                     description:
-                                                      'Smelt bronze, a vital alloy',
+                                                      'Fire a refractory brick',
                                                     frame: 'goal',
                                                     children: [
                                                       {
@@ -490,13 +447,6 @@ onEvent('server.datapack.high_priority', (event) => {
                                                             description:
                                                               'Extract iron, forge ahead',
                                                             children: [
-                                                              {
-                                                                item: 'minecraft:cauldron',
-                                                                title:
-                                                                  'Iron Caldron',
-                                                                description:
-                                                                  'Craft a cauldron to collect salt more easily'
-                                                              },
                                                               {
                                                                 item: 'cold_sweat:hearth',
                                                                 id: 'hearth',
@@ -527,101 +477,169 @@ onEvent('server.datapack.high_priority', (event) => {
                                                             ]
                                                           }
                                                         ]
-                                                      },
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    item: 'immersiveengineering:hammer',
+                                                    title: 'Engineer’s Tool',
+                                                    description:
+                                                      'Craft a hammer to help you fire bronze ingots'
+                                                  },
+                                                  {
+                                                    icon: 'immersiveengineering:alloy_smelter',
+                                                    frame: 'goal',
+                                                    title: 'Alloy Mastery',
+                                                    description:
+                                                      "Craft allow kiln bricks and create an allow kiln with your engineer's hammer",
+                                                    criteria: {
+                                                      form_multiblock: {
+                                                        trigger:
+                                                          'immersiveengineering:multiblock_formed',
+                                                        conditions: {
+                                                          multiblock:
+                                                            'immersiveengineering:multiblocks/alloy_smelter',
+                                                          item: {
+                                                            items: [
+                                                              'immersiveengineering:hammer'
+                                                            ]
+                                                          }
+                                                        }
+                                                      }
+                                                    },
+                                                    children: [
                                                       {
-                                                        item: 'rankine:bronze_hammer',
+                                                        item: 'rankine:bronze_ingot',
                                                         title:
-                                                          'Bronze Age Crushing',
+                                                          'Bronze Age Beckons',
                                                         description:
-                                                          'Craft a bronze hammer',
+                                                          'Smelt bronze, a vital alloy',
+                                                        frame: 'goal',
                                                         children: [
                                                           {
-                                                            item: 'hexerei:selenite_shard',
+                                                            item: 'minecraft:cauldron',
                                                             title:
-                                                              'Veiled Luminance',
+                                                              'Iron Caldron',
                                                             description:
-                                                              'Find a geode deep under a jungle or swamp & collect some selenite shards',
+                                                              'Craft a cauldron to collect salt more easily'
+                                                          },
+                                                          {
+                                                            item: 'rankine:bronze_hammer',
+                                                            title:
+                                                              'Bronze Age Crushing',
+                                                            description:
+                                                              'Craft a bronze hammer',
                                                             children: [
                                                               {
-                                                                item: 'kubejs:goddess_heart',
+                                                                item: 'hexerei:selenite_shard',
                                                                 title:
-                                                                  'Heart of the Goddess',
+                                                                  'Veiled Luminance',
                                                                 description:
-                                                                  'Craft a goddess heart to awaken ancient power',
+                                                                  'Find a geode deep under a jungle or swamp & collect some selenite shards',
                                                                 children: [
                                                                   {
-                                                                    item: 'paraglider:goddess_statue',
-                                                                    id: 'goddess_statue',
+                                                                    item: 'kubejs:goddess_heart',
                                                                     title:
-                                                                      'Altar of Vitality',
+                                                                      'Heart of the Goddess',
                                                                     description:
-                                                                      'Construct a goddess statue'
+                                                                      'Craft a goddess heart to awaken ancient power',
+                                                                    children: [
+                                                                      {
+                                                                        item: 'paraglider:goddess_statue',
+                                                                        id: 'goddess_statue',
+                                                                        title:
+                                                                          'Altar of Vitality',
+                                                                        description:
+                                                                          'Construct a goddess statue'
+                                                                      }
+                                                                    ]
                                                                   }
                                                                 ]
-                                                              }
-                                                            ]
-                                                          },
+                                                              },
 
-                                                          {
-                                                            item: 'rankine:galena',
-                                                            title:
-                                                              "Mire's Gift",
-                                                            description:
-                                                              'Collect a chunk of galena from the bottom of a swamp',
-                                                            children: [
                                                               {
-                                                                item: 'rankine:lead_ingot',
+                                                                item: 'rankine:galena',
                                                                 title:
-                                                                  'Lead Genesis',
+                                                                  "Mire's Gift",
                                                                 description:
-                                                                  'Forge a lead ingot',
+                                                                  'Collect a chunk of galena from the bottom of a swamp',
+                                                                children: [
+                                                                  {
+                                                                    item: 'rankine:lead_ingot',
+                                                                    title:
+                                                                      'Lead Genesis',
+                                                                    description:
+                                                                      'Forge a lead ingot',
+                                                                    children: []
+                                                                  }
+                                                                ]
+                                                              },
+
+                                                              {
+                                                                item: 'rankine:acanthite',
+                                                                title:
+                                                                  "Desert's Gift",
+                                                                description:
+                                                                  'Collect a chunk of acanthite from the bottom of a desert',
+                                                                children: [
+                                                                  {
+                                                                    item: 'rankine:silver_ingot',
+                                                                    title:
+                                                                      'Silver Genesis',
+                                                                    description:
+                                                                      'Forge a silver ingot'
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                item: 'rankine:graphite',
+                                                                title:
+                                                                  'Carbon in the Rough',
+                                                                description:
+                                                                  'Find plumbago in an extreme hills and collect a piece of graphite',
+                                                                children: []
+                                                              },
+                                                              {
+                                                                item: 'minecraft:amethyst_shard',
+                                                                title:
+                                                                  'Violet Depths',
+                                                                description:
+                                                                  'Find a geode deep underground & collect some amethyst shards'
+                                                              },
+                                                              {
+                                                                item: 'rankine:plagioclase_feldspar',
+                                                                title:
+                                                                  'Feldspar Find',
+                                                                description:
+                                                                  'Collect some plagioclase feldspar from stone',
                                                                 children: []
                                                               }
                                                             ]
-                                                          },
-
-                                                          {
-                                                            item: 'rankine:acanthite',
-                                                            title:
-                                                              "Desert's Gift",
-                                                            description:
-                                                              'Collect a chunk of acanthite from the bottom of a desert',
-                                                            children: [
-                                                              {
-                                                                item: 'rankine:silver_ingot',
-                                                                title:
-                                                                  'Silver Genesis',
-                                                                description:
-                                                                  'Forge a silver ingot'
-                                                              }
-                                                            ]
-                                                          },
-                                                          {
-                                                            item: 'rankine:graphite',
-                                                            title:
-                                                              'Carbon in the Rough',
-                                                            description:
-                                                              'Find plumbago in an extreme hills and collect a piece of graphite',
-                                                            children: []
-                                                          },
-                                                          {
-                                                            item: 'minecraft:amethyst_shard',
-                                                            title:
-                                                              'Violet Depths',
-                                                            description:
-                                                              'Find a geode deep underground & collect some amethyst shards'
-                                                          },
-                                                          {
-                                                            item: 'rankine:plagioclase_feldspar',
-                                                            title:
-                                                              'Feldspar Find',
-                                                            description:
-                                                              'Collect some plagioclase feldspar from stone',
-                                                            children: []
                                                           }
                                                         ]
                                                       }
                                                     ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                item: 'rankine:beehive_oven_pit',
+                                                title: "Kiln's Foundation",
+                                                description:
+                                                  'Craft a beehive oven pit',
+                                                children: [
+                                                  {
+                                                    item: 'rankine:bone_char',
+                                                    title: 'Carbon Alchemy',
+                                                    description:
+                                                      'Cook some bones in a beehive oven'
+                                                  },
+                                                  {
+                                                    item: 'kubejs:grog',
+                                                    title: 'Clay Concoction',
+                                                    description:
+                                                      'Crush some grog from fired porcelain',
+                                                    children: []
                                                   }
                                                 ]
                                               }

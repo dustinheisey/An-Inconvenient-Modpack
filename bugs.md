@@ -45,20 +45,17 @@
 - [x] fire clays return on investment
 - [ ] make more uses for cactus in chapter 1
 - [ ] farmers delight mushrooms chapter 1
-- [ ] find more uses for tin in chapter 1
-- [ ] uses for calcite
-- [ ] rework feldspar and porcelain production
+- [ ] rework feldspar and porcelain production (tin)
 
 ## Advancements
 
-- [ ] icebox and boiler advancements?
-- [ ] bronze cauldron advancement
+- [x] bronze cauldron advancement
 - [ ] rework refractory bricks and beehive oven, alloy kiln and hearth advancements
-- [ ] move altimeter advancement to copper ingot
+- [x] move altimeter advancement to copper ingot
 
 ## Weird
 
-- [ ] charcoal pit exploit
+- [x] unification errors
 
 ## Backlog
 
@@ -71,7 +68,7 @@
 - [ ] forgotten knife showing in jei too early
 - [ ] bees showing in jei too early
 - [ ] fire doesn't go away when you die visually
-- [ ] unification errors
+
 - [ ] fix chapter 1 advancement page icons so it fits in one page height
 - [ ] add % info to tree stripping jei
 - [ ] ceramic bucket doesn't show fluid in hand
@@ -87,6 +84,7 @@
 - [ ] hearth rdoesn't work with charcoal fragment
 - [ ] crushing recipes are not working correctly
 - [ ] regenerate the template world in a hot biome
+- [ ] charcoal pit exploit
 
 ## Past Releases
 
