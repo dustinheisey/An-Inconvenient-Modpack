@@ -33,6 +33,8 @@
 - [x] rankine clays crush to minecraft clay
 - [x] crushing cobble to gravel to sand to silt to clay
 - [x] fire clay should work with desert sand
+- [x] bloomery doesn't work with charcoal fragment
+- [x] hearth doesn't work with charcoal fragment
 
 ## Worldgen
 
@@ -56,16 +58,14 @@
 
 - [x] unification errors
 
-- [x] bloomery doesn't work with charcoal fragment
-- [x] hearth doesn't work with charcoal fragment
-- [ ] regenerate the template world in a hot biome
-- [ ] charcoal pit exploit
 - [ ] fix chapter 1 advancement page icons so it fits in one page height
 - [ ] advancement appearance and titles and descriptions
-- [ ] some ingots from metal block recipes broken
 
 ## Backlog
 
+- [ ] some ingots from metal block recipes broken
+- [ ] regenerate the template world in a hot biome
+- [ ] charcoal pit exploit
 - [ ] set correct recipe stages for all custom recipes
   - [ ] redstone engineering block recipe stage
   - [ ] kettle recipe stage
