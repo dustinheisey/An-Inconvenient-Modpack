@@ -45,21 +45,21 @@ onEvent('recipes', (event) => {
   event.custom({
     type: 'immersiveengineering:crusher',
     secondaries: [],
-    result: { item: '3x chemlib:titanium_dust' },
+    result: { item: 'chemlib:titanium_dust', count: 3 },
     input: { item: 'rankine:ilmenite' },
     energy: 2400
   });
   event.custom({
     type: 'immersiveengineering:crusher',
     secondaries: [],
-    result: { item: '3x chemlib:nickel_dust' },
+    result: { item: 'chemlib:nickel_dust', count: 3 },
     input: { item: 'rankine:pentlandite' },
     energy: 2400
   });
   event.custom({
     type: 'immersiveengineering:crusher',
     secondaries: [],
-    result: { item: '3x chemlib:uranium_dust' },
+    result: { item: 'chemlib:uranium_dust', count: 3 },
     input: { item: 'rankine:uraninite' },
     energy: 2400
   });
@@ -95,31 +95,37 @@ onEvent('recipes', (event) => {
     time: 100,
     energy: 51200
   });
+
   event.custom({
     type: 'immersiveengineering:arc_furnace',
-    results: [{ count: 3, item: 'rankine:titanium_ingot' }],
+    results: [{ item: 'rankine:titanium_ingot', count: 3 }],
     input: { item: 'rankine:ilmenite_ore' },
+    additives: [],
     time: 100,
     energy: 51200
   });
+
   event.custom({
     type: 'immersiveengineering:arc_furnace',
-    results: [{ count: 3, item: 'rankine:nickel_ingot' }],
+    results: [{ item: 'rankine:nickel_ingot', count: 3 }],
     input: { item: 'rankine:pentlandite_ore' },
+    additives: [],
     time: 100,
     energy: 51200
   });
+
   event.custom({
     type: 'immersiveengineering:arc_furnace',
-    results: [{ count: 3, item: 'rankine:uranium_ingot' }],
+    results: [{ item: 'rankine:uranium_ingot', count: 3 }],
     input: { item: 'rankine:uraninite_ore' },
+    additives: [],
     time: 100,
     energy: 51200
   });
 
   event.custom({
     type: 'create:mechanical_crafting',
-    result: { item: '4x compactcrafting:base' },
+    result: { item: 'compactcrafting:base', count: 4 },
     pattern: [' a ', 'bcb', 'ddd'],
     key: {
       a: 'minecraft:redstone_torch',

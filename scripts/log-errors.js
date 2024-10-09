@@ -1,7 +1,20 @@
-const fs = require('fs');
-const yaml = require('js-yaml');
-const path = require('path');
+import fs from 'fs';
+import yaml from 'js-yaml';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
+// Convert `import.meta.url` to `__dirname` equivalent
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to ensure the directory exists
+function ensureDirectoryExists(directoryPath) {
+  if (!fs.existsSync(directoryPath)) {
+    fs.mkdirSync(directoryPath, { recursive: true });
+  }
+}
+
+// Function to clean logs
 function cleanLogs(line) {
   return line
     .replace(/\[\d{2}:\d{2}:\d{2}] /, '')
@@ -74,8 +87,8 @@ function processLogs(logFiles) {
 
 // Function to write the organized logs to a YAML file
 function writeLogsToYaml(outputPath, logs) {
-  // Clear the file at the start of each run
-  fs.writeFileSync(outputPath, '', 'utf-8');
+  // Ensure the directory exists before writing
+  ensureDirectoryExists(path.dirname(outputPath));
 
   const yamlContent = yaml.dump(logs, { lineWidth: -1 });
   fs.writeFileSync(outputPath, yamlContent, 'utf-8');
@@ -90,5 +103,7 @@ const logFiles = [
   path.join(__dirname, '../logs/latest.log')
 ];
 
+// Ensure the output directory exists and write the logs to the YAML file
+const outputFilePath = path.join(__dirname, '../logs/output_logs.yaml');
 const combinedLogs = processLogs(logFiles);
-writeLogsToYaml('./logs/output_logs.yaml', combinedLogs);
+writeLogsToYaml(outputFilePath, combinedLogs);

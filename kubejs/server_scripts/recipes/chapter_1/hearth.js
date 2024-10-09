@@ -11,7 +11,7 @@ onEvent('recipes', (event) => {
           a: 'minecraft:iron_ingot',
           b: 'minecraft:leather',
           c: 'endrem:undead_soul',
-          d: 'rankine:high_refractory_bricks'
+          d: 'rankine:ultra_high_refractory_bricks'
         })
         .stage('chapter_1')
         .id('inconvenient:hearth');
@@ -146,9 +146,9 @@ onEvent('recipes', (event) => {
                                       );
                                       event.custom({
                                         type: 'rankine:mixing',
-                                        mixTime: 100,
+                                        mixTime: 70,
                                         ingredientTotal: 3,
-                                        matScale: 2,
+                                        matScale: 0.33,
                                         fluidInput: {
                                           fluid: 'minecraft:water',
                                           amount: 50
@@ -156,20 +156,20 @@ onEvent('recipes', (event) => {
                                         input1: {
                                           tag: 'forge:sand',
                                           required: true,
-                                          min: 0.4,
-                                          max: 0.6
+                                          min: 0.1,
+                                          max: 0.4
                                         },
                                         input2: {
                                           item: 'rankine:kaolinite',
                                           required: true,
-                                          min: 0.2,
-                                          max: 0.3
+                                          min: 0.1,
+                                          max: 0.4
                                         },
                                         input3: {
                                           item: 'minecraft:clay_ball',
                                           required: true,
                                           min: 0.1,
-                                          max: 0.2
+                                          max: 0.4
                                         },
                                         result: {
                                           item: 'rankine:fire_clay_ball'
@@ -216,7 +216,214 @@ onEvent('recipes', (event) => {
                                         children: [
                                           {
                                             // ? TODO: kaolin spawns in badlands in between terracotta stripes at y level [x-y]
-                                            id: 'kaolin'
+                                            id: 'kaolin',
+                                            recipe: () => {
+                                              event.custom({
+                                                type: 'rankine:crushing',
+                                                input: {
+                                                  item: 'kubejs:orthoclase_feldspar_silt'
+                                                },
+                                                guaranteed: [
+                                                  {
+                                                    item: 'rankine:kaolin'
+                                                  }
+                                                ]
+                                              });
+
+                                              event.custom({
+                                                type: 'rankine:crushing',
+                                                input: {
+                                                  item: 'kubejs:plagioclase_feldspar_silt'
+                                                },
+                                                guaranteed: [
+                                                  {
+                                                    item: 'rankine:kaolin'
+                                                  }
+                                                ]
+                                              });
+                                            },
+                                            children: [
+                                              {
+                                                id: 'orthoclase_feldspar_silt',
+                                                recipe: () => {
+                                                  event.custom({
+                                                    type: 'rankine:crushing',
+                                                    input: {
+                                                      item: 'kubejs:orthoclase_feldspar_sand'
+                                                    },
+                                                    guaranteed: [
+                                                      {
+                                                        item: 'kubejs:orthoclase_feldspar_silt'
+                                                      }
+                                                    ]
+                                                  });
+
+                                                  event.custom({
+                                                    type: 'rankine:crushing',
+                                                    input: {
+                                                      item: 'kubejs:plagioclase_feldspar_sand'
+                                                    },
+                                                    guaranteed: [
+                                                      {
+                                                        item: 'kubejs:plagioclase_feldspar_silt'
+                                                      }
+                                                    ]
+                                                  });
+                                                },
+                                                children: [
+                                                  {
+                                                    id: 'orthoclase_feldspar_sand',
+                                                    recipe: () => {
+                                                      event.custom({
+                                                        type: 'rankine:crushing',
+                                                        input: {
+                                                          item: 'kubejs:crushed_orthoclase_feldspar'
+                                                        },
+                                                        guaranteed: [
+                                                          {
+                                                            item: 'kubejs:orthoclase_feldspar_sand'
+                                                          }
+                                                        ]
+                                                      });
+
+                                                      event.custom({
+                                                        type: 'rankine:crushing',
+                                                        input: {
+                                                          item: 'kubejs:crushed_plagioclase_feldspar'
+                                                        },
+                                                        guaranteed: [
+                                                          {
+                                                            item: 'kubejs:plagioclase_feldspar_sand'
+                                                          }
+                                                        ]
+                                                      });
+                                                    },
+                                                    children: [
+                                                      {
+                                                        id: 'crushed_orthoclase_feldspar',
+                                                        recipe: () => {
+                                                          event.custom({
+                                                            type: 'rankine:crushing',
+                                                            input: {
+                                                              item: 'rankine:orthoclase_feldspar_block'
+                                                            },
+                                                            guaranteed: [
+                                                              {
+                                                                item: 'kubejs:crushed_orthoclase_feldspar'
+                                                              }
+                                                            ]
+                                                          });
+
+                                                          event.custom({
+                                                            type: 'rankine:crushing',
+                                                            input: {
+                                                              item: 'rankine:plagioclase_feldspar_block'
+                                                            },
+                                                            guaranteed: [
+                                                              {
+                                                                item: 'kubejs:crushed_plagioclase_feldspar'
+                                                              }
+                                                            ]
+                                                          });
+                                                        },
+                                                        children: [
+                                                          {
+                                                            id: 'orthoclase_feldspar_block',
+                                                            children: [
+                                                              {
+                                                                id: 'orthoclase_feldspar',
+                                                                recipe: () => {
+                                                                  [
+                                                                    'rankine:crushing/sommanite_crushing',
+                                                                    'rankine:crushing/blood_obsidian_crushing',
+                                                                    'rankine:crushing/bridgmanham_crushing',
+                                                                    'rankine:crushing/nepheline_syenite_crushing',
+                                                                    'rankine:crushing/obsidian_crushing',
+                                                                    'rankine:crushing/phonolite_crushing',
+                                                                    'rankine:crushing/pumice_crushing'
+                                                                  ].forEach(
+                                                                    (id) =>
+                                                                      event.remove(
+                                                                        {
+                                                                          id: id
+                                                                        }
+                                                                      )
+                                                                  );
+                                                                  event.custom({
+                                                                    type: 'rankine:crushing',
+                                                                    input: {
+                                                                      item: 'minecraft:granite'
+                                                                    },
+                                                                    guaranteed:
+                                                                      [
+                                                                        {
+                                                                          item: 'minecraft:cobblestone'
+                                                                        }
+                                                                      ],
+                                                                    outputs: [
+                                                                      {
+                                                                        weight: 80,
+                                                                        remove: false
+                                                                      },
+                                                                      {
+                                                                        item: 'rankine:orthoclase_feldspar',
+                                                                        weight: 20,
+                                                                        remove: false
+                                                                      }
+                                                                    ]
+                                                                  });
+                                                                },
+                                                                children: [
+                                                                  {
+                                                                    id: 'granite',
+                                                                    recipe:
+                                                                      () => {
+                                                                        [
+                                                                          'rankine:stonegen_intrusive/granite_generator'
+                                                                        ].forEach(
+                                                                          (
+                                                                            id
+                                                                          ) =>
+                                                                            event.remove(
+                                                                              {
+                                                                                id: id
+                                                                              }
+                                                                            )
+                                                                        );
+                                                                        event.custom(
+                                                                          {
+                                                                            type: 'rankine:rock_generator',
+                                                                            genType:
+                                                                              'intrusive_igneous',
+                                                                            result:
+                                                                              {
+                                                                                block:
+                                                                                  'minecraft:granite'
+                                                                              },
+                                                                            input1:
+                                                                              {
+                                                                                item: 'rankine:plagioclase_feldspar_block'
+                                                                              },
+                                                                            input2:
+                                                                              {
+                                                                                item: 'rankine:malachite_block'
+                                                                              }
+                                                                          }
+                                                                        );
+                                                                      },
+                                                                    children: []
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
                                           }
                                         ]
                                       },
@@ -648,7 +855,7 @@ onEvent('recipes', (event) => {
                                   'immersiveengineering:alloybrick',
                                   ['aba', 'bab', 'aba'],
                                   {
-                                    a: 'rankine:refractory_brick',
+                                    a: 'rankine:high_refractory_brick',
                                     b: 'rankine:mortar'
                                   }
                                 )
@@ -862,7 +1069,7 @@ onEvent('recipes', (event) => {
                                       'rankine:altimeter',
                                       ['aaa', 'aba', 'aaa'],
                                       {
-                                        a: 'rankine:tin_ingot',
+                                        a: 'minecraft:copper_ingot',
                                         b: 'ecofriendly:smelted_iron_can_ym'
                                       }
                                     )
@@ -1152,7 +1359,7 @@ onEvent('recipes', (event) => {
                   [
                     'minecraft:birch_log',
                     'rankine:black_birch_log',
-                    'rankine:red_birch',
+                    'rankine:red_birch_log',
                     'rankine:yellow_birch_log'
                   ].forEach((wood) => {
                     event.custom({
@@ -1169,11 +1376,11 @@ onEvent('recipes', (event) => {
         ]
       },
       {
-        id: 'high_refractory_bricks',
+        id: 'ultra_high_refractory_bricks',
         // use grog from pottery only made in the beehive oven and filtered water made with bone char
         children: [
           {
-            id: 'high_refractory_brick',
+            id: 'ultra_high_refractory_brick',
             recipe: () => {
               [
                 'rankine:high_refractory_brick_from_carbon',
@@ -1185,11 +1392,28 @@ onEvent('recipes', (event) => {
                 'rankine:high_refractory_brick',
                 'kubejs:dry_unfired_high_refractory_brick'
               );
+              event.smelting(
+                'rankine:ultra_high_refractory_brick',
+                'kubejs:dry_unfired_ultra_high_refractory_brick'
+              );
             },
             children: [
               {
-                id: 'dry_unfired_high_refractory_brick',
+                id: 'dry_unfired_ultra_high_refractory_brick',
                 recipe: () => {
+                  event
+                    .custom({
+                      type: 'hexerei:drying_rack',
+                      ingredients: [
+                        { item: 'kubejs:unfired_ultra_high_refractory_brick' }
+                      ],
+                      output: {
+                        item: 'kubejs:dry_unfired_ultra_high_refractory_brick'
+                      },
+                      dryingTimeInTicks: 3000
+                    })
+                    .id('inconvenient:dry_unfired_ultra_high_refractory_brick');
+
                   event
                     .custom({
                       type: 'hexerei:drying_rack',
@@ -1205,8 +1429,15 @@ onEvent('recipes', (event) => {
                 },
                 children: [
                   {
-                    id: 'unfired_high_refractory_brick',
+                    id: 'unfired_ultra_high_refractory_brick',
                     recipe: () => {
+                      event
+                        .shaped(
+                          '2x kubejs:unfired_ultra_high_refractory_brick',
+                          ['aa'],
+                          { a: 'kubejs:ultra_high_fire_clay_ball' }
+                        )
+                        .stage('chapter_1');
                       event
                         .shaped(
                           '2x kubejs:unfired_high_refractory_brick',
@@ -1217,36 +1448,30 @@ onEvent('recipes', (event) => {
                     },
                     children: [
                       {
-                        id: 'high_fire_clay_ball',
+                        id: 'ultra_high_fire_clay_ball',
                         recipe: () => {
                           event.custom({
                             type: 'rankine:mixing',
-                            mixTime: 100,
-                            ingredientTotal: 3,
-                            matScale: 2,
+                            mixTime: 70,
+                            ingredientTotal: 2,
+                            matScale: 0.5,
                             fluidInput: {
                               fluid: 'minecraft:water',
                               amount: 50
                             },
                             input1: {
-                              item: 'rankine:fire_clay_ball',
+                              item: 'kubejs:high_fire_clay_ball',
                               required: true,
                               min: 0.4,
                               max: 0.6
                             },
                             input2: {
-                              item: 'rankine:bone_char',
-                              required: true,
-                              min: 0.1,
-                              max: 0.2
-                            },
-                            input3: {
                               item: 'kubejs:grog',
                               required: true,
-                              min: 0.3,
-                              max: 0.4
+                              min: 0.4,
+                              max: 0.6
                             },
-                            result: { item: 'kubejs:high_fire_clay_ball' }
+                            result: { item: 'kubejs:ultra_high_fire_clay_ball' }
                           });
                         },
                         children: [
@@ -1257,114 +1482,239 @@ onEvent('recipes', (event) => {
                                 .custom({
                                   type: 'rankine:crushing',
                                   input: { item: 'rankine:porcelain' },
-                                  guaranteed: [{ item: 'kubejs:grog' }]
+                                  guaranteed: [
+                                    {
+                                      item: 'kubejs:grog',
+                                      count: 1,
+                                      tier: 'minecraft:iron'
+                                    }
+                                  ]
                                 })
                                 .id('inconvenient:grog');
                             },
                             children: [
                               {
                                 id: 'porcelain',
+                                recipe: () => {
+                                  [
+                                    'rankine:beehive_oven/porcelain_clay_beehive_oven_cooking'
+                                  ].forEach((id) => event.remove({ id: id }));
+
+                                  event.custom({
+                                    type: 'rankine:beehive_oven',
+                                    input: {
+                                      item: 'kubejs:glazed_porcelain'
+                                    },
+                                    result: 'rankine:porcelain',
+                                    minCookTime: 2400,
+                                    maxCookTime: 4800
+                                  });
+                                },
                                 children: [
                                   {
-                                    id: 'porcelain_clay_ball',
+                                    id: 'glazed_porcelain',
                                     recipe: () => {
-                                      [
-                                        'rankine:mixing/porcelain_clay_ball_mixing'
-                                      ].forEach((id) =>
-                                        event.remove({ id: id })
+                                      event.shapeless(
+                                        'kubejs:glazed_porcelain',
+                                        [
+                                          'kubejs:unglazed_porcelain',
+                                          'kubejs:porcelain_glaze',
+                                          'kubejs:porcelain_glaze',
+                                          'kubejs:porcelain_glaze'
+                                        ]
                                       );
-
-                                      event.custom({
-                                        type: 'rankine:mixing',
-                                        mixTime: 100,
-                                        ingredientTotal: 4,
-                                        matScale: 2,
-                                        fluidInput: {
-                                          fluid: 'minecraft:water',
-                                          amount: 25
-                                        },
-                                        input1: {
-                                          item: 'rankine:kaolinite',
-                                          required: true,
-                                          min: 0.2,
-                                          max: 0.4
-                                        },
-                                        input2: {
-                                          item: 'rankine:plagioclase_feldspar',
-                                          required: true,
-                                          min: 0.2,
-                                          max: 0.4
-                                        },
-                                        input3: {
-                                          item: 'minecraft:flint',
-                                          required: true,
-                                          min: 0.2,
-                                          max: 0.4
-                                        },
-                                        input4: {
-                                          item: 'minecraft:clay_ball',
-                                          required: true,
-                                          min: 0.2,
-                                          max: 0.4
-                                        },
-                                        result: {
-                                          item: 'rankine:porcelain_clay_ball'
-                                        }
-                                      });
                                     },
                                     children: [
                                       {
-                                        id: 'plagioclase_feldspar',
+                                        id: 'unglazed_porcelain',
                                         recipe: () => {
-                                          [
-                                            'rankine:crushing/stone_crushing',
-                                            'rankine:crushing/anorthosite_crushing',
-                                            'rankine:crushing/baddeleyite_ore_crushing',
-                                            'rankine:crushing/basaltic_tuff_crushing',
-                                            'rankine:crushing/coltan_ore_crushing',
-                                            'rankine:crushing/comendite_crushing',
-                                            'rankine:crushing/crying_obsidian_crushing',
-                                            'rankine:crushing/desert_sandstone_crushing',
-                                            'rankine:crushing/diorite_crushing',
-                                            'rankine:crushing/episyenite_crushing',
-                                            'rankine:crushing/gabbro_crushing',
-                                            'rankine:crushing/gneiss_crushing',
-                                            'rankine:crushing/granodiorite_crushing',
-                                            'rankine:crushing/hornblende_andesite_crushing',
-                                            'rankine:crushing/ilmenite_ore_crushing',
-                                            'rankine:crushing/komatiite_crushing',
-                                            'rankine:crushing/phyllite_crushing',
-                                            'rankine:crushing/rhyolite_crushing',
-                                            'rankine:crushing/ringwoodine_crushing',
-                                            'rankine:crushing/sandstone_crushing',
-                                            'rankine:crushing/snowflake_obsidian_crushing',
-                                            'rankine:crushing/tholeiitic_basalt_crushing',
-                                            'rankine:crushing/troctolite_crushing',
-                                            'rankine:crushing/tuff_crushing',
-                                            'rankine:crushing/wadsleyone_crushing'
-                                          ].forEach((id) =>
-                                            event.remove({ id: id })
-                                          );
-
                                           event.custom({
-                                            type: 'rankine:crushing',
+                                            type: 'rankine:beehive_oven',
                                             input: {
-                                              item: 'minecraft:stone'
+                                              item: 'rankine:porcelain_clay'
                                             },
-                                            guaranteed: [
-                                              { item: 'minecraft:cobblestone' }
-                                            ],
-                                            outputs: [
-                                              { weight: 80, remove: false },
+                                            result: 'kubejs:unglazed_porcelain',
+                                            minCookTime: 2400,
+                                            maxCookTime: 4800
+                                          });
+                                        },
+                                        children: [
+                                          {
+                                            id: 'porcelain_clay',
+                                            children: [
                                               {
-                                                item: 'rankine:plagioclase_feldspar',
-                                                weight: 40,
-                                                remove: false,
-                                                tier: 'minecraft:iron'
+                                                id: 'porcelain_clay_ball',
+                                                recipe: () => {
+                                                  [
+                                                    'rankine:mixing/porcelain_clay_ball_mixing'
+                                                  ].forEach((id) =>
+                                                    event.remove({ id: id })
+                                                  );
+
+                                                  event.custom({
+                                                    type: 'rankine:mixing',
+                                                    mixTime: 100,
+                                                    ingredientTotal: 4,
+                                                    matScale: 0.25,
+                                                    fluidInput: {
+                                                      fluid: 'minecraft:water',
+                                                      amount: 25
+                                                    },
+                                                    input1: {
+                                                      item: 'rankine:kaolinite',
+                                                      required: true,
+                                                      min: 0.2,
+                                                      max: 0.4
+                                                    },
+                                                    input2: {
+                                                      item: 'rankine:plagioclase_feldspar',
+                                                      required: true,
+                                                      min: 0.2,
+                                                      max: 0.4
+                                                    },
+                                                    input3: {
+                                                      item: 'rankine:orthoclase_feldspar',
+                                                      required: true,
+                                                      min: 0.2,
+                                                      max: 0.4
+                                                    },
+                                                    input4: {
+                                                      item: 'ecofriendly:sea_glass_ym',
+                                                      required: true,
+                                                      min: 0.2,
+                                                      max: 0.4
+                                                    },
+                                                    result: {
+                                                      item: 'rankine:porcelain_clay_ball'
+                                                    }
+                                                  });
+                                                },
+                                                children: [
+                                                  {
+                                                    id: 'plagioclase_feldspar',
+                                                    recipe: () => {
+                                                      [
+                                                        'rankine:crushing/stone_crushing',
+                                                        'rankine:crushing/anorthosite_crushing',
+                                                        'rankine:crushing/baddeleyite_ore_crushing',
+                                                        'rankine:crushing/basaltic_tuff_crushing',
+                                                        'rankine:crushing/coltan_ore_crushing',
+                                                        'rankine:crushing/comendite_crushing',
+                                                        'rankine:crushing/crying_obsidian_crushing',
+                                                        'rankine:crushing/desert_sandstone_crushing',
+                                                        'rankine:crushing/diorite_crushing',
+                                                        'rankine:crushing/episyenite_crushing',
+                                                        'rankine:crushing/gabbro_crushing',
+                                                        'rankine:crushing/gneiss_crushing',
+                                                        'rankine:crushing/granodiorite_crushing',
+                                                        'rankine:crushing/hornblende_andesite_crushing',
+                                                        'rankine:crushing/ilmenite_ore_crushing',
+                                                        'rankine:crushing/komatiite_crushing',
+                                                        'rankine:crushing/phyllite_crushing',
+                                                        'rankine:crushing/rhyolite_crushing',
+                                                        'rankine:crushing/ringwoodine_crushing',
+                                                        'rankine:crushing/sandstone_crushing',
+                                                        'rankine:crushing/snowflake_obsidian_crushing',
+                                                        'rankine:crushing/tholeiitic_basalt_crushing',
+                                                        'rankine:crushing/troctolite_crushing',
+                                                        'rankine:crushing/tuff_crushing',
+                                                        'rankine:crushing/wadsleyone_crushing'
+                                                      ].forEach((id) =>
+                                                        event.remove({ id: id })
+                                                      );
+
+                                                      event.custom({
+                                                        type: 'rankine:crushing',
+                                                        input: {
+                                                          item: 'rankine:gabbro'
+                                                        },
+                                                        guaranteed: [
+                                                          {
+                                                            item: 'minecraft:cobblestone'
+                                                          }
+                                                        ],
+                                                        outputs: [
+                                                          {
+                                                            weight: 80,
+                                                            remove: false
+                                                          },
+                                                          {
+                                                            item: 'rankine:plagioclase_feldspar',
+                                                            weight: 20,
+                                                            remove: false,
+                                                            tier: 'minecraft:iron'
+                                                          }
+                                                        ]
+                                                      });
+                                                    }
+                                                  }
+                                                ]
                                               }
                                             ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        id: 'porcelain_glaze',
+                                        recipe: () => {
+                                          event.custom({
+                                            type: 'rankine:mixing',
+                                            mixTime: 100,
+                                            ingredientTotal: 4,
+                                            matScale: 2,
+                                            fluidInput: {
+                                              fluid: 'minecraft:water',
+                                              amount: 50
+                                            },
+                                            input1: {
+                                              item: 'charcoal_pit:ash',
+                                              required: true,
+                                              min: 0.1,
+                                              max: 0.2
+                                            },
+                                            input2: {
+                                              item: 'rankine:kaolinite',
+                                              required: true,
+                                              min: 0.1,
+                                              max: 0.2
+                                            },
+                                            input3: {
+                                              item: 'rankine:bone_char',
+                                              required: true,
+                                              min: 0.1,
+                                              max: 0.2
+                                            },
+                                            input4: {
+                                              item: 'chemlib:tin_dust',
+                                              required: true,
+                                              min: 0.1,
+                                              max: 0.2
+                                            },
+                                            result: {
+                                              item: 'kubejs:porcelain_glaze'
+                                            }
                                           });
-                                        }
+                                        },
+                                        children: [
+                                          {
+                                            id: 'tin_dust',
+                                            recipe: () => {
+                                              event.custom({
+                                                type: 'rankine:crushing',
+                                                input: {
+                                                  item: 'rankine:tin_block'
+                                                },
+                                                guaranteed: [
+                                                  {
+                                                    item: 'chemlib:tin_dust',
+                                                    tier: 'iron',
+                                                    count: 3
+                                                  }
+                                                ]
+                                              });
+                                            }
+                                          }
+                                        ]
                                       }
                                     ]
                                   }
@@ -1373,62 +1723,94 @@ onEvent('recipes', (event) => {
                             ]
                           },
                           {
-                            id: 'bone_char',
+                            id: 'high_fire_clay_ball',
+                            recipe: () => {
+                              event.custom({
+                                type: 'rankine:mixing',
+                                mixTime: 70,
+                                ingredientTotal: 2,
+                                matScale: 0.5,
+                                fluidInput: {
+                                  fluid: 'minecraft:water',
+                                  amount: 50
+                                },
+                                input1: {
+                                  item: 'rankine:fire_clay_ball',
+                                  required: true,
+                                  min: 0.4,
+                                  max: 0.6
+                                },
+                                input2: {
+                                  item: 'rankine:bone_char',
+                                  required: true,
+                                  min: 0.4,
+                                  max: 0.6
+                                },
+                                result: { item: 'kubejs:high_fire_clay_ball' }
+                              });
+                            },
                             children: [
                               {
-                                // ? build a beehive oven multiblock and fire bone blocks
-                                id: 'beehive_oven_pit',
-                                recipe: () => {
-                                  event.replaceInput(
-                                    { output: 'rankine:beehive_oven_pit' },
-                                    '#forge:storage_blocks/coal',
-                                    'charcoal_pit:charcoal_block'
-                                  );
-
-                                  event.replaceInput(
-                                    { output: 'minecraft:flint_and_steel' },
-                                    'minecraft:iron_ingot',
-                                    'minecraft:copper_ingot'
-                                  );
-
-                                  event.remove({
-                                    id: 'tconstruct:tools/building/flint_and_brick'
-                                  });
-                                  event.shapeless(
-                                    'tconstruct:flint_and_brick',
-                                    ['minecraft:flint', 'minecraft:brick']
-                                  );
-                                }
-                              },
-                              {
-                                id: 'bone_block',
-                                recipe: () => {
-                                  [
-                                    'minecraft:bone_meal_from_bone_block',
-                                    'minecraft:bone_block'
-                                  ].forEach((id) => event.remove({ id: id }));
-
-                                  event.shaped(
-                                    'minecraft:bone_block',
-                                    ['aaa', 'aaa', 'aaa'],
-                                    {
-                                      a: 'minecraft:bone'
-                                    }
-                                  );
-                                },
+                                id: 'bone_char',
                                 children: [
                                   {
-                                    id: 'bone',
+                                    // ? build a beehive oven multiblock and fire bone blocks
+                                    id: 'beehive_oven_pit',
+                                    recipe: () => {
+                                      event.replaceInput(
+                                        { output: 'rankine:beehive_oven_pit' },
+                                        '#forge:storage_blocks/coal',
+                                        'charcoal_pit:charcoal_block'
+                                      );
+
+                                      event.replaceInput(
+                                        { output: 'minecraft:flint_and_steel' },
+                                        'minecraft:iron_ingot',
+                                        'minecraft:copper_ingot'
+                                      );
+
+                                      event.remove({
+                                        id: 'tconstruct:tools/building/flint_and_brick'
+                                      });
+                                      event.shapeless(
+                                        'tconstruct:flint_and_brick',
+                                        ['minecraft:flint', 'minecraft:brick']
+                                      );
+                                    }
+                                  },
+                                  {
+                                    id: 'bone_block',
                                     recipe: () => {
                                       [
-                                        'rankine:crushing/netherrack_crushing',
-                                        'rankine:crushing/soul_sandstone_crushing',
-                                        'rankine:foraging/soul_sand_foraging',
-                                        'rankine:foraging/soul_soil_foraging'
+                                        'minecraft:bone_meal_from_bone_block',
+                                        'minecraft:bone_block'
                                       ].forEach((id) =>
                                         event.remove({ id: id })
                                       );
-                                    }
+
+                                      event.shaped(
+                                        'minecraft:bone_block',
+                                        ['aaa', 'aaa', 'aaa'],
+                                        {
+                                          a: 'minecraft:bone'
+                                        }
+                                      );
+                                    },
+                                    children: [
+                                      {
+                                        id: 'bone',
+                                        recipe: () => {
+                                          [
+                                            'rankine:crushing/netherrack_crushing',
+                                            'rankine:crushing/soul_sandstone_crushing',
+                                            'rankine:foraging/soul_sand_foraging',
+                                            'rankine:foraging/soul_soil_foraging'
+                                          ].forEach((id) =>
+                                            event.remove({ id: id })
+                                          );
+                                        }
+                                      }
+                                    ]
                                   }
                                 ]
                               }

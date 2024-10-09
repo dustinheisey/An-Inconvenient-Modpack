@@ -2,8 +2,9 @@
 
 An Inconvenient Modpack is a philosophical story of our current times and scathing political commentary about the issues that affect all of us, packaged in the form of an epic minecraft modpack. This is not your average modpack. There is an enormous amount to do here including but not limited to 9 large chapters of content and many collections of side quests, hundreds of advancements and intricately handcrafted progression changes to the more than 200 mods included with the pack. The narrative that will guide you through the content of this pack will make you think deeply about the issues affecting all of us right now.
 
-## Modlist - v0.6.8 | 1.18.2 | Forge 40.2.17
+## Modlist - v0.6.9 | 1.18.2 | Forge 40.2.17
 
+- [thitemstages-1.18.2-0.1.2.jar](https://www.curseforge.com/minecraft/mc-mods/totally-harmonious-item-stages/files/4175008) (by [alexandr_0031](https://www.curseforge.com/members/alexandr_0031/projects))
 - [AdChimneys-1.18.2-8.3.6.0-build.1586.jar](https://www.curseforge.com/minecraft/mc-mods/advanced-chimneys/files/5222264) (by [EnderLanky](https://www.curseforge.com/members/enderlanky/projects))
 - [AdvancementPlaques-1.18.2-1.4.5.1.jar](https://www.curseforge.com/minecraft/mc-mods/advancement-plaques/files/3856125) (by [Grend_G](https://www.curseforge.com/members/grend_g/projects))
 - [AI-Improvements-1.18.2-0.5.2.jar](https://www.curseforge.com/minecraft/mc-mods/ai-improvements/files/4019126) (by [QueenOfMissiles](https://www.curseforge.com/members/queenofmissiles/projects))
@@ -204,7 +205,6 @@ An Inconvenient Modpack is a philosophical story of our current times and scathi
 - [titanium-1.18.2-3.5.11-47.jar](https://www.curseforge.com/minecraft/mc-mods/titanium/files/5151207) (by [Buuz135](https://www.curseforge.com/members/buuz135/projects))
 - [ToastControl-1.18.2-6.0.3.jar](https://www.curseforge.com/minecraft/mc-mods/toast-control/files/3929072) (by [Shadows_of_Fire](https://www.curseforge.com/members/shadows_of_fire/projects))
 - [TofuCraftReload-1.18.2-1.1.2.0.jar](https://www.curseforge.com/minecraft/mc-mods/tofucraftreload/files/4522592) (by [sz0999312](https://www.curseforge.com/members/sz0999312/projects))
-- [thitemstages-1.18.2-0.1.2.jar](https://www.curseforge.com/minecraft/mc-mods/totally-harmonious-item-stages/files/4175008) (by [alexandr_0031](https://www.curseforge.com/members/alexandr_0031/projects))
 - [Totemic-forge-1.18.2-0.12.9.1.jar](https://www.curseforge.com/minecraft/mc-mods/totemic/files/5397584) (by [ljfa2](https://www.curseforge.com/members/ljfa2/projects))
 - [TwilightDelight-1.18.2-1.1.4.jar](https://www.curseforge.com/minecraft/mc-mods/twilight-delight/files/3848595) (by [laokuai233](https://www.curseforge.com/members/laokuai233/projects))
 - [twilighttweaks-1.18.2-1.1.jar](https://www.curseforge.com/minecraft/mc-mods/twilight-tweaks/files/3872724) (by [jodlodi](https://www.curseforge.com/members/jodlodi/projects))

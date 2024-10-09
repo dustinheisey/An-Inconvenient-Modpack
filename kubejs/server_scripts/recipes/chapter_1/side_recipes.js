@@ -67,13 +67,12 @@ onEvent('recipes', (event) => {
             );
 
             event
-              .shaped(
+              .shapeless(
                 Item.of(
                   'patchouli:guide_book',
                   '{"patchouli:book":"rankine:rankine_journal"}'
                 ),
-                ['ab'],
-                { a: 'farmersdelight:canvas', b: 'minecraft:flint' }
+                ['farmersdelight:canvas', 'minecraft:flint']
               )
               .stage('chapter_1');
             event
@@ -316,6 +315,156 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'stone_to_gravel',
+      recipe: () => {
+        [
+          'minecraft:end_stone',
+          'rankine:breccia',
+          'rankine:sylvinite',
+          'rankine:pumice',
+          'rankine:phosphorite',
+          'rankine:chalk'
+        ].forEach((stone) => {
+          event.custom({
+            input: { item: stone },
+            type: 'rankine:crushing',
+            guaranteed: [
+              {
+                item: 'rankine:light_gravel',
+                tier: 'minecraft:stone',
+                count: 1
+              }
+            ]
+          });
+        });
+
+        [
+          'rankine:skarn',
+          'minecraft:gilded_blackstone',
+          'minecraft:cobbled_deepslate',
+          'minecraft:blackstone',
+          'rankine:shale'
+        ].forEach((stone) => {
+          event.custom({
+            input: { item: stone },
+            type: 'rankine:crushing',
+            guaranteed: [
+              {
+                item: 'rankine:dark_gravel',
+                tier: 'minecraft:stone',
+                count: 1
+              }
+            ]
+          });
+        });
+
+        [
+          'minecraft:stone',
+          'minecraft:cobblestone',
+          'rankine:graywacke'
+        ].forEach((stone) => {
+          event.custom({
+            input: { item: stone },
+            type: 'rankine:crushing',
+            guaranteed: [
+              {
+                item: 'minecraft:gravel',
+                tier: 'minecraft:stone',
+                count: 1
+              }
+            ]
+          });
+        });
+      },
+      children: [
+        {
+          id: 'gravel_to_sand',
+          recipe: () => {
+            event.custom({
+              input: { item: 'minecraft:gravel' },
+              type: 'rankine:crushing',
+              guaranteed: [
+                {
+                  item: 'minecraft:sand',
+                  tier: 'minecraft:stone',
+                  count: 1
+                }
+              ]
+            });
+            event.custom({
+              input: { item: 'rankine:light_gravel' },
+              type: 'rankine:crushing',
+              guaranteed: [
+                {
+                  item: 'rankine:white_sand',
+                  tier: 'minecraft:stone',
+                  count: 1
+                }
+              ]
+            });
+            event.custom({
+              input: { item: 'rankine:dark_gravel' },
+              type: 'rankine:crushing',
+              guaranteed: [
+                {
+                  item: 'rankine:black_sand',
+                  tier: 'minecraft:stone',
+                  count: 1
+                }
+              ]
+            });
+          },
+          children: [
+            {
+              id: 'sand_to_silt',
+              recipe: () => {
+                [
+                  'minecraft:sand',
+                  'minecraft:red_sand',
+                  'minecraft:soul_sand',
+                  'blue_skies:midnight_sand',
+                  'blue_skies:crystal_sand',
+                  'rankine:black_sand',
+                  'rankine:white_sand',
+                  'rankine:desert_sand'
+                ].forEach((sand) => {
+                  event.custom({
+                    input: { item: sand },
+                    type: 'rankine:crushing',
+                    guaranteed: [
+                      {
+                        item: 'rankine:silt',
+                        tier: 'minecraft:stone',
+                        count: 1
+                      }
+                    ]
+                  });
+                });
+              },
+              children: [
+                {
+                  id: 'silt_to_clay',
+                  recipe: () => {
+                    event.custom({
+                      input: { item: 'rankine:silt' },
+                      type: 'rankine:crushing',
+                      guaranteed: [
+                        {
+                          item: 'minecraft:clay_ball',
+                          tier: 'minecraft:stone',
+                          count: 1
+                        }
+                      ]
+                    });
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
       id: 'roman_concrete',
       recipe: () => {
         event.remove({ id: 'rankine:mixing/roman_concrete_mixing' });
@@ -368,6 +517,88 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'lit_torch',
+      recipe: () => {
+        event.campfireCooking(
+          'realistictorches:lit_torch',
+          'realistictorches:unlit_torch'
+        );
+      }
+    },
+    {
+      id: 'bandages',
+      recipe: () => {
+        ['pneumaticcraft:bandage'].forEach((id) => event.remove({ id: id }));
+        event.shaped('pneumaticcraft:bandage', ['ab', 'bb'], {
+          a: 'kubejs:mushroom_strip',
+          b: 'rankine:aloe'
+        });
+      },
+      children: [
+        {
+          id: 'mushroom_strip',
+          recipe: () => {
+            [
+              'minecraft:brown_mushroom',
+              'minecraft:red_mushroom',
+              'rankine:oyster_mushroom',
+              'rankine:lions_mane_mushroom',
+              'rankine:sulfur_shelf_mushroom',
+              'rankine:honey_mushroom',
+              'rankine:artist_conk_mushroom',
+              'rankine:turkey_tail_mushroom',
+              'rankine:cinnabar_polypore_mushroom',
+              'rankine:tinder_conk_mushroom',
+              'undergarden:indigo_mushroom',
+              'undergarden:veil_mushroom',
+              'undergarden:ink_mushroom',
+              'undergarden:blood_mushroom',
+              'blue_skies:snowcap_mushroom',
+              'blue_skies:baneful_mushroom'
+            ].forEach((mushroom) => {
+              event.custom({
+                type: 'hexerei:drying_rack',
+                ingredients: [{ item: mushroom }],
+                output: { item: 'kubejs:mushroom_strip' },
+                dryingTimeInTicks: 1000
+              });
+            });
+          }
+        },
+        {
+          id: 'aloe',
+          recipe: () => {
+            event
+              .shapeless('rankine:aloe', [
+                'minecraft:cactus',
+                Item.of('#forge:knives').ignoreNBT()
+              ])
+              .damageIngredient(Item.of('#forge:knives').ignoreNBT());
+          }
+        }
+      ]
+    },
+    {
+      id: 'icebox',
+      recipe: () => {
+        ['cold_sweat:icebox'].forEach((id) => event.remove({ id: id }));
+        event.shaped('cold_sweat:icebox', ['aaa', 'b b', 'bbb'], {
+          a: 'minecraft:cobbled_deepslate_slab',
+          b: '#minecraft:planks'
+        });
+      }
+    },
+    {
+      id: 'boiler',
+      recipe: () => {
+        ['cold_sweat:boiler'].forEach((id) => event.remove({ id: id }));
+        event.shaped('cold_sweat:boiler', ['aaa', 'a a', 'bbb'], {
+          a: '#forge:cobblestone',
+          b: 'minecraft:cobbled_deepslate_slab'
+        });
+      }
+    },
+    {
       id: 'stuffed_pumpkin',
       recipe: () => {
         [
@@ -387,10 +618,18 @@ onEvent('recipes', (event) => {
               e: 'biomancy:living_flesh',
               g: 'rankine:sulfur_shelf_mushroom',
               i: 'rankine:lions_mane_mushroom',
-              h: 'minecraft:pumpkin'
+              h: '#forge:pumpkins'
             }
           )
           .stage('chapter_1');
+      }
+    },
+    {
+      id: 'bronze_cauldron',
+      recipe: () => {
+        event.shaped('minecraft:cauldron', ['a a', 'a a', 'aaa'], {
+          a: 'rankine:bronze_ingot'
+        });
       }
     },
     {
@@ -462,6 +701,22 @@ onEvent('recipes', (event) => {
                   ]
                 }
               ]
+            },
+            {
+              id: 'clays',
+              recipe: () => {
+                event.custom({
+                  type: 'rankine:crushing',
+                  input: { item: 'rankine:sandy_clay' },
+                  guaranteed: [{ item: 'rankine:silty_clay' }]
+                });
+
+                event.custom({
+                  type: 'rankine:crushing',
+                  input: { item: 'rankine:silty_clay' },
+                  guaranteed: [{ item: 'minecraft:clay' }]
+                });
+              }
             },
             {
               id: 'lead_ingot',

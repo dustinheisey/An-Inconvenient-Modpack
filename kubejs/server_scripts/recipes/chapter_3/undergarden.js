@@ -15,7 +15,7 @@ onEvent('recipes', (event) => {
           event.custom({
             type: 'create:milling',
             ingredients: [{ item: 'minecraft:end_stone' }],
-            results: [{ item: '3x occultism:crushed_end_stone' }],
+            results: [{ item: 'occultism:crushed_end_stone', count: 3 }],
             processingTime: 50
           });
         },

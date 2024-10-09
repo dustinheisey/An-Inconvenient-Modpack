@@ -674,7 +674,7 @@ onEvent('recipes', (event) => {
       event.custom({
         type: 'tconstruct:casting_basin',
         fluid: { name: 'tconstruct:blazing_blood', amount: 40 },
-        cast: 'tconstruct:scorched_bricks',
+        cast: { item: 'tconstruct:scorched_bricks' },
         result: 'tconstruct:foundry_controller',
         cooling_time: 900
       });

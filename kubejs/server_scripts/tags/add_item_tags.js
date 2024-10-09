@@ -77,7 +77,15 @@ onEvent('tags.items', (event) => {
   // });
 
   //   event.add("forge:storage_blocks/salt", "rankine:sodium_chloride_block");
-
+  event.add('charcoal_pit:bloomery_fuels', [
+    'malum:block_of_arcane_charcoal',
+    'malum:charcoal_fragment',
+    'malum:arcane_charcoal_fragment',
+    'malum:arcane_charcoal'
+  ]);
+  event.add('forge:knives', ['#forge:tools/knives']);
+  event.add('forge:sand', ['rankine:desert_sand']);
+  event.add('forge:pumpkins', 'minecraft:carved_pumpkin');
   event.add('forge:storage_blocks/salt', 'rankine:pink_salt_block');
 
   event.add('forge:bitumen', 'rankine:bitumen');
