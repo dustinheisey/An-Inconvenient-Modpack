@@ -44,6 +44,7 @@
 - [x] fire clays return on investment
 - [x] make more uses for cactus and mushrooms in chapter 1
 - [x] unification broken again
+- [x] rework feldspar and porcelain production (tin)
 
 ## Advancements
 
@@ -55,11 +56,16 @@
 
 - [x] unification errors
 
+- [x] bloomery doesn't work with charcoal fragment
+- [x] hearth doesn't work with charcoal fragment
+- [ ] regenerate the template world in a hot biome
+- [ ] charcoal pit exploit
+- [ ] fix chapter 1 advancement page icons so it fits in one page height
+- [ ] advancement appearance and titles and descriptions
+- [ ] some ingots from metal block recipes broken
+
 ## Backlog
 
-- [ ] advancement appearance and titles and descriptions
-- [ ] rework feldspar and porcelain production (tin)
-- [ ] some ingots from metal block recipes broken
 - [ ] set correct recipe stages for all custom recipes
   - [ ] redstone engineering block recipe stage
   - [ ] kettle recipe stage
@@ -70,7 +76,6 @@
 - [ ] bees showing in jei too early
 - [ ] fire doesn't go away when you die visually
 - [ ] fix rankine crushing recipes
-- [ ] fix chapter 1 advancement page icons so it fits in one page height
 - [ ] add % info to tree stripping jei
 - [ ] ceramic bucket doesn't show fluid in hand
 - [ ] optimize material staging and remove all extra code
@@ -80,11 +85,6 @@
 - [ ] have to have cheats enabled to do locatebiome, rtp
 - [ ] look into upgradable tools
 - [ ] maybe add traveller's titles back
-- [ ] glass panes staged incorrectly (fix with garbage biome overhaul)
-- [ ] bloomery doesn't work with charcoal fragment
-- [ ] hearth rdoesn't work with charcoal fragment
-- [ ] regenerate the template world in a hot biome
-- [ ] charcoal pit exploit
 
 ## Past Releases
 
