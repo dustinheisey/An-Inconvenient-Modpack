@@ -1,0 +1,20 @@
+{
+  "palette": [
+    {
+      "char": "+",
+      "block": "minecraft:air"
+    },
+    {
+      "char": "`",
+      "block": "minecraft:air"
+    },
+    {
+      "char": "a",
+      "block": "minecraft:air"
+    },
+    {
+      "char": "@",
+      "block": "minecraft:air"
+    }
+  ]
+}

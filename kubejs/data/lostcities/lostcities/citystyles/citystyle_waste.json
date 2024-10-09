@@ -1,0 +1,10 @@
+{
+  "style": "waste",
+  "inherit": "citystyle_standard",
+  "buildingsettings": {
+    "minfloors": 17,
+    "maxfloors": 23,
+    "maxcellars": 6,
+    "buildingchance": 0.5
+  }
+}
