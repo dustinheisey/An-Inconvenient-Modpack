@@ -1268,6 +1268,8 @@ onEvent('tags.items', (event) => {
       'rankine:chalk_slab',
       'rankine:polished_chalk',
       'rankine:chalk',
+      'rankine:orthoclase_feldspar_block',
+      'rankine:orthoclase_feldspar',
       'rankine:plagioclase_feldspar',
       'rankine:plagioclase_feldspar_block',
       'rankine:calcite',
@@ -2521,8 +2523,6 @@ onEvent('tags.items', (event) => {
       'rankine:sulfur_dioxide_gas_bottle'
     ],
     chapter_5_1: [
-      'rankine:orthoclase_feldspar_block',
-      'rankine:orthoclase_feldspar',
       'rankine:cheese',
       'rankine:aged_cheese',
       'rankine:unaged_cheese',
@@ -4479,7 +4479,13 @@ onEvent('tags.items', (event) => {
       'kubejs:dry_unfired_high_refractory_brick',
       'kubejs:grog',
       'kubejs:goddess_heart',
-      'kubejs:juniper_bark'
+      'kubejs:juniper_bark',
+      'kubejs:crushed_orthoclase_feldspar',
+      'kubejs:orthoclase_feldspar_sand',
+      'kubejs:orthoclase_feldspar_silt',
+      'kubejs:crushed_plagioclase_feldspar',
+      'kubejs:plagioclase_feldspar_sand',
+      'kubejs:plagioclase_feldspar_silt'
     ],
     chapter_2: [
       'kubejs:dry_unfired_seared_brick',
@@ -6337,6 +6343,7 @@ onEvent('tags.items', (event) => {
     chapter_4: ['blue_skies:bluebright_bookshelf', 'blue_skies:lunar_bookshelf']
   });
   overrideChapters('chemlib', {
+    chapter_1: ['chemlib:tin_dust'],
     chapter_4: [
       'chemlib:copper_plate',
       'chemlib:aluminum_plate',
@@ -6349,7 +6356,6 @@ onEvent('tags.items', (event) => {
       'chemlib:sulfur_dust',
       'chemlib:silicon_dust',
       'chemlib:zinc_dust',
-      'chemlib:tin_dust',
       'chemlib:gold_dust',
       'chemlib:lead_dust',
       'chemlib:zinc_plate',

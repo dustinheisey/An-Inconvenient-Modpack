@@ -883,8 +883,7 @@ onEvent('recipes', (event) => {
           'create:veridium',
           'create:ochrum',
           'create:asurine',
-          'minecraft:stone',
-          'minecraft:granite'
+          'minecraft:stone'
         ],
         type: 'rankine:rock_generator'
       });
@@ -895,13 +894,6 @@ onEvent('recipes', (event) => {
         result: { block: 'minecraft:stone' },
         input1: { item: 'create:asurine' },
         input2: { item: 'create:crimsite' }
-      });
-      event.custom({
-        type: 'rankine:rock_generator',
-        genType: 'intrusive_igneous',
-        result: { block: 'minecraft:granite' },
-        input1: { item: 'rankine:malachite_block' },
-        input2: { item: 'rankine:graphite_block' }
       });
     },
     metamorphic_generator: () => {

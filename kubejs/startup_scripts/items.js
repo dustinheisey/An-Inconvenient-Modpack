@@ -33,7 +33,8 @@ onEvent('item.registry', (event) => {
         'ultra_high_fire_clay_ball',
         'unfired_ultra_high_refractory_brick',
         'dry_unfired_ultra_high_refractory_brick',
-        'grog'
+        'grog',
+        'porcelain_glaze'
       ],
       goddess_statue: ['goddess_heart']
     },

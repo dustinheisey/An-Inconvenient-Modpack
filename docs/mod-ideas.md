@@ -27,18 +27,6 @@
 - has trash mobs
 - generates pollution
 
-- cactus is used to make gel for bandages
-- dried artist conk or polypore mushroom is used to make bandage covering
-
-- igneous granite recipe
-- find where granite spawns and put in journal
-- granite crushing makes orthoclase feldspar
-- orthoclase feldspar block crush to get crushed orthoclase feldspar
-- crushed orthoclase feldspar crush to get orthoclase feldspar sand
-- orthoclase feldspar sand crush to get crushed orthoclase feldspar silt
-- orthoclase feldspar silt crush to get kaolin
-- kaolin to get kaolinite clay ball
-
 - porcelain production
 - porcelain clay comes from kaolinite + orthoclase feldspar + flint + water
 - 4 plorcelain clay balls makes porcelain clay block
