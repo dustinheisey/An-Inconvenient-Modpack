@@ -16,32 +16,25 @@ global['RECIPE_DEDUPE'] = true;
 
 // Mod priorities
 global['unifypriorities'] = [
+  'immersivepetroleum',
+  'salt',
+  'rankine',
+  'minecraft',
   'chemlib',
   'immersiveengineering',
-  'salt',
   'create',
-  'rankine',
+  'tconstruct',
+  'charcoal_pit',
+  'occultism',
+  'bloodmagic',
+  'createaddition',
   'mekanism',
   'farmersdelight',
   'hexerei',
   'croptopia',
   'productivebees',
   'the_bumblezone',
-  'tconstruct',
-  'bloodmagic',
   'vintageimprovements'
-  // 'immersivepetroleum',
-  // 'rankine',
-  // 'minecraft',
-  // 'chemlib',
-  // 'immersiveengineering',
-  // 'create',
-  // 'tconstruct',
-  // 'charcoal_pit',
-  // 'occultism',
-  // 'bloodmagic',
-  // 'createaddition',
-  // 'mekanism'
 ];
 
 // Items to exclude (will not be unified)
