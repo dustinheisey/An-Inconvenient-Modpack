@@ -15,8 +15,8 @@
   },
   "isUnlocked": true,
   "javaArgsOverride": null,
-  "lastPlayed": "2024-10-09T14:49:53.594Z",
-  "playedCount": 96,
+  "lastPlayed": "2024-10-10T08:51:57.357Z",
+  "playedCount": 97,
   "manifest": null,
   "fileDate": "0001-01-01T00:00:00",
   "installedModpack": null,
@@ -3331,6 +3331,525 @@
       }
     },
     {
+      "instanceID": "44f979db-0943-4429-a3bc-cdd19be41bd8",
+      "modSource": 0,
+      "addonID": 627557,
+      "gameID": 432,
+      "categoryClassID": 6552,
+      "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
+      "name": "Complementary Shaders - Reimagined",
+      "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\shaderpacks",
+      "fileNameOnDisk": "ComplementaryReimagined_r5.2.2.zip",
+      "authors": [{ "Id": 100618333, "Name": "EminGT" }],
+      "primaryAuthor": "EminGT",
+      "primaryCategoryId": 6555,
+      "packageType": 3,
+      "webSiteURL": "https://www.curseforge.com/minecraft/shaders/complementary-reimagined",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/875/481/256/256/638298072734336144.png",
+      "tags": [],
+      "installedFile": {
+        "id": 5507475,
+        "fileName": "ComplementaryReimagined_r5.2.2.zip",
+        "fileDate": "2024-07-06T12:50:53.917Z",
+        "fileLength": 441683,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/5507/475/ComplementaryReimagined_r5.2.2.zip",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "HOW TO INSTALL.txt",
+            "fingerprint": 1066596844,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "License.txt",
+            "fingerprint": 348468745,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_1",
+            "fingerprint": 1565179202,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_2",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_A.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_B.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_C.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_D.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_Versions.txt",
+            "fingerprint": 742770744,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaders",
+            "fingerprint": 2192072800,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1741510194,
+        "gameVersion": [
+          "1.17.1",
+          "1.19.3",
+          "1.20.2",
+          "1.21",
+          "1.20.5",
+          "1.9.4",
+          "1.14.4",
+          "1.19.4",
+          "1.16.5",
+          "1.10.2",
+          "1.18.2",
+          "1.19.2",
+          "1.20.3",
+          "1.15.2",
+          "1.20.1",
+          "1.20",
+          "OptiFine",
+          "1.20.6",
+          "1.19.1",
+          "1.20.4",
+          "1.21.1",
+          "1.11.2",
+          "Iris",
+          "1.12.2",
+          "1.19",
+          "1.8.9",
+          "1.13.2"
+        ],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.17.1",
+            "gameVersionName": "1.17.1",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.2",
+            "gameVersionName": "1.20.2",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21",
+            "gameVersionName": "1.21",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.20.5",
+            "gameVersionName": "1.20.5",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.9.4",
+            "gameVersionName": "1.9.4",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.14.4",
+            "gameVersionName": "1.14.4",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.19.4",
+            "gameVersionName": "1.19.4",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.16.5",
+            "gameVersionName": "1.16.5",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.10.2",
+            "gameVersionName": "1.10.2",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.3",
+            "gameVersionName": "1.20.3",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.15.2",
+            "gameVersionName": "1.15.2",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.20.1",
+            "gameVersionName": "1.20.1",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20",
+            "gameVersionName": "1.20",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "OptiFine",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.20.6",
+            "gameVersionName": "1.20.6",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.4",
+            "gameVersionName": "1.20.4",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21.1",
+            "gameVersionName": "1.21.1",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.11.2",
+            "gameVersionName": "1.11.2",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Iris",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.12.2",
+            "gameVersionName": "1.12.2",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.8.9",
+            "gameVersionName": "1.8.9",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.13.2",
+            "gameVersionName": "1.13.2",
+            "gameVersionTypeId": 55023
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 627557,
+        "fileNameOnDisk": "ComplementaryReimagined_r5.2.2.zip",
+        "hashes": [
+          { "type": 1, "value": "07cd8165acf24ec8ddada03f60729537687dd435" },
+          { "type": 2, "value": "a0852d3fddaf2c7f957ad6e1b8624513" }
+        ]
+      },
+      "dateInstalled": "2024-10-10T09:28:31.7691989Z",
+      "dateUpdated": "2024-10-10T09:28:31.7704981Z",
+      "status": 4,
+      "installSource": 6,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": null,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 5507475,
+        "fileName": "ComplementaryReimagined_r5.2.2.zip",
+        "fileDate": "2024-07-06T12:50:53.917Z",
+        "fileLength": 441683,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/5507/475/ComplementaryReimagined_r5.2.2.zip",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "HOW TO INSTALL.txt",
+            "fingerprint": 1066596844,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "License.txt",
+            "fingerprint": 348468745,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_1",
+            "fingerprint": 1565179202,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_2",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_A.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_B.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_C.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_D.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_Versions.txt",
+            "fingerprint": 742770744,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaders",
+            "fingerprint": 2192072800,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1741510194,
+        "gameVersion": [
+          "1.17.1",
+          "1.19.3",
+          "1.20.2",
+          "1.21",
+          "1.20.5",
+          "1.9.4",
+          "1.14.4",
+          "1.19.4",
+          "1.16.5",
+          "1.10.2",
+          "1.18.2",
+          "1.19.2",
+          "1.20.3",
+          "1.15.2",
+          "1.20.1",
+          "1.20",
+          "OptiFine",
+          "1.20.6",
+          "1.19.1",
+          "1.20.4",
+          "1.21.1",
+          "1.11.2",
+          "Iris",
+          "1.12.2",
+          "1.19",
+          "1.8.9",
+          "1.13.2"
+        ],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.17.1",
+            "gameVersionName": "1.17.1",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.2",
+            "gameVersionName": "1.20.2",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21",
+            "gameVersionName": "1.21",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.20.5",
+            "gameVersionName": "1.20.5",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.9.4",
+            "gameVersionName": "1.9.4",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.14.4",
+            "gameVersionName": "1.14.4",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.19.4",
+            "gameVersionName": "1.19.4",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.16.5",
+            "gameVersionName": "1.16.5",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.10.2",
+            "gameVersionName": "1.10.2",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.3",
+            "gameVersionName": "1.20.3",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.15.2",
+            "gameVersionName": "1.15.2",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.20.1",
+            "gameVersionName": "1.20.1",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20",
+            "gameVersionName": "1.20",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "OptiFine",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.20.6",
+            "gameVersionName": "1.20.6",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.4",
+            "gameVersionName": "1.20.4",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21.1",
+            "gameVersionName": "1.21.1",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.11.2",
+            "gameVersionName": "1.11.2",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Iris",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.12.2",
+            "gameVersionName": "1.12.2",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.8.9",
+            "gameVersionName": "1.8.9",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.13.2",
+            "gameVersionName": "1.13.2",
+            "gameVersionTypeId": 55023
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 627557,
+        "fileNameOnDisk": "ComplementaryReimagined_r5.2.2.zip",
+        "hashes": [
+          { "type": 1, "value": "07cd8165acf24ec8ddada03f60729537687dd435" },
+          { "type": 2, "value": "a0852d3fddaf2c7f957ad6e1b8624513" }
+        ]
+      }
+    },
+    {
       "instanceID": "e95045c7-1104-4632-acc4-43e4a4380394",
       "modSource": 0,
       "addonID": 268560,
@@ -6609,6 +7128,525 @@
         "hashes": [
           { "type": 1, "value": "3fbb7deca917a4b3064788cf229e67a1562fb121" },
           { "type": 2, "value": "6e7d55c115ee2b58bc59289cf48c0488" }
+        ]
+      }
+    },
+    {
+      "instanceID": "83534c57-d77e-4069-b237-438d566d6eb7",
+      "modSource": 0,
+      "addonID": 385587,
+      "gameID": 432,
+      "categoryClassID": 6552,
+      "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
+      "name": "Complementary Shaders - Unbound",
+      "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\shaderpacks",
+      "fileNameOnDisk": "ComplementaryUnbound_r5.2.2.zip",
+      "authors": [{ "Id": 100618333, "Name": "EminGT" }],
+      "primaryAuthor": "EminGT",
+      "primaryCategoryId": 6554,
+      "packageType": 3,
+      "webSiteURL": "https://www.curseforge.com/minecraft/shaders/complementary-unbound",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/875/480/256/256/638298072228596362.png",
+      "tags": [],
+      "installedFile": {
+        "id": 5507479,
+        "fileName": "ComplementaryUnbound_r5.2.2.zip",
+        "fileDate": "2024-07-06T12:52:03.363Z",
+        "fileLength": 441687,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/5507/479/ComplementaryUnbound_r5.2.2.zip",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "HOW TO INSTALL.txt",
+            "fingerprint": 1066596844,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "License.txt",
+            "fingerprint": 348468745,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_1",
+            "fingerprint": 1565179202,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_2",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_A.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_B.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_C.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_D.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_Versions.txt",
+            "fingerprint": 742770744,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaders",
+            "fingerprint": 2675086781,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 335144053,
+        "gameVersion": [
+          "1.17.1",
+          "1.19.3",
+          "1.20.2",
+          "1.21",
+          "1.20.5",
+          "1.9.4",
+          "1.14.4",
+          "1.19.4",
+          "1.16.5",
+          "1.10.2",
+          "1.18.2",
+          "1.19.2",
+          "1.20.3",
+          "1.15.2",
+          "1.20.1",
+          "1.20",
+          "OptiFine",
+          "1.20.6",
+          "1.19.1",
+          "1.20.4",
+          "1.21.1",
+          "1.11.2",
+          "Iris",
+          "1.12.2",
+          "1.19",
+          "1.8.9",
+          "1.13.2"
+        ],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.17.1",
+            "gameVersionName": "1.17.1",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.2",
+            "gameVersionName": "1.20.2",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21",
+            "gameVersionName": "1.21",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.20.5",
+            "gameVersionName": "1.20.5",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.9.4",
+            "gameVersionName": "1.9.4",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.14.4",
+            "gameVersionName": "1.14.4",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.19.4",
+            "gameVersionName": "1.19.4",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.16.5",
+            "gameVersionName": "1.16.5",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.10.2",
+            "gameVersionName": "1.10.2",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.3",
+            "gameVersionName": "1.20.3",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.15.2",
+            "gameVersionName": "1.15.2",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.20.1",
+            "gameVersionName": "1.20.1",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20",
+            "gameVersionName": "1.20",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "OptiFine",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.20.6",
+            "gameVersionName": "1.20.6",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.4",
+            "gameVersionName": "1.20.4",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21.1",
+            "gameVersionName": "1.21.1",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.11.2",
+            "gameVersionName": "1.11.2",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Iris",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.12.2",
+            "gameVersionName": "1.12.2",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.8.9",
+            "gameVersionName": "1.8.9",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.13.2",
+            "gameVersionName": "1.13.2",
+            "gameVersionTypeId": 55023
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 385587,
+        "fileNameOnDisk": "ComplementaryUnbound_r5.2.2.zip",
+        "hashes": [
+          { "type": 1, "value": "f0c0cbd2059b7a464b9e0f061ddfa6f0980849e1" },
+          { "type": 2, "value": "77b72dd3824ad2d6ddb1f952a786137c" }
+        ]
+      },
+      "dateInstalled": "2024-10-10T09:28:30.5785862Z",
+      "dateUpdated": "2024-10-10T09:28:30.5807483Z",
+      "status": 4,
+      "installSource": 6,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": null,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 5507479,
+        "fileName": "ComplementaryUnbound_r5.2.2.zip",
+        "fileDate": "2024-07-06T12:52:03.363Z",
+        "fileLength": 441687,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/5507/479/ComplementaryUnbound_r5.2.2.zip",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "HOW TO INSTALL.txt",
+            "fingerprint": 1066596844,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "License.txt",
+            "fingerprint": 348468745,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_1",
+            "fingerprint": 1565179202,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_2",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_A.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_B.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_C.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_D.placebo",
+            "fingerprint": 2702737872,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaderFile_Versions.txt",
+            "fingerprint": 742770744,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaders",
+            "fingerprint": 2675086781,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 335144053,
+        "gameVersion": [
+          "1.17.1",
+          "1.19.3",
+          "1.20.2",
+          "1.21",
+          "1.20.5",
+          "1.9.4",
+          "1.14.4",
+          "1.19.4",
+          "1.16.5",
+          "1.10.2",
+          "1.18.2",
+          "1.19.2",
+          "1.20.3",
+          "1.15.2",
+          "1.20.1",
+          "1.20",
+          "OptiFine",
+          "1.20.6",
+          "1.19.1",
+          "1.20.4",
+          "1.21.1",
+          "1.11.2",
+          "Iris",
+          "1.12.2",
+          "1.19",
+          "1.8.9",
+          "1.13.2"
+        ],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.17.1",
+            "gameVersionName": "1.17.1",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.2",
+            "gameVersionName": "1.20.2",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21",
+            "gameVersionName": "1.21",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.20.5",
+            "gameVersionName": "1.20.5",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.9.4",
+            "gameVersionName": "1.9.4",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.14.4",
+            "gameVersionName": "1.14.4",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.19.4",
+            "gameVersionName": "1.19.4",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.16.5",
+            "gameVersionName": "1.16.5",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.10.2",
+            "gameVersionName": "1.10.2",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.3",
+            "gameVersionName": "1.20.3",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.15.2",
+            "gameVersionName": "1.15.2",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.20.1",
+            "gameVersionName": "1.20.1",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20",
+            "gameVersionName": "1.20",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "OptiFine",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.20.6",
+            "gameVersionName": "1.20.6",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.4",
+            "gameVersionName": "1.20.4",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21.1",
+            "gameVersionName": "1.21.1",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.11.2",
+            "gameVersionName": "1.11.2",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Iris",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.12.2",
+            "gameVersionName": "1.12.2",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.8.9",
+            "gameVersionName": "1.8.9",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.13.2",
+            "gameVersionName": "1.13.2",
+            "gameVersionTypeId": 55023
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 385587,
+        "fileNameOnDisk": "ComplementaryUnbound_r5.2.2.zip",
+        "hashes": [
+          { "type": 1, "value": "f0c0cbd2059b7a464b9e0f061ddfa6f0980849e1" },
+          { "type": 2, "value": "77b72dd3824ad2d6ddb1f952a786137c" }
         ]
       }
     },
@@ -30010,6 +31048,1103 @@
         "hashes": [
           { "type": 1, "value": "e14d072aa97605ac77f23f793578270c68d2624c" },
           { "type": 2, "value": "ab3e3ae18dae2302fa4573cdcebd2cf4" }
+        ]
+      }
+    },
+    {
+      "instanceID": "8e9c8682-7c02-4ed5-be5a-1127b46d4ecb",
+      "modSource": 0,
+      "addonID": 618217,
+      "gameID": 432,
+      "categoryClassID": 6552,
+      "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
+      "name": "🎃 Insanity Shader",
+      "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\shaderpacks",
+      "fileNameOnDisk": "Insanity-Shader-Universal-v1.650.zip",
+      "authors": [{ "Id": 103001449, "Name": "ElocinDev" }],
+      "primaryAuthor": "ElocinDev",
+      "primaryCategoryId": 6554,
+      "packageType": 3,
+      "webSiteURL": "https://www.curseforge.com/minecraft/shaders/insanity-shader",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/793/487/256/256/638151403748357181.png",
+      "tags": [],
+      "installedFile": {
+        "id": 5424730,
+        "fileName": "Insanity-Shader-Universal-v1.650.zip",
+        "fileDate": "2024-06-13T18:23:37.483Z",
+        "fileLength": 1037373,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/5424/730/Insanity-Shader-Universal-v1.650.zip",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "credits.txt",
+            "fingerprint": 1724141522,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaders",
+            "fingerprint": 2710988315,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "changelog.txt",
+            "fingerprint": 2436893637,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1446888544,
+        "gameVersion": [
+          "1.16-Snapshot",
+          "1.17.1",
+          "1.9.1",
+          "1.16.3",
+          "1.13.1",
+          "1.9.3",
+          "1.8.7",
+          "1.19.3",
+          "1.20.2",
+          "1.21",
+          "1.15-Snapshot",
+          "1.16.1",
+          "1.18.1",
+          "1.19.4-Snapshot",
+          "1.20.5",
+          "1.10-Snapshot",
+          "1.9.4",
+          "1.9.2",
+          "1.8.4",
+          "1.14.4",
+          "1.14.1",
+          "1.12.1",
+          "1.17",
+          "1.12",
+          "1.20.2-Snapshot",
+          "1.20.5-Snapshot",
+          "1.14.3",
+          "1.15",
+          "1.16",
+          "1.13",
+          "1.19.4",
+          "1.8.8",
+          "1.19-Snapshot",
+          "1.16.5",
+          "1.10.2",
+          "1.8-Snapshot",
+          "1.8.3",
+          "1.11",
+          "1.18.2",
+          "1.19.2",
+          "1.20.3-Snapshot",
+          "1.20.3",
+          "1.8.6",
+          "1.15.2",
+          "1.14",
+          "1.20.1",
+          "1.20",
+          "OptiFine",
+          "1.20.6",
+          "1.10",
+          "1.10.1",
+          "1.19.1",
+          "1.20.4",
+          "1.21-Snapshot",
+          "1.20-Snapshot",
+          "1.7.10",
+          "1.8",
+          "1.17-Snapshot",
+          "1.18",
+          "1.9-Snapshot",
+          "1.8.2",
+          "1.16.4",
+          "1.14.2",
+          "1.18-Snapshot",
+          "1.11.1",
+          "1.16.2",
+          "1.11.2",
+          "Iris",
+          "1.9",
+          "1.8.5",
+          "1.11-Snapshot",
+          "1.12.2",
+          "1.19",
+          "1.8.9",
+          "1.8.1",
+          "1.13-Snapshot",
+          "1.14-Snapshot",
+          "1.12-Snapshot",
+          "1.13.2",
+          "1.15.1",
+          "1.19.3-Snapshot"
+        ],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.16",
+            "gameVersionName": "1.16-Snapshot",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.17.1",
+            "gameVersionName": "1.17.1",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.9.1",
+            "gameVersionName": "1.9.1",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.16.3",
+            "gameVersionName": "1.16.3",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.13.1",
+            "gameVersionName": "1.13.1",
+            "gameVersionTypeId": 55023
+          },
+          {
+            "gameVersion": "1.9.3",
+            "gameVersionName": "1.9.3",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.8.7",
+            "gameVersionName": "1.8.7",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.2",
+            "gameVersionName": "1.20.2",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21",
+            "gameVersionName": "1.21",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.15",
+            "gameVersionName": "1.15-Snapshot",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.16.1",
+            "gameVersionName": "1.16.1",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.18.1",
+            "gameVersionName": "1.18.1",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.19.4",
+            "gameVersionName": "1.19.4-Snapshot",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.5",
+            "gameVersionName": "1.20.5",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.10",
+            "gameVersionName": "1.10-Snapshot",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.9.4",
+            "gameVersionName": "1.9.4",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.9.2",
+            "gameVersionName": "1.9.2",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.8.4",
+            "gameVersionName": "1.8.4",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.14.4",
+            "gameVersionName": "1.14.4",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.14.1",
+            "gameVersionName": "1.14.1",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.12.1",
+            "gameVersionName": "1.12.1",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.17",
+            "gameVersionName": "1.17",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.12",
+            "gameVersionName": "1.12",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.20.2",
+            "gameVersionName": "1.20.2-Snapshot",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20.5",
+            "gameVersionName": "1.20.5-Snapshot",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.14.3",
+            "gameVersionName": "1.14.3",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.15",
+            "gameVersionName": "1.15",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.16",
+            "gameVersionName": "1.16",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.13",
+            "gameVersionName": "1.13",
+            "gameVersionTypeId": 55023
+          },
+          {
+            "gameVersion": "1.19.4",
+            "gameVersionName": "1.19.4",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.8.8",
+            "gameVersionName": "1.8.8",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19-Snapshot",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.16.5",
+            "gameVersionName": "1.16.5",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.10.2",
+            "gameVersionName": "1.10.2",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.8",
+            "gameVersionName": "1.8-Snapshot",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.8.3",
+            "gameVersionName": "1.8.3",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.11",
+            "gameVersionName": "1.11",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.3",
+            "gameVersionName": "1.20.3-Snapshot",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20.3",
+            "gameVersionName": "1.20.3",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.8.6",
+            "gameVersionName": "1.8.6",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.15.2",
+            "gameVersionName": "1.15.2",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.14",
+            "gameVersionName": "1.14",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.20.1",
+            "gameVersionName": "1.20.1",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20",
+            "gameVersionName": "1.20",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "OptiFine",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.20.6",
+            "gameVersionName": "1.20.6",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.10",
+            "gameVersionName": "1.10",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.10.1",
+            "gameVersionName": "1.10.1",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.4",
+            "gameVersionName": "1.20.4",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21",
+            "gameVersionName": "1.21-Snapshot",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.20",
+            "gameVersionName": "1.20-Snapshot",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.7.10",
+            "gameVersionName": "1.7.10",
+            "gameVersionTypeId": 5
+          },
+          {
+            "gameVersion": "1.8",
+            "gameVersionName": "1.8",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.17",
+            "gameVersionName": "1.17-Snapshot",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.18",
+            "gameVersionName": "1.18",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.9",
+            "gameVersionName": "1.9-Snapshot",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.8.2",
+            "gameVersionName": "1.8.2",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.16.4",
+            "gameVersionName": "1.16.4",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.14.2",
+            "gameVersionName": "1.14.2",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.18",
+            "gameVersionName": "1.18-Snapshot",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.11.1",
+            "gameVersionName": "1.11.1",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "1.16.2",
+            "gameVersionName": "1.16.2",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.11.2",
+            "gameVersionName": "1.11.2",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Iris",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.9",
+            "gameVersionName": "1.9",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.8.5",
+            "gameVersionName": "1.8.5",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.11",
+            "gameVersionName": "1.11-Snapshot",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "1.12.2",
+            "gameVersionName": "1.12.2",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.8.9",
+            "gameVersionName": "1.8.9",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.8.1",
+            "gameVersionName": "1.8.1",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.13",
+            "gameVersionName": "1.13-Snapshot",
+            "gameVersionTypeId": 55023
+          },
+          {
+            "gameVersion": "1.14",
+            "gameVersionName": "1.14-Snapshot",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.12",
+            "gameVersionName": "1.12-Snapshot",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.13.2",
+            "gameVersionName": "1.13.2",
+            "gameVersionTypeId": 55023
+          },
+          {
+            "gameVersion": "1.15.1",
+            "gameVersionName": "1.15.1",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3-Snapshot",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 618217,
+        "fileNameOnDisk": "Insanity-Shader-Universal-v1.650.zip",
+        "hashes": [
+          { "type": 1, "value": "10f06492bd7cdab8b71de10033e7f199c94e5717" },
+          { "type": 2, "value": "97a61aad0133f120e536a420b92d4e88" }
+        ]
+      },
+      "dateInstalled": "2024-10-10T09:28:36.9002272Z",
+      "dateUpdated": "2024-10-10T09:28:36.903355Z",
+      "status": 4,
+      "installSource": 6,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": null,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 5424730,
+        "fileName": "Insanity-Shader-Universal-v1.650.zip",
+        "fileDate": "2024-06-13T18:23:37.483Z",
+        "fileLength": 1037373,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/5424/730/Insanity-Shader-Universal-v1.650.zip",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "credits.txt",
+            "fingerprint": 1724141522,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "shaders",
+            "fingerprint": 2710988315,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "changelog.txt",
+            "fingerprint": 2436893637,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 1446888544,
+        "gameVersion": [
+          "1.16-Snapshot",
+          "1.17.1",
+          "1.9.1",
+          "1.16.3",
+          "1.13.1",
+          "1.9.3",
+          "1.8.7",
+          "1.19.3",
+          "1.20.2",
+          "1.21",
+          "1.15-Snapshot",
+          "1.16.1",
+          "1.18.1",
+          "1.19.4-Snapshot",
+          "1.20.5",
+          "1.10-Snapshot",
+          "1.9.4",
+          "1.9.2",
+          "1.8.4",
+          "1.14.4",
+          "1.14.1",
+          "1.12.1",
+          "1.17",
+          "1.12",
+          "1.20.2-Snapshot",
+          "1.20.5-Snapshot",
+          "1.14.3",
+          "1.15",
+          "1.16",
+          "1.13",
+          "1.19.4",
+          "1.8.8",
+          "1.19-Snapshot",
+          "1.16.5",
+          "1.10.2",
+          "1.8-Snapshot",
+          "1.8.3",
+          "1.11",
+          "1.18.2",
+          "1.19.2",
+          "1.20.3-Snapshot",
+          "1.20.3",
+          "1.8.6",
+          "1.15.2",
+          "1.14",
+          "1.20.1",
+          "1.20",
+          "OptiFine",
+          "1.20.6",
+          "1.10",
+          "1.10.1",
+          "1.19.1",
+          "1.20.4",
+          "1.21-Snapshot",
+          "1.20-Snapshot",
+          "1.7.10",
+          "1.8",
+          "1.17-Snapshot",
+          "1.18",
+          "1.9-Snapshot",
+          "1.8.2",
+          "1.16.4",
+          "1.14.2",
+          "1.18-Snapshot",
+          "1.11.1",
+          "1.16.2",
+          "1.11.2",
+          "Iris",
+          "1.9",
+          "1.8.5",
+          "1.11-Snapshot",
+          "1.12.2",
+          "1.19",
+          "1.8.9",
+          "1.8.1",
+          "1.13-Snapshot",
+          "1.14-Snapshot",
+          "1.12-Snapshot",
+          "1.13.2",
+          "1.15.1",
+          "1.19.3-Snapshot"
+        ],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.16",
+            "gameVersionName": "1.16-Snapshot",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.17.1",
+            "gameVersionName": "1.17.1",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.9.1",
+            "gameVersionName": "1.9.1",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.16.3",
+            "gameVersionName": "1.16.3",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.13.1",
+            "gameVersionName": "1.13.1",
+            "gameVersionTypeId": 55023
+          },
+          {
+            "gameVersion": "1.9.3",
+            "gameVersionName": "1.9.3",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.8.7",
+            "gameVersionName": "1.8.7",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.2",
+            "gameVersionName": "1.20.2",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21",
+            "gameVersionName": "1.21",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.15",
+            "gameVersionName": "1.15-Snapshot",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.16.1",
+            "gameVersionName": "1.16.1",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.18.1",
+            "gameVersionName": "1.18.1",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.19.4",
+            "gameVersionName": "1.19.4-Snapshot",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.5",
+            "gameVersionName": "1.20.5",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.10",
+            "gameVersionName": "1.10-Snapshot",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.9.4",
+            "gameVersionName": "1.9.4",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.9.2",
+            "gameVersionName": "1.9.2",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.8.4",
+            "gameVersionName": "1.8.4",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.14.4",
+            "gameVersionName": "1.14.4",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.14.1",
+            "gameVersionName": "1.14.1",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.12.1",
+            "gameVersionName": "1.12.1",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.17",
+            "gameVersionName": "1.17",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.12",
+            "gameVersionName": "1.12",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.20.2",
+            "gameVersionName": "1.20.2-Snapshot",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20.5",
+            "gameVersionName": "1.20.5-Snapshot",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.14.3",
+            "gameVersionName": "1.14.3",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.15",
+            "gameVersionName": "1.15",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.16",
+            "gameVersionName": "1.16",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.13",
+            "gameVersionName": "1.13",
+            "gameVersionTypeId": 55023
+          },
+          {
+            "gameVersion": "1.19.4",
+            "gameVersionName": "1.19.4",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.8.8",
+            "gameVersionName": "1.8.8",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19-Snapshot",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.16.5",
+            "gameVersionName": "1.16.5",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.10.2",
+            "gameVersionName": "1.10.2",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.8",
+            "gameVersionName": "1.8-Snapshot",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.8.3",
+            "gameVersionName": "1.8.3",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.11",
+            "gameVersionName": "1.11",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.19.2",
+            "gameVersionName": "1.19.2",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.3",
+            "gameVersionName": "1.20.3-Snapshot",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20.3",
+            "gameVersionName": "1.20.3",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.8.6",
+            "gameVersionName": "1.8.6",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.15.2",
+            "gameVersionName": "1.15.2",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.14",
+            "gameVersionName": "1.14",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.20.1",
+            "gameVersionName": "1.20.1",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.20",
+            "gameVersionName": "1.20",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "OptiFine",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.20.6",
+            "gameVersionName": "1.20.6",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.10",
+            "gameVersionName": "1.10",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.10.1",
+            "gameVersionName": "1.10.1",
+            "gameVersionTypeId": 572
+          },
+          {
+            "gameVersion": "1.19.1",
+            "gameVersionName": "1.19.1",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.20.4",
+            "gameVersionName": "1.20.4",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.21",
+            "gameVersionName": "1.21-Snapshot",
+            "gameVersionTypeId": 77784
+          },
+          {
+            "gameVersion": "1.20",
+            "gameVersionName": "1.20-Snapshot",
+            "gameVersionTypeId": 75125
+          },
+          {
+            "gameVersion": "1.7.10",
+            "gameVersionName": "1.7.10",
+            "gameVersionTypeId": 5
+          },
+          {
+            "gameVersion": "1.8",
+            "gameVersionName": "1.8",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.17",
+            "gameVersionName": "1.17-Snapshot",
+            "gameVersionTypeId": 73242
+          },
+          {
+            "gameVersion": "1.18",
+            "gameVersionName": "1.18",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.9",
+            "gameVersionName": "1.9-Snapshot",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.8.2",
+            "gameVersionName": "1.8.2",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.16.4",
+            "gameVersionName": "1.16.4",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.14.2",
+            "gameVersionName": "1.14.2",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.18",
+            "gameVersionName": "1.18-Snapshot",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.11.1",
+            "gameVersionName": "1.11.1",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "1.16.2",
+            "gameVersionName": "1.16.2",
+            "gameVersionTypeId": 70886
+          },
+          {
+            "gameVersion": "1.11.2",
+            "gameVersionName": "1.11.2",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Iris",
+            "gameVersionTypeId": 76871
+          },
+          {
+            "gameVersion": "1.9",
+            "gameVersionName": "1.9",
+            "gameVersionTypeId": 552
+          },
+          {
+            "gameVersion": "1.8.5",
+            "gameVersionName": "1.8.5",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.11",
+            "gameVersionName": "1.11-Snapshot",
+            "gameVersionTypeId": 599
+          },
+          {
+            "gameVersion": "1.12.2",
+            "gameVersionName": "1.12.2",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.19",
+            "gameVersionName": "1.19",
+            "gameVersionTypeId": 73407
+          },
+          {
+            "gameVersion": "1.8.9",
+            "gameVersionName": "1.8.9",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.8.1",
+            "gameVersionName": "1.8.1",
+            "gameVersionTypeId": 4
+          },
+          {
+            "gameVersion": "1.13",
+            "gameVersionName": "1.13-Snapshot",
+            "gameVersionTypeId": 55023
+          },
+          {
+            "gameVersion": "1.14",
+            "gameVersionName": "1.14-Snapshot",
+            "gameVersionTypeId": 64806
+          },
+          {
+            "gameVersion": "1.12",
+            "gameVersionName": "1.12-Snapshot",
+            "gameVersionTypeId": 628
+          },
+          {
+            "gameVersion": "1.13.2",
+            "gameVersionName": "1.13.2",
+            "gameVersionTypeId": 55023
+          },
+          {
+            "gameVersion": "1.15.1",
+            "gameVersionName": "1.15.1",
+            "gameVersionTypeId": 68722
+          },
+          {
+            "gameVersion": "1.19.3",
+            "gameVersionName": "1.19.3-Snapshot",
+            "gameVersionTypeId": 73407
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 618217,
+        "fileNameOnDisk": "Insanity-Shader-Universal-v1.650.zip",
+        "hashes": [
+          { "type": 1, "value": "10f06492bd7cdab8b71de10033e7f199c94e5717" },
+          { "type": 2, "value": "97a61aad0133f120e536a420b92d4e88" }
         ]
       }
     },
