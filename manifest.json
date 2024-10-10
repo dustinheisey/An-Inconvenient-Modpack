@@ -611,8 +611,8 @@
     {
       "required": true,
       "projectID": 263420,
-      "fileID": 5685648,
-      "downloadUrl": "https://edge.forgecdn.net/files/5685/648/Xaeros_Minimap_24.4.0_Forge_1.18.2.jar"
+      "fileID": 5772994,
+      "downloadUrl": "https://edge.forgecdn.net/files/5772/994/Xaeros_Minimap_24.5.0_Forge_1.18.2.jar"
     },
     {
       "required": true,
@@ -1108,6 +1108,12 @@
     },
     {
       "required": true,
+      "projectID": 504908,
+      "fileID": 3778233,
+      "downloadUrl": "https://edge.forgecdn.net/files/3778/233/TravelersTitles-1.18.2-Forge-2.1.1.jar"
+    },
+    {
+      "required": true,
       "projectID": 382216,
       "fileID": 3991478,
       "downloadUrl": "https://edge.forgecdn.net/files/3991/478/blueprint-1.18.2-5.5.0.jar"
@@ -1255,6 +1261,12 @@
       "projectID": 689238,
       "fileID": 4032731,
       "downloadUrl": "https://edge.forgecdn.net/files/4032/731/YungsBetterOceanMonuments-1.18.2-Forge-1.0.3.jar"
+    },
+    {
+      "required": true,
+      "projectID": 679106,
+      "fileID": 4061372,
+      "downloadUrl": "https://edge.forgecdn.net/files/4061/372/Visual%20Titles.zip"
     },
     {
       "required": true,
