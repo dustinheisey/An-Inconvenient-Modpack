@@ -480,7 +480,7 @@ onEvent('recipes', (event) => {
 
       event.custom({
         type: 'immersiveengineering:crusher',
-        result: { item: 'mekanism:dusts_coal' },
+        result: { item: 'mekanism:dust_coal' },
         input: { item: 'minecraft:coal' },
         secondaries: [],
         energy: 2400
