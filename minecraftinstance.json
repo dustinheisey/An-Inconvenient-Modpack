@@ -15,8 +15,8 @@
   },
   "isUnlocked": true,
   "javaArgsOverride": null,
-  "lastPlayed": "2024-10-06T08:07:33.968Z",
-  "playedCount": 77,
+  "lastPlayed": "2024-10-09T14:49:53.594Z",
+  "playedCount": 96,
   "manifest": null,
   "fileDate": "0001-01-01T00:00:00",
   "installedModpack": null,
@@ -17934,7 +17934,7 @@
       "gameID": 432,
       "categoryClassID": 6,
       "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
-      "name": "Totally Harmonious Item Stages",
+      "name": "[DISCONTINUED] Totally Harmonious Item Stages (Use Decursio Stages for 1.20.1)",
       "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\mods",
       "fileNameOnDisk": "thitemstages-1.18.2-0.1.2.jar",
       "authors": [{ "Id": 102778708, "Name": "alexandr_0031" }],
@@ -19483,7 +19483,7 @@
       "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
       "name": "Xaero's Minimap",
       "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\mods",
-      "fileNameOnDisk": "Xaeros_Minimap_24.4.0_Forge_1.18.2.jar",
+      "fileNameOnDisk": "Xaeros_Minimap_24.5.0_Forge_1.18.2.jar",
       "authors": [{ "Id": 12362980, "Name": "xaero96" }],
       "primaryAuthor": "xaero96",
       "primaryCategoryId": 423,
@@ -19492,30 +19492,30 @@
       "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/92/854/256/256/636258666554688823.png",
       "tags": [],
       "installedFile": {
-        "id": 5685648,
-        "fileName": "Xaeros_Minimap_24.4.0_Forge_1.18.2.jar",
-        "fileDate": "2024-09-02T06:50:54.637Z",
-        "fileLength": 1527429,
+        "id": 5772994,
+        "fileName": "Xaeros_Minimap_24.5.0_Forge_1.18.2.jar",
+        "fileDate": "2024-10-01T07:34:46.003Z",
+        "fileLength": 1578721,
         "releaseType": 1,
         "fileStatus": 4,
-        "downloadUrl": "https://edge.forgecdn.net/files/5685/648/Xaeros_Minimap_24.4.0_Forge_1.18.2.jar",
+        "downloadUrl": "https://edge.forgecdn.net/files/5772/994/Xaeros_Minimap_24.5.0_Forge_1.18.2.jar",
         "isAlternate": false,
         "alternateFileId": 0,
         "serverPackFileId": 0,
         "dependencies": [
-          { "addonId": 636608, "type": 2 },
-          { "addonId": 317780, "type": 2 }
+          { "addonId": 317780, "type": 2 },
+          { "addonId": 636608, "type": 2 }
         ],
         "isAvailable": true,
         "modules": [
           {
             "foldername": "META-INF",
-            "fingerprint": 3917127608,
+            "fingerprint": 1802158793,
             "invalidFingerprint": false
           },
           {
             "foldername": "assets",
-            "fingerprint": 525646961,
+            "fingerprint": 2471876227,
             "invalidFingerprint": false
           },
           {
@@ -19525,11 +19525,11 @@
           },
           {
             "foldername": "xaero",
-            "fingerprint": 762633374,
+            "fingerprint": 654163901,
             "invalidFingerprint": false
           }
         ],
-        "packageFingerprint": 2753490969,
+        "packageFingerprint": 337070504,
         "gameVersion": ["1.18.2", "Forge"],
         "sortableGameVersion": [
           {
@@ -19549,15 +19549,15 @@
         "restrictProjectFileAccess": 0,
         "projectStatus": 4,
         "projectId": 263420,
-        "fileNameOnDisk": "Xaeros_Minimap_24.4.0_Forge_1.18.2.jar",
+        "fileNameOnDisk": "Xaeros_Minimap_24.5.0_Forge_1.18.2.jar",
         "hashes": [
-          { "type": 1, "value": "5763ea493fef8e19b1744909df89453f3675405a" },
-          { "type": 2, "value": "4a0fce96c852d49e3bbb345f44944c15" }
+          { "type": 1, "value": "7a42a7389efb3e1faaddd591016ce15e7900fb8b" },
+          { "type": 2, "value": "7691fd135b5ed481add1efba58af25d4" }
         ]
       },
       "dateInstalled": "2024-10-04T10:10:39.0554239Z",
-      "dateUpdated": "2024-10-04T10:10:39.0554239Z",
-      "status": 5,
+      "dateUpdated": "2024-10-10T08:51:08.0104259Z",
+      "status": 4,
       "installSource": 0,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -19569,30 +19569,30 @@
       "manifestName": null,
       "installedTargets": [],
       "latestFile": {
-        "id": 5685648,
-        "fileName": "Xaeros_Minimap_24.4.0_Forge_1.18.2.jar",
-        "fileDate": "2024-09-02T06:50:54.637Z",
-        "fileLength": 1527429,
+        "id": 5772994,
+        "fileName": "Xaeros_Minimap_24.5.0_Forge_1.18.2.jar",
+        "fileDate": "2024-10-01T07:34:46.003Z",
+        "fileLength": 1578721,
         "releaseType": 1,
         "fileStatus": 4,
-        "downloadUrl": "https://edge.forgecdn.net/files/5685/648/Xaeros_Minimap_24.4.0_Forge_1.18.2.jar",
+        "downloadUrl": "https://edge.forgecdn.net/files/5772/994/Xaeros_Minimap_24.5.0_Forge_1.18.2.jar",
         "isAlternate": false,
         "alternateFileId": 0,
         "serverPackFileId": 0,
         "dependencies": [
-          { "addonId": 636608, "type": 2 },
-          { "addonId": 317780, "type": 2 }
+          { "addonId": 317780, "type": 2 },
+          { "addonId": 636608, "type": 2 }
         ],
         "isAvailable": true,
         "modules": [
           {
             "foldername": "META-INF",
-            "fingerprint": 3917127608,
+            "fingerprint": 1802158793,
             "invalidFingerprint": false
           },
           {
             "foldername": "assets",
-            "fingerprint": 525646961,
+            "fingerprint": 2471876227,
             "invalidFingerprint": false
           },
           {
@@ -19602,11 +19602,11 @@
           },
           {
             "foldername": "xaero",
-            "fingerprint": 762633374,
+            "fingerprint": 654163901,
             "invalidFingerprint": false
           }
         ],
-        "packageFingerprint": 2753490969,
+        "packageFingerprint": 337070504,
         "gameVersion": ["1.18.2", "Forge"],
         "sortableGameVersion": [
           {
@@ -19626,10 +19626,10 @@
         "restrictProjectFileAccess": 0,
         "projectStatus": 4,
         "projectId": 263420,
-        "fileNameOnDisk": "Xaeros_Minimap_24.4.0_Forge_1.18.2.jar",
+        "fileNameOnDisk": "Xaeros_Minimap_24.5.0_Forge_1.18.2.jar",
         "hashes": [
-          { "type": 1, "value": "5763ea493fef8e19b1744909df89453f3675405a" },
-          { "type": 2, "value": "4a0fce96c852d49e3bbb345f44944c15" }
+          { "type": 1, "value": "7a42a7389efb3e1faaddd591016ce15e7900fb8b" },
+          { "type": 2, "value": "7691fd135b5ed481add1efba58af25d4" }
         ]
       }
     },
@@ -21348,13 +21348,13 @@
       "manifestName": null,
       "installedTargets": [],
       "latestFile": {
-        "id": 5689512,
-        "fileName": "create-1.18.2-0.5.1.h.jar",
-        "fileDate": "2024-09-03T13:57:20.97Z",
-        "fileLength": 15515243,
+        "id": 5797603,
+        "fileName": "create-1.18.2-0.5.1.i.jar",
+        "fileDate": "2024-10-09T16:03:22.773Z",
+        "fileLength": 15517713,
         "releaseType": 1,
         "fileStatus": 4,
-        "downloadUrl": "https://edge.forgecdn.net/files/5689/512/create-1.18.2-0.5.1.h.jar",
+        "downloadUrl": "https://edge.forgecdn.net/files/5797/603/create-1.18.2-0.5.1.i.jar",
         "isAlternate": false,
         "alternateFileId": 0,
         "serverPackFileId": 0,
@@ -21363,12 +21363,12 @@
         "modules": [
           {
             "foldername": "META-INF",
-            "fingerprint": 2918804207,
+            "fingerprint": 2372240581,
             "invalidFingerprint": false
           },
           {
             "foldername": "com",
-            "fingerprint": 1408040145,
+            "fingerprint": 2526944486,
             "invalidFingerprint": false
           },
           {
@@ -21383,7 +21383,7 @@
           },
           {
             "foldername": "data",
-            "fingerprint": 2782910474,
+            "fingerprint": 1337347188,
             "invalidFingerprint": false
           },
           {
@@ -21412,7 +21412,7 @@
             "invalidFingerprint": false
           }
         ],
-        "packageFingerprint": 3411579397,
+        "packageFingerprint": 1244622350,
         "gameVersion": ["1.18.2", "Forge"],
         "sortableGameVersion": [
           {
@@ -21432,10 +21432,10 @@
         "restrictProjectFileAccess": 0,
         "projectStatus": 4,
         "projectId": 328085,
-        "fileNameOnDisk": "create-1.18.2-0.5.1.h.jar",
+        "fileNameOnDisk": "create-1.18.2-0.5.1.i.jar",
         "hashes": [
-          { "type": 1, "value": "e5eba3cd9738e8ecb5370f7e33a932f65b100489" },
-          { "type": 2, "value": "5d8d88341d5fb7b4c6692da9e13a5b16" }
+          { "type": 1, "value": "e40c46604993ff775cd98dd5eb7c95ec1bfe6893" },
+          { "type": 2, "value": "d78d681d19b2af49ce13ef9abc99ff8f" }
         ]
       }
     },
@@ -21534,7 +21534,7 @@
       },
       "dateInstalled": "2024-10-05T08:14:56.5686311Z",
       "dateUpdated": "2024-10-05T08:14:56.5698379Z",
-      "status": 4,
+      "status": 5,
       "installSource": 6,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -26371,8 +26371,8 @@
       "authors": [
         { "Id": 100160186, "Name": "ModdingLegacy" },
         { "Id": 17403580, "Name": "KingPhygieBoo" },
-        { "Id": 10725023, "Name": "Lachney" },
-        { "Id": 16594380, "Name": "silver_david" }
+        { "Id": 16594380, "Name": "silver_david" },
+        { "Id": 10725023, "Name": "Lachney" }
       ],
       "primaryAuthor": "ModdingLegacy",
       "primaryCategoryId": 410,
@@ -29381,7 +29381,7 @@
       },
       "dateInstalled": "2024-10-05T08:06:34.7447423Z",
       "dateUpdated": "2024-10-05T08:06:34.7478705Z",
-      "status": 4,
+      "status": 5,
       "installSource": 6,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -34343,8 +34343,8 @@
       "fileNameOnDisk": "create_enchantment_industry-1.18.2-for-create-0.5.1.f-1.2.8.jar",
       "authors": [
         { "Id": 103651564, "Name": "DragonsPlus" },
-        { "Id": 102642294, "Name": "RaymondBlaze" },
-        { "Id": 101665330, "Name": "MarbleGate" }
+        { "Id": 101665330, "Name": "MarbleGate" },
+        { "Id": 102642294, "Name": "RaymondBlaze" }
       ],
       "primaryAuthor": "DragonsPlus",
       "primaryCategoryId": 6484,
@@ -35748,6 +35748,199 @@
       }
     },
     {
+      "instanceID": "fa9d7c51-c563-442a-b5cf-296fbb65ab28",
+      "modSource": 0,
+      "addonID": 504908,
+      "gameID": 432,
+      "categoryClassID": 6,
+      "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
+      "name": "Traveler's Titles (Forge)",
+      "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\mods",
+      "fileNameOnDisk": "TravelersTitles-1.18.2-Forge-2.1.1.jar",
+      "authors": [{ "Id": 40421595, "Name": "YUNGNICKYOUNG" }],
+      "primaryAuthor": "YUNGNICKYOUNG",
+      "primaryCategoryId": 423,
+      "packageType": 6,
+      "webSiteURL": "https://www.curseforge.com/minecraft/mc-mods/travelers-titles",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/407/305/256/256/637621970918314166.png",
+      "tags": [],
+      "installedFile": {
+        "id": 3778233,
+        "fileName": "TravelersTitles-1.18.2-Forge-2.1.1.jar",
+        "fileDate": "2022-05-03T03:50:05.343Z",
+        "fileLength": 382400,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/3778/233/TravelersTitles-1.18.2-Forge-2.1.1.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [{ "addonId": 421850, "type": 3 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 4282812019,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "com",
+            "fingerprint": 2787917130,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 2043193044,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "icon.png",
+            "fingerprint": 1003003867,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "pack.mcmeta",
+            "fingerprint": 773629253,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "travelerstitles.mixins.json",
+            "fingerprint": 3202446324,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "travelerstitles_forge.mixins.json",
+            "fingerprint": 3114324125,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "travelerstitles.refmap.json",
+            "fingerprint": 2899491976,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 576463435,
+        "gameVersion": ["1.18.2", "Forge"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Forge",
+            "gameVersionTypeId": 68441
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 504908,
+        "fileNameOnDisk": "TravelersTitles-1.18.2-Forge-2.1.1.jar",
+        "hashes": [
+          { "type": 1, "value": "b438e329e0ce0cd140e971b7e7f548931c59bdff" },
+          { "type": 2, "value": "203c79f297cc61feb08b27aa29071ade" }
+        ]
+      },
+      "dateInstalled": "2024-10-10T08:50:45.2565567Z",
+      "dateUpdated": "2024-10-10T08:50:45.2651103Z",
+      "status": 4,
+      "installSource": 6,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": null,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 3778233,
+        "fileName": "TravelersTitles-1.18.2-Forge-2.1.1.jar",
+        "fileDate": "2022-05-03T03:50:05.343Z",
+        "fileLength": 382400,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/3778/233/TravelersTitles-1.18.2-Forge-2.1.1.jar",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [{ "addonId": 421850, "type": 3 }],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "META-INF",
+            "fingerprint": 4282812019,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "com",
+            "fingerprint": 2787917130,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 2043193044,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "icon.png",
+            "fingerprint": 1003003867,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "pack.mcmeta",
+            "fingerprint": 773629253,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "travelerstitles.mixins.json",
+            "fingerprint": 3202446324,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "travelerstitles_forge.mixins.json",
+            "fingerprint": 3114324125,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "travelerstitles.refmap.json",
+            "fingerprint": 2899491976,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 576463435,
+        "gameVersion": ["1.18.2", "Forge"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "",
+            "gameVersionName": "Forge",
+            "gameVersionTypeId": 68441
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 504908,
+        "fileNameOnDisk": "TravelersTitles-1.18.2-Forge-2.1.1.jar",
+        "hashes": [
+          { "type": 1, "value": "b438e329e0ce0cd140e971b7e7f548931c59bdff" },
+          { "type": 2, "value": "203c79f297cc61feb08b27aa29071ade" }
+        ]
+      }
+    },
+    {
       "instanceID": "c7578f47-cab5-435c-ae09-c743cb5f9dde",
       "modSource": 0,
       "addonID": 382216,
@@ -36804,7 +36997,7 @@
       },
       "dateInstalled": "2024-10-04T10:10:39.0805314Z",
       "dateUpdated": "2024-10-06T07:46:37.5503578Z",
-      "status": 4,
+      "status": 5,
       "installSource": 0,
       "preferenceReleaseType": null,
       "preferenceAutoInstallUpdates": null,
@@ -40476,6 +40669,162 @@
         "hashes": [
           { "type": 1, "value": "d280349c23a48cf6d0f6e53a54b91c5901502177" },
           { "type": 2, "value": "2ac10464aeb29e42755e268a74f70e57" }
+        ]
+      }
+    },
+    {
+      "instanceID": "068b7b1b-46a9-4407-b3d2-8d0b83d05f8a",
+      "modSource": 0,
+      "addonID": 679106,
+      "gameID": 432,
+      "categoryClassID": 12,
+      "gameInstanceID": "1edeb152-1fc7-4b80-ad92-1aebea9d9139",
+      "name": "Visual Traveler's Titles",
+      "modFolderPath": "C:\\Users\\Inconvenient\\curseforge\\minecraft\\Instances\\Dev Pack\\resourcepacks",
+      "fileNameOnDisk": "Visual Titles.zip",
+      "authors": [
+        { "Id": 101452272, "Name": "un_roman" },
+        { "Id": 40421595, "Name": "YUNGNICKYOUNG" }
+      ],
+      "primaryAuthor": "un_roman",
+      "primaryCategoryId": 398,
+      "packageType": 3,
+      "webSiteURL": "https://www.curseforge.com/minecraft/texture-packs/visual-travelers-titles",
+      "thumbnailUrl": "https://media.forgecdn.net/avatars/thumbnails/611/463/256/256/637995723024972817.png",
+      "tags": [],
+      "installedFile": {
+        "id": 4061372,
+        "fileName": "Visual Titles.zip",
+        "fileDate": "2022-11-01T13:55:25.953Z",
+        "fileLength": 321764,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4061/372/Visual%20Titles.zip",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "pack.png",
+            "fingerprint": 1563971535,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 2903736235,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "pack.mcmeta",
+            "fingerprint": 719647943,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 103402737,
+        "gameVersion": ["1.18.1", "1.18.2", "1.18"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.18.1",
+            "gameVersionName": "1.18.1",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.18",
+            "gameVersionName": "1.18",
+            "gameVersionTypeId": 73250
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 679106,
+        "fileNameOnDisk": "Visual Titles.zip",
+        "hashes": [
+          { "type": 1, "value": "11ccb961e9e4ffad96478f53687f8c204a77fe0d" },
+          { "type": 2, "value": "e0b95e20f797bfbdf8433ab3c881c563" }
+        ]
+      },
+      "dateInstalled": "2024-10-10T08:50:52.967805Z",
+      "dateUpdated": "2024-10-10T08:50:52.9685621Z",
+      "status": 4,
+      "installSource": 4,
+      "preferenceReleaseType": null,
+      "preferenceAutoInstallUpdates": null,
+      "preferenceAlternateFile": false,
+      "preferenceIsIgnored": false,
+      "isModified": false,
+      "isWorkingCopy": false,
+      "isFuzzyMatch": false,
+      "manifestName": null,
+      "installedTargets": [],
+      "latestFile": {
+        "id": 4061372,
+        "fileName": "Visual Titles.zip",
+        "fileDate": "2022-11-01T13:55:25.953Z",
+        "fileLength": 321764,
+        "releaseType": 1,
+        "fileStatus": 4,
+        "downloadUrl": "https://edge.forgecdn.net/files/4061/372/Visual%20Titles.zip",
+        "isAlternate": false,
+        "alternateFileId": 0,
+        "serverPackFileId": 0,
+        "dependencies": [],
+        "isAvailable": true,
+        "modules": [
+          {
+            "foldername": "pack.png",
+            "fingerprint": 1563971535,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "assets",
+            "fingerprint": 2903736235,
+            "invalidFingerprint": false
+          },
+          {
+            "foldername": "pack.mcmeta",
+            "fingerprint": 719647943,
+            "invalidFingerprint": false
+          }
+        ],
+        "packageFingerprint": 103402737,
+        "gameVersion": ["1.18.1", "1.18.2", "1.18"],
+        "sortableGameVersion": [
+          {
+            "gameVersion": "1.18.1",
+            "gameVersionName": "1.18.1",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.18.2",
+            "gameVersionName": "1.18.2",
+            "gameVersionTypeId": 73250
+          },
+          {
+            "gameVersion": "1.18",
+            "gameVersionName": "1.18",
+            "gameVersionTypeId": 73250
+          }
+        ],
+        "hasInstallScript": false,
+        "isCompatibleWithClient": false,
+        "isEarlyAccessContent": false,
+        "restrictProjectFileAccess": 0,
+        "projectStatus": 4,
+        "projectId": 679106,
+        "fileNameOnDisk": "Visual Titles.zip",
+        "hashes": [
+          { "type": 1, "value": "11ccb961e9e4ffad96478f53687f8c204a77fe0d" },
+          { "type": 2, "value": "e0b95e20f797bfbdf8433ab3c881c563" }
         ]
       }
     },
