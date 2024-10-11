@@ -1,5 +1,25 @@
 # Changelog
 
+## [0.6.10](https://github.com/dustinheisey/An-Inconvenient-Modpack/compare/v0.6.9...v0.6.10) (2024-10-11)
+
+
+### Bug Fixes
+
+* add desert sand to #minecraft:sand tag ([d7442ba](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/d7442bae697b7fdec3793841c2e828564931daca))
+* add ultra high fire clay advancement to chapter 1 ([4a0af0c](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/4a0af0cff5341fb7c6587c161f8591a675fce755))
+* change bloomery recipe to use ultra high refractory bricks ([bf8e7c7](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/bf8e7c7ff6d115deacf62064c31a0b10263d5fbf))
+* change engineer's hammer recipe to use high fire brick ([ee95781](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/ee9578139302f54242a1e86bb3d0cb13860141ef))
+* change hearth item fuel values ([7353ce1](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/7353ce152ad48321c3861bc95f5a10d95eeae729))
+* change salt progression to come from evaporating water instead of finding ores ([673ec0e](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/673ec0e83805f71993c3fd04acd279959c4e0b02))
+* fix campfire recipe to also use charcoal ([2ea8fbe](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/2ea8fbef00f2d184a562be9aedf5ee598ed2f671))
+* fix collection armor root advancement criteria ([dc1ff7f](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/dc1ff7faefaa76db4f43093c8a060152860c6c70))
+* fix mekanism dust typo causing lang crash ([c4c186d](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/c4c186d3868e027bd09fd723fef36263f5889ba8))
+* lower waterskin recipe output count ([a699bc6](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/a699bc66f022d4cfc02c1afe534ffd235379ed75))
+* remove copy config and update modlist again ([d53c2d1](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/d53c2d1df5c3ff1bd19466a9d4a21bf206aaf039))
+* remove world creation settings that don't work ([77ef176](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/77ef1761126020f1b38573230dd5de0be03b4a7b))
+* standardize chapter 1 mixing recipe mixing times ([13f983c](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/13f983c07b93cc1155a311e9b7aae5548112870d))
+* update cold eye recipe ([faf2fc6](https://github.com/dustinheisey/An-Inconvenient-Modpack/commit/faf2fc6102a9f9cf93db0d2db63633f561a30d16))
+
 ## [0.6.9](https://github.com/dustinheisey/An-Inconvenient-Modpack/compare/v0.6.8...v0.6.9) (2024-10-09)
 
 
