@@ -8,7 +8,7 @@ onEvent('recipes', (event) => {
           recipe: () => {
             event
               .shaped('endrem:cold_eye', ['aba', 'bcb', 'aba'], {
-                a: 'rankine:refractory_brick',
+                a: 'rankine:ultra_high_refractory_brick',
                 b: 'minecraft:leather',
                 c: 'minecraft:iron_ingot'
               })

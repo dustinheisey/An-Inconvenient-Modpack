@@ -51,7 +51,7 @@
 - [ ] rework grog production
 - [ ] bloomery recipe use ultra high refractory bricks
 - [ ] use ultra high refractory
-- [ ] brick in cold eye recipe
+- [x] brick in cold eye recipe
 - [ ] crush selenite block to get selenite shard
 - [ ] crush amethyst block to get amethyst shard
 - [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
