@@ -335,7 +335,14 @@ onEvent('server.datapack.high_priority', (event) => {
                                         title: 'High Heat Potential',
                                         description:
                                           'Refine fire clay for high-temperature uses',
-                                        children: []
+                                        children: [
+                                          {
+                                            item: 'kubejs:ultra_high_fire_clay_ball',
+                                            title: 'Hottest Potential',
+                                            description:
+                                              'Refine high fire clay further for even higher temperatures'
+                                          }
+                                        ]
                                       }
                                     ]
                                   },

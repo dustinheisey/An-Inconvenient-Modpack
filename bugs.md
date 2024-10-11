@@ -39,7 +39,7 @@
 - [x] change waterskin recipe output count
 - [ ] change kaolinite advancement
 - [x] desert sand -> minecraft:sand
-- [ ] ultra high fire clay advancement
+- [x] ultra high fire clay advancement
 - [ ] bandaid advancements
 - [ ] antique atlas texture bug
 - [ ] increase mixing time for fire clay slightly
@@ -52,10 +52,11 @@
 - [x] bloomery recipe use ultra high refractory bricks
 - [ ] use ultra high refractory
 - [x] brick in cold eye recipe
-- [ ] crush selenite block to get selenite shard
-- [ ] crush amethyst block to get amethyst shard
 - [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
 - [ ] create trash biome
+  - [ ] remove selenite geodes
+  - [ ] remove amethyst geodes
+  - [ ] remove rankine ore clusters
   - [ ] get copper, tin, silver, lead, amethyst, selenite, graphite from trash processing
     - [ ] Copper: Electrical wiring, Circuit boards, Pipes, Copper tubing
     - [ ] Tin: tin cans, Old toys, Tin foils, Plumbing joints
