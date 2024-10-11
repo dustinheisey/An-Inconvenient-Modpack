@@ -31,7 +31,7 @@
 ## Playtesting Chapter 1
 
 - [x] lockdown settings don't work
-- [ ] campfire recipe broken
+- [x] campfire recipe broken
 - [ ] change hearth value to 8
 - [ ] inhospitable advancement
 - [ ] charcoal pit exploit

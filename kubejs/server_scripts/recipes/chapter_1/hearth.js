@@ -645,6 +645,21 @@ onEvent('recipes', (event) => {
                           },
                           {
                             id: 'campfire',
+                            recipe: () => {
+                              ['minecraft:campfire'].forEach((id) =>
+                                event.remove({ id: id })
+                              );
+
+                              event.shaped(
+                                'minecraft:campfire',
+                                [' a ', 'aba', 'ccc'],
+                                {
+                                  a: '#forge:rods/wooden',
+                                  b: '#minecraft:coals',
+                                  c: '#minecraft:logs'
+                                }
+                              );
+                            },
                             children: [
                               {
                                 // ? bury log piles underground light on fire and cover. mine the charcoal ones it stops smoking
