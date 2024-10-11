@@ -1,12 +1,7 @@
 // priority: 302
 const config = {
   chapter_1: {
-    stone: [
-      'rankine:malachite_ore',
-      'rankine:cassiterite_ore',
-      'salt:deepslate_rock_salt_ore',
-      'salt:rock_salt_ore'
-    ],
+    stone: ['rankine:malachite_ore', 'rankine:cassiterite_ore'],
     iron: [
       'minecraft:amethyst_cluster',
       'minecraft:large_amethyst_bud',

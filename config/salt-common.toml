@@ -47,14 +47,14 @@
 
 [GrowingSaltClusters]
 	#Water dripping from a Pointed Dripstone on a blocks tagged as 'salt/tags/blocks/salt_cluster_growables' will grow Salt Clusters
-	SaltClusterGrowingEnabled = true
+	SaltClusterGrowingEnabled = false
 	#Chance of cluster growing by one stage on random tick. 1.0 = first random tick. 0.0 = never.
 	#Range: 0.0 ~ 1.0
 	SaltClusterGrowingChance = 0.1
 
 [RockSalt]
 	#Rock Salt Deposits will generate in biomes defined in tag 'salt/tags/worldgen/biome/has_rock_salt_deposits'
-	GenerateRockSalt = true
+	GenerateRockSalt = false
 
 	[RockSalt.Deposit]
 		#Quantity of Rock Salt deposits generated. Larger number = more deposits.
@@ -75,5 +75,5 @@
 
 [VillagerTrades]
 	#Butcher will buy and sell Salt.
-	ButcherSaltTradesEnabled = true
+	ButcherSaltTradesEnabled = false
 

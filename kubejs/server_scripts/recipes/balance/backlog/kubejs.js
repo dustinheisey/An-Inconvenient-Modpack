@@ -760,6 +760,15 @@ onEvent('recipes', (event) => {
     filter: () => {
       event.remove({
         output: [
+          'croptopia:salt_ore',
+          'salt:rock_salt_ore',
+          'salt:deepslate_rock_salt_ore',
+          'salt:raw_rock_salt_block',
+          'salt:salt_cluster',
+          'salt:large_salt_bud',
+          'salt:medium_salt_bud',
+          'salt:small_salt_bud',
+          'salt:raw_rock_salt',
           // start new stuff
           'minecraft:stone_hoe',
           'blue_skies:turquoise_stone_hoe',

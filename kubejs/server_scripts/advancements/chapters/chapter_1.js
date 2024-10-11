@@ -88,20 +88,6 @@ onEvent('server.datapack.high_priority', (event) => {
                     description: 'Craft a crude flint pickaxe',
                     children: [
                       {
-                        item: 'salt:raw_rock_salt',
-                        title: 'Veins of the Earth',
-                        description:
-                          'Find some rock salt underground in a dripstone cave, ocean, or beach',
-                        children: [
-                          {
-                            item: 'salt:salt',
-                            title: 'Salt of the Earth',
-                            description:
-                              'Collect some salt from the raw rock salt'
-                          }
-                        ]
-                      },
-                      {
                         item: 'rankine:stone_hammer',
                         title: 'Vein Splitter',
                         description: 'Construct a stone hammer',
@@ -197,7 +183,22 @@ onEvent('server.datapack.high_priority', (event) => {
                                 item: 'rankine:tin_ingot',
                                 title: 'Tin Transmutation',
                                 description: 'Forge a tin ingot',
-                                children: []
+                                children: [
+                                  {
+                                    item: 'minecraft:cauldron',
+                                    title: 'Caldron',
+                                    description:
+                                      'Craft a cauldron to produce salt',
+                                    children: [
+                                      {
+                                        item: 'salt:salt',
+                                        title: 'Salt From the Sea',
+                                        description:
+                                          "place a campfire below a cauldron that's filled with water, and collect salt after it's finished boiling"
+                                      }
+                                    ]
+                                  }
+                                ]
                               }
                             ]
                           },
@@ -523,13 +524,6 @@ onEvent('server.datapack.high_priority', (event) => {
                                                           'Smelt bronze, a vital alloy',
                                                         frame: 'goal',
                                                         children: [
-                                                          {
-                                                            item: 'minecraft:cauldron',
-                                                            title:
-                                                              'Iron Caldron',
-                                                            description:
-                                                              'Craft a cauldron to collect salt more easily'
-                                                          },
                                                           {
                                                             item: 'rankine:bronze_hammer',
                                                             title:

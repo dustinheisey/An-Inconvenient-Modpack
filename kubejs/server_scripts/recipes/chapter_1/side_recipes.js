@@ -625,10 +625,10 @@ onEvent('recipes', (event) => {
       }
     },
     {
-      id: 'bronze_cauldron',
+      id: 'tin_cauldron',
       recipe: () => {
         event.shaped('minecraft:cauldron', ['a a', 'a a', 'aaa'], {
-          a: 'rankine:bronze_ingot'
+          a: 'rankine:tin_ingot'
         });
       }
     },

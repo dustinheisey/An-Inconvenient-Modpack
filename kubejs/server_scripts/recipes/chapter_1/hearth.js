@@ -1190,8 +1190,6 @@ onEvent('recipes', (event) => {
                       event
                         .shapeless('kubejs:salted_hide', [
                           'kubejs:stitched_hide',
-                          'salt:salt',
-                          'salt:salt',
                           'salt:salt'
                         ])
                         .id('inconvenient:salted_hide');
@@ -1228,12 +1226,19 @@ onEvent('recipes', (event) => {
                       },
                       {
                         id: 'salt',
-                        children: [
-                          {
-                            // ? TODO found in beaches at y level [x-y]
-                            id: 'rock_salt'
-                          }
-                        ]
+                        recipe: () => {
+                          [
+                            'salt:salt_from_raw_rock_salt',
+                            'rankine:calcium_chloride_from_block',
+                            'rankine:pink_salt_from_block',
+                            'rankine:sodium_chloride_from_block',
+                            'croptopia:blasting_salt',
+                            'croptopia:salt_from_water_bottle',
+                            'croptopia:salt_from_smoking_water_bottle',
+                            'croptopia:salt_from_water_bottle',
+                            'tofucraft:integration/create/mixing/bittern_mixing'
+                          ].forEach((id) => event.remove({ id: id }));
+                        }
                       }
                     ]
                   }

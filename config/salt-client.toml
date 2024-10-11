@@ -5,7 +5,7 @@
 	JeiWaterEvaporationEnabled = true
 	#Growing Salt Crystals category will be shown in JEI/REI.
 	#*Will be disabled automatically if Growing Crystals is disabled.
-	JeiGrowingSaltCrystalsEnabled = true
+	JeiGrowingSaltCrystalsEnabled = false
 
 [Compatibility]
 	#Overlay texture will be drawn over salted foods. Disable if there's an issue with rendering items.

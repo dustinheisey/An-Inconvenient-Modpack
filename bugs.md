@@ -45,18 +45,22 @@
 - [x] standardize chapter 1 mixing recipe mixing times
 - [ ] boiler and icebox advancements
 - [x] engineer's hammer recipe high fire brick
-- [ ] change cauldron to tin, get rid of salt spawning, making salt from cauldron, 1 salt to salt leather
+- [x] change cauldron to tin
+- [x] get rid of salt spawning
+- [x] making salt from cauldron
+- [x] remove salt ores / raw salt
+- [x] 1 salt to salt leather
 - [ ] metal blocks to ingots
 - [ ] porcelain, feldspar advancement chains
 - [ ] rework grog production
 - [x] bloomery recipe use ultra high refractory bricks
-- [ ] use ultra high refractory
 - [x] brick in cold eye recipe
 - [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
 - [ ] create trash biome
   - [ ] remove selenite geodes
   - [ ] remove amethyst geodes
   - [ ] remove rankine ore clusters
+  - [ ] disable prospecting stick and ore detector
   - [ ] get copper, tin, silver, lead, amethyst, selenite, graphite from trash processing
     - [ ] Copper: Electrical wiring, Circuit boards, Pipes, Copper tubing
     - [ ] Tin: tin cans, Old toys, Tin foils, Plumbing joints

@@ -72,14 +72,6 @@
       },
       "advancement": "im:chapter_1/malachite",
       "text": "Selenite Shard: Found in swamps and jungles, between y=-55 and y=36."
-    },
-    {
-      "type": "patchouli:spotlight",
-      "item": {
-        "item": "salt:rock_salt_ore"
-      },
-      "advancement": "im:chapter_1/malachite",
-      "text": "Salt Ore: Found in the dripstone caves, oceans and beaches, between y=5 & y=100."
     }
   ]
 }
