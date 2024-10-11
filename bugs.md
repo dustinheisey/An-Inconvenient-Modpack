@@ -30,31 +30,15 @@
 
 ## Playtesting Chapter 1
 
-- [x] lockdown settings don't work
-- [x] campfire recipe broken
-- [x] change hearth value to 8
 - [ ] charcoal pit exploit
-- [x] collection armor root advancement
 - [ ] recipe staging chapter 1
-- [x] change waterskin recipe output count
 - [ ] change kaolinite advancement
-- [x] desert sand -> minecraft:sand
-- [x] ultra high fire clay advancement
 - [ ] bandaid advancements
 - [ ] antique atlas texture bug
-- [x] standardize chapter 1 mixing recipe mixing times
 - [ ] boiler and icebox advancements
-- [x] engineer's hammer recipe high fire brick
-- [x] change cauldron to tin
-- [x] get rid of salt spawning
-- [x] making salt from cauldron
-- [x] remove salt ores / raw salt
-- [x] 1 salt to salt leather
 - [ ] metal blocks to ingots
 - [ ] porcelain, feldspar advancement chains
 - [ ] rework grog production
-- [x] bloomery recipe use ultra high refractory bricks
-- [x] brick in cold eye recipe
 - [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
 - [ ] create trash biome
   - [ ] remove selenite geodes
@@ -86,7 +70,6 @@
 
 ## UI
 
-- [x] maybe add traveller's titles back
 - [ ] add % info to tree stripping jei
 - [ ] ceramic bucket doesn't show fluid in hand
 - [ ] fire doesn't go away when you die visually
@@ -125,6 +108,26 @@
 - [ ] transparent border in antique atlas (shader's issue, texture pack fix)
 
 ## Past Releases
+
+### v0.6.10 (Complete)
+
+- [x] lockdown settings don't work
+- [x] campfire recipe broken
+- [x] change hearth value to 8
+- [x] collection armor root advancement
+- [x] change waterskin recipe output count
+- [x] desert sand -> minecraft:sand
+- [x] ultra high fire clay advancement
+- [x] standardize chapter 1 mixing recipe mixing times
+- [x] engineer's hammer recipe high fire brick
+- [x] change cauldron to tin
+- [x] get rid of salt spawning
+- [x] making salt from cauldron
+- [x] remove salt ores / raw salt
+- [x] 1 salt to salt leather
+- [x] bloomery recipe use ultra high refractory bricks
+- [x] brick in cold eye recipe
+- [x] maybe add traveller's titles back
 
 ### v0.6.9 (Complete)
 
