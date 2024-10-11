@@ -1,5 +1,73 @@
 # Bugs
 
+## Playtesting Chapter 2
+
+- [ ] gold pan durability too short
+- [ ] gold pan not dropping seeds
+- [ ] remove old compost recipe
+- [ ] get rid of advancements from other mods more effectively
+- [ ] make farming machines use less iron
+- [ ] hazard's block staged wrong
+- [ ] can't use astikor carts without horse
+- [ ] dolostone advancement path and make it chapter 2 exclusive
+- [ ] update advancement titles and descriptions
+- [ ] make pestle chapter 1 material
+- [ ] make kiln feed use ultra_high_fire_clay
+- [ ] rethink chapter 2 themes
+- [ ] building tool advancement chapter 1
+- [ ] make otherstone come from plagioclase feldspar block
+- [ ] tinker's tables advancements
+- [ ] get rid of mixing barrel earlier in chapter 2
+- [ ] change grout mixing barrel ratios and mixing time and output
+- [ ] make chapter 2 method of making seared bricks different
+- [ ] seared bricks recipe should use mortar or cement mix
+- [ ] smooth quartz stair staging
+- [ ] smooth quartz block staging
+- [ ] make smeltery nightmare come when you make the full smeltery
+- [ ] rewrite cold nightmare to talk about smeltery
+- [ ] rewrite smeltery nightmare to talk about big fish
+- [ ] smeltery advancement unlocks chapter 3
+
+## Playtesting Chapter 1
+
+- [ ] lockdown settings don't work
+- [ ] campfire recipe broken
+- [ ] change hearth value to 8
+- [ ] inhospitable advancement
+- [ ] charcoal pit exploit
+- [ ] collection armor root advancement
+- [ ] recipe staging chapter 1
+- [ ] change waterskin recipe output count
+- [ ] change kaolinite advancement
+- [ ] desert sand -> minecraft:sand
+- [ ] ultra high fire clay advancement
+- [ ] bandaid advancements
+- [ ] antique atlas texture bug
+- [ ] increase mixing time for fire clay slightly
+- [ ] boiler and icebox advancements
+- [ ] engineer's hammer recipe high fire brick
+- [ ] change cauldron to tin, get rid of salt spawning, making salt from cauldron, 1 salt to salt leather
+- [ ] metal blocks to ingots
+- [ ] porcelain, feldspar advancement chains
+- [ ] rework grog production
+- [ ] bloomery recipe use ultra high refractory bricks
+- [ ] use ultra high refractory
+- [ ] brick in cold eye recipe
+- [ ] crush selenite block to get selenite shard
+- [ ] crush amethyst block to get amethyst shard
+- [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
+- [ ] create trash biome
+  - [ ] get copper, tin, silver, lead, amethyst, selenite, graphite from trash processing
+    - [ ] Copper: Electrical wiring, Circuit boards, Pipes, Copper tubing
+    - [ ] Tin: tin cans, Old toys, Tin foils, Plumbing joints
+    - [ ] Lead: batteries, Old paint chips, medical equipment, Spent bullets
+    - [ ] Silver: camera films, Silver Necklaces, Old silverware
+    - [ ] Amethyst: amethyst rings, keychain
+    - [ ] Quartz Crystal: Watches, radios, lightbulb
+    - [ ] Iron: Scrap metal, scrap parts, car parts, hammers, wrenches, nails,
+  - [ ] sift garbage to get random assortment of any of this stuff.
+  - [ ] use different levels of processing to use this stuff in more advanced ways
+
 ## Staging
 
 - [ ] gingerbread man showing in jei too early
