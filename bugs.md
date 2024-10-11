@@ -33,11 +33,10 @@
 - [x] lockdown settings don't work
 - [x] campfire recipe broken
 - [x] change hearth value to 8
-- [ ] inhospitable advancement
 - [ ] charcoal pit exploit
 - [ ] collection armor root advancement
 - [ ] recipe staging chapter 1
-- [ ] change waterskin recipe output count
+- [x] change waterskin recipe output count
 - [ ] change kaolinite advancement
 - [ ] desert sand -> minecraft:sand
 - [ ] ultra high fire clay advancement

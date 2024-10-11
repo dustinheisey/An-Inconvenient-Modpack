@@ -276,7 +276,7 @@ onEvent('recipes', (event) => {
       recipe: () => {
         ['cold_sweat:waterskin'].forEach((id) => event.remove({ id: id }));
         event
-          .shaped('8x cold_sweat:waterskin', ['  a', ' b ', 'b  '], {
+          .shaped('2x cold_sweat:waterskin', ['  a', ' b ', 'b  '], {
             a: 'farmersdelight:rope',
             b: 'minecraft:leather'
           })
