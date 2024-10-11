@@ -23,7 +23,7 @@ onEvent('item.registry', (event) => {
         'wet_tanned_hide',
         'rotten_jerky'
       ],
-      bricks: [
+      pottery: [
         'dry_unfired_brick',
         'unfired_refractory_brick',
         'dry_unfired_refractory_brick',
@@ -34,7 +34,10 @@ onEvent('item.registry', (event) => {
         'unfired_ultra_high_refractory_brick',
         'dry_unfired_ultra_high_refractory_brick',
         'grog',
-        'porcelain_glaze'
+        'porcelain_glaze',
+        'mortar',
+        'pestle',
+        ''
       ],
       goddess_statue: ['goddess_heart']
     },

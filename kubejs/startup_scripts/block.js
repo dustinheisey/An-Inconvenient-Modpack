@@ -1,48 +1,34 @@
 onEvent('block.registry', (event) => {
-  event
-    .create('crushed_orthoclase_feldspar')
-    .displayName('Crushed Orthoclase Feldspar')
-    .material('gravel');
+  function blocks(config) {
+    global.flat(config).forEach((item) => {
+      event
+        .create(item.id)
+        .displayName(global.toTitleCase(item.id))
+        .material(item.material);
+    });
+  }
 
-  event
-    .create('orthoclase_feldspar_sand')
-    .displayName('Orthoclase Feldspar Sand')
-    .material('sand');
-
-  event
-    .create('orthoclase_feldspar_silt')
-    .displayName('Orthoclase Feldspar Silt')
-    .material('sand');
-
-  event
-    .create('crushed_plagioclase_feldspar')
-    .displayName('Crushed Plagioclase Feldspar')
-    .material('gravel');
-
-  event
-    .create('plagioclase_feldspar_sand')
-    .displayName('Plagioclase Feldspar Sand')
-    .material('sand');
-
-  event
-    .create('plagioclase_feldspar_silt')
-    .displayName('Plagioclase Feldspar Silt')
-    .material('sand');
-
-  event
-    .create('unglazed_porcelain')
-    .displayName('Unglazed Porcelain')
-    .material('stone');
-
-  event
-    .create('glazed_porcelain')
-    .displayName('Glazed Porcelain')
-    .material('stone');
-
-  event.create('tar_sand').displayName('Tar Sand').material('sand');
-  event
-    .create('kiln_feed_block')
-    .displayName('Kiln Feed Block')
-    .material('sand');
-  event.create('clinker').displayName('Clinker').material('stone');
+  blocks({
+    chapter_1: [
+      { id: 'crushed_orthoclase_feldspar', material: 'gravel' },
+      { id: 'orthoclase_feldspar_sand', material: 'sand' },
+      { id: 'orthoclase_feldspar_silt', material: 'sand' },
+      { id: 'crushed_plagioclase_feldspar', material: 'gravel' },
+      { id: 'plagioclase_feldspar_sand', material: 'sand' },
+      { id: 'plagioclase_feldspar_silt', material: 'sand' },
+      { id: 'unglazed_porcelain', material: 'stone' },
+      { id: 'glazed_porcelain', material: 'stone' },
+      { id: 'unglazed_porcelain_faucet', material: 'stone' },
+      { id: 'glazed_porcelain_faucet', material: 'stone' },
+      { id: 'unglazed_porcelain_channel', material: 'stone' },
+      { id: 'glazed_porcelain_channel', material: 'stone' },
+      { id: 'unglazed_porcelain_cistern', material: 'stone' },
+      { id: 'glazed_porcelain_cistern', material: 'stone' }
+    ],
+    chapter_2: [
+      { id: 'kiln_feed_block', material: 'sand' },
+      { id: 'clinker', material: 'stone' }
+    ],
+    chapter_4: [{ id: 'tar_sand', material: 'sand' }]
+  });
 });

@@ -1768,6 +1768,8 @@ onEvent('recipes', (event) => {
       });
 
       [
+        { id: 'ceramics:white_porcelain_cistern' },
+        { id: 'ceramics:white_porcelain' },
         {
           input: [
             'hexerei:herb_drying_rack_full',

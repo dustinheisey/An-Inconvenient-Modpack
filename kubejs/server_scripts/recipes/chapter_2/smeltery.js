@@ -235,26 +235,6 @@ onEvent('recipes', (event) => {
                                     },
                                     children: [
                                       {
-                                        id: 'mortar_and_pestle',
-                                        recipe: () => {
-                                          [
-                                            'hexerei:pestle_and_mortar_from_mixing_cauldron'
-                                          ].forEach((id) =>
-                                            event.remove({ id: id })
-                                          );
-
-                                          event.shaped(
-                                            'hexerei:pestle_and_mortar',
-                                            ['aba', 'c c', ' c '],
-                                            {
-                                              a: 'minecraft:iron_ingot',
-                                              b: 'hexerei:selenite_shard',
-                                              c: 'rankine:dolostone'
-                                            }
-                                          );
-                                        }
-                                      },
-                                      {
                                         id: 'clinker',
                                         recipe: () => {
                                           event.custom({

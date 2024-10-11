@@ -625,6 +625,150 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'porcelain_cistern',
+      recipe: () => {
+        [
+          'ceramics:white_porcelain_cistern_smelting',
+          'ceramics:white_porcelain_cistern_kiln'
+        ].forEach((id) => event.remove({ id: id }));
+        event.custom({
+          type: 'rankine:beehive_oven',
+          input: {
+            item: 'kubejs:glazed_porcelain_cistern'
+          },
+          result: 'ceramics:white_porcelain_cistern',
+          minCookTime: 2400,
+          maxCookTime: 4800
+        });
+      },
+      children: [
+        {
+          id: 'glazed_porcelain_cistern',
+          recipe: () => {
+            event.shapeless('kubejs:glazed_porcelain_cistern', [
+              'kubejs:unglazed_porcelain_cistern',
+              'kubejs:porcelain_glaze',
+              'kubejs:porcelain_glaze',
+              'kubejs:porcelain_glaze'
+            ]);
+          },
+          children: [
+            {
+              id: 'unfired_cistern',
+              recipe: () => {
+                event.custom({
+                  type: 'rankine:beehive_oven',
+                  input: {
+                    item: 'ceramics:unfired_cistern'
+                  },
+                  result: 'kubejs:unglazed_porcelain_cistern',
+                  minCookTime: 2400,
+                  maxCookTime: 4800
+                });
+              },
+              children: []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'porcelain_faucet',
+      recipe: () => {
+        [
+          'ceramics:porcelain_faucet_smelting',
+          'ceramics:porcelain_faucet_kiln'
+        ].forEach((id) => event.remove({ id: id }));
+        event.custom({
+          type: 'rankine:beehive_oven',
+          input: {
+            item: 'kubejs:glazed_porcelain_faucet'
+          },
+          result: 'ceramics:porcelain_faucet',
+          minCookTime: 2400,
+          maxCookTime: 4800
+        });
+      },
+      children: [
+        {
+          id: 'glazed_porcelain_faucet',
+          recipe: () => {
+            event.shapeless('kubejs:glazed_porcelain_faucet', [
+              'kubejs:unglazed_porcelain_faucet',
+              'kubejs:porcelain_glaze',
+              'kubejs:porcelain_glaze',
+              'kubejs:porcelain_glaze'
+            ]);
+          },
+          children: [
+            {
+              id: 'unfired_faucet',
+              recipe: () => {
+                event.custom({
+                  type: 'rankine:beehive_oven',
+                  input: {
+                    item: 'ceramics:unfired_faucet'
+                  },
+                  result: 'kubejs:unglazed_porcelain_faucet',
+                  minCookTime: 2400,
+                  maxCookTime: 4800
+                });
+              },
+              children: []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'porcelain_channel',
+      recipe: () => {
+        [
+          'ceramics:porcelain_channel_smelting',
+          'ceramics:porcelain_channel_kiln'
+        ].forEach((id) => event.remove({ id: id }));
+        event.custom({
+          type: 'rankine:beehive_oven',
+          input: {
+            item: 'kubejs:glazed_porcelain_channel'
+          },
+          result: 'ceramics:porcelain_channel',
+          minCookTime: 2400,
+          maxCookTime: 4800
+        });
+      },
+      children: [
+        {
+          id: 'glazed_porcelain_channel',
+          recipe: () => {
+            event.shapeless('kubejs:glazed_porcelain_channel', [
+              'kubejs:unglazed_porcelain_channel',
+              'kubejs:porcelain_glaze',
+              'kubejs:porcelain_glaze',
+              'kubejs:porcelain_glaze'
+            ]);
+          },
+          children: [
+            {
+              id: 'unfired_channel',
+              recipe: () => {
+                event.custom({
+                  type: 'rankine:beehive_oven',
+                  input: {
+                    item: 'ceramics:unfired_channel'
+                  },
+                  result: 'kubejs:unglazed_porcelain_channel',
+                  minCookTime: 2400,
+                  maxCookTime: 4800
+                });
+              },
+              children: []
+            }
+          ]
+        }
+      ]
+    },
+    {
       id: 'tin_cauldron',
       recipe: () => {
         event.shaped('minecraft:cauldron', ['a a', 'a a', 'aaa'], {

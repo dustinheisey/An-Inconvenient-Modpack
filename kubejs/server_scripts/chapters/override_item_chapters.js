@@ -4485,7 +4485,17 @@ onEvent('tags.items', (event) => {
       'kubejs:orthoclase_feldspar_silt',
       'kubejs:crushed_plagioclase_feldspar',
       'kubejs:plagioclase_feldspar_sand',
-      'kubejs:plagioclase_feldspar_silt'
+      'kubejs:plagioclase_feldspar_silt',
+      'kubejs:mortar',
+      'kubejs:pestle',
+      'kubejs:unglazed_porcelain_cistern',
+      'kubejs:glazed_porcelain_cistern',
+      'kubejs:unglazed_porcelain_faucet',
+      'kubejs:glazed_porcelain_faucet',
+      'kubejs:unglazed_porcelain_channel',
+      'kubejs:glazed_porcelain_channel',
+      'kubejs:unglazed_porcelain',
+      'kubejs:glazed_porcelain'
     ],
     chapter_2: [
       'kubejs:dry_unfired_seared_brick',
@@ -6554,7 +6564,8 @@ onEvent('tags.items', (event) => {
       'hexerei:selenite_cluster',
       'hexerei:large_selenite_bud',
       'hexerei:medium_selenite_bud',
-      'hexerei:small_selenite_bud'
+      'hexerei:small_selenite_bud',
+      'hexerei:pestle_and_mortar'
     ],
     chapter_2: [
       'hexerei:mushroom_witch_hat',
@@ -6569,7 +6580,6 @@ onEvent('tags.items', (event) => {
       'hexerei:tallow_impurity',
       'hexerei:mixing_cauldron',
       'hexerei:candle_dipper',
-      'hexerei:pestle_and_mortar',
       'hexerei:candelabra',
       'hexerei:candle',
       'hexerei:candle_red',
