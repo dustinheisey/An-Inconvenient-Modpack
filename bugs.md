@@ -30,7 +30,7 @@
 
 ## Playtesting Chapter 1
 
-- [ ] lockdown settings don't work
+- [x] lockdown settings don't work
 - [ ] campfire recipe broken
 - [ ] change hearth value to 8
 - [ ] inhospitable advancement
