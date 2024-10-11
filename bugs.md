@@ -32,7 +32,7 @@
 
 - [x] lockdown settings don't work
 - [x] campfire recipe broken
-- [ ] change hearth value to 8
+- [x] change hearth value to 8
 - [ ] inhospitable advancement
 - [ ] charcoal pit exploit
 - [ ] collection armor root advancement
