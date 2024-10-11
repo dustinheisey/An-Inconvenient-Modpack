@@ -34,7 +34,7 @@
 - [x] campfire recipe broken
 - [x] change hearth value to 8
 - [ ] charcoal pit exploit
-- [ ] collection armor root advancement
+- [x] collection armor root advancement
 - [ ] recipe staging chapter 1
 - [x] change waterskin recipe output count
 - [ ] change kaolinite advancement

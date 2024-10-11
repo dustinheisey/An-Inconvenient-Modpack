@@ -2,7 +2,7 @@ onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'armor', {
     icon: 'minecraft:armor_stand',
     title: 'Collection: Armor',
-    tag: 'im:leather_armor',
+    tag: 'im:armors/leather',
     background: 'architects_palette:textures/block/myonite.png',
     children: [
       {
