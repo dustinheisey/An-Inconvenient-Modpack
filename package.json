@@ -1,6 +1,6 @@
 {
   "name": "inconvenient-modpack",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "type": "module",
   "scripts": {
     "format:check": "npx prettier --check '**/*.{js,json,md}'",
