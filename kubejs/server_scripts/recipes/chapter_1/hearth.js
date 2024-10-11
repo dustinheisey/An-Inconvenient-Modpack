@@ -82,7 +82,7 @@ onEvent('recipes', (event) => {
                   });
                   event
                     .shaped('charcoal_pit:bloomeryy', ['aaa', 'aba', 'ccc'], {
-                      a: 'rankine:refractory_bricks',
+                      a: 'rankine:ultra_high_refractory_bricks',
                       b: 'minecraft:furnace',
                       c: 'rankine:bronze_ingot'
                     })

@@ -49,7 +49,7 @@
 - [ ] metal blocks to ingots
 - [ ] porcelain, feldspar advancement chains
 - [ ] rework grog production
-- [ ] bloomery recipe use ultra high refractory bricks
+- [x] bloomery recipe use ultra high refractory bricks
 - [ ] use ultra high refractory
 - [x] brick in cold eye recipe
 - [ ] crush selenite block to get selenite shard
