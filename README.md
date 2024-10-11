@@ -50,6 +50,8 @@ An Inconvenient Modpack is a philosophical story of our current times and scathi
 - [collective-1.18.2-7.7.jar](https://www.curseforge.com/minecraft/mc-mods/collective/files/4860332) (by [Serilum](https://www.curseforge.com/members/serilum/projects))
 - [compactcrafting-2.0.0.jar](https://www.curseforge.com/minecraft/mc-mods/compact-crafting/files/3898668) (by [RobotGryphon](https://www.curseforge.com/members/robotgryphon/projects))
 - [compactmachines-4.5.0.jar](https://www.curseforge.com/minecraft/mc-mods/compact-machines/files/3905502) (by [davenonymous](https://www.curseforge.com/members/davenonymous/projects))
+- [ComplementaryReimagined_r5.2.2.zip](https://www.curseforge.com/minecraft/shaders/complementary-reimagined/files/5507475) (by [EminGT](https://www.curseforge.com/members/emingt/projects))
+- [ComplementaryUnbound_r5.2.2.zip](https://www.curseforge.com/minecraft/shaders/complementary-unbound/files/5507479) (by [EminGT](https://www.curseforge.com/members/emingt/projects))
 - [compressedcreativity-1.18.2-0.1.8.jar](https://www.curseforge.com/minecraft/mc-mods/compressedcreativity/files/4792468) (by [Lgmrszd](https://www.curseforge.com/members/lgmrszd/projects))
 - [CTM-1.18.2-1.1.5+5.jar](https://www.curseforge.com/minecraft/mc-mods/ctm/files/3933537) (by [tterrag1098](https://www.curseforge.com/members/tterrag1098/projects))
 - [constructionwand-1.18.2-2.9.jar](https://www.curseforge.com/minecraft/mc-mods/construction-wand/files/4393837) (by [ThetaDev](https://www.curseforge.com/members/thetadev/projects))
@@ -227,3 +229,4 @@ An Inconvenient Modpack is a philosophical story of our current times and scathi
 - [YungsBetterOceanMonuments-1.18.2-Forge-1.0.3.jar](https://www.curseforge.com/minecraft/mc-mods/yungs-better-ocean-monuments/files/4032731) (by [YUNGNICKYOUNG](https://www.curseforge.com/members/yungnickyoung/projects))
 - [YungsBetterStrongholds-1.18.2-Forge-2.1.1.jar](https://www.curseforge.com/minecraft/mc-mods/yungs-better-strongholds/files/3778231) (by [YUNGNICKYOUNG](https://www.curseforge.com/members/yungnickyoung/projects))
 - [zombieawareness-1.18.1-1.12.3.jar](https://www.curseforge.com/minecraft/mc-mods/zombie-awareness/files/3603741) (by [Corosus](https://www.curseforge.com/members/corosus/projects))
+- [Insanity-Shader-Universal-v1.650.zip](https://www.curseforge.com/minecraft/shaders/insanity-shader/files/5424730) (by [ElocinDev](https://www.curseforge.com/members/elocindev/projects))

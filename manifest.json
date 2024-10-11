@@ -118,6 +118,12 @@
     },
     {
       "required": true,
+      "projectID": 627557,
+      "fileID": 5507475,
+      "downloadUrl": "https://edge.forgecdn.net/files/5507/475/ComplementaryReimagined_r5.2.2.zip"
+    },
+    {
+      "required": true,
       "projectID": 268560,
       "fileID": 3875976,
       "downloadUrl": "https://edge.forgecdn.net/files/3875/976/Mekanism-1.18.2-10.2.5.465.jar"
@@ -211,6 +217,12 @@
       "projectID": 244019,
       "fileID": 3876284,
       "downloadUrl": "https://edge.forgecdn.net/files/3876/284/Lockdown-1.18.2-8.0.0.jar"
+    },
+    {
+      "required": true,
+      "projectID": 385587,
+      "fileID": 5507479,
+      "downloadUrl": "https://edge.forgecdn.net/files/5507/479/ComplementaryUnbound_r5.2.2.zip"
     },
     {
       "required": true,
@@ -925,6 +937,12 @@
       "projectID": 248787,
       "fileID": 4770822,
       "downloadUrl": "https://edge.forgecdn.net/files/4770/822/appleskin-forge-mc1.18.2-2.5.1.jar"
+    },
+    {
+      "required": true,
+      "projectID": 618217,
+      "fileID": 5424730,
+      "downloadUrl": "https://edge.forgecdn.net/files/5424/730/Insanity-Shader-Universal-v1.650.zip"
     },
     {
       "required": true,
