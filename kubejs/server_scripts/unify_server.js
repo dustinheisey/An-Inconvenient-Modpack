@@ -18,6 +18,7 @@ global['RECIPE_DEDUPE'] = true;
 global['unifypriorities'] = [
   'immersivepetroleum',
   'salt',
+  'ceramics',
   'rankine',
   'minecraft',
   'chemlib',
@@ -49,7 +50,30 @@ let tags = new Set([
   'forge:coal_coke',
   'forge:storage_blocks/coal_coke',
   'forge:salts',
-  'forge:storage_blocks/salt'
+  'forge:storage_blocks/salt',
+  'im:porcelain/finished',
+  'im:porcelain/unfired',
+  'im:porcelain/clay_balls',
+  'im:porcelain/bricks',
+  'im:porcelain/bricks_slabs',
+  'im:porcelain/bricks_stairs',
+  'im:porcelain/bricks_walls',
+  'im:porcelain/red',
+  'im:porcelain/orange',
+  'im:porcelain/yellow',
+  'im:porcelain/lime',
+  'im:porcelain/green',
+  'im:porcelain/light_blue',
+  'im:porcelain/cyan',
+  'im:porcelain/blue',
+  'im:porcelain/magenta',
+  'im:porcelain/purple',
+  'im:porcelain/pink',
+  'im:porcelain/white',
+  'im:porcelain/light_gray',
+  'im:porcelain/gray',
+  'im:porcelain/black',
+  'im:porcelain/brown'
 ]);
 
 // A list of lists of items to unify. Each list will be turned into a tag and added to the list of tags to unify.
@@ -76,6 +100,117 @@ let tagUnions = [
   // ["forge:plates/iron", "#annoyingmod:iron_plates", "#anothermod:iron_plates", "thirdmod:iron_plate"]
   // ["forge:ores_in_ground/deepslate", /thermal:deepslate_.*_ore/g],
   // ["forge:ores_in_ground/stone", /thermal:(?!deepslate).*_ore/g]
+  ['im:porcelain/finished', 'ceramics:white_porcelain', 'rankine:porcelain'],
+  [
+    'im:porcelain/unfired',
+    'ceramics:unfired_porcelain_block',
+    'rankine:porcelain_clay'
+  ],
+  [
+    'im:porcelain/clay_balls',
+    'rankine:porcelain_clay_ball',
+    'ceramics:unfired_porcelain'
+  ],
+  [
+    'im:porcelain/bricks',
+    'rankine:porcelain_clay_bricks',
+    'ceramics:porcelain_bricks'
+  ],
+  [
+    'im:porcelain/bricks_slabs',
+    'rankine:porcelain_clay_bricks_slab',
+    'ceramics:porcelain_bricks_slab'
+  ],
+  [
+    'im:porcelain/bricks_stairs',
+    'rankine:porcelain_clay_bricks_stairs',
+    'ceramics:porcelain_bricks_stairs'
+  ],
+  [
+    'im:porcelain/bricks_walls',
+    'rankine:porcelain_clay_bricks_wall',
+    'ceramics:porcelain_bricks_wall'
+  ],
+  [
+    'im:porcelain/red',
+    'rankine:red_glazed_porcelain',
+    'ceramics:red_porcelain'
+  ],
+  [
+    'im:porcelain/orange',
+    'rankine:orange_glazed_porcelain',
+    'ceramics:orange_porcelain'
+  ],
+  [
+    'im:porcelain/yellow',
+    'rankine:yellow_glazed_porcelain',
+    'ceramics:yellow_porcelain'
+  ],
+  [
+    'im:porcelain/lime',
+    'rankine:lime_glazed_porcelain',
+    'ceramics:lime_porcelain'
+  ],
+  [
+    'im:porcelain/green',
+    'rankine:green_glazed_porcelain',
+    'ceramics:green_porcelain'
+  ],
+  [
+    'im:porcelain/light_blue',
+    'rankine:light_blue_glazed_porcelain',
+    'ceramics:light_blue_porcelain'
+  ],
+  [
+    'im:porcelain/cyan',
+    'rankine:cyan_glazed_porcelain',
+    'ceramics:cyan_porcelain'
+  ],
+  [
+    'im:porcelain/blue',
+    'rankine:blue_glazed_porcelain',
+    'ceramics:blue_porcelain'
+  ],
+  [
+    'im:porcelain/magenta',
+    'rankine:magenta_glazed_porcelain',
+    'ceramics:magenta_porcelain'
+  ],
+  [
+    'im:porcelain/purple',
+    'rankine:purple_glazed_porcelain',
+    'ceramics:purple_porcelain'
+  ],
+  [
+    'im:porcelain/pink',
+    'rankine:pink_glazed_porcelain',
+    'ceramics:pink_porcelain'
+  ],
+  [
+    'im:porcelain/light_gray',
+    'rankine:light_gray_glazed_porcelain',
+    'ceramics:light_gray_porcelain'
+  ],
+  [
+    'im:porcelain/gray',
+    'rankine:gray_glazed_porcelain',
+    'ceramics:gray_porcelain'
+  ],
+  [
+    'im:porcelain/black',
+    'rankine:black_glazed_porcelain',
+    'ceramics:black_porcelain'
+  ],
+  [
+    'im:porcelain/white',
+    'rankine:white_glazed_porcelain',
+    'ceramics:white_porcelain'
+  ],
+  [
+    'im:porcelain/brown',
+    'rankine:brown_glazed_porcelain',
+    'ceramics:brown_porcelain'
+  ],
   ['forge:salts', 'rankine:calcium_chloride'],
   [
     'forge:storage_blocks/salt',

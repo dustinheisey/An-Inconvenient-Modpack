@@ -138,6 +138,7 @@ onEvent('jei.hide.items', (event) => {
       'charcoal_pit:steel_boots',
       'charcoal_pit:engine'
     ],
+    ceramics: ['ceramics:porcelain_brick'],
     croptopia: [
       'croptopia:cheese',
       'croptopia:olive',

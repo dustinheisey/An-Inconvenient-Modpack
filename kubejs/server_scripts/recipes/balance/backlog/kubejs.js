@@ -760,6 +760,7 @@ onEvent('recipes', (event) => {
     filter: () => {
       event.remove({
         output: [
+          'ceramics:porcelain_brick',
           'croptopia:salt_ore',
           'salt:rock_salt_ore',
           'salt:deepslate_rock_salt_ore',

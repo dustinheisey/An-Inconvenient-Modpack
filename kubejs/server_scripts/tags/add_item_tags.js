@@ -77,6 +77,10 @@ onEvent('tags.items', (event) => {
   // });
 
   //   event.add("forge:storage_blocks/salt", "rankine:sodium_chloride_block");
+  event.add('im:porcelain', [
+    'kubejs:unglazed_porcelain',
+    'kubejs:glazed_porcelain'
+  ]);
   event.add('charcoal_pit:bloomery_fuels', [
     'malum:block_of_arcane_charcoal',
     'malum:charcoal_fragment',
