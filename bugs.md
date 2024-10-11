@@ -38,7 +38,7 @@
 - [ ] recipe staging chapter 1
 - [x] change waterskin recipe output count
 - [ ] change kaolinite advancement
-- [ ] desert sand -> minecraft:sand
+- [x] desert sand -> minecraft:sand
 - [ ] ultra high fire clay advancement
 - [ ] bandaid advancements
 - [ ] antique atlas texture bug
