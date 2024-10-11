@@ -44,7 +44,7 @@
 - [ ] antique atlas texture bug
 - [ ] increase mixing time for fire clay slightly
 - [ ] boiler and icebox advancements
-- [ ] engineer's hammer recipe high fire brick
+- [x] engineer's hammer recipe high fire brick
 - [ ] change cauldron to tin, get rid of salt spawning, making salt from cauldron, 1 salt to salt leather
 - [ ] metal blocks to ingots
 - [ ] porcelain, feldspar advancement chains

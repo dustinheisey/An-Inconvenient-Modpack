@@ -848,7 +848,7 @@ onEvent('recipes', (event) => {
                                   'immersiveengineering:hammer',
                                   [' ab', ' ca', 'c  '],
                                   {
-                                    a: 'rankine:refractory_brick',
+                                    a: 'rankine:high_refractory_brick',
                                     b: 'farmersdelight:rope',
                                     c: '#forge:rods/wooden'
                                   }
