@@ -20,7 +20,8 @@ onEvent('tags.items', (event) => {
     'botania:petals',
     'botania:mystical_flowers',
     'botania:double_mystical_flowers',
-    'forge:amalgam_tools'
+    'forge:amalgam_tools',
+    'ceramics:rainbow_porcelain'
   ]);
   overrideTagChapters('chapter_5_1', [
     'chipped:red_carpet',

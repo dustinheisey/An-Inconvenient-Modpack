@@ -27,7 +27,8 @@ onEvent('tags.items', (event) => {
     'death_compass',
     'gravestone',
     'salt',
-    'labels'
+    'labels',
+    'ceramics'
   ]);
   setModsChapter('chapter_2', [
     'farmersdelight',

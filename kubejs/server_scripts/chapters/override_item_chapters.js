@@ -6876,6 +6876,86 @@ onEvent('tags.items', (event) => {
   overrideChapters('thirst', {
     chapter_4: ['thirst:sand_filter']
   });
+  overrideChapters('ceramics', {
+    chapter_2: [
+      'ceramics:red_porcelain',
+      'ceramics:red_terracotta_cistern',
+      'ceramics:red_porcelain_cistern',
+      'ceramics:monochrome_bricks',
+      'ceramics:monochrome_bricks_slab',
+      'ceramics:monochrome_bricks_stairs',
+      'ceramics:monochrome_bricks_wall',
+      'ceramics:marine_bricks',
+      'ceramics:marine_bricks_slab',
+      'ceramics:marine_bricks_stairs',
+      'ceramics:marine_bricks_wall'
+    ],
+    chapter_3: [
+      'ceramics:orange_porcelain',
+      'ceramics:yellow_porcelain',
+      'ceramics:lime_porcelain',
+      'ceramics:green_porcelain',
+      'ceramics:light_blue_porcelain',
+      'ceramics:cyan_porcelain',
+      'ceramics:blue_porcelain',
+      'ceramics:magenta_porcelain',
+      'ceramics:purple_porcelain',
+      'ceramics:pink_porcelain',
+      'ceramics:black_porcelain',
+      'ceramics:brown_porcelain',
+      'ceramics:gray_porcelain',
+      'ceramics:light_gray_porcelain',
+      'ceramics:white_terracotta_cistern',
+      'ceramics:orange_terracotta_cistern',
+      'ceramics:yellow_terracotta_cistern',
+      'ceramics:lime_terracotta_cistern',
+      'ceramics:green_terracotta_cistern',
+      'ceramics:light_blue_terracotta_cistern',
+      'ceramics:cyan_terracotta_cistern',
+      'ceramics:blue_terracotta_cistern',
+      'ceramics:magenta_terracotta_cistern',
+      'ceramics:purple_terracotta_cistern',
+      'ceramics:pink_terracotta_cistern',
+      'ceramics:black_terracotta_cistern',
+      'ceramics:brown_terracotta_cistern',
+      'ceramics:gray_terracotta_cistern',
+      'ceramics:light_gray_terracotta_cistern',
+      'ceramics:orange_porcelain_cistern',
+      'ceramics:yellow_porcelain_cistern',
+      'ceramics:lime_porcelain_cistern',
+      'ceramics:green_porcelain_cistern',
+      'ceramics:light_blue_porcelain_cistern',
+      'ceramics:cyan_porcelain_cistern',
+      'ceramics:blue_porcelain_cistern',
+      'ceramics:magenta_porcelain_cistern',
+      'ceramics:purple_porcelain_cistern',
+      'ceramics:pink_porcelain_cistern',
+      'ceramics:black_porcelain_cistern',
+      'ceramics:brown_porcelain_cistern',
+      'ceramics:gray_porcelain_cistern',
+      'ceramics:light_gray_porcelain_cistern'
+    ],
+    chapter_4: [
+      'ceramics:lava_bricks',
+      'ceramics:lava_bricks_slab',
+      'ceramics:lava_bricks_stairs',
+      'ceramics:lava_bricks_wall',
+      'ceramics:golden_bricks',
+      'ceramics:golden_bricks_slab',
+      'ceramics:golden_bricks_stairs',
+      'ceramics:golden_bricks_wall',
+      'ceramics:rainbow_bricks',
+      'ceramics:rainbow_bricks_slab',
+      'ceramics:rainbow_bricks_stairs',
+      'ceramics:rainbow_bricks_wall'
+    ],
+    chapter_5_1: [
+      'ceramics:dragon_bricks',
+      'ceramics:dragon_bricks_slab',
+      'ceramics:dragon_bricks_stairs',
+      'ceramics:dragon_bricks_wall'
+    ]
+  });
   // overrideChapters('za', {
   //   chapter_1: [
   //     'za:banana',
