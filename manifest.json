@@ -118,12 +118,6 @@
     },
     {
       "required": true,
-      "projectID": 627557,
-      "fileID": 5507475,
-      "downloadUrl": "https://edge.forgecdn.net/files/5507/475/ComplementaryReimagined_r5.2.2.zip"
-    },
-    {
-      "required": true,
       "projectID": 268560,
       "fileID": 3875976,
       "downloadUrl": "https://edge.forgecdn.net/files/3875/976/Mekanism-1.18.2-10.2.5.465.jar"
@@ -217,12 +211,6 @@
       "projectID": 244019,
       "fileID": 3876284,
       "downloadUrl": "https://edge.forgecdn.net/files/3876/284/Lockdown-1.18.2-8.0.0.jar"
-    },
-    {
-      "required": true,
-      "projectID": 385587,
-      "fileID": 5507479,
-      "downloadUrl": "https://edge.forgecdn.net/files/5507/479/ComplementaryUnbound_r5.2.2.zip"
     },
     {
       "required": true,
@@ -940,12 +928,6 @@
     },
     {
       "required": true,
-      "projectID": 618217,
-      "fileID": 5424730,
-      "downloadUrl": "https://edge.forgecdn.net/files/5424/730/Insanity-Shader-Universal-v1.650.zip"
-    },
-    {
-      "required": true,
       "projectID": 423490,
       "fileID": 3819624,
       "downloadUrl": "https://edge.forgecdn.net/files/3819/624/kubejs-ui-forge-1802.1.8-build.17.jar"
@@ -1279,12 +1261,6 @@
       "projectID": 689238,
       "fileID": 4032731,
       "downloadUrl": "https://edge.forgecdn.net/files/4032/731/YungsBetterOceanMonuments-1.18.2-Forge-1.0.3.jar"
-    },
-    {
-      "required": true,
-      "projectID": 679106,
-      "fileID": 4061372,
-      "downloadUrl": "https://edge.forgecdn.net/files/4061/372/Visual%20Titles.zip"
     },
     {
       "required": true,
