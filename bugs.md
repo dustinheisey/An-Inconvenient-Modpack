@@ -30,16 +30,17 @@
 
 ## Playtesting Chapter 1
 
-- [ ] charcoal pit exploit
+- [ ] charcoal pit exploit - add to your own data pack
 - [ ] recipe staging chapter 1
-- [ ] change kaolinite advancement
-- [ ] bandaid advancements
-- [ ] antique atlas texture bug
-- [ ] boiler and icebox advancements
+- [x] antique atlas texture bug (fixed by Orgamorsh https://github.com/AntiqueAtlasTeam/AntiqueAtlas/issues/416)
 - [ ] metal blocks to ingots
-- [ ] porcelain, feldspar advancement chains
 - [ ] rework grog production
-- [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
+- [ ] advancements
+  - [ ] change kaolinite advancement
+  - [ ] bandaid advancements
+  - [ ] boiler and icebox advancements
+  - [ ] porcelain, feldspar advancement chains
+  - [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
 - [ ] create trash biome
   - [ ] remove selenite geodes
   - [ ] remove amethyst geodes
