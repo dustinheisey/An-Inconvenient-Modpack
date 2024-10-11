@@ -124,10 +124,6 @@ onEvent('jei.hide.items', (event) => {
       'charcoal_pit:coal_ash',
       'charcoal_pit:alloy_steel',
       'charcoal_pit:cheese',
-      'croptopia:cheese',
-      'croptopia:olive',
-      'croptopia:olive_seed',
-      'croptopia:olive_oil',
       'charcoal_pit:jacaranda_leaves',
       'charcoal_pit:steel_shovel',
       'charcoal_pit:nest_box',
@@ -141,6 +137,13 @@ onEvent('jei.hide.items', (event) => {
       'charcoal_pit:cedar_sapling',
       'charcoal_pit:steel_boots',
       'charcoal_pit:engine'
+    ],
+    croptopia: [
+      'croptopia:cheese',
+      'croptopia:olive',
+      'croptopia:olive_seed',
+      'croptopia:olive_oil',
+      'croptopia:salt_ore'
     ],
     rankine: [
       'rankine:bronze_hoe',
@@ -1191,7 +1194,17 @@ onEvent('jei.hide.items', (event) => {
     paragon_textiles: ['paragon_textiles:flaxseed_oil_bottle'],
     extendedcrafting: ['extendedcrafting:recipe_maker'],
     gravestone: ['gravestone:obituary'],
-    mekanism: ['mekanism:block_salt']
+    mekanism: ['mekanism:block_salt'],
+    salt: [
+      'salt:rock_salt_ore',
+      'salt:deepslate_rock_salt_ore',
+      'salt:raw_rock_salt_block',
+      'salt:salt_cluster',
+      'salt:large_salt_bud',
+      'salt:medium_salt_bud',
+      'salt:small_salt_bud',
+      'salt:raw_rock_salt'
+    ]
   }).forEach((item) => {
     event.hide(item);
   });

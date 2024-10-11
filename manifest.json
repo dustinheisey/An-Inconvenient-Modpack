@@ -11,7 +11,7 @@
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
   "name": "An Inconvenient Modpack",
-  "version": "0.6.9",
+  "version": "0.6.10",
   "author": "Inconvenient Dev",
   "files": [
     {
@@ -611,8 +611,8 @@
     {
       "required": true,
       "projectID": 263420,
-      "fileID": 5685648,
-      "downloadUrl": "https://edge.forgecdn.net/files/5685/648/Xaeros_Minimap_24.4.0_Forge_1.18.2.jar"
+      "fileID": 5772994,
+      "downloadUrl": "https://edge.forgecdn.net/files/5772/994/Xaeros_Minimap_24.5.0_Forge_1.18.2.jar"
     },
     {
       "required": true,
@@ -1105,6 +1105,12 @@
       "projectID": 454372,
       "fileID": 5102251,
       "downloadUrl": "https://edge.forgecdn.net/files/5102/251/supermartijn642corelib-1.1.17-forge-mc1.18.jar"
+    },
+    {
+      "required": true,
+      "projectID": 504908,
+      "fileID": 3778233,
+      "downloadUrl": "https://edge.forgecdn.net/files/3778/233/TravelersTitles-1.18.2-Forge-2.1.1.jar"
     },
     {
       "required": true,

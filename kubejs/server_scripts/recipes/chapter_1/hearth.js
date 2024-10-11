@@ -82,7 +82,7 @@ onEvent('recipes', (event) => {
                   });
                   event
                     .shaped('charcoal_pit:bloomeryy', ['aaa', 'aba', 'ccc'], {
-                      a: 'rankine:refractory_bricks',
+                      a: 'rankine:ultra_high_refractory_bricks',
                       b: 'minecraft:furnace',
                       c: 'rankine:bronze_ingot'
                     })
@@ -146,7 +146,7 @@ onEvent('recipes', (event) => {
                                       );
                                       event.custom({
                                         type: 'rankine:mixing',
-                                        mixTime: 70,
+                                        mixTime: 90,
                                         ingredientTotal: 3,
                                         matScale: 0.33,
                                         fluidInput: {
@@ -456,7 +456,7 @@ onEvent('recipes', (event) => {
                           event
                             .custom({
                               type: 'rankine:mixing',
-                              mixTime: 100,
+                              mixTime: 90,
                               ingredientTotal: 2,
                               matScale: 1,
                               fluidInput: {
@@ -645,6 +645,21 @@ onEvent('recipes', (event) => {
                           },
                           {
                             id: 'campfire',
+                            recipe: () => {
+                              ['minecraft:campfire'].forEach((id) =>
+                                event.remove({ id: id })
+                              );
+
+                              event.shaped(
+                                'minecraft:campfire',
+                                [' a ', 'aba', 'ccc'],
+                                {
+                                  a: '#forge:rods/wooden',
+                                  b: '#minecraft:coals',
+                                  c: '#minecraft:logs'
+                                }
+                              );
+                            },
                             children: [
                               {
                                 // ? bury log piles underground light on fire and cover. mine the charcoal ones it stops smoking
@@ -833,7 +848,7 @@ onEvent('recipes', (event) => {
                                   'immersiveengineering:hammer',
                                   [' ab', ' ca', 'c  '],
                                   {
-                                    a: 'rankine:refractory_brick',
+                                    a: 'rankine:high_refractory_brick',
                                     b: 'farmersdelight:rope',
                                     c: '#forge:rods/wooden'
                                   }
@@ -1137,7 +1152,7 @@ onEvent('recipes', (event) => {
               event
                 .custom({
                   type: 'rankine:mixing',
-                  mixTime: 100,
+                  mixTime: 90,
                   ingredientTotal: 1,
                   matScale: 1,
                   fluidInput: { fluid: 'kubejs:tanning_fluid', amount: 250 },
@@ -1175,8 +1190,6 @@ onEvent('recipes', (event) => {
                       event
                         .shapeless('kubejs:salted_hide', [
                           'kubejs:stitched_hide',
-                          'salt:salt',
-                          'salt:salt',
                           'salt:salt'
                         ])
                         .id('inconvenient:salted_hide');
@@ -1213,12 +1226,19 @@ onEvent('recipes', (event) => {
                       },
                       {
                         id: 'salt',
-                        children: [
-                          {
-                            // ? TODO found in beaches at y level [x-y]
-                            id: 'rock_salt'
-                          }
-                        ]
+                        recipe: () => {
+                          [
+                            'salt:salt_from_raw_rock_salt',
+                            'rankine:calcium_chloride_from_block',
+                            'rankine:pink_salt_from_block',
+                            'rankine:sodium_chloride_from_block',
+                            'croptopia:blasting_salt',
+                            'croptopia:salt_from_water_bottle',
+                            'croptopia:salt_from_smoking_water_bottle',
+                            'croptopia:salt_from_water_bottle',
+                            'tofucraft:integration/create/mixing/bittern_mixing'
+                          ].forEach((id) => event.remove({ id: id }));
+                        }
                       }
                     ]
                   }
@@ -1452,7 +1472,7 @@ onEvent('recipes', (event) => {
                         recipe: () => {
                           event.custom({
                             type: 'rankine:mixing',
-                            mixTime: 70,
+                            mixTime: 90,
                             ingredientTotal: 2,
                             matScale: 0.5,
                             fluidInput: {
@@ -1553,7 +1573,7 @@ onEvent('recipes', (event) => {
 
                                                   event.custom({
                                                     type: 'rankine:mixing',
-                                                    mixTime: 100,
+                                                    mixTime: 90,
                                                     ingredientTotal: 4,
                                                     matScale: 0.25,
                                                     fluidInput: {
@@ -1659,7 +1679,7 @@ onEvent('recipes', (event) => {
                                         recipe: () => {
                                           event.custom({
                                             type: 'rankine:mixing',
-                                            mixTime: 100,
+                                            mixTime: 90,
                                             ingredientTotal: 4,
                                             matScale: 2,
                                             fluidInput: {
@@ -1727,7 +1747,7 @@ onEvent('recipes', (event) => {
                             recipe: () => {
                               event.custom({
                                 type: 'rankine:mixing',
-                                mixTime: 70,
+                                mixTime: 90,
                                 ingredientTotal: 2,
                                 matScale: 0.5,
                                 fluidInput: {

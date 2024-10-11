@@ -9,13 +9,13 @@
 
 [world_creation_menu_settings]
 	#Toggle the game mode button
-	disable_game_mode = false
+	disable_game_mode = true
 	#Toggle the cheats button
-	disable_cheats = false
+	disable_cheats = true
 	#Toggle the game rules button
 	disable_game_rules = true
 	#Toggle the difficulty button
-	disable_difficulty = false
+	disable_difficulty = true
 	#Toggle the data packs button
 	disable_data_packs = true
 	#Toggle the more world options button

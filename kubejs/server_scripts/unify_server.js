@@ -49,7 +49,6 @@ let tags = new Set([
   'forge:coal_coke',
   'forge:storage_blocks/coal_coke',
   'forge:salts',
-  'forge:ores/salt',
   'forge:storage_blocks/salt'
 ]);
 
@@ -78,7 +77,6 @@ let tagUnions = [
   // ["forge:ores_in_ground/deepslate", /thermal:deepslate_.*_ore/g],
   // ["forge:ores_in_ground/stone", /thermal:(?!deepslate).*_ore/g]
   ['forge:salts', 'rankine:calcium_chloride'],
-  ['forge:ores/salt', 'salt:rock_salt_ore', 'croptopia:salt_ore'],
   [
     'forge:storage_blocks/salt',
     'salt:salt_block',

@@ -447,7 +447,7 @@ onEvent('recipes', (event) => {
                                                         },
                                                         guaranteed: [
                                                           {
-                                                            item: 'salt:raw_rock_salt',
+                                                            item: 'salt:salt',
                                                             tier: 'minecraft:diamond'
                                                           }
                                                         ],
@@ -457,7 +457,7 @@ onEvent('recipes', (event) => {
                                                             remove: false
                                                           },
                                                           {
-                                                            item: 'salt:raw_rock_salt',
+                                                            item: 'salt:salt',
                                                             weight: 30,
                                                             remove: false
                                                           },

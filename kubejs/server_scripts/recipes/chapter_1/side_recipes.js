@@ -8,7 +8,7 @@ onEvent('recipes', (event) => {
           recipe: () => {
             event
               .shaped('endrem:cold_eye', ['aba', 'bcb', 'aba'], {
-                a: 'rankine:refractory_brick',
+                a: 'rankine:ultra_high_refractory_brick',
                 b: 'minecraft:leather',
                 c: 'minecraft:iron_ingot'
               })
@@ -276,7 +276,7 @@ onEvent('recipes', (event) => {
       recipe: () => {
         ['cold_sweat:waterskin'].forEach((id) => event.remove({ id: id }));
         event
-          .shaped('8x cold_sweat:waterskin', ['  a', ' b ', 'b  '], {
+          .shaped('2x cold_sweat:waterskin', ['  a', ' b ', 'b  '], {
             a: 'farmersdelight:rope',
             b: 'minecraft:leather'
           })
@@ -625,10 +625,10 @@ onEvent('recipes', (event) => {
       }
     },
     {
-      id: 'bronze_cauldron',
+      id: 'tin_cauldron',
       recipe: () => {
         event.shaped('minecraft:cauldron', ['a a', 'a a', 'aaa'], {
-          a: 'rankine:bronze_ingot'
+          a: 'rankine:tin_ingot'
         });
       }
     },

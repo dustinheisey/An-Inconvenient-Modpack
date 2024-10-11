@@ -2,7 +2,7 @@
 
 An Inconvenient Modpack is a philosophical story of our current times and scathing political commentary about the issues that affect all of us, packaged in the form of an epic minecraft modpack. This is not your average modpack. There is an enormous amount to do here including but not limited to 9 large chapters of content and many collections of side quests, hundreds of advancements and intricately handcrafted progression changes to the more than 200 mods included with the pack. The narrative that will guide you through the content of this pack will make you think deeply about the issues affecting all of us right now.
 
-## Modlist - v0.6.9 | 1.18.2 | Forge 40.2.17
+## Modlist - v0.6.10 | 1.18.2 | Forge 40.2.17
 
 - [thitemstages-1.18.2-0.1.2.jar](https://www.curseforge.com/minecraft/mc-mods/totally-harmonious-item-stages/files/4175008) (by [alexandr_0031](https://www.curseforge.com/members/alexandr_0031/projects))
 - [AdChimneys-1.18.2-8.3.6.0-build.1586.jar](https://www.curseforge.com/minecraft/mc-mods/advanced-chimneys/files/5222264) (by [EnderLanky](https://www.curseforge.com/members/enderlanky/projects))
@@ -206,6 +206,7 @@ An Inconvenient Modpack is a philosophical story of our current times and scathi
 - [ToastControl-1.18.2-6.0.3.jar](https://www.curseforge.com/minecraft/mc-mods/toast-control/files/3929072) (by [Shadows_of_Fire](https://www.curseforge.com/members/shadows_of_fire/projects))
 - [TofuCraftReload-1.18.2-1.1.2.0.jar](https://www.curseforge.com/minecraft/mc-mods/tofucraftreload/files/4522592) (by [sz0999312](https://www.curseforge.com/members/sz0999312/projects))
 - [Totemic-forge-1.18.2-0.12.9.1.jar](https://www.curseforge.com/minecraft/mc-mods/totemic/files/5397584) (by [ljfa2](https://www.curseforge.com/members/ljfa2/projects))
+- [TravelersTitles-1.18.2-Forge-2.1.1.jar](https://www.curseforge.com/minecraft/mc-mods/travelers-titles/files/3778233) (by [YUNGNICKYOUNG](https://www.curseforge.com/members/yungnickyoung/projects))
 - [TwilightDelight-1.18.2-1.1.4.jar](https://www.curseforge.com/minecraft/mc-mods/twilight-delight/files/3848595) (by [laokuai233](https://www.curseforge.com/members/laokuai233/projects))
 - [twilighttweaks-1.18.2-1.1.jar](https://www.curseforge.com/minecraft/mc-mods/twilight-tweaks/files/3872724) (by [jodlodi](https://www.curseforge.com/members/jodlodi/projects))
 - [undergarden_delight_1.0.0_forge_1.18.2.jar](https://www.curseforge.com/minecraft/mc-mods/undergarden-delight/files/5023393) (by [nocubeyt](https://www.curseforge.com/members/nocubeyt/projects))
@@ -216,7 +217,7 @@ An Inconvenient Modpack is a philosophical story of our current times and scathi
 - [DungeonsArise-1.18.2-2.1.52-release.jar](https://www.curseforge.com/minecraft/mc-mods/when-dungeons-arise/files/4047163) (by [Aureljz](https://www.curseforge.com/members/aureljz/projects))
 - [WilyTextiles-Forge-1.18.2-0.3.4.jar](https://www.curseforge.com/minecraft/mc-mods/wily-textiles/files/3931966) (by [MCThe_Paragon](https://www.curseforge.com/members/mcthe_paragon/projects))
 - [World Stripper-1.18.2-3.1.0.jar](https://www.curseforge.com/minecraft/mc-mods/world-stripper/files/3670854) (by [EwyBoy](https://www.curseforge.com/members/ewyboy/projects))
-- [Xaeros_Minimap_24.4.0_Forge_1.18.2.jar](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap/files/5685648) (by [xaero96](https://www.curseforge.com/members/xaero96/projects))
+- [Xaeros_Minimap_24.5.0_Forge_1.18.2.jar](https://www.curseforge.com/minecraft/mc-mods/xaeros-minimap/files/5772994) (by [xaero96](https://www.curseforge.com/members/xaero96/projects))
 - [XaerosWorldMap_1.39.0_Forge_1.18.2.jar](https://www.curseforge.com/minecraft/mc-mods/xaeros-world-map/files/5658214) (by [xaero96](https://www.curseforge.com/members/xaero96/projects))
 - [yeetusexperimentus-1.0.2-build.7+mc1.18.2.jar](https://www.curseforge.com/minecraft/mc-mods/yeetusexperimentus/files/4377180) (by [Sunekaer](https://www.curseforge.com/members/sunekaer/projects))
 - [YungsApi-1.18.2-Forge-2.2.9.jar](https://www.curseforge.com/minecraft/mc-mods/yungs-api/files/4428184) (by [YUNGNICKYOUNG](https://www.curseforge.com/members/yungnickyoung/projects))
