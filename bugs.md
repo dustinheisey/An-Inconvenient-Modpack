@@ -42,7 +42,7 @@
 - [x] ultra high fire clay advancement
 - [ ] bandaid advancements
 - [ ] antique atlas texture bug
-- [ ] increase mixing time for fire clay slightly
+- [x] standardize chapter 1 mixing recipe mixing times
 - [ ] boiler and icebox advancements
 - [x] engineer's hammer recipe high fire brick
 - [ ] change cauldron to tin, get rid of salt spawning, making salt from cauldron, 1 salt to salt leather

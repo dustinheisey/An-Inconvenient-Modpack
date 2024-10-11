@@ -146,7 +146,7 @@ onEvent('recipes', (event) => {
                                       );
                                       event.custom({
                                         type: 'rankine:mixing',
-                                        mixTime: 70,
+                                        mixTime: 90,
                                         ingredientTotal: 3,
                                         matScale: 0.33,
                                         fluidInput: {
@@ -456,7 +456,7 @@ onEvent('recipes', (event) => {
                           event
                             .custom({
                               type: 'rankine:mixing',
-                              mixTime: 100,
+                              mixTime: 90,
                               ingredientTotal: 2,
                               matScale: 1,
                               fluidInput: {
@@ -1152,7 +1152,7 @@ onEvent('recipes', (event) => {
               event
                 .custom({
                   type: 'rankine:mixing',
-                  mixTime: 100,
+                  mixTime: 90,
                   ingredientTotal: 1,
                   matScale: 1,
                   fluidInput: { fluid: 'kubejs:tanning_fluid', amount: 250 },
@@ -1467,7 +1467,7 @@ onEvent('recipes', (event) => {
                         recipe: () => {
                           event.custom({
                             type: 'rankine:mixing',
-                            mixTime: 70,
+                            mixTime: 90,
                             ingredientTotal: 2,
                             matScale: 0.5,
                             fluidInput: {
@@ -1568,7 +1568,7 @@ onEvent('recipes', (event) => {
 
                                                   event.custom({
                                                     type: 'rankine:mixing',
-                                                    mixTime: 100,
+                                                    mixTime: 90,
                                                     ingredientTotal: 4,
                                                     matScale: 0.25,
                                                     fluidInput: {
@@ -1674,7 +1674,7 @@ onEvent('recipes', (event) => {
                                         recipe: () => {
                                           event.custom({
                                             type: 'rankine:mixing',
-                                            mixTime: 100,
+                                            mixTime: 90,
                                             ingredientTotal: 4,
                                             matScale: 2,
                                             fluidInput: {
@@ -1742,7 +1742,7 @@ onEvent('recipes', (event) => {
                             recipe: () => {
                               event.custom({
                                 type: 'rankine:mixing',
-                                mixTime: 70,
+                                mixTime: 90,
                                 ingredientTotal: 2,
                                 matScale: 0.5,
                                 fluidInput: {
