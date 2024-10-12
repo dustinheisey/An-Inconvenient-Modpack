@@ -418,61 +418,6 @@ onEvent('server.datapack.high_priority', (event) => {
                                                 frame: 'goal',
                                                 children: [
                                                   {
-                                                    item: 'rankine:ultra_high_refractory_brick',
-                                                    title: "Kiln's Core",
-                                                    description:
-                                                      'Fire a refractory brick',
-                                                    frame: 'goal',
-                                                    children: [
-                                                      {
-                                                        item: 'charcoal_pit:bloomeryy',
-                                                        title:
-                                                          "Bloomery's Breath",
-                                                        frame: 'goal',
-                                                        description:
-                                                          'Forge a bloomery for iron',
-                                                        children: [
-                                                          {
-                                                            item: 'minecraft:iron_ingot',
-                                                            title: 'Iron Will',
-                                                            frame: 'goal',
-                                                            description:
-                                                              'Extract iron, forge ahead',
-                                                            children: [
-                                                              {
-                                                                item: 'cold_sweat:hearth',
-                                                                id: 'hearth',
-                                                                frame: 'goal',
-                                                                title:
-                                                                  "Hearth's Embrace",
-                                                                reward:
-                                                                  'im:eyes/eye_cold',
-                                                                description:
-                                                                  'Construct a hearth and stabilize your temperature',
-                                                                children: [
-                                                                  {
-                                                                    item: 'endrem:cold_eye',
-                                                                    title:
-                                                                      'The Bunker',
-                                                                    description:
-                                                                      'Have a flashback after air conditioning your room',
-                                                                    parent:
-                                                                      'hearth',
-                                                                    id: 'eye_cold',
-                                                                    frame:
-                                                                      'challenge',
-                                                                    reward:
-                                                                      'im:chapters/chapter_2'
-                                                                  }
-                                                                ]
-                                                              }
-                                                            ]
-                                                          }
-                                                        ]
-                                                      }
-                                                    ]
-                                                  },
-                                                  {
                                                     item: 'immersiveengineering:hammer',
                                                     title: 'Engineer’s Tool',
                                                     description:
@@ -535,7 +480,73 @@ onEvent('server.datapack.high_priority', (event) => {
                                                                         description:
                                                                           'Crush some terracotta plates in the pestle and mortar',
                                                                         children:
-                                                                          []
+                                                                          [
+                                                                            {
+                                                                              item: 'rankine:ultra_high_refractory_brick',
+                                                                              title:
+                                                                                "Kiln's Core",
+                                                                              description:
+                                                                                'Fire a refractory brick',
+                                                                              frame:
+                                                                                'goal',
+                                                                              children:
+                                                                                [
+                                                                                  {
+                                                                                    item: 'charcoal_pit:bloomeryy',
+                                                                                    title:
+                                                                                      "Bloomery's Breath",
+                                                                                    frame:
+                                                                                      'goal',
+                                                                                    description:
+                                                                                      'Forge a bloomery for iron',
+                                                                                    children:
+                                                                                      [
+                                                                                        {
+                                                                                          item: 'minecraft:iron_ingot',
+                                                                                          title:
+                                                                                            'Iron Will',
+                                                                                          frame:
+                                                                                            'goal',
+                                                                                          description:
+                                                                                            'Extract iron, forge ahead',
+                                                                                          children:
+                                                                                            [
+                                                                                              {
+                                                                                                item: 'cold_sweat:hearth',
+                                                                                                id: 'hearth',
+                                                                                                frame:
+                                                                                                  'goal',
+                                                                                                title:
+                                                                                                  "Hearth's Embrace",
+                                                                                                reward:
+                                                                                                  'im:eyes/eye_cold',
+                                                                                                description:
+                                                                                                  'Construct a hearth and stabilize your temperature',
+                                                                                                children:
+                                                                                                  [
+                                                                                                    {
+                                                                                                      item: 'endrem:cold_eye',
+                                                                                                      title:
+                                                                                                        'The Bunker',
+                                                                                                      description:
+                                                                                                        'Have a flashback after air conditioning your room',
+                                                                                                      parent:
+                                                                                                        'hearth',
+                                                                                                      id: 'eye_cold',
+                                                                                                      frame:
+                                                                                                        'challenge',
+                                                                                                      reward:
+                                                                                                        'im:chapters/chapter_2'
+                                                                                                    }
+                                                                                                  ]
+                                                                                              }
+                                                                                            ]
+                                                                                        }
+                                                                                      ]
+                                                                                  }
+                                                                                ]
+                                                                            }
+                                                                          ]
                                                                       },
                                                                       {
                                                                         item: 'chemlib:lead_dust',
