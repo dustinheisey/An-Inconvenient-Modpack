@@ -28,26 +28,10 @@
     {
       "type": "patchouli:spotlight",
       "item": {
-        "item": "rankine:kaolin"
-      },
-      "advancement": "im:chapter_1/malachite",
-      "text": "Kaolin Clay: Found in Deserts, between y=40 & y =80."
-    },
-    {
-      "type": "patchouli:spotlight",
-      "item": {
         "item": "rankine:galena_ore"
       },
       "advancement": "im:chapter_1/malachite",
       "text": "Galena Ore: Found in Swamps, between y=-60 & y=-30."
-    },
-    {
-      "type": "patchouli:spotlight",
-      "item": {
-        "item": "rankine:acanthite_ore"
-      },
-      "advancement": "im:chapter_1/malachite",
-      "text": "Acanthite Ore: Found in Deserts, between y=-60 & y=-30."
     },
     {
       "type": "patchouli:spotlight",
@@ -72,6 +56,22 @@
       },
       "advancement": "im:chapter_1/malachite",
       "text": "Selenite Shard: Found in swamps and jungles, between y=-55 and y=36."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "minecraft:granite"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Granite: Found in extreme hills & mountains biomes."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": {
+        "item": "rankine:gabbro"
+      },
+      "advancement": "im:chapter_1/malachite",
+      "text": "Gabbro: Found in stony shores, mushroom biomes, oceans, beaches, and rivers. It's also very common so it is probably in other biomes too."
     }
   ]
 }

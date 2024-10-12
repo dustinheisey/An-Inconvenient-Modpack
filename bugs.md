@@ -4,7 +4,6 @@
 
 - [x] change clay armor values & leather armor values
 - [x] change armor progression to be clay -> leather -> bronze -> iron
-- [ ] change furnace progression to use kiln instead of furnace to make clay stuff (figure out what to do with furnace)
 - [x] remove silver from chapter 1 entirely
 - [x] remove lead ingots from chapter 1
 - [x] make black porcelain recipe
@@ -19,8 +18,9 @@
 - [x] mortar and pestle is in chapter 1 made from mortar + pestle
 - [x] mortar made from porcelain
 - [x] pestle made from selenite
-- [ ] change kaolinite advancement
-- [ ] porcelain, feldspar advancement chains
+- [x] change kaolinite, feldspar advancement chain
+- [ ] clean up kiln
+- [ ] clean up furnace
 
 ## Lost City Overhaul
 
