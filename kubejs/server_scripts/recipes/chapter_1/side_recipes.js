@@ -777,14 +777,28 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'white_dye',
+      recipe: () => {
+        ['rankine:white_glazed_porcelain'].forEach((id) =>
+          event.remove({ id: id })
+        );
+        event.custom({
+          type: 'hexerei:pestle_and_mortar',
+          ingredients: [{ item: 'minecraft:bone_meal' }],
+          output: { item: 'minecraft:white_dye', count: 1 },
+          grindingTime: 300
+        });
+      },
+      children: [{ id: 'bone_meal' }]
+    },
+    {
       id: 'goddess_statue',
       recipe: () => {
         event
-          .shaped('paraglider:goddess_statue', ['aba', 'cdc', 'ccc'], {
+          .shaped('paraglider:goddess_statue', ['aba', 'bcb', 'bbb'], {
             a: 'rankine:graphite',
-            b: 'minecraft:amethyst_shard',
-            c: 'ceramics:black_porcelain',
-            d: 'kubejs:goddess_heart'
+            b: 'ceramics:black_porcelain',
+            c: 'kubejs:goddess_heart'
           })
           .stage('chapter_1');
       },
@@ -801,6 +815,15 @@ onEvent('recipes', (event) => {
               .stage('chapter_1');
           },
           children: [
+            {
+              id: 'amethyst_shard',
+              recipe: () => {
+                [
+                  'rankine:crushing/hematite_ore_crushing',
+                  'rankine:crushing/pyrite_ore_crushing'
+                ].forEach((id) => event.remove({ id: id }));
+              }
+            },
             {
               id: 'silver_ingot',
               recipe: () => {
@@ -906,15 +929,6 @@ onEvent('recipes', (event) => {
           ]
         },
         {
-          id: 'amethyst_shard',
-          recipe: () => {
-            [
-              'rankine:crushing/hematite_ore_crushing',
-              'rankine:crushing/pyrite_ore_crushing'
-            ].forEach((id) => event.remove({ id: id }));
-          }
-        },
-        {
           id: 'graphite',
           recipe: () => {
             [
@@ -944,7 +958,27 @@ onEvent('recipes', (event) => {
             }
           ]
         },
-        { id: 'porcelain' }
+        {
+          id: 'black_porcelain',
+          children: [
+            {
+              id: 'black_dye',
+              recipe: () => {
+                [
+                  'architects_palette:smelting/black_dye_from_withered_bone_smelting',
+                  'rankine:black_glazed_porcelain'
+                ].forEach((id) => event.remove({ id: id }));
+                event.custom({
+                  type: 'hexerei:pestle_and_mortar',
+                  ingredients: [{ item: 'rankine:bone_char' }],
+                  output: { item: 'minecraft:black_dye', count: 1 },
+                  grindingTime: 300
+                });
+              },
+              children: []
+            }
+          ]
+        }
       ]
     }
   ]);

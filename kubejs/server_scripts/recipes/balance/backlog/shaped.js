@@ -336,7 +336,6 @@ onEvent('recipes', (event) => {
     chapter_4: () => {
       event.remove({
         output: [
-          'hexerei:book_of_shadows',
           `create:controls`,
           'bloodmagic:alchemytable',
           `chipped:carpenters_table`,
@@ -358,13 +357,17 @@ onEvent('recipes', (event) => {
         type: 'minecraft:crafting_shaped'
       });
 
-      event.shaped('hexerei:book_of_shadows', ['aba', 'cde', 'aaa'], {
-        a: `minecraft:leather`,
-        b: 'architects_palette:twisted_sapling',
-        c: 'hexerei:animal_fat',
-        d: 'minecraft:book',
-        e: 'hexerei:sage_seed'
-      });
+      ['hexerei:book_of_shadows_dye'].forEach((id) => event.remove({ id: id }));
+
+      event
+        .shaped('hexerei:book_of_shadows', ['aba', 'cde', 'aaa'], {
+          a: `minecraft:leather`,
+          b: 'architects_palette:twisted_sapling',
+          c: 'hexerei:animal_fat',
+          d: 'minecraft:book',
+          e: 'hexerei:sage_seed'
+        })
+        .stage('chapter_4');
       event.shaped(`create:controls`, ['a', 'b', 'c'], {
         a: `minecraft:lever`,
         b: 'create:railway_casing',

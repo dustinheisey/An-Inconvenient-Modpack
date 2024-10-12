@@ -158,12 +158,6 @@ onEvent('recipes', (event) => {
       );
 
       event.replaceInput(
-        { output: 'hexerei:book_of_shadows' },
-        '#forge:dyes',
-        'minecraft:red_dye'
-      );
-
-      event.replaceInput(
         {
           output: ['malum:gilded_ring', 'malum:gilded_belt', 'malum:spirit_jar']
         },
@@ -626,11 +620,6 @@ onEvent('recipes', (event) => {
           'minecraft:barrier'
         ]
       });
-
-      event.remove({
-        output: 'minecraft:black_dye',
-        input: ['architects_palette:withered_bone']
-      });
       event.remove({
         output: 'extendedcrafting:luminessence',
         input: ['minecraft:glowstone_dust']
@@ -703,10 +692,6 @@ onEvent('recipes', (event) => {
       event.remove({
         output: 'twilightforest:fiery_ingot',
         input: 'minecraft:iron_ingot'
-      });
-      event.remove({
-        output: 'extendedcrafting:black_iron_ingot',
-        input: 'minecraft:black_dye'
       });
       event.remove({
         output: 'extendedcrafting:redstone_ingot',
@@ -1767,15 +1752,11 @@ onEvent('recipes', (event) => {
       });
 
       [
-        { id: 'ceramics:white_porcelain_cistern' },
-        { id: 'ceramics:white_porcelain' },
         {
           input: [
             'hexerei:herb_drying_rack_full',
             'paragon_textiles:silk_wisps',
-            'create:powdered_obsidian',
-            '#create:seats',
-            'minecraft:black_dye'
+            'create:powdered_obsidian'
           ],
           or: [
             { type: 'minecraft:crafting_shaped' },
@@ -1788,7 +1769,6 @@ onEvent('recipes', (event) => {
             'blue_skies:glowing_nature_stone',
             'blue_skies:glowing_blinding_stone',
             'minecraft:terracotta',
-            'minecraft:white_terracotta',
             'minecraft:orange_terracotta',
             'minecraft:magenta_terracotta',
             'minecraft:light_blue_terracotta',
@@ -1797,7 +1777,6 @@ onEvent('recipes', (event) => {
             'minecraft:light_gray_terracotta',
             'minecraft:cyan_terracotta',
             'minecraft:yellow_terracotta',
-            'minecraft:black_terracotta',
             'minecraft:pink_terracotta',
             'minecraft:green_terracotta',
             'minecraft:brown_terracotta',
@@ -1883,7 +1862,9 @@ onEvent('recipes', (event) => {
             'create:andesite_alloy',
             'minecraft:magma_block',
             'naturesaura:crimson_meal',
-            'minecraft:enchanted_golden_apple'
+            'minecraft:enchanted_golden_apple',
+            'create:white_toolbox',
+            'hexerei:crow_flute'
           ],
           or: [
             { type: 'minecraft:crafting_shaped' },
@@ -1962,7 +1943,8 @@ onEvent('recipes', (event) => {
             'create:display_link',
             'pneumaticcraft:aerial_interface',
             'create:mechanical_arm',
-            'createaddition:rolling_mill'
+            'createaddition:rolling_mill',
+            'pneumaticcraft:drone'
           ],
           or: [
             { type: 'minecraft:crafting_shaped' },
@@ -2017,7 +1999,7 @@ onEvent('recipes', (event) => {
           ]
         },
         {
-          output: ['ecofriendly:oil_drum_ym'],
+          output: ['ecofriendly:oil_drum_ym', 'minecraft:white_shulker_box'],
           or: [
             { type: 'minecraft:crafting_shaped' },
             { type: 'minecraft:crafting_shapeless' }
