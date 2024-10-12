@@ -684,7 +684,7 @@ onEvent('recipes', (event) => {
         ].forEach((id) => event.remove({ id: id }));
         event.custom({
           type: 'tconstruct:casting_table',
-          cast: { item: 'ceramicbucket:ceramic_bucket' },
+          cast: { item: 'ceramics:empty_clay_bucket' },
           cast_consumed: true,
           fluid: { name: 'tconstruct:molten_iron', amount: 270 },
           result: 'minecraft:bucket',

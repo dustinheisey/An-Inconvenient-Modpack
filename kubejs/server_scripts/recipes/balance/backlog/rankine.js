@@ -928,7 +928,6 @@ onEvent('recipes', (event) => {
           'rankine:bitumen',
           'rankine:mariposite',
           'rankine:cement_mix',
-          'rankine:porcelain_clay_ball',
           'rankine:cob',
           'rankine:refined_cob',
           'rankine:roman_concrete'

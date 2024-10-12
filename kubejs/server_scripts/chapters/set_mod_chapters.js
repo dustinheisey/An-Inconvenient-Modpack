@@ -18,7 +18,6 @@ onEvent('tags.items', (event) => {
     'naturescompass',
     'paraglider',
     'rankine',
-    'ceramicbucket',
     'minecraft',
     'realistictorches',
     'justaraftmod',

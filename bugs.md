@@ -10,8 +10,8 @@
 - [ ] remove silver from chapter 1 entirely
 - [ ] remove lead ingots from chapter 1
 - [ ] make black porcelain recipe
-- [ ] change ceramicbucket stuff to ceramics
-- [ ] change rankine porcelain to ceramics
+- [x] change ceramicbucket stuff to ceramics
+- [x] change rankine porcelain to ceramics
 - [x] switch buckets to ceramics buckets
 - [x] switch porcelain to ceramics porcelain
 - [x] stage ceramics items/blocks
