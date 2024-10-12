@@ -27,6 +27,27 @@ onEvent('recipes', (event) => {
     },
     children: [
       {
+        id: 'furnace',
+        recipe: () => {
+          ['minecraft:furnace', 'blue_skies:furnace_compat'].forEach((id) =>
+            event.remove({ id: id })
+          );
+          event
+            .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
+              a: 'minecraft:brick'
+            })
+            .id('iconvenient:furnace')
+            .stage('chapter_1');
+
+          event
+            .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
+              a: '#forge:cobblestone'
+            })
+            .id('iconvenient:furnace_2')
+            .stage('chapter_2');
+        }
+      },
+      {
         id: 'iron_ingot',
         recipe: () => {
           [
@@ -83,7 +104,7 @@ onEvent('recipes', (event) => {
                   event
                     .shaped('charcoal_pit:bloomeryy', ['aaa', 'aba', 'ccc'], {
                       a: 'rankine:ultra_high_refractory_bricks',
-                      b: 'minecraft:furnace',
+                      b: 'ceramics:kiln',
                       c: 'rankine:bronze_ingot'
                     })
                     .id('inconvenient:bloomery');
@@ -582,25 +603,39 @@ onEvent('recipes', (event) => {
                     ]
                   },
                   {
-                    id: 'furnace',
+                    id: 'kiln',
                     recipe: () => {
                       [
-                        'minecraft:furnace',
-                        'blue_skies:furnace_compat'
+                        'ceramics:kiln',
+                        'ceramics:rainbow_porcelain_kiln',
+                        'ceramics:rainbow_bricks_wall_kiln',
+                        'ceramics:rainbow_bricks_stairs_kiln',
+                        'ceramics:orange_glazed_terracotta_kiln',
+                        'ceramics:rainbow_bricks_slab_kiln',
+                        'tconstruct:smeltery/scorched/scorched_brick_kiln',
+                        'ceramics:glass_kiln',
+                        'ceramics:red_glazed_terracotta_kiln',
+                        'ceramics:green_glazed_terracotta_kiln',
+                        'ceramics:cyan_glazed_terracotta_kiln',
+                        'ceramics:light_blue_glazed_terracotta_kiln',
+                        'ceramics:black_glazed_terracotta_kiln',
+                        'ceramics:brown_glazed_terracotta_kiln',
+                        'ceramics:pink_glazed_terracotta_kiln',
+                        'ceramics:lime_glazed_terracotta_kiln',
+                        'ceramics:gray_glazed_terracotta_kiln',
+                        'ceramics:blue_glazed_terracotta_kiln',
+                        'ceramics:magenta_glazed_terracotta_kiln',
+                        'ceramics:nether_brick_kiln',
+                        'ceramics:yellow_glazed_terracotta_kiln',
+                        'ceramics:white_glazed_terracotta_kiln',
+                        'ceramics:rainbow_bricks_kiln',
+                        'ceramics:purple_glazed_terracotta_kiln',
+                        'ceramics:light_gray_glazed_terracotta_kiln'
                       ].forEach((id) => event.remove({ id: id }));
-                      event
-                        .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
-                          a: 'minecraft:brick'
-                        })
-                        .id('iconvenient:furnace')
-                        .stage('chapter_1');
 
-                      event
-                        .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
-                          a: '#forge:cobblestone'
-                        })
-                        .id('iconvenient:furnace_2')
-                        .stage('chapter_2');
+                      event.shaped('ceramics:kiln', ['aaa', 'a a', 'aaa'], {
+                        a: 'minecraft:brick'
+                      });
                     },
                     children: [
                       {

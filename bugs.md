@@ -19,7 +19,7 @@
 - [x] mortar made from porcelain
 - [x] pestle made from selenite
 - [x] change kaolinite, feldspar advancement chain
-- [ ] clean up kiln
+- [x] clean up kiln
 - [ ] clean up furnace
 
 ## Lost City Overhaul
@@ -145,6 +145,7 @@
 
 ## Backlog
 
+- [ ] create kiln recipe for scorched bricks and nether bricks
 - [ ] transparent border in antique atlas (shader's issue, texture pack fix)
 - [ ] replace charcoal pit functionality with your own mod
   - [ ] ESSENTIAL - charcoal production from charcoal pits
