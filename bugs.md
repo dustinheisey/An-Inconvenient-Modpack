@@ -1,5 +1,7 @@
 # Bugs
 
+## Ceramics Integration
+
 - [ ] remove prospecting stick from chapter 1/modpack
 - [ ] change clay armor values & leather armor values
 - [ ] change armor progression to be clay -> leather -> bronze -> iron
@@ -10,6 +12,54 @@
 - [ ] make black porcelain recipe
 - [ ] change ceramicbucket stuff to ceramics
 - [ ] change rankine porcelain to ceramics
+- [x] switch buckets to ceramics buckets
+- [x] switch porcelain to ceramics porcelain
+- [x] stage ceramics items/blocks
+- [ ] figure out advancement/usage of ceramics cisterns
+- [x] porcelain -> mortar -> clay plates/grog
+- [ ] terracotta armor/leather armor
+- [x] rework grog production
+- [x] mortar and pestle is in chapter 1 made from mortar + pestle
+- [x] mortar made from porcelain
+- [x] pestle made from selenite
+- [ ] change kaolinite advancement
+- [ ] porcelain, feldspar advancement chains
+
+## Lost City Overhaul
+
+- [ ] - Ø not found
+- [ ] add mods
+  - [ ] fat zombies
+  - [ ] peat_mummy
+  - [ ] undead
+- [ ] fix blocks so everything loads
+- [ ] fix blocks so they are different buildings types
+- [ ] add reinforced crates to spawn
+- [ ] add loot tables to crates
+- [ ] add zombies to city
+- [ ] remove zombies spawn outside city
+- [ ] fix zombie loot tables
+- [ ] remove other stuff from zombie mods
+- [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
+- [ ] bandaid advancements
+
+## Waste World
+
+- [ ] create trash biome
+  - [ ] remove selenite geodes
+  - [ ] remove amethyst geodes
+  - [ ] remove rankine ore clusters
+  - [ ] disable prospecting stick and ore detector
+  - [ ] get copper, tin, silver, lead, amethyst, selenite, graphite from trash processing
+    - [ ] Copper: Electrical wiring, Circuit boards, Pipes, Copper tubing
+    - [ ] Tin: tin cans, Old toys, Tin foils, Plumbing joints
+    - [ ] Lead: batteries, Old paint chips, medical equipment, Spent bullets
+    - [ ] Silver: camera films, Silver Necklaces, Old silverware
+    - [ ] Amethyst: amethyst rings, keychain
+    - [ ] Quartz Crystal: Watches, radios, lightbulb
+    - [ ] Iron: Scrap metal, scrap parts, car parts, hammers, wrenches, nails,
+  - [ ] sift garbage to get random assortment of any of this stuff.
+  - [ ] use different levels of processing to use this stuff in more advanced ways
 
 ## Playtesting Chapter 2
 
@@ -38,64 +88,13 @@
 - [ ] rewrite cold nightmare to talk about smeltery
 - [ ] rewrite smeltery nightmare to talk about big fish
 - [ ] smeltery advancement unlocks chapter 3
-- Ø
-
-- mods to add
-  - fat zombies
-  - ceramics
-  - immersive weathering
-  - mutant monsters
-  - zombie mobs
-  - peat_mummy
-  - undead unleashed
-- mods to remove
-- redo lost city
-  - fix blocks so everything loads
-  - fix blocks so they are different buildings types
-  - add reinforced crates to spawn
-  - add loot tables to crates
-  - add zombies to city
-  - remove zombies spawn outside city
-  - fix zombie loot tables
-  - remove other stuff from zombie mods
-- ceramics integration
-  - [x] switch buckets to ceramics buckets
-  - [ ] switch porcelain to ceramics porcelain
-  - [ ] stage ceramics items/blocks
-  - [ ] figure out advancement/usage of ceramics cisterns
-  - [ ] porcelain -> mortar -> clay plates/grog
-  - [ ] terracotta armor/leather armor
 
 ## Playtesting Chapter 1
 
+- [ ] boiler and icebox advancements
 - [ ] recipe staging chapter 1
 - [x] antique atlas texture bug (fixed by Orgamorsh https://github.com/AntiqueAtlasTeam/AntiqueAtlas/issues/416)
 - [ ] metal blocks to ingots
-- [ ] rework grog production
-  - [ ] mortar and pestle is in chapter 1 made from mortar + pestle
-  - [ ] mortar made from porcelain
-  - [ ] pestle made from selenite
-- [ ] advancements
-  - [ ] change kaolinite advancement
-  - [ ] bandaid advancements
-  - [ ] boiler and icebox advancements
-  - [ ] porcelain, feldspar advancement chains
-  - [ ] change city advancement to be less about going to specific biomes and make the cities very common but very dangerous
-- [ ] create trash biome
-  - [ ] remove selenite geodes
-  - [ ] remove amethyst geodes
-  - [ ] remove rankine ore clusters
-  - [ ] disable prospecting stick and ore detector
-  - [ ] get copper, tin, silver, lead, amethyst, selenite, graphite from trash processing
-    - [ ] Copper: Electrical wiring, Circuit boards, Pipes, Copper tubing
-    - [ ] Tin: tin cans, Old toys, Tin foils, Plumbing joints
-    - [ ] Lead: batteries, Old paint chips, medical equipment, Spent bullets
-    - [ ] Silver: camera films, Silver Necklaces, Old silverware
-    - [ ] Amethyst: amethyst rings, keychain
-    - [ ] Quartz Crystal: Watches, radios, lightbulb
-    - [ ] Iron: Scrap metal, scrap parts, car parts, hammers, wrenches, nails,
-  - [ ] sift garbage to get random assortment of any of this stuff.
-  - [ ] use different levels of processing to use this stuff in more advanced ways
 
 ## Staging
 
