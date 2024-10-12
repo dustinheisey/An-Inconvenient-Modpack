@@ -73,11 +73,6 @@ onEvent('server.datapack.high_priority', (event) => {
                 frame: 'goal',
                 children: [
                   {
-                    item: 'rankine:prospecting_stick',
-                    title: 'Seek and You Shall Find',
-                    description: 'Craft a prospecting stick to find ores'
-                  },
-                  {
                     item: 'hexerei:dowsing_rod',
                     title: 'Swamp Seeker',
                     description: 'Create a dowsing rod & use it to find a swamp'
@@ -223,8 +218,8 @@ onEvent('server.datapack.high_priority', (event) => {
                         description: 'Collect a rotten brain from the undead',
                         children: [
                           {
-                            item: 'ceramicbucket:ceramic_bucket',
-                            nbt: '{Fluid:{Amount:1000,FluidName:"kubejs:tanning_fluid"}}',
+                            item: 'ceramics:fluid_clay_bucket',
+                            nbt: '{fluid:"kubejs:tanning_fluid"}',
                             title: 'Putrid Potion',
                             description: 'Brew tanning fluid from the brain'
                           }
@@ -275,15 +270,6 @@ onEvent('server.datapack.high_priority', (event) => {
                                                   'Craft a bedroll and regain your sanity'
                                               },
                                               {
-                                                icon: 'leather_helmet',
-                                                title:
-                                                  "Survivor's First Stitch",
-                                                frame: 'challenge',
-                                                description:
-                                                  'Craft your first piece of armor',
-                                                tag: 'im:armors/leather'
-                                              },
-                                              {
                                                 item: 'charcoal_pit:bellows',
                                                 title: "Bloomery's Lungs",
                                                 description:
@@ -329,23 +315,7 @@ onEvent('server.datapack.high_priority', (event) => {
                                     item: 'rankine:fire_clay_ball',
                                     title: 'Molding Potential',
                                     description:
-                                      'Collect fire clay for advanced crafting',
-                                    children: [
-                                      {
-                                        item: 'kubejs:high_fire_clay_ball',
-                                        title: 'High Heat Potential',
-                                        description:
-                                          'Refine fire clay for high-temperature uses',
-                                        children: [
-                                          {
-                                            item: 'kubejs:ultra_high_fire_clay_ball',
-                                            title: 'Hottest Potential',
-                                            description:
-                                              'Refine high fire clay further for even higher temperatures'
-                                          }
-                                        ]
-                                      }
-                                    ]
+                                      'Collect fire clay for advanced crafting'
                                   },
                                   {
                                     item: 'rankine:mortar',
@@ -394,8 +364,8 @@ onEvent('server.datapack.high_priority', (event) => {
                                           'Collect some water and purify it fully'
                                       },
                                       {
-                                        item: 'furnace',
-                                        title: 'Stone Furnace',
+                                        item: 'ceramics:kiln',
+                                        title: '',
                                         description:
                                           'Erect a furnace from stones and fire',
                                         frame: 'goal',
@@ -408,7 +378,7 @@ onEvent('server.datapack.high_priority', (event) => {
                                             tag: 'charcoal_pit:ceramic_pots'
                                           },
                                           {
-                                            item: 'ceramicbucket:ceramic_bucket',
+                                            item: 'ceramics:fluid_clay_bucket',
                                             title: 'Primitive Pour',
                                             description:
                                               'Craft a ceramic bucket'
@@ -418,6 +388,20 @@ onEvent('server.datapack.high_priority', (event) => {
                                             title: 'Brick Hopper',
                                             description:
                                               'Craft a brick hopper for item transport'
+                                          },
+                                          {
+                                            item: 'ceramics:clay_plate',
+                                            title: '',
+                                            description: '',
+                                            children: [
+                                              {
+                                                icon: 'ceramics:clay_helmet',
+                                                title: '',
+                                                frame: 'challenge',
+                                                description: '',
+                                                tag: 'im:armors/clay'
+                                              }
+                                            ]
                                           },
                                           {
                                             item: 'rankine:refractory_brick',
@@ -539,6 +523,58 @@ onEvent('server.datapack.high_priority', (event) => {
                                                                   'Find a geode deep under a jungle or swamp & collect some selenite shards',
                                                                 children: [
                                                                   {
+                                                                    item: 'hexerei:pestle_and_mortar',
+                                                                    title: '',
+                                                                    description:
+                                                                      '',
+                                                                    children: [
+                                                                      {
+                                                                        item: 'kubejs:grog',
+                                                                        title:
+                                                                          'Clay Concoction',
+                                                                        description:
+                                                                          'Crush some terracotta plates in the pestle and mortar',
+                                                                        children:
+                                                                          []
+                                                                      },
+                                                                      {
+                                                                        item: 'chemlib:lead_dust',
+                                                                        title:
+                                                                          'Lead Genesis',
+                                                                        description:
+                                                                          'Forge a lead ingot',
+                                                                        children:
+                                                                          []
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              },
+
+                                                              {
+                                                                item: 'rankine:galena',
+                                                                title:
+                                                                  "Mire's Gift",
+                                                                description:
+                                                                  'Collect a chunk of galena from the bottom of a swamp',
+                                                                children: []
+                                                              },
+                                                              {
+                                                                item: 'rankine:graphite',
+                                                                title:
+                                                                  'Carbon in the Rough',
+                                                                description:
+                                                                  'Find plumbago in an extreme hills and collect a piece of graphite',
+                                                                children: []
+                                                              },
+                                                              {
+                                                                item: 'minecraft:amethyst_shard',
+                                                                title:
+                                                                  'Violet Depths',
+                                                                description:
+                                                                  'Find a geode deep underground & collect some amethyst shards',
+                                                                children: [
+                                                                  {
                                                                     item: 'kubejs:goddess_heart',
                                                                     title:
                                                                       'Heart of the Goddess',
@@ -557,63 +593,29 @@ onEvent('server.datapack.high_priority', (event) => {
                                                                   }
                                                                 ]
                                                               },
-
-                                                              {
-                                                                item: 'rankine:galena',
-                                                                title:
-                                                                  "Mire's Gift",
-                                                                description:
-                                                                  'Collect a chunk of galena from the bottom of a swamp',
-                                                                children: [
-                                                                  {
-                                                                    item: 'rankine:lead_ingot',
-                                                                    title:
-                                                                      'Lead Genesis',
-                                                                    description:
-                                                                      'Forge a lead ingot',
-                                                                    children: []
-                                                                  }
-                                                                ]
-                                                              },
-
-                                                              {
-                                                                item: 'rankine:acanthite',
-                                                                title:
-                                                                  "Desert's Gift",
-                                                                description:
-                                                                  'Collect a chunk of acanthite from the bottom of a desert',
-                                                                children: [
-                                                                  {
-                                                                    item: 'rankine:silver_ingot',
-                                                                    title:
-                                                                      'Silver Genesis',
-                                                                    description:
-                                                                      'Forge a silver ingot'
-                                                                  }
-                                                                ]
-                                                              },
-                                                              {
-                                                                item: 'rankine:graphite',
-                                                                title:
-                                                                  'Carbon in the Rough',
-                                                                description:
-                                                                  'Find plumbago in an extreme hills and collect a piece of graphite',
-                                                                children: []
-                                                              },
-                                                              {
-                                                                item: 'minecraft:amethyst_shard',
-                                                                title:
-                                                                  'Violet Depths',
-                                                                description:
-                                                                  'Find a geode deep underground & collect some amethyst shards'
-                                                              },
                                                               {
                                                                 item: 'rankine:plagioclase_feldspar',
                                                                 title:
                                                                   'Feldspar Find',
                                                                 description:
                                                                   'Collect some plagioclase feldspar from stone',
-                                                                children: []
+                                                                children: [
+                                                                  {
+                                                                    item: 'ceramics:unfired_porcelain',
+                                                                    title: '',
+                                                                    description:
+                                                                      '',
+                                                                    children: [
+                                                                      {
+                                                                        item: 'ceramics:white_porcelain',
+                                                                        title:
+                                                                          '',
+                                                                        description:
+                                                                          ''
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
                                                               }
                                                             ]
                                                           }
@@ -634,13 +636,6 @@ onEvent('server.datapack.high_priority', (event) => {
                                                     title: 'Carbon Alchemy',
                                                     description:
                                                       'Cook some bones in a beehive oven'
-                                                  },
-                                                  {
-                                                    item: 'kubejs:grog',
-                                                    title: 'Clay Concoction',
-                                                    description:
-                                                      'Crush some grog from fired porcelain',
-                                                    children: []
                                                   }
                                                 ]
                                               }

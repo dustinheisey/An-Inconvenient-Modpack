@@ -6353,7 +6353,7 @@ onEvent('tags.items', (event) => {
     chapter_4: ['blue_skies:bluebright_bookshelf', 'blue_skies:lunar_bookshelf']
   });
   overrideChapters('chemlib', {
-    chapter_1: ['chemlib:tin_dust'],
+    chapter_1: ['chemlib:lead_dust'],
     chapter_4: [
       'chemlib:copper_plate',
       'chemlib:aluminum_plate',
@@ -6367,7 +6367,7 @@ onEvent('tags.items', (event) => {
       'chemlib:silicon_dust',
       'chemlib:zinc_dust',
       'chemlib:gold_dust',
-      'chemlib:lead_dust',
+      'chemlib:tin_dust',
       'chemlib:zinc_plate',
       'chemlib:tin_plate',
       'chemlib:silver_dust',

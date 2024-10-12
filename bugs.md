@@ -1,5 +1,16 @@
 # Bugs
 
+- [ ] remove prospecting stick from chapter 1/modpack
+- [ ] change clay armor values & leather armor values
+- [ ] change armor progression to be clay -> leather -> bronze -> iron
+- [ ] change furnace progression to use kiln instead of furnace to make clay stuff (figure out what to do with furnace)
+- [ ] write advancement titles and descriptions
+- [ ] remove silver from chapter 1 entirely
+- [ ] remove lead ingots from chapter 1
+- [ ] make black porcelain recipe
+- [ ] change ceramicbucket stuff to ceramics
+- [ ] change rankine porcelain to ceramics
+
 ## Playtesting Chapter 2
 
 - [ ] gold pan durability too short
@@ -27,14 +38,43 @@
 - [ ] rewrite cold nightmare to talk about smeltery
 - [ ] rewrite smeltery nightmare to talk about big fish
 - [ ] smeltery advancement unlocks chapter 3
+- Ø
+
+- mods to add
+  - fat zombies
+  - ceramics
+  - immersive weathering
+  - mutant monsters
+  - zombie mobs
+  - peat_mummy
+  - undead unleashed
+- mods to remove
+- redo lost city
+  - fix blocks so everything loads
+  - fix blocks so they are different buildings types
+  - add reinforced crates to spawn
+  - add loot tables to crates
+  - add zombies to city
+  - remove zombies spawn outside city
+  - fix zombie loot tables
+  - remove other stuff from zombie mods
+- ceramics integration
+  - [x] switch buckets to ceramics buckets
+  - [ ] switch porcelain to ceramics porcelain
+  - [ ] stage ceramics items/blocks
+  - [ ] figure out advancement/usage of ceramics cisterns
+  - [ ] porcelain -> mortar -> clay plates/grog
+  - [ ] terracotta armor/leather armor
 
 ## Playtesting Chapter 1
 
-- [ ] charcoal pit exploit - add to your own data pack
 - [ ] recipe staging chapter 1
 - [x] antique atlas texture bug (fixed by Orgamorsh https://github.com/AntiqueAtlasTeam/AntiqueAtlas/issues/416)
 - [ ] metal blocks to ingots
 - [ ] rework grog production
+  - [ ] mortar and pestle is in chapter 1 made from mortar + pestle
+  - [ ] mortar made from porcelain
+  - [ ] pestle made from selenite
 - [ ] advancements
   - [ ] change kaolinite advancement
   - [ ] bandaid advancements
@@ -107,6 +147,28 @@
 ## Backlog
 
 - [ ] transparent border in antique atlas (shader's issue, texture pack fix)
+- [ ] replace charcoal pit functionality with your own mod
+  - [ ] ESSENTIAL - charcoal production from charcoal pits
+  - [ ] ESSENTIAL - ore smelting in world
+  - [ ] ESSENTIAL - brewing barrel item -> fluid
+  - [ ] ESSENTIAL - bloomery & bellows smelting hard metals
+  - [ ] distillery - alchohol stuff
+  - [ ] ESSENTIAL - primitive storage
+  - [ ] ESSENTIAL - wood ash
+  - [ ] vinegar
+  - [ ] olive oil
+  - [ ] walnut oil
+  - [ ] sunflower oil
+  - [ ] animal cage
+  - [ ] glycerine
+  - [ ] ESSENTIAL - orichalcum
+  - [ ] seed oil
+  - [ ] nether star shards
+  - [ ] small pile of gunpowder
+  - [ ] ESSENTIAL - copper armor & tools
+  - [ ] ESSENTIAL - bronze armor
+  - [ ] ESSENTIAL - orichalcum armor
+  - [ ]
 
 ## Past Releases
 

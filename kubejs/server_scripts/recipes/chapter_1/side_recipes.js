@@ -783,7 +783,7 @@ onEvent('recipes', (event) => {
           .shaped('paraglider:goddess_statue', ['aba', 'cdc', 'ccc'], {
             a: 'rankine:graphite',
             b: 'minecraft:amethyst_shard',
-            c: 'rankine:porcelain',
+            c: 'ceramics:black_porcelain',
             d: 'kubejs:goddess_heart'
           })
           .stage('chapter_1');
@@ -793,11 +793,10 @@ onEvent('recipes', (event) => {
           id: 'goddess_heart',
           recipe: () => {
             event
-              .shaped('kubejs:goddess_heart', ['aba', 'cdc', 'aba'], {
-                a: 'rankine:lead_ingot',
-                b: 'hexerei:selenite_shard',
-                c: 'rankine:silver_ingot',
-                d: 'paraglider:spirit_orb'
+              .shaped('kubejs:goddess_heart', ['aba', 'bcb', 'aba'], {
+                a: 'rankine:bronze_ingot',
+                b: 'chemlib:lead_dust',
+                c: 'minecraft:amethyst_shard'
               })
               .stage('chapter_1');
           },

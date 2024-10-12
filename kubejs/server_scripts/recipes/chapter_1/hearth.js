@@ -1776,7 +1776,7 @@ onEvent('recipes', (event) => {
                                                       max: 0.2
                                                     },
                                                     input4: {
-                                                      item: 'chemlib:tin_dust',
+                                                      item: 'chemlib:lead_dust',
                                                       required: true,
                                                       min: 0.1,
                                                       max: 0.2
@@ -1788,20 +1788,23 @@ onEvent('recipes', (event) => {
                                                 },
                                                 children: [
                                                   {
-                                                    id: 'tin_dust',
+                                                    id: 'lead_dust',
                                                     recipe: () => {
                                                       event.custom({
-                                                        type: 'rankine:crushing',
-                                                        input: {
-                                                          item: 'rankine:tin_block'
-                                                        },
-                                                        guaranteed: [
+                                                        type: 'hexerei:pestle_and_mortar',
+                                                        ingredients: [
                                                           {
-                                                            item: 'chemlib:tin_dust',
-                                                            tier: 'iron',
-                                                            count: 3
+                                                            item: 'rankine:galena'
+                                                          },
+                                                          {
+                                                            item: 'rankine:galena'
                                                           }
-                                                        ]
+                                                        ],
+                                                        output: {
+                                                          item: 'chemlib:lead_dust',
+                                                          count: 1
+                                                        },
+                                                        grindingTime: 300
                                                       });
                                                     }
                                                   }
