@@ -3,8 +3,8 @@
 ## Ceramics Integration
 
 - [ ] remove prospecting stick from chapter 1/modpack
-- [ ] change clay armor values & leather armor values
-- [ ] change armor progression to be clay -> leather -> bronze -> iron
+- [x] change clay armor values & leather armor values
+- [x] change armor progression to be clay -> leather -> bronze -> iron
 - [ ] change furnace progression to use kiln instead of furnace to make clay stuff (figure out what to do with furnace)
 - [ ] write advancement titles and descriptions
 - [ ] remove silver from chapter 1 entirely
@@ -17,7 +17,6 @@
 - [x] stage ceramics items/blocks
 - [ ] figure out advancement/usage of ceramics cisterns
 - [x] porcelain -> mortar -> clay plates/grog
-- [ ] terracotta armor/leather armor
 - [x] rework grog production
 - [x] mortar and pestle is in chapter 1 made from mortar + pestle
 - [x] mortar made from porcelain

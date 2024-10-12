@@ -29,17 +29,17 @@ onEvent('tags.items', (event) => {
 
   addCollection('armors', {
     chapter_1: {
+      clay: [
+        'ceramics:clay_helmet',
+        'ceramics:clay_chestplate',
+        'ceramics:clay_leggings',
+        'ceramics:clay_boots'
+      ],
       leather: [
         'minecraft:leather_helmet',
         'minecraft:leather_chestplate',
         'minecraft:leather_leggings',
         'minecraft:leather_boots'
-      ],
-      copper: [
-        'charcoal_pit:copper_helmet',
-        'charcoal_pit:copper_chestplate',
-        'charcoal_pit:copper_leggings',
-        'charcoal_pit:copper_boots'
       ],
       bronze: [
         'charcoal_pit:bronze_helmet',

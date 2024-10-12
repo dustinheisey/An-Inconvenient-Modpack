@@ -2,20 +2,20 @@ onEvent('server.datapack.high_priority', (event) => {
   addAdvancements(event, 'armor', {
     icon: 'minecraft:armor_stand',
     title: 'Collection: Armor',
-    tag: 'im:armors/leather',
+    tag: 'im:armors/clay',
     background: 'architects_palette:textures/block/myonite.png',
     children: [
       {
-        title: 'Leather Boots',
-        description: 'Craft leather boots',
-        item: 'minecraft:leather_boots',
-        reward: 'im:armor/leather/boots',
+        title: 'Terracotta Boots',
+        description: 'Craft Terracotta boots',
+        item: 'ceramics:clay_boots',
+        reward: 'im:armor/clay/boots',
         children: [
           {
-            title: 'Copper Boots',
-            description: 'upgrade to copper boots',
-            item: 'charcoal_pit:copper_boots',
-            reward: 'im:armor/copper/boots',
+            title: 'Leather Boots',
+            description: 'upgrade to leather boots',
+            item: 'minecraft:leather_boots',
+            reward: 'im:armor/leather/boots',
             children: [
               {
                 title: 'Bronze Boots',
@@ -203,16 +203,16 @@ onEvent('server.datapack.high_priority', (event) => {
         ]
       },
       {
-        title: 'Leather Chestplate',
-        description: 'Craft leather chestplate',
-        item: 'minecraft:leather_chestplate',
-        reward: 'im:armor/leather/chestplate',
+        title: 'Terracotta Chestplate',
+        description: 'Craft terracotta chestplate',
+        item: 'ceramics:clay_chestplate',
+        reward: 'im:armor/clay/chestplate',
         children: [
           {
-            title: 'Copper Chestplate',
-            description: 'upgrade to copper chestplate',
-            item: 'charcoal_pit:copper_chestplate',
-            reward: 'im:armor/copper/chestplate',
+            title: 'Leather Chestplate',
+            description: 'upgrade to leather chestplate',
+            item: 'minecraft:leather_chestplate',
+            reward: 'im:armor/leather/chestplate',
             children: [
               {
                 title: 'Bronze Chestplate',
@@ -404,16 +404,16 @@ onEvent('server.datapack.high_priority', (event) => {
         ]
       },
       {
-        title: 'Leather Leggings',
-        description: 'Craft leather leggings',
-        item: 'minecraft:leather_leggings',
-        reward: 'im:armor/leather/leggings',
+        title: 'Terracotta Leggings',
+        description: 'Craft terracotta leggings',
+        item: 'ceramics:clay_leggings',
+        reward: 'im:armor/clay/leggings',
         children: [
           {
-            title: 'Copper Leggings',
-            description: 'upgrade to copper leggings',
-            item: 'charcoal_pit:copper_leggings',
-            reward: 'im:armor/copper/leggings',
+            title: 'Leather Leggings',
+            description: 'upgrade to leather leggings',
+            item: 'minecraft:leather_leggings',
+            reward: 'im:armor/leather/leggings',
             children: [
               {
                 title: 'Bronze Leggings',
@@ -604,16 +604,16 @@ onEvent('server.datapack.high_priority', (event) => {
         ]
       },
       {
-        title: 'Leather Helmet',
-        description: 'Craft leather helmet',
-        item: 'minecraft:leather_helmet',
-        reward: 'im:armor/leather/helmet',
+        title: 'Terracotta Helmet',
+        description: 'Craft terracotta helmet',
+        item: 'ceramics:clay_helmet',
+        reward: 'im:armor/clay/helmet',
         children: [
           {
-            title: 'Copper Helmet',
-            description: 'upgrade to copper helmet',
-            item: 'charcoal_pit:copper_helmet',
-            reward: 'im:armor/copper/helmet',
+            title: 'Leather Helmet',
+            description: 'upgrade to leather helmet',
+            item: 'minecraft:leather_helmet',
+            reward: 'im:armor/leather/helmet',
             children: [
               {
                 title: 'Bronze Helmet',

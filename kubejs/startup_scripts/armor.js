@@ -14,8 +14,8 @@ onEvent('item.modification', (event) => {
   }
 
   // ! Advancement Armor Tiers
-  setProtection('minecraft:leather', [1, 2, 1, 1]);
-  setProtection('charcoal_pit:copper', [1, 2, 2, 1]);
+  setProtection('ceramics:clay', [1, 2, 1, 1]);
+  setProtection('minecraft:leather', [1, 2, 2, 1]);
   setProtection('charcoal_pit:bronze', [1, 3, 2, 1]);
   setProtection('minecraft:iron', [1, 3, 2, 2]);
   setProtection('blue_skies:charoite', [2, 5, 3, 2]);

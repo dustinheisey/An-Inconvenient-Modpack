@@ -20,10 +20,10 @@ onEvent('recipes', (event) => {
           id: 'armor',
           recipe: () => {
             [
-              'charcoal_pit:copper_boots',
-              'charcoal_pit:copper_helmet',
-              'charcoal_pit:copper_chestplate',
-              'charcoal_pit:copper_leggings',
+              'minecraft:leather_boots',
+              'minecraft:leather_helmet',
+              'minecraft:leather_chestplate',
+              'minecraft:leather_leggings',
               'charcoal_pit:bronze_boots',
               'charcoal_pit:bronze_helmet',
               'charcoal_pit:bronze_chestplate',
@@ -36,16 +36,16 @@ onEvent('recipes', (event) => {
 
             stageArmors(event, [
               {
-                tier: 'charcoal_pit:copper',
-                input: 'minecraft:copper_ingot',
-                previousTier: 'minecraft:leather',
+                tier: 'minecraft:leather',
+                input: 'minecraft:leather',
+                previousTier: 'ceramics:clay',
                 stage: 'chapter_1',
-                master: 'copper'
+                master: 'leather'
               },
               {
                 tier: 'charcoal_pit:bronze',
                 input: 'rankine:bronze_ingot',
-                previousTier: 'charcoal_pit:copper',
+                previousTier: 'minecraft:leather',
                 stage: 'chapter_1',
                 master: 'bronze'
               },

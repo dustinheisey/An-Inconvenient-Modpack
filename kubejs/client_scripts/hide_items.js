@@ -13,6 +13,10 @@ onEvent('jei.hide.items', (event) => {
     ],
     twilightforest: ['twilightforest:uncrafting_table'],
     charcoal_pit: [
+      'charcoal_pit:copper_helmet',
+      'charcoal_pit:copper_chestplate',
+      'charcoal_pit:copper_leggings',
+      'charcoal_pit:copper_boots',
       'charcoal_pit:copper_hoe',
       'charcoal_pit:bronze_pick',
       'charcoal_pit:bronze_shovel',

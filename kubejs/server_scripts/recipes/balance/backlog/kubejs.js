@@ -760,6 +760,10 @@ onEvent('recipes', (event) => {
     filter: () => {
       event.remove({
         output: [
+          'charcoal_pit:copper_helmet',
+          'charcoal_pit:copper_chestplate',
+          'charcoal_pit:copper_leggings',
+          'charcoal_pit:copper_boots',
           'ceramics:porcelain_brick',
           'croptopia:salt_ore',
           'salt:rock_salt_ore',
