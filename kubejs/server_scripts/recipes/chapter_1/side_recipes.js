@@ -959,6 +959,49 @@ onEvent('recipes', (event) => {
           ]
         },
         {
+          id: 'terracotta_functional_blocks',
+          recipe: () => {
+            [
+              'ceramics:terracotta_channel_smelting',
+              'ceramics:terracotta_channel_kiln',
+              'ceramics:terracotta_faucet_smelting',
+              'ceramics:terracotta_faucet_kiln',
+              'ceramics:terracotta_cistern_smelting',
+              'ceramics:terracotta_cistern_kiln'
+            ].forEach((id) => event.remove({ id: id }));
+
+            event.custom({
+              type: 'rankine:beehive_oven',
+              input: {
+                item: 'ceramics:clay_channel'
+              },
+              result: 'ceramics:terracotta_channel',
+              minCookTime: 2400,
+              maxCookTime: 4800
+            });
+
+            event.custom({
+              type: 'rankine:beehive_oven',
+              input: {
+                item: 'ceramics:clay_faucet'
+              },
+              result: 'ceramics:terracotta_faucet',
+              minCookTime: 2400,
+              maxCookTime: 4800
+            });
+
+            event.custom({
+              type: 'rankine:beehive_oven',
+              input: {
+                item: 'ceramics:clay_cistern'
+              },
+              result: 'ceramics:terracotta_cistern',
+              minCookTime: 2400,
+              maxCookTime: 4800
+            });
+          }
+        },
+        {
           id: 'black_porcelain',
           children: [
             {
