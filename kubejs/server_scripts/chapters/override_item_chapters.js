@@ -1797,14 +1797,6 @@ onEvent('tags.items', (event) => {
       'rankine:siltstone_bricks_slab',
       'rankine:siltstone_bricks_stairs',
       'rankine:siltstone_bricks_wall',
-      'rankine:lead_nugget',
-      'rankine:silver_nugget',
-      'rankine:lead_ingot',
-      'rankine:silver_ingot',
-      'rankine:lead_block',
-      'rankine:silver_block',
-      'rankine:acanthite',
-      'rankine:acanthite_block',
       'rankine:galena',
       'rankine:galena_block',
       'rankine:bone_char',
@@ -1836,11 +1828,19 @@ onEvent('tags.items', (event) => {
       'rankine:mossy_dolostone_bricks_wall'
     ],
     chapter_2: [
+      'rankine:acanthite',
+      'rankine:acanthite_block',
       'rankine:white_marble_cobble',
       'rankine:gypsum',
       'rankine:gypsum_block',
       'rankine:compost',
       'rankine:white_marble',
+      'rankine:lead_nugget',
+      'rankine:silver_nugget',
+      'rankine:lead_ingot',
+      'rankine:silver_ingot',
+      'rankine:lead_block',
+      'rankine:silver_block',
       'rankine:sterling_silver_ladder',
       'rankine:pewter_ladder',
       'rankine:trail_mix',
@@ -5004,12 +5004,14 @@ onEvent('tags.items', (event) => {
   });
   overrideChapters('immersiveengineering', {
     chapter_1: [
-      'immersiveengineering:slab_storage_silver',
-      'immersiveengineering:slab_storage_lead',
       'immersiveengineering:alloybrick',
       'immersiveengineering:slab_alloybrick',
       'immersiveengineering:hammer',
       'immersiveengineering:alloy_smelter'
+    ],
+    chapter_2: [
+      'immersiveengineering:slab_storage_silver',
+      'immersiveengineering:slab_storage_lead'
     ],
     chapter_3: [
       'immersiveengineering:shader_bag_uncommon',
@@ -6550,13 +6552,6 @@ onEvent('tags.items', (event) => {
       'hexerei:herb_drying_rack',
       'hexerei:flowering_lily_pad',
       'hexerei:dowsing_rod',
-      'hexerei:selenite_shard',
-      'hexerei:selenite_block',
-      'hexerei:budding_selenite',
-      'hexerei:selenite_cluster',
-      'hexerei:large_selenite_bud',
-      'hexerei:medium_selenite_bud',
-      'hexerei:small_selenite_bud',
       'hexerei:pestle_and_mortar'
     ],
     chapter_2: [

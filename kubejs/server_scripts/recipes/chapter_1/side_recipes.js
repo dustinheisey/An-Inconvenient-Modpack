@@ -811,20 +811,6 @@ onEvent('recipes', (event) => {
                   'occultism:blasting/silver_ingot_from_raw',
                   'occultism:smelting/silver_ingot_from_raw'
                 ].forEach((id) => event.remove({ id: id }));
-                event.custom({
-                  type: 'charcoal_pit:orekiln',
-                  ingredients: [{ item: 'rankine:acanthite' }],
-                  result: { item: 'rankine:silver_ingot' },
-                  amount: 1
-                });
-
-                event.custom({
-                  type: 'rankine:beehive_oven',
-                  input: { item: 'rankine:acanthite_block' },
-                  result: 'rankine:silver_block',
-                  minCookTime: 2400,
-                  maxCookTime: 4800
-                });
               },
               children: [
                 {
@@ -872,20 +858,6 @@ onEvent('recipes', (event) => {
                   'mekanism:processing/lead/ingot/from_raw_blasting',
                   'mekanism:processing/lead/ingot/from_raw_smelting'
                 ].forEach((id) => event.remove({ id: id }));
-                event.custom({
-                  type: 'charcoal_pit:orekiln',
-                  ingredients: [{ item: 'rankine:galena' }],
-                  result: { item: 'rankine:lead_ingot' },
-                  amount: 1
-                });
-
-                event.custom({
-                  type: 'rankine:beehive_oven',
-                  input: { item: 'rankine:galena_block' },
-                  result: 'rankine:lead_block',
-                  minCookTime: 2400,
-                  maxCookTime: 4800
-                });
               },
               children: [
                 {

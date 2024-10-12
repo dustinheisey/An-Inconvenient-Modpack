@@ -9,8 +9,13 @@ const config = {
       'minecraft:small_amethyst_bud',
       'minecraft:budding_amethyst',
       'minecraft:amethyst_block',
+      'hexerei:selenite_cluster',
+      'hexerei:large_selenite_bud',
+      'hexerei:medium_selenite_bud',
+      'hexerei:small_selenite_bud',
+      'hexerei:budding_selenite',
+      'hexerei:selenite_block',
       'rankine:plumbago_ore',
-      'rankine:acanthite_ore',
       'rankine:galena_ore'
     ]
   },
@@ -22,6 +27,7 @@ const config = {
       'blue_skies:ventium_ore'
     ],
     iron: [
+      'rankine:acanthite_ore',
       'blue_skies:everbright_diopside_ore',
       'blue_skies:everbright_charoite_ore',
       'blue_skies:everbright_moonstone_ore'

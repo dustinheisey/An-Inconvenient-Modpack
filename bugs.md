@@ -5,8 +5,8 @@
 - [x] change clay armor values & leather armor values
 - [x] change armor progression to be clay -> leather -> bronze -> iron
 - [ ] change furnace progression to use kiln instead of furnace to make clay stuff (figure out what to do with furnace)
-- [ ] remove silver from chapter 1 entirely
-- [ ] remove lead ingots from chapter 1
+- [x] remove silver from chapter 1 entirely
+- [x] remove lead ingots from chapter 1
 - [ ] make black porcelain recipe
 - [x] change ceramicbucket stuff to ceramics
 - [x] change rankine porcelain to ceramics
