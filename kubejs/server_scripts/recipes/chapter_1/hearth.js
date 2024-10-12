@@ -10,31 +10,32 @@ onEvent('recipes', (event) => {
         .shaped('cold_sweat:hearth', ['  a', 'bcb', 'dda'], {
           a: 'minecraft:iron_ingot',
           b: 'minecraft:leather',
-          c: 'endrem:undead_soul',
+          c: 'minecraft:furnace',
           d: 'rankine:ultra_high_refractory_bricks'
         })
         .stage('chapter_1')
         .id('inconvenient:hearth');
-
-      event
-        .shaped('cold_sweat:hearth', ['  a', 'bcb', 'aba'], {
-          a: 'minecraft:iron_ingot',
-          b: '#forge:bricks',
-          c: 'minecraft:furnace'
-        })
-        .stage('chapter_2')
-        .id('inconvenient:hearth_2');
     },
     children: [
       {
         id: 'furnace',
         recipe: () => {
-          ['minecraft:furnace', 'blue_skies:furnace_compat'].forEach((id) =>
-            event.remove({ id: id })
-          );
+          [
+            'minecraft:furnace',
+            'blue_skies:furnace_compat',
+            'ceramics:rainbow_bricks_stairs_smelting',
+            'ceramics:rainbow_bricks_slab_smelting',
+            'ceramics:rainbow_bricks_wall_smelting',
+            'croptopia:popcorn_from_corn',
+            'ceramics:rainbow_bricks_smelting',
+            'ceramics:rainbow_porcelain_smelting',
+            'charcoal_pit:cooking_recipes/ceramic_mold'
+          ].forEach((id) => event.remove({ id: id }));
           event
-            .shaped('minecraft:furnace', ['aaa', 'a a', 'aaa'], {
-              a: 'minecraft:brick'
+            .shaped('minecraft:furnace', ['aba', 'bcb', 'aba'], {
+              a: 'minecraft:iron_ingot',
+              b: 'minecraft:stone',
+              c: 'endrem:undead_soul'
             })
             .id('iconvenient:furnace')
             .stage('chapter_1');
@@ -121,6 +122,15 @@ onEvent('recipes', (event) => {
                             'rankine:refractory_brick_from_fire_clay_ball_smelting'
                           ].forEach((id) => event.remove({ id: id }));
 
+                          event.custom({
+                            type: 'ceramics:kiln',
+                            ingredient: {
+                              item: 'kubejs:dry_unfired_refractory_brick'
+                            },
+                            result: 'rankine:refractory_brick',
+                            experience: 0.3,
+                            cookingtime: 100
+                          });
                           event.smelting(
                             'rankine:refractory_brick',
                             'kubejs:dry_unfired_refractory_brick'
@@ -512,6 +522,14 @@ onEvent('recipes', (event) => {
                                 'rankine:crushing/scoria_crushing',
                                 'rankine:beehive_oven/quicklime_from_limestone_beehive_oven_cooking'
                               ].forEach((id) => event.remove({ id: id }));
+                              event.custom({
+                                type: 'ceramics:kiln',
+                                ingredient: { item: 'rankine:chalk' },
+                                result: 'rankine:quicklime',
+                                experience: 0.3,
+                                cookingtime: 100
+                              });
+
                               event
                                 .smelting('rankine:quicklime', 'rankine:chalk')
                                 .id('inconvenient:quicklime');
@@ -651,6 +669,13 @@ onEvent('recipes', (event) => {
                               'kubejs:dry_unfired_brick'
                             )
                             .id('inconvenient:brick');
+                          event.custom({
+                            type: 'ceramics:kiln',
+                            ingredient: { item: 'kubejs:dry_unfired_brick' },
+                            result: 'minecraft:brick',
+                            experience: 0.3,
+                            cookingtime: 100
+                          });
                           event
                             .smelting(
                               'minecraft:brick',
@@ -1103,6 +1128,13 @@ onEvent('recipes', (event) => {
               {
                 id: 'smelted_iron_can_ym',
                 recipe: () => {
+                  event.custom({
+                    type: 'ceramics:kiln',
+                    ingredient: { item: 'ecofriendly:iron_can_ym' },
+                    result: 'econfriendly:smelted_iron_can_ym',
+                    experience: 0.3,
+                    cookingtime: 100
+                  });
                   event
                     .smelting(
                       'ecofriendly:smelted_iron_can_ym',
@@ -1422,10 +1454,29 @@ onEvent('recipes', (event) => {
                 'rankine:high_refractory_brick_from_silicon_carbide',
                 'rankine:high_refractory_brick_from_magnesia'
               ].forEach((id) => event.remove({ id: id }));
+              event.custom({
+                type: 'ceramics:kiln',
+                ingredient: {
+                  item: 'kubejs:dry_unfired_high_refractory_brick'
+                },
+                result: 'rankine:high_refractory_brick',
+                experience: 0.3,
+                cookingtime: 100
+              });
               event.smelting(
                 'rankine:high_refractory_brick',
                 'kubejs:dry_unfired_high_refractory_brick'
               );
+
+              event.custom({
+                type: 'ceramics:kiln',
+                ingredient: {
+                  item: 'kubejs:dry_unfired_ultra_high_refractory_brick'
+                },
+                result: 'rankine:ultra_high_refractory_brick',
+                experience: 0.3,
+                cookingtime: 100
+              });
               event.smelting(
                 'rankine:ultra_high_refractory_brick',
                 'kubejs:dry_unfired_ultra_high_refractory_brick'

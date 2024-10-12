@@ -526,13 +526,13 @@ onEvent('server.datapack.high_priority', (event) => {
                                                                                                 children:
                                                                                                   [
                                                                                                     {
-                                                                                                      item: 'minecraft:iron_ingot',
+                                                                                                      item: 'minecraft:furnace',
                                                                                                       title:
-                                                                                                        'Iron Will',
+                                                                                                        '',
                                                                                                       frame:
                                                                                                         'goal',
                                                                                                       description:
-                                                                                                        'Extract iron, forge ahead',
+                                                                                                        '',
                                                                                                       children:
                                                                                                         [
                                                                                                           {

@@ -1023,4 +1023,8 @@
         "body": ["event.custom({ 'type':'vintageimprovements:vibrating', 'ingredients': [ { 'item': 'minecraft:snow_block' } ], 'results': [ { 'item': 'minecraft:snowball', 'count': 4 } ], 'processingTime': 300 });"],
         "description": "Add Vintageimprovements Vibrating Recipe"
     },
+    "Ceramics Kiln": {
+        "prefix": "a-ceramics-kiln",
+        "body": ["event.custom({'type': 'ceramics:kiln','ingredient': {'item': 'ceramics:unfired_cistern'},'result': 'ceramics:white_porcelain_cistern','experience': 0.3,'cookingtime': 100});"]
+    }
 }

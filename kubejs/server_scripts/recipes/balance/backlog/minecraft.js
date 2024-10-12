@@ -216,8 +216,6 @@ onEvent('recipes', (event) => {
         ],
         type: 'minecraft:smelting'
       });
-
-      event.smelting('malum:crushed_soulstone', 'malum:processed_soulstone');
     },
     smithing: () => {
       event.remove({

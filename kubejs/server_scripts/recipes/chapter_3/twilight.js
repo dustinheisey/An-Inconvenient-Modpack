@@ -45,7 +45,7 @@ onEvent('recipes', (event) => {
       {
         id: 'processed_soulstone',
         recipe: () => {
-          event.smelting('malum:raw_soulstone', 'malum:processed_soulstone');
+          event.smelting('malum:processed_soulstone', 'malum:raw_soulstone');
         },
         children: [
           {

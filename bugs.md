@@ -20,7 +20,7 @@
 - [x] pestle made from selenite
 - [x] change kaolinite, feldspar advancement chain
 - [x] clean up kiln
-- [ ] clean up furnace
+- [x] clean up furnace
 
 ## Lost City Overhaul
 

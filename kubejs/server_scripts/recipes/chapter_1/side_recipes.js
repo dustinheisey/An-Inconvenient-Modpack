@@ -185,6 +185,14 @@ onEvent('recipes', (event) => {
       }
     },
     {
+      id: 'thirst',
+      recipe: () => {
+        ['thirst:terracotta_bowl_from_campfire_cooking'].forEach((id) =>
+          event.remove({ id: id })
+        );
+      }
+    },
+    {
       id: 'jerky',
       recipe: () => {
         event.custom({
