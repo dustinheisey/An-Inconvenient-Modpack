@@ -1035,41 +1035,6 @@ onEvent('recipes', (event) => {
                             },
                             children: [
                               {
-                                id: 'prospecting_stick',
-                                recipe: () => {
-                                  event.remove({
-                                    id: 'rankine:prospecting_stick'
-                                  });
-                                  event
-                                    .shaped(
-                                      'rankine:prospecting_stick',
-                                      [' ab', ' ca', 'a  '],
-                                      {
-                                        a: '#forge:rods/wooden',
-                                        b: 'minecraft:flint',
-                                        c: 'farmersdelight:rope'
-                                      }
-                                    )
-                                    .id('inconvenient:prospecting_stick');
-                                },
-                                children: [
-                                  {
-                                    id: 'stick',
-                                    recipe: () => {
-                                      [
-                                        'rankine:crushing/leaves_crushing',
-                                        'rankine:crushing/sapling_crushing',
-                                        'rankine:foraging/badlands_foraging',
-                                        'rankine:foraging/desert_foraging',
-                                        'rankine:foraging/podzol_foraging'
-                                      ].forEach((id) =>
-                                        event.remove({ id: id })
-                                      );
-                                    }
-                                  }
-                                ]
-                              },
-                              {
                                 // ? malachite is found in swamps a y level [x-y]
                                 id: 'malachite_ore'
                               },
@@ -1357,7 +1322,21 @@ onEvent('recipes', (event) => {
                       c: 'farmersdelight:rope'
                     })
                     .id('inconvenient:dowsing_rod');
-                }
+                },
+                children: [
+                  {
+                    id: 'stick',
+                    recipe: () => {
+                      [
+                        'rankine:crushing/leaves_crushing',
+                        'rankine:crushing/sapling_crushing',
+                        'rankine:foraging/badlands_foraging',
+                        'rankine:foraging/desert_foraging',
+                        'rankine:foraging/podzol_foraging'
+                      ].forEach((id) => event.remove({ id: id }));
+                    }
+                  }
+                ]
               },
               {
                 id: 'tree_bark',

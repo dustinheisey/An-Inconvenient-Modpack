@@ -151,6 +151,8 @@ onEvent('jei.hide.items', (event) => {
       'croptopia:salt_ore'
     ],
     rankine: [
+      'rankine:prospecting_stick',
+      'rankine:ore_detector',
       'rankine:bronze_hoe',
       'rankine:halloysite',
       'rankine:thermometer',

@@ -137,13 +137,6 @@ onEvent('recipes', (event) => {
         'rankine:titanium_alloy_block'
       );
       event.replaceInput(
-        {
-          output: 'rankine:ore_detector'
-        },
-        'rankine:indium_tin_oxide',
-        'rankine:silicon_carbide'
-      );
-      event.replaceInput(
         { output: 'bloodmagic:orbcapacityrune' },
         '#forge:stone',
         'rankine:blood_obsidian'
@@ -760,6 +753,8 @@ onEvent('recipes', (event) => {
     filter: () => {
       event.remove({
         output: [
+          'rankine:prospecting_stick',
+          'rankine:ore_detector',
           'charcoal_pit:copper_helmet',
           'charcoal_pit:copper_chestplate',
           'charcoal_pit:copper_leggings',

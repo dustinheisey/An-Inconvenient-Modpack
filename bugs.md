@@ -2,11 +2,9 @@
 
 ## Ceramics Integration
 
-- [ ] remove prospecting stick from chapter 1/modpack
 - [x] change clay armor values & leather armor values
 - [x] change armor progression to be clay -> leather -> bronze -> iron
 - [ ] change furnace progression to use kiln instead of furnace to make clay stuff (figure out what to do with furnace)
-- [ ] write advancement titles and descriptions
 - [ ] remove silver from chapter 1 entirely
 - [ ] remove lead ingots from chapter 1
 - [ ] make black porcelain recipe
@@ -44,6 +42,7 @@
 
 ## Waste World
 
+- [x] remove prospecting stick & ore detector from modpack
 - [ ] create trash biome
   - [ ] remove selenite geodes
   - [ ] remove amethyst geodes
@@ -59,6 +58,8 @@
     - [ ] Iron: Scrap metal, scrap parts, car parts, hammers, wrenches, nails,
   - [ ] sift garbage to get random assortment of any of this stuff.
   - [ ] use different levels of processing to use this stuff in more advanced ways
+- [ ] write advancement titles and descriptions
+- [ ] porcelain custom block models/blockstates
 
 ## Playtesting Chapter 2
 

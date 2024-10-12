@@ -2547,7 +2547,6 @@ onEvent('tags.items', (event) => {
       'rankine:chromium_block',
       'rankine:silicon_carbide',
       'rankine:silicon_carbide_block',
-      'rankine:ore_detector',
       'rankine:magnetometer',
       'rankine:bituminous_coal',
       'rankine:bituminous_coal_block',
