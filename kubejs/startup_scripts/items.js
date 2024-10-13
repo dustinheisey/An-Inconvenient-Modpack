@@ -39,6 +39,32 @@ onEvent('item.registry', (event) => {
         'pestle',
         ''
       ],
+      trash: [
+        'electrical_wiring',
+        'circuit_board',
+        'pipe',
+        'copper_tubing',
+        'tin_can',
+        'old_toy',
+        'tin_foil',
+        'plumbing_joint',
+        'battery',
+        'old_paint_chip',
+        'medical_equipment',
+        'spent_bullet',
+        'camera_film',
+        'silver_Necklace',
+        'old_silverware',
+        'amethyst_ring',
+        'key_chain',
+        'watch',
+        'radio',
+        'lightbulb',
+        'scrap_metal',
+        'car_part',
+        'wrench',
+        'nail'
+      ],
       goddess_statue: ['goddess_heart']
     },
     chapter_2: {
