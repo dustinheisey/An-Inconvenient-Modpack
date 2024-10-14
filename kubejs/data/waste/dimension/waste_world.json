@@ -1,0 +1,12 @@
+{
+  "type": "waste:waste_world",
+  "generator": {
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "waste:dump"
+    },
+    "seed": 0,
+    "settings": "waste:waste_world",
+    "type": "minecraft:noise"
+  }
+}

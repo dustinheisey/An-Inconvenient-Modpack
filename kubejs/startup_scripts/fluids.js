@@ -18,7 +18,8 @@ onEvent('fluid.registry', (event) => {
 
   fluids({
     chapter_1: {
-      leather: [{ id: 'tanning_fluid', color: 0x8b4513, thin: true }]
+      leather: [{ id: 'tanning_fluid', color: 0x8b4513, thin: true }],
+      waste: [{ id: 'sludge', color: 0x2b1e1a }]
     },
     chapter_2: {
       misc: [
